@@ -1,0 +1,44 @@
+{
+  "id": "studio-grin",
+  "name": "Studio Grin",
+  "name_he": "סטודיו גרין",
+  "kind": "studio",
+  "categories": [
+    "color-grading",
+    "post-production"
+  ],
+  "description": "Boutique color grading and finishing studio in south Tel Aviv owned and run by colorist Leon Grin, grading documentaries, independent films, commercials and corporate films, and handling conforming, transcoding, DCP creation and deliveries.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.leongrin.com",
+  "services": [
+    "Color grading",
+    "Color correction",
+    "Conforming",
+    "Digitizing",
+    "Transcoding",
+    "DCP creation",
+    "Deliveries"
+  ],
+  "key_people": [
+    {
+      "name": "Leon Grin",
+      "role": "Owner / colorist"
+    }
+  ],
+  "tags": [
+    "colorist",
+    "documentary",
+    "indie-film"
+  ],
+  "sources": [
+    "https://www.leongrin.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

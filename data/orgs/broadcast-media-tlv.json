@@ -1,0 +1,76 @@
+{
+  "id": "broadcast-media-tlv",
+  "name": "Broadcast Media",
+  "name_he": "ברודקאסט",
+  "aka": [
+    "Broadcast",
+    "Broadcast Media TLV"
+  ],
+  "kind": "studio",
+  "categories": [
+    "post-production",
+    "editing",
+    "commercial-production",
+    "film-production"
+  ],
+  "description": "Tel Aviv production and post-production company founded in 1990 by Dani Shafar and Yoav 'Chupa' Barkai, combining TV, film and commercial production with one of Israel's largest post-production operations, studio complexes in Tel Aviv and Holon, a Ramat HaHayal post branch serving ad agencies, and camera/studio rentals.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Holon",
+      "Ramat HaHayal (Tel Aviv)"
+    ]
+  },
+  "founded": 1990,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.broadcast.co.il",
+  "services": [
+    "Post-production",
+    "Editing",
+    "TV & commercial production",
+    "Studio rental",
+    "Camera & equipment rental"
+  ],
+  "notable_clients": [
+    "Tnuva",
+    "Disney",
+    "Bank Leumi",
+    "McDonald's",
+    "Kimberly-Clark",
+    "Bezeq",
+    "Netflix",
+    "Comedy Central Israel",
+    "Keshet"
+  ],
+  "notable_work": [
+    "The Pijamot",
+    "Shemesh",
+    "The Next Star",
+    "Elisha"
+  ],
+  "key_people": [
+    {
+      "name": "Dani Shafar",
+      "role": "Co-founder, majority owner"
+    },
+    {
+      "name": "Yoav Barkai",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "tv-studios",
+    "advertising-post",
+    "facilities"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%91%D7%A8%D7%95%D7%93%D7%A7%D7%90%D7%A1%D7%98_(%D7%97%D7%91%D7%A8%D7%94)",
+    "https://revenuebase.ai/companies/post-production-companies/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website returned 503 on 2026-10-18. Hebrew Wikipedia cites ~75 employees plus freelancers; ownership 75/25 Shafar/Barkai."
+}

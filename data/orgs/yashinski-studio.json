@@ -1,0 +1,65 @@
+{
+  "id": "yashinski-studio",
+  "name": "Yashinski Studio",
+  "aka": [
+    "YASHINSKI Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "creative-technology",
+    "motion-design"
+  ],
+  "description": "Visual effects, coding and design boutique with headquarters in Tel Aviv and Los Angeles, creating visuals for feature films, advertising and interactive experiences. It delivered 400+ VFX shots for the Israeli feature 'Image of Victory' (streaming on Netflix) and lists clients such as Coldplay, Beyoncé, Warner Bros. and HP.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Los Angeles"
+    ]
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://yashinski.com",
+  "links": {
+    "instagram": "https://www.instagram.com/yaronyashinski/",
+    "youtube": "https://www.youtube.com/user/YashinskiStudio/videos",
+    "x": "https://twitter.com/yashinski"
+  },
+  "services": [
+    "Feature film VFX",
+    "Design",
+    "Creative coding",
+    "Interactive experiences",
+    "Music video visuals"
+  ],
+  "notable_clients": [
+    "Coldplay",
+    "Beyoncé",
+    "Warner Bros.",
+    "HP",
+    "SuperPlay"
+  ],
+  "notable_work": [
+    "Image of Victory (400+ VFX shots)"
+  ],
+  "key_people": [
+    {
+      "name": "Yaron Yashinski",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "film-vfx",
+    "music-video",
+    "interactive"
+  ],
+  "sources": [
+    "https://yashinski.com",
+    "https://il.linkedin.com/in/yashinski",
+    "https://revenuebase.ai/companies/digital-effects-companies/israel"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

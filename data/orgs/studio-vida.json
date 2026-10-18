@@ -1,0 +1,44 @@
+{
+  "id": "studio-vida",
+  "name": "Studio Vida",
+  "name_he": "סטודיו וידה",
+  "kind": "studio",
+  "categories": [
+    "cgi-3d"
+  ],
+  "description": "Israeli architectural visualization studio founded in 2010 by interior designer and architectural photographer Yossi Orenstein, producing photorealistic architectural renderings, 3D animations and marketing videos for real-estate and product clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2010,
+  "status": "active",
+  "website": "https://vida3d.co.il",
+  "links": {
+    "facebook": "https://www.facebook.com/studiovida3d/",
+    "instagram": "https://www.instagram.com/studio_vida3d/"
+  },
+  "services": [
+    "Architectural renderings",
+    "3D architectural animation",
+    "Marketing & promo videos",
+    "Product visualization"
+  ],
+  "key_people": [
+    {
+      "name": "Yossi Orenstein",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "archviz",
+    "real-estate"
+  ],
+  "sources": [
+    "https://vida3d.co.il",
+    "https://revenuebase.ai/companies/digital-effects-companies/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

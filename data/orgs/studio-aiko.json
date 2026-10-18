@@ -11,7 +11,7 @@
     "cgi-3d",
     "vfx"
   ],
-  "description": "Tel Aviv 3D animation and VFX studio founded in 2005 by Yair Alony and Meny Hilsenrad, producing photoreal CG for architecture, product visualization, TV and advertising; part of the animation for the stop-motion feature '$9.99' (2008) was made there.",
+  "description": "Tel Aviv 3D and VFX studio founded in 2005 by Yair Alony and Meny Hilsenrad, producing photorealistic CG content, architectural visualization, product visualization and visual effects for TV, advertising, corporate films and games.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -20,12 +20,21 @@
   "size": "1-10",
   "status": "active",
   "website": "https://studio-aiko.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/studio-aiko",
+    "facebook": "https://www.facebook.com/Studio.Aiko.3D/",
+    "instagram": "https://www.instagram.com/studioaikovfx/",
+    "youtube": "https://www.youtube.com/user/StudioAiko"
+  },
   "services": [
     "3D animation",
     "Modeling and texturing",
     "Lighting and rendering",
     "Compositing and VFX",
-    "Architectural visualization"
+    "Architectural visualization",
+    "Product visualization",
+    "VFX",
+    "Corporate & product simulation films"
   ],
   "notable_work": [
     "$9.99 (2008 feature, partial animation)"
@@ -42,12 +51,14 @@
   ],
   "tags": [
     "archviz",
-    "cg"
+    "cg",
+    "product-viz"
   ],
   "sources": [
     "https://studio-aiko.com",
     "https://revenuebase.ai/companies/animation-studios/israel",
-    "https://www.ani-mator.com/israeli_animated_films/"
+    "https://www.ani-mator.com/israeli_animated_films/",
+    "https://www.linkedin.com/company/studio-aiko"
   ],
   "confidence": "high",
   "added": "2026-10-18",

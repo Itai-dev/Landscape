@@ -1,0 +1,42 @@
+{
+  "id": "brio-animation",
+  "name": "Brio Animation",
+  "kind": "studio",
+  "categories": [
+    "cgi-3d",
+    "xr"
+  ],
+  "description": "Tel Aviv studio specializing in 3D CGI and AR/VR content for luxury e-commerce, notably producing content for online jewelry and diamond retailer James Allen since its early years.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://brioanimation.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/brio-animation"
+  },
+  "services": [
+    "3D CGI for e-commerce",
+    "Jewelry & luxury product visualization",
+    "AR/VR content"
+  ],
+  "notable_clients": [
+    "James Allen"
+  ],
+  "tags": [
+    "product-viz",
+    "e-commerce",
+    "jewelry"
+  ],
+  "sources": [
+    "https://www.linkedin.com/company/brio-animation",
+    "https://brioanimation.com",
+    "https://revenuebase.ai/companies/3d-rendering-companies/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website footer shows 2007-2025."
+}

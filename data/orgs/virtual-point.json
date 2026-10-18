@@ -1,0 +1,51 @@
+{
+  "id": "virtual-point",
+  "name": "Virtual Point",
+  "aka": [
+    "Virtual Point Ltd"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "cgi-3d"
+  ],
+  "description": "Israeli 3D medical animation studio founded by Yosi Wolfson and Kobi Rotenshtrich, producing medical device animations, pharmaceutical mechanism-of-action videos, medical training and scientific explainers, plus VR.",
+  "location": {
+    "country": "IL",
+    "city": "Kfar Saba"
+  },
+  "status": "active",
+  "website": "https://www.virtual-point.co.il/en/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/virtual-point-ltd"
+  },
+  "services": [
+    "3D medical animation",
+    "Pharma MOA videos",
+    "Medical device animation",
+    "Medical training content",
+    "VR"
+  ],
+  "key_people": [
+    {
+      "name": "Yosi Wolfson",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Kobi Rotenshtrich",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "medical-animation",
+    "pharma",
+    "life-sciences"
+  ],
+  "sources": [
+    "https://www.linkedin.com/company/virtual-point-ltd",
+    "https://revenuebase.ai/companies/3d-visualization-companies/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

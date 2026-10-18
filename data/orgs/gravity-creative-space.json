@@ -3,7 +3,9 @@
   "name": "Gravity Creative Space",
   "aka": [
     "Gravity",
-    "Gravity Creative"
+    "Gravity Creative",
+    "Gravity VFX and Design",
+    "Gravity Creative Tech"
   ],
   "kind": "studio",
   "categories": [
@@ -12,7 +14,7 @@
     "motion-design",
     "post-production"
   ],
-  "description": "Tel Aviv creative, design, animation and visual-effects group with roots in the mid-1990s, based at the Tel Aviv Port. Historically operated offices in New York and Los Angeles (re-launched from Rhino in 2010) and works across advertising VFX, 3D, motion graphics and compositing.",
+  "description": "Tel Aviv creative, design, animation and visual effects group founded in 1994 as the post-production house Gravity VFX and Design. It built a North American arm (Rhino FX, later rebranded Gravity) that worked on Hollywood features and US commercials, while the Tel Aviv studio serves Israeli and international advertising.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -22,27 +24,59 @@
   "status": "active",
   "website": "https://gravity.co.il",
   "links": {
-    "linkedin": "https://il.linkedin.com/company/gravitycreative"
+    "linkedin": "https://www.linkedin.com/company/gravitycreative"
   },
   "services": [
     "Visual effects",
     "3D animation",
     "Motion design",
     "Compositing",
-    "Creative content for advertising"
+    "Creative content for advertising",
+    "VFX",
+    "Design",
+    "Post-production",
+    "Concept"
+  ],
+  "notable_work": [
+    "Salt (VFX via Rhino/Gravity US)",
+    "The Other Guys (VFX via Rhino/Gravity US)",
+    "The Dybbuk of the Holy Apple Field (1997, digital effects)"
+  ],
+  "key_people": [
+    {
+      "name": "Effi Wizen",
+      "role": "Founder (1994)"
+    },
+    {
+      "name": "Yoram Altman",
+      "role": "Owner (per Globes, 2010)"
+    }
+  ],
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "Rhino FX",
+      "note": "North American unit; Gravity bought the remaining stake in 2010 and consolidated it under the Gravity brand"
+    }
   ],
   "tags": [
     "advertising",
     "vfx",
-    "commercials"
+    "commercials",
+    "tel-aviv",
+    "legacy-studio"
   ],
   "sources": [
     "https://il.linkedin.com/company/gravitycreative",
     "https://gravity.co.il",
-    "https://www.cgw.com/Press-Center/News/2010/Rhino-Re-Launches-as-Gravity.aspx"
+    "https://www.cgw.com/Press-Center/News/2010/Rhino-Re-Launches-as-Gravity.aspx",
+    "https://www.linkedin.com/company/gravitycreative",
+    "https://en.wikipedia.org/wiki/Effi_Wizen",
+    "https://en.globes.co.il/en/article-1000582737",
+    "https://www.awn.com/news/rhino-re-launches-gravity"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Founding year conflicts: LinkedIn says 1994, trade press says 1996. US offices may no longer be active. Overlaps VFX segment."
+  "notes": "Website is a Readymag page with little text; LinkedIn lists 51-200 employees (other directories say 11-50). US offices (NY) reportedly closed; Tel Aviv studio continues."
 }
