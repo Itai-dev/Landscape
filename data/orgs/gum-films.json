@@ -1,0 +1,49 @@
+{
+  "id": "gum-films",
+  "name": "Gum Films",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Production house for feature films, documentaries and TV series founded in 2008 by Sam Spiegel School graduates Yoav Roeh and Aurit Zamir, producing for Israeli and international broadcasters (Keshet, Reshet, HOT, yes, BBC, CBC, TV5); credits include the series Tell Me Everything and the documentary The Governor.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2008,
+  "status": "active",
+  "website": "https://www.gumfilms.com/",
+  "links": {
+    "instagram": "https://www.instagram.com/gumfilms/",
+    "linkedin": "https://www.linkedin.com/company/gum-films/",
+    "vimeo": "https://vimeo.com/gumfilms",
+    "facebook": "https://www.facebook.com/GumFilms/"
+  },
+  "notable_work": [
+    "Tell Me Everything (TV series, 2024)",
+    "The Governor (documentary, 2024)",
+    "No Shade in the Desert (2023)",
+    "What Is To Come (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Yoav Roeh",
+      "role": "Co-founder, Owner & Producer"
+    },
+    {
+      "name": "Aurit Zamir",
+      "role": "Co-founder, Producer"
+    }
+  ],
+  "tags": [
+    "feature-films",
+    "documentary",
+    "tv-series"
+  ],
+  "sources": [
+    "https://www.gumfilms.com/",
+    "https://www.gumfilms.com/about"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

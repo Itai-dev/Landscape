@@ -1,0 +1,56 @@
+{
+  "id": "beach-bum",
+  "name": "Beach Bum",
+  "aka": [
+    "Beach Bum Ltd."
+  ],
+  "kind": "startup",
+  "categories": [
+    "game-development"
+  ],
+  "description": "Ra'anana-based mobile game developer and publisher founded in 2015 by Gigi Levy-Weiss, Uri Shahak and others, known for multiplayer board and card games such as Backgammon – Lord of the Board, Spades Royale and Gin Rummy Stars; acquired by French publisher Voodoo in 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Ra'anana"
+  },
+  "founded": 2015,
+  "size": "201-500",
+  "status": "acquired",
+  "notable_work": [
+    "Backgammon – Lord of the Board",
+    "Spades Royale",
+    "Gin Rummy Stars",
+    "Domino Go",
+    "Rummy Rush"
+  ],
+  "key_people": [
+    {
+      "name": "Gigi Levy-Weiss",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Uri Shahak",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Voodoo",
+      "note": "2021"
+    }
+  ],
+  "tags": [
+    "mobile-games",
+    "board-games",
+    "card-games"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Beach_Bum_Ltd.",
+    "https://en.wikipedia.org/wiki/Category:Video_game_companies_of_Israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Official website not verified."
+}

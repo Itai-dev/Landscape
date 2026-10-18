@@ -1,0 +1,59 @@
+{
+  "id": "knob-music",
+  "name": "KNOB Music",
+  "aka": [
+    "KNOB Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "music-production",
+    "sound-design"
+  ],
+  "description": "Tel Aviv music and sound studio run by musicians Niv and Meital (20+ years in the industry), creating original music, covers, sonic branding, film and game scoring, voiceover and post-sound with Dolby Atmos; work includes campaigns for Playtika, SuperPlay, Samsung, Volkswagen, IKEA and KIA.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://knob.co.il/",
+  "links": {
+    "facebook": "https://www.facebook.com/knobstudio",
+    "instagram": "https://www.instagram.com/knob_cast/",
+    "youtube": "https://www.youtube.com/@TheKnobstudio"
+  },
+  "services": [
+    "Original music for ads",
+    "Local and international covers",
+    "Sonic branding",
+    "Film scoring",
+    "Game music",
+    "Voiceover",
+    "Post-sound / Dolby Atmos mixing"
+  ],
+  "notable_clients": [
+    "Playtika",
+    "SuperPlay",
+    "Samsung",
+    "Volkswagen",
+    "IKEA",
+    "KIA",
+    "Gad Dairies"
+  ],
+  "notable_work": [
+    "Gad Dairies 'Ray of Cheese' spot with Eyal Shani (music production)",
+    "Solitaire Grand Harvest campaigns"
+  ],
+  "tags": [
+    "music-for-ads",
+    "sonic-branding",
+    "dolby-atmos"
+  ],
+  "sources": [
+    "https://knob.co.il/",
+    "https://knob-music.com/",
+    "https://www.ice.co.il/advertising-marketing/news/article/945425"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

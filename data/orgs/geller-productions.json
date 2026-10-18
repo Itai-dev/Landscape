@@ -1,0 +1,38 @@
+{
+  "id": "geller-productions",
+  "name": "Geller Productions",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "photography"
+  ],
+  "description": "Independent full-service production house in Rishon LeZion (founded 2017 per Production Paradise) providing production for advertising, stills and editorial shoots, TV and foreign feature films, with strong location-scouting background and crew/vendor matching.",
+  "location": {
+    "country": "IL",
+    "city": "Rishon LeZion"
+  },
+  "founded": 2017,
+  "status": "active",
+  "website": "https://gellerproduction.com/",
+  "links": {
+    "instagram": "https://instagram.com/gellerproductions"
+  },
+  "services": [
+    "Advertising production",
+    "Stills / photo shoots",
+    "Foreign feature film services",
+    "Location scouting",
+    "Crew and vendor sourcing"
+  ],
+  "tags": [
+    "production-services",
+    "locations"
+  ],
+  "sources": [
+    "https://gellerproduction.com/about-us",
+    "https://www.productionparadise.com/member/tel_aviv/geller-productions/magazines/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

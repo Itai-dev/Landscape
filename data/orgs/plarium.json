@@ -1,0 +1,81 @@
+{
+  "id": "plarium",
+  "name": "Plarium",
+  "name_he": "פלאריום",
+  "aka": [
+    "Plarium Global Ltd."
+  ],
+  "kind": "startup",
+  "categories": [
+    "game-development"
+  ],
+  "description": "Herzliya-headquartered mobile and PC game developer founded in 2009, known for RAID: Shadow Legends, Mech Arena and Vikings: War of Clans; acquired by Australia's Aristocrat Leisure in 2017 for $500M and employs 1,300+ across studios in Israel, Ukraine, Poland, Finland and Spain.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya",
+    "other_offices": [
+      "Kharkiv",
+      "Lviv",
+      "Warsaw",
+      "Helsinki",
+      "Barcelona"
+    ]
+  },
+  "founded": 2009,
+  "size": "1001-5000",
+  "status": "acquired",
+  "website": "https://company.plarium.com/en/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/plarium",
+    "instagram": "https://www.instagram.com/plarium",
+    "facebook": "https://www.facebook.com/PlariumGames",
+    "x": "https://www.twitter.com/plarium"
+  },
+  "notable_work": [
+    "RAID: Shadow Legends",
+    "Mech Arena",
+    "Vikings: War of Clans",
+    "Stormfall",
+    "Merge Gardens"
+  ],
+  "key_people": [
+    {
+      "name": "Shraga Mor",
+      "role": "CEO"
+    }
+  ],
+  "client_profile": {
+    "industry": "gaming",
+    "creative_needs": [
+      "game art",
+      "cinematics",
+      "animated series",
+      "UA video ads"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Aristocrat Leisure",
+      "note": "August 2017, $500M"
+    },
+    {
+      "type": "acquired",
+      "target": "Futureplay",
+      "note": "August 2021"
+    }
+  ],
+  "tags": [
+    "mobile-games",
+    "pc-games",
+    "rpg"
+  ],
+  "sources": [
+    "https://company.plarium.com/en/about/",
+    "https://he.wikipedia.org/wiki/%D7%A4%D7%9C%D7%90%D7%A8%D7%99%D7%95%D7%9D"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "About 250 of ~1,300 employees are in Israel (Nov 2024, Hebrew Wikipedia). CEO name transliterated from Hebrew."
+}

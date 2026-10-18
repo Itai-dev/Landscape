@@ -1,0 +1,49 @@
+{
+  "id": "july-august-productions",
+  "name": "July-August Productions",
+  "name_he": "יולי אוגוסט הפקות",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Tel Aviv content development and production house established in 2004 and part of Seven.One Studios, with a format division (creator of the game show Still Standing, aired in 18 countries) and a features & drama division producing films, TV drama and documentaries, plus production services for foreign crews.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2004,
+  "status": "active",
+  "website": "https://www.july-august.com/",
+  "notable_work": [
+    "Still Standing (format)"
+  ],
+  "key_people": [
+    {
+      "name": "Amit Stretiner",
+      "role": "Head of Format Division"
+    },
+    {
+      "name": "Yochanan Kredo",
+      "role": "Head of Features and Drama Division"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Seven.One Studios"
+    }
+  ],
+  "tags": [
+    "formats",
+    "tv-production",
+    "feature-films",
+    "production-services"
+  ],
+  "sources": [
+    "https://www.july-august.com/",
+    "https://www.gov.il/BlobFolder/rfp/israeli_films_service_suppliers/he/List%20of%20providers%20included%20in%20the%20Israeli%20Film%20Service%20database.pdf"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

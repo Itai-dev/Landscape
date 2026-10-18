@@ -1,0 +1,37 @@
+{
+  "id": "rabel-productions",
+  "name": "Rabel Productions",
+  "name_he": "ראבל",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Tel Aviv commercial production company (trading since 1995 per The Location Guide) credited on Israeli TV campaigns such as Bezeq with Adi Ashkenazi (Adler Chomsky Warshavsky) and Tapuzina (McCann), both directed by Rani Carmeli.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1995,
+  "status": "active",
+  "notable_clients": [
+    "Bezeq",
+    "Tapuzina"
+  ],
+  "notable_work": [
+    "Bezeq campaign with Adi Ashkenazi",
+    "Tapuzina 'Ze ma she-ba li' campaign"
+  ],
+  "tags": [
+    "commercials",
+    "production-services"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1014739",
+    "https://www.ice.co.il/advertising-marketing/news/article/821386",
+    "https://www.thelocationguide.com/israel/tel-aviv/global-directory/rabel-productions"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "No official website found. Location Guide lists Nahalat Binyamin St., Tel Aviv."
+}

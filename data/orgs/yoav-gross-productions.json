@@ -1,0 +1,50 @@
+{
+  "id": "yoav-gross-productions",
+  "name": "Yoav Gross Productions",
+  "aka": [
+    "YGP"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Leading Israeli scripted TV and film producer founded by Yoav Gross, holding one of Israel's largest IP libraries; series sold or remade worldwide include Red Skies (Apple TV+), Uri & Ella (HBO Max), Nehama (Canal+), HaShoter HaTov (Netflix, remade as The Good Cop) and Little Mom (remade in six territories).",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2000,
+  "status": "active",
+  "website": "https://www.yoavgross.com/",
+  "notable_work": [
+    "Red Skies",
+    "Uri & Ella",
+    "Nehama",
+    "Little Mom",
+    "HaShoter HaTov",
+    "The Jews Are Coming",
+    "Pushers",
+    "Hillula",
+    "8200"
+  ],
+  "key_people": [
+    {
+      "name": "Yoav Gross",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "tv-production",
+    "drama",
+    "comedy",
+    "formats",
+    "international-sales"
+  ],
+  "sources": [
+    "https://www.yoavgross.com/",
+    "https://www.yoavgross.com/catalog",
+    "https://thetvdb.com:443/companies/yoav-gross-productions"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

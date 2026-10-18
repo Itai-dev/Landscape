@@ -1,0 +1,42 @@
+{
+  "id": "zed-films",
+  "name": "Zed Films",
+  "name_he": "זד פילמס",
+  "kind": "production_company",
+  "categories": [
+    "content-studio",
+    "commercial-production"
+  ],
+  "description": "Video production company founded in 2001 by graduates of the Jerusalem Film & Television School, producing corporate/brand films, marketing and training videos, projection-mapping shows, ceremonies and events, and offering production services in Israel.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2001,
+  "status": "active",
+  "website": "https://www.zedfilms.com/",
+  "links": {
+    "facebook": "https://www.facebook.com/ZedFilms1/"
+  },
+  "services": [
+    "Corporate and brand films",
+    "Marketing videos",
+    "Training videos",
+    "Projection mapping",
+    "Events and ceremonies production",
+    "Production services in Israel"
+  ],
+  "tags": [
+    "corporate-video",
+    "events",
+    "production-services"
+  ],
+  "sources": [
+    "https://www.zedfilms.com/",
+    "https://www.thelocationguide.com/israel/production-services",
+    "https://www.gov.il/BlobFolder/rfp/israeli_films_service_suppliers/he/List%20of%20providers%20included%20in%20the%20Israeli%20Film%20Service%20database.pdf"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "playtika",
+  "name": "Playtika",
+  "kind": "startup",
+  "categories": [
+    "game-development"
+  ],
+  "description": "Herzliya-headquartered, Nasdaq-listed (PLTK) mobile games company founded in 2010 by Robert Antokol and Uri Shahak; portfolio includes Slotomania, Bingo Blitz, Caesars Slots, Solitaire Grand Harvest, Pirate Kings, Best Fiends, WSOP and Dice Dreams. Acquired studios include Jelly Button, Wooga, Seriously and Innplay Labs.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya",
+    "other_offices": [
+      "Tel Aviv",
+      "Ukraine",
+      "Belarus",
+      "Canada"
+    ]
+  },
+  "founded": 2010,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.playtika.com/",
+  "links": {
+    "instagram": "https://www.instagram.com/playtika",
+    "facebook": "https://www.facebook.com/Playtika/"
+  },
+  "notable_work": [
+    "Slotomania",
+    "Bingo Blitz",
+    "Caesars Slots",
+    "Solitaire Grand Harvest",
+    "Pirate Kings",
+    "Best Fiends",
+    "World Series of Poker",
+    "Dice Dreams",
+    "Animals & Coins"
+  ],
+  "key_people": [
+    {
+      "name": "Robert Antokol",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Uri Shahak",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: PLTK"
+  },
+  "client_profile": {
+    "industry": "gaming",
+    "creative_needs": [
+      "game art",
+      "UA video ads",
+      "brand films",
+      "music & sound",
+      "animation"
+    ],
+    "in_house_studio": true
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "innplay-labs",
+      "note": "2023"
+    },
+    {
+      "type": "acquired",
+      "target": "Jelly Button",
+      "note": "2017"
+    },
+    {
+      "type": "acquired",
+      "target": "superplay"
+    },
+    {
+      "type": "client",
+      "target": "green-productions",
+      "note": "WSOP 'The Legend' film"
+    },
+    {
+      "type": "client",
+      "target": "knob-music",
+      "note": "Music for Solitaire Grand Harvest campaigns"
+    }
+  ],
+  "tags": [
+    "mobile-games",
+    "social-casino",
+    "public-company"
+  ],
+  "sources": [
+    "https://www.playtika.com/",
+    "https://en.wikipedia.org/wiki/Playtika"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "~3,500 employees end of 2024; ~20% workforce cut announced Nov 2025 (Wikipedia). 'The Legend' WSOP film was created in-house by Playtika."
+}

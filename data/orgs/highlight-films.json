@@ -1,0 +1,50 @@
+{
+  "id": "highlight-films",
+  "name": "Highlight Films",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "film-production"
+  ],
+  "description": "Production services company established in 1998 by Noam Shalev, providing TV, commercial, documentary and corporate video production and fixer services for foreign crews in Israel and Palestine, with its own camera, grip and lighting equipment.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Jerusalem",
+      "Bethlehem"
+    ]
+  },
+  "founded": 1998,
+  "status": "active",
+  "website": "https://www.highlight.co.il/",
+  "services": [
+    "Production services / fixing for foreign crews",
+    "TV commercials",
+    "Documentary and news production",
+    "Corporate video",
+    "Still photography campaigns",
+    "Equipment rental"
+  ],
+  "key_people": [
+    {
+      "name": "Noam Shalev",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "production-services",
+    "fixer",
+    "foreign-productions"
+  ],
+  "sources": [
+    "https://www.highlight.co.il/production-services-in-tel-aviv",
+    "https://productionparadise.com/member/tel_aviv/highlight-films.html",
+    "https://www.sortlist.us/agency/highlight-films",
+    "https://www.thelocationguide.com/israel/production-services"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Location Guide lists the company under Bnei Brak; own site emphasises Tel Aviv."
+}

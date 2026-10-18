@@ -162,7 +162,8 @@ def find_match(rec: dict, orgs: dict[str, dict]) -> str | None:
     for oid, o in orgs.items():
         if d and d == domain(o.get("website")) and d not in {"facebook.com", "instagram.com", "linkedin.com", "behance.net", "vimeo.com"}:
             return oid
-        if n and n == norm_name(o["name"]) and o.get("location", {}).get("country") == rec.get("location", {}).get("country"):
+        if (n and n == norm_name(o["name"]) and o.get("kind") == rec.get("kind")
+                and o.get("location", {}).get("country") == rec.get("location", {}).get("country")):
             return oid
     return None
 

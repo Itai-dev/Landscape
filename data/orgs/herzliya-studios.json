@@ -1,0 +1,41 @@
+{
+  "id": "herzliya-studios",
+  "name": "Herzliya Studios",
+  "name_he": "אולפני הרצליה",
+  "aka": [
+    "United Studios of Israel"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Herzliya-based, TASE-listed full-service TV production company (United Studios of Israel) offering development, production, post-production and broadcast services, studios, control rooms, multi-camera crews and OB trucks, and supplying content to international markets.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "status": "active",
+  "services": [
+    "TV studios",
+    "Multi-camera crews",
+    "OB / broadcast trucks",
+    "Post-production",
+    "Content development and distribution"
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: TAYA"
+  },
+  "tags": [
+    "tv-studios",
+    "broadcast-services",
+    "facilities"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Herzliya_Studios",
+    "https://unifrance.org/annuaires/societe/363796/herzelia-studio-united-studios-of-israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

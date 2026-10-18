@@ -1,0 +1,45 @@
+{
+  "id": "ndg-studios",
+  "name": "NDG Studios",
+  "kind": "studio",
+  "categories": [
+    "dubbing-localization",
+    "sound-design"
+  ],
+  "description": "Israeli dubbing, subtitling and translation studio founded in 2015 by Ofir Kalfner, serving cinema distributors, broadcasters and streaming platforms with dubbing, narration, 2.0/5.1 mixes, M&E creation, DCP, SDH subtitles and sound-studio rental.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2015,
+  "status": "active",
+  "website": "https://www.ndg-studios.com/",
+  "services": [
+    "Dubbing",
+    "Narration",
+    "Subtitling and translation (33 languages)",
+    "SDH/HOH captions",
+    "Stereo and surround mixing",
+    "M&E creation",
+    "DCP",
+    "Sound studio rental"
+  ],
+  "key_people": [
+    {
+      "name": "Ofir Kalfner",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "dubbing",
+    "subtitling",
+    "localization",
+    "TPN"
+  ],
+  "sources": [
+    "https://www.ndg-studios.com/",
+    "https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%91%D7%95%D7%91_%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

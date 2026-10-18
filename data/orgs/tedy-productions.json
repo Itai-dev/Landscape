@@ -1,0 +1,46 @@
+{
+  "id": "tedy-productions",
+  "name": "Tedy Productions",
+  "name_he": "טדי יזמות והפקות",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Tel Aviv TV production and artist-management company founded in 1973 by Tamira and Dodo Yardeni, creator of entertainment formats including Kochav Nolad (Israeli Idol) and HaKokhav HaBa (Rising Star, sold to ~25 countries).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1973,
+  "status": "active",
+  "website": "https://www.tedy.co.il/",
+  "notable_work": [
+    "Kochav Nolad",
+    "HaKokhav HaBa / Rising Star",
+    "Lo Nafsik LeShir",
+    "HaPijamot"
+  ],
+  "key_people": [
+    {
+      "name": "Tamira Yardeni",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Dodo Yardeni",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "tv-production",
+    "formats",
+    "entertainment",
+    "artist-management"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%98%D7%93%D7%99_%D7%99%D7%96%D7%9E%D7%95%D7%AA_%D7%95%D7%94%D7%A4%D7%A7%D7%95%D7%AA"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Hebrew Wikipedia (citing Walla) reports control passed from the Yardeni family to Yoav Tsafir in Sept 2026; not independently verified."
+}

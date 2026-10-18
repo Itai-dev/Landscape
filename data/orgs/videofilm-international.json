@@ -1,0 +1,57 @@
+{
+  "id": "videofilm-international",
+  "name": "Videofilm International",
+  "name_he": "וידאופילם אינטרנשיונל",
+  "kind": "studio",
+  "categories": [
+    "dubbing-localization",
+    "sound-design"
+  ],
+  "description": "Family-owned Ramat Gan dubbing and subtitling studio founded in 1981 and run by Ami and Gili Bachar, offering lip-sync dubbing, casting and directing, mix and sound editing, multi-language subtitles and DCP for clients such as Netflix, Disney, HOT and Keshet 12.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1981,
+  "status": "active",
+  "website": "https://www.vfi.co.il/",
+  "links": {
+    "instagram": "https://www.instagram.com/videofilm_studios/"
+  },
+  "services": [
+    "Dubbing (lip-sync)",
+    "Voice casting and directing",
+    "Mix and sound editing",
+    "Translation and subtitling",
+    "DCP"
+  ],
+  "notable_clients": [
+    "Netflix",
+    "Disney",
+    "HOT",
+    "Keshet 12"
+  ],
+  "key_people": [
+    {
+      "name": "Ami Bachar",
+      "role": "Managing Director"
+    },
+    {
+      "name": "Gili Bachar",
+      "role": "Managing Director"
+    }
+  ],
+  "tags": [
+    "dubbing",
+    "subtitling",
+    "localization"
+  ],
+  "sources": [
+    "https://www.vfi.co.il/",
+    "https://he.wikipedia.org/wiki/%D7%95%D7%99%D7%93%D7%90%D7%95%D7%A4%D7%99%D7%9C%D7%9D_%D7%90%D7%99%D7%A0%D7%98%D7%A8%D7%A0%D7%A9%D7%99%D7%95%D7%A0%D7%9C",
+    "https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%91%D7%95%D7%91_%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "kukuruza-productions",
+  "name": "Kukuruza",
+  "name_he": "קוקורוזה",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli commercial production company credited on Optikana's 'My personal optometrist' campaign with Noa Kirel (agency Reuveni Pridan, director Eran 'Shosho' Shpanier).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Optikana"
+  ],
+  "notable_work": [
+    "Optikana campaign with Noa Kirel"
+  ],
+  "tags": [
+    "commercials"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1061570"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single trade-press credit; website and city not verified. English spelling is a transliteration."
+}

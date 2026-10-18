@@ -1,0 +1,86 @@
+{
+  "id": "green-productions",
+  "name": "Green Productions",
+  "name_he": "גרין פרודקשנס",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "film-production"
+  ],
+  "description": "Givatayim-based production company founded in 2009 by Gal Greenspan and Roi Kurland, producing feature films, TV series and large-scale TV/digital commercials for leading Israeli ad agencies and brands, with an office in Australia. Feature credits include Scaffolding, Cinema Sabaya and Let Shuli Go.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim",
+    "other_offices": [
+      "Australia"
+    ]
+  },
+  "founded": 2009,
+  "status": "active",
+  "website": "https://www.greenproductions.co.il/",
+  "links": {
+    "instagram": "https://www.instagram.com/green_productions_il",
+    "vimeo": "https://vimeo.com/user23010303"
+  },
+  "services": [
+    "TV commercials (live action)",
+    "Animation/VFX/online",
+    "Feature films",
+    "TV series",
+    "Corporate video",
+    "Music videos",
+    "Production services",
+    "Post-production services"
+  ],
+  "notable_clients": [
+    "Playtika",
+    "Samsung",
+    "Amazon",
+    "monday.com"
+  ],
+  "notable_work": [
+    "Scaffolding (Pigomim, 2017)",
+    "Cinema Sabaya (2021)",
+    "Let Shuli Go (2021)",
+    "WSOP 'The Legend' film for Playtika"
+  ],
+  "key_people": [
+    {
+      "name": "Gal Greenspan",
+      "role": "Co-founder, Producer"
+    },
+    {
+      "name": "Roi Kurland",
+      "role": "Co-founder, Producer"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "playtika",
+      "note": "Produced WSOP 'The Legend' film"
+    },
+    {
+      "type": "partner",
+      "target": "Sweetshop",
+      "note": "Joint venture Sweetshop & Green (Australia/NZ), announced 2019"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "feature-films",
+    "tv-series",
+    "international-coproduction"
+  ],
+  "sources": [
+    "https://www.greenproductions.co.il/",
+    "https://he.wikipedia.org/wiki/%D7%92%D7%A8%D7%99%D7%9F_%D7%A4%D7%A8%D7%95%D7%93%D7%A7%D7%A9%D7%A0%D7%A1",
+    "https://www.maariv.co.il/business/Article-941394",
+    "https://www.adsoftheworld.com/campaigns/the-legend",
+    "https://cinando.com/en/Company/green_productions_24860/Detail"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Trade press reported ~15 employees and 300+ freelancers per month (ice.co.il/Bizportal). Founder name sometimes spelled Roy Kurland/Korland."
+}

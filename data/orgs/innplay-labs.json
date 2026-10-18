@@ -1,0 +1,41 @@
+{
+  "id": "innplay-labs",
+  "name": "Innplay Labs",
+  "kind": "studio",
+  "categories": [
+    "game-development",
+    "game-art"
+  ],
+  "description": "Tel Aviv mobile game studio formed in 2017 by developers, designers and animators, creator of Animals & Coins and known for in-house art and animation; acquired by Playtika in 2023.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2017,
+  "status": "acquired",
+  "website": "https://www.innplaylabs.com/",
+  "links": {
+    "instagram": "https://www.instagram.com/animalsandcoins",
+    "youtube": "https://www.youtube.com/channel/UC9IRozd1CjqPKSvWHI4llxg"
+  },
+  "notable_work": [
+    "Animals & Coins"
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "playtika",
+      "note": "2023"
+    }
+  ],
+  "tags": [
+    "mobile-games"
+  ],
+  "sources": [
+    "https://www.innplaylabs.com/",
+    "https://en.wikipedia.org/wiki/Playtika"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

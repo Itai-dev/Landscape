@@ -1,0 +1,27 @@
+{
+  "id": "uri-amitai-productions",
+  "name": "Uri Amitai Productions",
+  "name_he": "אורי אמיתי הפקות",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli production company credited on Renoir's Passover TV commercial (agency Avraham, director Shiri Shachar, music arrangement by KNOB).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Renoir"
+  ],
+  "tags": [
+    "commercials"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/954329"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single trade-press credit; no website found."
+}

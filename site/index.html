@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<title>Landscape Israel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Rubik:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: sticky search bar → kind tabs with counts → filter row → card grid; detail opens as bottom sheet (phone) / side panel (desktop). */
+:root {
+  --bg: #f2f4f3;
+  --surface: #ffffff;
+  --ink: #15201f;
+  --muted: #5d6b69;
+  --line: #d9dfdd;
+  --accent: #1640c9;
+  --accent-soft: #e4eafc;
+  --k-studio: #c2410c;
+  --k-production_company: #a21caf;
+  --k-startup: #0f766e;
+  --k-agency: #b45309;
+  --k-client: #1d4ed8;
+  --k-community: #4d7c0f;
+  --shadow: 0 10px 40px rgba(16, 30, 30, .18);
+  --f-display: "Frank Ruhl Libre", "Times New Roman", serif;
+  --f-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #182120; --ink: #e8eeec; --muted: #9aaaa7; --line: #2a3634;
+    --accent: #8aa8ff; --accent-soft: #1e2a4a;
+    --k-studio: #fb923c; --k-production_company: #e879f9; --k-startup: #2dd4bf; --k-agency: #fbbf24; --k-client: #93c5fd; --k-community: #a3e635;
+    --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #182120; --ink: #e8eeec; --muted: #9aaaa7; --line: #2a3634;
+  --accent: #8aa8ff; --accent-soft: #1e2a4a;
+  --k-studio: #fb923c; --k-production_company: #e879f9; --k-startup: #2dd4bf; --k-agency: #fbbf24; --k-client: #93c5fd; --k-community: #a3e635;
+  --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+header.masthead { padding-block: 22px 6px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+.masthead h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(28px, 6vw, 40px); line-height: 1.05; margin: 0; letter-spacing: -.01em; }
+.masthead h1 span { font-weight: 500; color: var(--muted); }
+.masthead .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px; display: grid; gap: 10px; }
+.search { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 0 12px; }
+.search svg { flex: none; color: var(--muted); }
+.search input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 12px 0; outline: none; font-size: 16px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: none; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-size: 14px; }
+.tab .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--muted)); }
+.tab .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tab[aria-pressed="true"] .n { color: inherit; opacity: .7; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.filters select { min-width: 0; max-width: 100%; flex: 1 1 140px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font-size: 14px; }
+.filters .count { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-left: auto; }
+.linkbtn { border: 0; background: none; color: var(--accent); cursor: pointer; padding: 4px; font-size: 14px; }
+
+main { padding-block: 8px 48px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+@media (max-width: 420px) { .grid { grid-template-columns: 1fr; } }
+.card { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .15s, transform .15s; }
+.card:hover { border-color: var(--k, var(--accent)); }
+@media (prefers-reduced-motion: no-preference) { .card:hover { transform: translateY(-1px); } }
+.card .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.card h3 { font-family: var(--f-display); font-weight: 700; font-size: 21px; line-height: 1.15; margin: 0; overflow-wrap: anywhere; }
+.card .he { font-family: var(--f-display); color: var(--muted); font-size: 16px; direction: rtl; white-space: nowrap; }
+.kind { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; color: var(--k); }
+.kind::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--k); }
+.where { color: var(--muted); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); color: var(--ink); white-space: nowrap; }
+button.chip { cursor: pointer; }
+.empty { text-align: center; color: var(--muted); padding: 48px 16px; }
+
+/* detail sheet */
+.scrim { position: fixed; inset: 0; background: rgba(10, 18, 18, .45); z-index: 20; }
+.sheet { position: fixed; z-index: 21; background: var(--surface); box-shadow: var(--shadow); overflow-y: auto; overscroll-behavior: contain;
+  inset: auto 0 0 0; max-height: 88vh; border-radius: 18px 18px 0 0;
+  padding: 18px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
+@media (min-width: 860px) { .sheet { inset: 0 0 0 auto; width: 520px; max-height: none; border-radius: 0; padding-top: calc(22px + env(safe-area-inset-top, 0px)); } }
+.sheet .close { position: sticky; top: 0; float: right; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; font-size: 18px; line-height: 1; }
+.sheet h2 { font-family: var(--f-display); font-size: 30px; line-height: 1.1; margin: 6px 0 2px; text-wrap: balance; }
+.sheet .he { display: inline-block; font-family: var(--f-display); font-size: 20px; color: var(--muted); direction: rtl; }
+.sheet section { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; }
+.sheet h4 { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 14px; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.links { display: flex; flex-wrap: wrap; gap: 6px; }
+.links a { font-size: 13px; text-decoration: none; border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; }
+.rel { display: grid; gap: 6px; }
+.rel button, .rel span.plain { text-align: left; display: flex; gap: 8px; align-items: baseline; border: 0; background: none; padding: 0; font-size: 14px; }
+.rel button { cursor: pointer; color: var(--accent); }
+.rel .t { font-family: var(--f-mono); font-size: 11px; color: var(--muted); min-width: 92px; }
+.sources { font-size: 12px; display: grid; gap: 2px; }
+.sources a { overflow-wrap: anywhere; }
+.conf { font-family: var(--f-mono); font-size: 11px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); }
+ul.plain { margin: 0; padding-left: 18px; font-size: 14px; }
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <h1>Landscape <span>· Israel’s creative industry</span></h1>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+
+  <div class="bar">
+    <label class="search" for="q">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search studios, startups, clients, services…" autocomplete="off">
+    </label>
+    <div class="tabs" id="tabs" role="toolbar" aria-label="Type"></div>
+    <div class="filters">
+      <select id="cat" aria-label="Category"></select>
+      <select id="city" aria-label="City"></select>
+      <select id="sort" aria-label="Sort">
+        <option value="name">A → Z</option>
+        <option value="size">Largest first</option>
+        <option value="founded">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="verified">Recently verified</option>
+      </select>
+      <button class="linkbtn" id="reset" type="button">Reset</button>
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <main>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>No organizations match these filters.</div>
+  </main>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-name"></aside>
+
+<script>
+(function () {
+  const KIND_LABEL = { studio: "Studios", production_company: "Production", startup: "Startups", agency: "Agencies", client: "Clients", community: "Community" };
+  const KIND_ONE = { studio: "Studio", production_company: "Production co.", startup: "Startup", agency: "Agency", client: "Client", community: "Community" };
+  const SIZE_RANK = { "1-10": 1, "11-50": 2, "51-200": 3, "201-500": 4, "501-1000": 5, "1001-5000": 6, "5001+": 7 };
+  const REL_LABEL = { client: "client", agency: "agency", parent: "part of", subsidiary: "owns", acquired: "acquired", acquired_by: "acquired by", partner: "partner", spun_off_from: "spun off from", investor: "investor" };
+  const LINK_LABEL = { linkedin: "LinkedIn", instagram: "Instagram", behance: "Behance", vimeo: "Vimeo", youtube: "YouTube", crunchbase: "Crunchbase", x: "X", facebook: "Facebook", twitter: "X", imdb: "IMDb", dribbble: "Dribbble", wikipedia: "Wikipedia", artstation: "ArtStation" };
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "")
+    .replace(/\b(ltd|inc|israel|group|studios?|productions?|tel aviv|tlv|the)\b/g, "").replace(/[^a-z0-9֐-׿]+/g, "");
+
+  let DATA, ORGS = [], BY_ID = {}, BY_NAME = {}, TAX;
+  const state = { q: "", kind: "", cat: "", city: "", sort: "name" };
+  try { Object.assign(state, JSON.parse(localStorage.getItem("landscape-filters") || "{}")); } catch (e) {}
+
+  function boot(data) {
+    DATA = data; TAX = data.taxonomy; ORGS = data.orgs;
+    ORGS.forEach((o) => {
+      BY_ID[o.id] = o; BY_NAME[norm(o.name)] = o;
+      (o.aka || []).forEach((a) => (BY_NAME[norm(a)] = BY_NAME[norm(a)] || o));
+      o._text = [o.name, o.name_he, (o.aka || []).join(" "), o.description, o.location.city, (o.categories || []).map((c) => TAX.categories[c] || c).join(" "),
+        (o.services || []).join(" "), (o.notable_clients || []).join(" "), (o.notable_work || []).join(" "), (o.tags || []).join(" "),
+        (o.key_people || []).map((p) => p.name).join(" ")].join(" ").toLowerCase();
+    });
+    const d = new Date(data.generated);
+    $("meta").textContent = `${ORGS.length} organizations · updated ${d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`;
+    $("q").value = state.q; $("sort").value = state.sort;
+    render();
+    const h = location.hash.slice(1);
+    if (h && BY_ID[h]) open(h);
+  }
+
+  function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
+
+  function matches(o, skip) {
+    if (skip !== "kind" && state.kind && o.kind !== state.kind) return false;
+    if (skip !== "cat" && state.cat && !o.categories.includes(state.cat)) return false;
+    if (skip !== "city" && state.city && (o.location.city || "—") !== state.city) return false;
+    if (state.q) { for (const w of state.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!o._text.includes(w)) return false; }
+    return true;
+  }
+
+  function options(sel, counts, label, current, nameOf) {
+    const entries = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    sel.innerHTML = `<option value="">${label}</option>` + entries.map(([k, n]) => `<option value="${esc(k)}"${k === current ? " selected" : ""}>${esc(nameOf(k))} (${n})</option>`).join("");
+  }
+
+  function render() {
+    try { localStorage.setItem("landscape-filters", JSON.stringify(state)); } catch (e) {}
+    const kc = {}; ORGS.filter((o) => matches(o, "kind")).forEach((o) => (kc[o.kind] = (kc[o.kind] || 0) + 1));
+    const total = Object.values(kc).reduce((a, b) => a + b, 0);
+    $("tabs").innerHTML = `<button class="tab" type="button" data-kind="" aria-pressed="${!state.kind}">All <span class="n">${total}</span></button>` +
+      Object.keys(KIND_LABEL).filter((k) => kc[k] || state.kind === k).map((k) =>
+        `<button class="tab" type="button" data-kind="${k}" style="--c:var(--k-${k})" aria-pressed="${state.kind === k}"><span class="dot"></span>${KIND_LABEL[k]} <span class="n">${kc[k] || 0}</span></button>`).join("");
+    const cc = {}, ci = {};
+    ORGS.filter((o) => matches(o, "cat")).forEach((o) => o.categories.forEach((c) => (cc[c] = (cc[c] || 0) + 1)));
+    ORGS.filter((o) => matches(o, "city")).forEach((o) => { const c = o.location.city || "—"; ci[c] = (ci[c] || 0) + 1; });
+    options($("cat"), cc, "All categories", state.cat, (k) => TAX.categories[k] || k);
+    options($("city"), ci, "All cities", state.city, (k) => k);
+
+    const list = ORGS.filter((o) => matches(o));
+    const by = {
+      name: (a, b) => a.name.localeCompare(b.name),
+      size: (a, b) => (SIZE_RANK[b.size] || 0) - (SIZE_RANK[a.size] || 0) || a.name.localeCompare(b.name),
+      founded: (a, b) => (b.founded || 0) - (a.founded || 0),
+      oldest: (a, b) => (a.founded || 9999) - (b.founded || 9999),
+      verified: (a, b) => String(b.last_verified).localeCompare(String(a.last_verified)),
+    }[state.sort];
+    list.sort(by);
+    $("count").textContent = `${list.length} shown`;
+    $("empty").hidden = list.length > 0;
+    $("grid").innerHTML = list.map((o) => `
+      <button class="card" type="button" data-id="${o.id}" style="--k:var(--k-${o.kind})">
+        <div class="top"><h3>${esc(o.name)}</h3>${o.name_he ? `<span class="he" lang="he">${esc(o.name_he)}</span>` : ""}</div>
+        <div class="kind">${KIND_ONE[o.kind]} <span class="where">· ${esc(o.location.city || o.location.country)}${o.founded ? ` · est. ${o.founded}` : ""}${o.status && o.status !== "active" ? ` · ${o.status}` : ""}</span></div>
+        <p>${esc(o.description)}</p>
+        <div class="chips">${o.categories.slice(0, 4).map((c) => `<span class="chip">${esc(TAX.categories[c] || c)}</span>`).join("")}</div>
+      </button>`).join("");
+  }
+
+  function connections(o) {
+    const out = new Map(); // id -> {org, why:Set}
+    const add = (other, why) => { if (!other || other.id === o.id) return; if (!out.has(other.id)) out.set(other.id, { org: other, why: new Set() }); out.get(other.id).why.add(why); };
+    (o.relations || []).forEach((r) => add(r.target_id ? BY_ID[r.target_id] : lookup(r.target), REL_LABEL[r.type] || r.type));
+    ORGS.forEach((x) => (x.relations || []).forEach((r) => { if (r.target_id === o.id || lookup(r.target) === o) add(x, "links here: " + (REL_LABEL[r.type] || r.type)); }));
+    (o.notable_clients || []).forEach((c) => add(lookup(c), "client"));
+    (o.client_profile?.known_agencies || []).forEach((a) => add(lookup(a), "agency"));
+    const me = new Set([norm(o.name), ...(o.aka || []).map(norm)]);
+    ORGS.forEach((x) => {
+      if ((x.notable_clients || []).some((c) => me.has(norm(c)))) add(x, "worked for " + o.name);
+      if ((x.client_profile?.known_agencies || []).some((c) => me.has(norm(c)))) add(x, "agency client");
+    });
+    const mine = new Set((o.notable_clients || []).map(norm));
+    if (mine.size) ORGS.forEach((x) => {
+      if (x.id === o.id) return;
+      const shared = (x.notable_clients || []).filter((c) => mine.has(norm(c)));
+      if (shared.length) add(x, "shared clients: " + shared.slice(0, 3).join(", "));
+    });
+    return [...out.values()];
+  }
+
+  function open(id) {
+    const o = BY_ID[id]; if (!o) return;
+    const links = Object.entries(o.links || {});
+    const facts = [
+      ["Type", KIND_ONE[o.kind]], ["Location", [o.location.city, o.location.country].filter(Boolean).join(", ") + (o.location.other_offices?.length ? ` (+ ${o.location.other_offices.join(", ")})` : "")],
+      ["Founded", o.founded], ["Size", o.size && o.size + " people"], ["Status", o.status !== "active" ? o.status : ""],
+      ["Funding", o.funding && [o.funding.public ? `Public${o.funding.ticker ? " (" + o.funding.ticker + ")" : ""}` : o.funding.stage, o.funding.total_usd_m ? `$${o.funding.total_usd_m}M raised` : ""].filter(Boolean).join(" · ")],
+      ["Industry", o.client_profile?.industry], ["In-house studio", o.client_profile?.in_house_studio ? "Yes" : ""],
+    ].filter(([, v]) => v);
+    const conns = connections(o);
+    const list = (title, arr) => arr && arr.length ? `<section><h4>${title}</h4><div class="chips">${arr.map((x) => { const t = lookup(x); return t && t.id !== o.id ? `<button class="chip" type="button" data-id="${t.id}">${esc(x)}</button>` : `<span class="chip">${esc(x)}</span>`; }).join("")}</div></section>` : "";
+    $("sheet").innerHTML = `
+      <button class="close" type="button" aria-label="Close">×</button>
+      <div class="kind" style="--k:var(--k-${o.kind})">${KIND_ONE[o.kind]}</div>
+      <h2 id="d-name">${esc(o.name)}</h2>
+      ${o.name_he ? `<div class="he" lang="he">${esc(o.name_he)}</div>` : ""}
+      <p>${esc(o.description)}</p>
+      <div class="links">${o.website ? `<a href="${esc(o.website)}" target="_blank" rel="noopener">Website ↗</a>` : ""}${links.map(([k, v]) => `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(LINK_LABEL[k] || k)} ↗</a>`).join("")}</div>
+      <section><dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl></section>
+      <section><h4>Categories</h4><div class="chips">${o.categories.map((c) => `<button class="chip" type="button" data-cat="${c}">${esc(TAX.categories[c] || c)}</button>`).join("")}</div></section>
+      ${o.services?.length ? `<section><h4>Services / products</h4><ul class="plain">${o.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></section>` : ""}
+      ${o.client_profile?.creative_needs?.length ? `<section><h4>Creative needs</h4><ul class="plain">${o.client_profile.creative_needs.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></section>` : ""}
+      ${list("Notable clients", o.notable_clients)}
+      ${list("Known agencies", o.client_profile?.known_agencies)}
+      ${o.notable_work?.length ? `<section><h4>Notable work</h4><ul class="plain">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></section>` : ""}
+      ${o.key_people?.length ? `<section><h4>People</h4><ul class="plain">${o.key_people.map((p) => `<li>${esc(p.name)} — ${esc(p.role)}</li>`).join("")}</ul></section>` : ""}
+      ${o.funding?.investors?.length ? list("Investors", o.funding.investors) : ""}
+      ${conns.length ? `<section><h4>Connections in the map (${conns.length})</h4><div class="rel">${conns.map((c) => `<button type="button" data-id="${c.org.id}"><span class="t">${esc(KIND_ONE[c.org.kind])}</span><span>${esc(c.org.name)} <span class="where">— ${esc([...c.why].join("; "))}</span></span></button>`).join("")}</div></section>` : ""}
+      ${(o.relations || []).filter((r) => !r.target_id && !lookup(r.target)).length ? `<section><h4>Other relations</h4><div class="rel">${o.relations.filter((r) => !r.target_id && !lookup(r.target)).map((r) => `<span class="plain"><span class="t">${esc(REL_LABEL[r.type] || r.type)}</span><span>${esc(r.target)}${r.note ? ` <span class="where">— ${esc(r.note)}</span>` : ""}</span></span>`).join("")}</div></section>` : ""}
+      <section><h4>Sources · <span class="conf">${esc(o.confidence)} confidence</span> · verified ${esc(o.last_verified)}</h4><div class="sources">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></section>`;
+    $("sheet").hidden = false; $("scrim").hidden = false; $("sheet").scrollTop = 0;
+    $("sheet").querySelector(".close").focus({ preventScroll: true });
+    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+  }
+  function close() { $("sheet").hidden = true; $("scrim").hidden = true; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+
+  $("q").addEventListener("input", (e) => { state.q = e.target.value.trim(); render(); });
+  $("cat").addEventListener("change", (e) => { state.cat = e.target.value; render(); });
+  $("city").addEventListener("change", (e) => { state.city = e.target.value; render(); });
+  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
+  $("reset").addEventListener("click", () => { Object.assign(state, { q: "", kind: "", cat: "", city: "" }); $("q").value = ""; render(); });
+  $("tabs").addEventListener("click", (e) => { const b = e.target.closest(".tab"); if (b) { state.kind = b.dataset.kind; render(); } });
+  $("grid").addEventListener("click", (e) => { const c = e.target.closest(".card"); if (c) open(c.dataset.id); });
+  $("sheet").addEventListener("click", (e) => {
+    if (e.target.closest(".close")) return close();
+    const t = e.target.closest("[data-id]"); if (t) return open(t.dataset.id);
+    const c = e.target.closest("[data-cat]"); if (c) { Object.assign(state, { cat: c.dataset.cat, kind: "", q: "", city: "" }); $("q").value = ""; close(); render(); }
+  });
+  $("scrim").addEventListener("click", close);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("sheet").hidden) close(); });
+
+  if (window.__LANDSCAPE__) boot(window.__LANDSCAPE__);
+  else fetch("data/dataset.json").then((r) => r.json()).then(boot).catch(() => { $("meta").textContent = "Could not load data/dataset.json"; });
+})();
+</script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@
     "gaming",
     "game-development"
   ],
-  "description": "Ramat Gan company (founded 2009) running a platform for creators to build, distribute and monetize in-game apps, mods and user-generated game content; owns mod hub CurseForge (bought from Twitch, 2020), Tebex and Nitro. Raised ~$149M, including a $75M a16z-led round in 2021, and runs a creator fund.",
+  "description": "Ramat Gan-based platform founded in 2009 that lets creators build, distribute and monetize in-game apps, overlays, mods and game servers; owns CurseForge, Tebex and Nitro, and has raised about $149M.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -15,17 +15,38 @@
   "founded": 2009,
   "size": "201-500",
   "status": "active",
-  "website": "https://www.overwolf.com",
+  "website": "https://www.overwolf.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/overwolf.com/",
+    "x": "https://twitter.com/TheOverwolf",
+    "facebook": "https://www.facebook.com/Overwolf/"
+  },
   "services": [
     "In-game app platform",
     "CurseForge mod platform & CurseForge Core SDK",
     "Tebex game-server monetization",
-    "Creator fund"
+    "Creator fund",
+    "In-game app platform and appstore",
+    "CurseForge mod platform",
+    "In-game advertising (Nitro)",
+    "Creator accelerator / funding"
   ],
   "key_people": [
     {
       "name": "Uri Marchand",
       "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Gil Or",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Alon Rabinovitz",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Nir Finkelstein",
+      "role": "Co-founder"
     }
   ],
   "funding": {
@@ -57,13 +78,16 @@
   "tags": [
     "mods",
     "UGC",
-    "gaming creators"
+    "gaming creators",
+    "gaming-platform",
+    "creator-economy"
   ],
   "sources": [
     "https://www.overwolf.com",
     "https://en.wikipedia.org/wiki/Overwolf",
     "https://www.calcalistech.com/ctech/articles/0,7340,L-3922789,00.html",
-    "https://techcrunch.com/2021/03/16/overwolf-raises-52-5m-for-its-platform-to-build-distribute-and-monetize-in-game-user-generated-content"
+    "https://techcrunch.com/2021/03/16/overwolf-raises-52-5m-for-its-platform-to-build-distribute-and-monetize-in-game-user-generated-content",
+    "https://www.overwolf.com/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
