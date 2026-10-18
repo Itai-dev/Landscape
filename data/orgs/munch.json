@@ -1,0 +1,58 @@
+{
+  "id": "munch",
+  "name": "Munch",
+  "name_he": "מנצ'",
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Independent Israeli creative agency owned by partners Yaniv Malinarsky (creative), Saar Naim (management) and Danny Chechanover (business development & digital). Clients include Cal, Naot and Goldstar; Effie Israel 2026 winner and tied for most finalists at the 2025 Granot awards.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Cal (Israel Credit Cards)",
+    "Naot",
+    "Goldstar",
+    "Altman"
+  ],
+  "key_people": [
+    {
+      "name": "Yaniv Malinarsky",
+      "role": "Founding partner, creative"
+    },
+    {
+      "name": "Saar Naim",
+      "role": "Founding partner, management"
+    },
+    {
+      "name": "Danny Chechanover",
+      "role": "Founding partner, business development & digital"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production",
+      "digital content"
+    ]
+  },
+  "tags": [
+    "independent"
+  ],
+  "sources": [
+    "https://www.bizportal.co.il/advertismentandmarketing/news/article/432518",
+    "https://www.ice.co.il/advertising-marketing/news/article/841021",
+    "https://www.ice.co.il/advertising-marketing/news/article/464361",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001528646"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City assumed Tel Aviv. Website not confirmed."
+}

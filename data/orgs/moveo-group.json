@@ -1,0 +1,46 @@
+{
+  "id": "moveo-group",
+  "name": "Moveo Group",
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "creative-technology",
+    "branding"
+  ],
+  "description": "Tel Aviv technology and creative group made up of specialist business units covering software development, AI and automation, creative and branding, and growth marketing, among others. Client logos include Google, Nestlé, Teva, SodaStream, Elementor, Artlist and Bank Leumi.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.moveo.group/",
+  "services": [
+    "Software development",
+    "AI & automation",
+    "Creative & branding",
+    "Growth marketing",
+    "Team building"
+  ],
+  "notable_clients": [
+    "Google",
+    "Nestlé",
+    "Coca-Cola",
+    "Teva",
+    "SodaStream",
+    "Elementor",
+    "Rapyd",
+    "Artlist",
+    "Bank Leumi"
+  ],
+  "tags": [
+    "tech-services",
+    "product"
+  ],
+  "sources": [
+    "https://www.moveo.group/"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Address: Lilienblum 31, Tel Aviv. Only official-site evidence; mostly a software/tech services group with a creative unit."
+}

@@ -1,0 +1,80 @@
+{
+  "id": "kpln",
+  "name": "KPLN (Kaplan)",
+  "name_he": "משרד הפרסום קפלן",
+  "aka": [
+    "Boroda-Kaplan",
+    "Boroda Kaplan"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Israeli creative and strategy agency founded in 2002 by Guy Boroda, with Ron Kaplan joining a year later; formerly part of the Adler Chomski group. Renamed KPLN in 2026 after Boroda's exit, led by CEO Ron Kaplan; ~35 employees, with an in-house studio & adaptation unit and performance media.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2002,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://kpln.co.il/",
+  "services": [
+    "Strategy",
+    "Creative",
+    "Performance media",
+    "Studio & adaptation"
+  ],
+  "notable_clients": [
+    "Meitav",
+    "Tadiran",
+    "WeSure",
+    "Yohananof"
+  ],
+  "notable_work": [
+    "Meitav campaign featuring David Schwimmer"
+  ],
+  "key_people": [
+    {
+      "name": "Ron Kaplan",
+      "role": "CEO"
+    },
+    {
+      "name": "Guy Boroda",
+      "role": "Co-founder (left 2026)"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production"
+    ],
+    "in_house_studio": true
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "A2",
+      "note": "Digital agency integrated into the firm"
+    },
+    {
+      "type": "spun_off_from",
+      "target": "adler-chomski-warshavsky",
+      "note": "Was part of the Adler Chomski group; Chomski bought Boroda's shares"
+    }
+  ],
+  "tags": [
+    "independent",
+    "rebrand-2026"
+  ],
+  "sources": [
+    "https://kpln.co.il/",
+    "https://www.globes.co.il/news/article.aspx?did=1001547082"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Ownership after the 2026 change is not fully clear (Globes says Eyal Chomski bought Boroda's shares). City assumed Tel Aviv."
+}

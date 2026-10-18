@@ -1,0 +1,94 @@
+{
+  "id": "adler-chomski-warshavsky",
+  "name": "Adler Chomski & Warshavsky (Grey)",
+  "name_he": "אדלר חומסקי & ורשבסקי",
+  "aka": [
+    "Adler Chomsky & Warshavsky",
+    "ACW Grey",
+    "Adler Chomski Grey",
+    "Adler Chomski Group"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency",
+    "media-agency",
+    "content-studio"
+  ],
+  "description": "Israeli advertising group founded in 1996 by Reuven Adler and Eyal Chomski; it bought Warshavsky Freilich Dovev in 1998 and represents Grey in Israel. Described by Calcalist (Oct 2026) as Israel's second-largest advertising group (~400 staff), with subsidiaries including a design studio, interactive agency, sector agencies (Russian, Arab, Haredi) and LEAD. Grand Effie winner 2026 (Strauss/Doritos).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1996,
+  "size": "201-500",
+  "status": "active",
+  "services": [
+    "Creative advertising",
+    "Media planning & buying",
+    "Digital",
+    "Content (Grey Content)"
+  ],
+  "notable_clients": [
+    "Discount Bank",
+    "Bezeq",
+    "Colmobil",
+    "Mifal HaPais (Lotto)",
+    "The Phoenix",
+    "Clal Insurance",
+    "Electra",
+    "Strauss (Doritos)",
+    "Delta"
+  ],
+  "key_people": [
+    {
+      "name": "Eyal Chomski",
+      "role": "Co-founder, controlling shareholder"
+    },
+    {
+      "name": "Uri Eini",
+      "role": "CEO of the agency (Globes, Oct 2026)"
+    },
+    {
+      "name": "Reuven Adler",
+      "role": "Co-founder (died 2022)"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production",
+      "3D/CGI",
+      "digital content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Grey Group (WPP)",
+      "note": "Grey representative in Israel"
+    },
+    {
+      "type": "subsidiary",
+      "target": "lead-advertising"
+    }
+  ],
+  "tags": [
+    "independent-ownership",
+    "grey",
+    "top-agency",
+    "effie"
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctechnews/article/tmari75m0",
+    "https://he.wikipedia.org/wiki/%D7%90%D7%93%D7%9C%D7%A8_%D7%97%D7%95%D7%9E%D7%A1%D7%A7%D7%99_%26_%D7%95%D7%A8%D7%A9%D7%91%D7%A1%D7%A7%D7%99",
+    "https://www.globes.co.il/news/article.aspx?did=1001559112",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Oct 2026: Leumi Partners and Discount Capital reportedly considering ~30% stake at ~NIS 500M valuation (not confirmed closed). Was publicly traded from 2007 before being taken private. Boroda-Kaplan (now KPLN) was formerly part of the group. Official website not confirmed."
+}

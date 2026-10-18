@@ -1,0 +1,60 @@
+{
+  "id": "inmanage",
+  "name": "inManage",
+  "name_he": "אינמאנג'",
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "digital-design"
+  ],
+  "description": "Tel Aviv software house and UI/UX studio founded in 2006, building custom e-commerce platforms, websites and native apps for large Israeli consumer brands. About 70 staff.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2006,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.inmanage.co.il/",
+  "services": [
+    "E-commerce platforms",
+    "Websites",
+    "Native mobile apps",
+    "UI/UX design",
+    "Conversion optimisation"
+  ],
+  "notable_clients": [
+    "Domino's",
+    "McDonald's Israel",
+    "Aroma",
+    "HOT",
+    "Mifal HaPais",
+    "Shlomo Sixt",
+    "Azrieli Malls",
+    "Delek Ten"
+  ],
+  "key_people": [
+    {
+      "name": "Roni Tobi",
+      "role": "Founder & CEO"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "UI animation",
+      "illustration",
+      "product imagery"
+    ]
+  },
+  "tags": [
+    "web-development",
+    "e-commerce"
+  ],
+  "sources": [
+    "https://www.inmanage.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Address: Hashfela 3, Tel Aviv. Only official-site evidence."
+}

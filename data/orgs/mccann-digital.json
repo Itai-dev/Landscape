@@ -1,0 +1,75 @@
+{
+  "id": "mccann-digital",
+  "name": "McCann Digital",
+  "name_he": "מקאן דיגיטל",
+  "aka": [
+    "UM Digital",
+    "Universal McCann Digital"
+  ],
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "media-agency"
+  ],
+  "description": "Digital marketing and digital media agency in the McCann Israel group, based in Ramat HaHayal, Tel Aviv. Offers total video, content, SEM, SEO/ASO, UX/UI, programmatic and BI/data services for large advertisers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://mdigital.co.il/",
+  "services": [
+    "Total video",
+    "Content",
+    "SEM / PPC",
+    "SEO & ASO",
+    "UX/UI",
+    "Programmatic",
+    "BI & data dashboards",
+    "Media planning"
+  ],
+  "notable_clients": [
+    "El Al",
+    "Nespresso",
+    "Bank Leumi",
+    "Super-Pharm",
+    "IKEA",
+    "L'Oréal"
+  ],
+  "key_people": [
+    {
+      "name": "Ophir Cohen",
+      "role": "Joint CEO (per mccann.co.il)"
+    },
+    {
+      "name": "Maor Chen",
+      "role": "Joint CEO (per mccann.co.il)"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "short-form video",
+      "motion design",
+      "social content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "mccann-tel-aviv"
+    }
+  ],
+  "tags": [
+    "digital",
+    "omnicom"
+  ],
+  "sources": [
+    "https://mdigital.co.il/",
+    "https://mccann.co.il/about/",
+    "https://mccann.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "umdigital.co.il redirects to mdigital.co.il. Sources are all McCann-owned sites."
+}

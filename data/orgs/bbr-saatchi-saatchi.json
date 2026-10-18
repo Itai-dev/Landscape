@@ -1,0 +1,78 @@
+{
+  "id": "bbr-saatchi-saatchi",
+  "name": "BBR Saatchi & Saatchi",
+  "name_he": "באומן בר ריבנאי",
+  "aka": [
+    "Baumann Ber Rivnay",
+    "BBR",
+    "BBR Group"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising"
+  ],
+  "description": "Leading Israeli advertising agency (Baumann Ber Rivnay) affiliated with Saatchi & Saatchi since 1995 and acquired by Publicis Groupe in 2012, when BBR employed 220 people. Named Globes Agency of the Year 2015; part of Publicis Groupe Israel, the country's largest communications group.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.bbr.co.il",
+  "notable_clients": [
+    "Strauss Elite",
+    "Super-Pharm",
+    "Procter & Gamble",
+    "Delek Motors",
+    "Shikun & Binui"
+  ],
+  "key_people": [
+    {
+      "name": "Yoram Baumann",
+      "role": "Founder; President of Publicis Groupe Israel leadership committee (2018)"
+    },
+    {
+      "name": "Yossi Lubaton",
+      "role": "Chairman & CEO, Publicis Groupe Israel (from 2018)"
+    },
+    {
+      "name": "Ben Muskal",
+      "role": "CEO, BBR Saatchi & Saatchi (from 2018)"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production",
+      "3D/CGI"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Publicis Groupe Israel",
+      "note": "Acquired 2012"
+    },
+    {
+      "type": "acquired_by",
+      "target": "Publicis Groupe"
+    }
+  ],
+  "tags": [
+    "publicis",
+    "saatchi",
+    "network-agency",
+    "top-agency"
+  ],
+  "sources": [
+    "https://everything-pr.com/publicis-groupe-bbr",
+    "https://www.publicisgroupe.com/en/news/press-releases/publicis-groupe-announces-new-appointments-in-israel",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Leadership per 2018 Publicis release; may have changed. Size band reflects 2012 headcount (220). Lotto account moved to Adler Chomski in Feb 2026. Effie Israel 2026 gold (Strauss Elite). bbr.co.il responds but had an expired TLS certificate on 2026-10-18."
+}

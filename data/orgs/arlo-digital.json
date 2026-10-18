@@ -1,0 +1,74 @@
+{
+  "id": "arlo-digital",
+  "name": "Arlo Digital",
+  "name_he": "ארלו דיגיטל",
+  "aka": [
+    "ARLO"
+  ],
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "media-agency",
+    "pr-social"
+  ],
+  "description": "Tel Aviv digital agency set up in October 2020 by Reuveni Pridan as an independent unit. Offers media buying, performance, social, influencer marketing, SEO/GEO, content, production, e-commerce and in-house AI tools; ICE describes it as one of Israel's fastest-growing digital firms three years running.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2020,
+  "status": "active",
+  "website": "https://www.arlodigital.co.il/",
+  "services": [
+    "Media buying",
+    "Performance marketing",
+    "Social",
+    "Influencer marketing",
+    "SEO & GEO",
+    "Content & production",
+    "E-commerce",
+    "Branding"
+  ],
+  "notable_clients": [
+    "Mizrahi Tefahot",
+    "Castro",
+    "Albar",
+    "Tadiran",
+    "Novo Nordisk",
+    "University of Haifa",
+    "ORT Israel"
+  ],
+  "key_people": [
+    {
+      "name": "Yaniv Partush",
+      "role": "Joint CEO"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "social video",
+      "motion design",
+      "UGC/influencer content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "reuveni-pridan"
+    }
+  ],
+  "tags": [
+    "digital",
+    "performance",
+    "omnicom"
+  ],
+  "sources": [
+    "https://www.arlodigital.co.il/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1093811",
+    "https://he.wikipedia.org/wiki/%D7%A8%D7%90%D7%95%D7%91%D7%A0%D7%99_%D7%A4%D7%A8%D7%99%D7%93%D7%9F"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Address: HaYarkon 5A, Life Towers, Tel Aviv (per site; Life Towers is on the Bnei Brak side). Site claims 40+ active brand partners."
+}

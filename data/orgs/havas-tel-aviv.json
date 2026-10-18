@@ -1,0 +1,107 @@
+{
+  "id": "havas-tel-aviv",
+  "name": "Havas Inbar Merhav G",
+  "name_he": "ענבר מרחב G",
+  "aka": [
+    "Havas Tel Aviv",
+    "Inbar Merhav G",
+    "IMG"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency",
+    "media-agency",
+    "content-studio"
+  ],
+  "description": "Tel Aviv full-service agency founded in 1999 (Inbar Merhav G), affiliated with Havas from 2013 and acquired by Havas Group in Feb 2021. About 60 employees; runs an in-house content production unit, Studio 6 (live-action, audio, design, animation, digital), plus media and real-estate marketing departments.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1999,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://il.havas.com/",
+  "services": [
+    "Advertising",
+    "Media planning & buying",
+    "Content production (Studio 6)",
+    "Digital & social",
+    "Real-estate marketing"
+  ],
+  "notable_clients": [
+    "JDE",
+    "Nissan",
+    "Infiniti",
+    "Hyundai",
+    "Kia",
+    "Reckitt Benckiser",
+    "Swarovski",
+    "Isrotel",
+    "The Open University",
+    "Steimatzky",
+    "DavidShield"
+  ],
+  "key_people": [
+    {
+      "name": "Chen Inbar",
+      "role": "Founding Chairman"
+    },
+    {
+      "name": "Yaron Merhav",
+      "role": "Managing Partner"
+    },
+    {
+      "name": "Or Gleicher",
+      "role": "CEO & Managing Partner"
+    },
+    {
+      "name": "Ben Sever",
+      "role": "Managing Partner & CCO"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "animation",
+      "3D/CGI",
+      "post-production",
+      "large-scale production"
+    ],
+    "in_house_studio": true
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Havas Group",
+      "note": "Feb 2021"
+    },
+    {
+      "type": "acquired",
+      "target": "Lin&Lin",
+      "note": "2011"
+    },
+    {
+      "type": "acquired",
+      "target": "FGG",
+      "note": "2016"
+    },
+    {
+      "type": "partner",
+      "target": "blink-havas",
+      "note": "Sister Havas agency in Israel"
+    }
+  ],
+  "tags": [
+    "havas",
+    "vivendi",
+    "network-agency"
+  ],
+  "sources": [
+    "https://il.havas.com/about-us/",
+    "https://www.havas.com/press_release/havas-group-acquires-israeli-full-service-agency-inbar-merhav-g-ltd/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}
