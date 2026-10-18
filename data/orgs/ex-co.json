@@ -1,0 +1,59 @@
+{
+  "id": "ex-co",
+  "name": "EX.CO",
+  "aka": [
+    "Playbuzz"
+  ],
+  "kind": "startup",
+  "categories": [
+    "media-infrastructure",
+    "adtech-creative",
+    "video-tools"
+  ],
+  "description": "Tel Aviv publisher-video technology company, founded 2012 as interactive-content platform Playbuzz and rebranded EX.CO in 2019. Offers a video player, video CMS, livestreaming, CTV and an ML-driven monetization engine for publishers and media owners.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2012,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://ex.co",
+  "services": [
+    "Web video player & OVP",
+    "Video CMS",
+    "Video ad monetization / yield engine",
+    "CTV & livestreaming"
+  ],
+  "key_people": [
+    {
+      "name": "Tom Pachys",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Shaul Olmert",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series C+",
+    "investors": [
+      "Viola Growth",
+      "Disney"
+    ],
+    "public": false
+  },
+  "tags": [
+    "publishers",
+    "video monetization",
+    "interactive content"
+  ],
+  "sources": [
+    "https://ex.co",
+    "https://en.globes.co.il/en/article-israeli-digital-content-co-playbuzz-raises-35m-1001206414",
+    "https://www.cbinsights.com/investor/playbuzz"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

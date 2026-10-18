@@ -1,0 +1,49 @@
+{
+  "id": "bigvu",
+  "name": "BIGVU",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "creator-economy"
+  ],
+  "description": "Video-creation app for business communicators, creators, realtors and coaches, combining a teleprompter, auto-captions, editing, brand kits and social publishing with AI scripting tools; it claims 12M+ users. Founded in 2016 in Be'er Sheva by David Amselem and Herve Muyal, with BIGVU Inc. in New York.",
+  "location": {
+    "country": "IL",
+    "city": "Be'er Sheva",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2016,
+  "status": "active",
+  "website": "https://bigvu.tv",
+  "services": [
+    "Teleprompter app",
+    "Auto-captions & video editing",
+    "Social publishing & scheduling",
+    "AI scripts / avatars"
+  ],
+  "key_people": [
+    {
+      "name": "David Amselem",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Herve Muyal",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "teleprompter",
+    "talking-head video",
+    "social video"
+  ],
+  "sources": [
+    "https://bigvu.tv",
+    "https://startupim.com/company/bigvu"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Official site lists BIGVU Inc. in New York; Israeli HQ (Be'er Sheva) per startupim/registry. Israeli entity flagged for unfiled annual reports since 2022 — current Israeli operations unclear."
+}

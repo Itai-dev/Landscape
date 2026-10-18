@@ -1,0 +1,65 @@
+{
+  "id": "tailor-brands",
+  "name": "Tailor Brands",
+  "kind": "startup",
+  "categories": [
+    "design-tools",
+    "branding",
+    "website-builders"
+  ],
+  "description": "Israeli platform (founded 2014-15) that began with automated logo and brand-identity design and grew into an all-in-one small-business suite (branding, website, incorporation and more). Offices in Tel Aviv and New York; raised $50M led by GoDaddy in 2021 (~$70M total).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2014,
+  "status": "active",
+  "website": "https://www.tailorbrands.com",
+  "services": [
+    "Logo maker & brand identity",
+    "Website builder",
+    "Business formation & small-business tools",
+    "Social/ad design"
+  ],
+  "key_people": [
+    {
+      "name": "Yali Saar",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Nadav Shatz",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Tom Lahat",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series C",
+    "total_usd_m": 70,
+    "investors": [
+      "GoDaddy",
+      "Pitango",
+      "Mangrove Capital Partners",
+      "OurCrowd"
+    ],
+    "public": false
+  },
+  "tags": [
+    "logo design",
+    "SMB",
+    "branding automation"
+  ],
+  "sources": [
+    "https://www.tailorbrands.com/about",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3913079,00.html",
+    "https://en.globes.co.il/en/article-1001379209"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "photomyne",
+  "name": "Photomyne",
+  "kind": "startup",
+  "categories": [
+    "photo-tools",
+    "photography"
+  ],
+  "description": "Israeli company (founded 2014) making AI-powered apps to scan and digitize old photo prints, slides and film negatives (Photo Scan by Photomyne, SlideScan, FilmBox); it reports 500M+ photos scanned. Listed on the Tel Aviv Stock Exchange since 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2014,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://photomyne.com",
+  "services": [
+    "Photo Scan app",
+    "SlideScan",
+    "FilmBox negative scanning",
+    "Photo restoration/colorization"
+  ],
+  "key_people": [
+    {
+      "name": "Nir Tzemah",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Yair Segalovitz",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Omer Shoor",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Natalie Rodrig Verter",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Public",
+    "public": true,
+    "investors": [
+      "Maor"
+    ]
+  },
+  "tags": [
+    "photo scanning",
+    "consumer apps",
+    "TASE"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Photomyne",
+    "https://techcrunch.com/2018/06/18/photomyne-raises-5-million-for-its-a-i-powered-photo-scanning-app",
+    "https://calcalistech.com/ctech/articles/0,7340,L-3740715,00.html"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "TASE ticker not confirmed (possibly PHTM). Some directories give Bnei Brak address. Size estimate based on ~25 staff in 2018."
+}

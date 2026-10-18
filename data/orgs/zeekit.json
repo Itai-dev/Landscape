@@ -1,0 +1,57 @@
+{
+  "id": "zeekit",
+  "name": "Zeekit",
+  "kind": "startup",
+  "categories": [
+    "xr",
+    "photo-tools",
+    "retail-fashion"
+  ],
+  "description": "Tel Aviv fashion-tech startup founded in 2013 by Yael Vizel, Alon Kristal and Nir Appleboim, whose computer-vision virtual fitting room let shoppers see clothes on their own photo or on diverse models. Acquired by Walmart in May 2021 (reported ~$200M) to power virtual try-on.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2013,
+  "status": "acquired",
+  "services": [
+    "Virtual try-on / fitting room",
+    "Image-based garment visualization"
+  ],
+  "key_people": [
+    {
+      "name": "Yael Vizel",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Alon Kristal",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Nir Appleboim",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Walmart",
+      "note": "May 2021, reported ~$200M"
+    }
+  ],
+  "tags": [
+    "virtual try-on",
+    "fashion tech",
+    "computer vision"
+  ],
+  "sources": [
+    "https://startupim.com/company/zeekit"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single directory source fetched; Walmart deal widely reported but not re-verified here."
+}

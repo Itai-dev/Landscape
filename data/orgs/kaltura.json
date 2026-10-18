@@ -1,0 +1,84 @@
+{
+  "id": "kaltura",
+  "name": "Kaltura",
+  "kind": "startup",
+  "categories": [
+    "media-infrastructure",
+    "video-tools"
+  ],
+  "description": "Video platform company offering enterprise video management, webinars and virtual events, education video, and cloud TV software. Founded in Israel in 2006; legal HQ in New York with main R&D in Ramat Gan. Listed on Nasdaq since July 2021; in late 2025 agreed to acquire Israeli AI-avatar startup eSelf.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan",
+    "other_offices": [
+      "New York",
+      "London",
+      "Singapore"
+    ]
+  },
+  "founded": 2006,
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://corp.kaltura.com",
+  "services": [
+    "Enterprise video platform (OVP)",
+    "Webinars & virtual events",
+    "Video for education (LMS integrations)",
+    "Cloud TV / OTT"
+  ],
+  "key_people": [
+    {
+      "name": "Ron Yekutiel",
+      "role": "Co-founder, Chairman & CEO"
+    },
+    {
+      "name": "Michal Tsur",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Shay David",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Eran Etam",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Public",
+    "public": true,
+    "ticker": "NASDAQ: KLTR"
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "Tvinci",
+      "note": "Israeli OTT TV platform, May 2014"
+    },
+    {
+      "type": "acquired",
+      "target": "Newrow",
+      "note": "Online meetings platform, 2020"
+    },
+    {
+      "type": "acquired",
+      "target": "eSelf",
+      "note": "Israeli interactive AI-avatar startup; deal up to $27M announced Nov 2025"
+    }
+  ],
+  "tags": [
+    "OVP",
+    "enterprise video",
+    "OTT",
+    "Nasdaq"
+  ],
+  "sources": [
+    "https://corp.kaltura.com",
+    "https://en.wikipedia.org/wiki/Kaltura",
+    "https://hk.finance.yahoo.com/quote/KLTR/profile"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "569 employees (July 2024) per Wikipedia. eSelf closing not confirmed."
+}

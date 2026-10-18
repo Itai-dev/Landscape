@@ -1,0 +1,66 @@
+{
+  "id": "minute-media",
+  "name": "Minute Media",
+  "aka": [
+    "90min"
+  ],
+  "kind": "startup",
+  "categories": [
+    "sports-media",
+    "media-infrastructure"
+  ],
+  "description": "Sports media and technology company (founded 2011 as 90min) that runs a publishing, video and monetization platform and owns or licenses sports brands, including digital and print rights to Sports Illustrated via a 10-year licence from Authentic Brands. HQ in London with a large Tel Aviv R&D presence; valued at over $1B in 2024.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "London",
+      "New York"
+    ]
+  },
+  "founded": 2011,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.minutemedia.com",
+  "services": [
+    "Publishing & video platform for media owners",
+    "Sports content brands",
+    "Video distribution (STN Video)"
+  ],
+  "key_people": [
+    {
+      "name": "Asaf Peled",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Late-stage private",
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "STN Video",
+      "note": "2024"
+    },
+    {
+      "type": "partner",
+      "target": "Authentic Brands Group",
+      "note": "Sports Illustrated licensing deal"
+    }
+  ],
+  "tags": [
+    "sports publishing",
+    "video",
+    "Sports Illustrated"
+  ],
+  "sources": [
+    "https://www.minutemedia.com",
+    "https://www.axios.com/2024/01/30/minute-media-valued-over-1b-new-funding",
+    "https://en.globes.co.il/en/article-media-platform-co-minute-media-raises-40m-1001289315"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Axios (2024): ~500 employees, about one-third in Tel Aviv. Total funding figures conflict ($120M per Globes 2019; much higher per aggregators)."
+}

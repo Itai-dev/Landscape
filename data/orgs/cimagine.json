@@ -1,0 +1,55 @@
+{
+  "id": "cimagine",
+  "name": "Cimagine Media",
+  "aka": [
+    "Cimagine"
+  ],
+  "kind": "startup",
+  "categories": [
+    "xr",
+    "3d-tools"
+  ],
+  "description": "Israeli augmented-reality company (founded 2012, Kfar Yehoshua) whose tech let shoppers place 3D models of furniture and appliances in their own room via a phone or tablet camera, sold to brands and retailers. Acquired by Snap Inc. in December 2016 (reported ~$35M).",
+  "location": {
+    "country": "IL",
+    "city": "Kfar Yehoshua"
+  },
+  "founded": 2012,
+  "status": "acquired",
+  "services": [
+    "AR product visualization for retail"
+  ],
+  "key_people": [
+    {
+      "name": "Yoni Nevo",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Nir Daube",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Ozi Egri",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Snap Inc.",
+      "note": "December 2016, reported ~$35M"
+    }
+  ],
+  "tags": [
+    "augmented reality",
+    "retail AR",
+    "3D visualization"
+  ],
+  "sources": [
+    "https://startupim.com/company/cimagine-media"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single directory source fetched."
+}

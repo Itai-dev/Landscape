@@ -1,0 +1,72 @@
+{
+  "id": "overwolf",
+  "name": "Overwolf",
+  "kind": "startup",
+  "categories": [
+    "creator-economy",
+    "gaming",
+    "game-development"
+  ],
+  "description": "Ramat Gan company (founded 2009) running a platform for creators to build, distribute and monetize in-game apps, mods and user-generated game content; owns mod hub CurseForge (bought from Twitch, 2020), Tebex and Nitro. Raised ~$149M, including a $75M a16z-led round in 2021, and runs a creator fund.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 2009,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.overwolf.com",
+  "services": [
+    "In-game app platform",
+    "CurseForge mod platform & CurseForge Core SDK",
+    "Tebex game-server monetization",
+    "Creator fund"
+  ],
+  "key_people": [
+    {
+      "name": "Uri Marchand",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series D",
+    "total_usd_m": 149,
+    "investors": [
+      "Andreessen Horowitz",
+      "Insight Partners"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "CurseForge",
+      "note": "From Twitch, June 2020"
+    },
+    {
+      "type": "acquired",
+      "target": "Tebex",
+      "note": "March 2022, $29M"
+    },
+    {
+      "type": "acquired",
+      "target": "Nitro",
+      "note": "Ad-tech firm, May 2024"
+    }
+  ],
+  "tags": [
+    "mods",
+    "UGC",
+    "gaming creators"
+  ],
+  "sources": [
+    "https://www.overwolf.com",
+    "https://en.wikipedia.org/wiki/Overwolf",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3922789,00.html",
+    "https://techcrunch.com/2021/03/16/overwolf-raises-52-5m-for-its-platform-to-build-distribute-and-monetize-in-game-user-generated-content"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Size from third-party band."
+}

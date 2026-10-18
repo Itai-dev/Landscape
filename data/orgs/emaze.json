@@ -1,0 +1,51 @@
+{
+  "id": "emaze",
+  "name": "emaze",
+  "kind": "startup",
+  "categories": [
+    "design-tools",
+    "website-builders"
+  ],
+  "description": "Tel Aviv-based cloud presentation and visual-content platform (by Visual Software Systems Ltd.) offering templated presentations, websites, photo albums, e-cards, blogs and 3D templates, with AI features; it claims 50M+ users.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.emaze.com",
+  "services": [
+    "Online presentation maker",
+    "Website & blog builder",
+    "Photo albums & e-cards",
+    "emaze AI"
+  ],
+  "key_people": [
+    {
+      "name": "Shai Schwartz",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Arie Livshin",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "total_usd_m": 2.8,
+    "public": false
+  },
+  "tags": [
+    "presentations",
+    "education",
+    "templates"
+  ],
+  "sources": [
+    "https://www.emaze.com",
+    "https://en.globes.co.il/en/article-online-presentation-platform-emaze-raises-2m-1000983774",
+    "https://venturebeat.com/business/cloud-based-presentation-software-emaze-david-throws-2m-at-goliath-aka-powerpoint"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Motti Nisani was CEO in 2014 (Globes); current leadership not confirmed. Founding year conflicts (2009/2012/2013)."
+}

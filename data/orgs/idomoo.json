@@ -1,0 +1,68 @@
+{
+  "id": "idomoo",
+  "name": "Idomoo",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative"
+  ],
+  "description": "Israeli personalized and data-driven video platform (founded 2007) that renders individualized videos at scale for enterprises, especially banks, insurers and telecoms; its current product line includes the Lucas AI video creator. Clients have included Google, J.P. Morgan, Oracle and Fidelity.",
+  "location": {
+    "country": "IL",
+    "city": "Ra'anana",
+    "other_offices": [
+      "New York",
+      "London"
+    ]
+  },
+  "founded": 2007,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.idomoo.com",
+  "services": [
+    "Personalized video at scale",
+    "Interactive video",
+    "Lucas AI video creator",
+    "Video APIs"
+  ],
+  "notable_clients": [
+    "Google",
+    "J.P. Morgan",
+    "Oracle",
+    "Fidelity"
+  ],
+  "key_people": [
+    {
+      "name": "Yaron Kalish",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Danny Kalish",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Late-stage private",
+    "total_usd_m": 40,
+    "investors": [
+      "Target Global",
+      "Disruptive VC",
+      "Marker",
+      "Pitango"
+    ]
+  },
+  "tags": [
+    "personalized video",
+    "fintech marketing",
+    "enterprise video"
+  ],
+  "sources": [
+    "https://www.idomoo.com",
+    "https://en.globes.co.il/en/article-1001368441",
+    "https://en.globes.co.il/en/article-personalized-video-co-idomoo-raises-18m-1001304841"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Filed for a TASE IPO in April 2021 (~$150M valuation target); whether it listed is unclear (one tracker shows ticker IDMO.TA) — funding.public left unset. Some sources place HQ in Hod Hasharon. other_offices from memory, unverified. 2020 revenue $8.7M."
+}

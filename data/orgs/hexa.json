@@ -1,0 +1,69 @@
+{
+  "id": "hexa",
+  "name": "Hexa",
+  "aka": [
+    "Hexa3D"
+  ],
+  "kind": "startup",
+  "categories": [
+    "3d-tools",
+    "cgi-3d"
+  ],
+  "description": "Tel Aviv 3D-content company whose SaaS platform, combining AI with in-house 3D artists, converts 2D product images into interactive 3D models, AR assets and digital twins for e-commerce. Customers include Amazon, Macy's, Logitech and Crate & Barrel; raised a $20.5M Series A in 2023.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2018,
+  "status": "active",
+  "website": "https://www.hexa3d.io",
+  "services": [
+    "2D-to-3D product modeling",
+    "3D/AR viewers for e-commerce",
+    "Digital twins & 3D asset management"
+  ],
+  "notable_clients": [
+    "Amazon",
+    "Macy's",
+    "Logitech",
+    "Crate & Barrel"
+  ],
+  "key_people": [
+    {
+      "name": "Yehiel Atias",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Jonathan Clark",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Ran Buchnik",
+      "role": "Co-founder & CPO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "investors": [
+      "Point72 Ventures",
+      "Samurai Incubate",
+      "Sarona Partners",
+      "HTC"
+    ],
+    "public": false
+  },
+  "tags": [
+    "3D commerce",
+    "AR",
+    "digital twins"
+  ],
+  "sources": [
+    "https://www.citybiz.co/article/387245/hexa-raises-20-5m-in-series-a/",
+    "https://www.vcbacked.co/company/hexa-tel-aviv",
+    "https://craft.co/hexa3d"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Official site returned 503 at verification time. Total funding $27-36M per aggregators. Origins as a 2015 virtual dressing room project."
+}

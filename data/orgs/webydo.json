@@ -1,0 +1,49 @@
+{
+  "id": "webydo",
+  "name": "Webydo",
+  "kind": "startup",
+  "categories": [
+    "website-builders",
+    "design-tools"
+  ],
+  "description": "Israeli-founded cloud website-building platform for designers and web agencies (code-free editor, CMS, hosting, white-label client billing), co-founded by Shmulik Grizim and Zvika Steinmetz. The current site (Webydo Inc., Wilmington, Delaware) markets an all-in-one AI builder, store, CRM and agency platform.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Wilmington, DE"
+    ]
+  },
+  "founded": 2010,
+  "status": "active",
+  "website": "https://www.webydo.com",
+  "services": [
+    "Website builder for designers & agencies",
+    "White-label hosting & CMS",
+    "AI website builder",
+    "CRM & billing for agencies"
+  ],
+  "key_people": [
+    {
+      "name": "Shmulik Grizim",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Zvika Steinmetz",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "web designers",
+    "agencies",
+    "white-label"
+  ],
+  "sources": [
+    "https://www.webydo.com",
+    "https://startupim.com/company/webydo"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Product live (2026), but Israeli registry data shows no annual report since 2016 and the site lists a US entity; current Israeli presence uncertain."
+}

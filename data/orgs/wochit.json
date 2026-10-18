@@ -1,0 +1,61 @@
+{
+  "id": "wochit",
+  "name": "Wochit",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "media-infrastructure"
+  ],
+  "description": "Israeli-founded AI-assisted video creation platform for publishers, broadcasters and brands, combining a templated editor with a licensed content library; products include Studio, the white-label Frame editor and the WAVE automated mass-production engine. Clients shown include NBC, CBS, Sky, Hearst and ProSieben.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York",
+      "London"
+    ]
+  },
+  "status": "active",
+  "website": "https://www.wochit.com",
+  "services": [
+    "Wochit Studio video creation",
+    "Frame white-label video editor",
+    "WAVE automated video generation",
+    "Licensed media library"
+  ],
+  "notable_clients": [
+    "NBC",
+    "CBS",
+    "Sky",
+    "Hearst",
+    "ProSieben",
+    "Pfizer"
+  ],
+  "funding": {
+    "stage": "Series C",
+    "total_usd_m": 28.8,
+    "investors": [
+      "Redpoint Ventures",
+      "Cedar Fund",
+      "Greycroft",
+      "Marker LLC",
+      "ProSiebenSat.1",
+      "SPH Media Fund"
+    ],
+    "public": false
+  },
+  "tags": [
+    "publisher video",
+    "social video",
+    "newsrooms"
+  ],
+  "sources": [
+    "https://www.wochit.com",
+    "https://en.globes.co.il/en/article-israeli-social-video-creation-co-wochit-raises-13m-1001157684",
+    "https://en.globes.co.il/en/article-automated-video-clip-co-wochit-raises-11m-1000937792"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Globes places it in Bet Dagan near Tel Aviv; some databases list New York HQ. Founded ~2012 (first round 2013)."
+}

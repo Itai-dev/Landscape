@@ -1,0 +1,70 @@
+{
+  "id": "wsc-sports",
+  "name": "WSC Sports",
+  "aka": [
+    "WSC Sports Technologies"
+  ],
+  "kind": "startup",
+  "categories": [
+    "sports-media",
+    "video-tools"
+  ],
+  "description": "Israeli company whose AI platform automatically creates and distributes personalized sports highlight videos in real time for leagues, broadcasters and media (clients include the NBA, NHL, NASCAR, MLS and ESPN). Founded in 2011; headquartered in the Tel Aviv area (Givatayim) with offices in New York, London and Sydney.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim",
+    "other_offices": [
+      "New York",
+      "London",
+      "Sydney"
+    ]
+  },
+  "founded": 2011,
+  "status": "active",
+  "website": "https://wsc-sports.com",
+  "services": [
+    "Automated highlights generation",
+    "Sports video distribution",
+    "Personalized short-form sports content"
+  ],
+  "notable_clients": [
+    "NBA",
+    "NHL",
+    "NASCAR",
+    "MLS",
+    "ESPN",
+    "YouTube TV",
+    "Bleacher Report"
+  ],
+  "key_people": [
+    {
+      "name": "Daniel Shichman",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series D",
+    "total_usd_m": 149,
+    "investors": [
+      "ION Crossover Partners",
+      "Intel Capital",
+      "O.G. Tech",
+      "Detroit Venture Partners"
+    ],
+    "public": false
+  },
+  "tags": [
+    "sports highlights",
+    "AI video",
+    "broadcast"
+  ],
+  "sources": [
+    "https://wsc-sports.com",
+    "https://www.axios.com/2022/02/15/wsc-sports-fundraising-100-million",
+    "https://en.globes.co.il/en/article-1001402407"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "~260-270 employees in 2022; later third-party estimates ~700. Size omitted due to conflict. Founding year from memory/aggregators."
+}

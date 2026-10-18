@@ -1,0 +1,73 @@
+{
+  "id": "promo-com",
+  "name": "Promo.com",
+  "aka": [
+    "Slidely",
+    "Promo"
+  ],
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative"
+  ],
+  "description": "Tel Aviv-founded online video-creation service (formerly Slidely, renamed 2019) that lets businesses make marketing videos from a large licensed stock library with templates and music; launched PromoAI in 2023. Offices in Tel Aviv, Warsaw and New York.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Warsaw",
+      "New York"
+    ]
+  },
+  "founded": 2012,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://promo.com",
+  "services": [
+    "Template-based marketing video maker",
+    "Stock footage & music library",
+    "PromoAI video generator",
+    "Social media video tools"
+  ],
+  "key_people": [
+    {
+      "name": "Tom More",
+      "role": "Founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "investors": [
+      "Benson Oak Capital",
+      "Getty Images"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Getty Images",
+      "note": "Content partner and 2021 investor"
+    },
+    {
+      "type": "partner",
+      "target": "Shutterstock",
+      "note": "Stock clip library access (2018)"
+    }
+  ],
+  "tags": [
+    "video marketing",
+    "SMB",
+    "templates",
+    "stock footage"
+  ],
+  "sources": [
+    "https://promo.com",
+    "https://en.wikipedia.org/wiki/Promo.com",
+    "https://nocamels.com/2014/04/slidely-raises-7-3m/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Wikipedia infobox lists 78 employees. Funding totals vary ($12-16M)."
+}

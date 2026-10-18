@@ -1,0 +1,66 @@
+{
+  "id": "simply",
+  "name": "Simply",
+  "aka": [
+    "JoyTunes",
+    "Simply Ltd."
+  ],
+  "kind": "startup",
+  "categories": [
+    "music-tech",
+    "education"
+  ],
+  "description": "Tel Aviv music-education app company (founded 2011 as JoyTunes) behind Simply Piano, Simply Guitar and Simply Sing, plus Simply Draw and Piano Maestro; it says millions of learners in 180 countries use its apps.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2011,
+  "status": "active",
+  "website": "https://www.hellosimply.com",
+  "services": [
+    "Simply Piano",
+    "Simply Guitar",
+    "Simply Sing",
+    "Simply Draw",
+    "Piano Maestro (for teachers)"
+  ],
+  "key_people": [
+    {
+      "name": "Yuval Kaminka",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Yigal Kaminka",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Roey Izkovsky",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Growth",
+    "investors": [
+      "Qumra Capital",
+      "Insight Venture Partners",
+      "Aleph",
+      "GV"
+    ],
+    "public": false
+  },
+  "tags": [
+    "music learning",
+    "consumer apps",
+    "piano"
+  ],
+  "sources": [
+    "https://www.hellosimply.com/about",
+    "https://en.globes.co.il/en/article-israeli-music-app-co-joytunes-raises-25m-1001298617",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3769058,00.html"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$43M raised by Aug 2019 (Globes); aggregators report a 2021 $50M round led by GV (unconfirmed by primary source) and ~$92M total. Headcount ~200+ per aggregators; size omitted."
+}

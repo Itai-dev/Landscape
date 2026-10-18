@@ -1,0 +1,60 @@
+{
+  "id": "sundaysky",
+  "name": "SundaySky",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative"
+  ],
+  "description": "Enterprise video platform founded in Israel (2006-07) that pioneered data-driven personalized video; products SundaySky Create, Amplify and Advertise serve mainly financial services, insurance and SaaS firms. Offices in Tel Aviv, New York and Tokyo; Clearhaven Partners took a controlling stake for $100M in 2022.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York",
+      "Tokyo"
+    ]
+  },
+  "founded": 2006,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://sundaysky.com",
+  "services": [
+    "Personalized video",
+    "Enterprise video creation (Create)",
+    "Video distribution/analytics (Amplify)",
+    "Video advertising (Advertise)"
+  ],
+  "funding": {
+    "stage": "PE-backed (majority)",
+    "investors": [
+      "Clearhaven Partners",
+      "Viola Private Equity",
+      "Norwest Venture Partners",
+      "Carmel Ventures",
+      "NTT DOCOMO Ventures"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "investor",
+      "target": "Clearhaven Partners",
+      "note": "Controlling interest, $100M, July 2022"
+    }
+  ],
+  "tags": [
+    "personalized video",
+    "enterprise",
+    "financial services marketing"
+  ],
+  "sources": [
+    "https://sundaysky.com/about-us/",
+    "https://www.businesswire.com/news/home/20220711005604/en/Clearhaven-Partners-invests-$100M-for-a-controlling-interest-in-SundaySky",
+    "https://en.globes.co.il/en/article-israeli-personalized-video-co-sundaysky-raises-30m-1001130714"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Site says 100+ team members. CEO in 2022: Jim Dicso."
+}

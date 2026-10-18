@@ -1,0 +1,69 @@
+{
+  "id": "yoom",
+  "name": "YOOM",
+  "aka": [
+    "Tetavi"
+  ],
+  "kind": "startup",
+  "categories": [
+    "3d-tools",
+    "animation-3d",
+    "xr"
+  ],
+  "description": "Tel Aviv deep-tech company founded in 2016 as Tetavi (volumetric video capture) and rebranded YOOM in October 2022; its current product YoomTrack is markerless, suit-free body, hand and facial performance capture for animators. Co-founded by Micha Birnboim and Dr. Miky Tamir (also Pixellot co-founder).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2016,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.yoom.com",
+  "services": [
+    "Markerless motion/performance capture (YoomTrack)",
+    "Volumetric video capture"
+  ],
+  "key_people": [
+    {
+      "name": "Micha Birnboim",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Miky Tamir",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Gilad Talmon",
+      "role": "CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A+",
+    "investors": [
+      "Insight Partners",
+      "OurCrowd",
+      "Nimble Ventures",
+      "Jimmy Iovine"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "pixellot",
+      "note": "Shared co-founder Miky Tamir"
+    }
+  ],
+  "tags": [
+    "motion capture",
+    "volumetric video",
+    "animation pipeline"
+  ],
+  "sources": [
+    "https://dealroom.co/companies/yoom-formerly-tetavi/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single aggregator source (Dealroom); official site returned 503. $20M Series A (Aug 2021, Insight Partners) + $15M (Oct 2022). 'partner' relation used loosely to link shared founder."
+}

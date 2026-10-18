@@ -1,0 +1,68 @@
+{
+  "id": "fiverr",
+  "name": "Fiverr",
+  "name_he": "פייבר",
+  "kind": "startup",
+  "categories": [
+    "marketplace",
+    "creator-economy"
+  ],
+  "description": "Tel Aviv-headquartered online freelance-services marketplace founded in 2010, where graphic designers, video editors, animators, voice-over artists, musicians and other creatives sell services to businesses. Listed on the NYSE since 2019; in 2025 it cut ~30% of staff in a pivot to an 'AI-first' company.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York",
+      "San Francisco",
+      "Derry"
+    ]
+  },
+  "founded": 2010,
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://www.fiverr.com",
+  "services": [
+    "Freelance creative marketplace (design, video, animation, music, writing)",
+    "Fiverr Pro",
+    "Fiverr Business"
+  ],
+  "key_people": [
+    {
+      "name": "Micha Kaufman",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Shai Wininger",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Public",
+    "public": true,
+    "ticker": "NYSE: FVRR"
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "Working Not Working",
+      "note": "High-end creative-talent platform, acquired Feb 2021"
+    }
+  ],
+  "tags": [
+    "freelancers",
+    "gig economy",
+    "design",
+    "video",
+    "NYSE"
+  ],
+  "sources": [
+    "https://www.fiverr.com",
+    "https://en.wikipedia.org/wiki/Fiverr",
+    "https://en.globes.co.il/en/article-1001521884",
+    "https://www.fiverr.com/news/working-not-working-acquisition"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "762 employees at end-2024 (637 in Israel) per Globes, before the Sept 2025 cut of ~250; current size may be in the 201-500 band."
+}

@@ -1,0 +1,57 @@
+{
+  "id": "duda",
+  "name": "Duda",
+  "kind": "startup",
+  "categories": [
+    "website-builders",
+    "design-tools"
+  ],
+  "description": "Professional website-building platform aimed at web agencies and SaaS/hosting companies that build sites for small businesses (white-label 'website-as-a-service'). Founded in 2009 by Itai Sadan and Amir Glatt; headquartered in Palo Alto with its R&D centre in Tel Aviv.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Palo Alto"
+    ]
+  },
+  "founded": 2009,
+  "status": "active",
+  "website": "https://www.duda.co",
+  "services": [
+    "White-label website builder for agencies",
+    "Website-as-a-service APIs for SaaS platforms"
+  ],
+  "key_people": [
+    {
+      "name": "Itai Sadan",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Amir Glatt",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series D",
+    "total_usd_m": 100,
+    "investors": [
+      "Claridge IL",
+      "Susquehanna Growth Equity"
+    ],
+    "public": false
+  },
+  "tags": [
+    "web agencies",
+    "white-label",
+    "SaaS"
+  ],
+  "sources": [
+    "https://www.duda.co",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3909996,00.html",
+    "https://en.globes.co.il/en/article-israeli-web-design-co-duda-raises-25m-1001302137"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Legal HQ Palo Alto; Israeli presence is the Tel Aviv R&D office."
+}

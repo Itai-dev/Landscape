@@ -1,0 +1,57 @@
+{
+  "id": "mixtiles",
+  "name": "Mixtiles",
+  "kind": "startup",
+  "categories": [
+    "photography",
+    "photo-tools"
+  ],
+  "description": "Tel Aviv consumer startup (founded 2015) whose app turns phone photos into stick-and-restick framed photo tiles and wall art, also selling canvas prints and photo books; one of Israel's fastest-growing consumer brands.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2015,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.mixtiles.com",
+  "services": [
+    "Photo tiles / wall art",
+    "Canvas prints",
+    "Photo books",
+    "Gift cards & business program"
+  ],
+  "key_people": [
+    {
+      "name": "David Katz",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Eytan Levit",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "investors": [
+      "Greenfield Partners",
+      "83North",
+      "C4 Ventures"
+    ],
+    "public": false
+  },
+  "tags": [
+    "photo printing",
+    "DTC",
+    "consumer app"
+  ],
+  "sources": [
+    "https://www.mixtiles.com",
+    "https://c4v.com/companies/mixtiles/",
+    "https://builtin.com/company/mixtiles"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "CB Insights: $21M Series B March 2020 (not confirmed by primary announcement)."
+}

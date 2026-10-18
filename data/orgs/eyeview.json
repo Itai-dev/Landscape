@@ -1,0 +1,59 @@
+{
+  "id": "eyeview",
+  "name": "Eyeview",
+  "kind": "startup",
+  "categories": [
+    "adtech-creative",
+    "video-tools"
+  ],
+  "description": "Tel Aviv-founded video marketing technology company (2007) whose VideoIQ platform used consumer, brand and retail data to generate personalized, one-to-one video ads across screens for agencies and brands in auto, retail, CPG and travel. Acquired by Aki Technologies in January 2020.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York",
+      "Chicago",
+      "El Segundo"
+    ]
+  },
+  "founded": 2007,
+  "status": "acquired",
+  "services": [
+    "Personalized video advertising (VideoIQ)"
+  ],
+  "key_people": [
+    {
+      "name": "Oren Harnevo",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Gal Barnea",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Tal Riesenfeld",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yaniv Nizan",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Aki Technologies",
+      "note": "January 2020"
+    }
+  ],
+  "tags": [
+    "personalized video ads",
+    "programmatic video"
+  ],
+  "sources": [
+    "https://startupim.com/company/eyeview"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

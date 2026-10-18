@@ -1,0 +1,74 @@
+{
+  "id": "wix",
+  "name": "Wix",
+  "aka": [
+    "Wix.com"
+  ],
+  "kind": "startup",
+  "categories": [
+    "website-builders",
+    "design-tools",
+    "digital-design"
+  ],
+  "description": "Cloud website-building platform founded in Tel Aviv in 2006, offering drag-and-drop and AI-assisted site creation, e-commerce, and the Wix Studio product for agencies and designers. Publicly traded on Nasdaq; owns the DeviantArt art community. One of Israel's largest tech employers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2006,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.wix.com",
+  "services": [
+    "Website builder",
+    "Wix Studio (agency/designer platform)",
+    "E-commerce",
+    "Logo maker",
+    "Hosting & domains"
+  ],
+  "key_people": [
+    {
+      "name": "Avishai Abrahami",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Nadav Abrahami",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Giora Kaplan",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Nir Zohar",
+      "role": "President"
+    }
+  ],
+  "funding": {
+    "stage": "Public",
+    "public": true,
+    "ticker": "NASDAQ: WIX"
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "DeviantArt",
+      "note": "LA-based online art community acquired Feb 2017 for ~$36M"
+    }
+  ],
+  "tags": [
+    "no-code",
+    "web design",
+    "SaaS",
+    "Nasdaq"
+  ],
+  "sources": [
+    "https://www.wix.com",
+    "https://en.wikipedia.org/wiki/Wix.com",
+    "https://en.globes.co.il/en/article-wix-buys-us-art-community-deviantart-for-36m-1001178369"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Headcount ~5,300 in 2025 (third-party). Wikipedia lists offices in Brazil, Canada, Germany, India, Ireland, Japan, Lithuania, Poland, Netherlands, US, Ukraine and Singapore."
+}

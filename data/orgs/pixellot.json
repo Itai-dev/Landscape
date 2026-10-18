@@ -1,0 +1,61 @@
+{
+  "id": "pixellot",
+  "name": "Pixellot",
+  "kind": "startup",
+  "categories": [
+    "sports-media",
+    "video-tools"
+  ],
+  "description": "Petah Tikva company making AI-driven automated sports video production systems: unmanned multi-camera units that film, produce and stream games for clubs, schools, leagues and broadcasters. Founded in 2013 by Miky Tamir and Gal Oz; raised $161M led by PSG in 2022.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 2013,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.pixellot.tv",
+  "services": [
+    "Automated sports production cameras",
+    "Live streaming & OTT for sports",
+    "Highlights & analytics"
+  ],
+  "key_people": [
+    {
+      "name": "Alon Werber",
+      "role": "CEO"
+    },
+    {
+      "name": "Miky Tamir",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Gal Oz",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Growth",
+    "total_usd_m": 221,
+    "investors": [
+      "PSG",
+      "Shamrock Capital",
+      "Israeli Secondary Fund"
+    ],
+    "public": false
+  },
+  "tags": [
+    "sports broadcasting",
+    "AI cameras",
+    "streaming"
+  ],
+  "sources": [
+    "https://www.pixellot.tv",
+    "https://en.globes.co.il/en/article-1001414940",
+    "https://en.globes.co.il/en/article-1001333565"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "total_usd_m = ~$60M before 2022 + $161M (2022) per Globes; approximate. 270+ employees per 2023 sponsored Haaretz piece."
+}
