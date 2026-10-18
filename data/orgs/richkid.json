@@ -1,0 +1,46 @@
+{
+  "id": "richkid",
+  "name": "Richkid",
+  "aka": [
+    "RICHKID"
+  ],
+  "kind": "studio",
+  "categories": [
+    "digital-design",
+    "creative-technology"
+  ],
+  "description": "Digital experience studio based in Tel Aviv with London and New York offices, designing and building websites with UX/UI, strategy and 'technomagics' for brands and companies.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "London",
+      "New York"
+    ]
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.richkid-tlv.com",
+  "services": [
+    "websites",
+    "UX/UI",
+    "strategy",
+    "digital experience"
+  ],
+  "notable_clients": [
+    "One Zero Bank",
+    "Gesher Theater",
+    "Ormat",
+    "Nespresso",
+    "SodaStream",
+    "Nofar Energy"
+  ],
+  "sources": [
+    "https://www.richkid-tlv.com",
+    "https://clutch.co/il/web-designers",
+    "https://www.awwwards.com/directory/Israel/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

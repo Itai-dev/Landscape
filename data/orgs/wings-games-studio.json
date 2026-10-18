@@ -1,0 +1,27 @@
+{
+  "id": "wings-games-studio",
+  "name": "Wings Games Studio",
+  "aka": [
+    "WingsGames"
+  ],
+  "kind": "studio",
+  "categories": [
+    "xr",
+    "game-development"
+  ],
+  "description": "Israeli studio focused on extended reality (XR), AI and game development, describing itself as a metaverse design and development studio; listed with Givatayim / Tel Aviv offices.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim"
+  },
+  "status": "active",
+  "website": "https://www.wingsgames.com",
+  "sources": [
+    "https://www.wingsgames.com",
+    "https://www.designrush.com/agency/ar-vr/il"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Thin evidence: site content not readable; location and description from a DesignRush listing summary. Site title names Amit Chai (role unconfirmed)."
+}

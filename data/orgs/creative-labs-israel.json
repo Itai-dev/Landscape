@@ -1,0 +1,39 @@
+{
+  "id": "creative-labs-israel",
+  "name": "Creative Labs",
+  "aka": [
+    "Creative Labs Israel"
+  ],
+  "kind": "studio",
+  "categories": [
+    "creative-technology",
+    "experiential"
+  ],
+  "description": "Israeli multidisciplinary studio specialising in 'phygital architecture' and creative technology: digital installations, branded environments, responsive installations and immersive LED/real-time content for retail, hospitality and cultural spaces.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 2018,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://creativelabs.co.il",
+  "links": {
+    "instagram": "https://www.instagram.com/creative_labs_israel",
+    "linkedin": "https://www.linkedin.com/company/19009219"
+  },
+  "services": [
+    "digital installations",
+    "branded environments",
+    "interactive media",
+    "immersive LED content"
+  ],
+  "sources": [
+    "https://creativelabs.co.il",
+    "https://prospeo.io/c/creative-labs-israel-email-format"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year, city and size from a third-party company profile. Site shows logos (Intel, Adidas, El Al, Bank Hapoalim, Amdocs) without stating they are clients."
+}

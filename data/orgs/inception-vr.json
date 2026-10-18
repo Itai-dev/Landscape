@@ -1,0 +1,60 @@
+{
+  "id": "inception-vr",
+  "name": "Inception",
+  "aka": [
+    "Inception VR"
+  ],
+  "kind": "studio",
+  "categories": [
+    "xr",
+    "creative-technology"
+  ],
+  "description": "Tel Aviv immersive-content company founded in early 2016 that produced and distributed interactive VR content through its own app across Oculus, Gear VR, Daydream, Vive and mobile; raised a $15M Series A led by RTL Group in 2017.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2016,
+  "status": "unknown",
+  "key_people": [
+    {
+      "name": "Benny Arbel",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Dana Porter Rubinshtein",
+      "role": "Co-founder & CMO"
+    },
+    {
+      "name": "Effi Wizen",
+      "role": "Co-founder & CCO"
+    },
+    {
+      "name": "Nitzan Shenar",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "total_usd_m": 15,
+    "investors": [
+      "RTL Group",
+      "James Packer",
+      "Gigi Levy-Weiss",
+      "iAngels"
+    ]
+  },
+  "relations": [
+    {
+      "type": "investor",
+      "target": "RTL Group"
+    }
+  ],
+  "sources": [
+    "https://israeltrade.org.au/2017/08/02/israeli-immersive-content-co-inception-raises-15m/"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Current status not verified (latest source 2017); website not confirmed."
+}

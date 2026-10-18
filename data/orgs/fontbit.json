@@ -1,0 +1,36 @@
+{
+  "id": "fontbit",
+  "name": "Fontbit",
+  "name_he": "פונטביט",
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Israeli library and foundry of professional Hebrew fonts operating since 1999, with text, book, display, bilingual and Latin families and special/custom projects.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1999,
+  "status": "active",
+  "website": "https://www.fontbit.co.il",
+  "services": [
+    "retail Hebrew fonts",
+    "special projects"
+  ],
+  "notable_work": [
+    "Bialik",
+    "Azmel",
+    "HaTzofen"
+  ],
+  "tags": [
+    "hebrew-type"
+  ],
+  "sources": [
+    "https://www.fontbit.co.il",
+    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founders and city not stated on site (03 phone prefix suggests Tel Aviv area)."
+}

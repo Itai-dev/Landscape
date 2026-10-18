@@ -1,0 +1,60 @@
+{
+  "id": "alefalefalef",
+  "name": "AlefAlefAlef",
+  "name_he": "אלף אלף אלף",
+  "aka": [
+    "AAA"
+  ],
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Hebrew type foundry ('house of Hebrew typography') founded in 2011 by Tel Aviv typographer Avraham Cornfeld with a group of independent designers. Publishes 40+ mostly bilingual Hebrew-Latin families and runs a Hebrew typography blog/magazine.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2011,
+  "status": "active",
+  "website": "https://alefalefalef.co.il",
+  "links": {
+    "myfonts": "https://www.myfonts.com/collections/alefalefalef/"
+  },
+  "services": [
+    "retail Hebrew typefaces",
+    "custom fonts",
+    "type revivals"
+  ],
+  "notable_work": [
+    "Ploni",
+    "Almoni",
+    "Mugrabi",
+    "Karma",
+    "FrankRe",
+    "Anomalia"
+  ],
+  "key_people": [
+    {
+      "name": "Avraham Cornfeld",
+      "role": "Founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "fontimonim",
+      "note": "Sister brand founded by Cornfeld"
+    }
+  ],
+  "tags": [
+    "hebrew-type"
+  ],
+  "sources": [
+    "https://alefalefalef.co.il/en/",
+    "https://luc.devroye.org/israel.html",
+    "https://www.fontshop.com/designers/avraham-cornfeld"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

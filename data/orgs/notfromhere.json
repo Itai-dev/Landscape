@@ -1,0 +1,54 @@
+{
+  "id": "notfromhere",
+  "name": "NFH (NotFromHere)",
+  "aka": [
+    "NotFromHere",
+    "NFH Branding and Strategy Agency"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "packaging",
+    "graphic-design"
+  ],
+  "description": "Israeli branding and positioning studio led by founder Gili Bar-Shay, offering brand strategy, packaging and unboxing design, environmental branding/wayfinding and digital design. Won first place in packaging design at the Israel Star 2022 competition for the Woojer Vest Edge package.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://notfromhere.net",
+  "links": {
+    "instagram": "https://www.instagram.com/notfromhereinc"
+  },
+  "services": [
+    "brand strategy and positioning",
+    "packaging and unboxing design",
+    "environmental design and wayfinding",
+    "graphic design"
+  ],
+  "notable_clients": [
+    "MyHeritage",
+    "Woojer",
+    "GoChess",
+    "Leibish",
+    "Everysight",
+    "Haifa Municipality"
+  ],
+  "notable_work": [
+    "Woojer Vest Edge packaging (Israel Star 2022, 1st place packaging)"
+  ],
+  "key_people": [
+    {
+      "name": "Gili Bar-Shay",
+      "role": "Founder"
+    }
+  ],
+  "sources": [
+    "https://notfromhere.net/en/",
+    "https://notfromhere.net/en/?p=957"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City not stated on site; award claim is from the studio's own site."
+}

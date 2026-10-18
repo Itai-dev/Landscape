@@ -1,0 +1,59 @@
+{
+  "id": "hafontia",
+  "name": "Hafontia",
+  "name_he": "הפונטיה",
+  "aka": [
+    "Ha-Fontia Shel Ben",
+    "Bensfonts"
+  ],
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Tel Aviv Hebrew type studio run by Ben Nathan, designing headline, text and custom brand fonts. Known for high-contrast display faces and for the Hebrew of Google's Assistant family; has made brand fonts for Keshet 12, YouTube and Eldan.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.hafontia.com",
+  "links": {
+    "instagram": "https://www.instagram.com/hafontia",
+    "myfonts": "https://www.myfonts.com/collections/hafontia/"
+  },
+  "services": [
+    "retail Hebrew fonts",
+    "custom brand fonts",
+    "font adaptation"
+  ],
+  "notable_clients": [
+    "Keshet 12",
+    "YouTube",
+    "Eldan",
+    "Mixtiles",
+    "888"
+  ],
+  "notable_work": [
+    "Assistant (Hebrew, Google Fonts)",
+    "Polin",
+    "Leon",
+    "Cooperative"
+  ],
+  "key_people": [
+    {
+      "name": "Ben Nathan",
+      "role": "Founder / type designer"
+    }
+  ],
+  "tags": [
+    "hebrew-type"
+  ],
+  "sources": [
+    "https://www.hafontia.com",
+    "https://type-01.com/tactility-and-contrast-with-ben-nathan-of-hafontia/",
+    "https://luc.devroye.org/israel.html"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

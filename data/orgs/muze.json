@@ -1,0 +1,50 @@
+{
+  "id": "muze",
+  "name": "Muze",
+  "aka": [
+    "Muze Studio",
+    "Muze Design"
+  ],
+  "kind": "studio",
+  "categories": [
+    "digital-design",
+    "branding"
+  ],
+  "description": "Boutique Tel Aviv product design and branding studio led by product designers Yonatan and Eyal, combining product UX, brand design and AI SaaS architecture for tech companies.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://muzedesign.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/muze-studio",
+    "instagram": "https://www.instagram.com/muze.tlv",
+    "facebook": "https://www.facebook.com/MuzeDigitalAgency"
+  },
+  "services": [
+    "product UX design",
+    "branding",
+    "web design",
+    "AI workflow / agent UX"
+  ],
+  "notable_clients": [
+    "Cato Networks",
+    "Windward",
+    "Mobileye",
+    "Guesty",
+    "Logz.io",
+    "Optimove",
+    "Cipia",
+    "BioT"
+  ],
+  "sources": [
+    "https://muzedesign.com",
+    "https://clutch.co/il/agencies/ui-ux",
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Site footer suggests operating since 2012 (unconfirmed)."
+}

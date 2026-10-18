@@ -1,0 +1,59 @@
+{
+  "id": "dov-abramson-studio",
+  "name": "Dov Abramson Studio",
+  "aka": [
+    "Studio Dov"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "graphic-design",
+    "illustration",
+    "animation-2d"
+  ],
+  "description": "Jerusalem design studio founded in 2002 by Bezalel graduate Dov Abramson, combining design, illustration and animation. Known for work exploring contemporary Israeli and Jewish identity for cultural, educational and Jewish institutions.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 2002,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.studiodov.com",
+  "links": {
+    "facebook": "https://www.facebook.com/DovAbramsonStudio/",
+    "instagram": "https://www.instagram.com/dovabramsonstudio/",
+    "vimeo": "https://vimeo.com/dovabramsonstudio"
+  },
+  "services": [
+    "identity design",
+    "illustration",
+    "animation",
+    "exhibition design"
+  ],
+  "notable_clients": [
+    "Shalom Hartman Institute",
+    "Park Avenue Synagogue",
+    "Hebrew University",
+    "Beit Avi Chai"
+  ],
+  "key_people": [
+    {
+      "name": "Dov Abramson",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "jewish-culture",
+    "jerusalem"
+  ],
+  "sources": [
+    "https://www.studiodov.com",
+    "https://alefalefalef.co.il/en/?p=7304",
+    "https://beyond-the-elite.huji.ac.il/node/3035586"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "AlefAlefAlef profile mentioned ~10 designers (7 full-time); size band approximate."
+}

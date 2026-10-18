@@ -1,0 +1,46 @@
+{
+  "id": "tec-studio",
+  "name": "TEC Studio",
+  "aka": [
+    "The Expert Collective"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Strategy-led Tel Aviv brand and design studio established in 2016, working with founders and marketing teams at deep tech, defense, SaaS, hospitality and impact organisations on branding, websites, pitch decks and campaigns.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2016,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://tec.studio",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/tecstudio/",
+    "youtube": "https://www.youtube.com/@tecstudioreels"
+  },
+  "services": [
+    "brand identity",
+    "websites",
+    "pitch decks",
+    "campaigns",
+    "conference booths"
+  ],
+  "notable_clients": [
+    "Arbe",
+    "TeraSky",
+    "GreenRoad",
+    "Hyro",
+    "Bancor"
+  ],
+  "sources": [
+    "https://tec.studio",
+    "https://clutch.co/profile/tec-studio"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "fontef",
+  "name": "Fontef Type Foundry",
+  "name_he": "פונטף",
+  "aka": [
+    "Fontef"
+  ],
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Tel Aviv type foundry established in 1994 by Yanek Iontef, designing Hebrew, Latin and Arabic typefaces. Since 2019 the exclusive distributor of Zvi Narkiss's classic Hebrew typefaces; collaborates with Commercial Type and others on Hebrew extensions (e.g. Lyon, Graphik, Canela HLAR).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1994,
+  "status": "active",
+  "website": "https://www.fontef.com",
+  "links": {
+    "instagram": "https://www.instagram.com/fonteftypefoundry",
+    "facebook": "https://www.facebook.com/fonteftype/",
+    "adobe_fonts": "https://fonts.adobe.com/foundries/fontef"
+  },
+  "services": [
+    "retail typefaces",
+    "custom fonts",
+    "Hebrew/Arabic extensions of Latin families"
+  ],
+  "notable_clients": [
+    "Bank Hapoalim",
+    "One Zero Bank",
+    "Haaretz",
+    "Calcalist",
+    "Channel 13",
+    "Bezalel Academy"
+  ],
+  "notable_work": [
+    "Narkiss family",
+    "Frank Rühl Variable",
+    "Haim Variable",
+    "Mandatory",
+    "Lyon/Graphik/Canela HLAR"
+  ],
+  "key_people": [
+    {
+      "name": "Yanek Iontef",
+      "role": "Founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Commercial Type",
+      "note": "Hebrew extensions"
+    }
+  ],
+  "tags": [
+    "hebrew-type",
+    "arabic-type"
+  ],
+  "sources": [
+    "https://www.fontef.com",
+    "https://fontstand.com/foundries/fontef",
+    "https://fonts.adobe.com/foundries/fontef"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

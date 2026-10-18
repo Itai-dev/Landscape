@@ -1,0 +1,48 @@
+{
+  "id": "makethecut",
+  "name": "MAKETHECUT",
+  "aka": [
+    "Make The Cut Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "digital-design",
+    "branding",
+    "creative-technology"
+  ],
+  "description": "Tel Aviv experience studio led by designer and creative developer Or Halevi, doing branding, digital identity, web design and immersive creative development for premium brands; three Awwwards Sites of the Day.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.makethecut.studio",
+  "links": {
+    "awwwards": "https://www.awwwards.com/makethecut/"
+  },
+  "services": [
+    "branding",
+    "digital identity",
+    "web design",
+    "creative development"
+  ],
+  "key_people": [
+    {
+      "name": "Or Halevi",
+      "role": "Founder / creative developer"
+    }
+  ],
+  "tags": [
+    "awwwards",
+    "webgl"
+  ],
+  "sources": [
+    "https://makethecut.studio",
+    "https://www.awwwards.com/makethecut/",
+    "https://www.awwwards.com/directory/Israel/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "keren-and-golan",
+  "name": "Keren & Golan",
+  "aka": [
+    "Keren & Golan Graphic Design Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "graphic-design",
+    "branding"
+  ],
+  "description": "Tel Aviv graphic design studio specialising in books (including culinary books), catalogues, exhibition design, visual identity, print and web design.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.01kg.com",
+  "links": {
+    "facebook": "https://www.facebook.com/Keren.and.Golan",
+    "instagram": "https://www.instagram.com/keren_and_golan/"
+  },
+  "services": [
+    "book design",
+    "catalogues",
+    "exhibition design",
+    "visual identity",
+    "web design"
+  ],
+  "notable_clients": [
+    "Design Museum Holon",
+    "Hadassah Academic College",
+    "Tel Aviv Municipality"
+  ],
+  "tags": [
+    "editorial",
+    "books",
+    "exhibitions"
+  ],
+  "sources": [
+    "https://www.01kg.com",
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

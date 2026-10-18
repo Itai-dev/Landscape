@@ -1,0 +1,41 @@
+{
+  "id": "butcher-studio",
+  "name": "Butcher.studio",
+  "aka": [
+    "Butcher Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Boutique Tel Aviv branding, web design and development studio founded in 2021, working with startups, luxury and lifestyle brands internationally.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2021,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.butcher.studio",
+  "links": {
+    "behance": "https://www.behance.net/butcher_studio",
+    "instagram": "https://www.instagram.com/butcherwebstudio",
+    "linkedin": "https://www.linkedin.com/company/butcher-studio",
+    "clutch": "https://clutch.co/profile/butcherstudio"
+  },
+  "services": [
+    "branding",
+    "web design",
+    "web development",
+    "UX/UI"
+  ],
+  "sources": [
+    "https://www.butcher.studio",
+    "https://clutch.co/il/web-designers",
+    "https://www.awwwards.com/directory/Israel/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

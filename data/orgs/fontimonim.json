@@ -1,0 +1,44 @@
+{
+  "id": "fontimonim",
+  "name": "Fontimonim",
+  "name_he": "פונטימונים",
+  "kind": "studio",
+  "categories": [
+    "typography",
+    "illustration"
+  ],
+  "description": "Hebrew font label founded by Avraham Cornfeld as a sister brand of AlefAlefAlef; each typeface is paired with an illustrated character ('FontiToon'), aimed at playful display and brand use.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.fontimonim.co.il",
+  "links": {
+    "myfonts": "https://www.myfonts.com/collections/fontimonim/"
+  },
+  "key_people": [
+    {
+      "name": "Avraham Cornfeld",
+      "role": "Founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "alefalefalef"
+    }
+  ],
+  "tags": [
+    "hebrew-type",
+    "display-fonts"
+  ],
+  "sources": [
+    "https://alefalefalef.co.il/en/?p=19697",
+    "https://luc.devroye.org/israel.html"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website URL not verified (fetch failed); founding year not found."
+}

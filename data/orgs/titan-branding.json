@@ -1,0 +1,44 @@
+{
+  "id": "titan-branding",
+  "name": "Titan Branding",
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Herzliya-based tech-branding firm founded in 1997, providing end-to-end brand strategy, identity, web and video for technology companies, especially medical devices, mobility, semiconductors and robotics.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 1997,
+  "size": "11-50",
+  "status": "active",
+  "website": "http://www.titan-branding.com",
+  "services": [
+    "tech brand strategy",
+    "visual identity",
+    "web design and development",
+    "video production"
+  ],
+  "notable_clients": [
+    "Elmo Motion Control",
+    "Sony Semiconductor Israel",
+    "Sapiens",
+    "Rivulis",
+    "Galmed",
+    "ImageSat International"
+  ],
+  "tags": [
+    "b2b-tech",
+    "medtech"
+  ],
+  "sources": [
+    "https://clutch.co/profile/titan-branding",
+    "https://clutch.co/il/agencies/branding"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Official site could not be read at verification time."
+}

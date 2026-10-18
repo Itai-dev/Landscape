@@ -1,0 +1,58 @@
+{
+  "id": "firma",
+  "name": "Firma",
+  "aka": [
+    "Firma Global Business Design",
+    "Firma – The Brandhouse"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Israeli 'business design' and branding studio founded in 2005 in a Jaffa loft by Bezalel visual-communication alumni Doron Goldenberg and Elad Mishan. Uses its Business Core Idea (BCI) method across brand, product, culture and service.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2005,
+  "status": "active",
+  "website": "https://www.firmabrands.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/firma--the-brandhouse",
+    "instagram": "https://www.instagram.com/firma.businessdesign"
+  },
+  "services": [
+    "brand strategy",
+    "business design",
+    "visual identity",
+    "product and service design"
+  ],
+  "notable_clients": [
+    "Kan",
+    "The Israeli Opera",
+    "Israel Innovation Authority",
+    "Bank Leumi",
+    "Bits of Gold",
+    "Ontopo"
+  ],
+  "key_people": [
+    {
+      "name": "Doron Goldenberg",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Elad Mishan",
+      "role": "Co-founder"
+    }
+  ],
+  "sources": [
+    "https://www.firmabrands.com",
+    "https://alefalefalef.co.il/en/?p=7304",
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City inferred from founding story (Jaffa loft); current address not stated on site."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "baram-indoor",
+  "name": "BARAM Indoor",
+  "name_he": "ברעם אינדור",
+  "kind": "studio",
+  "categories": [
+    "experiential",
+    "graphic-design",
+    "branding"
+  ],
+  "description": "Spatial branding, visual identity, signage and print division of the Baram Group (owned by Guy Baram), with an in-house studio of graphic and product designers plus print plant and workshop; redesigns offices, hospitals and schools as a one-stop design-production-installation shop.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "services": [
+    "spatial / environmental branding",
+    "signage",
+    "visual identity",
+    "large-format print production"
+  ],
+  "notable_clients": [
+    "Bank Hapoalim"
+  ],
+  "notable_work": [
+    "Bank Hapoalim PRO division offices, Azrieli Holon"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Baram Group"
+    },
+    {
+      "type": "client",
+      "target": "bank-hapoalim"
+    }
+  ],
+  "tags": [
+    "environmental-graphics",
+    "wayfinding"
+  ],
+  "sources": [
+    "https://www.prtfl.co.il/archives/261901"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website not confirmed; single source (Portfolio magazine)."
+}
