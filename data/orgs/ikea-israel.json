@@ -1,0 +1,44 @@
+{
+  "id": "ikea-israel",
+  "name": "IKEA Israel",
+  "name_he": "איקאה ישראל",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Franchise operator of IKEA home-furnishing stores in Israel; a major retail advertiser.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.ikea.co.il",
+  "client_profile": {
+    "industry": "home furnishing retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "digital display ads",
+      "3D product visualization"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://www.ikea.co.il",
+    "https://www.mccann.co.il"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "IKEA appears on McCann TLV's client wall. Franchisee identity and HQ not verified in this pass (ikea.co.il blocked automated fetch)."
+}

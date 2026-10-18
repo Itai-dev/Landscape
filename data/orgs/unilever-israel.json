@@ -1,0 +1,53 @@
+{
+  "id": "unilever-israel",
+  "name": "Unilever Israel",
+  "name_he": "יוניליוור ישראל",
+  "kind": "client",
+  "categories": [
+    "food-beverage",
+    "consumer-goods"
+  ],
+  "description": "Israeli subsidiary of Unilever (operating locally since 1938) with ~2,000 staff; brands include Telma, Strauss Ice Cream, Klik, Knorr, Hellmann's, Pinuk, Dove and Badin.",
+  "location": {
+    "country": "IL",
+    "city": "Airport City"
+  },
+  "founded": 1938,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.unilever.co.il",
+  "client_profile": {
+    "industry": "FMCG",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Unilever"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Unilever_Israel",
+    "https://www.mccann.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001535546"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Unilever and its brands (Dove, Knorr, Hellmann's, Axe, Pinuk, Badin, Strauss ice cream) appear on McCann TLV's client wall; Great Digital (merged into Reuveni-Pridan's Arlo in 2026) also listed Unilever as a client."
+}

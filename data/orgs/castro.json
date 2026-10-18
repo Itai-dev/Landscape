@@ -1,0 +1,43 @@
+{
+  "id": "castro",
+  "name": "Castro",
+  "name_he": "קסטרו",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israeli fashion retailer (est. 1973) selling women's, men's and kids' apparel and home goods; now part of the Hodis-Castro group alongside Hodis, Top Ten and Urbanica.",
+  "location": {
+    "country": "IL",
+    "city": "Bat Yam"
+  },
+  "founded": 1973,
+  "status": "active",
+  "website": "https://www.castro.com",
+  "client_profile": {
+    "industry": "fashion retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "digital display ads",
+      "fashion photography",
+      "lookbook video"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Hodis-Castro group"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Castro_(clothing)",
+    "https://www.castro.com"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Ownership per castro.com footer (Hodis-Castro group); HQ city per Wikipedia may predate the merger."
+}

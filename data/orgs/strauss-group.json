@@ -1,0 +1,68 @@
+{
+  "id": "strauss-group",
+  "name": "Strauss Group",
+  "name_he": "שטראוס",
+  "aka": [
+    "Strauss-Elite"
+  ],
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israel's largest food and beverage group (Elite, Achla, Dani, Milky, Tapuchips, Doritos/Frito-Lay license, Strauss Water) with global coffee operations. Its Doritos campaign won the 2026 Grand Effie.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1939,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.strauss-group.com",
+  "key_people": [
+    {
+      "name": "Ofra Strauss",
+      "role": "Chairwoman"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: STRS"
+  },
+  "client_profile": {
+    "industry": "food & beverage",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky Grey",
+      "BBR Saatchi & Saatchi (Baumann Ber Rivnay)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "bbr-saatchi-saatchi",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Strauss_Group",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001506565",
+    "https://www.globes.co.il/news/article.aspx?did=1001180659"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Multi-agency: Adler Chomski handles salty snacks (since 2017) and dairy (since 2012); BBR Saatchi & Saatchi (Baumann Ber Rivnay) won Effie Gold 2026 for Elite. Strauss ice cream is a Unilever brand, not Strauss Group."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "mizrahi-tefahot",
+  "name": "Mizrahi Tefahot Bank",
+  "name_he": "בנק מזרחי טפחות",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli bank (est. 1923) and the country's largest mortgage lender; its 2025 campaign was rated the most memorable of the year by Globes' ad index.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1923,
+  "status": "active",
+  "website": "https://www.mizrahi-tefahot.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: MZTF"
+  },
+  "client_profile": {
+    "industry": "banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics",
+      "celebrity presenter campaigns"
+    ],
+    "known_agencies": [
+      "Reuveni-Pridan"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "reuveni-pridan",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bank_Mizrahi-Tefahot",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "2026 Effie Gold (financial services) with Reuveni-Pridan; presenter changed in 2026 (Globes)."
+}

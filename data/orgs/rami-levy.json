@@ -1,0 +1,63 @@
+{
+  "id": "rami-levy",
+  "name": "Rami Levy Hashikma Marketing",
+  "name_he": "רמי לוי שיווק השקמה",
+  "aka": [
+    "Rami Levy"
+  ],
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israel's second-largest discount supermarket chain (est. 1976) led by founder Rami Levy; the group also runs Rami Levy Communications (mobile) and owns airline Israir.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 1976,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.rami-levy.co.il",
+  "key_people": [
+    {
+      "name": "Rami Levy",
+      "role": "Founder & CEO"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: RMLI"
+  },
+  "client_profile": {
+    "industry": "grocery retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "israir"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Rami_Levy_Hashikma_Marketing",
+    "https://www.mccann.co.il"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Rami Levy appears on McCann TLV's client wall; not separately confirmed in trade press here."
+}

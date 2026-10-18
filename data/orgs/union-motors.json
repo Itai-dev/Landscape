@@ -1,0 +1,53 @@
+{
+  "id": "union-motors",
+  "name": "Union Motors (UMI)",
+  "name_he": "יוניון מוטורס",
+  "aka": [
+    "UMI",
+    "Toyota Israel"
+  ],
+  "kind": "client",
+  "categories": [
+    "automotive"
+  ],
+  "description": "Israeli importer of Toyota, Lexus and Geely vehicles (est. 1991 by George Horesh), part of the Horesh family's Union Group.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1991,
+  "status": "active",
+  "website": "https://www.toyota.co.il",
+  "client_profile": {
+    "industry": "automotive import",
+    "creative_needs": [
+      "TV commercials",
+      "car launch films",
+      "CGI / 3D car visualization",
+      "social video",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "Yehoshua TBWA (Toyota)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Union Group"
+    },
+    {
+      "type": "agency",
+      "target": "yehoshua-tbwa",
+      "note": "agency (per trade press / agency client list); Toyota"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%99%D7%95%D7%A0%D7%99%D7%95%D7%9F_%D7%9E%D7%95%D7%98%D7%95%D7%A8%D7%A1",
+    "https://www.globes.co.il/news/article.aspx?did=1001525596"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Toyota listed among Yehoshua TBWA clients (Globes, Nov 2025). Union Group also holds a stake in Super-Pharm. Group site: umigroup.co.il."
+}

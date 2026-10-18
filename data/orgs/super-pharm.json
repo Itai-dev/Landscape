@@ -1,0 +1,67 @@
+{
+  "id": "super-pharm",
+  "name": "Super-Pharm",
+  "name_he": "סופר-פארם",
+  "kind": "client",
+  "categories": [
+    "retail-fashion",
+    "health-pharma"
+  ],
+  "description": "Israel's largest drugstore chain (est. 1978) with 250+ stores, private labels Life and LifeStyle, and optics chain Iroka; also operates in Poland.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 1978,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.super-pharm.co.il",
+  "key_people": [
+    {
+      "name": "Leon Koffler",
+      "role": "Chairman"
+    }
+  ],
+  "client_profile": {
+    "industry": "pharmacy / beauty retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "digital display ads",
+      "beauty content"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv",
+      "Parsman Baruch (Iroka)",
+      "BBR Saatchi & Saatchi (Life brand)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "Parsman Baruch",
+      "note": "agency (per trade press / agency client list); Iroka"
+    },
+    {
+      "type": "agency",
+      "target": "bbr-saatchi-saatchi",
+      "note": "agency (per trade press / agency client list); Life / Milouka private labels"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Super-Pharm",
+    "https://www.globes.co.il/news/article.aspx?did=1001412330",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "May 2022: McCann group won the ~NIS 80M Super-Pharm brand budget after 30 years at BBR Saatchi & Saatchi (Baumann Ber Rivnay), which kept Life and Milouka. 2026 Effie Gold for Iroka via Parsman Baruch."
+}

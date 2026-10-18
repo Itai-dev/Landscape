@@ -1,0 +1,48 @@
+{
+  "id": "pelephone",
+  "name": "Pelephone",
+  "name_he": "פלאפון",
+  "kind": "client",
+  "categories": [
+    "telecom"
+  ],
+  "description": "Israel's first cellular operator (founded 1985 as a Motorola-Tadiran venture), now a wholly owned subsidiary of Bezeq. Shares management with sister company yes.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1985,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.pelephone.co.il",
+  "key_people": [
+    {
+      "name": "Ilan Segal",
+      "role": "CEO, Pelephone and yes"
+    }
+  ],
+  "client_profile": {
+    "industry": "telecom",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital display ads",
+      "brand campaigns",
+      "motion graphics"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "bezeq"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Pelephone",
+    "https://www.globes.co.il/news/article.aspx?did=1001541690"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Current agency of record not confirmed in 2025-26 trade press; historically Bezeq-group budgets were concentrated at Adler Chomski (2008-2010 reports)."
+}

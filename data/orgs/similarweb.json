@@ -1,0 +1,48 @@
+{
+  "id": "similarweb",
+  "name": "Similarweb",
+  "name_he": "סימילרווב",
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Digital-intelligence/web-analytics company founded in 2007 by Or Offer; HQ in New York and Givatayim, Israel; NYSE: SMWB.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2007,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.similarweb.com",
+  "key_people": [
+    {
+      "name": "Or Offer",
+      "role": "Founder"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NYSE: SMWB"
+  },
+  "client_profile": {
+    "industry": "SaaS / data",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Similarweb"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

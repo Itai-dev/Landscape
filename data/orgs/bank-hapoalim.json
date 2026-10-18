@@ -1,0 +1,49 @@
+{
+  "id": "bank-hapoalim",
+  "name": "Bank Hapoalim",
+  "name_he": "בנק הפועלים",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "One of Israel's two largest banks (est. 1921), with 250+ branches and a large retail-banking advertising presence; also owns digital wallet Bit.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1921,
+  "status": "active",
+  "website": "https://www.bankhapoalim.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: POLI"
+  },
+  "client_profile": {
+    "industry": "banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "Gitam BBDO"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "gitam-bbdo",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bank_Hapoalim",
+    "https://www.globes.co.il/news/article.aspx?did=1001515732"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Jul 2025 (Globes): Hapoalim ended its relationship with BBR Saatchi & Saatchi (Baumann Ber Rivnay) and kept only Gitam BBDO, alongside a presenter change. Ticker from general knowledge (TASE: POLI)."
+}

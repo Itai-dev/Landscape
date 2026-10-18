@@ -1,0 +1,52 @@
+{
+  "id": "etoro",
+  "name": "eToro",
+  "name_he": "איטורו",
+  "aka": [
+    "RetailFX"
+  ],
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Social investing platform founded in Tel Aviv in 2007, HQ Bnei Brak; IPO on Nasdaq (ETOR) in May 2025. Prolific advertiser: Super Bowl spot (2022), AI-generated Olympics ad (2024), European football and F1 sponsorships.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 2007,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.etoro.com",
+  "key_people": [
+    {
+      "name": "Yoni Assia",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: ETOR"
+  },
+  "client_profile": {
+    "industry": "fintech / trading",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals",
+      "TV commercials",
+      "sports sponsorship content",
+      "AI-generated video"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/EToro"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

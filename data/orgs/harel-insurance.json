@@ -1,0 +1,43 @@
+{
+  "id": "harel-insurance",
+  "name": "Harel Insurance & Finance",
+  "name_he": "הראל",
+  "aka": [
+    "Harel Insurance Investments & Financial Services"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "One of Israel's largest insurance and long-term-savings groups (roots in 1935), covering insurance, pensions, health and investment products.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1935,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.harel-group.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: HARL"
+  },
+  "client_profile": {
+    "industry": "insurance / finance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Harel_Group",
+    "https://www.harel-group.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Agency of record not confirmed in recent trade press."
+}

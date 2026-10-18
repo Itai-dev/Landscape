@@ -1,0 +1,37 @@
+{
+  "id": "the-phoenix",
+  "name": "The Phoenix",
+  "name_he": "הפניקס",
+  "aka": [
+    "The Phoenix Holdings",
+    "Phoenix Insurance"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli insurance, pension and investment group offering car, home, health and life insurance, provident funds, wealth management and non-bank credit.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.fnx.co.il",
+  "client_profile": {
+    "industry": "insurance / finance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ]
+  },
+  "sources": [
+    "https://www.fnx.co.il"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Agency of record not confirmed. HQ city (Tel Aviv) from general knowledge."
+}

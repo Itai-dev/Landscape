@@ -1,0 +1,50 @@
+{
+  "id": "payoneer",
+  "name": "Payoneer",
+  "name_he": "פיוניר",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Cross-border payments platform founded in 2005 by Yuval Tal, HQ in New York with a large operation in Petah Tikva, Israel; Nasdaq: PAYO.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2005,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.payoneer.com",
+  "key_people": [
+    {
+      "name": "Yuval Tal",
+      "role": "Founder"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: PAYO"
+  },
+  "client_profile": {
+    "industry": "fintech",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Payoneer"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Wikipedia infobox lists NYC HQ; a photo caption references Petah Tikva HQ. Employee band based on 1,871 (2021)."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "shufersal",
+  "name": "Shufersal",
+  "name_he": "שופרסל",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israel's largest supermarket chain (est. 1958) with ~300+ stores, private labels and the Be drugstore chain; one of the country's biggest retail advertisers.",
+  "location": {
+    "country": "IL",
+    "city": "Rishon LeZion"
+  },
+  "founded": 1958,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.shufersal.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: SAE"
+  },
+  "client_profile": {
+    "industry": "grocery retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "Glickman-Shamir-Samsonov Publicis"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "glickman-shamir-samsonov",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Shufersal",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001480891",
+    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Jun 2024: Shufersal cut agencies and parted from Gitam BBDO after ~30 years; Glickman-Shamir-Samsonov (took a portion from Adler Chomski in 2022) is credited for Shufersal in Globes' 2025 review."
+}

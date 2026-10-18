@@ -1,0 +1,56 @@
+{
+  "id": "israel-discount-bank",
+  "name": "Israel Discount Bank",
+  "name_he": "בנק דיסקונט",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israel's third-largest banking group (est. 1935), parent of Mercantile Bank and Cal credit cards; a top-tier TV advertiser.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1935,
+  "status": "active",
+  "website": "https://www.discountbank.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: DSCT"
+  },
+  "client_profile": {
+    "industry": "banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky Grey",
+      "K Agency (digital)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "K Agency",
+      "note": "agency (per trade press / agency client list); digital"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israel_Discount_Bank",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001504828"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Globes (2025 review) credits Discount campaigns to Adler Chomski; Globes (Mar 2025) lists Discount among K Agency's clients. Oct 2026: Discount Capital and Leumi Partners examining an investment in Adler Chomski."
+}

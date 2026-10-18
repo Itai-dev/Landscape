@@ -155,7 +155,7 @@ ul.plain { margin: 0; padding-left: 18px; font-size: 14px; }
   const KIND_LABEL = { studio: "Studios", production_company: "Production", startup: "Startups", agency: "Agencies", client: "Clients", community: "Community" };
   const KIND_ONE = { studio: "Studio", production_company: "Production co.", startup: "Startup", agency: "Agency", client: "Client", community: "Community" };
   const SIZE_RANK = { "1-10": 1, "11-50": 2, "51-200": 3, "201-500": 4, "501-1000": 5, "1001-5000": 6, "5001+": 7 };
-  const REL_LABEL = { client: "client", parent: "part of", subsidiary: "owns", acquired: "acquired", acquired_by: "acquired by", partner: "partner", spun_off_from: "spun off from", investor: "investor" };
+  const REL_LABEL = { client: "client", agency: "agency", parent: "part of", subsidiary: "owns", acquired: "acquired", acquired_by: "acquired by", partner: "partner", spun_off_from: "spun off from", investor: "investor" };
   const LINK_LABEL = { linkedin: "LinkedIn", instagram: "Instagram", behance: "Behance", vimeo: "Vimeo", youtube: "YouTube", crunchbase: "Crunchbase", x: "X", facebook: "Facebook", twitter: "X", imdb: "IMDb", dribbble: "Dribbble", wikipedia: "Wikipedia", artstation: "ArtStation" };
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));

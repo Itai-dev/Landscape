@@ -1,0 +1,61 @@
+{
+  "id": "bezeq",
+  "name": "Bezeq",
+  "name_he": "בזק",
+  "aka": [
+    "Bezeq The Israel Telecommunication Corp."
+  ],
+  "kind": "client",
+  "categories": [
+    "telecom"
+  ],
+  "description": "Israel's largest telecommunications group (fixed-line, fiber internet, B2B), parent of Pelephone, yes and Bezeq International. Listed on the TASE and controlled via B Communications (Searchlight).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1984,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.bezeq.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: BEZQ"
+  },
+  "client_profile": {
+    "industry": "telecom",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital display ads",
+      "brand campaigns",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky Grey"
+    ]
+  },
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "pelephone"
+    },
+    {
+      "type": "subsidiary",
+      "target": "yes"
+    },
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bezeq",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Globes' 2025 ad review lists Bezeq (with Discount) as Adler Chomski's main TV accounts. Employee figure is group-wide."
+}

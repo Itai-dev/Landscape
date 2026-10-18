@@ -1,0 +1,50 @@
+{
+  "id": "fox-group",
+  "name": "Fox Group",
+  "name_he": "פוקס",
+  "aka": [
+    "Fox-Wizel"
+  ],
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israeli fashion and lifestyle retail group (est. 1942 as Trico Fox) operating the Fox brand family and international franchises; traded on the TASE.",
+  "location": {
+    "country": "IL",
+    "city": "Airport City"
+  },
+  "founded": 1942,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.fox.co.il",
+  "key_people": [
+    {
+      "name": "Harel Wizel",
+      "role": "Co-CEO"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: FOX"
+  },
+  "client_profile": {
+    "industry": "fashion retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "digital display ads",
+      "fashion photography",
+      "lookbook video"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Fox_(clothing)",
+    "https://www.fox.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

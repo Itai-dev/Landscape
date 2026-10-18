@@ -1,0 +1,40 @@
+{
+  "id": "reshet-13",
+  "name": "Reshet 13",
+  "name_he": "רשת 13",
+  "aka": [
+    "Channel 13",
+    "Reshet Media"
+  ],
+  "kind": "client",
+  "categories": [
+    "media-broadcast"
+  ],
+  "description": "Israeli commercial TV channel (launched 2017; merged with Channel 10 in 2019). In 2026 a sale from Len Blavatnik to an investor group led by Assaf Rappaport was signed and approved by the Second Authority.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2017,
+  "status": "active",
+  "website": "https://13tv.co.il",
+  "client_profile": {
+    "industry": "commercial TV",
+    "creative_needs": [
+      "on-air promos",
+      "channel branding / idents",
+      "title sequences",
+      "motion graphics",
+      "social video",
+      "key art"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Channel_13_(Israel)",
+    "https://he.wikipedia.org/wiki/%D7%A8%D7%A9%D7%AA_13"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Ownership in flux (2025-26); closing of the Rappaport-group deal not confirmed, so leadership is omitted (he.wikipedia lists Emiliano Calemzuk as CEO)."
+}

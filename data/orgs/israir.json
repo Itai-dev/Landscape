@@ -1,0 +1,40 @@
+{
+  "id": "israir",
+  "name": "Israir",
+  "name_he": "ישראייר",
+  "kind": "client",
+  "categories": [
+    "travel-hospitality"
+  ],
+  "description": "Israeli airline (founded 1989 as Kanfei HaEmek, renamed 1996) flying scheduled and charter routes; owned by the Rami Levy group and approved for New York flights in 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1989,
+  "status": "active",
+  "website": "https://www.israirairlines.com",
+  "client_profile": {
+    "industry": "airline / tourism",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "destination content",
+      "digital display ads"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "rami-levy"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israir",
+    "https://www.globes.co.il/news/article.aspx?did=1001551526"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Agency of record not confirmed (a 2012 campaign was by Gitam BBDO)."
+}

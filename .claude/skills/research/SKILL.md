@@ -35,6 +35,7 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    - `confidence`: high = official site + independent source agree; medium = one solid source; low = thin.
    - `key_people`: only publicly listed founders/leadership. No personal phones or emails.
    - `relations.target`: an existing org id where one matches, otherwise the plain name.
+     `client` = target is this org's client; `agency` = target is the agency/studio this org hires.
 5. **Refresh** (refresh/cycle mode): `python3 scripts/landscape.py stale --days 90 --limit 15`.
    For each, re-check website/status/size/funding/clients; write the corrected full record to a
    staging file with today's `last_verified`. If an org closed, set `status: closed` (don't delete).

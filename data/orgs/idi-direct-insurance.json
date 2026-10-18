@@ -1,0 +1,59 @@
+{
+  "id": "idi-direct-insurance",
+  "name": "Direct Insurance (IDI)",
+  "name_he": "ביטוח ישיר",
+  "aka": [
+    "IDI Insurance",
+    "Bituach Yashir",
+    "Bituach 9"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "IDI Insurance, Israel's pioneer direct insurer (operating since 1994), runs the Direct Insurance (Bituach Yashir) and Bituach 9 brands, both heavy TV advertisers.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1994,
+  "status": "active",
+  "website": "https://www.555.co.il",
+  "client_profile": {
+    "industry": "insurance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics",
+      "humour-led TV series campaigns"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv",
+      "Glickman-Shamir-Samsonov Publicis"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "glickman-shamir-samsonov",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://www.555.co.il",
+    "https://he.wikipedia.org/wiki/%D7%91%D7%99%D7%98%D7%95%D7%97_%D7%99%D7%A9%D7%99%D7%A8",
+    "https://www.globes.co.il/news/article.aspx?did=1001384833",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Direct Insurance moved from BBR Saatchi & Saatchi (Baumann Ber Rivnay) to McCann Tel Aviv in Sep 2021; Bituach 9 (Glickman-Shamir-Samsonov) was the most-liked advertiser of 2025 in Globes' index."
+}

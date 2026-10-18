@@ -1,0 +1,38 @@
+{
+  "id": "delek-motors",
+  "name": "Delek Motors",
+  "name_he": "דלק מוטורס",
+  "kind": "client",
+  "categories": [
+    "automotive"
+  ],
+  "description": "TASE-listed Israeli vehicle importer, controlled by Gil Agmon, distributing Mazda, Ford, BMW, MINI, BMW Motorrad and Chinese brands including NIO, Dongfeng and VOYAH.",
+  "location": {
+    "country": "IL",
+    "city": "Nir Zvi"
+  },
+  "founded": 1965,
+  "status": "active",
+  "website": "https://www.delek-motors.co.il",
+  "funding": {
+    "public": true
+  },
+  "client_profile": {
+    "industry": "automotive import",
+    "creative_needs": [
+      "TV commercials",
+      "car launch films",
+      "CGI / 3D car visualization",
+      "social video",
+      "digital display ads"
+    ]
+  },
+  "sources": [
+    "https://www.delek-motors.co.il",
+    "https://he.wikipedia.org/wiki/%D7%93%D7%9C%D7%A7_%D7%9E%D7%95%D7%98%D7%95%D7%A8%D7%A1"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Agency of record not confirmed."
+}

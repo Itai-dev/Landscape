@@ -1,0 +1,52 @@
+{
+  "id": "el-al",
+  "name": "El Al Israel Airlines",
+  "name_he": "אל על",
+  "kind": "client",
+  "categories": [
+    "travel-hospitality"
+  ],
+  "description": "Israel's national flag carrier (est. 1948), listed on the TASE; runs the Fly Card co-branded credit card with Isracard. Its ad was voted most-liked in Globes' 2025 year-end survey.",
+  "location": {
+    "country": "IL",
+    "city": "Lod"
+  },
+  "founded": 1948,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.elal.com",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: ELAL"
+  },
+  "client_profile": {
+    "industry": "airline",
+    "creative_needs": [
+      "TV commercials",
+      "destination films",
+      "social video",
+      "in-flight safety video",
+      "brand campaigns"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/El_Al",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001551330",
+    "https://www.mccann.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "HQ at Ben Gurion Airport (near Lod)."
+}

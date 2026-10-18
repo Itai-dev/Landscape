@@ -1,0 +1,50 @@
+{
+  "id": "yes",
+  "name": "yes",
+  "name_he": "יס",
+  "aka": [
+    "DBS Satellite Services"
+  ],
+  "kind": "client",
+  "categories": [
+    "telecom",
+    "media-broadcast"
+  ],
+  "description": "Israeli satellite and streaming TV provider (yes+, yes Studios) in the Bezeq group; a commissioner of original Israeli drama alongside its marketing output.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2000,
+  "status": "active",
+  "website": "https://www.yes.co.il",
+  "key_people": [
+    {
+      "name": "Ilan Segal",
+      "role": "CEO, Pelephone and yes"
+    }
+  ],
+  "client_profile": {
+    "industry": "pay-TV / streaming",
+    "creative_needs": [
+      "TV promos",
+      "TV commercials",
+      "social video",
+      "key art",
+      "motion graphics"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "bezeq"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Yes_(Israel)",
+    "https://www.globes.co.il/news/article.aspx?did=1001541690"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

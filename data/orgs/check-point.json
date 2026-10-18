@@ -1,0 +1,50 @@
+{
+  "id": "check-point",
+  "name": "Check Point Software Technologies",
+  "name_he": "צ'ק פוינט",
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Israeli cybersecurity pioneer (founded 1993 by Gil Shwed, Marius Nacht and Shlomo Kramer), Nasdaq-listed, ~6,800 employees; produces global brand, product and event (CPX) content.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1993,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.checkpoint.com",
+  "key_people": [
+    {
+      "name": "Gil Shwed",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Nadav Zafrir",
+      "role": "CEO"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: CHKP"
+  },
+  "client_profile": {
+    "industry": "cybersecurity",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Check_Point",
+    "https://www.checkpoint.com"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

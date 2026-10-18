@@ -34,7 +34,6 @@
     "ai-creative": "AI-driven creative production",
     "packaging": "Packaging design",
     "typography": "Type design",
-
     "gen-ai-video": "Generative AI — video",
     "gen-ai-image": "Generative AI — image / visual",
     "gen-ai-audio": "Generative AI — voice / music / audio",
@@ -52,12 +51,10 @@
     "3d-tools": "3D tools / capture",
     "media-infrastructure": "Media infrastructure / streaming / asset management",
     "sports-media": "Sports media tech",
-
     "advertising": "Advertising agency",
     "digital-agency": "Digital / performance agency",
     "media-agency": "Media buying agency",
     "pr-social": "PR / social / influencer agency",
-
     "telecom": "Telecom",
     "banking-finance": "Banking / finance / insurance",
     "food-beverage": "Food & beverage",
@@ -72,14 +69,22 @@
     "public-sector": "Public sector / NGO",
     "consumer-goods": "Consumer goods",
     "energy": "Energy / industry",
-
     "education": "School / education",
     "festival-event": "Festival / event",
     "association": "Association / community"
   },
-  "sizes": ["1-10", "11-50", "51-200", "201-500", "501-1000", "1001-5000", "5001+"],
+  "sizes": [
+    "1-10",
+    "11-50",
+    "51-200",
+    "201-500",
+    "501-1000",
+    "1001-5000",
+    "5001+"
+  ],
   "relation_types": {
-    "client": "Target worked for / is a client of this org",
+    "client": "Target is a client of this org (this org did work for the target)",
+    "agency": "Target is an agency / studio this org hires",
     "parent": "Target is the parent company / group",
     "subsidiary": "Target is a subsidiary / sub-brand",
     "acquired": "This org acquired the target",

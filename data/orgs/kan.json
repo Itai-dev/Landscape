@@ -1,0 +1,43 @@
+{
+  "id": "kan",
+  "name": "Kan – Israeli Public Broadcasting Corporation",
+  "name_he": "כאן",
+  "aka": [
+    "Kan",
+    "IPBC",
+    "Makan"
+  ],
+  "kind": "client",
+  "categories": [
+    "media-broadcast",
+    "public-sector"
+  ],
+  "description": "Israel's public broadcaster (on air since May 2017, replacing the IBA), running Kan 11, Makan 33, Kan Educational, eight radio stations and the Kan Box VOD service; a major commissioner of drama and documentaries.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 2014,
+  "status": "active",
+  "website": "https://www.kan.org.il",
+  "client_profile": {
+    "industry": "public broadcasting",
+    "creative_needs": [
+      "on-air promos",
+      "channel branding / idents",
+      "title sequences",
+      "motion graphics",
+      "social video",
+      "key art",
+      "documentary and drama commissions",
+      "animation for kids' content"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israeli_Public_Broadcasting_Corporation",
+    "https://www.kan.org.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

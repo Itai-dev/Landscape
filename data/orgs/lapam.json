@@ -1,0 +1,41 @@
+{
+  "id": "lapam",
+  "name": "Israel Government Advertising Agency (LAPAM)",
+  "name_he": "לשכת הפרסום הממשלתית",
+  "aka": [
+    "LPM",
+    "Lapam"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "The Israeli government's in-house advertising bureau (est. 1954, independent since 1967, under the Prime Minister's Office since 2020), handling campaign creation, research and media buying for ministries, the IDF, police and other public bodies.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1954,
+  "status": "active",
+  "website": "https://www.lapam.gov.il",
+  "client_profile": {
+    "industry": "government advertising",
+    "creative_needs": [
+      "public-service TV campaigns",
+      "social video",
+      "animation explainers",
+      "radio spots",
+      "print"
+    ]
+  },
+  "tags": [
+    "gateway-to-government-work"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9C%D7%A9%D7%9B%D7%AA_%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D_%D7%94%D7%9E%D7%9E%D7%A9%D7%9C%D7%AA%D7%99%D7%AA",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Main channel for government ad tenders (suppliers are typically engaged via LAPAM framework tenders)."
+}

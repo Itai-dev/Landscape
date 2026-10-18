@@ -1,0 +1,52 @@
+{
+  "id": "migdal-insurance",
+  "name": "Migdal Insurance",
+  "name_he": "מגדל",
+  "aka": [
+    "Migdal Insurance & Financial Holdings"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Major Israeli insurance and pension group (roots in 1934) listed on the TASE, active in life, health, general insurance and long-term savings.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1934,
+  "status": "active",
+  "website": "https://www.migdal.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: MGDL"
+  },
+  "client_profile": {
+    "industry": "insurance / finance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "Gitam BBDO"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "gitam-bbdo",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Migdal_Insurance",
+    "https://www.globes.co.il/news/article.aspx?did=1001466854"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Jan 2024 (Globes): Migdal's ~NIS 30M/yr budget (online and offline) moved to Gitam BBDO. Holding-company site: migdalholdings.co.il."
+}

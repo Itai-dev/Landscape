@@ -1,0 +1,50 @@
+{
+  "id": "israel-electric-corporation",
+  "name": "Israel Electric Corporation",
+  "name_he": "חברת החשמל",
+  "aka": [
+    "IEC"
+  ],
+  "kind": "client",
+  "categories": [
+    "energy",
+    "public-sector"
+  ],
+  "description": "State-owned electric utility (est. 1923, ~99.85% government owned) responsible for Israel's grid and much of its generation.",
+  "location": {
+    "country": "IL",
+    "city": "Haifa"
+  },
+  "founded": 1923,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.iec.co.il",
+  "client_profile": {
+    "industry": "energy / utility",
+    "creative_needs": [
+      "TV commercials",
+      "public-safety campaigns",
+      "animation explainers",
+      "social video"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israel_Electric_Corporation",
+    "https://www.globes.co.il/news/article.aspx?did=1001504571",
+    "https://www.mccann.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Mar 2025: after more than a decade with Adler Chomski, IEC moved its NIS 40M (two-year) budget to McCann Tel Aviv."
+}

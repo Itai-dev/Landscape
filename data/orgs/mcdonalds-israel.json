@@ -1,0 +1,52 @@
+{
+  "id": "mcdonalds-israel",
+  "name": "McDonald's Israel",
+  "name_he": "מקדונלד'ס ישראל",
+  "aka": [
+    "Aloniel"
+  ],
+  "kind": "client",
+  "categories": [
+    "food-beverage",
+    "retail-fashion"
+  ],
+  "description": "McDonald's restaurant operation in Israel (first branch 1993, ~300 restaurants), long run by franchisee Aloniel; McDonald's Corp. acquired the Israeli restaurants in 2024.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1993,
+  "status": "active",
+  "website": "https://www.mcdonalds.co.il",
+  "client_profile": {
+    "industry": "quick-service restaurants",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "food photography",
+      "menu-board motion"
+    ],
+    "known_agencies": [
+      "Yehoshua TBWA"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "McDonald's Corporation"
+    },
+    {
+      "type": "agency",
+      "target": "yehoshua-tbwa",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%93%D7%95%D7%A0%D7%9C%D7%93'%D7%A1_%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
+    "https://www.mcdonalds.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001525596"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Listed among Yehoshua TBWA's clients (Globes, Nov 2025)."
+}

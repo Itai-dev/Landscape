@@ -1,0 +1,45 @@
+{
+  "id": "tempo-beverages",
+  "name": "Tempo Beverages",
+  "name_he": "טמפו",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli beer, spirits, wine and soft-drinks company; produces/distributes Goldstar beer and PepsiCo brands (Pepsi, 7UP, Mirinda), plus Barkan wines and imported waters and coffees.",
+  "location": {
+    "country": "IL",
+    "city": "Netanya"
+  },
+  "status": "active",
+  "website": "https://www.tempo.co.il",
+  "client_profile": {
+    "industry": "beverages",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "Munch (Goldstar)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "munch",
+      "note": "agency (per trade press / agency client list); Goldstar"
+    }
+  ],
+  "sources": [
+    "https://www.tempo.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "2026 Effie entry 'A Generation of Heroes' for Goldstar credited to Munch. HQ city from general knowledge."
+}

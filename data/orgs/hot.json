@@ -1,0 +1,61 @@
+{
+  "id": "hot",
+  "name": "HOT",
+  "name_he": "הוט",
+  "aka": [
+    "HOT Telecommunication Systems"
+  ],
+  "kind": "client",
+  "categories": [
+    "telecom",
+    "media-broadcast"
+  ],
+  "description": "Israeli cable TV, broadband and telecom group owned by Altice; brands include HOT cable, HOT Mobile and the NEXT TV streaming service.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2003,
+  "status": "active",
+  "website": "https://www.hot.net.il",
+  "key_people": [
+    {
+      "name": "Tal Granot-Goldstein",
+      "role": "CEO"
+    }
+  ],
+  "client_profile": {
+    "industry": "telecom / pay-TV",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital display ads",
+      "brand campaigns",
+      "motion graphics",
+      "TV promos"
+    ],
+    "known_agencies": [
+      "Gitam BBDO"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Altice"
+    },
+    {
+      "type": "agency",
+      "target": "gitam-bbdo",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hot_(Israel)",
+    "https://www.ice.co.il/advertising-marketing/news/article/1026668",
+    "https://www.globes.co.il/news/article.aspx?did=1001487400"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Aug 2024: Gitam BBDO won the group's ad budget (~NIS 10M/yr) for all HOT brands, replacing Reuveni-Pridan; Gitam had handled NEXT TV since mid-2022."
+}

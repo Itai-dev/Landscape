@@ -1,0 +1,51 @@
+{
+  "id": "tnuva",
+  "name": "Tnuva",
+  "name_he": "תנובה",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israel's largest dairy and food cooperative-turned-company (est. 1926), controlled by China's Bright Food; brands include Tnuva milk and cheeses and the plant-based Alternative line.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1926,
+  "status": "active",
+  "website": "https://www.tnuva.co.il",
+  "client_profile": {
+    "industry": "dairy / food",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Bright Food"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Tnuva",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.mccann.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Tnuva's Alternative brand campaign won at the 2026 Effies via McCann Tel Aviv."
+}

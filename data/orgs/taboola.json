@@ -1,0 +1,50 @@
+{
+  "id": "taboola",
+  "name": "Taboola",
+  "name_he": "טאבולה",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "adtech-creative"
+  ],
+  "description": "Content-recommendation and performance-advertising company founded in Israel in 2007 by Adam Singolda; HQ New York with major R&D in Tel Aviv; Nasdaq: TBLA (Realize platform).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2007,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.taboola.com",
+  "key_people": [
+    {
+      "name": "Adam Singolda",
+      "role": "Founder & CEO"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: TBLA"
+  },
+  "client_profile": {
+    "industry": "ad-tech",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Taboola"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Tel Aviv office from general knowledge (Wikipedia does not describe the Israeli office). May overlap with an ad-tech startup segment."
+}

@@ -1,0 +1,44 @@
+{
+  "id": "colmobil",
+  "name": "Colmobil",
+  "name_he": "כלמוביל",
+  "kind": "client",
+  "categories": [
+    "automotive"
+  ],
+  "description": "One of Israel's largest vehicle importers, owned by the Harel family; imports Mercedes-Benz, Hyundai, Genesis, Mitsubishi, smart, ORA and Chery-group brands. Its ORA EV launch won the Grand Effie (2025).",
+  "location": {
+    "country": "IL",
+    "city": "Rosh HaAyin"
+  },
+  "status": "active",
+  "website": "https://www.colmobil.co.il",
+  "client_profile": {
+    "industry": "automotive import",
+    "creative_needs": [
+      "TV commercials",
+      "car launch films",
+      "CGI / 3D car visualization",
+      "social video",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky Grey"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9B%D7%9C%D7%9E%D7%95%D7%91%D7%99%D7%9C",
+    "https://www.globes.co.il/news/article.aspx?did=1001506565"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Adler Chomski credited for the ORA launch (Grand Effie + Gold, Effie Israel 2024 awarded Mar 2025). Hebrew Wikipedia dates group origins to 1906 (merged 1962)."
+}

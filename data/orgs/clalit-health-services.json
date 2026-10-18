@@ -1,0 +1,45 @@
+{
+  "id": "clalit-health-services",
+  "name": "Clalit Health Services",
+  "name_he": "כללית",
+  "kind": "client",
+  "categories": [
+    "health-pharma"
+  ],
+  "description": "Israel's largest HMO (founded 1911), insuring about half the population and running hospitals and clinics nationwide.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1911,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.clalit.co.il",
+  "client_profile": {
+    "industry": "healthcare (HMO)",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "health explainers / animation",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "Glickman-Shamir-Samsonov Publicis"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "glickman-shamir-samsonov",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Clalit_Health_Services",
+    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Nov 2025 (Globes): Glickman-Shamir-Samsonov, Clalit's agency for about a decade, won the ~NIS 30M tender again."
+}

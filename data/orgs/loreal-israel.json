@@ -1,0 +1,63 @@
+{
+  "id": "loreal-israel",
+  "name": "L'Oréal Israel",
+  "name_he": "לוריאל ישראל",
+  "kind": "client",
+  "categories": [
+    "consumer-goods",
+    "retail-fashion"
+  ],
+  "description": "Israeli arm of L'Oréal Group (~300 employees) marketing 22 beauty brands; HQ in Netanya with a logistics center in Caesarea. Its ~NIS 100M ad and media budget was re-tendered in 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Netanya"
+  },
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.loreal.com/he-il/israel/",
+  "client_profile": {
+    "industry": "beauty / cosmetics",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "beauty photography",
+      "localization of global ads"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv",
+      "Gitam BBDO (L'Oréal Paris)",
+      "UM (media)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "L'Oréal"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "gitam-bbdo",
+      "note": "agency (per trade press / agency client list); L'Oréal Paris"
+    },
+    {
+      "type": "agency",
+      "target": "universal-mccann-israel",
+      "note": "agency (per trade press / agency client list); media"
+    }
+  ],
+  "sources": [
+    "https://www.loreal.com/he-il/israel/",
+    "https://www.globes.co.il/news/article.aspx?did=1001558524",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Oct 2026: McCann Tel Aviv kept the budget; Universal McCann leads media; Gitam BBDO expands on L'Oréal Paris."
+}

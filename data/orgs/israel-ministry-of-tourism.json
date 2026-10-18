@@ -1,0 +1,34 @@
+{
+  "id": "israel-ministry-of-tourism",
+  "name": "Israel Ministry of Tourism",
+  "name_he": "משרד התיירות",
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "travel-hospitality"
+  ],
+  "description": "Government ministry (est. 1964) responsible for promoting inbound and domestic tourism, including international destination-marketing campaigns.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 1964,
+  "status": "active",
+  "website": "https://www.gov.il/en/departments/ministry_of_tourism/govil-landing-page",
+  "client_profile": {
+    "industry": "government / destination marketing",
+    "creative_needs": [
+      "destination films",
+      "international TV and digital campaigns",
+      "social video",
+      "photography"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Ministry_of_Tourism_(Israel)"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City from general knowledge. Agency roster for international campaigns not verified."
+}

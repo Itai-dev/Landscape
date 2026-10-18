@@ -1,0 +1,60 @@
+{
+  "id": "cellcom",
+  "name": "Cellcom Israel",
+  "name_he": "סלקום",
+  "kind": "client",
+  "categories": [
+    "telecom"
+  ],
+  "description": "Israeli telecom operator offering mobile, fixed-line, internet and TV (Cellcom tv) services; one of the country's heaviest advertisers. Traded on the Tel Aviv Stock Exchange (CEL) and controlled by Discount Investment Corporation.",
+  "location": {
+    "country": "IL",
+    "city": "Netanya"
+  },
+  "founded": 1994,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.cellcom.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: CEL"
+  },
+  "client_profile": {
+    "industry": "telecom",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital display ads",
+      "brand campaigns",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "K Agency (digital)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "Golan Telecom"
+    },
+    {
+      "type": "subsidiary",
+      "target": "Dynamica Cellular"
+    },
+    {
+      "type": "agency",
+      "target": "K Agency",
+      "note": "agency (per trade press / agency client list); digital"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cellcom_(Israel)",
+    "https://www.globes.co.il/news/article.aspx?did=1001484065",
+    "https://www.globes.co.il/news/article.aspx?did=1001504828",
+    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Agency history (Globes): budget (~NIS 25M) moved from Publicis to Reuveni-Pridan in Jul 2024; the sides split in Mar 2025 and Cellcom said it would work without a full-service agency, using K Agency for digital only. Subsidiaries Golan Telecom and Dynamica are handled by Glickman-Shamir-Samsonov (2025)."
+}

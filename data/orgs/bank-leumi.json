@@ -1,0 +1,51 @@
+{
+  "id": "bank-leumi",
+  "name": "Bank Leumi",
+  "name_he": "בנק לאומי",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israel's largest bank (founded 1902 as the Anglo-Palestine Company). Its campaigns were the most frequently seen in Globes' 2025 ad index.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1902,
+  "status": "active",
+  "website": "https://www.leumi.co.il",
+  "funding": {
+    "public": true,
+    "ticker": "TASE: LUMI"
+  },
+  "client_profile": {
+    "industry": "banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bank_Leumi",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001506565",
+    "https://www.mccann.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Leumi ranked #2 most-memorable and #1 by presence in Globes' 2025 review; ~NIS 33M TV spend (Yifat). Ticker from general knowledge."
+}

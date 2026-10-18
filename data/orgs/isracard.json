@@ -1,0 +1,51 @@
+{
+  "id": "isracard",
+  "name": "Isracard",
+  "name_he": "ישראכרט",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli credit-card issuer and payments company (est. 1975 by Bank Hapoalim), issuing Isracard, Mastercard, Amex and co-branded cards such as El Al's Fly Card.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 1975,
+  "status": "active",
+  "website": "https://www.isracard.co.il",
+  "client_profile": {
+    "industry": "payments / credit cards",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "Reuveni-Pridan"
+    ]
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "el-al",
+      "note": "Fly Card co-brand"
+    },
+    {
+      "type": "agency",
+      "target": "reuveni-pridan",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Isracard",
+    "https://www.globes.co.il/news/article.aspx?did=1001476945",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Apr 2024: NIS 25M budget moved from Publicis to Reuveni-Pridan after 12 years. The Aug 2026 Fly Card (El Al + Isracard) ad was made by McCann Tel Aviv (Globes)."
+}

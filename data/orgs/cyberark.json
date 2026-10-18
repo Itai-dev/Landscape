@@ -1,0 +1,49 @@
+{
+  "id": "cyberark",
+  "name": "CyberArk",
+  "name_he": "סייברארק",
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Identity-security company founded in Israel in 1999 (HQ Petah Tikva). Acquired by Palo Alto Networks for ~$25B; the deal closed in February 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1999,
+  "size": "1001-5000",
+  "status": "acquired",
+  "website": "https://www.cyberark.com",
+  "key_people": [
+    {
+      "name": "Udi Mokady",
+      "role": "Co-founder"
+    }
+  ],
+  "client_profile": {
+    "industry": "cybersecurity",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Palo Alto Networks",
+      "note": "Closed Feb 2026"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/CyberArk"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Post-acquisition, marketing decisions may sit with Palo Alto Networks."
+}
