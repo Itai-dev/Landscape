@@ -10,9 +10,9 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Rubik:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: sticky search bar → kind tabs with counts → filter row → card grid; detail opens as bottom sheet (phone) / side panel (desktop). */
+/* Type: one sans family (Rubik, Latin + Hebrew) in weights; mono for data. Layout: sticky search bar → kind tabs with counts → filter row → card grid; detail opens as bottom sheet (phone) / side panel (desktop). */
 :root {
   --bg: #f2f4f3;
   --surface: #ffffff;
@@ -28,7 +28,8 @@
   --k-client: #1d4ed8;
   --k-community: #4d7c0f;
   --shadow: 0 10px 40px rgba(16, 30, 30, .18);
-  --f-display: "Frank Ruhl Libre", "Times New Roman", serif;
+  --f-display: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --logo-bg: #ffffff;
   --f-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
@@ -58,7 +59,8 @@ button, input, select { font: inherit; color: inherit; }
 .wrap { max-width: 1180px; margin: 0 auto; }
 
 header.masthead { padding-block: 22px 6px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
-.masthead h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(28px, 6vw, 40px); line-height: 1.05; margin: 0; letter-spacing: -.01em; }
+.masthead h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 6vw, 36px); line-height: 1.1; margin: 0; letter-spacing: -.025em; }
+.masthead h1 span { font-weight: 400; }
 .masthead h1 span { font-weight: 500; color: var(--muted); }
 .masthead .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
 
@@ -79,16 +81,20 @@ header.masthead { padding-block: 22px 6px; display: flex; flex-wrap: wrap; align
 .linkbtn { border: 0; background: none; color: var(--accent); cursor: pointer; padding: 4px; font-size: 14px; }
 
 main { padding-block: 8px 48px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
-@media (max-width: 420px) { .grid { grid-template-columns: 1fr; } }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 12px; }
 .card { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .15s, transform .15s; }
 .card:hover { border-color: var(--k, var(--accent)); }
 @media (prefers-reduced-motion: no-preference) { .card:hover { transform: translateY(-1px); } }
-.card .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-.card h3 { font-family: var(--f-display); font-weight: 700; font-size: 21px; line-height: 1.15; margin: 0; overflow-wrap: anywhere; }
-.card .he { font-family: var(--f-display); color: var(--muted); font-size: 16px; direction: rtl; white-space: nowrap; }
-.kind { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; color: var(--k); }
-.kind::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--k); }
+.card .top { display: flex; gap: 12px; align-items: center; }
+.card .nm { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 17px; line-height: 1.25; margin: 0; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.card .he { justify-self: start; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.logo { flex: none; width: 44px; height: 44px; border-radius: 10px; background: var(--logo-bg); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
+.logo img { width: 78%; height: 78%; object-fit: contain; }
+.logo.mono { background: color-mix(in srgb, var(--k) 14%, var(--surface)); border-color: color-mix(in srgb, var(--k) 30%, var(--line)); color: var(--k); font-weight: 700; font-size: 15px; letter-spacing: .02em; }
+.logo.lg { width: 64px; height: 64px; border-radius: 14px; font-size: 20px; }
+.kind { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; color: var(--k); }
+.kind::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 2px; background: var(--k); }
 .where { color: var(--muted); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
 .card p { margin: 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px; }
@@ -103,8 +109,10 @@ button.chip { cursor: pointer; }
   padding: 18px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
 @media (min-width: 860px) { .sheet { inset: 0 0 0 auto; width: 520px; max-height: none; border-radius: 0; padding-top: calc(22px + env(safe-area-inset-top, 0px)); } }
 .sheet .close { position: sticky; top: 0; float: right; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; font-size: 18px; line-height: 1; }
-.sheet h2 { font-family: var(--f-display); font-size: 30px; line-height: 1.1; margin: 6px 0 2px; text-wrap: balance; }
-.sheet .he { display: inline-block; font-family: var(--f-display); font-size: 20px; color: var(--muted); direction: rtl; }
+.sheet .head { display: flex; gap: 14px; align-items: center; margin-top: 4px; }
+.sheet .head > div { min-width: 0; }
+.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 26px; line-height: 1.15; letter-spacing: -.02em; margin: 2px 0 0; text-wrap: balance; }
+.sheet .he { display: inline-block; font-size: 17px; color: var(--muted); direction: rtl; }
 .sheet section { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; }
 .sheet h4 { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 14px; margin: 0; }
@@ -191,6 +199,15 @@ ul.plain { margin: 0; padding-left: 18px; font-size: 14px; }
     if (h && BY_ID[h]) open(h);
   }
 
+  function initials(name) {
+    const w = name.replace(/[^\p{L}\p{N} &]/gu, " ").split(/\s+/).filter((x) => x && !/^(the|&|and|of)$/i.test(x));
+    return ((w[0] || "?")[0] + (w[1] ? w[1][0] : (w[0] || "")[1] || "")).toUpperCase();
+  }
+  function logo(o, size = "") {
+    return o.logo ? `<span class="logo ${size}"><img src="${esc(o.logo)}" alt="" loading="lazy"></span>`
+      : `<span class="logo mono ${size}" aria-hidden="true">${esc(initials(o.name))}</span>`;
+  }
+
   function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
 
   function matches(o, skip) {
@@ -232,8 +249,9 @@ ul.plain { margin: 0; padding-left: 18px; font-size: 14px; }
     $("empty").hidden = list.length > 0;
     $("grid").innerHTML = list.map((o) => `
       <button class="card" type="button" data-id="${o.id}" style="--k:var(--k-${o.kind})">
-        <div class="top"><h3>${esc(o.name)}</h3>${o.name_he ? `<span class="he" lang="he">${esc(o.name_he)}</span>` : ""}</div>
-        <div class="kind">${KIND_ONE[o.kind]} <span class="where">· ${esc(o.location.city || o.location.country)}${o.founded ? ` · est. ${o.founded}` : ""}${o.status && o.status !== "active" ? ` · ${o.status}` : ""}</span></div>
+        <div class="top">${logo(o)}<div class="nm"><h3>${esc(o.name)}</h3>
+          ${o.name_he ? `<span class="he" lang="he" dir="rtl">${esc(o.name_he)}</span>` : ""}
+          <div class="kind">${KIND_ONE[o.kind]} <span class="where">· ${esc(o.location.city || o.location.country)}${o.founded ? ` · est. ${o.founded}` : ""}${o.status && o.status !== "active" ? ` · ${o.status}` : ""}</span></div></div></div>
         <p>${esc(o.description)}</p>
         <div class="chips">${o.categories.slice(0, 4).map((c) => `<span class="chip">${esc(TAX.categories[c] || c)}</span>`).join("")}</div>
       </button>`).join("");
@@ -273,9 +291,10 @@ ul.plain { margin: 0; padding-left: 18px; font-size: 14px; }
     const list = (title, arr) => arr && arr.length ? `<section><h4>${title}</h4><div class="chips">${arr.map((x) => { const t = lookup(x); return t && t.id !== o.id ? `<button class="chip" type="button" data-id="${t.id}">${esc(x)}</button>` : `<span class="chip">${esc(x)}</span>`; }).join("")}</div></section>` : "";
     $("sheet").innerHTML = `
       <button class="close" type="button" aria-label="Close">×</button>
-      <div class="kind" style="--k:var(--k-${o.kind})">${KIND_ONE[o.kind]}</div>
-      <h2 id="d-name">${esc(o.name)}</h2>
-      ${o.name_he ? `<div class="he" lang="he">${esc(o.name_he)}</div>` : ""}
+      <div class="head" style="--k:var(--k-${o.kind})">${logo(o, "lg")}<div>
+        <div class="kind">${KIND_ONE[o.kind]}</div>
+        <h2 id="d-name">${esc(o.name)}</h2>
+        ${o.name_he ? `<div class="he" lang="he">${esc(o.name_he)}</div>` : ""}</div></div>
       <p>${esc(o.description)}</p>
       <div class="links">${o.website ? `<a href="${esc(o.website)}" target="_blank" rel="noopener">Website ↗</a>` : ""}${links.map(([k, v]) => `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(LINK_LABEL[k] || k)} ↗</a>`).join("")}</div>
       <section><dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl></section>

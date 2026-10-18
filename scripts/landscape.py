@@ -6,6 +6,7 @@
   python3 scripts/landscape.py build               # write site/data/dataset.json + exports
   python3 scripts/landscape.py stale [--days 90]   # records due for re-verification
   python3 scripts/landscape.py stats               # counts by kind / category / city
+  python3 scripts/landscape.py logos [--all]       # fetch missing logos (needs Pillow)
 """
 from __future__ import annotations
 
@@ -22,6 +23,8 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 ORGS = ROOT / "data" / "orgs"
+LOGOS = ROOT / "data" / "logos"
+LOGO_MANIFEST = LOGOS / "manifest.json"
 SCHEMA = json.loads((ROOT / "schema" / "org.schema.json").read_text())
 TAXONOMY = json.loads((ROOT / "schema" / "taxonomy.json").read_text())
 FIELD_ORDER = list(SCHEMA["properties"].keys())
@@ -236,6 +239,14 @@ def resolve_relations(orgs: dict[str, dict]) -> None:
 def cmd_build(_args) -> int:
     orgs = load_all()
     resolve_relations(orgs)
+    import shutil
+    site_logos = ROOT / "site" / "logos"
+    shutil.rmtree(site_logos, ignore_errors=True)
+    site_logos.mkdir(parents=True)
+    for oid, o in orgs.items():
+        if (LOGOS / f"{oid}.png").exists():
+            shutil.copy(LOGOS / f"{oid}.png", site_logos / f"{oid}.png")
+            o["logo"] = f"logos/{oid}.png"
     out_dir = ROOT / "site" / "data"
     out_dir.mkdir(parents=True, exist_ok=True)
     dataset = {
@@ -274,7 +285,12 @@ def cmd_build(_args) -> int:
 def cmd_standalone(args) -> int:
     """Single HTML file with the data inlined (for sharing / artifact preview)."""
     cmd_build(args)
-    data = (ROOT / "site" / "data" / "dataset.json").read_text().replace("</", "<\\/")
+    import base64
+    ds = json.loads((ROOT / "site" / "data" / "dataset.json").read_text())
+    for o in ds["orgs"]:
+        if o.get("logo"):
+            o["logo"] = "data:image/png;base64," + base64.b64encode((ROOT / "site" / o["logo"]).read_bytes()).decode()
+    data = json.dumps(ds, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     app = (ROOT / "site" / "app.html").read_text()
     Path(args.out).write_text(app.replace("<script>\n(function", f"<script>window.__LANDSCAPE__={data};</script>\n<script>\n(function", 1))
     print(f"wrote {args.out}")
@@ -318,6 +334,115 @@ def cmd_stats(_args) -> int:
     return 0
 
 
+# ---------- logos ----------
+
+UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+LOGO_PX = 96
+
+
+def _get(url: str, timeout: int = 10) -> tuple[bytes, str]:
+    import urllib.request
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read(3_000_000), r.geturl()
+
+
+def _icon_candidates(site: str) -> list[str]:
+    """Icon URLs declared in the homepage <head>, best first."""
+    from html.parser import HTMLParser
+    from urllib.parse import urljoin
+    try:
+        html, final = _get(site)
+    except Exception:
+        return []
+    found = []
+
+    class P(HTMLParser):
+        def handle_starttag(self, tag, attrs):
+            a = dict(attrs)
+            rel = (a.get("rel") or "").lower()
+            href = a.get("href")
+            if tag != "link" or not href or "icon" not in rel or "mask" in rel:
+                return
+            sizes = a.get("sizes") or ""
+            m = re.findall(r"(\d+)x\d+", sizes)
+            px = max(map(int, m)) if m else (180 if "apple" in rel else 32)
+            if href.lower().split("?")[0].endswith(".svg"):
+                px = -1  # can't rasterise SVG without extra deps; keep as last resort
+            found.append((px, urljoin(final, href)))
+
+    try:
+        P().feed(html.decode("utf-8", "ignore")[:400_000])
+    except Exception:
+        pass
+    found.sort(key=lambda t: -t[0])
+    return [u for px, u in found if px >= 0] + [urljoin(final, "/apple-touch-icon.png")]
+
+
+def _to_png(data: bytes) -> bytes | None:
+    import io
+    from PIL import Image
+    try:
+        im = Image.open(io.BytesIO(data))
+        if getattr(im, "format", "") == "ICO":
+            im.size = max(im.ico.sizes())  # largest frame
+        im = im.convert("RGBA")
+    except Exception:
+        return None
+    if min(im.size) < 32:
+        return None
+    bbox = im.getbbox()
+    if not bbox:
+        return None
+    im = im.crop(bbox)
+    im.thumbnail((LOGO_PX, LOGO_PX), Image.LANCZOS)
+    canvas = Image.new("RGBA", (LOGO_PX, LOGO_PX), (0, 0, 0, 0))
+    canvas.paste(im, ((LOGO_PX - im.width) // 2, (LOGO_PX - im.height) // 2), im)
+    out = io.BytesIO()
+    canvas.save(out, "PNG", optimize=True)
+    return out.getvalue()
+
+
+def fetch_logo(rec: dict) -> tuple[str, str | None, bytes | None]:
+    site = rec.get("website")
+    if not site:
+        return rec["id"], None, None
+    d = domain(site)
+    tries = _icon_candidates(site) + [
+        f"https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://{d}&size=128"]
+    for url in tries:
+        try:
+            data, _ = _get(url, timeout=8)
+        except Exception:
+            continue
+        png = _to_png(data)
+        if png:
+            return rec["id"], url, png
+    return rec["id"], None, None
+
+
+def cmd_logos(args) -> int:
+    from concurrent.futures import ThreadPoolExecutor
+    LOGOS.mkdir(parents=True, exist_ok=True)
+    manifest = json.loads(LOGO_MANIFEST.read_text()) if LOGO_MANIFEST.exists() else {}
+    orgs = load_all()
+    todo = [o for oid, o in orgs.items() if args.all or (oid not in manifest and not (LOGOS / f"{oid}.png").exists())]
+    if args.ids:
+        todo = [orgs[i] for i in args.ids if i in orgs]
+    got = 0
+    with ThreadPoolExecutor(16) as pool:
+        for oid, url, png in pool.map(fetch_logo, todo):
+            if png:
+                (LOGOS / f"{oid}.png").write_bytes(png)
+                manifest[oid] = {"source": url, "fetched": TODAY}
+                got += 1
+            else:
+                manifest.setdefault(oid, {"source": None, "fetched": TODAY})
+    LOGO_MANIFEST.write_text(json.dumps(dict(sorted(manifest.items())), indent=1) + "\n")
+    print(f"logos: fetched {got}/{len(todo)}; total with logo: {len(list(LOGOS.glob('*.png')))}/{len(orgs)}")
+    return 0
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -333,6 +458,10 @@ def main() -> int:
     s.add_argument("--limit", type=int, default=50)
     s.set_defaults(fn=cmd_stale)
     sub.add_parser("stats").set_defaults(fn=cmd_stats)
+    lg = sub.add_parser("logos")
+    lg.add_argument("--all", action="store_true", help="re-fetch every logo")
+    lg.add_argument("ids", nargs="*", help="only these org ids")
+    lg.set_defaults(fn=cmd_logos)
     st = sub.add_parser("standalone")
     st.add_argument("out")
     st.set_defaults(fn=cmd_standalone)

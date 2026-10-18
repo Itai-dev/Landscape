@@ -34,7 +34,7 @@ jobs:
         with:
           python-version: "3.12"
       - if: steps.check.outputs.ok == 'true'
-        run: pip install jsonschema
+        run: pip install jsonschema pillow
       - if: steps.check.outputs.ok == 'true'
         uses: anthropics/claude-code-action@v1
         env:
