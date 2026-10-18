@@ -1,0 +1,30 @@
+{
+  "id": "animatorit",
+  "name": "Animatorit Studio",
+  "name_he": "אנימטורית",
+  "kind": "studio",
+  "categories": [
+    "animation-2d"
+  ],
+  "description": "Herzliya boutique 2D animation studio offering design and animation for videos for any occasion and animated music clips.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://animatorit.com",
+  "services": [
+    "2D animated videos",
+    "Design",
+    "Music clips"
+  ],
+  "sources": [
+    "https://animatorit.com",
+    "https://revenuebase.ai/companies/animation-studios/israel"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Thin site; no named people or clients."
+}

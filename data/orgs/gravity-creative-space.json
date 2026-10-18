@@ -1,0 +1,48 @@
+{
+  "id": "gravity-creative-space",
+  "name": "Gravity Creative Space",
+  "aka": [
+    "Gravity",
+    "Gravity Creative"
+  ],
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "animation-3d",
+    "motion-design",
+    "post-production"
+  ],
+  "description": "Tel Aviv creative, design, animation and visual-effects group with roots in the mid-1990s, based at the Tel Aviv Port. Historically operated offices in New York and Los Angeles (re-launched from Rhino in 2010) and works across advertising VFX, 3D, motion graphics and compositing.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1994,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://gravity.co.il",
+  "links": {
+    "linkedin": "https://il.linkedin.com/company/gravitycreative"
+  },
+  "services": [
+    "Visual effects",
+    "3D animation",
+    "Motion design",
+    "Compositing",
+    "Creative content for advertising"
+  ],
+  "tags": [
+    "advertising",
+    "vfx",
+    "commercials"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/gravitycreative",
+    "https://gravity.co.il",
+    "https://www.cgw.com/Press-Center/News/2010/Rhino-Re-Launches-as-Gravity.aspx"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year conflicts: LinkedIn says 1994, trade press says 1996. US offices may no longer be active. Overlaps VFX segment."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "studio-poink",
+  "name": "Studio Poink",
+  "aka": [
+    "Poink Animations"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design"
+  ],
+  "description": "Tel Aviv 2D animation studio making explainer videos, motion graphics, character animation and animated commercials, focused on tech, SaaS and cybersecurity brands.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://studiopoink.com",
+  "services": [
+    "Explainer videos",
+    "Motion graphics",
+    "Character animation",
+    "Animated commercials"
+  ],
+  "notable_clients": [
+    "Wiz",
+    "CyberArk",
+    "Check Point",
+    "TikTok",
+    "Fiverr",
+    "Amdocs",
+    "Playtika",
+    "Cyera",
+    "WalkMe"
+  ],
+  "tags": [
+    "explainers",
+    "saas",
+    "cybersecurity"
+  ],
+  "sources": [
+    "https://studiopoink.com",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

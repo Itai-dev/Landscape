@@ -1,0 +1,54 @@
+{
+  "id": "wayy-studio",
+  "name": "Wayy Studio",
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "motion-design",
+    "digital-design"
+  ],
+  "description": "Israeli creative studio for startups offering branding, motion/brand videos, ad campaigns and websites; founded by former Laserbee partners. Work recognized by Behance features and Motion Design Awards.",
+  "location": {
+    "country": "IL",
+    "city": "Netaim"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://wayy.studio",
+  "services": [
+    "Branding",
+    "Brand and product videos",
+    "Campaigns",
+    "Websites"
+  ],
+  "notable_clients": [
+    "Fiverr",
+    "WalkMe",
+    "HP",
+    "Yotpo",
+    "Fireblocks",
+    "Cato Networks",
+    "Forter",
+    "Placer.ai"
+  ],
+  "relations": [
+    {
+      "type": "spun_off_from",
+      "target": "laserbee",
+      "note": "Founded by Laserbee founding partners"
+    }
+  ],
+  "tags": [
+    "startups",
+    "saas",
+    "branding"
+  ],
+  "sources": [
+    "https://wayy.studio",
+    "https://laserbee.video",
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

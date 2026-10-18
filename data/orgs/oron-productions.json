@@ -1,0 +1,43 @@
+{
+  "id": "oron-productions",
+  "name": "Oron Productions",
+  "name_he": "אורון הפקות",
+  "kind": "studio",
+  "categories": [
+    "commercial-production",
+    "animation-2d"
+  ],
+  "description": "Tel Aviv video production house ('films that promote businesses') producing corporate, brand and product films, ads and animated films with original characters; online since at least 1999.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://oronpro.co.il",
+  "services": [
+    "Corporate films",
+    "Animated films with original characters",
+    "Brand films",
+    "Product films",
+    "Ads"
+  ],
+  "key_people": [
+    {
+      "name": "Ronen Pinco",
+      "role": "Head of studio"
+    }
+  ],
+  "tags": [
+    "corporate",
+    "explainers"
+  ],
+  "sources": [
+    "https://oronpro.co.il",
+    "https://www.edvido.com/animation-studios/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Size band from Edvido directory (10-49). Website footer last updated 2018; Ronen Pinco's exact title not stated."
+}

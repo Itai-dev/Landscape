@@ -1,0 +1,41 @@
+{
+  "id": "the-moving-company-tmc",
+  "name": "The Moving Company (TMC)",
+  "aka": [
+    "TMC Animation"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d"
+  ],
+  "description": "Small international 2D animation studio ('Animation That Matters') producing story-driven educational and explainer content for NGOs, universities and companies.",
+  "location": {
+    "country": "IL"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://tmc.studio",
+  "services": [
+    "2D animation",
+    "Educational and explainer videos"
+  ],
+  "notable_clients": [
+    "UNESCO",
+    "Rutgers University",
+    "RC Cola",
+    "Browsi",
+    "Speedata"
+  ],
+  "tags": [
+    "educational",
+    "impact"
+  ],
+  "sources": [
+    "https://tmc.studio",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City not stated; Israeli phone number and Animation Israel listing."
+}

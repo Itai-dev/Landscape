@@ -1,0 +1,49 @@
+{
+  "id": "shoof-video",
+  "name": "SHOOF Creative Video",
+  "aka": [
+    "Shoof"
+  ],
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "animation-2d",
+    "animation-3d",
+    "ai-creative"
+  ],
+  "description": "Tel Aviv-area (Givatayim) marketing-driven video studio founded in 2017, producing product, explainer and promo videos for technology brands with 2D/3D animation, live action and AI production.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim"
+  },
+  "founded": 2017,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.shoofvideo.co.il",
+  "services": [
+    "Scriptwriting",
+    "2D/3D animation",
+    "AI video production",
+    "Live action",
+    "Explainer and product videos"
+  ],
+  "notable_clients": [
+    "Tel Aviv Stock Exchange",
+    "Teva",
+    "Watergen",
+    "Asterra",
+    "HomeBiogas"
+  ],
+  "tags": [
+    "explainers",
+    "tech",
+    "ai-video"
+  ],
+  "sources": [
+    "https://www.shoofvideo.co.il",
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

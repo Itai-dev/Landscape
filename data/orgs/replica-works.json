@@ -1,0 +1,46 @@
+{
+  "id": "replica-works",
+  "name": "Replica",
+  "aka": [
+    "Replica Works"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "motion-design",
+    "cgi-3d"
+  ],
+  "description": "Tel Aviv 3D motion and visualization studio on Allenby Street creating brand films, hyper-real product visuals and cinematic animation for tech, fashion, gaming and music clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://replica.works",
+  "services": [
+    "3D visualization",
+    "Motion design",
+    "Brand films",
+    "Product visuals",
+    "Cinematic animation"
+  ],
+  "notable_work": [
+    "Google Cloud Launch Israel",
+    "Six Thirty (Kan 11)",
+    "Unfurling Dream (Asaf Avidan)",
+    "Fiverr Business",
+    "Reco Warriors (Reco.ai)"
+  ],
+  "tags": [
+    "3d-motion",
+    "product-viz"
+  ],
+  "sources": [
+    "https://replica.works",
+    "https://revenuebase.ai/companies/animation-studios/israel"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

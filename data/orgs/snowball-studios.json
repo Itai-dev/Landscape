@@ -1,0 +1,82 @@
+{
+  "id": "snowball-studios",
+  "name": "Snowball Studios",
+  "name_he": "סנובול",
+  "aka": [
+    "Snowball VFX",
+    "Snowball | Studios"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "vfx"
+  ],
+  "description": "Tel Aviv-based 3D animation and visual effects studio founded around 2005, described as Israel's largest animation studio. Produced the 3D kids series 'VIPO: Adventures of the Flying Dog' (with Crew972) and opened a Jerusalem facility for Disney long-form work such as 'Star Darlings'.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Jerusalem",
+      "Toronto, Canada"
+    ]
+  },
+  "founded": 2005,
+  "size": "51-200",
+  "status": "unknown",
+  "website": "https://snowballvfx.com",
+  "services": [
+    "3D animation",
+    "Visual effects",
+    "TV series and feature animation",
+    "Commercials"
+  ],
+  "notable_clients": [
+    "Disney",
+    "NBC",
+    "Mattel",
+    "Cisco",
+    "Verizon",
+    "Orange",
+    "Sci-Fi Channel"
+  ],
+  "notable_work": [
+    "VIPO: Adventures of the Flying Dog",
+    "Star Darlings (Disney)"
+  ],
+  "key_people": [
+    {
+      "name": "Eran Barel",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yoni Cohen",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "crew972",
+      "note": "Co-produced VIPO"
+    },
+    {
+      "type": "client",
+      "target": "Disney"
+    }
+  ],
+  "tags": [
+    "kids-tv",
+    "vfx",
+    "jerusalem-film-fund"
+  ],
+  "sources": [
+    "https://thejerusalemfilmfund.com/company/snowball-studios/",
+    "https://nocamels.com/2015/03/disney-to-produce-tv-series-in-israel/",
+    "https://www.timesofisrael.com/no-business-like-show-business/",
+    "https://en.wikipedia.org/wiki/Vipo:_Adventures_of_the_Flying_Dog"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "snowballvfx.com now redirects to a dead domain (snowballffx.com) as of 2026-10; current activity unconfirmed. Size from Indeed (51-200), likely dated."
+}

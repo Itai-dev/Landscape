@@ -1,0 +1,47 @@
+{
+  "id": "fridaylab-studio",
+  "name": "FridayLab Studio",
+  "aka": [
+    "Friday Lab"
+  ],
+  "kind": "studio",
+  "categories": [
+    "game-art",
+    "animation-3d",
+    "animation-2d"
+  ],
+  "description": "Small game-art studio acting as an outsourced art department: animation, rigging, tech art, game VFX, cinematics and game-ready assets, mainly for mobile game developers.",
+  "location": {
+    "country": "IL"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://fridaylab.studio",
+  "services": [
+    "Animation",
+    "Rigging",
+    "Tech art",
+    "Game VFX",
+    "Cinematics and trailers",
+    "Game-ready 3D assets"
+  ],
+  "notable_work": [
+    "Yoyo Punk",
+    "MergeStories",
+    "Minutia Karts cinematic",
+    "Multiverse CG trailer"
+  ],
+  "tags": [
+    "games",
+    "mobile-games",
+    "outsourcing"
+  ],
+  "sources": [
+    "https://fridaylab.studio",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City not stated; listed as Israeli by Animation Israel. Logos of Moon Active, Supersonic, Jelly Button shown on site but client relationship not stated explicitly."
+}

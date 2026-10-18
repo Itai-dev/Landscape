@@ -1,0 +1,58 @@
+{
+  "id": "igloo-creative-house",
+  "name": "Igloo Creative House",
+  "aka": [
+    "Igloo"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "commercial-production",
+    "game-art"
+  ],
+  "description": "Tel Aviv creative agency and animation studio, part of the Magic Media group, producing animated brand videos, commercials, product videos and performance-marketing creative, with a separate gaming creative arm.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://igloocreative.co",
+  "services": [
+    "Brand videos",
+    "Commercials",
+    "Animation",
+    "Performance marketing creative",
+    "Post-production",
+    "Gaming creative"
+  ],
+  "notable_clients": [
+    "Plus500",
+    "SodaStream",
+    "Viber",
+    "Fiverr",
+    "JFrog",
+    "Playtika",
+    "Zynga",
+    "Gett",
+    "888"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Magic Media"
+    }
+  ],
+  "tags": [
+    "gaming-ua",
+    "commercials"
+  ],
+  "sources": [
+    "https://igloocreative.co",
+    "https://revenuebase.ai/companies/animation-studios/israel"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

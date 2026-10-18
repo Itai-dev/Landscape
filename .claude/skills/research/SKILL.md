@@ -46,7 +46,7 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    `research/queue.md` when its coverage looks reasonably complete.
 8. **Ship**: commit on a new branch `research/<YYYY-MM-DD>-<segment>`, push, and open a PR
    titled `Research: <segment> (+N, ~M)` listing the new orgs (name — kind — city) and notable
-   corrections. Delete processed staging files in the same commit (the merged data is the record).
+   corrections. Staging files are gitignored (the merged data in data/orgs is the record).
 
 ## Quality bar
 

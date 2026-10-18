@@ -1,0 +1,39 @@
+{
+  "id": "funkeyz-animation",
+  "name": "Funkeyz Animation",
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "game-art"
+  ],
+  "description": "Petah Tikva boutique studio specializing in high-quality character animation, working as an external animation team for game developers; portfolio includes work credited on Crash Bandicoot 4, Spyro Reignited Trilogy and Crash Team Rumble.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://funkeyzanimation.com",
+  "services": [
+    "Character animation",
+    "Outsourced game animation"
+  ],
+  "notable_work": [
+    "Crash Bandicoot 4: It's About Time",
+    "Spyro Reignited Trilogy",
+    "Crash Team Rumble",
+    "Grandpa's Car"
+  ],
+  "tags": [
+    "games",
+    "character-animation",
+    "outsourcing"
+  ],
+  "sources": [
+    "https://funkeyzanimation.com",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

@@ -1,0 +1,48 @@
+{
+  "id": "mustache-studio",
+  "name": "Mustache Creative Studio",
+  "name_he": "סטודיו מוסטש",
+  "aka": [
+    "Mustache Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "animation-2d",
+    "animation-3d"
+  ],
+  "description": "Netanya studio producing promotional videos, motion graphics and 2D/3D animation with voiceover and sound design, mainly for Israeli tech companies.",
+  "location": {
+    "country": "IL",
+    "city": "Netanya"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "http://www.mustachestudio.com",
+  "services": [
+    "Promo videos",
+    "Animation",
+    "3D animation",
+    "Voiceover",
+    "Sound design"
+  ],
+  "notable_clients": [
+    "HP Indigo",
+    "Taboola",
+    "ironSource",
+    "Sony",
+    "Consumer Physics"
+  ],
+  "tags": [
+    "explainers",
+    "tech"
+  ],
+  "sources": [
+    "http://www.mustachestudio.com",
+    "https://www.edvido.com/animation-studios/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Portfolio brand names not explicitly labelled as clients."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "animation-lab",
+  "name": "Animation Lab",
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "film-production"
+  ],
+  "description": "Jerusalem CGI feature-animation studio founded in 2006 (with a Los Angeles presence) to make Israel's first feature-length CGI film, 'The Wild Bunch'. It closed in 2013 without releasing a finished feature.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem",
+    "other_offices": [
+      "Los Angeles, USA"
+    ]
+  },
+  "founded": 2006,
+  "status": "closed",
+  "notable_work": [
+    "The Wild Bunch (unreleased CGI feature)"
+  ],
+  "tags": [
+    "feature-animation",
+    "historical"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Animation_Lab",
+    "https://web.archive.org/web/20080709051853/http://www.animationlab.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

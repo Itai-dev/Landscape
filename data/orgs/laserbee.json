@@ -1,0 +1,45 @@
+{
+  "id": "laserbee",
+  "name": "Laserbee Studio",
+  "aka": [
+    "Laserbee"
+  ],
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "animation-2d"
+  ],
+  "description": "Tel Aviv motion design studio (founded c. 2019) that made animated explainer and brand videos for tech companies and topped Clutch/Manifest Israeli motion-graphics rankings; it closed after six years, with its partners founding Nua Motion and Wayy Studio.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2019,
+  "size": "1-10",
+  "status": "closed",
+  "website": "https://laserbee.video",
+  "relations": [
+    {
+      "type": "partner",
+      "target": "nua-motion",
+      "note": "Successor studio"
+    },
+    {
+      "type": "partner",
+      "target": "wayy-studio",
+      "note": "Successor studio"
+    }
+  ],
+  "tags": [
+    "explainers",
+    "tech"
+  ],
+  "sources": [
+    "https://laserbee.video",
+    "https://clutch.co/il/agencies/video-production/animation/tel-aviv"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founded year from The Manifest listing."
+}

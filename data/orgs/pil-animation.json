@@ -1,0 +1,55 @@
+{
+  "id": "pil-animation",
+  "name": "Pil Animation",
+  "name_he": "פיל אנימציה",
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design"
+  ],
+  "description": "Petah Tikva animation studio with 20+ years of experience producing explainer, promo, training, in-flight safety and educational videos, plus animated TV series and fillers for Israeli broadcasters and kids channels.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://pilanimation.com",
+  "services": [
+    "Explainer and promo videos",
+    "Commercials",
+    "Training videos",
+    "In-flight safety videos",
+    "Animated TV series and openers"
+  ],
+  "notable_clients": [
+    "El Al",
+    "Cellcom",
+    "Amdocs",
+    "Rafael",
+    "Novartis",
+    "Vodafone",
+    "Super-Pharm",
+    "BabyTV",
+    "National Geographic",
+    "Hop! Channel"
+  ],
+  "notable_work": [
+    "Duki & Shplutz",
+    "Milmulim",
+    "History in a Minute (National Geographic)",
+    "Jump with Joey"
+  ],
+  "tags": [
+    "explainers",
+    "kids-tv"
+  ],
+  "sources": [
+    "https://pilanimation.com",
+    "https://pilanimation.com/he/animated-series-production/",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

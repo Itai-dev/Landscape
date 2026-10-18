@@ -1,0 +1,53 @@
+{
+  "id": "dreams-and-magic",
+  "name": "Dreams & Magic",
+  "aka": [
+    "Studio3DM",
+    "Dreams & Magic LTD"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "xr",
+    "creative-technology",
+    "commercial-production"
+  ],
+  "description": "Israeli creative-technology and production company (active since at least 2006) producing commercials, corporate and technical videos, animation, virtual production, and immersive VR/AR experiences for hi-tech, defence, gaming and consumer brands.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://studio3dm.com",
+  "services": [
+    "Animation",
+    "Corporate and technical videos",
+    "Commercials",
+    "Virtual production",
+    "VR/AR experiences",
+    "AI films"
+  ],
+  "notable_clients": [
+    "Check Point",
+    "Rafael",
+    "Samsung",
+    "Playtika",
+    "Kan 11",
+    "Keshet",
+    "FedEx"
+  ],
+  "tags": [
+    "xr",
+    "defence",
+    "tech"
+  ],
+  "sources": [
+    "https://studio3dm.com",
+    "https://revenuebase.ai/companies/animation-studios/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Client list from logo wall."
+}

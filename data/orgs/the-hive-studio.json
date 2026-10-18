@@ -1,0 +1,75 @@
+{
+  "id": "the-hive-studio",
+  "name": "The Hive Studio",
+  "aka": [
+    "The Hive"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "animation-3d",
+    "film-production"
+  ],
+  "description": "Israeli animation studio founded in Tel Aviv in 2010 by producer Amit Gicelter, with branches in Tel Aviv, Jerusalem, Sderot and Athens. Develops and produces shorts, series and commercial content and original IP; produced the Oscar-nominated short 'Letter to a Pig' and the Oscar-shortlisted 'Black Slide'.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Jerusalem",
+      "Sderot",
+      "Athens, Greece"
+    ]
+  },
+  "founded": 2010,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://thehivepro.com",
+  "services": [
+    "Content development",
+    "Pre-production",
+    "2D/3D/mixed-media animation production",
+    "Post-production",
+    "Co-production and subsidy financing",
+    "Distribution"
+  ],
+  "notable_clients": [
+    "Kan (Israeli Public Broadcasting)",
+    "Hop! Channel"
+  ],
+  "notable_work": [
+    "Letter to a Pig (2022, Oscar-nominated short)",
+    "Black Slide (2021, Oscar-shortlisted)",
+    "Summer Memories (TV series)",
+    "Parpar Nechmad (Kan)",
+    "Discovering Sounds with Luli (Hop!)"
+  ],
+  "key_people": [
+    {
+      "name": "Amit Russell Gicelter",
+      "role": "Founder & CEO"
+    },
+    {
+      "name": "Vassilis C. Karamitsanis",
+      "role": "Establishing Partner, The Hive Greece"
+    },
+    {
+      "name": "Hadas Gicelter",
+      "role": "Head of Marketing and Distribution"
+    }
+  ],
+  "tags": [
+    "oscar-nominated",
+    "shorts",
+    "original-ip",
+    "co-production"
+  ],
+  "sources": [
+    "https://thehivepro.com/about/",
+    "https://en.wikipedia.org/wiki/The_Hive_(animation_studio)",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "About page cites a team of ~40 artists."
+}

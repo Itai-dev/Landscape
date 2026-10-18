@@ -1,0 +1,50 @@
+{
+  "id": "blackboard-studios",
+  "name": "BlackBoard Studios",
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "cgi-3d",
+    "vfx",
+    "motion-design"
+  ],
+  "description": "Israeli 3D animation, CGI and VFX studio producing product and explainer videos, commercials, in-game cinematics and exhibition content; its Nectar Sleep YouTube ad won a 2018 Webby, and it created Bazan's CGI pelican brand ambassadors.",
+  "location": {
+    "country": "IL"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://blackboardvfx.com",
+  "services": [
+    "3D animation and CGI",
+    "Product and explainer videos",
+    "Commercials and post-production",
+    "Game cinematics",
+    "Synthetic data sets"
+  ],
+  "notable_clients": [
+    "Google",
+    "Playtika",
+    "Monday.com",
+    "SodaStream",
+    "Bazan",
+    "Tomorrow.io",
+    "AppsFlyer",
+    "Melio",
+    "UVeye",
+    "Nectar Sleep"
+  ],
+  "tags": [
+    "cgi",
+    "game-cinematics",
+    "tech"
+  ],
+  "sources": [
+    "https://blackboardvfx.com",
+    "https://www.edvido.com/animation-studios/israel"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City not confirmed (likely Tel Aviv area). Size band from Edvido (10-49)."
+}

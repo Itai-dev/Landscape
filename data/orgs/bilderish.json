@@ -1,0 +1,51 @@
+{
+  "id": "bilderish",
+  "name": "Bilderish",
+  "name_he": "בילדריש",
+  "aka": [
+    "Bilderish | Creativity in Motion"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "post-production"
+  ],
+  "description": "Tel Aviv animation, video and post-production studio with 13+ years of experience making explainers, training videos, social ads, commercials and animated series for high-tech, visitor centers and gaming clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://bilderish.com",
+  "services": [
+    "Explainer videos",
+    "Training videos",
+    "Social ads",
+    "Commercials",
+    "Animated series",
+    "Post-production"
+  ],
+  "notable_clients": [
+    "AppsFlyer",
+    "Riskified",
+    "Amdocs",
+    "IKEA",
+    "Kimberly-Clark",
+    "Playtika",
+    "Israel Railways",
+    "Israel Nature and Parks Authority"
+  ],
+  "tags": [
+    "explainers",
+    "tech"
+  ],
+  "sources": [
+    "https://bilderish.com",
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}

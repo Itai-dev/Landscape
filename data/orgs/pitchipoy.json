@@ -1,0 +1,66 @@
+{
+  "id": "pitchipoy",
+  "name": "PitchiPoy Animation Productions",
+  "name_he": "פיצ'י פוי הפקות אנימציה",
+  "aka": [
+    "Pitchi Poy"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "animation-3d"
+  ],
+  "description": "Veteran Israeli animation house founded in 1985 by Gobelins-trained animator Noam Meshulam, originally in his family's house in old Jaffa. Produces feature films, TV series and commercials in classical hand-drawn, digital 2D and 3D techniques, and has promoted a hybrid AI + 3D pipeline.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Jerusalem"
+    ]
+  },
+  "founded": 1985,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://pitchipoy.tv",
+  "services": [
+    "Feature film animation",
+    "TV series",
+    "Animated commercials",
+    "Concept art, storyboards and animatics",
+    "Explainers and visitor-center films"
+  ],
+  "notable_clients": [
+    "Coca-Cola",
+    "Bamba (Osem)",
+    "Bisli (Osem)"
+  ],
+  "notable_work": [
+    "Baldy Heights (feature)",
+    "The Sand Castle (feature)",
+    "The Boy Who Painted a Donkey Blue",
+    "Numberville (TV series)",
+    "Plantoonim (TV series)"
+  ],
+  "key_people": [
+    {
+      "name": "Noam Meshulam",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "feature-animation",
+    "tv-series",
+    "commercials",
+    "jaffa"
+  ],
+  "sources": [
+    "https://pitchipoy.tv",
+    "https://www.awn.com/mag/issue5.06/5.06pages/orenrabbits.php3",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://thejerusalemfilmfund.com/?p=3634"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Size band from Edvido directory (10-49). Jerusalem studio opened ~2015 with Jerusalem Film Fund support."
+}

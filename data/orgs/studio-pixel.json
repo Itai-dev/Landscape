@@ -1,0 +1,56 @@
+{
+  "id": "studio-pixel",
+  "name": "Studio Pixel",
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "animation-3d",
+    "experiential",
+    "xr"
+  ],
+  "description": "Tel Aviv studio with 15+ years in immersive video: 2D/3D motion graphics and explainers, plus building projection-mapping shows, stage visuals, museum installations, 360 VR and AR for corporate events and brands.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://studiopixel.co.il",
+  "services": [
+    "Motion graphics",
+    "2D/3D animation",
+    "Projection mapping",
+    "Stage visuals",
+    "Museum installations",
+    "VR/AR"
+  ],
+  "notable_clients": [
+    "Taboola",
+    "Payoneer",
+    "Mobileye",
+    "Netafim",
+    "Cellebrite",
+    "Shufersal",
+    "Adidas",
+    "Microsoft"
+  ],
+  "notable_work": [
+    "Taboola IPO event",
+    "Payoneer IPO event",
+    "Adidas TLV Marathon",
+    "Miss Universe Israel 2021"
+  ],
+  "tags": [
+    "projection-mapping",
+    "events",
+    "immersive"
+  ],
+  "sources": [
+    "https://studiopixel.co.il",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Size estimated, not verified."
+}
