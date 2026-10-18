@@ -125,16 +125,15 @@ def normalise(raw: dict) -> tuple[dict, list[str]]:
     if bad:
         warn.append(f"dropped unknown categories {bad} (moved to tags)")
         rec["tags"] = sorted(set(rec.get("tags", [])) | set(bad))
-    rec["categories"] = [c for c in dict.fromkeys(cats) if c in TAXONOMY["categories"]]
+    if "categories" in raw:
+        rec["categories"] = [c for c in dict.fromkeys(cats) if c in TAXONOMY["categories"]]
     for k in LIST_FIELDS & set(rec):
         rec[k] = list(dict.fromkeys(x.strip() for x in rec[k] if isinstance(x, str) and x.strip()))
     if isinstance(rec.get("links"), dict):
         rec["links"] = {k: v for k, v in rec["links"].items() if isinstance(v, str) and v.startswith("http")}
         if not rec["links"]:
             rec.pop("links")
-    rec.setdefault("added", TODAY)
     rec.setdefault("last_verified", TODAY)
-    rec.setdefault("status", "active")
     return rec, warn
 
 
@@ -226,6 +225,9 @@ def cmd_ingest(args) -> int:
             for w in warn:
                 print(f"  ! {label}: {w}")
             match = find_match(rec, orgs)
+            if not match:
+                rec.setdefault("added", TODAY)
+                rec.setdefault("status", "active")
             if match:
                 if match != rec["id"]:
                     print(f"  ~ {rec['id']} → merged into existing '{match}'")
