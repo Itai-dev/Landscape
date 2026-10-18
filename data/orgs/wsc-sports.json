@@ -7,16 +7,19 @@
   "kind": "startup",
   "categories": [
     "sports-media",
-    "video-tools"
+    "video-tools",
+    "gen-ai-video"
   ],
-  "description": "Israeli company whose AI platform automatically creates and distributes personalized sports highlight videos in real time for leagues, broadcasters and media (clients include the NBA, NHL, NASCAR, MLS and ESPN). Founded in 2011; headquartered in the Tel Aviv area (Givatayim) with offices in New York, London and Sydney.",
+  "description": "Israeli sports-tech company whose AI platform automatically creates, personalizes and distributes highlight clips and short-form content in real time for leagues, teams and broadcasters (NBA, LaLiga, DAZN, YouTube, ATP Media, NHL and others). R&D in Ramat Gan; offices in New York, London, Sydney, Tokyo and Beijing.",
   "location": {
     "country": "IL",
-    "city": "Givatayim",
+    "city": "Ramat Gan",
     "other_offices": [
       "New York",
       "London",
-      "Sydney"
+      "Sydney",
+      "Tokyo",
+      "Beijing"
     ]
   },
   "founded": 2011,
@@ -25,7 +28,10 @@
   "services": [
     "Automated highlights generation",
     "Sports video distribution",
-    "Personalized short-form sports content"
+    "Personalized short-form sports content",
+    "Automated AI highlights",
+    "Personalized sports video",
+    "Content distribution"
   ],
   "notable_clients": [
     "NBA",
@@ -34,7 +40,12 @@
     "MLS",
     "ESPN",
     "YouTube TV",
-    "Bleacher Report"
+    "Bleacher Report",
+    "LaLiga",
+    "DAZN",
+    "YouTube",
+    "ATP Media",
+    "FIBA"
   ],
   "key_people": [
     {
@@ -56,15 +67,18 @@
   "tags": [
     "sports highlights",
     "AI video",
-    "broadcast"
+    "broadcast",
+    "sports-highlights",
+    "automated-video"
   ],
   "sources": [
     "https://wsc-sports.com",
     "https://www.axios.com/2022/02/15/wsc-sports-fundraising-100-million",
-    "https://en.globes.co.il/en/article-1001402407"
+    "https://en.globes.co.il/en/article-1001402407",
+    "https://wsc-sports.com/contact-us/"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "~260-270 employees in 2022; later third-party estimates ~700. Size omitted due to conflict. Founding year from memory/aggregators."
+  "notes": "Funding/founders not verified in this pass (search budget exhausted). Overlaps sports-media segment."
 }

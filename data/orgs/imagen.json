@@ -1,0 +1,60 @@
+{
+  "id": "imagen",
+  "name": "Imagen",
+  "aka": [
+    "Imagen AI",
+    "ImagenAI"
+  ],
+  "kind": "startup",
+  "categories": [
+    "photo-tools",
+    "gen-ai-image"
+  ],
+  "description": "Tel Aviv AI post-production company whose software learns each professional photographer's personal editing style and applies it to batches of photos (Lightroom workflow), cutting culling and editing time for wedding and event photographers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2020,
+  "status": "active",
+  "website": "https://imagen-ai.com",
+  "services": [
+    "AI personal editing profiles",
+    "AI culling",
+    "Lightroom integration"
+  ],
+  "key_people": [
+    {
+      "name": "Yoav Chai",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yotam Gil",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Ron Oren",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Growth",
+    "total_usd_m": 30,
+    "investors": [
+      "Summit Partners",
+      "NFX"
+    ]
+  },
+  "tags": [
+    "photographers",
+    "post-production"
+  ],
+  "sources": [
+    "https://en.globes.co.il/en/article-israeli-photo-editing-co-imagen-raises-30m-1001433194",
+    "https://www.summitpartners.com/news/imagenai-raises-30-million-to-bring-artificial-intelligence-to-professional-photography"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$30M round led by Summit Partners (Dec 2022); some DBs list total $34M incl. an earlier $4M seed."
+}

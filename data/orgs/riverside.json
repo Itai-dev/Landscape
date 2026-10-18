@@ -1,0 +1,65 @@
+{
+  "id": "riverside",
+  "name": "Riverside",
+  "aka": [
+    "Riverside.fm"
+  ],
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "gen-ai-audio",
+    "creator-economy"
+  ],
+  "description": "Tel Aviv-founded recording and AI editing studio for podcasts and video: browser-based 4K local recording, text-based editor, Magic Clips short-form repurposing, AI voice/translation, captions, live streaming, webinars and podcast hosting. Founded by the Keyson brothers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2019,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://riverside.fm",
+  "services": [
+    "Remote podcast/video recording",
+    "AI text-based editing",
+    "Magic Clips",
+    "AI translation & voice",
+    "Live streaming"
+  ],
+  "key_people": [
+    {
+      "name": "Nadav Keyson",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Gideon Keyson",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Jonathan Keyson",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series C",
+    "total_usd_m": 77,
+    "investors": [
+      "Zeev Ventures",
+      "Seven Seven Six",
+      "Lachy Groom"
+    ]
+  },
+  "tags": [
+    "podcasting",
+    "creator-tools"
+  ],
+  "sources": [
+    "https://riverside.fm/about",
+    "https://riverside.fm/careers",
+    "https://startupim.com/company/riverside-fm"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$35M Series B (2022) and $30M Series C (Dec 2024), both led by Oren Zeev. A directory mentions a May 2026 Pipio-related acquisition (direction unclear) - unverified."
+}

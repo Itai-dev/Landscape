@@ -4,9 +4,11 @@
   "kind": "startup",
   "categories": [
     "video-tools",
-    "adtech-creative"
+    "adtech-creative",
+    "gen-ai-video",
+    "avatars"
   ],
-  "description": "Enterprise video platform founded in Israel (2006-07) that pioneered data-driven personalized video; products SundaySky Create, Amplify and Advertise serve mainly financial services, insurance and SaaS firms. Offices in Tel Aviv, New York and Tokyo; Clearhaven Partners took a controlling stake for $100M in 2022.",
+  "description": "Founded in Israel in 2006, SundaySky is an enterprise video platform for creating, personalizing and distributing video at scale (AI Copilot script-to-video, AI avatars and voices, data-driven personalization), used mainly in financial services, insurance, healthcare and tech. Acquired by Clearhaven Partners in 2022; offices in New York, Tel Aviv and Tokyo.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -17,22 +19,35 @@
   },
   "founded": 2006,
   "size": "51-200",
-  "status": "active",
+  "status": "acquired",
   "website": "https://sundaysky.com",
   "services": [
     "Personalized video",
     "Enterprise video creation (Create)",
     "Video distribution/analytics (Amplify)",
-    "Video advertising (Advertise)"
+    "Video advertising (Advertise)",
+    "AI Copilot video creation",
+    "AI avatars & voices"
+  ],
+  "key_people": [
+    {
+      "name": "Shmulik Weller",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yaniv Axen",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Drake Pruitt",
+      "role": "CEO"
+    }
   ],
   "funding": {
-    "stage": "PE-backed (majority)",
+    "stage": "Acquired",
     "investors": [
-      "Clearhaven Partners",
       "Viola Private Equity",
-      "Norwest Venture Partners",
-      "Carmel Ventures",
-      "NTT DOCOMO Ventures"
+      "Clearhaven Partners"
     ],
     "public": false
   },
@@ -41,20 +56,29 @@
       "type": "investor",
       "target": "Clearhaven Partners",
       "note": "Controlling interest, $100M, July 2022"
+    },
+    {
+      "type": "acquired_by",
+      "target": "Clearhaven Partners",
+      "note": "July 2022, reported $100M"
     }
   ],
   "tags": [
     "personalized video",
     "enterprise",
-    "financial services marketing"
+    "financial services marketing",
+    "personalized-video",
+    "enterprise-video"
   ],
   "sources": [
     "https://sundaysky.com/about-us/",
     "https://www.businesswire.com/news/home/20220711005604/en/Clearhaven-Partners-invests-$100M-for-a-controlling-interest-in-SundaySky",
-    "https://en.globes.co.il/en/article-israeli-personalized-video-co-sundaysky-raises-30m-1001130714"
+    "https://en.globes.co.il/en/article-israeli-personalized-video-co-sundaysky-raises-30m-1001130714",
+    "https://sundaysky.com/leadership/",
+    "https://startupim.com/company/sundaysky"
   ],
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Site says 100+ team members. CEO in 2022: Jim Dicso."
+  "notes": "Still operating as a company after the PE acquisition; status 'acquired' reflects the ownership change. Total funding ~$68.75M per one directory (unconfirmed)."
 }

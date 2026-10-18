@@ -1,0 +1,60 @@
+{
+  "id": "panjaya",
+  "name": "Panjaya",
+  "kind": "startup",
+  "categories": [
+    "dubbing-localization",
+    "gen-ai-video"
+  ],
+  "description": "Tel Aviv startup behind BodyTalk, an AI video-dubbing platform that translates speakers into ~29 languages while preserving their voice and re-syncing lip and facial movements; TED and JFrog are reported customers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2021,
+  "status": "active",
+  "website": "https://www.panjaya.ai",
+  "services": [
+    "BodyTalk AI dubbing with lip-sync",
+    "Dubbing Studio"
+  ],
+  "notable_clients": [
+    "TED",
+    "JFrog"
+  ],
+  "key_people": [
+    {
+      "name": "Hilik Shani",
+      "role": "Co-founder & GM"
+    },
+    {
+      "name": "Ariel Shalom",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Guy Piekarz",
+      "role": "CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Seed",
+    "total_usd_m": 9.5,
+    "investors": [
+      "Viola Ventures",
+      "R-Squared Ventures",
+      "Shlomi Ben Haim"
+    ]
+  },
+  "tags": [
+    "lip-sync",
+    "ai-dubbing"
+  ],
+  "sources": [
+    "https://techcrunch.com/2024/11/08/led-by-a-founder-who-sold-a-video-startup-to-apple-panjaya-uses-deepfake-techniques-to-bite-into-video-dubbing",
+    "https://dig.watch/updates/panjaya-ai-raises-funds-to-perfect-lip-syncing-ai-translation"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year given as 2021 or 2022 by different sources."
+}

@@ -6,7 +6,7 @@
     "sports-media",
     "video-tools"
   ],
-  "description": "Petah Tikva company making AI-driven automated sports video production systems: unmanned multi-camera units that film, produce and stream games for clubs, schools, leagues and broadcasters. Founded in 2013 by Miky Tamir and Gal Oz; raised $161M led by PSG in 2022.",
+  "description": "Petah Tikva-based provider of AI-automated sports video: unmanned multi-camera systems that capture, auto-produce, stream and generate highlights and analytics for pro, college, youth and school sports (soccer, basketball, hockey and more). Partners include Stats Perform, Red Bull Media and the Israel Football Association.",
   "location": {
     "country": "IL",
     "city": "Petah Tikva"
@@ -18,7 +18,17 @@
   "services": [
     "Automated sports production cameras",
     "Live streaming & OTT for sports",
-    "Highlights & analytics"
+    "Highlights & analytics",
+    "AI automated sports production cameras",
+    "OTT streaming",
+    "Automatic highlights",
+    "Sports analytics"
+  ],
+  "notable_clients": [
+    "Israel Football Association",
+    "Stats Perform",
+    "Red Bull Media",
+    "NFHS Network"
   ],
   "key_people": [
     {
@@ -35,27 +45,28 @@
     }
   ],
   "funding": {
-    "stage": "Growth",
-    "total_usd_m": 221,
+    "stage": "Series D",
+    "total_usd_m": 254,
     "investors": [
-      "PSG",
-      "Shamrock Capital",
-      "Israeli Secondary Fund"
+      "PSG Equity"
     ],
     "public": false
   },
   "tags": [
     "sports broadcasting",
     "AI cameras",
-    "streaming"
+    "streaming",
+    "sports-video",
+    "automated-production"
   ],
   "sources": [
     "https://www.pixellot.tv",
     "https://en.globes.co.il/en/article-1001414940",
-    "https://en.globes.co.il/en/article-1001333565"
+    "https://en.globes.co.il/en/article-1001333565",
+    "https://startupim.com/company/pixellot"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "total_usd_m = ~$60M before 2022 + $161M (2022) per Globes; approximate. 270+ employees per 2023 sponsored Haaretz piece."
+  "notes": "$161M Series D (June 2022) led by PSG; $20M debt (Dec 2025). Overlaps sports-media segment."
 }

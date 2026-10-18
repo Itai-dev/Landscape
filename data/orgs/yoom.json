@@ -1,6 +1,6 @@
 {
   "id": "yoom",
-  "name": "YOOM",
+  "name": "YooM",
   "aka": [
     "Tetavi"
   ],
@@ -8,16 +8,17 @@
   "categories": [
     "3d-tools",
     "animation-3d",
-    "xr"
+    "xr",
+    "avatars"
   ],
-  "description": "Tel Aviv deep-tech company founded in 2016 as Tetavi (volumetric video capture) and rebranded YOOM in October 2022; its current product YoomTrack is markerless, suit-free body, hand and facial performance capture for animators. Co-founded by Micha Birnboim and Dr. Miky Tamir (also Pixellot co-founder).",
+  "description": "Ramat Gan deep-tech company (formerly Tetavi) that used proprietary neural networks to capture real people as volumetric video for immersive, AR and social experiences. Raised ~$46M (Insight Partners-led $20M in 2021; Jimmy Iovine participated in 2022); reported to have ceased operations in December 2025.",
   "location": {
     "country": "IL",
-    "city": "Tel Aviv"
+    "city": "Ramat Gan"
   },
   "founded": 2016,
   "size": "11-50",
-  "status": "active",
+  "status": "closed",
   "website": "https://www.yoom.com",
   "services": [
     "Markerless motion/performance capture (YoomTrack)",
@@ -38,14 +39,13 @@
     }
   ],
   "funding": {
-    "stage": "Series A+",
+    "stage": "Series B",
     "investors": [
       "Insight Partners",
-      "OurCrowd",
-      "Nimble Ventures",
       "Jimmy Iovine"
     ],
-    "public": false
+    "public": false,
+    "total_usd_m": 46.4
   },
   "relations": [
     {
@@ -57,13 +57,16 @@
   "tags": [
     "motion capture",
     "volumetric video",
-    "animation pipeline"
+    "animation pipeline",
+    "volumetric-video",
+    "digital-humans"
   ],
   "sources": [
-    "https://dealroom.co/companies/yoom-formerly-tetavi/"
+    "https://dealroom.co/companies/yoom-formerly-tetavi/",
+    "https://startupim.com/company/yoom"
   ],
-  "confidence": "medium",
+  "confidence": "low",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Single aggregator source (Dealroom); official site returned 503. $20M Series A (Aug 2021, Insight Partners) + $15M (Oct 2022). 'partner' relation used loosely to link shared founder."
+  "notes": "Single directory source; closure date (Dec 2025) not independently confirmed."
 }

@@ -1,0 +1,55 @@
+{
+  "id": "clinch",
+  "name": "Clinch",
+  "kind": "startup",
+  "categories": [
+    "adtech-creative"
+  ],
+  "description": "Israeli-founded agentic AI platform for omnichannel advertising ('Flight Control') that connects creative production at scale, dynamic creative optimization (DCO), ad serving and analytics across display, video, CTV, social, YouTube, DOOH and audio for brands, retailers and agencies. R&D in Israel, commercial team in New York.",
+  "location": {
+    "country": "IL",
+    "city": "Netanya",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2012,
+  "status": "active",
+  "website": "https://clinch.co",
+  "services": [
+    "Creative at scale / DCO",
+    "Omnichannel ad serving",
+    "Campaign strategy AI",
+    "Analytics"
+  ],
+  "key_people": [
+    {
+      "name": "Oz Etzioni",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Raz Peter",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "total_usd_m": 17,
+    "investors": [
+      "D Squared Capital Management"
+    ]
+  },
+  "tags": [
+    "dco",
+    "omnichannel"
+  ],
+  "sources": [
+    "https://clinch.co",
+    "https://clinch.co/careers",
+    "https://startupim.com/company/clinch"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Registry HQ Netanya; current job listings say Caesarea, Israel. Funding total from directory Q&A (unconfirmed)."
+}

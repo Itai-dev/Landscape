@@ -6,7 +6,7 @@
     "adtech-creative",
     "video-tools"
   ],
-  "description": "Tel Aviv-founded video marketing technology company (2007) whose VideoIQ platform used consumer, brand and retail data to generate personalized, one-to-one video ads across screens for agencies and brands in auto, retail, CPG and travel. Acquired by Aki Technologies in January 2020.",
+  "description": "Tel Aviv-founded video-advertising technology company whose VideoIQ platform combined consumer, brand and retail data to automatically produce one-to-one personalized video ads across screens. Acquired by Aki Technologies in January 2020.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -39,6 +39,13 @@
       "role": "Co-founder"
     }
   ],
+  "funding": {
+    "stage": "Acquired",
+    "total_usd_m": 76.85,
+    "investors": [
+      "Marker LLC"
+    ]
+  },
   "relations": [
     {
       "type": "acquired_by",
@@ -48,12 +55,15 @@
   ],
   "tags": [
     "personalized video ads",
-    "programmatic video"
+    "programmatic video",
+    "personalized-video-ads",
+    "exit"
   ],
   "sources": [
     "https://startupim.com/company/eyeview"
   ],
-  "confidence": "medium",
+  "confidence": "low",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-18",
+  "notes": "Single directory source; funding total from directory Q&A."
 }

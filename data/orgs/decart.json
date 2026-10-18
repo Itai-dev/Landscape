@@ -1,0 +1,67 @@
+{
+  "id": "decart",
+  "name": "Decart",
+  "aka": [
+    "Decart AI"
+  ],
+  "kind": "startup",
+  "categories": [
+    "gen-ai-video",
+    "gen-ai-image"
+  ],
+  "description": "Tel Aviv-based AI lab building real-time generative video and world models (Lucy live video-to-video editing, Oasis interactive world model) and a GPU optimization stack that cuts the cost of running diffusion models. Licenses its tech to platforms, advertisers and cloud providers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "San Francisco"
+    ]
+  },
+  "founded": 2023,
+  "status": "active",
+  "website": "https://decart.ai",
+  "services": [
+    "Lucy real-time video model",
+    "Oasis world model",
+    "Decart Optimization Stack"
+  ],
+  "key_people": [
+    {
+      "name": "Dean Leitersdorf",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Moshe Shalev",
+      "role": "Co-founder & CPO"
+    }
+  ],
+  "funding": {
+    "stage": "Series C",
+    "total_usd_m": 450,
+    "investors": [
+      "Radical Ventures",
+      "NVIDIA",
+      "Sequoia Capital",
+      "Benchmark",
+      "Zeev Ventures",
+      "Aleph",
+      "Adobe Ventures",
+      "Toyota Ventures",
+      "eBay Ventures"
+    ]
+  },
+  "tags": [
+    "real-time-video",
+    "world-models",
+    "unicorn"
+  ],
+  "sources": [
+    "https://decart.ai",
+    "https://en.globes.co.il/en/article-1001518392",
+    "https://www.jewishnews.co.uk/israeli-unicorn-decart-raises-300m-in-funding-round-backed-by-nvidia-and-amazon/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$100M Series B (Aug 2025) at $3.1B valuation; $300M round (May 2026) led by Radical Ventures at $4B valuation; total reported as 'more than $450M'. Round stage label for 2026 round not confirmed. San Francisco office not independently verified."
+}

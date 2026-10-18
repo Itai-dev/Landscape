@@ -1,0 +1,54 @@
+{
+  "id": "shuffll",
+  "name": "Shuffll",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "gen-ai-video"
+  ],
+  "description": "API-first AI video infrastructure startup that turns customer data into automated, on-brand personalized videos (membership/loyalty, real estate listings and more), orchestrating 40+ AI models for scripting, editing and personalization. Incorporated in Tel Aviv with a New York presence.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2022,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://shuffll.com",
+  "services": [
+    "Personalized video API",
+    "Real estate video (ReelForReal)",
+    "Automated video production"
+  ],
+  "key_people": [
+    {
+      "name": "Isaac Gili",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Shira Gal",
+      "role": "Co-founder & COO"
+    }
+  ],
+  "funding": {
+    "stage": "Seed",
+    "investors": [
+      "iAngels"
+    ]
+  },
+  "tags": [
+    "personalized-video",
+    "api"
+  ],
+  "sources": [
+    "https://shuffll.com",
+    "https://startupim.com/company/shuffll"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "HQ listed as New York in one place and Tel Aviv-Yafo (registered address) in another."
+}

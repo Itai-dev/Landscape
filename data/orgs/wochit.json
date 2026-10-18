@@ -6,7 +6,7 @@
     "video-tools",
     "media-infrastructure"
   ],
-  "description": "Israeli-founded AI-assisted video creation platform for publishers, broadcasters and brands, combining a templated editor with a licensed content library; products include Studio, the white-label Frame editor and the WAVE automated mass-production engine. Clients shown include NBC, CBS, Sky, Hearst and ProSieben.",
+  "description": "Video creation platform for publishers, brands and social teams that automates short-form/social video production from text, licensed footage and templates. Founded in Israel in 2012, with offices in New York, London and the Tel Aviv area.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -15,13 +15,16 @@
       "London"
     ]
   },
+  "founded": 2012,
   "status": "active",
   "website": "https://www.wochit.com",
   "services": [
     "Wochit Studio video creation",
     "Frame white-label video editor",
     "WAVE automated video generation",
-    "Licensed media library"
+    "Licensed media library",
+    "Online video creation platform",
+    "Social video templates"
   ],
   "notable_clients": [
     "NBC",
@@ -31,15 +34,25 @@
     "ProSieben",
     "Pfizer"
   ],
+  "key_people": [
+    {
+      "name": "Dror Ginzberg",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Ran Oz",
+      "role": "Co-founder & CTO"
+    }
+  ],
   "funding": {
     "stage": "Series C",
-    "total_usd_m": 28.8,
+    "total_usd_m": 28.75,
     "investors": [
       "Redpoint Ventures",
       "Cedar Fund",
       "Greycroft",
       "Marker LLC",
-      "ProSiebenSat.1",
+      "ProSieben",
       "SPH Media Fund"
     ],
     "public": false
@@ -47,15 +60,18 @@
   "tags": [
     "publisher video",
     "social video",
-    "newsrooms"
+    "newsrooms",
+    "publisher-video",
+    "social-video"
   ],
   "sources": [
     "https://www.wochit.com",
     "https://en.globes.co.il/en/article-israeli-social-video-creation-co-wochit-raises-13m-1001157684",
-    "https://en.globes.co.il/en/article-automated-video-clip-co-wochit-raises-11m-1000937792"
+    "https://en.globes.co.il/en/article-automated-video-clip-co-wochit-raises-11m-1000937792",
+    "https://www.wochit.com/wp-content/uploads/about-wochit.pdf"
   ],
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Globes places it in Bet Dagan near Tel Aviv; some databases list New York HQ. Founded ~2012 (first round 2013)."
+  "notes": "HQ listed variously as New York or Beit Dagan/Tel Aviv; R&D in Israel."
 }

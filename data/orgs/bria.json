@@ -1,0 +1,63 @@
+{
+  "id": "bria",
+  "name": "Bria",
+  "aka": [
+    "Bria AI"
+  ],
+  "kind": "startup",
+  "categories": [
+    "gen-ai-image",
+    "gen-ai-video"
+  ],
+  "description": "Israeli visual generative-AI platform for enterprises and developers, offering image (and expanding to video) generation and editing models trained on 100% licensed data, with an attribution engine that compensates content owners.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2020,
+  "status": "active",
+  "website": "https://bria.ai",
+  "services": [
+    "Licensed-data text-to-image models",
+    "Image editing APIs",
+    "Attribution engine",
+    "Open/commercial model licensing"
+  ],
+  "key_people": [
+    {
+      "name": "Yair Adato",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "total_usd_m": 65,
+    "investors": [
+      "Red Dot Capital",
+      "Maor Investment",
+      "Entrée Capital",
+      "GFT Ventures",
+      "Intel Capital",
+      "In-Venture",
+      "Bright Pixel Capital"
+    ]
+  },
+  "tags": [
+    "responsible-ai",
+    "licensed-training-data",
+    "api"
+  ],
+  "sources": [
+    "https://bria.ai",
+    "https://www.calcalistech.com/ctechnews/article/sjxd34xnkl",
+    "https://rightstech.com/2025/03/bria-raises-40m-to-expand-attribution-engine-to-ai-generated-music-content/",
+    "https://pulse2.com/bria-series-b-extension-closed-for-visual-generative-ai-platform-as-a-service/amp/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$40M Series B (March 2025) led by Red Dot Capital brought total to $65M; Series B extension (Sept 2025) with Bright Pixel Capital."
+}

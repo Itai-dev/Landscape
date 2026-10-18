@@ -3,7 +3,7 @@
 Good places to discover and verify organizations. Add to this list as runs find better ones.
 
 ## Directories & databases
-- Startup Nation Central Finder — https://finder.startupnationcentral.org (Israeli startups)
+- ~~Startup Nation Central Finder~~ — shut down Aug 2026; use startupim.com, IVC Research Center, Dealroom instead
 - Crunchbase — funding, founders, HQ
 - LinkedIn company pages — size bands, locations
 - Clutch / DesignRush / Sortlist — agency & studio listings (filter Israel)

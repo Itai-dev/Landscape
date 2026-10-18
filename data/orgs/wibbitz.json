@@ -5,10 +5,13 @@
   "categories": [
     "video-tools"
   ],
-  "description": "Israeli automated video-creation company founded in 2011 by Zohar Dayan and Yotam Cohen, whose platform turned text and articles into short videos for publishers and enterprises. Acquired by Vimeo in November 2021 for an undisclosed sum reported below its ~$30M raised; its ~30 staff joined Vimeo's Israel office.",
+  "description": "Tel Aviv AI-powered short-form video creation platform that let publishers and business teams turn text and media into branded social videos with templates and automated editing. Acquired by Vimeo in late 2021.",
   "location": {
     "country": "IL",
-    "city": "Tel Aviv"
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
   },
   "founded": 2011,
   "status": "acquired",
@@ -30,9 +33,7 @@
     "stage": "Acquired",
     "total_usd_m": 30.8,
     "investors": [
-      "Bertelsmann",
-      "TF1",
-      "Associated Press"
+      "Bertelsmann Digital Media Investments (BDMI)"
     ]
   },
   "relations": [
@@ -44,13 +45,16 @@
   ],
   "tags": [
     "text-to-video",
-    "publishers"
+    "publishers",
+    "exit",
+    "publisher-video"
   ],
   "sources": [
     "https://www.calcalistech.com/ctech/articles/0,7340,L-3922264,00.html",
-    "https://techcrunch.com/2021/11/10/vimeo-snaps-up-ai-video-startup-wibbitz-and-shoppable-video-tech-maker-wirewax-to-expand-its-enterprise-video-tools/"
+    "https://techcrunch.com/2021/11/10/vimeo-snaps-up-ai-video-startup-wibbitz-and-shoppable-video-tech-maker-wirewax-to-expand-its-enterprise-video-tools/",
+    "https://startupim.com/company/wibbitz"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
   "notes": "City from memory (Tel Aviv) — not confirmed in fetched sources. Vimeo's Israel centre largely shut Jan 2026."

@@ -1,21 +1,28 @@
 {
   "id": "magisto",
   "name": "Magisto",
+  "aka": [
+    "SightEra"
+  ],
   "kind": "startup",
   "categories": [
-    "video-tools"
+    "video-tools",
+    "gen-ai-video"
   ],
-  "description": "Israeli automated video-editing app and platform (founded 2009, Ness Ziona) that used AI to turn raw footage into edited short videos, reaching ~100M users. Acquired by Vimeo in 2019 (reportedly ~$200M) and became the core of Vimeo's Israeli development centre, which Vimeo largely wound down in January 2026.",
+  "description": "Ness Ziona-founded AI video editor (web and mobile) that automatically analyzed users' clips and photos and edited them into short, music-backed videos; an early consumer/SMB 'smart video' pioneer. Acquired by Vimeo in April 2019 (~$200M) and later folded into Vimeo's products.",
   "location": {
     "country": "IL",
     "city": "Ness Ziona",
     "other_offices": [
-      "California"
+      "Mountain View"
     ]
   },
   "founded": 2009,
   "status": "acquired",
   "website": "https://www.magisto.com",
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Magisto"
+  },
   "services": [
     "Automated smart video editor",
     "Marketing video creation for SMBs"
@@ -24,18 +31,22 @@
     {
       "name": "Oren Boiman",
       "role": "Founder & CEO"
+    },
+    {
+      "name": "Alex Rav-Acha",
+      "role": "Co-founder & CTO"
     }
   ],
   "funding": {
     "stage": "Acquired",
-    "total_usd_m": 35,
+    "total_usd_m": 29.1,
     "investors": [
+      "Horizons Ventures",
+      "Magma Venture Partners",
+      "Qualcomm Ventures",
       "SanDisk",
-      "Samsung",
-      "Qualcomm",
-      "OurCrowd",
-      "Horizon",
-      "Mail.ru"
+      "Mail.Ru Group",
+      "OurCrowd"
     ]
   },
   "relations": [
@@ -48,12 +59,16 @@
   "tags": [
     "video editing",
     "AI editing",
-    "SMB marketing"
+    "SMB marketing",
+    "exit",
+    "automated-editing"
   ],
   "sources": [
     "https://en.globes.co.il/en/article-vimeo-buys-israeli-video-creation-co-magisto-for-200m-1001282344",
     "https://techcrunch.com/2019/04/15/vimeo-has-acquired-short-form-video-creation-platform-magisto",
-    "https://www.calcalistech.com/ctechnews/article/sjtjgbabzx"
+    "https://www.calcalistech.com/ctechnews/article/sjtjgbabzx",
+    "https://en.wikipedia.org/wiki/Magisto",
+    "https://startupim.com/company/magisto"
   ],
   "confidence": "high",
   "added": "2026-10-18",

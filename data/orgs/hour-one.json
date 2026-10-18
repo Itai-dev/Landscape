@@ -1,0 +1,54 @@
+{
+  "id": "hour-one",
+  "name": "Hour One",
+  "kind": "startup",
+  "categories": [
+    "avatars",
+    "gen-ai-video"
+  ],
+  "description": "Tel Aviv / New York startup that creates AI 'virtual twins' of real people and offers Reals, a platform that turns text into presenter-led videos for business, training and marketing content.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2019,
+  "status": "active",
+  "website": "https://hourone.ai",
+  "services": [
+    "Reals AI video platform",
+    "Virtual human / virtual twin licensing"
+  ],
+  "key_people": [
+    {
+      "name": "Oren Aharon",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "total_usd_m": 25,
+    "investors": [
+      "Insight Partners",
+      "Galaxy Interactive",
+      "Remagine Ventures",
+      "Kindred Ventures",
+      "Semble Ventures"
+    ]
+  },
+  "tags": [
+    "virtual-humans",
+    "text-to-video"
+  ],
+  "sources": [
+    "https://www.insightpartners.com/ideas/hour-one-raises-20-million-series-a-to-accelerate-virtual-twin-technology/",
+    "https://techcrunch.com/2022/12/01/pitch-deck-teardown-hour-ones-20m-series-a-deck",
+    "https://www.calcalistech.com/tags/Oren_Aharon"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$5M seed (2020) + $20M Series A (April 2022) led by Insight Partners."
+}

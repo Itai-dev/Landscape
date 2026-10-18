@@ -1,0 +1,55 @@
+{
+  "id": "aiode",
+  "name": "Aiode",
+  "kind": "startup",
+  "categories": [
+    "gen-ai-audio",
+    "music-tech"
+  ],
+  "description": "Tel Aviv AI music studio offering 'virtual musicians' - instrument models trained on licensed recordings of professional players - that generate, refine and export instrument tracks into DAWs. Acquired by BandLab Technologies in July 2026; continues as a standalone product.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2021,
+  "size": "11-50",
+  "status": "acquired",
+  "website": "https://www.aiode.com",
+  "services": [
+    "AI virtual musicians",
+    "Licensed musician models"
+  ],
+  "key_people": [
+    {
+      "name": "Idan Dobrecki",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Blue Dobrecki",
+      "role": "Co-founder & COO"
+    }
+  ],
+  "funding": {
+    "stage": "Acquired",
+    "total_usd_m": 6
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "BandLab Technologies",
+      "note": "July 2026, undisclosed (Calcalist estimate: tens of millions USD)"
+    }
+  ],
+  "tags": [
+    "ai-music",
+    "licensed-training-data"
+  ],
+  "sources": [
+    "https://bandlabtechnologies.com/news/bandlab-technologies-announces-acquisition-ai-powered-digital-music-studio-aiode/",
+    "https://www.calcalistech.com/ctechnews/article/ryahrolnge"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Total funding ($6M) from StartupHub directory, unverified."
+}

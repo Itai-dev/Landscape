@@ -1,0 +1,27 @@
+{
+  "id": "treepodia",
+  "name": "Treepodia",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative"
+  ],
+  "description": "Herzliya company that automatically generated personalized product videos at catalog scale for e-commerce retailers, used in product pages, loyalty video emails and targeted pre-roll ad campaigns. Reported to have ceased operations in August 2024.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 2007,
+  "size": "11-50",
+  "status": "closed",
+  "tags": [
+    "product-video",
+    "ecommerce"
+  ],
+  "sources": [
+    "https://startupim.com/company/treepodia"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18"
+}
