@@ -1,0 +1,234 @@
+{
+  "_doc": "Controlled list of what buyers commission. 'match' are lowercase regexes run over client_profile.creative_needs; 'crafts' are the craft categories that can deliver it (used for Best fit).",
+  "needs": {
+    "tv-commercials": {
+      "label": "TV commercials",
+      "match": [
+        "tv ",
+        "commercial",
+        "radio",
+        "on-air",
+        "promo",
+        "celebrity",
+        "car launch"
+      ],
+      "crafts": [
+        "commercial-production",
+        "film-production",
+        "editing",
+        "color-grading",
+        "post-production",
+        "vfx",
+        "sound-design"
+      ]
+    },
+    "social-video": {
+      "label": "Social video",
+      "match": [
+        "social",
+        "short-form",
+        "ugc",
+        "digital content",
+        "digital/social",
+        "beauty"
+      ],
+      "crafts": [
+        "content-studio",
+        "motion-design",
+        "editing",
+        "commercial-production",
+        "animation-2d"
+      ]
+    },
+    "motion-graphics": {
+      "label": "Motion graphics",
+      "match": [
+        "motion",
+        "ui animation",
+        "menu-board",
+        "draw-show",
+        "title sequence",
+        "idents"
+      ],
+      "crafts": [
+        "motion-design",
+        "animation-2d",
+        "graphic-design"
+      ]
+    },
+    "animation": {
+      "label": "Animation",
+      "match": [
+        "animation",
+        "animated",
+        "explainer",
+        "cinematics"
+      ],
+      "crafts": [
+        "animation-2d",
+        "animation-3d",
+        "motion-design",
+        "illustration"
+      ]
+    },
+    "3d-cgi": {
+      "label": "3D / CGI",
+      "match": [
+        "3d",
+        "cgi",
+        "packshot",
+        "visualization"
+      ],
+      "crafts": [
+        "cgi-3d",
+        "animation-3d",
+        "vfx"
+      ]
+    },
+    "post-production": {
+      "label": "Post-production",
+      "match": [
+        "post-production",
+        "localization"
+      ],
+      "crafts": [
+        "post-production",
+        "editing",
+        "color-grading",
+        "vfx",
+        "sound-design"
+      ]
+    },
+    "brand-films": {
+      "label": "Brand & content films",
+      "match": [
+        "brand video",
+        "brand film",
+        "destination",
+        "documentary",
+        "format",
+        "series",
+        "sports sponsorship",
+        "event",
+        "conference",
+        "in-flight",
+        "large-scale",
+        "lookbook"
+      ],
+      "crafts": [
+        "film-production",
+        "commercial-production",
+        "content-studio",
+        "editing"
+      ]
+    },
+    "photography": {
+      "label": "Photography",
+      "match": [
+        "photograph",
+        "product imagery"
+      ],
+      "crafts": [
+        "photography"
+      ]
+    },
+    "branding": {
+      "label": "Branding & identity",
+      "match": [
+        "branding",
+        "identity"
+      ],
+      "crafts": [
+        "branding",
+        "graphic-design",
+        "typography"
+      ]
+    },
+    "packaging": {
+      "label": "Packaging",
+      "match": [
+        "packaging"
+      ],
+      "crafts": [
+        "packaging",
+        "graphic-design",
+        "cgi-3d"
+      ]
+    },
+    "digital-campaigns": {
+      "label": "Digital campaigns & ads",
+      "match": [
+        "digital campaign",
+        "display",
+        "performance",
+        "ua video",
+        "marketing campaign",
+        "brand campaign",
+        "seasonal",
+        "public",
+        "print",
+        "key art"
+      ],
+      "crafts": [
+        "digital-design",
+        "graphic-design",
+        "motion-design",
+        "creative-technology",
+        "illustration"
+      ]
+    },
+    "influencer": {
+      "label": "Influencer content",
+      "match": [
+        "influencer"
+      ],
+      "crafts": [
+        "content-studio"
+      ]
+    },
+    "game-art": {
+      "label": "Game art",
+      "match": [
+        "game art"
+      ],
+      "crafts": [
+        "game-art",
+        "animation-3d",
+        "illustration"
+      ]
+    },
+    "illustration": {
+      "label": "Illustration & key art",
+      "match": [
+        "illustration",
+        "key art"
+      ],
+      "crafts": [
+        "illustration",
+        "graphic-design"
+      ]
+    },
+    "sound-music": {
+      "label": "Sound & music",
+      "match": [
+        "sound",
+        "music"
+      ],
+      "crafts": [
+        "sound-design",
+        "music-production"
+      ]
+    },
+    "ai-video": {
+      "label": "AI video",
+      "match": [
+        "ai-generated",
+        "ai video"
+      ],
+      "crafts": [
+        "ai-creative",
+        "motion-design"
+      ]
+    }
+  }
+}

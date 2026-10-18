@@ -12,326 +12,864 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Type: one sans family (Rubik, Latin + Hebrew) in weights; mono for data. Layout: sticky search bar → kind tabs with counts → filter row → card grid; detail opens as bottom sheet (phone) / side panel (desktop). */
+/* Type: Rubik (Latin + Hebrew) in weights, Plex Mono for dates and counts.
+   Layout: header + view (Explore / Signals / Pipeline) + fixed bottom tab bar; detail opens as a bottom sheet (phone) / side panel (desktop).
+   Colour: three org groups — makers (studios, production), tech (startups), buyers (brands, agencies); blue accent only for actions. */
 :root {
   --bg: #f2f4f3;
   --surface: #ffffff;
   --ink: #15201f;
   --muted: #5d6b69;
   --line: #d9dfdd;
-  --accent: #1640c9;
-  --accent-soft: #e4eafc;
-  --k-studio: #c2410c;
-  --k-production_company: #a21caf;
-  --k-startup: #0f766e;
-  --k-agency: #b45309;
-  --k-client: #1d4ed8;
-  --k-community: #4d7c0f;
+  --accent: #1f4fd6;
+  --accent-ink: #ffffff;
+  --accent-soft: #e6ecfb;
+  --g-maker: #c2410c;
+  --g-tech: #0f766e;
+  --g-buyer: #9d2b8c;
+  --now: #b45309;
+  --now-soft: #fdf1df;
+  --ok: #15803d;
+  --logo-bg: #ffffff;
+  --scrim: rgba(10, 18, 18, .45);
   --shadow: 0 10px 40px rgba(16, 30, 30, .18);
   --f-display: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --logo-bg: #ffffff;
   --f-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --tabbar: 62px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0f1514; --surface: #182120; --ink: #e8eeec; --muted: #9aaaa7; --line: #2a3634;
-    --accent: #8aa8ff; --accent-soft: #1e2a4a;
-    --k-studio: #fb923c; --k-production_company: #e879f9; --k-startup: #2dd4bf; --k-agency: #fbbf24; --k-client: #93c5fd; --k-community: #a3e635;
-    --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
+    --accent: #8aa8ff; --accent-ink: #0f1514; --accent-soft: #1e2a4a;
+    --g-maker: #fb923c; --g-tech: #2dd4bf; --g-buyer: #e879d4; --now: #fbbf24; --now-soft: #3a2c12; --ok: #4ade80;
+    --scrim: rgba(0, 0, 0, .6); --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0f1514; --surface: #182120; --ink: #e8eeec; --muted: #9aaaa7; --line: #2a3634;
-  --accent: #8aa8ff; --accent-soft: #1e2a4a;
-  --k-studio: #fb923c; --k-production_company: #e879f9; --k-startup: #2dd4bf; --k-agency: #fbbf24; --k-client: #93c5fd; --k-community: #a3e635;
-  --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
+  --accent: #8aa8ff; --accent-ink: #0f1514; --accent-soft: #1e2a4a;
+  --g-maker: #fb923c; --g-tech: #2dd4bf; --g-buyer: #e879d4; --now: #fbbf24; --now-soft: #3a2c12; --ok: #4ade80;
+  --scrim: rgba(0, 0, 0, .6); --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
 }
 * { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
 body {
   background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 16px);
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 a { color: var(--accent); }
-button, input, select { font: inherit; color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.wrap { max-width: 1180px; margin: 0 auto; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
 
-header.masthead { padding-block: 22px 6px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
-.masthead h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 6vw, 36px); line-height: 1.1; margin: 0; letter-spacing: -.025em; }
-.masthead h1 span { font-weight: 400; }
-.masthead h1 span { font-weight: 500; color: var(--muted); }
-.masthead .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+header.top { padding-block: 18px 4px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+header.top h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(24px, 6vw, 32px); line-height: 1.1; margin: 0; letter-spacing: -.025em; }
+header.top h1 span { font-weight: 400; color: var(--muted); }
+header.top .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.notice { margin-top: 8px; font-size: 13px; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; padding: 8px 12px; }
 
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px; display: grid; gap: 10px; }
-.search { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 0 12px; }
+/* sticky controls */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px 8px; display: grid; gap: 10px; }
+.search { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 0 12px; min-height: 46px; }
 .search svg { flex: none; color: var(--muted); }
-.search input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 12px 0; outline: none; font-size: 16px; }
-.tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
-.tabs::-webkit-scrollbar { display: none; }
-.tab { flex: none; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; cursor: pointer; font-size: 14px; }
-.tab .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c, var(--muted)); }
-.tab .n { font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.tab[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.tab[aria-pressed="true"] .n { color: inherit; opacity: .7; }
-.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-.filters select { min-width: 0; max-width: 100%; flex: 1 1 140px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; font-size: 14px; }
-.filters .count { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-left: auto; }
-.linkbtn { border: 0; background: none; color: var(--accent); cursor: pointer; padding: 4px; font-size: 14px; }
+.search input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 10px 0; outline: none; font-size: 16px; }
+.seg { display: flex; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 3px; }
+.seg button { flex: 1; min-height: 38px; border: 0; background: none; border-radius: 9px; font-size: 14px; font-weight: 500; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.scroller { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.scroller::-webkit-scrollbar { display: none; }
+.chip { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; white-space: nowrap; text-decoration: none; color: var(--ink); }
+button.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+a.chip { color: var(--accent); }
+.chip.add { color: var(--accent); border-style: dashed; }
+.chip .x { opacity: .6; }
+.chip.label { border: 0; background: none; padding-inline: 0 2px; color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+.tools { display: flex; gap: 8px; align-items: center; }
+.tools .count { margin-inline-start: auto; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.btn { min-height: 38px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 500; text-decoration: none; color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.ghost { background: none; border-color: transparent; color: var(--accent); padding-inline: 6px; }
+.btn[disabled] { opacity: .45; cursor: default; }
+select.btn { padding-inline: 10px; }
+.badge { font-family: var(--f-mono); font-size: 11px; min-width: 18px; padding: 0 5px; border-radius: 9px; background: var(--now); color: var(--bg); text-align: center; line-height: 18px; }
 
-main { padding-block: 8px 48px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 12px; }
-.card { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; cursor: pointer; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .15s, transform .15s; }
-.card:hover { border-color: var(--k, var(--accent)); }
+/* cards */
+main { padding-block: 6px 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 12px; }
+.card { text-align: start; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .15s, transform .15s; }
+.card:hover { border-color: var(--g); }
 @media (prefers-reduced-motion: no-preference) { .card:hover { transform: translateY(-1px); } }
 .card .top { display: flex; gap: 12px; align-items: center; }
-.card .nm { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.card .nm { flex: 1; min-width: 0; display: grid; gap: 1px; }
 .card h3 { font-family: var(--f-display); font-weight: 600; font-size: 17px; line-height: 1.25; margin: 0; letter-spacing: -.01em; overflow-wrap: anywhere; }
-.card .he { justify-self: start; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+.he { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; justify-self: start; }
+.kind { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; font-weight: 600; color: var(--g); }
+.kind::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--g); }
+.where { color: var(--muted); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card p.line { color: var(--ink); }
+.line { font-size: 14px; margin: 0; overflow-wrap: anywhere; }
+.line b { font-weight: 500; }
+.line .k { color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; margin-inline-end: 6px; }
+.fit { color: var(--ok); font-weight: 500; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); margin: 0 4px 4px 0; }
+.tag.hit { border-color: var(--ok); color: var(--ok); }
+.nowline { display: flex; gap: 8px; align-items: baseline; font-size: 13px; background: var(--now-soft); color: var(--ink); border-radius: 8px; padding: 6px 10px; }
+.nowline .t { color: var(--now); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; flex: none; }
+.stage { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--accent); flex: none; }
 .logo { flex: none; width: 44px; height: 44px; border-radius: 10px; background: var(--logo-bg); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
 .logo img { width: 78%; height: 78%; object-fit: contain; }
-.logo.mono { background: color-mix(in srgb, var(--k) 14%, var(--surface)); border-color: color-mix(in srgb, var(--k) 30%, var(--line)); color: var(--k); font-weight: 700; font-size: 15px; letter-spacing: .02em; }
+.logo.mono { background: color-mix(in srgb, var(--g) 14%, var(--surface)); border-color: color-mix(in srgb, var(--g) 30%, var(--line)); color: var(--g); font-weight: 700; font-size: 15px; font-family: var(--f-body); letter-spacing: .02em; }
 .logo.lg { width: 64px; height: 64px; border-radius: 14px; font-size: 20px; }
-.kind { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; color: var(--k); }
-.kind::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 2px; background: var(--k); }
-.where { color: var(--muted); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
-.card p { margin: 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.chips { display: flex; flex-wrap: wrap; gap: 4px; }
-.chip { font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); color: var(--ink); white-space: nowrap; }
-button.chip { cursor: pointer; }
-.empty { text-align: center; color: var(--muted); padding: 48px 16px; }
+.logo.sm { width: 32px; height: 32px; border-radius: 8px; font-size: 12px; }
+.empty { text-align: center; color: var(--muted); padding: 40px 16px; display: grid; gap: 10px; justify-items: center; }
+.empty h3 { margin: 0; color: var(--ink); font-size: 17px; }
+.more { display: flex; justify-content: center; padding-top: 14px; }
 
-/* detail sheet */
-.scrim { position: fixed; inset: 0; background: rgba(10, 18, 18, .45); z-index: 20; }
+/* signals */
+.feed { display: grid; gap: 10px; max-width: 760px; }
+.sig { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; }
+.sheet .sig { background: var(--bg); }
+.sig.old { opacity: .62; }
+.sig.hidden { opacity: .4; border-style: dashed; }
+.sig .head { display: flex; gap: 10px; align-items: center; }
+.sig .head .nm { flex: 1; min-width: 0; }
+.sig .type { font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--now); }
+.sig .org { font-weight: 600; font-size: 15px; border: 0; background: none; padding: 0; text-align: start; color: var(--ink); }
+.sig button.org { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.sig .h { margin: 0; font-size: 15px; }
+.sig .why { margin: 0; font-size: 14px; color: var(--muted); }
+.sig .foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 12px; color: var(--muted); }
+.sig .foot .acts { margin-inline-start: auto; display: flex; gap: 6px; align-items: center; }
+.credits { font-size: 13px; color: var(--muted); }
+
+/* pipeline */
+.pipe { display: grid; gap: 18px; max-width: 760px; }
+.pipe h2 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; font-weight: 600; display: flex; gap: 8px; align-items: center; }
+.pipe .list { display: grid; gap: 8px; }
+.prow { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; text-align: start; width: 100%; min-height: 56px; }
+.prow .nm { flex: 1; min-width: 0; display: grid; }
+.prow .nm b { font-weight: 600; }
+.prow .nm span { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prow .due { font-family: var(--f-mono); font-size: 12px; color: var(--now); flex: none; }
+.duerow { display: grid; gap: 8px; background: var(--now-soft); border-radius: 12px; padding: 10px; }
+.duerow .acts { display: flex; gap: 6px; justify-content: flex-end; }
+
+/* tab bar */
+nav.tabbar { position: fixed; inset: auto 0 0 0; z-index: 15; background: var(--surface); border-top: 1px solid var(--line);
+  padding: 4px max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)); }
+nav.tabbar .in { max-width: 560px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+nav.tabbar button { border: 0; background: none; min-height: 54px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 12px; font-weight: 500; color: var(--muted); position: relative; }
+nav.tabbar button svg { width: 22px; height: 22px; }
+nav.tabbar button[aria-current="page"] { color: var(--accent); }
+nav.tabbar .badge { position: absolute; top: 6px; left: calc(50% + 6px); }
+
+/* sheets */
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 20; }
 .sheet { position: fixed; z-index: 21; background: var(--surface); box-shadow: var(--shadow); overflow-y: auto; overscroll-behavior: contain;
-  inset: auto 0 0 0; max-height: 88vh; border-radius: 18px 18px 0 0;
-  padding: 18px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
-@media (min-width: 860px) { .sheet { inset: 0 0 0 auto; width: 520px; max-height: none; border-radius: 0; padding-top: calc(22px + env(safe-area-inset-top, 0px)); } }
-.sheet .close { position: sticky; top: 0; float: right; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 34px; height: 34px; cursor: pointer; font-size: 18px; line-height: 1; }
-.sheet .head { display: flex; gap: 14px; align-items: center; margin-top: 4px; }
-.sheet .head > div { min-width: 0; }
-.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 26px; line-height: 1.15; letter-spacing: -.02em; margin: 2px 0 0; text-wrap: balance; }
-.sheet .he { display: inline-block; font-size: 17px; color: var(--muted); direction: rtl; }
+  inset: auto 0 0 0; max-height: 90vh; border-radius: 18px 18px 0 0;
+  padding: 10px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
+.sheet::before { content: ""; display: block; width: 40px; height: 4px; border-radius: 2px; background: var(--line); margin: 0 auto 8px; }
+@media (min-width: 860px) {
+  .sheet.side { inset: 0 0 0 auto; width: 540px; max-height: none; border-radius: 0; padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
+  .sheet.side::before { display: none; }
+  .sheet.center { inset: 10vh auto auto 50%; transform: translateX(-50%); width: 560px; max-height: 80vh; border-radius: 18px; }
+  .sheet.center::before { display: none; }
+}
+.sheet .close { position: sticky; top: 0; float: right; margin-inline-start: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 44px; height: 44px; font-size: 20px; line-height: 1; z-index: 1; }
+.sheet .ident { display: flex; gap: 14px; align-items: center; margin-top: 2px; }
+.sheet .ident > div { min-width: 0; }
+.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 25px; line-height: 1.15; letter-spacing: -.02em; margin: 2px 0 0; text-wrap: balance; }
+.sheet .he { font-size: 16px; }
 .sheet section { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; }
-.sheet h4 { margin: 0 0 8px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.sheet h4 { margin: 0 0 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.sheet p { margin: 8px 0 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.editor { display: grid; gap: 10px; margin-top: 12px; background: var(--bg); border-radius: 12px; padding: 12px; }
+.editor textarea { width: 100%; min-height: 74px; resize: vertical; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
+.editor input[type="date"] { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--surface); min-height: 38px; }
+.editor .saved { font-size: 12px; color: var(--muted); }
+.ways { display: grid; gap: 12px; }
+.ways .grp { display: grid; gap: 6px; }
+.ways .grp > span { font-size: 13px; color: var(--muted); }
+.ways .items { display: flex; flex-wrap: wrap; gap: 6px; }
+.ways .items button { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: 3px 10px 3px 4px; font-size: 14px; text-align: start; }
+.ways .items .plain { display: inline-flex; align-items: center; min-height: 36px; padding: 3px 10px; font-size: 14px; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 14px; margin: 0; }
 .facts dt { color: var(--muted); }
-.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
-.links { display: flex; flex-wrap: wrap; gap: 6px; }
-.links a { font-size: 13px; text-decoration: none; border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; }
-.rel { display: grid; gap: 6px; }
-.rel button, .rel span.plain { text-align: left; display: flex; gap: 8px; align-items: baseline; border: 0; background: none; padding: 0; font-size: 14px; }
-.rel button { cursor: pointer; color: var(--accent); }
-.rel .t { font-family: var(--f-mono); font-size: 11px; color: var(--muted); min-width: 92px; }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+ul.plain { margin: 0; padding-inline-start: 18px; font-size: 14px; }
+details summary { cursor: pointer; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+details[open] summary { margin-bottom: 8px; }
 .sources { font-size: 12px; display: grid; gap: 2px; }
 .sources a { overflow-wrap: anywhere; }
-.conf { font-family: var(--f-mono); font-size: 11px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); }
-ul.plain { margin: 0; padding-left: 18px; font-size: 14px; }
+.chipset { display: flex; flex-wrap: wrap; gap: 6px; }
+.filtersec { display: grid; gap: 8px; margin-top: 14px; }
+.filtersec h4 { margin: 0; }
+.sheetfoot { position: sticky; bottom: calc(-28px - env(safe-area-inset-bottom, 0px)); background: var(--surface); padding-block: 12px; margin-top: 14px; display: flex; gap: 8px; justify-content: flex-end; border-top: 1px solid var(--line); }
+textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: var(--bg); }
+.toast { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 12px); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
 </style>
 
 <div class="wrap">
-  <header class="masthead">
+  <header class="top">
     <h1>Landscape <span>· Israel’s creative industry</span></h1>
     <div class="meta" id="meta">Loading…</div>
   </header>
+  <div class="notice" id="storeNotice" hidden></div>
 
-  <div class="bar">
-    <label class="search" for="q">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Search studios, startups, clients, services…" autocomplete="off">
-    </label>
-    <div class="tabs" id="tabs" role="toolbar" aria-label="Type"></div>
-    <div class="filters">
-      <select id="cat" aria-label="Category"></select>
-      <select id="city" aria-label="City"></select>
-      <select id="sort" aria-label="Sort">
-        <option value="name">A → Z</option>
-        <option value="size">Largest first</option>
-        <option value="founded">Newest first</option>
-        <option value="oldest">Oldest first</option>
-        <option value="verified">Recently verified</option>
-      </select>
-      <button class="linkbtn" id="reset" type="button">Reset</button>
-      <span class="count" id="count"></span>
+  <!-- EXPLORE -->
+  <section id="v-explore" aria-label="Explore">
+    <div class="bar">
+      <label class="search" for="q">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" placeholder="Search names, needs, clients, people…" autocomplete="off">
+      </label>
+      <div class="seg" id="lens" role="group" aria-label="Lens">
+        <button type="button" data-lens="brands">Brands</button>
+        <button type="button" data-lens="collab">Collaborators</button>
+        <button type="button" data-lens="all">All</button>
+      </div>
+      <div class="scroller" id="mine" aria-label="What I make"></div>
+      <div class="tools">
+        <button class="btn" type="button" id="openFilters">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          Filters <span class="badge" id="fcount" hidden></span>
+        </button>
+        <select class="btn" id="sort" aria-label="Sort">
+          <option value="fit">Best fit</option>
+          <option value="name">A → Z</option>
+          <option value="size">Largest</option>
+          <option value="founded">Newest</option>
+        </select>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="scroller" id="active" hidden></div>
     </div>
-  </div>
+    <main>
+      <div class="grid" id="grid"></div>
+      <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more">Show more</button></div>
+      <div class="empty" id="empty" hidden>
+        <h3>Nothing matches</h3>
+        <span>Try fewer filters, or search in English (only some names have Hebrew).</span>
+        <button class="btn" type="button" id="clearAll">Clear filters</button>
+      </div>
+    </main>
+  </section>
 
-  <main>
-    <div class="grid" id="grid"></div>
-    <div class="empty" id="empty" hidden>No organizations match these filters.</div>
-  </main>
+  <!-- SIGNALS -->
+  <section id="v-signals" aria-label="Signals" hidden>
+    <div class="bar">
+      <div class="scroller" id="sigTypes" role="group" aria-label="Signal type"></div>
+    </div>
+    <main><div class="feed" id="feed"></div></main>
+  </section>
+
+  <!-- PIPELINE -->
+  <section id="v-pipeline" aria-label="Pipeline" hidden>
+    <div class="bar">
+      <div class="tools">
+        <span class="muted" id="pipeSummary"></span>
+        <button class="btn" type="button" id="export" style="margin-inline-start:auto">Export my data</button>
+      </div>
+    </div>
+    <main><div class="pipe" id="pipe"></div></main>
+  </section>
 </div>
 
+<nav class="tabbar" aria-label="Sections">
+  <div class="in">
+    <button type="button" data-tab="explore" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg>Explore</button>
+    <button type="button" data-tab="signals">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg>Signals<span class="badge" id="sigBadge" hidden></span></button>
+    <button type="button" data-tab="pipeline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h6"/></svg>Pipeline<span class="badge" id="pipeBadge" hidden></span></button>
+  </div>
+</nav>
+
 <div class="scrim" id="scrim" hidden></div>
-<aside class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-name"></aside>
+<aside class="sheet side" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-name"></aside>
+<aside class="sheet center" id="panel" hidden role="dialog" aria-modal="true" aria-label="Options"></aside>
+<div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
 
 <script>
 (function () {
-  const KIND_LABEL = { studio: "Studios", production_company: "Production", startup: "Startups", agency: "Agencies", client: "Clients", community: "Community" };
-  const KIND_ONE = { studio: "Studio", production_company: "Production co.", startup: "Startup", agency: "Agency", client: "Client", community: "Community" };
+  "use strict";
+  // ---------- constants ----------
+  const GROUP = { studio: "maker", production_company: "maker", community: "maker", startup: "tech", client: "buyer", agency: "buyer" };
+  const KIND_ONE = { studio: "Studio", production_company: "Production co.", startup: "Startup", agency: "Agency", client: "Brand", community: "Community" };
+  const KIND_MANY = { studio: "Studios", production_company: "Production", startup: "Startups", agency: "Agencies", client: "Brands", community: "Community" };
+  const LENS_KINDS = { brands: ["client", "agency"], collab: ["studio", "production_company", "community"], all: null };
   const SIZE_RANK = { "1-10": 1, "11-50": 2, "51-200": 3, "201-500": 4, "501-1000": 5, "1001-5000": 6, "5001+": 7 };
-  const REL_LABEL = { client: "client", agency: "agency", parent: "part of", subsidiary: "owns", acquired: "acquired", acquired_by: "acquired by", partner: "partner", spun_off_from: "spun off from", investor: "investor" };
-  const LINK_LABEL = { linkedin: "LinkedIn", instagram: "Instagram", behance: "Behance", vimeo: "Vimeo", youtube: "YouTube", crunchbase: "Crunchbase", x: "X", facebook: "Facebook", twitter: "X", imdb: "IMDb", dribbble: "Dribbble", wikipedia: "Wikipedia", artstation: "ArtStation" };
+  const STAGES = [["watch", "Watching"], ["to_pitch", "To pitch"], ["contacted", "Contacted"], ["in_talks", "In talks"], ["client", "Client"], ["passed", "Passed"]];
+  const STAGE_LABEL = Object.fromEntries(STAGES);
+  const SIG_TYPES = { funding: "Funding", acquisition: "Acquisition", agency_move: "Agency move", ownership: "Ownership", rebrand: "Rebrand", new_exec: "New marketing head", campaign: "Campaign", launch: "Launch", hiring: "Hiring", award: "Award", closure: "Closure" };
+  const SIG_FILTERS = [["", "All"], ["hiring", "Hiring"], ["funding", "Funding"], ["agency_move", "Agency moves"], ["new_exec", "People"], ["campaign", "Campaigns"], ["launch", "Launches"], ["rebrand", "Rebrands"], ["ownership", "Ownership"]];
+  const LINK_LABEL = { linkedin: "LinkedIn", instagram: "Instagram", behance: "Behance", vimeo: "Vimeo", youtube: "YouTube", crunchbase: "Crunchbase", x: "X", twitter: "X", facebook: "Facebook", imdb: "IMDb", dribbble: "Dribbble", wikipedia: "Wikipedia", artstation: "ArtStation" };
+  const PAGE = 60;
+  const DAY = 864e5;
+  const TODAY = new Date(new Date().toDateString());
+
   const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "")
     .replace(/\b(ltd|inc|israel|group|studios?|productions?|tel aviv|tlv|the)\b/g, "").replace(/[^a-z0-9֐-׿]+/g, "");
+  const daysAgo = (d) => Math.round((TODAY - new Date(d)) / DAY);
+  const ago = (d) => { const n = daysAgo(d); return n <= 0 ? "today" : n === 1 ? "yesterday" : n < 14 ? n + "d ago" : n < 60 ? Math.round(n / 7) + "w ago" : Math.round(n / 30) + "mo ago"; };
+  const fmtDate = (d) => new Date(d).toLocaleDateString("en-GB", { day: "numeric", month: "short" });
+  const isoDay = (date) => new Date(date.getTime() - date.getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+  const trim = (s, n) => (s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s);
+  let toastT;
+  function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => (t.hidden = true), 2600); }
 
-  let DATA, ORGS = [], BY_ID = {}, BY_NAME = {}, TAX;
-  const state = { q: "", kind: "", cat: "", city: "", sort: "name" };
-  try { Object.assign(state, JSON.parse(localStorage.getItem("landscape-filters") || "{}")); } catch (e) {}
+  // ---------- data ----------
+  let ORGS = [], BY_ID = {}, BY_NAME = {}, TAX, NEEDS = {}, CRAFTS = [], LOGOS = {};
+  let BASE_SIGNALS = [];
+  const REV = { clientOf: {}, agencyOf: {}, rel: {} };
 
-  function boot(data) {
-    DATA = data; TAX = data.taxonomy; ORGS = data.orgs;
+  function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
+  function push(map, k, v) { (map[k] = map[k] || []).push(v); }
+
+  function index(data) {
+    TAX = data.taxonomy; NEEDS = data.needs || {}; ORGS = data.orgs;
+    CRAFTS = (TAX.facets && TAX.facets.craft) || [];
     ORGS.forEach((o) => {
       BY_ID[o.id] = o; BY_NAME[norm(o.name)] = o;
       (o.aka || []).forEach((a) => (BY_NAME[norm(a)] = BY_NAME[norm(a)] || o));
-      o._text = [o.name, o.name_he, (o.aka || []).join(" "), o.description, o.location.city, (o.categories || []).map((c) => TAX.categories[c] || c).join(" "),
-        (o.services || []).join(" "), (o.notable_clients || []).join(" "), (o.notable_work || []).join(" "), (o.tags || []).join(" "),
-        (o.key_people || []).map((p) => p.name).join(" ")].join(" ").toLowerCase();
+      o.needs = o.needs || [];
+      o._text = [o.name, o.name_he, (o.aka || []).join(" "), o.description, o.location.city, KIND_ONE[o.kind],
+        o.categories.map((c) => TAX.categories[c] || c).join(" "), o.needs.map((n) => NEEDS[n]?.label).join(" "),
+        (o.client_profile?.creative_needs || []).join(" "), (o.client_profile?.known_agencies || []).join(" "),
+        (o.services || []).join(" "), (o.notable_clients || []).join(" "), (o.notable_work || []).join(" "),
+        (o.tags || []).join(" "), (o.key_people || []).map((p) => p.name + " " + p.role).join(" ")].join(" ").toLowerCase();
     });
-    const d = new Date(data.generated);
-    $("meta").textContent = `${ORGS.length} organizations · updated ${d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`;
-    $("q").value = state.q; $("sort").value = state.sort;
-    render();
-    const h = location.hash.slice(1);
-    if (h && BY_ID[h]) open(h);
+    // reverse indexes, built once
+    ORGS.forEach((o) => {
+      (o.notable_clients || []).forEach((c) => { const t = lookup(c); if (t && t !== o) push(REV.clientOf, t.id, o); });
+      (o.client_profile?.known_agencies || []).forEach((a) => { const t = lookup(a); if (t && t !== o) push(REV.agencyOf, t.id, o); });
+      (o.relations || []).forEach((r) => { const t = r.target_id ? BY_ID[r.target_id] : lookup(r.target); if (t && t !== o) push(REV.rel, t.id, { org: o, type: r.type }); });
+    });
   }
 
+  // ---------- storage (per-person, private) ----------
+  const Store = {
+    mode: "loading", isOwner: false, uid: null, db: null, downloads: null, readOnly: false,
+    pipeline: {}, prefs: { crafts: [] }, dbSignals: {},
+    chains: {},
+    key: "landscape-v2",
+    async init() {
+      let db = null, user = null;
+      try {
+        if (window.claude && typeof window.claude.use === "function") {
+          [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
+          this.downloads = await window.claude.use("downloads").catch(() => null);
+        }
+      } catch (e) { db = null; }
+      if (user) {
+        try { this.uid = await user.id(); } catch (e) {}
+        try { this.isOwner = await user.isOwner(); } catch (e) {}
+      }
+      if (db && this.uid) {
+        this.mode = "db"; this.db = db;
+        const base = "data/users/" + this.uid;
+        db.doc(base + "/prefs").onSnapshot((s) => { if (s.exists) { this.prefs = { crafts: [], ...s.data() }; changed("prefs"); } }, () => {});
+        db.doc(base + "/crm").collection("pipeline").onSnapshot((snap) => {
+          const p = {}; snap.docs.forEach((d) => (p[d.id] = d.data())); this.pipeline = p; changed("pipeline");
+        }, () => {});
+      } else {
+        this.mode = "local";
+        try { const s = JSON.parse(localStorage.getItem(this.key) || "{}"); this.pipeline = s.pipeline || {}; this.prefs = { crafts: [], ...(s.prefs || {}) }; } catch (e) {}
+      }
+      if (db) {
+        db.collection("signals").onSnapshot((snap) => {
+          const m = {}; snap.docs.forEach((d) => (m[d.id] = d.data())); this.dbSignals = m; changed("signals");
+        }, () => {});
+      }
+      changed("store");
+    },
+    saveLocal() { try { localStorage.setItem(this.key, JSON.stringify({ pipeline: this.pipeline, prefs: this.prefs })); } catch (e) {} },
+    serial(path, fn) { const prev = this.chains[path] || Promise.resolve(); const next = prev.then(fn, fn); this.chains[path] = next.catch(() => {}); return next; },
+    async write(path, body) {
+      if (this.readOnly) return false;
+      if (this.mode !== "db") { this.saveLocal(); return true; }
+      try {
+        await this.serial(path, () => (body ? this.db.doc(path).set(body) : this.db.doc(path).delete()));
+        return true;
+      } catch (e) {
+        if (e && e.code === "invalid_argument") { this.readOnly = true; changed("store"); toast("You can browse, but saving needs Contributor access."); }
+        else toast("Couldn’t save. Try again.");
+        return false;
+      }
+    },
+    entry(id) { return this.pipeline[id]; },
+    async setEntry(id, patch) {
+      const cur = this.pipeline[id] || { org_id: id, stage: "watch", added: isoDay(new Date()) };
+      const next = { ...cur, ...patch, org_id: id, updated_at: new Date().toISOString(), v: 1 };
+      Object.keys(next).forEach((k) => next[k] === null && delete next[k]);
+      this.pipeline = { ...this.pipeline, [id]: next }; changed("pipeline");
+      return this.write("data/users/" + this.uid + "/crm/pipeline/" + id, next);
+    },
+    async removeEntry(id) {
+      const p = { ...this.pipeline }; delete p[id]; this.pipeline = p; changed("pipeline");
+      return this.write("data/users/" + this.uid + "/crm/pipeline/" + id, null);
+    },
+    async setCrafts(crafts) {
+      this.prefs = { ...this.prefs, crafts, v: 1 }; changed("prefs");
+      return this.write("data/users/" + this.uid + "/prefs", this.prefs);
+    },
+    async hideSignal(sig, hidden) {
+      if (!this.isOwner || this.mode !== "db") return;
+      const body = { ...sig, hidden };
+      this.dbSignals = { ...this.dbSignals, [sig.id]: body }; changed("signals");
+      await this.write("signals/" + sig.id, body);
+    },
+  };
+
+  function signals() {
+    const m = {}; BASE_SIGNALS.forEach((s) => (m[s.id] = s));
+    Object.entries(Store.dbSignals).forEach(([id, s]) => (m[id] = { ...(m[id] || {}), ...s, id }));
+    return Object.values(m).filter((s) => s && s.headline).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  }
+  function signalsFor(o) { return signals().filter((s) => !s.hidden && (s.org_id === o.id || (s.related_ids || []).includes(o.id))); }
+
+  // ---------- view state ----------
+  const state = { tab: "explore", q: "", lens: "brands", sort: "fit", kinds: [], cats: [], inds: [], needs: [], city: "", sigType: "", shown: PAGE };
+  try { Object.assign(state, JSON.parse(localStorage.getItem("landscape-view") || "{}"), { shown: PAGE }); } catch (e) {}
+  function saveView() { try { const { shown, ...v } = state; localStorage.setItem("landscape-view", JSON.stringify(v)); } catch (e) {} }
+
+  function changed(what) {
+    if (!ORGS.length) return;
+    renderNotice();
+    renderBadges();
+    renderMine();
+    renderView();
+    if (!$("sheet").hidden && $("sheet").dataset.id) openOrg($("sheet").dataset.id, true);
+  }
+
+  // ---------- scoring ----------
+  function myCrafts() { return Store.prefs.crafts || []; }
+  function needHits(o) {
+    const mine = new Set(myCrafts()); if (!mine.size) return [];
+    return o.needs.filter((n) => (NEEDS[n]?.crafts || []).some((c) => mine.has(c)));
+  }
+  function freshSignal(o) { return signalsFor(o).find((s) => daysAgo(s.date) <= 60); }
+  function score(o) {
+    let s = 0;
+    if (GROUP[o.kind] === "buyer" || o.needs.length) {
+      s += needHits(o).length * 3 + (myCrafts().length ? 0 : o.needs.length * .5);
+      if ((o.client_profile?.known_agencies || []).length || REV.agencyOf[o.id]) s += 1;
+    } else {
+      const mine = new Set(myCrafts());
+      s += o.categories.filter((c) => mine.has(c)).length * 2;
+    }
+    if (freshSignal(o)) s += 2.5;
+    if (o.confidence === "high") s += .3;
+    if (Store.entry(o.id)) s += .2;
+    return s;
+  }
+
+  // ---------- explore ----------
+  function matches(o) {
+    const kinds = state.kinds.length ? state.kinds : LENS_KINDS[state.lens];
+    if (kinds && !kinds.includes(o.kind)) {
+      // startups that buy creative show up under Brands too
+      if (!(state.lens === "brands" && !state.kinds.length && o.kind === "startup" && o.needs.length)) return false;
+    }
+    if (state.cats.length && !state.cats.some((c) => o.categories.includes(c))) return false;
+    if (state.inds.length && !state.inds.some((c) => o.categories.includes(c))) return false;
+    if (state.needs.length && !state.needs.some((n) => o.needs.includes(n))) return false;
+    if (state.city && (o.location.city || "—") !== state.city) return false;
+    if (state.q) { for (const w of state.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!o._text.includes(w)) return false; }
+    return true;
+  }
   function initials(name) {
     const w = name.replace(/[^\p{L}\p{N} &]/gu, " ").split(/\s+/).filter((x) => x && !/^(the|&|and|of)$/i.test(x));
     return ((w[0] || "?")[0] + (w[1] ? w[1][0] : (w[0] || "")[1] || "")).toUpperCase();
   }
   function logo(o, size = "") {
-    return o.logo ? `<span class="logo ${size}"><img src="${esc(o.logo)}" alt="" loading="lazy"></span>`
+    const src = LOGOS[o.id];
+    return src ? `<span class="logo ${size}"><img src="${esc(src)}" alt="" loading="lazy"></span>`
       : `<span class="logo mono ${size}" aria-hidden="true">${esc(initials(o.name))}</span>`;
   }
-
-  function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
-
-  function matches(o, skip) {
-    if (skip !== "kind" && state.kind && o.kind !== state.kind) return false;
-    if (skip !== "cat" && state.cat && !o.categories.includes(state.cat)) return false;
-    if (skip !== "city" && state.city && (o.location.city || "—") !== state.city) return false;
-    if (state.q) { for (const w of state.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!o._text.includes(w)) return false; }
-    return true;
+  function gstyle(o) { return `--g:var(--g-${GROUP[o.kind] || "maker"})`; }
+  function kindLine(o) {
+    return `<div class="kind">${KIND_ONE[o.kind]} <span class="where">· ${esc(o.location.city || o.location.country)}${o.size ? " · " + esc(o.size) : ""}${o.status && o.status !== "active" ? " · " + esc(o.status) : ""}</span></div>`;
+  }
+  function agencyOf(o) {
+    const a = (o.client_profile?.known_agencies || [])[0];
+    if (a) return a.replace(/\s*\(.*?\)\s*/g, " ").trim();
+    const r = (o.relations || []).find((r) => r.type === "agency");
+    return r ? (BY_ID[r.target_id]?.name || r.target) : "";
+  }
+  function card(o) {
+    const buyer = GROUP[o.kind] === "buyer" || (o.kind === "startup" && o.needs.length);
+    const e = Store.entry(o.id);
+    const sig = freshSignal(o);
+    const hits = new Set(needHits(o));
+    let body = "";
+    if (buyer && o.needs.length) {
+      const needs = [...o.needs].sort((a, b) => hits.has(b) - hits.has(a)).slice(0, 4);
+      body += `<p class="line"><span class="k">Buys</span>${needs.map((n) => hits.has(n) ? `<b class="fit">${esc(NEEDS[n].label)}</b>` : esc(NEEDS[n]?.label || n)).join(" · ")}</p>`;
+      const ag = agencyOf(o);
+      if (ag && o.kind !== "agency") body += `<p class="line"><span class="k">Via</span>${esc(ag)}</p>`;
+    } else if (o.kind === "agency" && (o.notable_clients || []).length) {
+      body += `<p class="line"><span class="k">Clients</span>${esc(o.notable_clients.slice(0, 3).join(" · "))}</p>`;
+    } else {
+      body += `<p>${esc(o.description)}</p>`;
+      const shown = o.categories.filter((c) => GROUP[o.kind] !== "maker" || CRAFTS.includes(c)).slice(0, 3);
+      if (shown.length) body += `<div>${shown.map((c) => `<span class="tag${myCrafts().includes(c) ? " hit" : ""}">${esc(TAX.categories[c] || c)}</span>`).join("")}</div>`;
+    }
+    if (sig) body += `<div class="nowline"><span class="t">${esc(SIG_TYPES[sig.type] || sig.type)}</span><span>${esc(trim(sig.headline, 90))} <span class="mono muted">${ago(sig.date)}</span></span></div>`;
+    return `<button class="card" type="button" data-id="${o.id}" style="${gstyle(o)}">
+      <div class="top">${logo(o)}<div class="nm"><h3>${esc(o.name)}</h3>${o.name_he ? `<bdi class="he" lang="he" dir="rtl">${esc(o.name_he)}</bdi>` : ""}${kindLine(o)}</div>
+      ${e ? `<span class="stage">★ ${esc(STAGE_LABEL[e.stage] || "Saved")}</span>` : ""}</div>${body}</button>`;
   }
 
-  function options(sel, counts, label, current, nameOf) {
-    const entries = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-    sel.innerHTML = `<option value="">${label}</option>` + entries.map(([k, n]) => `<option value="${esc(k)}"${k === current ? " selected" : ""}>${esc(nameOf(k))} (${n})</option>`).join("");
+  function renderMine() {
+    const mine = myCrafts();
+    $("mine").innerHTML = `<span class="chip label">I make</span>` +
+      mine.map((c) => `<button class="chip" type="button" data-rmcraft="${c}" aria-label="Remove ${esc(TAX.categories[c])}">${esc(TAX.categories[c] || c)} <span class="x">✕</span></button>`).join("") +
+      `<button class="chip add" type="button" data-crafts>${mine.length ? "+ Edit" : "+ Pick your crafts to rank by fit"}</button>`;
   }
 
-  function render() {
-    try { localStorage.setItem("landscape-filters", JSON.stringify(state)); } catch (e) {}
-    const kc = {}; ORGS.filter((o) => matches(o, "kind")).forEach((o) => (kc[o.kind] = (kc[o.kind] || 0) + 1));
-    const total = Object.values(kc).reduce((a, b) => a + b, 0);
-    $("tabs").innerHTML = `<button class="tab" type="button" data-kind="" aria-pressed="${!state.kind}">All <span class="n">${total}</span></button>` +
-      Object.keys(KIND_LABEL).filter((k) => kc[k] || state.kind === k).map((k) =>
-        `<button class="tab" type="button" data-kind="${k}" style="--c:var(--k-${k})" aria-pressed="${state.kind === k}"><span class="dot"></span>${KIND_LABEL[k]} <span class="n">${kc[k] || 0}</span></button>`).join("");
-    const cc = {}, ci = {};
-    ORGS.filter((o) => matches(o, "cat")).forEach((o) => o.categories.forEach((c) => (cc[c] = (cc[c] || 0) + 1)));
-    ORGS.filter((o) => matches(o, "city")).forEach((o) => { const c = o.location.city || "—"; ci[c] = (ci[c] || 0) + 1; });
-    options($("cat"), cc, "All categories", state.cat, (k) => TAX.categories[k] || k);
-    options($("city"), ci, "All cities", state.city, (k) => k);
-
-    const list = ORGS.filter((o) => matches(o));
+  function renderExplore() {
+    document.querySelectorAll("#lens button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lens === state.lens));
+    if ($("q").value.trim() !== state.q) $("q").value = state.q;
+    $("sort").value = state.sort;
+    const nf = state.kinds.length + state.cats.length + state.inds.length + state.needs.length + (state.city ? 1 : 0);
+    $("fcount").hidden = !nf; $("fcount").textContent = nf;
+    const act = [
+      ...state.kinds.map((k) => ["kinds", k, KIND_MANY[k]]), ...state.needs.map((k) => ["needs", k, NEEDS[k]?.label]),
+      ...state.cats.map((k) => ["cats", k, TAX.categories[k]]), ...state.inds.map((k) => ["inds", k, TAX.categories[k]]),
+      ...(state.city ? [["city", state.city, state.city]] : []),
+    ];
+    $("active").hidden = !act.length;
+    $("active").innerHTML = act.map(([f, v, l]) => `<button class="chip" type="button" data-unf="${f}" data-v="${esc(v)}">${esc(l)} <span class="x">✕</span></button>`).join("") +
+      (act.length ? `<button class="chip add" type="button" data-unf="all">Clear all</button>` : "");
+    const list = ORGS.filter(matches);
+    if (state.sort === "fit") list.forEach((o) => (o._s = score(o)));
     const by = {
+      fit: (a, b) => b._s - a._s || a.name.localeCompare(b.name),
       name: (a, b) => a.name.localeCompare(b.name),
       size: (a, b) => (SIZE_RANK[b.size] || 0) - (SIZE_RANK[a.size] || 0) || a.name.localeCompare(b.name),
       founded: (a, b) => (b.founded || 0) - (a.founded || 0),
-      oldest: (a, b) => (a.founded || 9999) - (b.founded || 9999),
-      verified: (a, b) => String(b.last_verified).localeCompare(String(a.last_verified)),
     }[state.sort];
     list.sort(by);
-    $("count").textContent = `${list.length} shown`;
+    $("count").textContent = `${list.length} ${list.length === 1 ? "match" : "matches"}`;
     $("empty").hidden = list.length > 0;
-    $("grid").innerHTML = list.map((o) => `
-      <button class="card" type="button" data-id="${o.id}" style="--k:var(--k-${o.kind})">
-        <div class="top">${logo(o)}<div class="nm"><h3>${esc(o.name)}</h3>
-          ${o.name_he ? `<span class="he" lang="he" dir="rtl">${esc(o.name_he)}</span>` : ""}
-          <div class="kind">${KIND_ONE[o.kind]} <span class="where">· ${esc(o.location.city || o.location.country)}${o.founded ? ` · est. ${o.founded}` : ""}${o.status && o.status !== "active" ? ` · ${o.status}` : ""}</span></div></div></div>
-        <p>${esc(o.description)}</p>
-        <div class="chips">${o.categories.slice(0, 4).map((c) => `<span class="chip">${esc(TAX.categories[c] || c)}</span>`).join("")}</div>
-      </button>`).join("");
+    $("grid").innerHTML = list.slice(0, state.shown).map(card).join("");
+    $("moreWrap").hidden = list.length <= state.shown;
   }
 
-  function connections(o) {
-    const out = new Map(); // id -> {org, why:Set}
-    const add = (other, why) => { if (!other || other.id === o.id) return; if (!out.has(other.id)) out.set(other.id, { org: other, why: new Set() }); out.get(other.id).why.add(why); };
-    (o.relations || []).forEach((r) => add(r.target_id ? BY_ID[r.target_id] : lookup(r.target), REL_LABEL[r.type] || r.type));
-    ORGS.forEach((x) => (x.relations || []).forEach((r) => { if (r.target_id === o.id || lookup(r.target) === o) add(x, "links here: " + (REL_LABEL[r.type] || r.type)); }));
-    (o.notable_clients || []).forEach((c) => add(lookup(c), "client"));
-    (o.client_profile?.known_agencies || []).forEach((a) => add(lookup(a), "agency"));
-    const me = new Set([norm(o.name), ...(o.aka || []).map(norm)]);
-    ORGS.forEach((x) => {
-      if ((x.notable_clients || []).some((c) => me.has(norm(c)))) add(x, "worked for " + o.name);
-      if ((x.client_profile?.known_agencies || []).some((c) => me.has(norm(c)))) add(x, "agency client");
-    });
-    const mine = new Set((o.notable_clients || []).map(norm));
-    if (mine.size) ORGS.forEach((x) => {
-      if (x.id === o.id) return;
-      const shared = (x.notable_clients || []).filter((c) => mine.has(norm(c)));
-      if (shared.length) add(x, "shared clients: " + shared.slice(0, 3).join(", "));
-    });
-    return [...out.values()];
+  // ---------- filters & crafts panels ----------
+  function chipset(field, keys, label) {
+    return `<div class="chipset">${keys.map((k) => `<button class="chip" type="button" data-f="${field}" data-v="${esc(k)}" aria-pressed="${state[field].includes(k)}">${esc(label(k))}</button>`).join("")}</div>`;
   }
-
-  function open(id) {
-    const o = BY_ID[id]; if (!o) return;
-    const links = Object.entries(o.links || {});
-    const facts = [
-      ["Type", KIND_ONE[o.kind]], ["Location", [o.location.city, o.location.country].filter(Boolean).join(", ") + (o.location.other_offices?.length ? ` (+ ${o.location.other_offices.join(", ")})` : "")],
-      ["Founded", o.founded], ["Size", o.size && o.size + " people"], ["Status", o.status !== "active" ? o.status : ""],
-      ["Funding", o.funding && [o.funding.public ? `Public${o.funding.ticker ? " (" + o.funding.ticker + ")" : ""}` : o.funding.stage, o.funding.total_usd_m ? `$${o.funding.total_usd_m}M raised` : ""].filter(Boolean).join(" · ")],
-      ["Industry", o.client_profile?.industry], ["In-house studio", o.client_profile?.in_house_studio ? "Yes" : ""],
-    ].filter(([, v]) => v);
-    const conns = connections(o);
-    const list = (title, arr) => arr && arr.length ? `<section><h4>${title}</h4><div class="chips">${arr.map((x) => { const t = lookup(x); return t && t.id !== o.id ? `<button class="chip" type="button" data-id="${t.id}">${esc(x)}</button>` : `<span class="chip">${esc(x)}</span>`; }).join("")}</div></section>` : "";
-    $("sheet").innerHTML = `
+  function openFilters() {
+    const used = (facet) => (TAX.facets?.[facet] || []).filter((c) => ORGS.some((o) => o.categories.includes(c)));
+    const cities = {}; ORGS.forEach((o) => { const c = o.location.city; if (c) cities[c] = (cities[c] || 0) + 1; });
+    $("panel").innerHTML = `
       <button class="close" type="button" aria-label="Close">×</button>
-      <div class="head" style="--k:var(--k-${o.kind})">${logo(o, "lg")}<div>
-        <div class="kind">${KIND_ONE[o.kind]}</div>
-        <h2 id="d-name">${esc(o.name)}</h2>
-        ${o.name_he ? `<div class="he" lang="he">${esc(o.name_he)}</div>` : ""}</div></div>
-      <p>${esc(o.description)}</p>
-      <div class="links">${o.website ? `<a href="${esc(o.website)}" target="_blank" rel="noopener">Website ↗</a>` : ""}${links.map(([k, v]) => `<a href="${esc(v)}" target="_blank" rel="noopener">${esc(LINK_LABEL[k] || k)} ↗</a>`).join("")}</div>
-      <section><dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl></section>
-      <section><h4>Categories</h4><div class="chips">${o.categories.map((c) => `<button class="chip" type="button" data-cat="${c}">${esc(TAX.categories[c] || c)}</button>`).join("")}</div></section>
-      ${o.services?.length ? `<section><h4>Services / products</h4><ul class="plain">${o.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></section>` : ""}
-      ${o.client_profile?.creative_needs?.length ? `<section><h4>Creative needs</h4><ul class="plain">${o.client_profile.creative_needs.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></section>` : ""}
-      ${list("Notable clients", o.notable_clients)}
-      ${list("Known agencies", o.client_profile?.known_agencies)}
-      ${o.notable_work?.length ? `<section><h4>Notable work</h4><ul class="plain">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></section>` : ""}
-      ${o.key_people?.length ? `<section><h4>People</h4><ul class="plain">${o.key_people.map((p) => `<li>${esc(p.name)} — ${esc(p.role)}</li>`).join("")}</ul></section>` : ""}
-      ${o.funding?.investors?.length ? list("Investors", o.funding.investors) : ""}
-      ${conns.length ? `<section><h4>Connections in the map (${conns.length})</h4><div class="rel">${conns.map((c) => `<button type="button" data-id="${c.org.id}"><span class="t">${esc(KIND_ONE[c.org.kind])}</span><span>${esc(c.org.name)} <span class="where">— ${esc([...c.why].join("; "))}</span></span></button>`).join("")}</div></section>` : ""}
-      ${(o.relations || []).filter((r) => !r.target_id && !lookup(r.target)).length ? `<section><h4>Other relations</h4><div class="rel">${o.relations.filter((r) => !r.target_id && !lookup(r.target)).map((r) => `<span class="plain"><span class="t">${esc(REL_LABEL[r.type] || r.type)}</span><span>${esc(r.target)}${r.note ? ` <span class="where">— ${esc(r.note)}</span>` : ""}</span></span>`).join("")}</div></section>` : ""}
-      <section><h4>Sources · <span class="conf">${esc(o.confidence)} confidence</span> · verified ${esc(o.last_verified)}</h4><div class="sources">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></section>`;
-    $("sheet").hidden = false; $("scrim").hidden = false; $("sheet").scrollTop = 0;
-    $("sheet").querySelector(".close").focus({ preventScroll: true });
-    try { history.replaceState(null, "", "#" + id); } catch (e) {}
+      <h2 style="margin:4px 0 0;font-size:22px">Filters</h2>
+      <div class="filtersec"><h4>Type</h4>${chipset("kinds", Object.keys(KIND_MANY), (k) => KIND_MANY[k])}</div>
+      <div class="filtersec"><h4>What they buy</h4>${chipset("needs", Object.keys(NEEDS), (k) => NEEDS[k].label)}</div>
+      <div class="filtersec"><h4>Craft</h4>${chipset("cats", used("craft"), (k) => TAX.categories[k])}</div>
+      <div class="filtersec"><h4>Industry</h4>${chipset("inds", used("industry"), (k) => TAX.categories[k])}</div>
+      <div class="filtersec"><h4>Product (startups)</h4>${chipset("cats", used("product"), (k) => TAX.categories[k])}</div>
+      <div class="filtersec"><h4>City</h4><select class="btn" id="fcity" aria-label="City"><option value="">Any city</option>${Object.entries(cities).sort((a, b) => b[1] - a[1]).map(([c, n]) => `<option value="${esc(c)}"${state.city === c ? " selected" : ""}>${esc(c)} (${n})</option>`).join("")}</select></div>
+      <div class="sheetfoot"><button class="btn ghost" type="button" data-unf="all">Clear all</button><button class="btn primary" type="button" data-done>Show results</button></div>`;
+    showPanel();
+    $("fcity").addEventListener("change", (e) => { state.city = e.target.value; refresh(); });
   }
-  function close() { $("sheet").hidden = true; $("scrim").hidden = true; try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
+  function openCrafts() {
+    const mine = myCrafts();
+    $("panel").innerHTML = `
+      <button class="close" type="button" aria-label="Close">×</button>
+      <h2 style="margin:4px 0 0;font-size:22px">What do you make?</h2>
+      <p class="muted" style="margin:6px 0 0">Pick any. Brands that buy these move to the top of Best fit.</p>
+      <div class="filtersec"><div class="chipset">${CRAFTS.map((c) => `<button class="chip" type="button" data-craft="${c}" aria-pressed="${mine.includes(c)}">${esc(TAX.categories[c])}</button>`).join("")}</div></div>
+      <div class="sheetfoot"><button class="btn primary" type="button" data-done>Done</button></div>`;
+    showPanel();
+  }
+  function showPanel() { $("sheet").hidden = true; $("panel").hidden = false; $("scrim").hidden = false; $("panel").scrollTop = 0; $("panel").querySelector(".close").focus({ preventScroll: true }); }
 
-  $("q").addEventListener("input", (e) => { state.q = e.target.value.trim(); render(); });
-  $("cat").addEventListener("change", (e) => { state.cat = e.target.value; render(); });
-  $("city").addEventListener("change", (e) => { state.city = e.target.value; render(); });
-  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
-  $("reset").addEventListener("click", () => { Object.assign(state, { q: "", kind: "", cat: "", city: "" }); $("q").value = ""; render(); });
-  $("tabs").addEventListener("click", (e) => { const b = e.target.closest(".tab"); if (b) { state.kind = b.dataset.kind; render(); } });
-  $("grid").addEventListener("click", (e) => { const c = e.target.closest(".card"); if (c) open(c.dataset.id); });
-  $("sheet").addEventListener("click", (e) => {
-    if (e.target.closest(".close")) return close();
-    const t = e.target.closest("[data-id]"); if (t) return open(t.dataset.id);
-    const c = e.target.closest("[data-cat]"); if (c) { Object.assign(state, { cat: c.dataset.cat, kind: "", q: "", city: "" }); $("q").value = ""; close(); render(); }
+  // ---------- detail sheet ----------
+  function waysIn(o) {
+    const groups = [];
+    const seen = new Set([o.id]);
+    const take = (arr) => arr.filter((x) => x && !seen.has(x.id) && seen.add(x.id));
+    const items = (orgs) => orgs.map((x) => `<button type="button" data-id="${x.id}" style="${gstyle(x)}">${logo(x, "sm")}${esc(x.name)}</button>`).join("");
+    const plain = (names) => names.map((n) => `<span class="plain">${esc(n)}</span>`).join("");
+    const split = (names) => { const inMap = [], out = []; names.forEach((n) => { const t = lookup(n); t && t.id !== o.id ? inMap.push(t) : out.push(n); }); return [inMap, out]; };
+    const agNames = [...(o.client_profile?.known_agencies || []), ...(o.relations || []).filter((r) => r.type === "agency").map((r) => r.target_id || r.target)];
+    if (agNames.length) { const [m, p] = split([...new Set(agNames)]); const mm = take(m); if (mm.length || p.length) groups.push(["Their agency", items(mm) + plain(p)]); }
+    const worked = take([...(REV.clientOf[o.id] || []), ...(REV.rel[o.id] || []).filter((r) => r.type === "client").map((r) => r.org)]);
+    if (worked.length) groups.push(["Worked for them", items(worked)]);
+    const agencyClients = take(REV.agencyOf[o.id] || []);
+    if (agencyClients.length) groups.push(["Brands that use them", items(agencyClients)]);
+    const clientNames = [...(o.notable_clients || []), ...(o.relations || []).filter((r) => r.type === "client").map((r) => r.target_id || r.target)];
+    if (clientNames.length) { const [m, p] = split([...new Set(clientNames)]); const mm = take(m); if (mm.length || p.length) groups.push(["Their clients", items(mm) + plain(p.slice(0, 12))]); }
+    const mine = new Set((o.notable_clients || []).map(norm));
+    if (mine.size) {
+      const sh = take(ORGS.filter((x) => x.id !== o.id && !seen.has(x.id) && (x.notable_clients || []).some((c) => mine.has(norm(c))))).slice(0, 10);
+      if (sh.length) groups.push(["Shares clients with", items(sh)]);
+    }
+    const famTypes = ["parent", "subsidiary", "acquired", "acquired_by", "partner", "spun_off_from", "investor"];
+    const fam = (o.relations || []).filter((r) => famTypes.includes(r.type));
+    const famRev = (REV.rel[o.id] || []).filter((r) => famTypes.includes(r.type)).map((r) => r.org);
+    if (fam.length || famRev.length) {
+      const [m, p] = split(fam.map((r) => r.target_id || r.target));
+      const mm = take([...m, ...famRev]);
+      if (mm.length || p.length) groups.push(["Group & deals", items(mm) + plain(p)]);
+    }
+    if ((o.key_people || []).length) groups.push(["People (public roles)", plain(o.key_people.map((p) => `${p.name} · ${p.role}`))]);
+    return groups;
+  }
+
+  function editor(e) {
+    const quick = [["Tomorrow", 1], ["1 week", 7], ["1 month", 30]];
+    return `<div class="editor" id="editor">
+      <div class="chipset" role="group" aria-label="Stage">${STAGES.map(([k, l]) => `<button class="chip" type="button" data-stage="${k}" aria-pressed="${e.stage === k}">${l}</button>`).join("")}</div>
+      <label class="muted" for="note" style="font-size:13px">Note (private)</label>
+      <textarea id="note" dir="auto" placeholder="Who you spoke to, what you sent, what’s next…">${esc(e.note || "")}</textarea>
+      <div class="row"><span class="muted" style="font-size:13px">Follow up</span>
+        ${quick.map(([l, n]) => `<button class="chip" type="button" data-quick="${n}">${l}</button>`).join("")}
+        <input type="date" id="next" value="${esc(e.next_date || "")}" aria-label="Follow-up date">
+        ${e.next_date ? `<button class="btn ghost" type="button" data-clear-date>Clear</button>` : ""}
+      </div>
+      <div class="row" style="justify-content:space-between"><span class="saved">${e.updated_at ? "Saved " + ago(e.updated_at.slice(0, 10)) : ""}${Store.mode === "local" ? " · on this device" : ""}</span>
+        <button class="btn ghost" type="button" data-remove>Remove from pipeline</button></div>
+    </div>`;
+  }
+
+  function openOrg(id, keepScroll) {
+    const o = BY_ID[id]; if (!o) return;
+    const sh = $("sheet"); const scroll = sh.scrollTop;
+    const noteEl = $("note"); const typing = keepScroll && noteEl && document.activeElement === noteEl;
+    if (typing) return; // don't re-render under the cursor
+    const e = Store.entry(o.id);
+    const sigs = signalsFor(o);
+    const hits = new Set(needHits(o));
+    const buyer = GROUP[o.kind] === "buyer" || o.needs.length;
+    const facts = [["Founded", o.founded], ["Size", o.size && o.size + " people"], ["Status", o.status !== "active" ? o.status : ""],
+      ["Funding", o.funding && [o.funding.public ? `Public${o.funding.ticker ? " (" + o.funding.ticker + ")" : ""}` : o.funding.stage, o.funding.total_usd_m ? `$${o.funding.total_usd_m}M raised` : ""].filter(Boolean).join(" · ")],
+      ["Offices", (o.location.other_offices || []).join(", ")], ["Industry", o.client_profile?.industry]].filter(([, v]) => v);
+    const links = [o.reel_url && ["Reel", o.reel_url], o.careers_url && ["Careers", o.careers_url], o.contact_url && ["Contact page", o.contact_url],
+      ...Object.entries(o.links || {}).map(([k, v]) => [LINK_LABEL[k] || k, v])].filter(Boolean);
+    const ways = waysIn(o);
+    sh.dataset.id = o.id;
+    sh.innerHTML = `
+      <button class="close" type="button" aria-label="Close">×</button>
+      <div class="ident" style="${gstyle(o)}">${logo(o, "lg")}<div>${kindLine(o)}<h2 id="d-name">${esc(o.name)}</h2>${o.name_he ? `<bdi class="he" lang="he" dir="rtl">${esc(o.name_he)}</bdi>` : ""}</div></div>
+      <div class="actions">
+        ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">★ ${esc(STAGE_LABEL[e.stage])}${e.next_date ? ` · follow up ${fmtDate(e.next_date)}` : ""}</button>`
+            : `<button class="btn primary" type="button" data-save ${Store.readOnly ? "disabled" : ""}>☆ Save to pipeline</button>`}
+        ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">Website ↗</a>` : ""}
+      </div>
+      ${e ? editor(e) : ""}
+      ${sigs.length ? `<section><h4>Why now</h4><div class="feed">${sigs.slice(0, 4).map((s) => sigCard(s, true)).join("")}</div></section>` : ""}
+      ${buyer && (o.needs.length || o.client_profile?.creative_needs?.length) ? `<section><h4>What they buy</h4>
+        <div>${o.needs.map((n) => `<span class="tag${hits.has(n) ? " hit" : ""}">${hits.has(n) ? "✓ " : ""}${esc(NEEDS[n]?.label || n)}</span>`).join("")}</div>
+        ${o.client_profile?.creative_needs?.length ? `<p class="muted" style="font-size:13px">${esc(o.client_profile.creative_needs.join(" · "))}</p>` : ""}
+        ${!myCrafts().length ? `<p style="font-size:13px"><button class="btn ghost" type="button" data-crafts>Pick your crafts</button> to see what fits you.</p>` : ""}
+        ${o.client_profile?.in_house_studio ? `<p style="font-size:13px">Has an in-house creative team.</p>` : ""}</section>` : ""}
+      ${ways.length ? `<section><h4>Ways in</h4><div class="ways">${ways.map(([t, h]) => `<div class="grp"><span>${t}</span><div class="items">${h}</div></div>`).join("")}</div></section>` : ""}
+      <section><h4>About</h4><p style="margin-top:0">${esc(o.description)}</p>
+        ${facts.length ? `<dl class="facts" style="margin-top:10px">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
+        <div style="margin-top:10px">${o.categories.map((c) => `<span class="tag">${esc(TAX.categories[c] || c)}</span>`).join("")}</div>
+      </section>
+      ${(o.services?.length || o.notable_work?.length || o.funding?.investors?.length) ? `<section><details><summary>Work, services & investors</summary>
+        ${o.services?.length ? `<h4>Services / products</h4><ul class="plain">${o.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+        ${o.notable_work?.length ? `<h4 style="margin-top:10px">Notable work</h4><ul class="plain">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+        ${o.funding?.investors?.length ? `<h4 style="margin-top:10px">Investors</h4><p style="margin:0;font-size:14px">${esc(o.funding.investors.join(", "))}</p>` : ""}
+      </details></section>` : ""}
+      ${links.length ? `<section><h4>Links</h4><div class="chipset">${links.map(([l, u]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join("")}</div></section>` : ""}
+      <section><details><summary>Sources · ${esc(o.confidence)} confidence · checked ${esc(fmtDate(o.last_verified))}</summary>
+        <div class="sources">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></details></section>`;
+    if (sh.hidden) { $("panel").hidden = true; sh.hidden = false; $("scrim").hidden = false; sh.scrollTop = 0; sh.querySelector(".close").focus({ preventScroll: true }); }
+    else sh.scrollTop = keepScroll ? scroll : 0;
+    try { history.replaceState(null, "", "#" + o.id); } catch (err) {}
+  }
+  function closeAll() {
+    $("sheet").hidden = true; $("panel").hidden = true; $("scrim").hidden = true; delete $("sheet").dataset.id;
+    try { history.replaceState(null, "", location.pathname + location.search + (state.tab !== "explore" ? "#" + state.tab : "")); } catch (e) {}
+  }
+
+  // ---------- signals view ----------
+  function sigCard(s, compact) {
+    const o = s.org_id && BY_ID[s.org_id];
+    const old = daysAgo(s.date) > 60;
+    const inPipe = o && Store.entry(o.id);
+    const cr = s.credits ? Object.entries(s.credits).map(([k, v]) => `${k[0].toUpperCase() + k.slice(1)}: ${v}`).join(" · ") : "";
+    const head = compact ? `<div class="type">${esc(SIG_TYPES[s.type] || s.type)}</div>`
+      : `<div class="head">${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<div class="nm"><div class="type">${esc(SIG_TYPES[s.type] || s.type)}</div>
+        ${o ? `<button class="org" type="button" data-id="${o.id}">${esc(o.name)}</button>` : `<span class="org">${esc(s.org_name)}</span> <span class="muted" style="font-size:12px">· not in the map yet</span>`}</div></div>`;
+    return `<article class="sig${old ? " old" : ""}${s.hidden ? " hidden" : ""}">${head}
+      <p class="h">${esc(s.headline)}</p>
+      <p class="why">${esc(s.why)}</p>
+      ${cr ? `<div class="credits">${esc(cr)}</div>` : ""}
+      <div class="foot"><span class="mono">${s.date_approx ? "≈ " : ""}${fmtDate(s.date)}</span>
+        <a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source || "Source")} ↗</a>
+        <span class="acts">
+          ${!compact && o ? (inPipe ? `<span class="stage">★ ${esc(STAGE_LABEL[inPipe.stage])}</span>` : `<button class="btn" type="button" data-save-org="${o.id}" ${Store.readOnly ? "disabled" : ""}>☆ Save</button>`) : ""}
+          ${Store.isOwner && Store.mode === "db" ? `<button class="btn ghost" type="button" data-hide="${esc(s.id)}">${s.hidden ? "Unhide" : "Hide"}</button>` : ""}
+        </span></div>
+    </article>`;
+  }
+  function renderSignals() {
+    const vis = signals().filter((s) => !s.hidden || Store.isOwner);
+    const counts = {}; vis.forEach((s) => (counts[s.type] = (counts[s.type] || 0) + 1));
+    if (state.sigType && !counts[state.sigType]) state.sigType = "";
+    $("sigTypes").innerHTML = SIG_FILTERS.filter(([k]) => !k || counts[k]).map(([k, l]) =>
+      `<button class="chip" type="button" data-sigtype="${k}" aria-pressed="${state.sigType === k}">${l}${k ? ` <span class="mono">${counts[k]}</span>` : ""}</button>`).join("");
+    const list = vis.filter((s) => !state.sigType || s.type === state.sigType);
+    $("feed").innerHTML = list.length ? list.map((s) => sigCard(s)).join("") + `<p class="muted" style="font-size:13px;text-align:center">The weekly research run adds new signals on Sundays. Each one links to its source.</p>`
+      : `<div class="empty"><h3>No signals yet</h3><span>The research run adds new ones every Sunday.</span></div>`;
+  }
+
+  // ---------- pipeline view ----------
+  function renderPipeline() {
+    const entries = Object.values(Store.pipeline).filter((e) => BY_ID[e.org_id]);
+    const today = isoDay(new Date());
+    const due = entries.filter((e) => e.next_date && e.next_date <= today && e.stage !== "passed").sort((a, b) => a.next_date.localeCompare(b.next_date));
+    $("pipeSummary").textContent = entries.length ? `${entries.length} saved${due.length ? ` · ${due.length} due` : ""}` : "";
+    $("export").disabled = !entries.length;
+    if (!entries.length) {
+      $("pipe").innerHTML = `<div class="empty"><h3>Your pipeline is empty</h3><span>Save a brand or studio from Explore or Signals. Notes and follow-ups stay private to you.</span>
+        <button class="btn primary" type="button" data-goto="explore">Find brands to pitch</button></div>`;
+      return;
+    }
+    const row = (e) => { const o = BY_ID[e.org_id]; return `<button class="prow" type="button" data-id="${o.id}" style="${gstyle(o)}">${logo(o, "sm")}<span class="nm"><b>${esc(o.name)}</b><span>${esc(e.note ? e.note : KIND_ONE[o.kind] + " · " + (o.location.city || ""))}</span></span>${e.next_date ? `<span class="due">${e.next_date <= today ? "due " : ""}${fmtDate(e.next_date)}</span>` : ""}</button>`; };
+    let h = "";
+    if (due.length) h += `<div><h2>Due now <span class="badge">${due.length}</span></h2><div class="list">${due.map((e) => `<div class="duerow">${row(e)}<div class="acts"><button class="btn" type="button" data-snooze="${e.org_id}">+1 week</button><button class="btn" type="button" data-done-follow="${e.org_id}">Done</button></div></div>`).join("")}</div></div>`;
+    STAGES.forEach(([k, l]) => {
+      const list = entries.filter((e) => e.stage === k && !due.includes(e)).sort((a, b) => String(a.next_date || "9").localeCompare(String(b.next_date || "9")) || String(b.updated_at).localeCompare(String(a.updated_at)));
+      if (list.length) h += `<div><h2>${l} <span class="mono">${list.length}</span></h2><div class="list">${list.map(row).join("")}</div></div>`;
+    });
+    $("pipe").innerHTML = h;
+  }
+  async function exportData() {
+    const payload = JSON.stringify({ exported: new Date().toISOString(), app: "landscape", v: 1, prefs: Store.prefs, pipeline: Object.values(Store.pipeline) }, null, 2);
+    if (Store.downloads) {
+      try { await Store.downloads.save({ filename: `landscape-pipeline-${isoDay(new Date())}.json`, data: payload }); toast("Exported"); return; }
+      catch (e) { if (e && e.code === "declined") return; }
+    }
+    $("panel").innerHTML = `<button class="close" type="button" aria-label="Close">×</button><h2 style="margin:4px 0 8px;font-size:22px">Your data</h2>
+      <p class="muted" style="margin:0 0 8px">Copy and keep this JSON. It holds your pipeline, notes and crafts.</p>
+      <textarea class="export" id="exportText" readonly>${esc(payload)}</textarea>
+      <div class="sheetfoot"><button class="btn primary" type="button" id="copyExport">Copy</button></div>`;
+    showPanel();
+    $("copyExport").addEventListener("click", () => {
+      const t = $("exportText");
+      const fallback = () => { t.focus(); t.select(); toast("Selected. Copy it from here."); };
+      try { navigator.clipboard.writeText(payload).then(() => toast("Copied"), fallback); } catch (e) { fallback(); }
+    });
+  }
+
+  // ---------- shell ----------
+  function renderNotice() {
+    const n = $("storeNotice");
+    if (Store.readOnly) { n.hidden = false; n.textContent = "You can browse everything here. Saving to a pipeline needs Contributor access from the owner."; }
+    else if (Store.mode === "local") { n.hidden = false; n.textContent = "Your pipeline is saved on this device only. Open Landscape in claude.ai to keep it private and in sync across devices."; }
+    else n.hidden = true;
+  }
+  function renderBadges() {
+    const fresh = signals().filter((s) => !s.hidden && daysAgo(s.date) <= 14).length;
+    $("sigBadge").hidden = !fresh; $("sigBadge").textContent = fresh;
+    const today = isoDay(new Date());
+    const due = Object.values(Store.pipeline).filter((e) => e.next_date && e.next_date <= today && e.stage !== "passed").length;
+    $("pipeBadge").hidden = !due; $("pipeBadge").textContent = due;
+  }
+  function renderView() {
+    ["explore", "signals", "pipeline"].forEach((t) => ($("v-" + t).hidden = state.tab !== t));
+    document.querySelectorAll("nav.tabbar button").forEach((b) => (b.dataset.tab === state.tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
+    if (state.tab === "explore") renderExplore();
+    else if (state.tab === "signals") renderSignals();
+    else renderPipeline();
+  }
+  function refresh() { state.shown = PAGE; saveView(); renderView(); }
+  function goTab(t) { state.tab = t; saveView(); renderView(); window.scrollTo(0, 0); try { history.replaceState(null, "", t === "explore" ? location.pathname + location.search : "#" + t); } catch (e) {} }
+
+  // ---------- events ----------
+  let qT;
+  $("q").addEventListener("input", (e) => { clearTimeout(qT); qT = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 120); });
+  $("lens").addEventListener("click", (e) => { const b = e.target.closest("[data-lens]"); if (b) { state.lens = b.dataset.lens; state.kinds = []; refresh(); } });
+  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; refresh(); });
+  $("openFilters").addEventListener("click", openFilters);
+  $("more").addEventListener("click", () => { state.shown += PAGE; renderExplore(); });
+  $("clearAll").addEventListener("click", () => { Object.assign(state, { q: "", kinds: [], cats: [], inds: [], needs: [], city: "" }); $("q").value = ""; refresh(); });
+  $("export").addEventListener("click", exportData);
+  document.querySelector("nav.tabbar").addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { closeAll(); goTab(b.dataset.tab); } });
+  $("scrim").addEventListener("click", () => { const wasPanel = !$("panel").hidden; closeAll(); if (wasPanel) refresh(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAll(); });
+
+  document.addEventListener("click", async (e) => {
+    const t = e.target.closest("button, a"); if (!t || t.closest("nav.tabbar") || t.closest("#lens")) return;
+    const d = t.dataset;
+    if (t.classList.contains("close")) { const wasPanel = !$("panel").hidden; closeAll(); if (wasPanel) refresh(); return; }
+    if (d.goto) { closeAll(); return goTab(d.goto); }
+    if (d.crafts !== undefined) return openCrafts();
+    if (d.rmcraft) return Store.setCrafts(myCrafts().filter((c) => c !== d.rmcraft));
+    if (d.craft) { const m = new Set(myCrafts()); m.has(d.craft) ? m.delete(d.craft) : m.add(d.craft); t.setAttribute("aria-pressed", m.has(d.craft)); return Store.setCrafts([...m]); }
+    if (d.done !== undefined) { closeAll(); return refresh(); }
+    if (d.f) { const arr = state[d.f]; const i = arr.indexOf(d.v); i >= 0 ? arr.splice(i, 1) : arr.push(d.v); t.setAttribute("aria-pressed", i < 0); return refresh(); }
+    if (d.unf) {
+      if (d.unf === "all") { Object.assign(state, { kinds: [], cats: [], inds: [], needs: [], city: "" }); if (!$("panel").hidden) openFilters(); }
+      else if (d.unf === "city") state.city = ""; else state[d.unf] = state[d.unf].filter((x) => x !== d.v);
+      return refresh();
+    }
+    if (d.sigtype !== undefined) { state.sigType = d.sigtype; saveView(); return renderSignals(); }
+    if (d.hide) { const s = signals().find((x) => x.id === d.hide); if (s) { const was = !!s.hidden; await Store.hideSignal(s, !was); toast(was ? "Signal shown again" : "Signal hidden for everyone"); } return; }
+    if (d.saveOrg) { await Store.setEntry(d.saveOrg, { stage: "to_pitch" }); toast("Saved to pipeline · To pitch"); return; }
+    if (d.snooze) { const n = new Date(); n.setDate(n.getDate() + 7); return Store.setEntry(d.snooze, { next_date: isoDay(n) }); }
+    if (d.doneFollow) { const e2 = Store.entry(d.doneFollow); return Store.setEntry(d.doneFollow, { next_date: null, stage: e2 && e2.stage === "to_pitch" ? "contacted" : e2?.stage }); }
+    const sid = $("sheet").dataset.id;
+    if (d.save !== undefined && sid) { await Store.setEntry(sid, { stage: "to_pitch" }); toast("Saved to pipeline · To pitch"); return; }
+    if (d.toggleEditor !== undefined) { const ed = $("editor"); if (ed) { ed.hidden = !ed.hidden; t.setAttribute("aria-expanded", !ed.hidden); } return; }
+    if (d.stage && sid) return Store.setEntry(sid, { stage: d.stage });
+    if (d.quick && sid) { const n = new Date(); n.setDate(n.getDate() + Number(d.quick)); return Store.setEntry(sid, { next_date: isoDay(n) }); }
+    if (d.clearDate !== undefined && sid) return Store.setEntry(sid, { next_date: null });
+    if (d.remove !== undefined && sid) { await Store.removeEntry(sid); toast("Removed from pipeline"); return; }
+    if (d.id) { e.preventDefault(); return openOrg(d.id); }
   });
-  $("scrim").addEventListener("click", close);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("sheet").hidden) close(); });
+  document.addEventListener("change", (e) => {
+    const sid = $("sheet").dataset.id; if (!sid || !Store.entry(sid)) return;
+    if (e.target.id === "note") { const v = e.target.value.trim(); if (v !== (Store.entry(sid).note || "")) Store.setEntry(sid, { note: v || null }); }
+    if (e.target.id === "next") Store.setEntry(sid, { next_date: e.target.value || null });
+  });
 
-  if (window.__LANDSCAPE__) boot(window.__LANDSCAPE__);
-  else fetch("data/dataset.json").then((r) => r.json()).then(boot).catch(() => { $("meta").textContent = "Could not load data/dataset.json"; });
+  // ---------- boot ----------
+  async function boot() {
+    let data, sig;
+    try {
+      [data, sig] = await Promise.all([
+        fetch("data/dataset.json").then((r) => r.json()),
+        fetch("data/signals.json").then((r) => r.json()).catch(() => ({ signals: [] })),
+      ]);
+    } catch (e) { $("meta").textContent = "Couldn’t load the map data. Reload to try again."; return; }
+    index(data);
+    BASE_SIGNALS = sig.signals || [];
+    $("meta").textContent = `${ORGS.length} organizations · ${BASE_SIGNALS.length} signals · updated ${new Date(data.generated).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" })}`;
+    const h = location.hash.slice(1);
+    if (["signals", "pipeline"].includes(h)) state.tab = h;
+    renderMine(); renderBadges(); renderView();
+    if (h && BY_ID[h]) openOrg(h);
+    window.addEventListener("hashchange", () => {
+      const k = location.hash.slice(1);
+      if (BY_ID[k]) openOrg(k); else if (["explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); }
+    });
+    fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
+    Store.init();
+  }
+  boot();
 })();
 </script>
 

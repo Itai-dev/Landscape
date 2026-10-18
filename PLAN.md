@@ -11,7 +11,9 @@ that helps creative people find collaborators, understand the market and land wo
 | Tooling | validate · ingest (dedupe + merge) · build · stale · stats | `scripts/landscape.py` |
 | Research engine | A research playbook Claude follows; segment queue; source list; log | `.claude/skills/research/`, `research/` |
 | Automation | Weekly Claude scheduled task → research cycle → PR for review. On demand: ask Claude "run research on X", or the GitHub Action button | Claude scheduled task, `.github/workflows/research.yml` |
-| Explorer | Mobile-friendly search / filter / detail view, with a "connections" graph (shared clients, agencies, parents, acquisitions) | `site/` → GitHub Pages |
+| App | Explore (Brands · Collaborators · All, ranked by fit to *your* crafts) · Signals (funding, agency moves, new marketing heads, hiring…) · private Pipeline (stages, notes, follow-ups, export) | `site/app.html` → claude.ai Artifact (+ GitHub Pages) |
+| Signals | Dated, sourced events that create a reason to reach out | `data/signals/`, `schema/signal.schema.json` |
+| Team decisions | Founder · Creative Director · UX/UI · Developer · Researcher memos and the decision record | `team/` |
 | Exports | CSV for spreadsheets / CRM import, stats summary | `data/exports/`, `STATS.md` |
 
 Every change to the data arrives as a pull request, so you review what the research found
@@ -24,12 +26,11 @@ before it lands, and git history shows how the landscape changes over time.
 2. **Israel — potential clients** *(seeded)* — ad / digital / media agencies, big advertisers,
    tech companies with heavy brand & video output, public sector.
 3. **World** — global creative-tech, leading studios, international buyers open to Israeli talent.
-4. **Make it useful for work** — ideas, in rough priority:
-   - "Who to pitch" views: clients by creative need (animation, 3D, social video…) and their agencies
-   - Signals: funding rounds, rebrands, new CMOs, campaign launches → fresh leads
-   - Personal CRM layer: notes, status (contacted / in talks / client), follow-ups
-   - Hebrew UI, map view, people layer (public creative directors / heads of studio)
-   - Open it to the community: submissions form, public read-only site
+4. **Make it useful for work** — v2 shipped (pipeline, signals, best fit). Next per `team/DECISIONS.md`:
+   - v3: AI pitch draft (why now · who · way in · what to show; drafts only, never sends), then "Ask the map"
+   - Buyer-side research: commissioning people, contact/careers pages, ~120 buyer records
+   - "This is wrong" reports, credits ("who made which ad"), Hebrew UI
+   - Community: profiles and sign-up on our own stack once the beta proves retention
 
 ## Data rules
 

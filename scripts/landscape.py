@@ -7,6 +7,7 @@
   python3 scripts/landscape.py stale [--days 90]   # records due for re-verification
   python3 scripts/landscape.py stats               # counts by kind / category / city
   python3 scripts/landscape.py logos [--all]       # fetch missing logos (needs Pillow)
+  python3 scripts/landscape.py signals FILE...     # merge new signals into data/signals/
 """
 from __future__ import annotations
 
@@ -27,6 +28,9 @@ LOGOS = ROOT / "data" / "logos"
 LOGO_MANIFEST = LOGOS / "manifest.json"
 SCHEMA = json.loads((ROOT / "schema" / "org.schema.json").read_text())
 TAXONOMY = json.loads((ROOT / "schema" / "taxonomy.json").read_text())
+NEEDS = json.loads((ROOT / "schema" / "needs.json").read_text())["needs"]
+SIGNAL_SCHEMA = json.loads((ROOT / "schema" / "signal.schema.json").read_text())
+SIGNALS = ROOT / "data" / "signals"
 FIELD_ORDER = list(SCHEMA["properties"].keys())
 LIST_FIELDS = {"aka", "categories", "services", "notable_clients", "notable_work", "tags", "sources"}
 CONF_RANK = {"low": 0, "medium": 1, "high": 2}
@@ -36,8 +40,9 @@ try:
     import jsonschema
 
     _VALIDATOR = jsonschema.Draft202012Validator(SCHEMA, format_checker=jsonschema.FormatChecker())
+    _SIG_VALIDATOR = jsonschema.Draft202012Validator(SIGNAL_SCHEMA, format_checker=jsonschema.FormatChecker())
 except ImportError:  # the tool still works, with lighter checks
-    _VALIDATOR = None
+    _VALIDATOR = _SIG_VALIDATOR = None
 
 
 # ---------- helpers ----------
@@ -190,6 +195,17 @@ def cmd_validate(_args) -> int:
             for e in errs:
                 print(f"    {e}")
     print(f"{len(orgs) - bad}/{len(orgs)} records valid")
+    sigs = load_signals()
+    ids = set()
+    for sig in sigs:
+        errs = signal_errors(sig, orgs)
+        if sig["id"] in ids:
+            errs.append("duplicate id")
+        ids.add(sig["id"])
+        if errs:
+            bad += 1
+            print(f"✗ signal {sig['id']}: " + "; ".join(errs))
+    print(f"{len(sigs)} signals checked")
     return 1 if bad else 0
 
 
@@ -236,26 +252,49 @@ def resolve_relations(orgs: dict[str, dict]) -> None:
             r["target_id"] = t if t in orgs else by_name.get(norm_name(t))
 
 
+def logo_data_uri(path: Path) -> str:
+    """64px WebP when Pillow is available (≈4x smaller), else the stored PNG."""
+    import base64
+    import io
+    try:
+        from PIL import Image
+        im = Image.open(path).convert("RGBA")
+        im.thumbnail((64, 64), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "WEBP", quality=82, method=6)
+        return "data:image/webp;base64," + base64.b64encode(buf.getvalue()).decode()
+    except Exception:
+        return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
+
+
 def cmd_build(_args) -> int:
     orgs = load_all()
     resolve_relations(orgs)
-    import shutil
-    site_logos = ROOT / "site" / "logos"
-    shutil.rmtree(site_logos, ignore_errors=True)
-    site_logos.mkdir(parents=True)
+    import base64
+    logos = {}
     for oid, o in orgs.items():
+        o["needs"] = org_needs(o)
         if (LOGOS / f"{oid}.png").exists():
-            shutil.copy(LOGOS / f"{oid}.png", site_logos / f"{oid}.png")
-            o["logo"] = f"logos/{oid}.png"
+            logos[oid] = logo_data_uri(LOGOS / f"{oid}.png")
     out_dir = ROOT / "site" / "data"
     out_dir.mkdir(parents=True, exist_ok=True)
     dataset = {
+        "schema_version": TAXONOMY.get("schema_version", 1),
         "generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "count": len(orgs),
         "taxonomy": TAXONOMY,
+        "needs": {k: {"label": v["label"], "crafts": v["crafts"]} for k, v in NEEDS.items()},
         "orgs": list(orgs.values()),
     }
-    (out_dir / "dataset.json").write_text(json.dumps(dataset, ensure_ascii=False, separators=(",", ":")))
+    compact = dict(ensure_ascii=False, separators=(",", ":"))
+    (out_dir / "dataset.json").write_text(json.dumps(dataset, **compact))
+    sigs = sorted(load_signals(), key=lambda x: x["date"], reverse=True)
+    (out_dir / "signals.json").write_text(json.dumps({"generated": dataset["generated"], "signals": sigs}, **compact))
+    (out_dir / "logos.json").write_text(json.dumps(logos, **compact))
+    shutil_old = ROOT / "site" / "logos"
+    if shutil_old.exists():
+        import shutil
+        shutil.rmtree(shutil_old)
     exp = ROOT / "data" / "exports"
     exp.mkdir(parents=True, exist_ok=True)
     cols = ["id", "name", "name_he", "kind", "categories", "city", "country", "founded", "size", "status",
@@ -278,22 +317,7 @@ def cmd_build(_args) -> int:
         "<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}"
         "body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>\n"
         "</head>\n<body>\n" + app + "\n</body>\n</html>\n")
-    print(f"built dataset with {len(orgs)} orgs → site/data/dataset.json, data/exports/landscape.csv, STATS.md")
-    return 0
-
-
-def cmd_standalone(args) -> int:
-    """Single HTML file with the data inlined (for sharing / artifact preview)."""
-    cmd_build(args)
-    import base64
-    ds = json.loads((ROOT / "site" / "data" / "dataset.json").read_text())
-    for o in ds["orgs"]:
-        if o.get("logo"):
-            o["logo"] = "data:image/png;base64," + base64.b64encode((ROOT / "site" / o["logo"]).read_bytes()).decode()
-    data = json.dumps(ds, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    app = (ROOT / "site" / "app.html").read_text()
-    Path(args.out).write_text(app.replace("<script>\n(function", f"<script>window.__LANDSCAPE__={data};</script>\n<script>\n(function", 1))
-    print(f"wrote {args.out}")
+    print(f"built {len(orgs)} orgs, {len(sigs)} signals, {len(logos)} logos → site/data/, data/exports/landscape.csv, STATS.md")
     return 0
 
 
@@ -332,6 +356,70 @@ def cmd_stats(_args) -> int:
     write_stats(orgs)
     print((ROOT / "STATS.md").read_text())
     return 0
+
+
+# ---------- signals ----------
+
+def load_signals() -> list[dict]:
+    out = []
+    for p in sorted(SIGNALS.glob("*.json")):
+        out += json.loads(p.read_text())
+    return out
+
+
+def signal_errors(sig: dict, orgs: dict) -> list[str]:
+    errs = []
+    if _SIG_VALIDATOR:
+        errs += [f"{'/'.join(map(str, e.path)) or '(root)'}: {e.message}" for e in _SIG_VALIDATOR.iter_errors(sig)]
+    for oid in [sig.get("org_id")] + sig.get("related_ids", []):
+        if oid and oid not in orgs:
+            errs.append(f"unknown org id '{oid}'")
+    return errs
+
+
+def signal_id(sig: dict) -> str:
+    import hashlib
+    slug = sig.get("org_id") or slugify(sig["org_name"])[:40].strip("-")
+    return f"sig-{sig['date']}-{slug}-{hashlib.sha1(sig['source_url'].encode()).hexdigest()[:6]}"
+
+
+def cmd_signals(args) -> int:
+    """Merge a staging array of signals into data/signals/YYYY-MM.json (dedupe by id)."""
+    orgs = load_all()
+    by_name = {norm_name(o["name"]): oid for oid, o in orgs.items()}
+    existing = {s["id"] for s in load_signals()}
+    added, rejected = 0, 0
+    for path in args.files:
+        for raw in json.loads(Path(path).read_text()):
+            sig = {k: v for k, v in raw.items() if v not in (None, "", [], {})}
+            sig.setdefault("added", TODAY)
+            sig["v"] = 1
+            if not sig.get("org_id"):
+                sig["org_id"] = by_name.get(norm_name(sig.get("org_name", "")))
+            sig["id"] = signal_id(sig)
+            if sig["id"] in existing:
+                continue
+            errs = signal_errors(sig, orgs)
+            if errs:
+                rejected += 1
+                print(f"  ✗ {sig['id']}: " + "; ".join(errs))
+                continue
+            month = SIGNALS / f"{sig['date'][:7]}.json"
+            cur = json.loads(month.read_text()) if month.exists() else []
+            cur.append(sig)
+            cur.sort(key=lambda x: x["date"], reverse=True)
+            SIGNALS.mkdir(parents=True, exist_ok=True)
+            if not args.dry_run:
+                month.write_text(json.dumps(cur, ensure_ascii=False, indent=2) + "\n")
+            existing.add(sig["id"])
+            added += 1
+    print(f"signals: added {added}, rejected {rejected}" + (" (dry run)" if args.dry_run else ""))
+    return 1 if rejected and args.strict else 0
+
+
+def org_needs(o: dict) -> list[str]:
+    text = [n.lower() for n in o.get("client_profile", {}).get("creative_needs", [])]
+    return [k for k, v in NEEDS.items() if any(re.search(m, t) for m in v["match"] for t in text)]
 
 
 # ---------- logos ----------
@@ -462,9 +550,11 @@ def main() -> int:
     lg.add_argument("--all", action="store_true", help="re-fetch every logo")
     lg.add_argument("ids", nargs="*", help="only these org ids")
     lg.set_defaults(fn=cmd_logos)
-    st = sub.add_parser("standalone")
-    st.add_argument("out")
-    st.set_defaults(fn=cmd_standalone)
+    sg = sub.add_parser("signals")
+    sg.add_argument("files", nargs="+")
+    sg.add_argument("--dry-run", action="store_true")
+    sg.add_argument("--strict", action="store_true")
+    sg.set_defaults(fn=cmd_signals)
     args = p.parse_args()
     return args.fn(args)
 

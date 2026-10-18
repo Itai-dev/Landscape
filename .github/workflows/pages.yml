@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install jsonschema && python3 scripts/landscape.py build
+      - run: pip install jsonschema pillow && python3 scripts/landscape.py build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

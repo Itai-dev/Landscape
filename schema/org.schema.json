@@ -111,6 +111,21 @@
       "type": "string",
       "format": "uri"
     },
+    "contact_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public contact page (no personal emails)"
+    },
+    "careers_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Public jobs / careers page"
+    },
+    "reel_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Showreel (Vimeo / YouTube / site)"
+    },
     "links": {
       "type": "object",
       "additionalProperties": {
@@ -153,6 +168,25 @@
           },
           "role": {
             "type": "string"
+          },
+          "role_type": {
+            "enum": [
+              "founder",
+              "executive",
+              "creative_lead",
+              "production",
+              "marketing",
+              "other"
+            ],
+            "description": "production / marketing / creative_lead = people who commission creative work"
+          },
+          "source": {
+            "type": "string",
+            "format": "uri"
+          },
+          "as_of": {
+            "type": "string",
+            "format": "date"
           }
         }
       },

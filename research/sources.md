@@ -23,3 +23,12 @@ Good places to discover and verify organizations. Add to this list as runs find 
 ## Hebrew search terms
 סטודיו לאנימציה · מושן גרפיקס · סטודיו למיתוג · אולפן פוסט · אפקטים ויזואליים ·
 חברת הפקות פרסומות · אולפן סאונד · משרד פרסום · סטודיו לעיצוב
+
+## Signal pages (checked every cycle)
+- Globes ad agencies tag — https://www.globes.co.il/news/משרדי_פרסום.tag (account moves, best source)
+- ICE advertising & marketing — https://www.ice.co.il/advertising-marketing (ad of the week = full credits)
+- Geektime funding — https://www.geektime.co.il/category/funding/
+- Globes English front page — https://en.globes.co.il
+- CTech (Calcalist English) funding rounds
+- LinkedIn public job search: "motion designer", "3D", "animator", "creative director" in Israel (relative dates → `date_approx`)
+- Not reliable yet: gov.il / mr.gov.il tenders (blocked / JS-only)

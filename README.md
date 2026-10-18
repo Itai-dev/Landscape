@@ -4,7 +4,7 @@ A living map of the creative industry — starting with Israel. Studios, product
 creative-tech startups, agencies and the brands that buy creative work, in one searchable,
 source-backed data layer that keeps itself up to date.
 
-- **Browse:** open the explorer (GitHub Pages, see below) or `site/index.html` locally via any static server.
+- **Use it:** the claude.ai app (private link) — Explore brands & collaborators ranked by fit, a weekly Signals feed, and your private Pipeline. Or GitHub Pages / `python3 -m http.server -d site` (pipeline saved on that device only).
 - **Spreadsheet:** `data/exports/landscape.csv`
 - **Coverage:** [`STATS.md`](STATS.md) · **Plan:** [`PLAN.md`](PLAN.md)
 
@@ -30,12 +30,14 @@ Segments and their order live in [`research/queue.md`](research/queue.md).
 pip install jsonschema
 python3 scripts/landscape.py validate          # check all records
 python3 scripts/landscape.py ingest FILE.json  # merge new/updated records
-python3 scripts/landscape.py build             # rebuild explorer data, CSV, STATS.md
+python3 scripts/landscape.py signals FILE.json # merge new signals
+python3 scripts/landscape.py logos             # fetch logos for new orgs (pip install pillow)
+python3 scripts/landscape.py build             # rebuild app data, CSV, STATS.md
 python3 scripts/landscape.py stale --days 90   # what needs re-verifying
 python3 -m http.server -d site 8000            # browse locally at localhost:8000
 ```
 
-### Publish the explorer
+### Publish the app on GitHub Pages
 Settings → Pages → Source: **GitHub Actions**. Every merge to `main` redeploys it.
 
 ## Record format

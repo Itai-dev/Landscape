@@ -92,5 +92,82 @@
     "partner": "Partnership / frequent collaborator",
     "spun_off_from": "This org spun off from the target",
     "investor": "Target invested in this org"
-  }
+  },
+  "facets": {
+    "craft": [
+      "animation-2d",
+      "animation-3d",
+      "motion-design",
+      "vfx",
+      "cgi-3d",
+      "post-production",
+      "color-grading",
+      "editing",
+      "sound-design",
+      "music-production",
+      "branding",
+      "graphic-design",
+      "illustration",
+      "digital-design",
+      "creative-technology",
+      "experiential",
+      "xr",
+      "game-art",
+      "game-development",
+      "film-production",
+      "commercial-production",
+      "content-studio",
+      "photography",
+      "ai-creative",
+      "packaging",
+      "typography"
+    ],
+    "product": [
+      "gen-ai-video",
+      "gen-ai-image",
+      "gen-ai-audio",
+      "avatars",
+      "dubbing-localization",
+      "design-tools",
+      "video-tools",
+      "photo-tools",
+      "stock-media",
+      "music-tech",
+      "creator-economy",
+      "marketplace",
+      "website-builders",
+      "adtech-creative",
+      "3d-tools",
+      "media-infrastructure",
+      "sports-media"
+    ],
+    "agency": [
+      "advertising",
+      "digital-agency",
+      "media-agency",
+      "pr-social"
+    ],
+    "industry": [
+      "telecom",
+      "banking-finance",
+      "food-beverage",
+      "retail-fashion",
+      "tech",
+      "gaming",
+      "media-broadcast",
+      "automotive",
+      "health-pharma",
+      "travel-hospitality",
+      "real-estate",
+      "public-sector",
+      "consumer-goods",
+      "energy"
+    ],
+    "community": [
+      "education",
+      "festival-event",
+      "association"
+    ]
+  },
+  "schema_version": 2
 }

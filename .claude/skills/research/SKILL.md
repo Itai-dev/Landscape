@@ -33,12 +33,29 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
 4. **Write staging**: a JSON array to `research/staging/<segment>-<YYYY-MM-DD>.json`
    (same shape as the records; `added` / `last_verified` = today).
    - `confidence`: high = official site + independent source agree; medium = one solid source; low = thin.
-   - `key_people`: only publicly listed founders/leadership. No personal phones or emails.
+   - `key_people`: only publicly announced business roles, each with `role_type`
+     (founder / executive / creative_lead / production / marketing / other), `source` and `as_of`.
+     Prioritise people who *commission* work: heads of production, agency producers, marketing heads.
+     No personal phones or emails, ever.
+   - Fill `contact_url` (public contact page), `careers_url` and `reel_url` when they exist.
+   - For brands and agencies fill `client_profile.creative_needs` in plain words
+     ("social video", "3D packshots"); `schema/needs.json` maps them to the controlled list —
+     if a need matches nothing there, add a `match` pattern rather than a new free-text variant.
+   - Ids never change once merged. If two records turn out to be the same org, keep one and add
+     `"old-id": "kept-id"` to `data/redirects.json`.
    - `relations.target`: an existing org id where one matches, otherwise the plain name.
      `client` = target is this org's client; `agency` = target is the agency/studio this org hires.
 5. **Refresh** (refresh/cycle mode): `python3 scripts/landscape.py stale --days 90 --limit 15`.
    For each, re-check website/status/size/funding/clients; write the corrected full record to a
    staging file with today's `last_verified`. If an org closed, set `status: closed` (don't delete).
+5b. **Signals** (every cycle): check the fixed signal pages in `research/sources.md`
+   (Globes ad-agency tag, ICE ad-of-the-week, Geektime funding, CTech, LinkedIn jobs for studios/brands)
+   for the last 7–14 days. Write a JSON array to `research/staging/signals-<date>.json` following
+   `schema/signal.schema.json` (`id` is generated; give `type, org_id|org_name, related_ids, date,
+   date_approx, headline, why, credits, source_url, source`). `why` is an observation for a creative
+   ("new marketing heads often review suppliers"), never an instruction or a sales line.
+   Merge with `python3 scripts/landscape.py signals research/staging/signals-<date>.json`.
+   Orgs named in signals but missing from the map are discovery candidates for this run.
 6. **Merge**: `python3 scripts/landscape.py ingest research/staging/<file>.json` then
    `python3 scripts/landscape.py validate` (must pass), `python3 scripts/landscape.py logos` (fetches logos
    for new orgs; needs `pip install pillow`) and `python3 scripts/landscape.py build`.
@@ -47,8 +64,15 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    `- YYYY-MM-DD · <mode> · <segment> · +N new, ~M updated · notes`. Tick the segment in
    `research/queue.md` when its coverage looks reasonably complete.
 8. **Ship**: commit on a new branch `research/<YYYY-MM-DD>-<segment>`, push, and open a PR
-   titled `Research: <segment> (+N, ~M)` listing the new orgs (name — kind — city) and notable
-   corrections. Staging files are gitignored (the merged data in data/orgs is the record).
+   titled `Research: <segment> (+N orgs, +S signals, ~M)` listing the new orgs (name — kind — city),
+   new signals and notable corrections. Staging files are gitignored (merged data is the record).
+9. **Live signals** (if the `ArtifactData` tool is available): also write each new signal to the app
+   database so it shows before the PR merges — `ArtifactData batch` of `set` ops into collection
+   `signals` (doc_id = signal id) on https://claude.ai/artifact/GKnvThtikDhCYRNxhSb2xF.
+   Never write under `data/users/` (people's private pipelines).
+10. **After merge** (owner or a later session): republish the app with the new data —
+    `python3 scripts/landscape.py build`, then Artifact publish `site/app.html` to the URL above with
+    files `data/dataset.json`, `data/signals.json`, `data/logos.json` from `site/data/`.
 
 ## Quality bar
 
