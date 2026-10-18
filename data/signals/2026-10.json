@@ -13,6 +13,19 @@
     "v": 1
   },
   {
+    "type": "ownership",
+    "org_id": "mcdonalds-israel",
+    "org_name": "McDonald's Israel",
+    "date": "2026-10-18",
+    "headline": "Wiz co-founder Assaf Rappaport emerging as winning bidder for the McDonald's Israel franchise (run by US HQ since 2024); no official deal yet",
+    "why": "A new franchisee would likely revisit agency, brand and content suppliers. Still unconfirmed.",
+    "source_url": "https://en.globes.co.il/en/article-assaf-rappaport-eyes-mcdonalds-israeli-franchise-1001559874",
+    "source": "Globes",
+    "added": "2026-10-18",
+    "v": 1,
+    "id": "sig-2026-10-18-mcdonalds-israel-1436eb"
+  },
+  {
     "id": "sig-2026-10-16-delek-israel-b2b774",
     "type": "campaign",
     "org_id": null,
@@ -30,6 +43,33 @@
     }
   },
   {
+    "type": "acquisition",
+    "org_name": "Hamat Gader",
+    "date": "2026-10-15",
+    "headline": "Gal Naor's Naor Group buying 70% of Hamat Gader's operator (~NIS 150M); plans ~140 new rooms and an upgrade of baths and spa to international standards",
+    "why": "A leisure site being repositioned for overnight guests; projects like this often bring a new identity and marketing content. Early stage.",
+    "source_url": "https://en.globes.co.il/en/article-gal-naor-plans-hamat-gader-makeover-1001559646",
+    "source": "Globes",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-15-hamat-gader-92be7e"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/4477078002",
+    "org_name": "pigment creative house",
+    "date": "2026-10-15",
+    "headline": "pigment creative house hiring a Video Editor (Tel Aviv) for AI video and full post on commercials, social reels and brand films; posted ~3 days ago",
+    "why": "A small creative house producing commercials with AI-generated footage; not in the map yet.",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-15-pigment-creative-house-76ff37"
+  },
+  {
     "id": "sig-2026-10-14-zenzap-cb46dc",
     "type": "funding",
     "org_id": null,
@@ -43,6 +83,20 @@
     "v": 1
   },
   {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/creative-technologist-playable-ads-at-sett-4477988797",
+    "org_name": "Sett",
+    "date": "2026-10-13",
+    "headline": "Sett (AI UA-creative platform for mobile games; $30M Series B in March) hiring a Creative Technologist for playable ads (Tel Aviv); posted ~5 days ago",
+    "why": "AI-generated game ads are automating work animators used to do for UA. Sett's tools also guide human production teams.",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-13-sett-c5d9bf"
+  },
+  {
     "id": "sig-2026-10-12-decart-42c75a",
     "type": "funding",
     "org_id": "decart",
@@ -54,6 +108,19 @@
     "source": "Globes",
     "added": "2026-10-18",
     "v": 1
+  },
+  {
+    "type": "acquisition",
+    "org_name": "Stop Market / Shuk Herzl (Dudu Ezra Holdings)",
+    "date": "2026-10-12",
+    "headline": "Dudu Ezra Holdings (Shuk Herzl) completes NIS 680M acquisition of Stop Market (11 stores); 23 supermarkets combined, 10 new Shuk Herzl branches planned",
+    "why": "Both chains keep separate brands, but a merged customer club and 10 new branches mean store-opening and loyalty campaigns.",
+    "source_url": "https://en.globes.co.il/en/article-dudu-ezra-completes-nis-680m-acquisition-of-stop-market-1001559192",
+    "source": "Globes",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-12-stop-market-shuk-herzl-dudu-ezra-holding-8fda6f"
   },
   {
     "id": "sig-2026-10-11-adler-chomski-warshavsky-6e8c9d",
@@ -96,6 +163,75 @@
     "date_approx": true
   },
   {
+    "type": "campaign",
+    "org_name": "Dreame Israel (Kristalino Group)",
+    "date": "2026-10-11",
+    "headline": "Dreame launches its washing machine & dryer line in Israel (L9 WashTower AI Set) with a digital/social/PR campaign led by Naama Kasry; Dreame Israel CEO Ronen Salem quoted",
+    "why": "A new appliance line entering Israel via a distributor: launch campaigns like this run on social video and product content. No agency is credited in the article.",
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1133099",
+    "source": "ICE",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-11-dreame-israel-kristalino-group-f45dc2"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/motion-designer-base44-at-base44-4470691953",
+    "org_id": "wix",
+    "org_name": "Base44 (Wix)",
+    "date": "2026-10-11",
+    "headline": "Base44, the AI app builder recently acquired by Wix, hiring a Motion Designer (Tel Aviv) for styleframes, storyboards and brand motion; posted ~1 week ago",
+    "why": "A newly acquired product building its own motion identity inside Wix, working with animators, editors and 3D artists.",
+    "added": "2026-10-18",
+    "v": 1,
+    "id": "sig-2026-10-11-wix-436847"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/lead-motion-designer-at-honeybook-4466610757",
+    "org_name": "HoneyBook",
+    "date": "2026-10-11",
+    "headline": "HoneyBook hiring a Lead Motion Designer (Tel Aviv) for ads, tutorials, product videos and brand content with AI workflows; posted ~1 week ago",
+    "why": "The listing says the lead will brief and review freelance motion artists when projects need more capacity.",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-11-honeybook-a0099b"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/4457710547",
+    "org_name": "Sodastream (PepsiCo)",
+    "date": "2026-10-11",
+    "headline": "Sodastream (PepsiCo) hiring a Global Digital Content Lead (Kfar Saba) for global campaigns and launches, working with agencies and production partners; posted ~1 week ago",
+    "why": "A global brand run from Israel that briefs external agencies and production partners for platform-native content.",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-11-sodastream-pepsico-47eb02"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/4477261177",
+    "org_name": "Dream",
+    "date": "2026-10-11",
+    "headline": "Dream (sovereign AI / national cyber-defense) hiring a Motion, Video & Brand Designer (Tel Aviv) for executive interviews, customer films, explainers and event content; posted ~1 week ago",
+    "why": "The role either makes the films itself or directs external production partners, so outside crews may get work too.",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-11-dream-20d759"
+  },
+  {
     "id": "sig-2026-10-09-israir-2358ff",
     "type": "campaign",
     "org_id": "israir",
@@ -130,6 +266,19 @@
     "v": 1
   },
   {
+    "type": "acquisition",
+    "org_name": "Hedia / A2Z Cust2Mate",
+    "date": "2026-10-08",
+    "headline": "Smart-cart maker A2Z Cust2Mate acquires veteran Israeli retail media company Hedia for $15M (+ earn-out); carts with 13-inch ad screens run in Yochananof, Super Sapir, Neto Hishachon",
+    "why": "In-store screen ads are a growing format; someone has to make short, silent, shelf-level video for them.",
+    "source_url": "https://en.globes.co.il/en/article-retail-media-merger-expands-smart-cart-capabilities-1001558985",
+    "source": "Globes",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-08-hedia-a2z-cust2mate-bc707d"
+  },
+  {
     "id": "sig-2026-10-06-loreal-israel-ed6db0",
     "type": "agency_move",
     "org_id": "loreal-israel",
@@ -146,6 +295,95 @@
       "universal-mccann-israel",
       "gitam-bbdo"
     ]
+  },
+  {
+    "type": "launch",
+    "org_name": "CANDID",
+    "date": "2026-10-05",
+    "headline": "Men's fashion chain CANDID grows to 10 stores (Haifa to Eilat) after a ~NIS 24.6M expansion plan, with Nahariya, Rosh Pina and Petah Tikva stores planned",
+    "why": "A fast-growing fashion chain leaning on celebrity exposure; new store openings usually need campaign, lookbook and social video.",
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1132180",
+    "source": "ICE",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-05-candid-5550ae"
+  },
+  {
+    "type": "acquisition",
+    "org_name": "enso",
+    "date": "2026-10-05",
+    "headline": "enso to acquire Israeli performance agency PPG Digital (~NIS 600M in managed media) and an unnamed US marketing firm for up to $25M (Calcalist, market sources)",
+    "why": "An AI company buying a performance agency: PPG Digital's creative production may shift toward AI-generated ads.",
+    "source_url": "https://www.calcalistech.com/ctechnews/article/lu31nb95d",
+    "source": "CTech",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-05-enso-43025b"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/creative-director-at-tailor-brands-4474168986",
+    "org_id": "tailor-brands",
+    "org_name": "Tailor Brands",
+    "date": "2026-10-04",
+    "headline": "Tailor Brands hiring a Creative Director (Tel Aviv) to lead its in-house studio of editors, motion designers and producers; 25+ performance deliverables a week; posted ~2 weeks ago",
+    "why": "High-volume performance video with vendor management in scope: in-house shoots and post-production.",
+    "added": "2026-10-18",
+    "v": 1,
+    "id": "sig-2026-10-04-tailor-brands-d93e2a"
+  },
+  {
+    "type": "hiring",
+    "source": "LinkedIn Jobs",
+    "date_approx": true,
+    "source_url": "https://il.linkedin.com/jobs/view/2d-concept-artist-beach-bum-at-beach-bum-4455258741",
+    "org_id": "beach-bum",
+    "org_name": "Beach Bum",
+    "date": "2026-10-04",
+    "headline": "Beach Bum hiring a 2D/Concept Artist (Raanana) for game UI, characters, props and environments in Unity; posted ~2 weeks ago",
+    "why": "2D game art role at a Raanana mobile games studio.",
+    "added": "2026-10-18",
+    "v": 1,
+    "id": "sig-2026-10-04-beach-bum-c540fb"
+  },
+  {
+    "type": "campaign",
+    "org_id": "mizrahi-tefahot",
+    "org_name": "Mizrahi Tefahot Bank",
+    "related_ids": [
+      "reuveni-pridan",
+      "keshet-media-group"
+    ],
+    "date": "2026-10-02",
+    "headline": "Mizrahi Tefahot branded web series 'In the Kitchen of Cafe Tzion' with Gia Bar Gurovich and Dvir Benedek — agency Reuveni Pridan, produced by Keshet Group, director Yogev Yefet",
+    "why": "A bank commissioning episodic branded content rather than spots. Keshet's in-house team handled post and motion design, so broadcasters are competing with studios for this work.",
+    "credits": {
+      "agency": "Reuveni Pridan",
+      "production": "Keshet Group",
+      "director": "Yogev Yefet"
+    },
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1131943",
+    "source": "ICE",
+    "added": "2026-10-18",
+    "v": 1,
+    "id": "sig-2026-10-02-mizrahi-tefahot-a46148"
+  },
+  {
+    "type": "funding",
+    "org_name": "enso",
+    "date": "2026-10-01",
+    "headline": "AI marketing-agent startup enso (CEO Mickey Haslavsky, RapidAPI co-founder) raises $15M Series A led by MoreTech Ventures; 26 employees",
+    "why": "AI agents doing growth marketing; worth watching as they move into creative and content work.",
+    "source_url": "https://www.calcalistech.com/ctechnews/article/sy2ks2o9ml",
+    "source": "CTech",
+    "added": "2026-10-18",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-01-enso-07f37e"
   },
   {
     "id": "sig-2026-09-27-artlist-fd47b8",
