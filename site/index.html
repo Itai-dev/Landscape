@@ -214,6 +214,8 @@ details[open] summary { margin-bottom: 8px; }
 .filtersec { display: grid; gap: 8px; margin-top: 14px; }
 .filtersec h4 { margin: 0; }
 .sheetfoot { position: sticky; bottom: calc(-28px - env(safe-area-inset-bottom, 0px)); background: var(--surface); padding-block: 12px; margin-top: 14px; display: flex; gap: 8px; justify-content: flex-end; border-top: 1px solid var(--line); }
+#panel select, #panel input.btn { width: 100%; max-width: 100%; min-width: 0; text-overflow: ellipsis; }
+#panel .row input.btn { width: auto; }
 textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: var(--bg); }
 .toast { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 12px); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
 </style>
@@ -361,7 +363,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 
   // ---------- storage (per-person, private) ----------
   const Store = {
-    mode: "loading", isOwner: false, uid: null, db: null, downloads: null, readOnly: false,
+    mode: "loading", isOwner: false, uid: null, db: null, downloads: null, sample: null, readOnly: false,
     pipeline: {}, prefs: { crafts: [] }, dbSignals: {},
     chains: {},
     key: "landscape-v2",
@@ -371,6 +373,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
         if (window.claude && typeof window.claude.use === "function") {
           [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
           this.downloads = await window.claude.use("downloads").catch(() => null);
+          this.sample = await window.claude.use("sample").catch(() => null);
         }
       } catch (e) { db = null; }
       if (user) {
@@ -424,6 +427,23 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     async setCrafts(crafts) {
       this.prefs = { ...this.prefs, crafts, v: 1 }; changed("prefs");
       return this.write("data/users/" + this.uid + "/prefs", this.prefs);
+    },
+    async setPrefs(patch) {
+      this.prefs = { ...this.prefs, ...patch, v: 1 }; changed("prefs");
+      return this.write("data/users/" + this.uid + "/prefs", this.prefs);
+    },
+    async report(item) {
+      if (this.mode !== "db" || this.readOnly) return false;
+      const ref = this.db.doc("reports/" + this.uid);
+      try {
+        await this.serial(ref.path, async () => {
+          const cur = await ref.get();
+          const items = cur.exists ? [...(cur.data().items || [])] : [];
+          items.push(item);
+          await ref.set({ items: items.slice(-200), v: 1 });
+        });
+        return true;
+      } catch (e) { toast("Couldn’t send the report. Try again."); return false; }
     },
     async hideSignal(sig, hidden) {
       if (!this.isOwner || this.mode !== "db") return;
@@ -599,7 +619,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       <div class="sheetfoot"><button class="btn primary" type="button" data-done>Done</button></div>`;
     showPanel();
   }
-  function showPanel() { $("sheet").hidden = true; $("panel").hidden = false; $("scrim").hidden = false; $("panel").scrollTop = 0; $("panel").querySelector(".close").focus({ preventScroll: true }); }
+  function showPanel(back) { if (back) $("panel").dataset.back = back; else delete $("panel").dataset.back; $("sheet").hidden = true; $("panel").hidden = false; $("scrim").hidden = false; $("panel").scrollTop = 0; $("panel").querySelector(".close").focus({ preventScroll: true }); }
 
   // ---------- detail sheet ----------
   function waysIn(o) {
@@ -672,9 +692,11 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       <div class="actions">
         ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">★ ${esc(STAGE_LABEL[e.stage])}${e.next_date ? ` · follow up ${fmtDate(e.next_date)}` : ""}</button>`
             : `<button class="btn primary" type="button" data-save ${Store.readOnly ? "disabled" : ""}>☆ Save to pipeline</button>`}
+        ${Store.sample && Store.mode === "db" ? `<button class="btn" type="button" data-pitch>✎ Draft a pitch</button>` : ""}
         ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">Website ↗</a>` : ""}
       </div>
       ${e ? editor(e) : ""}
+      ${e && e.draft ? `<section><h4>Saved draft</h4><p style="white-space:pre-wrap;font-size:14px;margin-top:0" dir="auto">${esc(e.draft)}</p></section>` : ""}
       ${sigs.length ? `<section><h4>Why now</h4><div class="feed">${sigs.slice(0, 4).map((s) => sigCard(s, true)).join("")}</div></section>` : ""}
       ${buyer && (o.needs.length || o.client_profile?.creative_needs?.length) ? `<section><h4>What they buy</h4>
         <div>${o.needs.map((n) => `<span class="tag${hits.has(n) ? " hit" : ""}">${hits.has(n) ? "✓ " : ""}${esc(NEEDS[n]?.label || n)}</span>`).join("")}</div>
@@ -693,14 +715,136 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       </details></section>` : ""}
       ${links.length ? `<section><h4>Links</h4><div class="chipset">${links.map(([l, u]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join("")}</div></section>` : ""}
       <section><details><summary>Sources · ${esc(o.confidence)} confidence · checked ${esc(fmtDate(o.last_verified))}</summary>
-        <div class="sources">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></details></section>`;
+        <div class="sources">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></details>
+        ${Store.mode === "db" && !Store.readOnly ? `<button class="btn ghost" type="button" data-report style="margin-top:6px">Report a mistake</button>` : ""}</section>`;
     if (sh.hidden) { $("panel").hidden = true; sh.hidden = false; $("scrim").hidden = false; sh.scrollTop = 0; sh.querySelector(".close").focus({ preventScroll: true }); }
     else sh.scrollTop = keepScroll ? scroll : 0;
     try { history.replaceState(null, "", "#" + o.id); } catch (err) {}
   }
   function closeAll() {
+    if (pitchCtl) { pitchCtl.abort(); pitchCtl = null; }
     $("sheet").hidden = true; $("panel").hidden = true; $("scrim").hidden = true; delete $("sheet").dataset.id;
     try { history.replaceState(null, "", location.pathname + location.search + (state.tab !== "explore" ? "#" + state.tab : "")); } catch (e) {}
+  }
+
+
+  // ---------- pitch draft (drafts only, never sends) ----------
+  let pitchCtl = null;
+  function pitchPeople(o) {
+    const ppl = (o.key_people || []).map((p) => ({ v: `${p.name} (${p.role})`, l: `${p.name} · ${p.role}`, pri: ["marketing", "production", "creative_lead"].includes(p.role_type) ? 0 : /market|brand|produc|creative|content/i.test(p.role) ? 1 : 2 }));
+    ppl.sort((a, b) => a.pri - b.pri);
+    const ag = agencyOf(o);
+    const best = ppl.filter((p) => p.pri < 2).map((p) => [p.v, p.l]);
+    const rest = ppl.filter((p) => p.pri === 2).map((p) => [p.v, p.l]);
+    const out = [...best];
+    if (ag && o.kind !== "agency") out.push([`their agency, ${ag}`, `Via their agency · ${ag}`]);
+    out.push(["", "No name (general)"]);
+    return [...out, ...rest];
+  }
+  function openPitch(o) {
+    const sigs = signalsFor(o).slice(0, 6);
+    const me = Store.prefs.me || "";
+    const samples = Store.prefs.samples || [];
+    const opt = (v, l, sel) => `<option value="${esc(v)}"${sel ? " selected" : ""}>${esc(l)}</option>`;
+    $("panel").innerHTML = `
+      <button class="close" type="button" aria-label="Close">×</button>
+      <h2 style="margin:4px 0 0;font-size:22px">Pitch ${esc(o.name)}</h2>
+      <p class="muted" style="margin:6px 0 0;font-size:13px">One short, specific message. You edit it and send it yourself — Landscape never sends anything.</p>
+      <div class="filtersec"><h4>Why now</h4>
+        <select class="btn" id="pWhy" aria-label="Why now">${sigs.map((s, i) => opt("sig:" + s.id, `${SIG_TYPES[s.type] || s.type} · ${trim(s.headline, 70)}`, i === 0)).join("")}${opt("other", "Something else (write it)", !sigs.length)}</select>
+        <textarea id="pWhyText" dir="auto" placeholder="e.g. Saw your new summer campaign on ICE" ${sigs.length ? "hidden" : ""} style="width:100%;min-height:54px;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--surface)"></textarea></div>
+      <div class="filtersec"><h4>Who</h4><select class="btn" id="pWho" aria-label="Who">${pitchPeople(o).map(([v, l], i) => opt(v, l, i === 0)).join("")}</select></div>
+      <div class="filtersec"><h4>About you (one line)</h4><input id="pMe" class="btn" style="width:100%" dir="auto" value="${esc(me)}" placeholder="e.g. Noa, motion designer in Tel Aviv, 8 years in brand work"></div>
+      <div class="filtersec"><h4>What to show</h4>
+        <select class="btn" id="pShow" aria-label="Work sample">${samples.map((w, i) => opt(String(i), w.title, i === 0)).join("")}${opt("new", "+ Add a work sample", !samples.length)}</select>
+        <div class="row" id="pNew" ${samples.length ? "hidden" : ""}><input id="pNewTitle" class="btn" style="flex:1 1 160px" dir="auto" placeholder="Title, e.g. Bezeq launch, 3D product spots"><input id="pNewUrl" class="btn" style="flex:1 1 160px" type="url" placeholder="Link (Vimeo, Behance…)"></div></div>
+      <div class="filtersec"><h4>Language</h4><div class="seg" id="pLang"><button type="button" data-lang="English" aria-pressed="true">English</button><button type="button" data-lang="Hebrew" aria-pressed="false">עברית</button></div></div>
+      <div class="filtersec"><button class="btn primary" type="button" id="pGo">Write the draft</button><span class="muted" id="pStatus" style="font-size:13px"></span></div>
+      <div class="filtersec" id="pOut" hidden><h4>Draft</h4><textarea id="pText" dir="auto" style="width:100%;min-height:220px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--surface)"></textarea>
+        <div class="row"><button class="btn" type="button" id="pCopy">Copy</button><button class="btn primary" type="button" id="pSave">Save draft · follow up in 1 week</button></div></div>`;
+    showPanel(o.id);
+    $("pWhy").addEventListener("change", (e) => ($("pWhyText").hidden = e.target.value !== "other"));
+    $("pShow").addEventListener("change", (e) => ($("pNew").hidden = e.target.value !== "new"));
+    $("pLang").addEventListener("click", (e) => { const b = e.target.closest("[data-lang]"); if (!b) return; $("pLang").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b)); });
+    $("pGo").addEventListener("click", () => runPitch(o, sigs));
+    $("pCopy").addEventListener("click", () => { const t = $("pText"); try { navigator.clipboard.writeText(t.value).then(() => toast("Copied"), () => { t.select(); toast("Selected. Copy it from here."); }); } catch (e) { t.select(); } });
+    $("pSave").addEventListener("click", async () => {
+      const n = new Date(); n.setDate(n.getDate() + 7);
+      const cur = Store.entry(o.id);
+      await Store.setEntry(o.id, { draft: $("pText").value.trim(), stage: cur && cur.stage !== "watch" ? cur.stage : "to_pitch", next_date: isoDay(n) });
+      toast("Draft saved · follow-up in a week"); closeAll(); openOrg(o.id);
+    });
+  }
+  const PITCH_COPY = { not_granted: "Allow Claude for this page to write drafts.", rate_limited: "Too many drafts right now. Try again in a minute.", sampling_disabled: "Drafting isn’t available on this account.", prompt_too_large: "Too much text. Shorten your inputs.", refused: "Claude declined this one. Try rewording why now.", cancelled: "" };
+  async function runPitch(o, sigs) {
+    const whySel = $("pWhy").value;
+    const sig = whySel.startsWith("sig:") ? sigs.find((s) => "sig:" + s.id === whySel) : null;
+    const why = sig ? `${sig.headline} (${sig.source}, ${sig.date}). Context: ${sig.why}` : $("pWhyText").value.trim();
+    const me = $("pMe").value.trim();
+    let sample = null;
+    if ($("pShow").value === "new") {
+      const title = $("pNewTitle").value.trim(), url = $("pNewUrl").value.trim();
+      if (title) { sample = { title, url }; await Store.setPrefs({ samples: [...(Store.prefs.samples || []), sample] }); }
+    } else sample = (Store.prefs.samples || [])[Number($("pShow").value)];
+    if (!why) { $("pStatus").textContent = "Add a reason to reach out now."; return; }
+    if (!sample) { $("pStatus").textContent = "Pick or add one work sample to show."; return; }
+    if (me !== (Store.prefs.me || "")) Store.setPrefs({ me });
+    const lang = $("pLang").querySelector('[aria-pressed="true"]').dataset.lang;
+    const who = $("pWho").value;
+    const facts = {
+      company: o.name, kind: KIND_ONE[o.kind], city: o.location.city, about: o.description,
+      buys: o.needs.map((n) => NEEDS[n]?.label), creative_needs: o.client_profile?.creative_needs, agency: agencyOf(o) || undefined,
+      notable_clients: (o.notable_clients || []).slice(0, 6),
+    };
+    const prompt = `You draft ONE short outreach message from an independent creative professional to a company in Israel's creative industry. The sender will edit and send it themselves.
+
+Write in ${lang}${lang === "Hebrew" ? " (natural, direct Israeli business Hebrew; informal-professional, not stiff)" : ""}.
+Format exactly:
+Subject: <short, specific subject>
+
+<message body>
+
+Body rules:
+- 70–120 words. Plain text, no markdown, no emojis.
+- Open with the reason to write now, as an observation (1 sentence).
+- Then who the sender is and the ONE work sample, with its link if given (1–2 sentences). Connect the sample to what the company buys.
+- ${who ? `Address it to: ${who}. If this is an agency, write to them as the people who commission production for their client.` : "No named recipient: use a neutral greeting."}
+- End with one light, concrete ask (e.g. a 15-minute call or "happy to send a few more references"). No pressure, no follow-up threats.
+- Use ONLY the facts below. Never invent results, numbers, mutual contacts, past work for this company, or details about the recipient.
+- No hype words ("cutting-edge", "AI-powered", "passionate", "synergy"), no flattery.
+Output only the subject line and the body.
+
+FACTS
+Why now: ${why}
+Sender: ${me || "(not given — keep the self-introduction generic)"}
+Work sample: ${sample.title}${sample.url ? " — " + sample.url : ""}
+Company: ${JSON.stringify(facts)}`;
+    pitchCtl?.abort();
+    pitchCtl = new AbortController();
+    $("pGo").disabled = true; $("pStatus").textContent = "Writing…"; $("pOut").hidden = false; $("pText").value = "";
+    try {
+      await Store.sample(prompt, { modelTier: "default", cache: false, signal: pitchCtl.signal, onText: ({ text }) => { $("pText").value = text; } });
+      $("pStatus").textContent = "Edit it, then copy and send it yourself.";
+    } catch (e) {
+      if (e && e.text) $("pText").value = e.text;
+      $("pStatus").textContent = PITCH_COPY[e && e.code] ?? "Couldn’t write the draft. Try again.";
+    } finally { if ($("pGo")) $("pGo").disabled = false; }
+  }
+
+  // ---------- report a mistake ----------
+  function openReport(o) {
+    $("panel").innerHTML = `<button class="close" type="button" aria-label="Close">×</button>
+      <h2 style="margin:4px 0 0;font-size:22px">Report a mistake</h2>
+      <p class="muted" style="margin:6px 0 0;font-size:13px">About ${esc(o.name)}. The next research run checks reports and fixes the record.</p>
+      <div class="filtersec"><h4>What’s wrong?</h4><textarea id="rText" dir="auto" style="width:100%;min-height:100px;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--surface)" placeholder="e.g. They moved to McCann in 2026; the website is dead; wrong city"></textarea></div>
+      <div class="filtersec"><h4>Source (optional)</h4><input id="rUrl" class="btn" type="url" style="width:100%" placeholder="Link that shows the right info"></div>
+      <div class="sheetfoot"><button class="btn primary" type="button" id="rSend">Send report</button></div>`;
+    showPanel(o.id);
+    $("rSend").addEventListener("click", async () => {
+      const text = $("rText").value.trim(); if (!text) return;
+      const ok = await Store.report({ org_id: o.id, text, url: $("rUrl").value.trim() || undefined, at: new Date().toISOString() });
+      if (ok) { toast("Thanks. Sent to the research queue."); closeAll(); openOrg(o.id); }
+    });
   }
 
   // ---------- signals view ----------
@@ -808,13 +952,13 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   $("clearAll").addEventListener("click", () => { Object.assign(state, { q: "", kinds: [], cats: [], inds: [], needs: [], city: "" }); $("q").value = ""; refresh(); });
   $("export").addEventListener("click", exportData);
   document.querySelector("nav.tabbar").addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { closeAll(); goTab(b.dataset.tab); } });
-  $("scrim").addEventListener("click", () => { const wasPanel = !$("panel").hidden; closeAll(); if (wasPanel) refresh(); });
+  $("scrim").addEventListener("click", () => { const wasPanel = !$("panel").hidden; const back = wasPanel && $("panel").dataset.back; closeAll(); if (back) return openOrg(back); if (wasPanel) refresh(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeAll(); });
 
   document.addEventListener("click", async (e) => {
     const t = e.target.closest("button, a"); if (!t || t.closest("nav.tabbar") || t.closest("#lens")) return;
     const d = t.dataset;
-    if (t.classList.contains("close")) { const wasPanel = !$("panel").hidden; closeAll(); if (wasPanel) refresh(); return; }
+    if (t.classList.contains("close")) { const wasPanel = !$("panel").hidden; const back = wasPanel && $("panel").dataset.back; closeAll(); if (back) return openOrg(back); if (wasPanel) refresh(); return; }
     if (d.goto) { closeAll(); return goTab(d.goto); }
     if (d.crafts !== undefined) return openCrafts();
     if (d.rmcraft) return Store.setCrafts(myCrafts().filter((c) => c !== d.rmcraft));
@@ -832,6 +976,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     if (d.snooze) { const n = new Date(); n.setDate(n.getDate() + 7); return Store.setEntry(d.snooze, { next_date: isoDay(n) }); }
     if (d.doneFollow) { const e2 = Store.entry(d.doneFollow); return Store.setEntry(d.doneFollow, { next_date: null, stage: e2 && e2.stage === "to_pitch" ? "contacted" : e2?.stage }); }
     const sid = $("sheet").dataset.id;
+    if (d.pitch !== undefined && sid) return openPitch(BY_ID[sid]);
+    if (d.report !== undefined && sid) return openReport(BY_ID[sid]);
     if (d.save !== undefined && sid) { await Store.setEntry(sid, { stage: "to_pitch" }); toast("Saved to pipeline · To pitch"); return; }
     if (d.toggleEditor !== undefined) { const ed = $("editor"); if (ed) { ed.hidden = !ed.hidden; t.setAttribute("aria-expanded", !ed.hidden); } return; }
     if (d.stage && sid) return Store.setEntry(sid, { stage: d.stage });

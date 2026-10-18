@@ -33,6 +33,10 @@ User #1 is the owner; then a small invited beta (owner + 5–10 trusted creative
 6. Signals tab (type filters incl. Hiring, add to pipeline, fade after 60 days, owner hide).
 7. **Best fit** ranking: needs ∩ my crafts + recent signals + an agency route.
 
+## Shipped after v2
+- **Pitch draft** (v3): Why now (a signal or your own reason, required) · Who (marketing/production people first, then the agency route) · About you · What to show (one work sample, required) · English/Hebrew. Drafts only; the person edits and sends it themselves. Saving a draft sets one follow-up in a week.
+- **Report a mistake**: goes to a private `reports` area only the owner (and research runs) can read.
+
 ## Waits (in rough order)
 v3: AI pitch draft (Why now · Who · Way in · What to show; drafts only, never sends) → Ask the map → "this is wrong" reports → credits type → Hebrew UI → onboarding → profiles & community on our own stack → world.
 
