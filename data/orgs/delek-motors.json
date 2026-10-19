@@ -16,6 +16,15 @@
   "website": "https://www.delek-motors.co.il",
   "contact_url": "https://www.delek-motors.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
   "careers_url": "https://www.delek-motors.co.il/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94/",
+  "key_people": [
+    {
+      "name": "Alon Goldman",
+      "role": "Marketing Manager, BMW",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1047625",
+      "as_of": "2025-01-19"
+    }
+  ],
   "funding": {
     "public": true
   },
@@ -33,7 +42,8 @@
     "https://www.delek-motors.co.il",
     "https://he.wikipedia.org/wiki/%D7%93%D7%9C%D7%A7_%D7%9E%D7%95%D7%98%D7%95%D7%A8%D7%A1",
     "https://www.delek-motors.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
-    "https://www.delek-motors.co.il/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94/"
+    "https://www.delek-motors.co.il/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1047625"
   ],
   "confidence": "high",
   "added": "2026-10-18",

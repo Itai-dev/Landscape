@@ -20,6 +20,15 @@
   "founded": 2014,
   "status": "active",
   "website": "https://www.kan.org.il",
+  "key_people": [
+    {
+      "name": "Oren Peldi",
+      "role": "VP On-Air Presentation, Creative & Promo",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1034147",
+      "as_of": "2024-10-15"
+    }
+  ],
   "client_profile": {
     "industry": "public broadcasting",
     "creative_needs": [
@@ -35,9 +44,12 @@
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Israeli_Public_Broadcasting_Corporation",
-    "https://www.kan.org.il"
+    "https://www.kan.org.il",
+    "https://www.ice.co.il/positions/news/article/1034147",
+    "https://www.ice.co.il/positions/news/article/1018053"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-19",
+  "notes": "Jun 2024: Oren Peldi (head of Kan promo and creative since 2016) appointed to a new VP role covering on-air look, creative and promo, overseeing editing/creative teams and all trailers and marketing output (ICE)."
 }

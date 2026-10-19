@@ -167,7 +167,14 @@ def merge(old: dict, new: dict) -> dict:
                             cur[f] = val
             out[k] = people
         elif isinstance(v, dict) and isinstance(old.get(k), dict):
-            out[k] = {**old[k], **v} if fresher else {**v, **old[k]}
+            merged = {**old[k], **v} if fresher else {**v, **old[k]}
+            for sub, val in v.items():  # lists inside (known_agencies, creative_needs, investors) are unioned
+                if isinstance(val, list) and isinstance(old[k].get(sub), list):
+                    merged[sub] = list(dict.fromkeys(old[k][sub] + val))
+            out[k] = merged
+        elif k == "notes" and old.get("notes"):
+            o_, n_ = old["notes"].strip(), v.strip()
+            out[k] = n_ if o_ in n_ else o_ if n_ in o_ else f"{o_} {n_}"
         elif k == "confidence":
             out[k] = v if fresher else max(old.get(k, "low"), v, key=CONF_RANK.get)
         elif fresher or k not in old:

@@ -14,6 +14,7 @@
   "founded": 2013,
   "status": "active",
   "website": "https://fundbox.com",
+  "contact_url": "https://fundbox.com/contact/",
   "careers_url": "https://fundbox.com/careers/",
   "client_profile": {
     "industry": "B2B fintech",
@@ -26,7 +27,8 @@
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Fundbox",
-    "https://fundbox.com/careers/"
+    "https://fundbox.com/careers/",
+    "https://fundbox.com/contact/"
   ],
   "confidence": "medium",
   "added": "2026-10-19",

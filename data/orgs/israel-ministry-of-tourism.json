@@ -15,6 +15,22 @@
   "founded": 1964,
   "status": "active",
   "website": "https://www.gov.il/en/departments/ministry_of_tourism/govil-landing-page",
+  "key_people": [
+    {
+      "name": "Yoash Ben Yitzhak",
+      "role": "Senior VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1092573",
+      "as_of": "2025-11-24"
+    },
+    {
+      "name": "Hila Gur",
+      "role": "Director, Domestic Tourism Division",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1090656",
+      "as_of": "2025-11-14"
+    }
+  ],
   "client_profile": {
     "industry": "government / destination marketing",
     "creative_needs": [
@@ -25,10 +41,12 @@
     ]
   },
   "sources": [
-    "https://en.wikipedia.org/wiki/Ministry_of_Tourism_(Israel)"
+    "https://en.wikipedia.org/wiki/Ministry_of_Tourism_(Israel)",
+    "https://www.ice.co.il/advertising-marketing/news/article/1092573",
+    "https://www.ice.co.il/advertising-marketing/news/article/1090656"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "City from general knowledge. Agency roster for international campaigns not verified."
+  "last_verified": "2026-10-19",
+  "notes": "City from general knowledge. Agency roster for international campaigns not verified. Nov 2025: Yoash Ben Yitzhak (ex-Israel Railways marketing, spokesperson and customer service VP) appointed senior VP marketing, leading marketing, branding and promotion of Israel as a destination (ICE)."
 }

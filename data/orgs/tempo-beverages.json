@@ -14,6 +14,16 @@
   "status": "active",
   "website": "https://www.tempo.co.il",
   "contact_url": "https://www.tempo.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/",
+  "careers_url": "https://career.adamtotal.co.il/?token=5fiBEcF763Em2KLOPNQ4OPb1hiX9SxJtoMDssWS",
+  "key_people": [
+    {
+      "name": "Aviv Ben Zikri",
+      "role": "Beer Marketing Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/997391",
+      "as_of": "2024-01-23"
+    }
+  ],
   "client_profile": {
     "industry": "beverages",
     "creative_needs": [
@@ -38,7 +48,9 @@
   "sources": [
     "https://www.tempo.co.il",
     "https://www.globes.co.il/news/article.aspx?did=1001541337",
-    "https://www.tempo.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/"
+    "https://www.tempo.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/",
+    "https://www.ice.co.il/advertising-marketing/news/article/997391",
+    "https://career.adamtotal.co.il/?token=5fiBEcF763Em2KLOPNQ4OPb1hiX9SxJtoMDssWS"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

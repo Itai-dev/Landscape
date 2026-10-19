@@ -15,6 +15,22 @@
   "status": "active",
   "website": "https://www.discountbank.co.il",
   "contact_url": "https://www.discountbank.co.il/contact/",
+  "key_people": [
+    {
+      "name": "Keren Messing-Rotem",
+      "role": "Head of Digital & Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1100871",
+      "as_of": "2026-01-23"
+    },
+    {
+      "name": "Yael Bramak",
+      "role": "Advertising & Marketing Communications Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1091042",
+      "as_of": "2025-11-14"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: DSCT"
@@ -49,10 +65,13 @@
     "https://en.wikipedia.org/wiki/Israel_Discount_Bank",
     "https://www.globes.co.il/news/article.aspx?did=1001531557",
     "https://www.globes.co.il/news/article.aspx?did=1001504828",
-    "https://www.discountbank.co.il/contact/"
+    "https://www.discountbank.co.il/contact/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100871",
+    "https://www.ice.co.il/advertising-marketing/news/article/1091042",
+    "https://www.ice.co.il/finance/news/article/1074939"
   ],
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Globes (2025 review) credits Discount campaigns to Adler Chomski; Globes (Mar 2025) lists Discount among K Agency's clients. Oct 2026: Discount Capital and Leumi Partners examining an investment in Adler Chomski."
+  "notes": "Globes (2025 review) credits Discount campaigns to Adler Chomski; Globes (Mar 2025) lists Discount among K Agency's clients. Oct 2026: Discount Capital and Leumi Partners examining an investment in Adler Chomski. Jul 2025: Keren Messing-Rotem (ex-Assuta) replaced Savyon Bar Sever as head of marketing & digital (ICE)."
 }

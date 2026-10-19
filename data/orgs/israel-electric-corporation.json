@@ -19,6 +19,15 @@
   "size": "5001+",
   "status": "active",
   "website": "https://www.iec.co.il",
+  "key_people": [
+    {
+      "name": "Miri Shaul",
+      "role": "Head of Communications & Spokesperson Division (client lead on IEC campaigns)",
+      "role_type": "marketing",
+      "source": "https://www.mako.co.il/news-business/cactus/Article-1e720b1a4de6491026.htm",
+      "as_of": "2025-01-16"
+    }
+  ],
   "client_profile": {
     "industry": "energy / utility",
     "creative_needs": [
@@ -41,10 +50,11 @@
   "sources": [
     "https://en.wikipedia.org/wiki/Israel_Electric_Corporation",
     "https://www.globes.co.il/news/article.aspx?did=1001504571",
-    "https://www.mccann.co.il"
+    "https://www.mccann.co.il",
+    "https://www.mako.co.il/news-business/cactus/Article-1e720b1a4de6491026.htm"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Mar 2025: after more than a decade with Adler Chomski, IEC moved its NIS 40M (two-year) budget to McCann Tel Aviv."
 }

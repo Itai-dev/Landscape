@@ -20,6 +20,15 @@
   "website": "https://www.paz.co.il",
   "contact_url": "https://www.paz.co.il/contact",
   "careers_url": "https://www.paz.co.il/jobs",
+  "key_people": [
+    {
+      "name": "Ofir Inbar",
+      "role": "VP Marketing & Trade",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1129217",
+      "as_of": "2026-09-09"
+    }
+  ],
   "client_profile": {
     "industry": "fuel, convenience and grocery retail",
     "creative_needs": [
@@ -50,7 +59,9 @@
     "https://he.wikipedia.org/wiki/%D7%A4%D7%96_%D7%A7%D7%9E%D7%A2%D7%95%D7%A0%D7%90%D7%95%D7%AA_%D7%95%D7%90%D7%A0%D7%A8%D7%92%D7%99%D7%94",
     "https://www.ice.co.il/advertising-marketing/news/article/911685",
     "https://www.ice.co.il/advertising-marketing/news/article/1025670",
-    "https://www.paz.co.il/about/about-the-company"
+    "https://www.paz.co.il/about/about-the-company",
+    "https://www.ice.co.il/advertising-marketing/news/article/1129217",
+    "https://www.bizportal.co.il/capitalmarket/quote/profile/1100007"
   ],
   "confidence": "medium",
   "added": "2026-10-19",

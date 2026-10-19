@@ -17,6 +17,15 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.maxstock.co.il",
+  "key_people": [
+    {
+      "name": "Moran Ironi",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001469476",
+      "as_of": "2024-02-05"
+    }
+  ],
   "client_profile": {
     "industry": "discount retail",
     "creative_needs": [
@@ -28,7 +37,8 @@
   },
   "sources": [
     "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%A1_%D7%A1%D7%98%D7%95%D7%A7",
-    "https://www.mako.co.il/finances-magazine/Article-b1f2e008a0c2b91026.htm"
+    "https://www.mako.co.il/finances-magazine/Article-b1f2e008a0c2b91026.htm",
+    "https://www.globes.co.il/news/article.aspx?did=1001469476"
   ],
   "confidence": "medium",
   "added": "2026-10-19",

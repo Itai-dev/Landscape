@@ -14,6 +14,15 @@
   "status": "active",
   "website": "https://www.terminalx.com",
   "contact_url": "https://www.terminalx.com/help-contactus",
+  "key_people": [
+    {
+      "name": "Adi Orel",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001553829",
+      "as_of": "2026-08-31"
+    }
+  ],
   "client_profile": {
     "industry": "e-commerce fashion",
     "creative_needs": [
@@ -42,10 +51,12 @@
   "sources": [
     "https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A7%D7%A1-%D7%95%D7%99%D7%96%D7%9C",
     "https://www.ice.co.il/advertising-marketing/news/article/833940",
-    "https://www.terminalx.com"
+    "https://www.terminalx.com",
+    "https://www.globes.co.il/news/article.aspx?did=1001553829",
+    "https://www.globes.co.il/news/article.aspx?did=1001525894"
   ],
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "2021 ICE credits named Dana Polak Olsher as marketing VP — too old to list as current."
+  "notes": "2021 ICE credits named Dana Polak Olsher as marketing VP — too old to list as current. Nov 2025: marketing VP Adi Orel said Terminal X runs an in-house community of 300+ influencers rather than via outside agencies (Globes)."
 }

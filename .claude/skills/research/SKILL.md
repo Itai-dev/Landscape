@@ -45,6 +45,8 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    - For brands and agencies fill `client_profile.creative_needs` in plain words
      ("social video", "3D packshots"); `schema/needs.json` maps them to the controlled list —
      if a need matches nothing there, add a `match` pattern rather than a new free-text variant.
+   - Ingest only adds: lists are unioned and notes appended. To remove something stale (an old agency,
+     a person who left, a dead website) edit `data/orgs/<id>.json` directly and say so in the PR.
    - Ids never change once merged. If two records turn out to be the same org, keep one and add
      `"old-id": "kept-id"` to `data/redirects.json`.
    - `relations.target`: an existing org id where one matches, otherwise the plain name.

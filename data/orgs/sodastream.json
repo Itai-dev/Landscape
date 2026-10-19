@@ -19,6 +19,15 @@
   "links": {
     "global": "https://www.sodastream.com"
   },
+  "key_people": [
+    {
+      "name": "Hila Baron",
+      "role": "Marketing Manager, SodaStream Israel",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1051346",
+      "as_of": "2025-02-13"
+    }
+  ],
   "client_profile": {
     "industry": "consumer appliances / beverages",
     "creative_needs": [
@@ -68,7 +77,8 @@
     "https://he.wikipedia.org/wiki/%D7%A1%D7%95%D7%93%D7%94%D7%A1%D7%98%D7%A8%D7%99%D7%9D",
     "https://spring-valley.co.il/",
     "https://blackboardvfx.com",
-    "https://igloocreative.co"
+    "https://igloocreative.co",
+    "https://www.ice.co.il/positions/news/article/1051346"
   ],
   "confidence": "high",
   "added": "2026-10-19",

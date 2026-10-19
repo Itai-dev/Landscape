@@ -16,6 +16,7 @@
   "status": "acquired",
   "website": "https://melio.com",
   "contact_url": "https://melio.com/contact-us/",
+  "careers_url": "https://www.lifeatmelio.com/",
   "client_profile": {
     "industry": "B2B fintech",
     "creative_needs": [
@@ -45,7 +46,8 @@
   "sources": [
     "https://melio.com/about-us/",
     "https://blackboardvfx.com",
-    "https://nuamotion.com"
+    "https://nuamotion.com",
+    "https://www.lifeatmelio.com/"
   ],
   "confidence": "medium",
   "added": "2026-10-19",
