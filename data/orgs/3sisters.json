@@ -1,0 +1,63 @@
+{
+  "id": "3sisters",
+  "name": "3SISTERS",
+  "aka": [
+    "VURT Labs Israel"
+  ],
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "cgi-3d",
+    "xr",
+    "avatars"
+  ],
+  "description": "Tel Aviv creative and virtual-production studio (VURT Labs Israel Ltd., Ben Avigdor St.) led by Daniel Shamota and Piotr Filatov: high-end VFX, CGI, compositing and finishing, photoreal digital humans and 3D-scanned doubles, body/face motion capture and volumetric 4D capture, and immersive VR/AR/XR experiences for brands, agencies, film and music.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://vurt-labs.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/3sisters/",
+    "instagram": "https://instagram.com/3sisters3000",
+    "facebook": "https://www.facebook.com/3sisters3000"
+  },
+  "services": [
+    "VFX & compositing",
+    "Digital humans / avatars",
+    "Motion capture & volumetric capture",
+    "Virtual sets",
+    "XR experiences"
+  ],
+  "key_people": [
+    {
+      "name": "Daniel Shamota",
+      "role": "Co-lead",
+      "role_type": "creative_lead",
+      "source": "https://vurt-labs.com",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Piotr Filatov",
+      "role": "Co-lead",
+      "role_type": "creative_lead",
+      "source": "https://vurt-labs.com",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "virtual-production",
+    "mocap",
+    "digital-humans",
+    "vfx"
+  ],
+  "sources": [
+    "https://vurt-labs.com",
+    "https://il.linkedin.com/company/3sisters"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

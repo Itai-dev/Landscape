@@ -1,0 +1,65 @@
+{
+  "id": "jungle-sound",
+  "name": "Jungle Sound",
+  "kind": "studio",
+  "categories": [
+    "sound-design",
+    "post-production"
+  ],
+  "description": "Tel Aviv audio post-production house founded in 1996 and describing itself as Israel's leading audio post company: about 14 people across ten studios on HaTehiya St., doing sound design, editing and mixing for feature films, TV content and games, for Israeli and international productions.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1996,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.junglesound.tv",
+  "contact_url": "https://www.junglesound.tv/contact",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/jungle-sound-ltd",
+    "instagram": "https://www.instagram.com/jungle_sound/"
+  },
+  "services": [
+    "Audio post-production",
+    "Sound design",
+    "Mixing for feature films and TV",
+    "Game audio"
+  ],
+  "key_people": [
+    {
+      "name": "Itzik Cohen",
+      "role": "CEO, Senior Sound Designer",
+      "role_type": "executive",
+      "source": "https://www.junglesound.tv/about",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Nitan Dadon",
+      "role": "Co-founder",
+      "role_type": "founder",
+      "source": "https://www.junglesound.tv/about",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Nufar Roche",
+      "role": "Producer",
+      "role_type": "production",
+      "source": "https://www.junglesound.tv/about",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "audio-post",
+    "film-sound",
+    "tv",
+    "games"
+  ],
+  "sources": [
+    "https://www.junglesound.tv/about",
+    "https://il.linkedin.com/company/jungle-sound-ltd"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

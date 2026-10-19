@@ -1,0 +1,56 @@
+{
+  "id": "icon-festival",
+  "name": "Icon – Tel Aviv Festival of Science Fiction, Fantasy and Role-Playing Games",
+  "name_he": "פסטיבל אייקון",
+  "aka": [
+    "Icon TLV",
+    "Icon Festival"
+  ],
+  "kind": "community",
+  "categories": [
+    "festival-event",
+    "illustration",
+    "game-development"
+  ],
+  "description": "Annual national festival of science fiction, fantasy and role-playing games, held in central Tel Aviv (Tel Aviv Cinematheque and the adjacent Eshkol HaPais complex) since 1998, during Sukkot. Hundreds of talks, panels, workshops, a cosplay competition, an Israeli indie-games area and a vendors' fair; the 2026 edition 'Wonders' ran 29 Sep – 1 Oct.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1998,
+  "status": "active",
+  "website": "https://www.icon.org.il/",
+  "links": {
+    "facebook": "http://www.facebook.com/Festival.Icon",
+    "instagram": "http://www.instagram.com/iconfestival",
+    "youtube": "https://www.youtube.com/@israel.sf-f"
+  },
+  "services": [
+    "Annual festival (Sukkot)",
+    "Israeli indie games showcase",
+    "Cosplay competition",
+    "Geffen and Einat awards",
+    "Vendors' fair"
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "tel-aviv-cinematheque",
+      "note": "Host venue"
+    }
+  ],
+  "tags": [
+    "festival",
+    "sci-fi",
+    "fantasy",
+    "indie-games",
+    "illustrators",
+    "networking"
+  ],
+  "sources": [
+    "https://www.icon.org.il/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

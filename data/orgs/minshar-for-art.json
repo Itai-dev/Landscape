@@ -1,0 +1,57 @@
+{
+  "id": "minshar-for-art",
+  "name": "Minshar for Art",
+  "name_he": "מנשר לאמנות",
+  "aka": [
+    "Minshar School of Art"
+  ],
+  "kind": "community",
+  "categories": [
+    "education",
+    "animation-2d",
+    "film-production",
+    "graphic-design"
+  ],
+  "description": "Tel Aviv art school and cultural centre (gallery and screening hall) offering degree tracks with the Open University in film, animation, visual communication, photography, multidisciplinary art and writing, plus evening courses. Its animation track covers 2D, 3D and stop-motion; graduates feed Israeli animation and post studios.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.minshar.org.il/",
+  "contact_url": "https://www.minshar.org.il/contact-us/",
+  "links": {
+    "instagram": "https://instagram.com/minsharforart/",
+    "facebook": "https://www.facebook.com/Minshar--112292848788500/"
+  },
+  "services": [
+    "Animation degree track",
+    "Film & TV degree track",
+    "Visual Communication degree track",
+    "Photography",
+    "Evening courses"
+  ],
+  "key_people": [
+    {
+      "name": "Neta Cohen",
+      "role": "Head of the Animation Department",
+      "role_type": "creative_lead",
+      "source": "https://www.minshar.org.il/animation-studies/faculty-members/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "school",
+    "talent-pipeline",
+    "animation-school"
+  ],
+  "sources": [
+    "https://www.minshar.org.il/",
+    "https://www.minshar.org.il/animation-studies/faculty-members/",
+    "https://zippyframes.com/interviews/school-presentation-minshar-for-art-tel-aviv-israel"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "18 David Hachmi St., Tel Aviv. Head name transliterated from Hebrew (נטע כהן)."
+}

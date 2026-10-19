@@ -1,0 +1,55 @@
+{
+  "id": "israel-film-tv-academy",
+  "name": "Israel Film and Television Academy",
+  "name_he": "האקדמיה הישראלית לקולנוע וטלוויזיה",
+  "aka": [
+    "Israeli Academy of Film and Television",
+    "Ophir Awards"
+  ],
+  "kind": "community",
+  "categories": [
+    "association",
+    "festival-event",
+    "film-production"
+  ],
+  "description": "Tel Aviv non-profit of 1,000+ film and TV professionals that runs the Ophir Awards (Israel's film awards, 34th edition in 2024) and, since 2003, the Academy Awards for Television, including a gala for behind-the-scenes professions; also produces annual Israeli film and TV catalogues for international markets and periphery screenings with Mifal HaPais.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.israelfilmacademy.co.il/",
+  "contact_url": "https://israelfilmacademy.co.il/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/israel-film-and-tv-academy/",
+    "instagram": "https://www.instagram.com/israelfilmacademy/",
+    "facebook": "https://www.facebook.com/IsraelFilmAcademy",
+    "youtube": "https://www.youtube.com/channel/UCYIAboePnRtreXMgsBih-Jw"
+  },
+  "services": [
+    "Ophir Awards (film)",
+    "Academy Awards for Television",
+    "International film & TV catalogues",
+    "Membership"
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "mifal-hapais",
+      "note": "'Moving Image' periphery screenings"
+    }
+  ],
+  "tags": [
+    "awards",
+    "ophir",
+    "industry-body",
+    "credits-source"
+  ],
+  "sources": [
+    "https://israelfilmacademy.co.il/en/about/",
+    "https://il.linkedin.com/company/israel-film-and-tv-academy"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

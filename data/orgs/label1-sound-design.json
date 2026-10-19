@@ -1,0 +1,56 @@
+{
+  "id": "label1-sound-design",
+  "name": "Label 1 Sound Design",
+  "aka": [
+    "Andrey Sedich Sound Design",
+    "Studio Label 1"
+  ],
+  "kind": "studio",
+  "categories": [
+    "sound-design",
+    "music-production"
+  ],
+  "description": "Tel Aviv one-stop audio studio run by sound designer Andrey Sedich since 1998: sound design and SFX for animation and motion graphics, films, docs, commercials, promos, TV series, sound logos and games, plus mixing, Foley, dubbing/narration, voice-over recording and mastering.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.studiolabel1.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/label1",
+    "instagram": "https://www.instagram.com/studiolabel1/",
+    "youtube": "https://www.youtube.com/user/Andre77jcs/videos"
+  },
+  "services": [
+    "Sound design for animation & motion graphics",
+    "Mixing",
+    "Foley",
+    "Voice-over & dubbing",
+    "Sound branding",
+    "Mastering"
+  ],
+  "key_people": [
+    {
+      "name": "Andrey Sedich",
+      "role": "Founder, Sound designer",
+      "role_type": "founder",
+      "source": "https://www.studiolabel1.com/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "sound-for-motion",
+    "sfx",
+    "foley",
+    "freelance-friendly"
+  ],
+  "sources": [
+    "https://www.studiolabel1.com/",
+    "https://il.linkedin.com/company/label1"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "promotheus",
+  "name": "Promotheus",
+  "name_he": "פרומותאוס",
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "xr",
+    "creative-technology",
+    "branding"
+  ],
+  "description": "Tel Aviv broadcast-branding and creative-tech company (~two decades) combining content, creative and an in-house R&D team: channel branding and promos, real-time and augmented-reality graphics and virtual studios for sports and TV. Work includes Red Bull Air Race, FIA WEC and Wings for Life graphics, Tour de France AR for NBC, yes rebrands and its Emmy-nominated AR Sandbox; 60+ PromaxBDA awards.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.promots.tv/",
+  "contact_url": "https://www.promots.tv/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/promotheus",
+    "vimeo": "https://vimeo.com/promotheus",
+    "instagram": "https://www.instagram.com/promots.tv",
+    "facebook": "https://www.facebook.com/promots.tv/"
+  },
+  "services": [
+    "Channel branding & promos",
+    "Real-time graphics",
+    "Augmented reality for broadcast",
+    "Virtual studios"
+  ],
+  "notable_clients": [
+    "Red Bull",
+    "FIA WEC",
+    "NBC",
+    "yes",
+    "Wings for Life",
+    "Cybathlon"
+  ],
+  "notable_work": [
+    "AR Sandbox (Emmy nominee)",
+    "Red Bull Air Race graphics package",
+    "Tour de France 2024 AR for NBC",
+    "yes rebrand 2020"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "yes"
+    }
+  ],
+  "tags": [
+    "broadcast",
+    "real-time",
+    "sports-graphics",
+    "promax"
+  ],
+  "sources": [
+    "https://www.promots.tv/",
+    "https://www.promots.tv/about/",
+    "https://il.linkedin.com/company/promotheus"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

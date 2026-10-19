@@ -1,0 +1,76 @@
+{
+  "id": "promarket-group",
+  "name": "Promarket Group",
+  "name_he": "פרומרקט",
+  "kind": "agency",
+  "categories": [
+    "experiential",
+    "pr-social"
+  ],
+  "description": "Tel Aviv experiential-marketing and event production group (30+ years): brand experiences, corporate and marketing events, conferences, launches and incentive trips, with creative, strategy, content and production teams. Events include The Phoenix's 70th-anniversary event for 3,800 employees at Caesarea amphitheatre and a Hebrew University tribute conference for Prof. Amnon Shashua.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.promarket.co.il/",
+  "contact_url": "https://www.promarket.co.il/?page_id=11",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/promarket/",
+    "facebook": "https://www.facebook.com/PROMARKETGROUP/",
+    "youtube": "https://www.youtube.com/user/promarket/videos"
+  },
+  "services": [
+    "Experiential marketing",
+    "Corporate & marketing events",
+    "Conferences & launches",
+    "Incentive trips"
+  ],
+  "notable_clients": [
+    "The Phoenix",
+    "Hebrew University of Jerusalem",
+    "Ashkelon Municipality"
+  ],
+  "key_people": [
+    {
+      "name": "Yoni Saar",
+      "role": "Founder & Owner",
+      "role_type": "founder",
+      "source": "https://www.promarket.co.il/?page_id=11",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Zohar Sarig",
+      "role": "CEO",
+      "role_type": "executive",
+      "source": "https://www.promarket.co.il/?page_id=11",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "the-phoenix"
+    },
+    {
+      "type": "client",
+      "target": "hebrew-university-of-jerusalem"
+    }
+  ],
+  "tags": [
+    "events",
+    "experiential-marketing",
+    "btl",
+    "buyer-of-content"
+  ],
+  "sources": [
+    "https://www.promarket.co.il/",
+    "https://www.promarket.co.il/?page_id=11",
+    "https://www.promarket.co.il/?page_id=213",
+    "https://blooloop.com/uncategorised/news/medialon-controls-better-place-first-electric-vehicle-visitor-center-in-israel/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Kind 'agency' (buys production, video and installation work); concept for Better Place's visitor center per Blooloop."
+}

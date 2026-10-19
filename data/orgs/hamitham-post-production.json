@@ -1,0 +1,38 @@
+{
+  "id": "hamitham-post-production",
+  "name": "Hamitham (The Complex) Post Production Facilities",
+  "name_he": "המתחם",
+  "aka": [
+    "The Complex"
+  ],
+  "kind": "studio",
+  "categories": [
+    "editing",
+    "post-production"
+  ],
+  "description": "Tel Aviv Avid-based post-production facility with dozens of editing rooms rented to TV and film productions, offering a full post service suite; Avid backed the project when it launched.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/hmitham-post-production-facilities"
+  },
+  "services": [
+    "Editing-room rental (Avid)",
+    "Post-production services"
+  ],
+  "tags": [
+    "facility",
+    "tv",
+    "editing-suites"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/hmitham-post-production-facilities"
+  ],
+  "confidence": "low",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

@@ -1,0 +1,59 @@
+{
+  "id": "coloron-post-production",
+  "name": "ColoRon Post Production",
+  "kind": "studio",
+  "categories": [
+    "color-grading",
+    "post-production",
+    "editing"
+  ],
+  "description": "Family-run boutique post-production studio in the Tel Aviv industrial area, founded by senior colorist Ron Ben Meir (15+ years grading features — fiction and documentary — TV series and commercials). Offers offline and online editing suites, color grading, digital mastering and delivery, dailies, backup and archive.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.coloronstudio.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/coloron-post-production",
+    "instagram": "https://www.instagram.com/coloron_studio/",
+    "facebook": "https://www.facebook.com/ColoRon-122526998395396/"
+  },
+  "services": [
+    "Color grading",
+    "Offline & online editing",
+    "Digital mastering & delivery",
+    "Dailies",
+    "Backup & archive"
+  ],
+  "key_people": [
+    {
+      "name": "Ron Ben Meir",
+      "role": "Founder, CEO & Senior Colorist",
+      "role_type": "founder",
+      "source": "https://www.coloronstudio.com/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Amitai Rosenberg",
+      "role": "Post production",
+      "role_type": "production",
+      "source": "https://www.coloronstudio.com/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "colorist",
+    "features",
+    "documentary",
+    "dailies"
+  ],
+  "sources": [
+    "https://www.coloronstudio.com/",
+    "https://il.linkedin.com/company/coloron-post-production"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

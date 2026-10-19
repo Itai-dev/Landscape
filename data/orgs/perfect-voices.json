@@ -1,0 +1,39 @@
+{
+  "id": "perfect-voices",
+  "name": "Perfect Voices",
+  "kind": "studio",
+  "categories": [
+    "dubbing-localization",
+    "sound-design"
+  ],
+  "description": "Tel Aviv media-services company for dubbing, voice-over, subtitling, sound and video editing in 70+ languages, running nine recording studios and two video suites for multilingual localization projects.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.perfectvoices.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/perfect-voices"
+  },
+  "services": [
+    "Dubbing",
+    "Voice-over",
+    "Subtitling",
+    "Sound services",
+    "Video editing"
+  ],
+  "tags": [
+    "localization",
+    "voice-over",
+    "recording-studios"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/perfect-voices"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Website blocks automated fetches (Cloudflare); details from LinkedIn company page."
+}

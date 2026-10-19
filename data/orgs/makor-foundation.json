@@ -1,0 +1,44 @@
+{
+  "id": "makor-foundation",
+  "name": "Makor Foundation for Israeli Films",
+  "name_he": "קרן מקור לסרטים ישראליים",
+  "aka": [
+    "Makor Media: Stories and New Technologies Lab"
+  ],
+  "kind": "community",
+  "categories": [
+    "association",
+    "film-production",
+    "xr"
+  ],
+  "description": "Tel Aviv non-profit film fund (founded 1995, under the Israel Film Council) financing independent documentaries and doc series, short narrative films, animated shorts and new-media works using new production and distribution technologies; runs the Makor Media stories-and-new-technologies lab.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1995,
+  "status": "active",
+  "website": "https://www.kerenmakor.org.il",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/makor-foundation-for-israeli-films"
+  },
+  "services": [
+    "Film & series funding",
+    "Animated shorts funding",
+    "New-media / interactive funding",
+    "Makor Media lab"
+  ],
+  "tags": [
+    "film-fund",
+    "documentary",
+    "animation-funding",
+    "new-media"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/makor-foundation-for-israeli-films"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Website blocks automated fetches (Cloudflare)."
+}

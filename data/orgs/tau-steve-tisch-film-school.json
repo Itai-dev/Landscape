@@ -1,0 +1,50 @@
+{
+  "id": "tau-steve-tisch-film-school",
+  "name": "The Steve Tisch School of Film and Television, Tel Aviv University",
+  "name_he": "בית הספר לקולנוע וטלוויזיה ע\"ש סטיב טיש, אוניברסיטת תל אביב",
+  "aka": [
+    "TAU Film School"
+  ],
+  "kind": "community",
+  "categories": [
+    "education",
+    "film-production",
+    "festival-event"
+  ],
+  "description": "Tel Aviv University's film and TV school (Faculty of the Arts), raised to school status by Steve Tisch's $10M gift in 2015. Runs undergraduate and graduate programs incl. an English MFA in Documentary Cinema, and the TLV International Student Film Festival, founded by its students in 1986. Alumni include Oscar-shortlisted short 'Butcher's Stain'.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://en-arts.tau.ac.il/filmTV",
+  "links": {
+    "instagram": "https://www.instagram.com/tau.stevetisch.filmtv.school"
+  },
+  "services": [
+    "B.A./M.A. film & TV",
+    "MFA in Documentary Cinema (English)",
+    "TLV International Student Film Festival",
+    "Anda Zimand Film Archive"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "tel-aviv-university"
+    }
+  ],
+  "tags": [
+    "school",
+    "film-school",
+    "student-film-festival",
+    "talent-pipeline"
+  ],
+  "sources": [
+    "https://en-arts.tau.ac.il/filmTV",
+    "https://english.tau.ac.il/node/1694"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Last publicly named head found: Prof. Yaron Bloch (2023 faculty call) — not confirmed for 2026, so omitted from key_people."
+}

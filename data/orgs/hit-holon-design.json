@@ -1,0 +1,50 @@
+{
+  "id": "hit-holon-design",
+  "name": "HIT – Holon Institute of Technology, Faculty of Design",
+  "name_he": "מכון טכנולוגי חולון – הפקולטה לעיצוב",
+  "aka": [
+    "HIT Holon"
+  ],
+  "kind": "community",
+  "categories": [
+    "education",
+    "graphic-design",
+    "digital-design",
+    "xr"
+  ],
+  "description": "Faculty of Design at the Holon Institute of Technology: B.Des. in Visual Communication, Industrial and Interior Design plus an M.Des. in Design for Technological Environment. Visual Communication has taught interactive design since 2010 and added immersive (AR/VR) design and AI across the curriculum.",
+  "location": {
+    "country": "IL",
+    "city": "Holon"
+  },
+  "status": "active",
+  "website": "https://www.hit.ac.il/en/academic/design/",
+  "services": [
+    "B.Des. Visual Communication Design",
+    "B.Des. Industrial Design",
+    "B.Des. Interior Design",
+    "M.Des. Design for Technological Environment"
+  ],
+  "key_people": [
+    {
+      "name": "Bahar Erez",
+      "role": "Head of Visual Communication Department",
+      "role_type": "creative_lead",
+      "source": "https://www.hit.ac.il/en/academic/design/visual-communication/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "school",
+    "talent-pipeline",
+    "interactive",
+    "immersive"
+  ],
+  "sources": [
+    "https://www.hit.ac.il/en/design",
+    "https://www.hit.ac.il/en/academic/design/visual-communication/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "shenkar",
+  "name": "Shenkar – Engineering. Design. Art.",
+  "name_he": "שנקר – הנדסה. עיצוב. אמנות.",
+  "aka": [
+    "Shenkar College"
+  ],
+  "kind": "community",
+  "categories": [
+    "education",
+    "graphic-design",
+    "game-development"
+  ],
+  "description": "Ramat Gan college for engineering, design and art. Design schools include the School of Visual Communication, Industrial, Interior, Fashion, Textile and Jewelry Design, Multidisciplinary Art, a Master's in Design and a Master's in Digital Game Design and Development — a major source of graphic, motion and game designers.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "status": "active",
+  "website": "https://www.shenkar.ac.il/en/",
+  "contact_url": "https://shenkar.ac.il/registration/registration-page/",
+  "services": [
+    "School of Visual Communication",
+    "Master's in Digital Game Design and Development",
+    "Industrial / Interior / Fashion / Textile / Jewelry Design",
+    "Multidisciplinary Art"
+  ],
+  "tags": [
+    "school",
+    "talent-pipeline",
+    "visual-communication"
+  ],
+  "sources": [
+    "https://www.shenkar.ac.il/en/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Address: Anne Frank 12, Ramat Gan. Department-level head not found on the English site."
+}

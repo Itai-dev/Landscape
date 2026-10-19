@@ -1,0 +1,72 @@
+{
+  "id": "jerusalem-design-week",
+  "name": "Jerusalem Design Week",
+  "name_he": "שבוע העיצוב ירושלים",
+  "aka": [
+    "JDW"
+  ],
+  "kind": "community",
+  "categories": [
+    "festival-event",
+    "experiential",
+    "graphic-design"
+  ],
+  "description": "Israel's largest public design event, held at Hansen House, Jerusalem, since 2011 and international since 2016: themed exhibitions, installations, talks and events. An initiative of the Ministry of Jerusalem and Heritage Affairs and the Jerusalem Development Authority, managed by Ran Wolf Ltd. The 2026 edition ('Match Point') ran 9–16 July.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 2011,
+  "status": "active",
+  "website": "https://jdw.co.il/en",
+  "contact_url": "https://jdw.co.il/en/info",
+  "links": {
+    "instagram": "https://www.instagram.com/jlmdesignweek/",
+    "facebook": "https://www.facebook.com/jdw.co.il"
+  },
+  "services": [
+    "Annual design festival (summer)",
+    "Curated theme exhibitions",
+    "Open calls for designers",
+    "Guided tours"
+  ],
+  "key_people": [
+    {
+      "name": "Ran Wolf",
+      "role": "General management (Ran Wolf Ltd.)",
+      "role_type": "production",
+      "source": "https://2019.jdw.co.il/en/about-jdw/",
+      "as_of": "2019-06-01"
+    },
+    {
+      "name": "Anat Safran",
+      "role": "Artistic director",
+      "role_type": "creative_lead",
+      "source": "https://2019.jdw.co.il/en/about-jdw/",
+      "as_of": "2019-06-01"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "hansen-house",
+      "note": "Held at and managed under Hansen House"
+    }
+  ],
+  "tags": [
+    "festival",
+    "design",
+    "installations",
+    "open-call",
+    "networking"
+  ],
+  "sources": [
+    "https://jdw.co.il/en/info",
+    "https://jdw.co.il/en/exhibitions",
+    "https://2019.jdw.co.il/en/about-jdw/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Team names are from the 2019 edition page; 2026 team not listed on the site."
+}

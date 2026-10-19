@@ -1,0 +1,37 @@
+{
+  "id": "clear-cut-post-production",
+  "name": "Clear Cut Post Production",
+  "kind": "studio",
+  "categories": [
+    "editing",
+    "post-production"
+  ],
+  "description": "Tel Aviv video-editing and post-production agency that supplies experienced editors and post teams and runs end-to-end post for television productions and broadcasters.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.clearcutpost.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/clear-cut-post-productions"
+  },
+  "services": [
+    "Editors for hire",
+    "Post-production teams",
+    "End-to-end TV post"
+  ],
+  "tags": [
+    "tv",
+    "editors",
+    "staffing"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/clear-cut-post-productions"
+  ],
+  "confidence": "low",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Website unreachable from research environment; LinkedIn only."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "graphic-designers-association-israel",
+  "name": "Graphic Designers Association of Israel",
+  "name_he": "אגודת המעצבים הגרפיים בישראל",
+  "aka": [
+    "GDAI",
+    "Agudat HaMe'atzvim"
+  ],
+  "kind": "community",
+  "categories": [
+    "association",
+    "graphic-design"
+  ],
+  "description": "Professional association of Israeli graphic designers, tracing its roots to the 1935 'Painters' Association for Applied Graphics'. Runs open calls and competitions (e.g. stamp design for its 90th year), a magazine, members' benefits club, a 'Designers for Dignity' fair-pay initiative and events; poster designer Yossi Lemel serves as its president.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1935,
+  "status": "active",
+  "website": "https://gdai.co.il/",
+  "contact_url": "https://gdai.co.il/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/gdaisrael",
+    "instagram": "https://www.instagram.com/aguda_design_il/",
+    "facebook": "https://www.facebook.com/gdai.co.il",
+    "youtube": "https://www.youtube.com/@gdai_il"
+  },
+  "services": [
+    "Membership",
+    "Open calls & competitions",
+    "Magazine",
+    "Professional standards / fair-pay advocacy"
+  ],
+  "key_people": [
+    {
+      "name": "Yossi Lemel",
+      "role": "President",
+      "role_type": "executive",
+      "source": "https://gdai.co.il/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "association",
+    "designers",
+    "open-call",
+    "networking"
+  ],
+  "sources": [
+    "https://gdai.co.il/",
+    "https://www.ice.co.il/career/news/article/822646"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

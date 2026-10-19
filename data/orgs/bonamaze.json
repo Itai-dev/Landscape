@@ -1,0 +1,98 @@
+{
+  "id": "bonamaze",
+  "name": "BONAMAZE",
+  "kind": "studio",
+  "categories": [
+    "sound-design",
+    "music-production",
+    "commercial-production",
+    "editing"
+  ],
+  "description": "Tel Aviv creative and production house of drummer-producers Gilad Avnat and Stav Nahum, known for its 'Sound Of' technique — composing music from everyday sounds and cutting video to it (Tony Hawk 'The Sound of Skateboarding', Breitling). Two Sports Emmys (2023, 'NOLA Vibes' incl. audio post) and two Webbys; clients include Gitam BBDO, BBR Saatchi, Strauss, Tnuva, Teva, Wolt.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.bonamaze.com/",
+  "contact_url": "https://www.bonamaze.com/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/bonamaze",
+    "vimeo": "https://vimeo.com/user17465310",
+    "instagram": "https://www.instagram.com/bonamaze/",
+    "facebook": "https://www.facebook.com/BONAMAZE",
+    "youtube": "https://www.youtube.com/user/BONAMAZE"
+  },
+  "services": [
+    "Original music & sound design",
+    "Directing",
+    "Editing",
+    "Commercials & music videos"
+  ],
+  "notable_clients": [
+    "Breitling",
+    "Tony Hawk",
+    "Turner Sports",
+    "Gitam BBDO",
+    "BBR Saatchi & Saatchi",
+    "Strauss Group",
+    "Tnuva",
+    "Teva",
+    "Super-Pharm",
+    "Playtika",
+    "Wolt"
+  ],
+  "notable_work": [
+    "The Sound of Skateboarding (Tony Hawk)",
+    "NOLA Vibes featuring Jon Batiste (2 Sports Emmys, 2023)",
+    "NYC! Sound (Back) On"
+  ],
+  "key_people": [
+    {
+      "name": "Gilad Avnat",
+      "role": "Co-founder, Director, Sound designer",
+      "role_type": "founder",
+      "source": "https://www.bonamaze.com/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Stav Nahum",
+      "role": "Co-founder, Editor, Composer, Sound designer",
+      "role_type": "founder",
+      "source": "https://www.bonamaze.com/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "gitam-bbdo"
+    },
+    {
+      "type": "client",
+      "target": "bbr-saatchi-saatchi"
+    },
+    {
+      "type": "client",
+      "target": "strauss-group"
+    },
+    {
+      "type": "client",
+      "target": "tnuva"
+    }
+  ],
+  "tags": [
+    "sound-of",
+    "music-videos",
+    "award-winning",
+    "emmy"
+  ],
+  "sources": [
+    "https://www.bonamaze.com/about/",
+    "https://il.linkedin.com/company/bonamaze"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "flow-post-production",
+  "name": "Flow Post Production",
+  "kind": "studio",
+  "categories": [
+    "post-production",
+    "vfx"
+  ],
+  "description": "Tel Aviv post-production house for TV commercials and high-end videos — retouching, cleanup, compositing and finishing. Credited as post house on the 'You're Not Alone' reservists campaign for the Ministry of Defense, IDF and Finance Ministry (LAPAM, production Market Master, Feb 2024).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/flow-post-production"
+  },
+  "services": [
+    "Online / finishing",
+    "Compositing & cleanup",
+    "Commercial post"
+  ],
+  "notable_work": [
+    "'You're Not Alone' reservists campaign (LAPAM)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "lapam"
+    },
+    {
+      "type": "partner",
+      "target": "market-master"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "finishing"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/flow-post-production",
+    "https://www.ice.co.il/advertising-marketing/news/article/1000721"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No website found."
+}

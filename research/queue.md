@@ -11,7 +11,7 @@ Tick a segment when coverage looks reasonably complete; add new lines any time.
 - [ ] il-startups-ai — generative-AI creative startups
 - [ ] il-startups-platforms — creative platforms & tools (Artlist, Wix, Fiverr…)
 - [ ] il-freelance-collectives — collectives, small boutiques, notable independent duos
-- [ ] il-community — schools, festivals, associations, meetups (Bezalel, Shenkar, Animix…)
+- [x] il-community — schools, festivals, associations (meetups still missing)
 
 ## Phase 2 — Israel: potential clients
 - [x] il-agencies — ad, digital, social & media agencies (media agencies still thin)

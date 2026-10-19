@@ -1,0 +1,65 @@
+{
+  "id": "bezalel-academy",
+  "name": "Bezalel Academy of Arts and Design",
+  "name_he": "בצלאל אקדמיה לאמנות ועיצוב",
+  "aka": [
+    "Bezalel"
+  ],
+  "kind": "community",
+  "categories": [
+    "education",
+    "animation-2d",
+    "animation-3d",
+    "graphic-design"
+  ],
+  "description": "Israel's national art and design academy in Jerusalem. Its Screen-Based Arts department (classical 2D, stop motion, 3D animation, video art, documentary and AR/VR) is the country's most comprehensive animation degree; Visual Communication trains much of Israel's graphic, type and motion talent. Annual graduate exhibition is a key talent-scouting event.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 1906,
+  "status": "active",
+  "website": "https://www.bezalel.ac.il/en",
+  "contact_url": "https://www.bezalel.ac.il/en/about/contact",
+  "links": {
+    "instagram": "https://www.instagram.com/bezalel_academy",
+    "facebook": "https://www.facebook.com/bezalelacademy",
+    "youtube": "https://www.youtube.com/channel/UC75Gxi5mRz_lrdhH1P4Ur9A"
+  },
+  "services": [
+    "B.F.A. Screen-Based Arts (animation, video, AR/VR)",
+    "B.Des. Visual Communication",
+    "M.Des. Visual Communication",
+    "Annual graduate exhibition"
+  ],
+  "key_people": [
+    {
+      "name": "Yael Ozsinai",
+      "role": "Head of the Department of Screen-Based Arts",
+      "role_type": "creative_lead",
+      "source": "https://www.bezalel.ac.il/en/academics/bachelor_degree/screen/about",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Dana Gez",
+      "role": "Head of the Department of Visual Communication",
+      "role_type": "creative_lead",
+      "source": "https://www.bezalel.ac.il/en/academics/bachelor_degree/viscom",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "school",
+    "talent-pipeline",
+    "animation-school",
+    "graduate-show"
+  ],
+  "sources": [
+    "https://www.bezalel.ac.il/en/academics/bachelor_degree/screen/about",
+    "https://www.bezalel.ac.il/en/academics/bachelor_degree/viscom"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Founded 1906 (well-documented history). Graduate exhibition 2026 ran 24.7–6.8.26."
+}
