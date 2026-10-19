@@ -15,6 +15,16 @@
   "size": "201-500",
   "status": "active",
   "website": "https://www.loreal.com/he-il/israel/",
+  "careers_url": "https://www.loreal.com/he-il/israel/pages/careers/careers/",
+  "key_people": [
+    {
+      "name": "Gali Lev",
+      "role": "VP Marketing & Digital",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1116451",
+      "as_of": "2026-06-11"
+    }
+  ],
   "client_profile": {
     "industry": "beauty / cosmetics",
     "creative_needs": [
@@ -54,10 +64,12 @@
   "sources": [
     "https://www.loreal.com/he-il/israel/",
     "https://www.globes.co.il/news/article.aspx?did=1001558524",
-    "https://www.globes.co.il/news/article.aspx?did=1001558746"
+    "https://www.globes.co.il/news/article.aspx?did=1001558746",
+    "https://www.ice.co.il/advertising-marketing/news/article/1116451",
+    "https://www.loreal.com/he-il/israel/pages/careers/careers/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Oct 2026: McCann Tel Aviv kept the budget; Universal McCann leads media; Gitam BBDO expands on L'Oréal Paris."
 }

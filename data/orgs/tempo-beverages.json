@@ -13,6 +13,7 @@
   },
   "status": "active",
   "website": "https://www.tempo.co.il",
+  "contact_url": "https://www.tempo.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/",
   "client_profile": {
     "industry": "beverages",
     "creative_needs": [
@@ -36,10 +37,11 @@
   ],
   "sources": [
     "https://www.tempo.co.il",
-    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.tempo.co.il/%d7%a9%d7%99%d7%a8%d7%95%d7%aa-%d7%9c%d7%a7%d7%95%d7%97%d7%95%d7%aa/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "2026 Effie entry 'A Generation of Heroes' for Goldstar credited to Munch. HQ city from general knowledge."
+  "last_verified": "2026-10-19",
+  "notes": "2026 Effie entry 'A Generation of Heroes' for Goldstar credited to Munch. HQ city from general knowledge. Agency as of 2026-04: Munch (Goldstar, Effie 2026 wartime-marketing award)."
 }

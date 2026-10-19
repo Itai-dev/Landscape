@@ -15,6 +15,15 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.cellcom.co.il",
+  "key_people": [
+    {
+      "name": "Michal Batzer",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/tv/news/article/1122590",
+      "as_of": "2026-07-26"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: CEL"
@@ -51,10 +60,12 @@
     "https://en.wikipedia.org/wiki/Cellcom_(Israel)",
     "https://www.globes.co.il/news/article.aspx?did=1001484065",
     "https://www.globes.co.il/news/article.aspx?did=1001504828",
-    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag"
+    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag",
+    "https://www.ice.co.il/tv/news/article/1122590",
+    "https://www.globes.co.il/news/article.aspx?did=1001534012"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Agency history (Globes): budget (~NIS 25M) moved from Publicis to Reuveni-Pridan in Jul 2024; the sides split in Mar 2025 and Cellcom said it would work without a full-service agency, using K Agency for digital only. Subsidiaries Golan Telecom and Dynamica are handled by Glickman-Shamir-Samsonov (2025)."
+  "last_verified": "2026-10-19",
+  "notes": "Agency history (Globes): budget (~NIS 25M) moved from Publicis to Reuveni-Pridan in Jul 2024; the sides split in Mar 2025 and Cellcom said it would work without a full-service agency, using K Agency for digital only. Subsidiaries Golan Telecom and Dynamica are handled by Glickman-Shamir-Samsonov (2025). Feb 2026 (Globes): Cellcom ended its short project-based work with ID.EA; under CEO Eli Adadi it buys TV media directly and works per project, with no agency of record confirmed. Agency status as of 2026-02."
 }

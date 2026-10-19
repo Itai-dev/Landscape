@@ -19,6 +19,13 @@
     {
       "name": "Ilan Segal",
       "role": "CEO, Pelephone and yes"
+    },
+    {
+      "name": "Dror Bahat",
+      "role": "VP Marketing (Pelephone & yes)",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/finance/news/article/1129185",
+      "as_of": "2026-09-08"
     }
   ],
   "client_profile": {
@@ -39,10 +46,11 @@
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Pelephone",
-    "https://www.globes.co.il/news/article.aspx?did=1001541690"
+    "https://www.globes.co.il/news/article.aspx?did=1001541690",
+    "https://www.ice.co.il/finance/news/article/1129185"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Current agency of record not confirmed in 2025-26 trade press; historically Bezeq-group budgets were concentrated at Adler Chomski (2008-2010 reports)."
 }

@@ -22,6 +22,20 @@
     {
       "name": "Ilan Segal",
       "role": "CEO, Pelephone and yes"
+    },
+    {
+      "name": "Dror Bahat",
+      "role": "VP Marketing (yes & Pelephone)",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001530171",
+      "as_of": "2025-12-24"
+    },
+    {
+      "name": "Keren Gleicher",
+      "role": "VP Content",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/tv/news/article/1130903",
+      "as_of": "2026-09-24"
     }
   ],
   "client_profile": {
@@ -42,9 +56,11 @@
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Yes_(Israel)",
-    "https://www.globes.co.il/news/article.aspx?did=1001541690"
+    "https://www.globes.co.il/news/article.aspx?did=1001541690",
+    "https://www.globes.co.il/news/article.aspx?did=1001530171",
+    "https://www.ice.co.il/tv/news/article/1130903"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-19"
 }

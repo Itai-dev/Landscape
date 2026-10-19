@@ -18,6 +18,16 @@
   "size": "5001+",
   "status": "active",
   "website": "https://www.harel-group.co.il",
+  "contact_url": "https://www.harel-group.co.il/contact",
+  "key_people": [
+    {
+      "name": "Liat Sadan",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/auto/news/article/1096361",
+      "as_of": "2025-12-21"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: HARL"
@@ -34,10 +44,12 @@
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Harel_Group",
-    "https://www.harel-group.co.il"
+    "https://www.harel-group.co.il",
+    "https://www.ice.co.il/auto/news/article/1096361",
+    "https://www.harel-group.co.il/contact"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Agency of record not confirmed in recent trade press."
 }

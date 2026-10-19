@@ -14,6 +14,15 @@
   "founded": 2005,
   "status": "active",
   "website": "https://www.yad2.co.il",
+  "key_people": [
+    {
+      "name": "Ayelet Nitzan",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001557536",
+      "as_of": "2026-09-27"
+    }
+  ],
   "client_profile": {
     "industry": "online classifieds",
     "creative_needs": [
@@ -39,10 +48,12 @@
   ],
   "sources": [
     "https://he.wikipedia.org/wiki/%D7%99%D7%932",
-    "https://www.globes.co.il/news/article.aspx?did=1001528342"
+    "https://www.globes.co.il/news/article.aspx?did=1001528342",
+    "https://www.globes.co.il/news/article.aspx?did=1001557536",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Budget moved from Reuveni-Pridan to McCann Tel Aviv from 2026 (Globes, Dec 2025). Rival Madlan went to Reuveni-Pridan (Jun 2026)."
+  "last_verified": "2026-10-19",
+  "notes": "Budget moved from Reuveni-Pridan to McCann Tel Aviv from 2026 (Globes, Dec 2025). Rival Madlan went to Reuveni-Pridan (Jun 2026). Agency as of 2026-10: McCann Tel Aviv lists Yad2 among its main budgets (Globes, Oct 2026)."
 }

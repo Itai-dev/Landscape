@@ -13,6 +13,15 @@
   },
   "status": "active",
   "website": "https://www.colmobil.co.il",
+  "key_people": [
+    {
+      "name": "Galit Miller",
+      "role": "Marketing Manager, Luxury Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001551330",
+      "as_of": "2026-08-04"
+    }
+  ],
   "client_profile": {
     "industry": "automotive import",
     "creative_needs": [
@@ -35,10 +44,11 @@
   ],
   "sources": [
     "https://he.wikipedia.org/wiki/%D7%9B%D7%9C%D7%9E%D7%95%D7%91%D7%99%D7%9C",
-    "https://www.globes.co.il/news/article.aspx?did=1001506565"
+    "https://www.globes.co.il/news/article.aspx?did=1001506565",
+    "https://www.globes.co.il/news/article.aspx?did=1001551330"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Adler Chomski credited for the ORA launch (Grand Effie + Gold, Effie Israel 2024 awarded Mar 2025). Hebrew Wikipedia dates group origins to 1906 (merged 1962)."
 }

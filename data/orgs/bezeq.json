@@ -18,6 +18,17 @@
   "size": "5001+",
   "status": "active",
   "website": "https://www.bezeq.co.il",
+  "contact_url": "https://www.bezeq.co.il/serviceandsupport/contactus/",
+  "careers_url": "https://www.bezeq.co.il/career/",
+  "key_people": [
+    {
+      "name": "Tali Poleg",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001549399",
+      "as_of": "2026-07-15"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: BEZQ"
@@ -52,10 +63,13 @@
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Bezeq",
-    "https://www.globes.co.il/news/article.aspx?did=1001531557"
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001549399",
+    "https://www.bezeq.co.il/serviceandsupport/contactus/",
+    "https://www.bezeq.co.il/career/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Globes' 2025 ad review lists Bezeq (with Discount) as Adler Chomski's main TV accounts. Employee figure is group-wide."
 }

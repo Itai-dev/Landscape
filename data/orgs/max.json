@@ -18,6 +18,7 @@
   "founded": 1996,
   "status": "active",
   "website": "https://www.max.co.il",
+  "contact_url": "https://www.max.co.il/contactus",
   "client_profile": {
     "industry": "payments / credit cards",
     "creative_needs": [
@@ -46,10 +47,12 @@
     "https://www.max.co.il",
     "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%A1_%D7%90%D7%99%D7%98_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%9D",
     "https://www.globes.co.il/news/article.aspx?did=1001551330",
-    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.max.co.il/contactus",
+    "https://www.globes.co.il/news/article.aspx?did=1001559741"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "McCann Tel Aviv credited on Max campaigns in 2025 review, 2026 Effies and the 2026 Skymax launch (Globes)."
+  "last_verified": "2026-10-19",
+  "notes": "McCann Tel Aviv credited on Max campaigns in 2025 review, 2026 Effies and the 2026 Skymax launch (Globes). Agency as of 2026-10: McCann Tel Aviv handles Max campaigns (Sky Max, Max Travel) while also serving rival FLY CARD (Globes, Aug and Oct 2026)."
 }

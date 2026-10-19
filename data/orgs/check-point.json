@@ -15,6 +15,8 @@
   "size": "5001+",
   "status": "active",
   "website": "https://www.checkpoint.com",
+  "contact_url": "https://www.checkpoint.com/about-us/contact-us/",
+  "careers_url": "https://careers.checkpoint.com/",
   "key_people": [
     {
       "name": "Gil Shwed",
@@ -23,6 +25,13 @@
     {
       "name": "Nadav Zafrir",
       "role": "CEO"
+    },
+    {
+      "name": "Brett Theiss",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.checkpoint.com/press-releases/check-point-software-technologies-appoints-brett-theiss-as-chief-marketing-officer-to-drive-global-brand-and-growth-strategy/",
+      "as_of": "2025-09-04"
     }
   ],
   "funding": {
@@ -42,9 +51,12 @@
   },
   "sources": [
     "https://en.wikipedia.org/wiki/Check_Point",
-    "https://www.checkpoint.com"
+    "https://www.checkpoint.com",
+    "https://www.checkpoint.com/press-releases/check-point-software-technologies-appoints-brett-theiss-as-chief-marketing-officer-to-drive-global-brand-and-growth-strategy/",
+    "https://www.checkpoint.com/about-us/contact-us/",
+    "https://careers.checkpoint.com/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-19"
 }

@@ -18,6 +18,8 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://monday.com",
+  "contact_url": "https://monday.com/sales/contact-us",
+  "careers_url": "https://monday.com/careers/",
   "key_people": [
     {
       "name": "Roy Mann",
@@ -26,6 +28,13 @@
     {
       "name": "Eran Zinman",
       "role": "Co-founder & Co-CEO"
+    },
+    {
+      "name": "Harris Beber",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.mi-3.com.au/19-06-2025/mondaycom-nabs-google-workplace-marketer-harris-beber-global-cmo-role",
+      "as_of": "2025-06-19"
     }
   ],
   "funding": {
@@ -56,10 +65,13 @@
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Monday.com",
-    "https://www.globes.co.il/news/article.aspx?did=1001504828"
+    "https://www.globes.co.il/news/article.aspx?did=1001504828",
+    "https://www.mi-3.com.au/19-06-2025/mondaycom-nabs-google-workplace-marketer-harris-beber-global-cmo-role",
+    "https://monday.com/sales/contact-us",
+    "https://monday.com/careers/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Globes (Mar 2025) lists monday.com among K Agency's clients."
 }

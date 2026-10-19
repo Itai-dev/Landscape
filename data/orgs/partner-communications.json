@@ -17,6 +17,22 @@
   "founded": 1999,
   "status": "active",
   "website": "https://www.partner.co.il",
+  "key_people": [
+    {
+      "name": "Asaf Aviv",
+      "role": "VP, Head of Marketing Division",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/local-news/news/article/1133277",
+      "as_of": "2026-10-12"
+    },
+    {
+      "name": "Sarit Strassmeister",
+      "role": "Head of Marketing Communications",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1129186",
+      "as_of": "2026-09-08"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: PTNR"
@@ -45,10 +61,13 @@
     "https://en.wikipedia.org/wiki/Partner_Communications_Company",
     "https://www.globes.co.il/news/article.aspx?did=1001531557",
     "https://www.globes.co.il/news/article.aspx?did=1001541337",
-    "https://www.mccann.co.il"
+    "https://www.mccann.co.il",
+    "https://www.ice.co.il/local-news/news/article/1133277",
+    "https://www.ice.co.il/positions/news/article/1129186",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Globes' 2025 ad review and the 2026 Effie results credit Partner campaigns to McCann Tel Aviv; Partner TV is the group's TV brand."
+  "last_verified": "2026-10-19",
+  "notes": "Globes' 2025 ad review and the 2026 Effie results credit Partner campaigns to McCann Tel Aviv; Partner TV is the group's TV brand. Agency as of 2026-10: McCann Tel Aviv lists Partner among its main budgets (Globes, Oct 2026)."
 }

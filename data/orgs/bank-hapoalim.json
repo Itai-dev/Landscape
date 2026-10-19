@@ -14,6 +14,17 @@
   "founded": 1921,
   "status": "active",
   "website": "https://www.bankhapoalim.co.il",
+  "contact_url": "https://www.bankhapoalim.co.il/contact-us",
+  "careers_url": "https://www.bankhapoalim.co.il/forms/he/jobs-site",
+  "key_people": [
+    {
+      "name": "Yigal Barkat",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001549396",
+      "as_of": "2026-07-15"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: POLI"
@@ -40,10 +51,14 @@
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Bank_Hapoalim",
-    "https://www.globes.co.il/news/article.aspx?did=1001515732"
+    "https://www.globes.co.il/news/article.aspx?did=1001515732",
+    "https://www.globes.co.il/news/article.aspx?did=1001549396",
+    "https://www.bankhapoalim.co.il/contact-us",
+    "https://www.bankhapoalim.co.il/forms/he/jobs-site",
+    "https://www.globes.co.il/news/article.aspx?did=1001559741"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Jul 2025 (Globes): Hapoalim ended its relationship with BBR Saatchi & Saatchi (Baumann Ber Rivnay) and kept only Gitam BBDO, alongside a presenter change. Ticker from general knowledge (TASE: POLI)."
+  "last_verified": "2026-10-19",
+  "notes": "Jul 2025 (Globes): Hapoalim ended its relationship with BBR Saatchi & Saatchi (Baumann Ber Rivnay) and kept only Gitam BBDO, alongside a presenter change. Ticker from general knowledge (TASE: POLI). Agency as of 2026-10: Gitam BBDO credited on Hapoalim's top-rated ads (Globes weekly ad ranking, Oct 2026)."
 }

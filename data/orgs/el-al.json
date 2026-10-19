@@ -15,6 +15,22 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.elal.com",
+  "key_people": [
+    {
+      "name": "Ofir Goldman",
+      "role": "Head of Marketing & Digital Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001525894",
+      "as_of": "2025-11-09"
+    },
+    {
+      "name": "Yonatan Regev",
+      "role": "VP Marketing, FLY CARD & El Al Matmid frequent-flyer club",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1129186",
+      "as_of": "2026-09-08"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: ELAL"
@@ -29,7 +45,8 @@
       "brand campaigns"
     ],
     "known_agencies": [
-      "McCann Tel Aviv"
+      "McCann Tel Aviv",
+      "Peach (Gitam group, FLY CARD)"
     ]
   },
   "relations": [
@@ -43,10 +60,13 @@
     "https://en.wikipedia.org/wiki/El_Al",
     "https://www.globes.co.il/news/article.aspx?did=1001531557",
     "https://www.globes.co.il/news/article.aspx?did=1001551330",
-    "https://www.mccann.co.il"
+    "https://www.mccann.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001525894",
+    "https://www.ice.co.il/positions/news/article/1129186",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "HQ at Ben Gurion Airport (near Lod)."
+  "last_verified": "2026-10-19",
+  "notes": "HQ at Ben Gurion Airport (near Lod). Agency as of 2026-10: McCann Tel Aviv lists El Al and FLY CARD among its main budgets (Globes, Oct 2026); FLY CARD earlier campaigns were by Peach (Gitam group) before McCann took over (Globes, Aug 2026)."
 }

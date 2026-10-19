@@ -20,6 +20,13 @@
     {
       "name": "Leon Koffler",
       "role": "Chairman"
+    },
+    {
+      "name": "Rona Ohayon",
+      "role": "Head of Marketing Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001548875",
+      "as_of": "2026-07-09"
     }
   ],
   "client_profile": {
@@ -58,10 +65,12 @@
   "sources": [
     "https://en.wikipedia.org/wiki/Super-Pharm",
     "https://www.globes.co.il/news/article.aspx?did=1001412330",
-    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001548875",
+    "https://www.globes.co.il/news/article.aspx?did=1001555265"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "May 2022: McCann group won the ~NIS 80M Super-Pharm brand budget after 30 years at BBR Saatchi & Saatchi (Baumann Ber Rivnay), which kept Life and Milouka. 2026 Effie Gold for Iroka via Parsman Baruch."
+  "last_verified": "2026-10-19",
+  "notes": "May 2022: McCann group won the ~NIS 80M Super-Pharm brand budget after 30 years at BBR Saatchi & Saatchi (Baumann Ber Rivnay), which kept Life and Milouka. 2026 Effie Gold for Iroka via Parsman Baruch. Agency as of 2026-09: Parsman Baruch credited on Super-Pharm's top-rated ad (Globes, Sep 2026)."
 }

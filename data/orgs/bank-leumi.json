@@ -14,6 +14,17 @@
   "founded": 1902,
   "status": "active",
   "website": "https://www.leumi.co.il",
+  "contact_url": "https://www.leumi.co.il/he/leumi-digital/Talk_to_us/Leumi_contact_us",
+  "careers_url": "https://www.leumi.co.il/he/about-leumi/Career",
+  "key_people": [
+    {
+      "name": "Meital Shiran-Harel",
+      "role": "Head of Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001515732",
+      "as_of": "2025-07-14"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: LUMI"
@@ -42,10 +53,15 @@
     "https://en.wikipedia.org/wiki/Bank_Leumi",
     "https://www.globes.co.il/news/article.aspx?did=1001531557",
     "https://www.globes.co.il/news/article.aspx?did=1001506565",
-    "https://www.mccann.co.il"
+    "https://www.mccann.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001515732",
+    "https://www.leumi.co.il/he/leumi-digital/Talk_to_us/Leumi_contact_us",
+    "https://www.leumi.co.il/he/about-leumi/Career",
+    "https://www.globes.co.il/news/article.aspx?did=1001559112",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Leumi ranked #2 most-memorable and #1 by presence in Globes' 2025 review; ~NIS 33M TV spend (Yifat). Ticker from general knowledge."
+  "last_verified": "2026-10-19",
+  "notes": "Leumi ranked #2 most-memorable and #1 by presence in Globes' 2025 review; ~NIS 33M TV spend (Yifat). Ticker from general knowledge. Agency as of 2026-10: McCann Tel Aviv handles the ~NIS 70M/yr Leumi budget (Globes, Oct 2026); Leumi Partners is weighing a stake in rival Adler-Chomsky."
 }

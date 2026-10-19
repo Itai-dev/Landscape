@@ -19,6 +19,8 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.taboola.com",
+  "contact_url": "https://www.taboola.com/contact",
+  "careers_url": "https://www.taboola.com/careers",
   "key_people": [
     {
       "name": "Adam Singolda",
@@ -41,10 +43,12 @@
     ]
   },
   "sources": [
-    "https://en.wikipedia.org/wiki/Taboola"
+    "https://en.wikipedia.org/wiki/Taboola",
+    "https://www.taboola.com/contact",
+    "https://www.taboola.com/careers"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Tel Aviv office from general knowledge (Wikipedia does not describe the Israeli office). May overlap with an ad-tech startup segment."
 }

@@ -18,6 +18,15 @@
   "founded": 1957,
   "status": "active",
   "website": "https://www.winner.co.il",
+  "key_people": [
+    {
+      "name": "Hila Brzezinski",
+      "role": "VP Marketing (Toto)",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001540738",
+      "as_of": "2026-04-23"
+    }
+  ],
   "client_profile": {
     "industry": "sports betting / public",
     "creative_needs": [
@@ -45,10 +54,11 @@
   ],
   "sources": [
     "https://he.wikipedia.org/wiki/%D7%94%D7%9E%D7%95%D7%A2%D7%A6%D7%94_%D7%9C%D7%94%D7%A1%D7%93%D7%A8_%D7%94%D7%94%D7%99%D7%9E%D7%95%D7%A8%D7%99%D7%9D_%D7%91%D7%A1%D7%A4%D7%95%D7%A8%D7%98",
-    "https://www.globes.co.il/news/article.aspx?did=1001540738"
+    "https://www.globes.co.il/news/article.aspx?did=1001540738",
+    "https://www.ice.co.il/advertising-marketing/news/article/1110615"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Apr 2026: parted from Yehoshua TBWA after 17 years; budget split between GSS Publicis and Gitam BBDO."
+  "last_verified": "2026-10-19",
+  "notes": "Apr 2026: parted from Yehoshua TBWA after 17 years; budget split between GSS Publicis and Gitam BBDO. Agencies confirmed Apr 2026: Gitam BBDO (Winner), Glickman-Shamir-Samsonov Publicis (Toto) (ICE)."
 }

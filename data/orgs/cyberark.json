@@ -15,6 +15,8 @@
   "size": "1001-5000",
   "status": "acquired",
   "website": "https://www.cyberark.com",
+  "contact_url": "https://www.paloaltonetworks.com/company/contact-sales",
+  "careers_url": "https://jobs.paloaltonetworks.com/en/",
   "key_people": [
     {
       "name": "Udi Mokady",
@@ -40,10 +42,12 @@
     }
   ],
   "sources": [
-    "https://en.wikipedia.org/wiki/CyberArk"
+    "https://en.wikipedia.org/wiki/CyberArk",
+    "https://www.paloaltonetworks.com/company/contact-sales",
+    "https://jobs.paloaltonetworks.com/en/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Post-acquisition, marketing decisions may sit with Palo Alto Networks."
+  "last_verified": "2026-10-19",
+  "notes": "Post-acquisition, marketing decisions may sit with Palo Alto Networks. Oct 2026: cyberark.com redirects to paloaltonetworks.com/idira; contact and careers now on Palo Alto Networks pages."
 }

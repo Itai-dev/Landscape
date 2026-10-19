@@ -18,10 +18,19 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.similarweb.com",
+  "contact_url": "https://www.similarweb.com/corp/contact-us/",
+  "careers_url": "https://www.similarweb.com/corp/careers/",
   "key_people": [
     {
       "name": "Or Offer",
       "role": "Founder"
+    },
+    {
+      "name": "Guy Gomberg",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.similarweb.com/corp/leadership/",
+      "as_of": "2026-10-19"
     }
   ],
   "funding": {
@@ -40,9 +49,12 @@
     ]
   },
   "sources": [
-    "https://en.wikipedia.org/wiki/Similarweb"
+    "https://en.wikipedia.org/wiki/Similarweb",
+    "https://www.similarweb.com/corp/leadership/",
+    "https://www.similarweb.com/corp/contact-us/",
+    "https://www.similarweb.com/corp/careers/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-19"
 }

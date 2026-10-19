@@ -18,6 +18,15 @@
   "founded": 1951,
   "status": "active",
   "website": "https://www.pais.co.il",
+  "key_people": [
+    {
+      "name": "Shai Liraz",
+      "role": "Head of Image & Research Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001549399",
+      "as_of": "2026-07-15"
+    }
+  ],
   "client_profile": {
     "industry": "lottery / public",
     "creative_needs": [
@@ -39,10 +48,11 @@
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Mifal_HaPais",
-    "https://www.globes.co.il/news/article.aspx?did=1001534160"
+    "https://www.globes.co.il/news/article.aspx?did=1001534160",
+    "https://www.globes.co.il/news/article.aspx?did=1001549399"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Feb 2026: Lotto's ~NIS 15M/yr budget moved from BBR Saatchi & Saatchi (Baumann Ber Rivnay) to Adler Chomski, which now handles most of Pais's ~NIS 60M budget."
 }

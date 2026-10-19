@@ -29,24 +29,25 @@
       "digital display ads"
     ],
     "known_agencies": [
-      "Glickman-Shamir-Samsonov Publicis"
+      "Brickman (Adler Chomski group)"
     ]
   },
   "relations": [
     {
       "type": "agency",
-      "target": "glickman-shamir-samsonov",
-      "note": "agency (per trade press / agency client list)"
+      "target": "adler-chomski-warshavsky",
+      "note": "agency via Brickman (Adler Chomski group) from Dec 2025 (ICE)"
     }
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Shufersal",
     "https://www.globes.co.il/news/article.aspx?did=1001531557",
     "https://www.globes.co.il/news/article.aspx?did=1001480891",
-    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag"
+    "https://www.globes.co.il/news/%D7%92%D7%9C%D7%99%D7%A7%D7%9E%D7%9F_%D7%A0%D7%98%D7%9C%D7%A8_%D7%A1%D7%9E%D7%A1%D7%95%D7%A0%D7%95%D7%91.tag",
+    "https://www.ice.co.il/advertising-marketing/news/article/1094607"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Jun 2024: Shufersal cut agencies and parted from Gitam BBDO after ~30 years; Glickman-Shamir-Samsonov (took a portion from Adler Chomski in 2022) is credited for Shufersal in Globes' 2025 review."
+  "last_verified": "2026-10-19",
+  "notes": "Jun 2024: Shufersal cut agencies and parted from Gitam BBDO after ~30 years; Glickman-Shamir-Samsonov (took a portion from Adler Chomski in 2022) is credited for Shufersal in Globes' 2025 review. Dec 2025: under the Amir brothers' control, Shufersal moved its ad budget to Brickman of the Adler Chomski group (ICE), replacing Glickman-Shamir-Samsonov. Agency as of 2025-12."
 }

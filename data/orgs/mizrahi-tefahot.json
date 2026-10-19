@@ -14,6 +14,24 @@
   "founded": 1923,
   "status": "active",
   "website": "https://www.mizrahi-tefahot.co.il",
+  "contact_url": "https://www.mizrahi-tefahot.co.il/contact-us/",
+  "careers_url": "https://www.mizrahi-tefahot.co.il/about-mizrahi-tefahot-he/career/open-jobs/",
+  "key_people": [
+    {
+      "name": "Teri Yaskil",
+      "role": "VP, Head of Marketing, Advertising & Business Development Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001547643",
+      "as_of": "2026-07-01"
+    },
+    {
+      "name": "Sigal Zakshansky",
+      "role": "Head of Marketing Department",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/finance/news/article/1115803",
+      "as_of": "2026-06-07"
+    }
+  ],
   "funding": {
     "public": true,
     "ticker": "TASE: MZTF"
@@ -42,10 +60,15 @@
   "sources": [
     "https://en.wikipedia.org/wiki/Bank_Mizrahi-Tefahot",
     "https://www.globes.co.il/news/article.aspx?did=1001531557",
-    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001547643",
+    "https://www.ice.co.il/finance/news/article/1115803",
+    "https://www.mizrahi-tefahot.co.il/contact-us/",
+    "https://www.mizrahi-tefahot.co.il/about-mizrahi-tefahot-he/career/open-jobs/",
+    "https://www.globes.co.il/news/article.aspx?did=1001546956"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "2026 Effie Gold (financial services) with Reuveni-Pridan; presenter changed in 2026 (Globes)."
+  "last_verified": "2026-10-19",
+  "notes": "2026 Effie Gold (financial services) with Reuveni-Pridan; presenter changed in 2026 (Globes). Agency as of 2026-06: Reuveni-Pridan (Effie 2026 gold for \"Don't call me\"; listed among its main clients Jun 2026)."
 }
