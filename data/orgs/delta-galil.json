@@ -1,0 +1,45 @@
+{
+  "id": "delta-galil",
+  "name": "Delta Galil Industries",
+  "name_he": "דלתא גליל תעשיות",
+  "aka": [
+    "Delta Israel"
+  ],
+  "kind": "client",
+  "categories": [
+    "retail-fashion",
+    "consumer-goods"
+  ],
+  "description": "Israeli apparel maker (est. 1975, Caesarea HQ) producing underwear, activewear and denim for own and licensed brands worldwide; in Israel it runs the Delta retail chain and online store. ~25,000 employees globally.",
+  "location": {
+    "country": "IL",
+    "city": "Caesarea"
+  },
+  "founded": 1975,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.deltagalil.com",
+  "contact_url": "https://www.delta.co.il/customer-service/contact-us",
+  "careers_url": "https://career.deltagalil.com/",
+  "links": {
+    "delta_israel": "https://www.delta.co.il"
+  },
+  "client_profile": {
+    "industry": "apparel manufacturing and retail",
+    "creative_needs": [
+      "e-commerce product photography",
+      "fashion photography",
+      "social video",
+      "TV commercials",
+      "3D product visuals"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%93%D7%9C%D7%AA%D7%90_%D7%92%D7%9C%D7%99%D7%9C_%D7%AA%D7%A2%D7%A9%D7%99%D7%95%D7%AA",
+    "https://www.delta.co.il"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "The Adler Chomski & Warshavsky record lists 'Delta' as a client; not confirmed whether that is Delta Galil/Delta Israel."
+}

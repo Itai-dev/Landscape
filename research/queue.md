@@ -14,7 +14,7 @@ Tick a segment when coverage looks reasonably complete; add new lines any time.
 - [ ] il-community — schools, festivals, associations, meetups (Bezalel, Shenkar, Animix…)
 
 ## Phase 2 — Israel: potential clients
-- [ ] il-agencies — ad, digital, social & media agencies
+- [x] il-agencies — ad, digital, social & media agencies (media agencies still thin)
 - [ ] il-clients — major brands / advertisers
 - [ ] il-clients-tech — tech companies with large brand & video output
 - [ ] il-clients-public — government, municipalities, NGOs, culture institutions

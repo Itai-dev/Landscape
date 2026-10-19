@@ -1,0 +1,56 @@
+{
+  "id": "tara-dairy",
+  "name": "Tara",
+  "name_he": "טרה",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli dairy brand (milk, cheeses, desserts and milk drinks) owned by the Central Bottling Company (Coca-Cola Israel); launched the sugar-free Tuti Fruti milk drink in 2024.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.tara.co.il",
+  "contact_url": "https://www.tara.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
+  "key_people": [
+    {
+      "name": "Tzofit Ashkenazi",
+      "role": "VP Marketing, Dairy Division",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1023495",
+      "as_of": "2024-08-02"
+    }
+  ],
+  "client_profile": {
+    "industry": "dairy",
+    "creative_needs": [
+      "TV commercials",
+      "animation",
+      "packshots",
+      "social video",
+      "packaging"
+    ],
+    "known_agencies": [
+      "Glickman Shamir Samsonov"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "central-bottling-company"
+    },
+    {
+      "type": "agency",
+      "target": "glickman-shamir-samsonov",
+      "note": "Aug 2024 Tuti Fruti launch; production Gimini, post Playground (ICE)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1023495",
+    "https://www.tara.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

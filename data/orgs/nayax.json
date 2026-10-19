@@ -1,0 +1,47 @@
+{
+  "id": "nayax",
+  "name": "Nayax",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Cashless payments, telemetry and management platform for vending and unattended retail, founded in 2005 by Yair Nechmad and David Ben Avi; Herzliya HQ, Nasdaq/TASE: NYAX, ~1,100 employees.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 2005,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.nayax.com",
+  "key_people": [
+    {
+      "name": "Keren Sharir",
+      "role": "President & CMO",
+      "role_type": "marketing",
+      "source": "https://www.nayax.com/news/nayax-appoints-keren-sharir-as-president-and-cmo/",
+      "as_of": "2024-09-04"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "Nasdaq/TASE: NYAX"
+  },
+  "client_profile": {
+    "industry": "payments / unattended retail tech",
+    "creative_needs": [
+      "3D product visuals",
+      "explainer animation",
+      "trade-show content",
+      "product photography"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Nayax",
+    "https://www.nayax.com/news/nayax-appoints-keren-sharir-as-president-and-cmo/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "riskified",
+  "name": "Riskified",
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "E-commerce fraud-prevention and chargeback platform founded in 2012 by Eido Gal and Assaf Feldman; HQ in New York and Tel Aviv, NYSE: RSKD, ~770 employees (2021).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2012,
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://www.riskified.com",
+  "key_people": [
+    {
+      "name": "Jeff Otto",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://ir.riskified.com/news-releases/news-release-details/riskified-appoints-jeff-otto-chief-marketing-officer",
+      "as_of": "2023-04-03"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NYSE: RSKD"
+  },
+  "client_profile": {
+    "industry": "B2B fintech / e-commerce",
+    "creative_needs": [
+      "explainer animation",
+      "motion graphics",
+      "event content",
+      "brand video"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "bilderish",
+      "note": "listed as a Bilderish client (studio website)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Riskified",
+    "https://ir.riskified.com/news-releases/news-release-details/riskified-appoints-jeff-otto-chief-marketing-officer",
+    "https://bilderish.com"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

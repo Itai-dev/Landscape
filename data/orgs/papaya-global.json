@@ -1,0 +1,35 @@
+{
+  "id": "papaya-global",
+  "name": "Papaya Global",
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Global payroll and workforce-payments platform founded in 2016 by Eynat Guez, Ruben Drong and Ofer Herman; HQ New York with R&D in Israel, 700+ employees.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2016,
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://www.papayaglobal.com",
+  "contact_url": "https://www.papayaglobal.com/contact-us/",
+  "careers_url": "https://www.papayaglobal.com/careers/",
+  "client_profile": {
+    "industry": "B2B SaaS / payroll",
+    "creative_needs": [
+      "explainer animation",
+      "motion graphics",
+      "brand video",
+      "event content"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Papaya_Global",
+    "https://www.papayaglobal.com/about/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No CMO publicly listed (CSO Zvika Liblich led brand from 2022; no longer on team page)."
+}

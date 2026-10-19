@@ -1,0 +1,42 @@
+{
+  "id": "keter",
+  "name": "Keter",
+  "name_he": "כתר",
+  "aka": [
+    "Keter Group"
+  ],
+  "kind": "client",
+  "categories": [
+    "consumer-goods"
+  ],
+  "description": "Israeli-founded maker of resin home and garden products — outdoor furniture, storage sheds, planters and tool storage (est. 1948, Herzliya HQ); ~5,000 employees worldwide, ~2,500 in Israel; sells globally online and through retailers.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 1948,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.keter.com",
+  "contact_url": "https://www.keter.com/en-us/contact-us.html",
+  "careers_url": "https://ketergroup.com/keter-careers/",
+  "client_profile": {
+    "industry": "home and garden products",
+    "creative_needs": [
+      "3D product visuals",
+      "product photography",
+      "e-commerce content",
+      "social video",
+      "product animation"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9B%D7%AA%D7%A8_%D7%9E%D7%95%D7%A6%D7%A8%D7%99%D7%9D_%D7%9C%D7%91%D7%99%D7%AA_%D7%95%D7%9C%D7%92%D7%99%D7%A0%D7%94",
+    "https://www.keter.com/en-us/about-us.html",
+    "https://advertising.amazon.com/library/case-studies/keter"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Amazon Ads case study names e-retail agency Labelium (Spain). No Israeli agency found."
+}

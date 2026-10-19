@@ -1,0 +1,54 @@
+{
+  "id": "altshuler-shaham",
+  "name": "Altshuler Shaham",
+  "name_he": "אלטשולר שחם",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli investment house (est. 1990 by Gilad Altshuler and Kalman Shaham) managing provident, pension and mutual funds; Tel Aviv HQ, ~1,200 employees. Being sold to the Wisor/WeSure holding group (2026).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1990,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.as-invest.co.il",
+  "contact_url": "https://www.as-invest.co.il/contact-us/",
+  "careers_url": "https://www.as-invest.co.il/about/career/",
+  "client_profile": {
+    "industry": "investment and pensions",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "explainer animation",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "LEAD"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "lead-advertising",
+      "note": "LEAD (Ogilvy) has handled the ~NIS 15M budget for 15+ years (Globes, Sep 2026)"
+    },
+    {
+      "type": "agency",
+      "target": "anka-studio",
+      "note": "listed as an Anka Studio animation client (studio website)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%98%D7%A9%D7%95%D7%9C%D7%A8_%D7%A9%D7%97%D7%9D",
+    "https://www.globes.co.il/news/article.aspx?did=1001555401",
+    "https://www.ankanimation.com",
+    "https://www.as-invest.co.il/about/about-us/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Sep 2026: sale to Wisor (owner of Ayalon) may change the advertising setup — a timely reason to reach out (Globes)."
+}

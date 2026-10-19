@@ -1,0 +1,77 @@
+{
+  "id": "delek-israel",
+  "name": "Delek Israel",
+  "name_he": "דלק ישראל",
+  "aka": [
+    "Delek – The Israel Fuel Company"
+  ],
+  "kind": "client",
+  "categories": [
+    "energy"
+  ],
+  "description": "One of Israel's four big fuel companies (est. 1951), running hundreds of filling stations and convenience stores (rebranded from Menta to JOE in 2022) plus fuel-logistics subsidiaries. Not Delek Motors.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1951,
+  "status": "active",
+  "website": "https://delek.co.il",
+  "contact_url": "https://delek.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
+  "careers_url": "https://delek.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%97%D7%93%D7%A9/",
+  "key_people": [
+    {
+      "name": "Keren Kupermintz",
+      "role": "Deputy CEO & VP Marketing, Trade and Business Development",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1133657",
+      "as_of": "2026-10-16"
+    },
+    {
+      "name": "Iris Pappo",
+      "role": "Marketing Department Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1133657",
+      "as_of": "2026-10-16"
+    },
+    {
+      "name": "Gal Malka",
+      "role": "Marketing Communications Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1133657",
+      "as_of": "2026-10-16"
+    }
+  ],
+  "client_profile": {
+    "industry": "fuel and convenience retail",
+    "creative_needs": [
+      "TV commercials",
+      "AI video",
+      "music-led campaigns",
+      "point-of-sale design",
+      "social video"
+    ],
+    "known_agencies": [
+      "GO"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "GO",
+      "note": "agency on the Oct 2026 ICE 'ad of the week'; also reported on a 2024 presenter campaign"
+    },
+    {
+      "type": "agency",
+      "target": "Oog",
+      "note": "production company on the Oct 2026 AI-directed spot by Eli Sabradlov (ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%22%D7%93%D7%9C%D7%A7%22_%D7%97%D7%91%D7%A8%D7%AA_%D7%94%D7%93%D7%9C%D7%A7_%D7%94%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%AA",
+    "https://www.ice.co.il/advertising-marketing/news/article/1133657"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Oct 2026 campaign was AI-directed — buyer for AI video. HQ city not confirmed."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "meuhedet",
+  "name": "Meuhedet",
+  "name_he": "מאוחדת",
+  "aka": [
+    "Kupat Holim Meuhedet"
+  ],
+  "kind": "client",
+  "categories": [
+    "health-pharma"
+  ],
+  "description": "Israeli health fund (formed 1974 by merger; roots in 1931), HQ at HaMea Tower on Ibn Gabirol St, Tel Aviv, ~11,000 employees; competes for members with regular brand and service campaigns.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1974,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.meuhedet.co.il",
+  "client_profile": {
+    "industry": "health fund",
+    "creative_needs": [
+      "TV commercials",
+      "celebrity presenter campaigns",
+      "health explainer animation",
+      "social video",
+      "sector-targeted campaigns"
+    ],
+    "known_agencies": [
+      "LEAD"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "lead-advertising",
+      "note": "listed among LEAD's clients (Globes, Jul 2026 / ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%A4%D7%AA_%D7%97%D7%95%D7%9C%D7%99%D7%9D_%D7%9E%D7%90%D7%95%D7%97%D7%93%D7%AA",
+    "https://www.globes.co.il/news/article.aspx?did=1001548875",
+    "https://www.ice.co.il/advertising-marketing/news/article/464361"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

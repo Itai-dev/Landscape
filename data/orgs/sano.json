@@ -1,0 +1,39 @@
+{
+  "id": "sano",
+  "name": "Sano",
+  "name_he": "סנו",
+  "aka": [
+    "Sano Bruno's Enterprises"
+  ],
+  "kind": "client",
+  "categories": [
+    "consumer-goods"
+  ],
+  "description": "Israeli maker of cleaning, household, paper, cosmetics and soap products (est. 1965), HQ in Hod HaSharon's Neve Ne'eman industrial zone; ~1,800 employees. A long-running TV advertiser (e.g. Sano Jet).",
+  "location": {
+    "country": "IL",
+    "city": "Hod HaSharon"
+  },
+  "founded": 1965,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.sano.co.il",
+  "client_profile": {
+    "industry": "household consumer goods",
+    "creative_needs": [
+      "TV commercials",
+      "3D product visuals",
+      "packshots",
+      "social video",
+      "packaging"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A1%D7%A0%D7%95",
+    "https://www.sano.co.il"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Agency not confirmed in trade press."
+}

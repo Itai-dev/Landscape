@@ -1,0 +1,59 @@
+{
+  "id": "paz",
+  "name": "Paz",
+  "name_he": "פז",
+  "aka": [
+    "Paz Retail and Energy",
+    "Paz Oil Company"
+  ],
+  "kind": "client",
+  "categories": [
+    "energy"
+  ],
+  "description": "TASE-listed Israeli fuel and retail group (est. 1958, Yakum HQ) with ~270 filling stations, the Yellow convenience chain, Super Yuda and Freshmarket supermarkets, plus EV charging and gas (Pazgaz).",
+  "location": {
+    "country": "IL",
+    "city": "Yakum"
+  },
+  "founded": 1958,
+  "status": "active",
+  "website": "https://www.paz.co.il",
+  "contact_url": "https://www.paz.co.il/contact",
+  "careers_url": "https://www.paz.co.il/jobs",
+  "client_profile": {
+    "industry": "fuel, convenience and grocery retail",
+    "creative_needs": [
+      "TV commercials",
+      "character animation",
+      "brand identity",
+      "social video",
+      "point-of-sale design"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv",
+      "D-SAY"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "2022 rebrand of the EV-charging network around a fictional character (ICE)"
+    },
+    {
+      "type": "agency",
+      "target": "D-SAY",
+      "note": "Aug 2024 Pazgaz campaign, production Oog, director Amri Dekel Kadosh (ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A4%D7%96_%D7%A7%D7%9E%D7%A2%D7%95%D7%A0%D7%90%D7%95%D7%AA_%D7%95%D7%90%D7%A0%D7%A8%D7%92%D7%99%D7%94",
+    "https://www.ice.co.il/advertising-marketing/news/article/911685",
+    "https://www.ice.co.il/advertising-marketing/news/article/1025670",
+    "https://www.paz.co.il/about/about-the-company"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "McCann link dates from 2022 (ICE profile of then-marketer Adi Negbi); current marketing head not confirmed."
+}

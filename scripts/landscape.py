@@ -438,9 +438,14 @@ def link_signals(sigs: list[dict], orgs: dict) -> list[dict]:
     out = []
     for sig in sigs:
         sig = dict(sig)
-        if not sig.get("org_id"):
-            sig["org_id"] = by_name.get(norm_name(sig["org_name"]))
         rel = list(sig.get("related_ids", []))
+        if not sig.get("org_id"):
+            # "Sodastream (PepsiCo)", "Altshuler Shaham / Wisure / Ayalon Insurance"
+            parts = [sig["org_name"], re.sub(r"\s*\(.*?\)", "", sig["org_name"])] + re.split(r"\s*/\s*", sig["org_name"])
+            hits = list(dict.fromkeys(h for h in (by_name.get(norm_name(x)) for x in parts) if h))
+            if hits:
+                sig["org_id"] = hits[0]
+                rel += [h for h in hits[1:] if h not in rel]
         for name in (sig.get("credits") or {}).values():
             oid = by_name.get(norm_name(name))
             if oid and oid not in rel and oid != sig.get("org_id"):

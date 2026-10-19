@@ -1,0 +1,36 @@
+{
+  "id": "dr-fischer",
+  "name": "Dr. Fischer",
+  "name_he": "ד\"ר פישר",
+  "kind": "client",
+  "categories": [
+    "health-pharma",
+    "consumer-goods"
+  ],
+  "description": "Israeli pharma and cosmetics group (founded by Devora and Eli Fischer, Bnei Brak HQ, ~700 employees) making skincare, sunscreen, eye drops, hygiene products and supplements; sells in Israel and internationally.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://www.dr-fischer.co.il",
+  "client_profile": {
+    "industry": "skincare and OTC health",
+    "creative_needs": [
+      "TV commercials",
+      "beauty product photography",
+      "3D product visuals",
+      "social video",
+      "packaging"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%93%22%D7%A8_%D7%A4%D7%99%D7%A9%D7%A8",
+    "https://www.drushim.co.il/job/38271019/c144a6d6/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Aug 2026 job post for an international-marketing brand manager running creative campaigns (Drushim). Agency not found."
+}

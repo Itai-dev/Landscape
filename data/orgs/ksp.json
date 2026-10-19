@@ -1,0 +1,35 @@
+{
+  "id": "ksp",
+  "name": "KSP",
+  "name_he": "K.S.P",
+  "kind": "client",
+  "categories": [
+    "retail-fashion",
+    "tech"
+  ],
+  "description": "Israeli electronics and computer retail chain (est. 1994, Haifa HQ) with 74 branches as of 2026, selling computers, peripherals, consoles, phones and wider consumer goods online and in stores.",
+  "location": {
+    "country": "IL",
+    "city": "Haifa"
+  },
+  "founded": 1994,
+  "status": "active",
+  "website": "https://ksp.co.il",
+  "client_profile": {
+    "industry": "consumer electronics retail",
+    "creative_needs": [
+      "product photography",
+      "social video",
+      "digital display ads",
+      "radio spots"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/K.S.P",
+    "https://ksp.co.il"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No agency or marketing head found in trade press."
+}

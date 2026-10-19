@@ -1,0 +1,54 @@
+{
+  "id": "melio",
+  "name": "Melio",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "B2B accounts-payable and receivable platform for small businesses, with 600+ staff in New York, Denver and Tel Aviv; acquired by Xero in 2025.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2018,
+  "size": "501-1000",
+  "status": "acquired",
+  "website": "https://melio.com",
+  "contact_url": "https://melio.com/contact-us/",
+  "client_profile": {
+    "industry": "B2B fintech",
+    "creative_needs": [
+      "TV commercials",
+      "explainer animation",
+      "motion graphics",
+      "3D visuals",
+      "social video"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Xero"
+    },
+    {
+      "type": "agency",
+      "target": "blackboard-studios",
+      "note": "listed as a Blackboard client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "nua-motion",
+      "note": "listed as a Nua Motion client (studio website)"
+    }
+  ],
+  "sources": [
+    "https://melio.com/about-us/",
+    "https://blackboardvfx.com",
+    "https://nuamotion.com"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Founding year 2018 from general knowledge; Melio co-founder Matan Bar reportedly also heads Xero US (2026)."
+}

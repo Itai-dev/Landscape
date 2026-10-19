@@ -1,0 +1,54 @@
+{
+  "id": "one-zero-bank",
+  "name": "ONE ZERO",
+  "name_he": "וואן זירו",
+  "aka": [
+    "ONE ZERO Digital Bank"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance",
+    "tech"
+  ],
+  "description": "Israeli digital bank (licensed 2019, operating since 2021), founded by Marius Nacht and Prof. Amnon Shashua (now sole controller); Tel Aviv HQ, ~390 employees. Sponsored the top football league as the 'ONE ZERO League'.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2019,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.onezerobank.com",
+  "client_profile": {
+    "industry": "digital banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "brand identity",
+      "custom typeface",
+      "web design",
+      "sports sponsorship content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "fontef",
+      "note": "listed as a Fontef type-foundry client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "richkid",
+      "note": "listed as a Richkid client (studio website)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/ONE_ZERO",
+    "https://www.fontef.com",
+    "https://www.richkid-tlv.com"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "CEO Eyal Gefen since 2025 (he.wikipedia); ad agency not confirmed."
+}

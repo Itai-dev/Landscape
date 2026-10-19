@@ -1,0 +1,44 @@
+{
+  "id": "tipalti",
+  "name": "Tipalti",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Finance-automation platform for accounts payable, global payouts and procurement, with an office in Tel Aviv; appointed a new CMO in August 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://tipalti.com",
+  "contact_url": "https://tipalti.com/contact-us/",
+  "careers_url": "https://tipalti.com/company/careers/",
+  "key_people": [
+    {
+      "name": "Darren Upson",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://martech360.com/news/cxo-moves/darren-upson-appointed-chief-marketing-officer-at-tipalti",
+      "as_of": "2026-08-03"
+    }
+  ],
+  "client_profile": {
+    "industry": "B2B SaaS / fintech",
+    "creative_needs": [
+      "explainer animation",
+      "motion graphics",
+      "brand video",
+      "event content"
+    ]
+  },
+  "sources": [
+    "https://tipalti.com/company/",
+    "https://martech360.com/news/cxo-moves/darren-upson-appointed-chief-marketing-officer-at-tipalti"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "New CMO (Aug 2026) — a fresh marketing lead is a timely reason to pitch."
+}

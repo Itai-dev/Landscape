@@ -1,0 +1,47 @@
+{
+  "id": "hibob",
+  "name": "HiBob",
+  "aka": [
+    "Bob"
+  ],
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "HR platform 'bob' for mid-sized companies, founded in Tel Aviv in 2015 by Ronni Zehavi and Israel David; HQ in London with a large Tel Aviv office.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2015,
+  "status": "active",
+  "website": "https://www.hibob.com",
+  "contact_url": "https://www.hibob.com/contact-us/",
+  "careers_url": "https://www.hibob.com/careers/",
+  "key_people": [
+    {
+      "name": "Sophie Chesters",
+      "role": "CMO",
+      "role_type": "marketing",
+      "source": "https://www.hibob.com/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "client_profile": {
+    "industry": "B2B SaaS / HR tech",
+    "creative_needs": [
+      "product explainer animation",
+      "motion graphics",
+      "social video",
+      "event content",
+      "illustration"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/HiBob",
+    "https://www.hibob.com/about/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

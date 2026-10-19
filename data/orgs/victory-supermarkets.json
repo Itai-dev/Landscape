@@ -1,0 +1,57 @@
+{
+  "id": "victory-supermarkets",
+  "name": "Victory",
+  "name_he": "ויקטורי",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israeli discount supermarket chain (est. 1986, Yavne HQ) controlled by the Ravid family, with ~68 branches and ~3,300 employees; slogan 'Ein al Victory'.",
+  "location": {
+    "country": "IL",
+    "city": "Yavne"
+  },
+  "founded": 1986,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://victory.co.il",
+  "careers_url": "https://victory.co.il/jobs/",
+  "key_people": [
+    {
+      "name": "Gal Margalit",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1000608",
+      "as_of": "2024-02-15"
+    }
+  ],
+  "client_profile": {
+    "industry": "grocery retail",
+    "creative_needs": [
+      "TV commercials",
+      "radio spots",
+      "price-promotion campaigns",
+      "store-opening campaigns",
+      "social video"
+    ],
+    "known_agencies": [
+      "Munch"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "munch",
+      "note": "~NIS 10M campaign with the Asayag family, Jan 2022 (ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%95%D7%99%D7%A7%D7%98%D7%95%D7%A8%D7%99_%D7%A8%D7%A9%D7%AA_%D7%A1%D7%95%D7%A4%D7%A8%D7%9E%D7%A8%D7%A7%D7%98%D7%99%D7%9D",
+    "https://www.ice.co.il/advertising-marketing/news/article/840560",
+    "https://www.ice.co.il/advertising-marketing/news/article/1000608",
+    "https://victory.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}
