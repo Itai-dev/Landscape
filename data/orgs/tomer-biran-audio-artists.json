@@ -42,6 +42,10 @@
     "SuperPlay",
     "888"
   ],
+  "notable_work": [
+    "Bezeq — Bezeq Energy with Adi Ashkenazi (2025)",
+    "Discount Bank — campaign for the self-employed with Rotem Sela (2025)"
+  ],
   "key_people": [
     {
       "name": "Tomer Biran",
@@ -50,6 +54,18 @@
     {
       "name": "Asaf Bitton",
       "role": "Head of Sound Design"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "bezeq",
+      "note": "Bezeq Energy with Adi Ashkenazi, 2025-09, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (music arrangement, credited to Tomer Biran) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "israel-discount-bank",
+      "note": "campaign for the self-employed with Rotem Sela, 2025-11, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (music arrangement & production, credited to Tomer Biran) (ICE credits)"
     }
   ],
   "tags": [
@@ -65,6 +81,6 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "City not stated on site; Israeli ad credits throughout."
 }

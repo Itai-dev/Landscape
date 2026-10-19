@@ -1,0 +1,53 @@
+{
+  "id": "pov-productions",
+  "name": "POV",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli commercial production company credited by ICE on McCann campaigns for Mey Eden (2023), Partner (2024–2025, incl. 'Harbu Darbu' with Static) and Pinuk (2026), Strauss's Milky TV spot (2025) and BBR Saatchi & Saatchi's Yotvata plant-based launch (2026).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Mey Eden",
+    "Partner",
+    "Strauss",
+    "Pinuk",
+    "Yotvata (Strauss)"
+  ],
+  "notable_work": [
+    "Mey Eden — campaign (2023)",
+    "Partner — 'Harbu Darbu' with Static (2024)",
+    "Partner — fiber campaign with Static & Ilan Peled (2024)",
+    "Partner — musical campaign with Static (2025)",
+    "Milky (Strauss) — campaign with Ness & Stilla (2025)",
+    "Pinuk — bath-care campaign with Kim Or Azulay & Yiftach Ziv (2026)",
+    "Yotvata (Strauss) — V plant-based chocolate milk & iced coffee with Ori Vered (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "Pinuk",
+      "note": "bath-care campaign with Kim Or Azulay & Yiftach Ziv, 2026-08, via McCann Tel Aviv, dir. Assaf Harel (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "strauss-group",
+      "note": "V plant-based chocolate milk & iced coffee with Ori Vered, 2026-09, via BBR Saatchi & Saatchi, dir. Imri Dekel Kadosh (production) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/960813",
+    "https://www.ice.co.il/advertising-marketing/news/article/1013770",
+    "https://www.ice.co.il/advertising-marketing/news/article/1039317",
+    "https://www.ice.co.il/advertising-marketing/news/article/1056235",
+    "https://www.ice.co.il/advertising-marketing/news/article/1075219",
+    "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+    "https://www.ice.co.il/advertising-marketing/news/article/1130259"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

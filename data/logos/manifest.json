@@ -3,9 +3,17 @@
   "source": "https://5ive.co.il/wp-content/uploads/2020/03/cropped-5ive_SquareMX-1-192x192.png",
   "fetched": "2026-10-18"
  },
+ "94-films": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://94-films.com&size=128",
+  "fetched": "2026-10-19"
+ },
  "abot-hameiri": {
   "source": "https://ahe.co.il/wp-content/uploads/2019/02/cropped-logo_all-192x192.png",
   "fetched": "2026-10-18"
+ },
+ "act3": {
+  "source": null,
+  "fetched": "2026-10-19"
  },
  "adler-chomski-warshavsky": {
   "source": null,
@@ -71,6 +79,10 @@
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ayalon-ins.co.il&size=128",
   "fetched": "2026-10-19"
  },
+ "babushka-productions": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "bank-hapoalim": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bankhapoalim.co.il&size=128",
   "fetched": "2026-10-18"
@@ -82,6 +94,10 @@
  "baram-indoor": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "baseline-sound": {
+  "source": null,
+  "fetched": "2026-10-19"
  },
  "basman-tenenbaum": {
   "source": null,
@@ -159,7 +175,19 @@
   "source": "https://cdn.prod.website-files.com/68d28630dc033fd1054bdfe5/68d287889e342834f051bef9_ezgif-44fa43547bc5b8.webp",
   "fetched": "2026-10-18"
  },
+ "buzz-bros": {
+  "source": "https://buzzbros.co.il/wp-content/uploads/2023/11/Group-62-1-e1699191707991.png",
+  "fetched": "2026-10-19"
+ },
  "cal": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
+ "cameri-theatre": {
+  "source": "https://s-cameri-pull-zone.b-cdn.net/wp-content/uploads/2026/02/Frame-1984079796-300x300.png",
+  "fetched": "2026-10-19"
+ },
+ "carmi-and-cohen": {
   "source": null,
   "fetched": "2026-10-19"
  },
@@ -255,6 +283,14 @@
   "source": "https://s29.q4cdn.com/481127684/files/favicon.ico",
   "fetched": "2026-10-19"
  },
+ "design-museum-holon": {
+  "source": "https://www.dmh.org.il/wp-content/uploads/2021/11/cropped-LOGO-DMH-01-copy-192x192.png",
+  "fetched": "2026-10-19"
+ },
+ "docaviv": {
+  "source": "https://www.docaviv.co.il/wp-content/uploads/2026/07/Wordpress-Logo-DOCAVIV-300x300.png",
+  "fetched": "2026-10-19"
+ },
  "dori-media-darset": {
   "source": "https://dorimedia.com/wp-content/uploads/2016/09/cropped-favicon-dorimedia-192x192.png",
   "fetched": "2026-10-18"
@@ -282,6 +318,10 @@
  "edologic": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "eilat-tourism-corporation": {
+  "source": "https://eilat.city/assets/images/favicons/apple-touch-icon.png",
+  "fetched": "2026-10-19"
  },
  "eko": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://helloeko.com&size=128",
@@ -419,6 +459,10 @@
   "source": "https://www.h-o.co.il/media/favicon/stores/1/HO_favicon.ico",
   "fetched": "2026-10-19"
  },
+ "habima": {
+  "source": "https://www.habima.co.il/wp-content/uploads/2022/01/cropped-WhatsApp-Image-2022-01-24-at-19.10.24-192x192.jpeg",
+  "fetched": "2026-10-19"
+ },
  "hafontia": {
   "source": "https://hafontia.com/wp-content/plugins/hafontia-new-font-page/assets/icons/apple-touch-icon.png",
   "fetched": "2026-10-18"
@@ -427,6 +471,10 @@
   "source": "https://hagilda.com/wp-content/themes/hagilda/images/apple-touch-icon.png",
   "fetched": "2026-10-18"
  },
+ "haifa-municipality": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "harel-insurance": {
   "source": "https://media.harel-group.co.il/media/aobgd2fl/favicon-192-192.png",
   "fetched": "2026-10-18"
@@ -434,6 +482,10 @@
  "havas-tel-aviv": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "hebrew-university-of-jerusalem": {
+  "source": null,
+  "fetched": "2026-10-19"
  },
  "hello-design": {
   "source": "https://cdn.prod.website-files.com/66a0b3bf1714b284cc7616b8/6890f51179592cd421f48b67_hello-fav-256.png",
@@ -516,6 +568,14 @@
   "source": "https://static.wixstatic.com/media/71f3b5_1ea8e1965e5e4c559fdcd9b34ed2be89%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/71f3b5_1ea8e1965e5e4c559fdcd9b34ed2be89%7Emv2.png",
   "fetched": "2026-10-18"
  },
+ "israel-aids-task-force": {
+  "source": "https://static.wixstatic.com/media/1d314f_928ae5cfa5894c3b88526162d809a893%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/1d314f_928ae5cfa5894c3b88526162d809a893%7Emv2.png",
+  "fetched": "2026-10-19"
+ },
+ "israel-cancer-association": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cancer.org.il&size=128",
+  "fetched": "2026-10-19"
+ },
  "israel-discount-bank": {
   "source": "https://www.discountbank.co.il/apple-touch-icon.png",
   "fetched": "2026-10-18"
@@ -524,13 +584,33 @@
   "source": "https://www.iec.co.il/assets/icons/512x512.png",
   "fetched": "2026-10-18"
  },
+ "israel-ministry-of-health": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "israel-ministry-of-tourism": {
   "source": null,
   "fetched": "2026-10-18"
  },
+ "israel-museum": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://imj.org.il&size=128",
+  "fetched": "2026-10-19"
+ },
+ "israel-philharmonic-orchestra": {
+  "source": "https://www.ipo.co.il/wp-content/uploads/2023/01/cropped-favicon-192x192.png",
+  "fetched": "2026-10-19"
+ },
+ "israel-police": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "israel-sports-betting-board": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://winner.co.il&size=128",
   "fetched": "2026-10-18"
+ },
+ "israeli-opera": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://israel-opera.co.il&size=128",
+  "fetched": "2026-10-19"
  },
  "israir": {
   "source": null,
@@ -539,6 +619,18 @@
  "jelly-button-games": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "jerusalem-film-festival": {
+  "source": "https://jff.org.il/sites/all/themes/cinemateque/favicon/apple-touch-icon.png",
+  "fetched": "2026-10-19"
+ },
+ "jerusalem-municipality": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
+ "jiminy-creative": {
+  "source": null,
+  "fetched": "2026-10-19"
  },
  "july-august-productions": {
   "source": "https://july-august.com/wp-content/uploads/2025/08/cropped-favicon-192x192.png",
@@ -589,6 +681,10 @@
   "source": null,
   "fetched": "2026-10-18"
  },
+ "laila-films": {
+  "source": "https://static.wixstatic.com/media/e3bdb5_b90d9fdc40d842c3b8622a3383b9a203%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/e3bdb5_b90d9fdc40d842c3b8622a3383b9a203%7Emv2.png",
+  "fetched": "2026-10-19"
+ },
  "lapam": {
   "source": "https://www.lapam.gov.il/wp-content/uploads/2014/01/lapmicon-min.png",
   "fetched": "2026-10-18"
@@ -627,6 +723,10 @@
  },
  "madlan": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://madlan.co.il&size=128",
+  "fetched": "2026-10-19"
+ },
+ "magen-david-adom": {
+  "source": null,
   "fetched": "2026-10-19"
  },
  "magisto": {
@@ -757,6 +857,10 @@
   "source": "https://natie.com/wp-content/uploads/2019/03/cropped-logo-flavicon-2019-192x192.png",
   "fetched": "2026-10-18"
  },
+ "national-insurance-institute": {
+  "source": "https://www.btl.gov.il:443/SiteCollectionImages/favicon.ico",
+  "fetched": "2026-10-19"
+ },
  "nayax": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nayax.com&size=128",
   "fetched": "2026-10-19"
@@ -849,6 +953,10 @@
   "source": "https://www.peachcontent.com/wp-content/uploads/2021/04/cropped-peach-davicon-1-192x192.jpg",
   "fetched": "2026-10-19"
  },
+ "peanuts-productions": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "peech": {
   "source": null,
   "fetched": "2026-10-18"
@@ -881,6 +989,10 @@
   "source": "https://company.plarium.com/favicon/favicon-32x32.png",
   "fetched": "2026-10-18"
  },
+ "playground-post": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "playsight": {
   "source": "https://playsight.com/wp-content/uploads/2020/09/cropped-PS-favicon-192x192.png",
   "fetched": "2026-10-18"
@@ -892,6 +1004,10 @@
  "playtika": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://playtika.com&size=128",
   "fetched": "2026-10-18"
+ },
+ "pov-productions": {
+  "source": null,
+  "fetched": "2026-10-19"
  },
  "powtoon": {
   "source": "https://cdn.prod.website-files.com/6808941b54478d5c7d4b1b65/68467f783d1d66ded81dbc11_powtoon-256.png",
@@ -928,6 +1044,10 @@
  "re-levant": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://re-levant.co.il&size=128",
   "fetched": "2026-10-18"
+ },
+ "reichman-university": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://runi.ac.il&size=128",
+  "fetched": "2026-10-19"
  },
  "renuar": {
   "source": "https://renuar.co.il/cdn/shop/files/Favicon_Black_Renuar_c5e6ff7e-572b-494d-a5c2-02970d082384.png?v=1753350841&width=180",
@@ -980,6 +1100,10 @@
  "shoof-video": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://shoofvideo.co.il&size=128",
   "fetched": "2026-10-18"
+ },
+ "shoshi-and-udi": {
+  "source": null,
+  "fetched": "2026-10-19"
  },
  "shufersal": {
   "source": null,
@@ -1109,9 +1233,29 @@
   "source": "https://tec.studio/wp-content/uploads/2026/09/favicon-96x96-1.png",
   "fetched": "2026-10-18"
  },
+ "technion": {
+  "source": "https://www.technion.ac.il/wp-content/themes/technion2023/dist/images/favicon/android-chrome-512x512.png",
+  "fetched": "2026-10-19"
+ },
  "tedy-productions": {
   "source": "https://static.wixstatic.com/media/0129af_0f0ed4b803bb4a3aaa649c9ce90dce30%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/0129af_0f0ed4b803bb4a3aaa649c9ce90dce30%7Emv2.png",
   "fetched": "2026-10-18"
+ },
+ "tel-aviv-cinematheque": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cinema.co.il&size=128",
+  "fetched": "2026-10-19"
+ },
+ "tel-aviv-museum-of-art": {
+  "source": "https://storage.googleapis.com/tama-static/static/favicon.b7005309a379.ico",
+  "fetched": "2026-10-19"
+ },
+ "tel-aviv-university": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
+ "tel-aviv-yafo-municipality": {
+  "source": "https://www.tel-aviv.gov.il/_layouts/15/TlvSP2013PublicSite/Images/IriaFavIcon.ico",
+  "fetched": "2026-10-19"
  },
  "tempo-beverages": {
   "source": "https://www.tempo.co.il/wp-content/uploads/2020/07/cropped-tempofav-e1594112929439-192x192.png",
@@ -1206,9 +1350,17 @@
   "source": null,
   "fetched": "2026-10-18"
  },
+ "university-of-haifa": {
+  "source": "https://www.haifa.ac.il/wp-content/uploads/2024/02/cropped-Haifa_logo_rgb_symbol_dark-1-192x192.png",
+  "fetched": "2026-10-19"
+ },
  "uri-amitai-productions": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "veople": {
+  "source": "https://static.wixstatic.com/media/41fa4b_163b5464ebf7460c982395830b093c47%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/41fa4b_163b5464ebf7460c982395830b093c47%7Emv2.png",
+  "fetched": "2026-10-19"
  },
  "victory-supermarkets": {
   "source": "https://victory.co.il/wp-content/uploads/2018/06/cropped-site-logo-192x192.png",
@@ -1234,6 +1386,10 @@
   "source": null,
   "fetched": "2026-10-18"
  },
+ "vo1-post": {
+  "source": null,
+  "fetched": "2026-10-19"
+ },
  "wakingapp": {
   "source": null,
   "fetched": "2026-10-18"
@@ -1241,6 +1397,10 @@
  "waves-audio": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://waves.com&size=128",
   "fetched": "2026-10-18"
+ },
+ "way-studio": {
+  "source": "https://static.wixstatic.com/media/3a102c_252771c717bf4fdfb1816a76e0c5daaf%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/3a102c_252771c717bf4fdfb1816a76e0c5daaf%7Emv2.jpg",
+  "fetched": "2026-10-19"
  },
  "wayy-studio": {
   "source": "https://cdn.prod.website-files.com/67225f068efda4efa29c9d11/672381826183bbadb1647108_Wayy%20icon%20256.png",
@@ -1321,5 +1481,9 @@
  "zenith-israel": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "zoa-films": {
+  "source": "https://static.fabrik.io/133q/15bccd443f098518.png?s=20a221848eca6837021d3e1137b76ce9",
+  "fetched": "2026-10-19"
  }
 }

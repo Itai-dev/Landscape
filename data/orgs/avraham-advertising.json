@@ -38,6 +38,18 @@
       "post-production"
     ]
   },
+  "relations": [
+    {
+      "type": "client",
+      "target": "Samsung Israel",
+      "note": "Galaxy S26 launch with Noa Kirel, Eden Hason, Netta Alchimister & Alin Golan, 2026-03 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "FINQ",
+      "note": "AI pension & investments with Ruti Broudo, 2026-05 (ICE credits)"
+    }
+  ],
   "tags": [
     "independent"
   ],
@@ -45,7 +57,9 @@
     "https://www.ice.co.il/advertising-marketing/news/article/298995",
     "https://www.ice.co.il/advertising-marketing/news/article/994550",
     "https://www.ice.co.il/advertising-marketing/news/article/464361",
-    "https://www.linkedin.com/company/avraham-adv"
+    "https://www.linkedin.com/company/avraham-adv",
+    "https://www.ice.co.il/advertising-marketing/news/article/1106866",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113835"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

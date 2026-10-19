@@ -152,8 +152,16 @@ def merge(old: dict, new: dict) -> dict:
         if k in LIST_FIELDS:
             out[k] = list(dict.fromkeys((old.get(k) or []) + v))
         elif k == "relations":
-            seen = {(r["type"], r["target"]) for r in old.get("relations", [])}
-            out[k] = old.get("relations", []) + [r for r in v if (r["type"], r["target"]) not in seen]
+            rels = [dict(r) for r in old.get("relations", [])]
+            index = {(r["type"], r["target"]): r for r in rels}
+            for r in v:
+                cur = index.get((r["type"], r["target"]))
+                if cur is None:
+                    rels.append(r)
+                    index[(r["type"], r["target"])] = r
+                elif r.get("note") and r["note"] not in cur.get("note", ""):
+                    cur["note"] = f"{cur['note']}; {r['note']}" if cur.get("note") else r["note"]
+            out[k] = rels
         elif k == "key_people":
             people = [dict(p) for p in old.get("key_people", [])]
             by_name = {norm_name(p["name"]): p for p in people}

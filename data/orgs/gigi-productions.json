@@ -16,7 +16,15 @@
     "Electra"
   ],
   "notable_work": [
-    "Electra summer campaign with Amir Benayoun"
+    "Electra summer campaign with Amir Benayoun",
+    "Electra — summer campaign with Amir Benayoun & Lihi Kornowski (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "Electra",
+      "note": "summer campaign with Amir Benayoun & Lihi Kornowski, 2026-05, via Adler Chomski & Warshavsky (Grey) (production & editing) (ICE credits)"
+    }
   ],
   "tags": [
     "commercials"
@@ -26,6 +34,6 @@
   ],
   "confidence": "low",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Only evidence found is a trade-press credit; city and website unverified (gigiproductions.com is a placeholder not clearly linked to this company)."
 }

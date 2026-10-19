@@ -52,13 +52,19 @@
     {
       "type": "parent",
       "target": "bezeq"
+    },
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "campaign with Noa Kirel & Daniel Peretz, 2026-01 (ICE credits)"
     }
   ],
   "sources": [
     "https://en.wikipedia.org/wiki/Yes_(Israel)",
     "https://www.globes.co.il/news/article.aspx?did=1001541690",
     "https://www.globes.co.il/news/article.aspx?did=1001530171",
-    "https://www.ice.co.il/tv/news/article/1130903"
+    "https://www.ice.co.il/tv/news/article/1130903",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100904"
   ],
   "confidence": "high",
   "added": "2026-10-18",

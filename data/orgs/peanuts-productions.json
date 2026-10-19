@@ -1,0 +1,52 @@
+{
+  "id": "peanuts-productions",
+  "name": "Peanuts",
+  "aka": [
+    "Peanuts Production",
+    "PEANUTS"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli commercial production company (credited with producer Ronen Michaeli) behind Peach's BuyMe Rosh Hashana campaign (2025) and El Al Fly Card campaign (2026) and McCann's AI-assisted Bissli campaign (2026), per ICE credits.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "BuyMe",
+    "Bissli (Osem-Nestlé)",
+    "El Al"
+  ],
+  "notable_work": [
+    "BuyMe — Rosh Hashana hosting campaign with Shalom Michaelshvili & Liel Eli (2025)",
+    "Bissli (Osem-Nestlé) — characters podcast with Matan Peretz (AI) (2026)",
+    "El Al — Fly Card / Matmid club with Deni Avdija & Niv Sultan (with Isracard) (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "BuyMe",
+      "note": "Rosh Hashana hosting campaign with Shalom Michaelshvili & Liel Eli, 2025-09, via Peach, dir. Ben Bachar (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "osem-nestle",
+      "note": "characters podcast with Matan Peretz (AI), 2026-02, via McCann Tel Aviv, dir. Ben Bachar (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "el-al",
+      "note": "Fly Card / Matmid club with Deni Avdija & Niv Sultan (with Isracard), 2026-06, via Peach, dir. Eli Sverdlov (production) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1084598",
+    "https://www.ice.co.il/advertising-marketing/news/article/1103666",
+    "https://www.ice.co.il/advertising-marketing/news/article/1116579"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

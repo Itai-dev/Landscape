@@ -15,7 +15,8 @@
     "Israir"
   ],
   "notable_work": [
-    "Israir 'Yigal Bashan' (2026)"
+    "Israir 'Yigal Bashan' (2026)",
+    "Israir — Wide-body fleet campaign to Yigal Bashan's 'Shamayim' (AI) (2026)"
   ],
   "key_people": [
     {
@@ -41,6 +42,11 @@
     {
       "type": "partner",
       "target": "mialma"
+    },
+    {
+      "type": "client",
+      "target": "israir",
+      "note": "Wide-body fleet campaign to Yigal Bashan's 'Shamayim' (AI), 2026-10, via BBR Saatchi & Saatchi, dir. Tom Shachar (studio T) (AI production & direction) (ICE credits)"
     }
   ],
   "sources": [

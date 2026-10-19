@@ -17,7 +17,8 @@ Tick a segment when coverage looks reasonably complete; add new lines any time.
 - [x] il-agencies — ad, digital, social & media agencies (media agencies still thin)
 - [ ] il-clients — major brands / advertisers
 - [ ] il-clients-tech — tech companies with large brand & video output
-- [ ] il-clients-public — government, municipalities, NGOs, culture institutions
+- [x] il-clients-public — government, municipalities, NGOs, culture institutions (Be'er Sheva, IDF, Tax Authority still missing)
+- [ ] il-clients-from-credits — brands & agencies seen in ad credits but not yet mapped: BuyMe, FreeTV, Wolt, Arkia, Electra, Burger King Israel, Samsung Israel, Carolina Lemke, AION, FINQ, Aviv Melisron, Gindi, Tiv Taam, Kotex, Pinuk, Prashkovsky, Crystalino; agencies Diboor, Fresman-Baruch, Why Worry, Fresh Nadlan, Aviv Advertising
 
 ## Phase 3 — World
 - [ ] world-gen-ai-startups — Runway, Pika, Synthesia, ElevenLabs…

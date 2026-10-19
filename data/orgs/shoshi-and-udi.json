@@ -1,0 +1,53 @@
+{
+  "id": "shoshi-and-udi",
+  "name": "Shoshi & Udi",
+  "name_he": "שושי ואודי",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli commercial production company regularly credited by ICE on major TV campaigns, often with director Rani Carmeli: Bezeq Energy with Adi Ashkenazi (Adler Chomski & Warshavsky), El Al with Hanan Ben Ari (McCann) and Bank Leumi campaigns (McCann).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Bezeq",
+    "El Al",
+    "Bank Leumi"
+  ],
+  "notable_work": [
+    "Bank Leumi — campaign with Maggie Azarzar (2024)",
+    "El Al — campaign with Hanan Ben Ari and his mother (2025)",
+    "Bezeq — Bezeq Energy with Adi Ashkenazi (2025)",
+    "El Al — fares for security, rescue & medical forces with Hanan Ben Ari (2025)",
+    "Bank Leumi — personal investment portfolio with Omer Adam & Gal Toren (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "bezeq",
+      "note": "Bezeq Energy with Adi Ashkenazi, 2025-09, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "el-al",
+      "note": "fares for security, rescue & medical forces with Hanan Ben Ari, 2025-11, via McCann Tel Aviv, dir. Rani Carmeli (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "bank-leumi",
+      "note": "personal investment portfolio with Omer Adam & Gal Toren, 2026-02, via McCann Tel Aviv, dir. Ohav Flantz (production) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1042232",
+    "https://www.ice.co.il/advertising-marketing/news/article/1045282",
+    "https://www.ice.co.il/advertising-marketing/news/article/1083433",
+    "https://www.ice.co.il/advertising-marketing/news/article/1092161",
+    "https://www.ice.co.il/advertising-marketing/news/article/1104396"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

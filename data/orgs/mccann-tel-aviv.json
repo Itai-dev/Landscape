@@ -160,6 +160,61 @@
       "type": "subsidiary",
       "target": "PRIMIS",
       "note": "Video ad-tech"
+    },
+    {
+      "type": "client",
+      "target": "partner-communications",
+      "note": "Direct Fiber 'Shir HaShchuna' with Static, Agam Buhbut, Stefan Legar & Shahar Saul, 2025-09; Partner TV & fiber with Static, 'Ma Kashur' trio & Dudu Shaul, 2026-06 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "pepper",
+      "note": "new-language launch with creator Ido Katzir, 2025-10 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Wolt",
+      "note": "search-engine holiday campaign with Adi Himelbloy & Ben Zini, 2025-11; supermarket delivery with the Gordon family, 2026-06 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "el-al",
+      "note": "fares for security, rescue & medical forces with Hanan Ben Ari, 2025-11; Matmid club / Fly Card companion-ticket offer with Deni Avdija, 2026-08 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Kotex",
+      "note": "'A new generation of girls' with Kim Or Azulay, 2026-01 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "maccabi-healthcare-services",
+      "note": "emotional-support app campaign with Dr. Maayan Boiman, 2026-01; 'Menutakot' video-call series with Shira Naor, Yael Sharoni & Yaniv Biton, 2026-04; longevity programme with Tal Mosseri, 2026-07 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "osem-nestle",
+      "note": "characters podcast with Matan Peretz (AI), 2026-02 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "bank-leumi",
+      "note": "personal investment portfolio with Omer Adam & Gal Toren, 2026-02; nationwide surprise-concerts initiative with Gal Toren, 2026-04; app in five languages with Gal Toren, 2026-09 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Pinuk",
+      "note": "bath-care campaign with Kim Or Azulay & Yiftach Ziv, 2026-08 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "unilever-israel",
+      "note": "squeeze bottles with Gary Mandelbaum ('HaPijamot'), 2026-08 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "loreal-israel",
+      "note": "hair-colour campaign with Galit Gutman, 2026-09 (ICE credits)"
     }
   ],
   "tags": [
@@ -178,7 +233,22 @@
     "https://www.ice.co.il/advertising-marketing/news/article/1125358",
     "https://www.ice.co.il/advertising-marketing/news/article/1127519",
     "https://www.ice.co.il/advertising-marketing/news/article/1129519",
-    "https://www.linkedin.com/company/mccann-erickson-israel"
+    "https://www.linkedin.com/company/mccann-erickson-israel",
+    "https://www.ice.co.il/advertising-marketing/news/article/1082657",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089107",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089951",
+    "https://www.ice.co.il/advertising-marketing/news/article/1092161",
+    "https://www.ice.co.il/advertising-marketing/news/article/1099285",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100116",
+    "https://www.ice.co.il/advertising-marketing/news/article/1103666",
+    "https://www.ice.co.il/advertising-marketing/news/article/1104396",
+    "https://www.ice.co.il/advertising-marketing/news/article/1109896",
+    "https://www.ice.co.il/advertising-marketing/news/article/1110769",
+    "https://www.ice.co.il/advertising-marketing/news/article/1115664",
+    "https://www.ice.co.il/advertising-marketing/news/article/1117533",
+    "https://www.ice.co.il/advertising-marketing/news/article/1119428",
+    "https://www.ice.co.il/advertising-marketing/news/article/1124460",
+    "https://www.ice.co.il/advertising-marketing/news/article/1128630"
   ],
   "confidence": "high",
   "added": "2026-10-18",

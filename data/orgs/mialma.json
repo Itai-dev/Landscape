@@ -27,7 +27,10 @@
   ],
   "notable_work": [
     "Bank Hapoalim with Irena & Hila Korach (2026)",
-    "Israir 'Yigal Bashan' (2026)"
+    "Israir 'Yigal Bashan' (2026)",
+    "Bank Hapoalim — 'Young people invest for free' with Ori Vered (2025)",
+    "Bank Hapoalim — Kids money-management service with Liat Har Lev & Hila Korach (2026)",
+    "Israir — Wide-body fleet campaign to Yigal Bashan's 'Shamayim' (AI) (2026)"
   ],
   "relations": [
     {
@@ -37,12 +40,23 @@
     {
       "type": "partner",
       "target": "bbr-saatchi-saatchi"
+    },
+    {
+      "type": "client",
+      "target": "bank-hapoalim",
+      "note": "'Young people invest for free' with Ori Vered, 2025-12, via Gitam BBDO, dir. Assaf Harel (production); Kids money-management service with Liat Har Lev & Hila Korach, 2026-08, via Gitam BBDO, dir. Assaf Harel (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "israir",
+      "note": "Wide-body fleet campaign to Yigal Bashan's 'Shamayim' (AI), 2026-10, via BBR Saatchi & Saatchi, dir. Tom Shachar (studio T) (production) (ICE credits)"
     }
   ],
   "sources": [
     "https://www.mialma.co.il/elements/pages/contact/",
     "https://www.ice.co.il/advertising-marketing/news/article/1126468",
-    "https://www.ice.co.il/advertising-marketing/news/article/1132878"
+    "https://www.ice.co.il/advertising-marketing/news/article/1132878",
+    "https://www.ice.co.il/advertising-marketing/news/article/1094211"
   ],
   "confidence": "medium",
   "added": "2026-10-19",

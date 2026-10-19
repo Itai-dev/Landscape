@@ -87,6 +87,13 @@
       "digital content"
     ]
   },
+  "relations": [
+    {
+      "type": "client",
+      "target": "Arkia",
+      "note": "hybrid AI/live-action musical campaign with Lihi Toledano, 2026-07 (ICE credits)"
+    }
+  ],
   "tags": [
     "independent"
   ],
@@ -98,7 +105,8 @@
     "https://www.globes.co.il/news/article.aspx?did=1001528646",
     "https://mench-adv.co.il/",
     "https://www.linkedin.com/company/mench-adv",
-    "https://www.ice.co.il/advertising-marketing/news/article/1096505"
+    "https://www.ice.co.il/advertising-marketing/news/article/1096505",
+    "https://www.ice.co.il/advertising-marketing/news/article/1121376"
   ],
   "confidence": "high",
   "added": "2026-10-18",

@@ -1,0 +1,54 @@
+{
+  "id": "playground-post",
+  "name": "Playground",
+  "name_he": "פלייגראונד",
+  "kind": "studio",
+  "categories": [
+    "post-production",
+    "sound-design"
+  ],
+  "description": "Israeli post-production house credited by ICE on TV campaigns for Mizrahi Tefahot (Reuveni Pridan, 2024–2026), Prigat (BBR Saatchi & Saatchi, 2024), Clalit (Glickman Shamir Samsonov, 2024) and Arkia (Munch, 2026, post and sound).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Prigat",
+    "Clalit",
+    "Mizrahi Tefahot",
+    "Arkia"
+  ],
+  "notable_work": [
+    "Prigat — campaign with Shalom Michaelshvili (2024)",
+    "Clalit — campaign with Yael Bar Zohar & Guy Zu-Aretz (2024)",
+    "Mizrahi Tefahot — benefits for northern residents with Dvir Benedek (2024)",
+    "Mizrahi Tefahot — campaign with Nasreen Qadri (2025)",
+    "Mizrahi Tefahot — campaign with released hostage Sagi Dekel Chen (2026)",
+    "Arkia — hybrid AI/live-action musical campaign with Lihi Toledano (2026)",
+    "Mizrahi Tefahot — campaign for parents with Guy Beer Gurevich & Dvir Benedek (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "mizrahi-tefahot",
+      "note": "campaign with released hostage Sagi Dekel Chen, 2026-01, via Reuveni Pridan, dir. Roman Bochachki (post); campaign for parents with Guy Beer Gurevich & Dvir Benedek, 2026-07, via Reuveni Pridan, dir. Yonatan Gurfinkel (post) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Arkia",
+      "note": "hybrid AI/live-action musical campaign with Lihi Toledano, 2026-07, via Munch, dir. Roy Raz & Ilan Boni (post & sound) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1024551",
+    "https://www.ice.co.il/advertising-marketing/news/article/1038253",
+    "https://www.ice.co.il/advertising-marketing/news/article/1043138",
+    "https://www.ice.co.il/advertising-marketing/news/article/1055025",
+    "https://www.ice.co.il/advertising-marketing/news/article/1098306",
+    "https://www.ice.co.il/advertising-marketing/news/article/1121376",
+    "https://www.ice.co.il/advertising-marketing/news/article/1122346"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}
