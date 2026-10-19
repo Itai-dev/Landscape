@@ -37,6 +37,9 @@ User #1 is the owner; then a small invited beta (owner + 5–10 trusted creative
 - **Pitch draft** (v3): Why now (a signal or your own reason, required) · Who (marketing/production people first, then the agency route) · About you · What to show (one work sample, required) · English/Hebrew. Drafts only; the person edits and sends it themselves. Saving a draft sets one follow-up in a week.
 - **Report a mistake**: goes to a private `reports` area only the owner (and research runs) can read.
 
+- **Ask the map** (search field → "Ask ✦", or Enter on a question): Claude answers from the map only, using page tools (search_orgs, get_org, recent_signals, my_pipeline) and lists the companies it used as tappable cards.
+- **Hebrew UI**: full English/Hebrew string table, right-to-left layout, Hebrew labels for every category and need, Hebrew names first in Hebrew mode. Record descriptions stay English (as sourced).
+
 ## Waits (in rough order)
 v3: AI pitch draft (Why now · Who · Way in · What to show; drafts only, never sends) → Ask the map → "this is wrong" reports → credits type → Hebrew UI → onboarding → profiles & community on our own stack → world.
 

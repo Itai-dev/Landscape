@@ -294,7 +294,7 @@ def cmd_build(_args) -> int:
         "generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "count": len(orgs),
         "taxonomy": TAXONOMY,
-        "needs": {k: {"label": v["label"], "crafts": v["crafts"]} for k, v in NEEDS.items()},
+        "needs": {k: {"label": v["label"], "label_he": v.get("label_he", v["label"]), "crafts": v["crafts"]} for k, v in NEEDS.items()},
         "orgs": list(orgs.values()),
     }
     compact = dict(ensure_ascii=False, separators=(",", ":"))

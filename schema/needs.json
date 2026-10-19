@@ -20,7 +20,8 @@
         "post-production",
         "vfx",
         "sound-design"
-      ]
+      ],
+      "label_he": "פרסומות טלוויזיה"
     },
     "social-video": {
       "label": "Social video",
@@ -38,7 +39,8 @@
         "editing",
         "commercial-production",
         "animation-2d"
-      ]
+      ],
+      "label_he": "וידאו לסושיאל"
     },
     "motion-graphics": {
       "label": "Motion graphics",
@@ -54,7 +56,8 @@
         "motion-design",
         "animation-2d",
         "graphic-design"
-      ]
+      ],
+      "label_he": "מושן גרפיקס"
     },
     "animation": {
       "label": "Animation",
@@ -69,7 +72,8 @@
         "animation-3d",
         "motion-design",
         "illustration"
-      ]
+      ],
+      "label_he": "אנימציה"
     },
     "3d-cgi": {
       "label": "3D / CGI",
@@ -83,7 +87,8 @@
         "cgi-3d",
         "animation-3d",
         "vfx"
-      ]
+      ],
+      "label_he": "תלת־ממד / CGI"
     },
     "post-production": {
       "label": "Post-production",
@@ -97,7 +102,8 @@
         "color-grading",
         "vfx",
         "sound-design"
-      ]
+      ],
+      "label_he": "פוסט־פרודקשן"
     },
     "brand-films": {
       "label": "Brand & content films",
@@ -120,7 +126,8 @@
         "commercial-production",
         "content-studio",
         "editing"
-      ]
+      ],
+      "label_he": "סרטי מותג ותוכן"
     },
     "photography": {
       "label": "Photography",
@@ -130,7 +137,8 @@
       ],
       "crafts": [
         "photography"
-      ]
+      ],
+      "label_he": "צילום"
     },
     "branding": {
       "label": "Branding & identity",
@@ -142,7 +150,8 @@
         "branding",
         "graphic-design",
         "typography"
-      ]
+      ],
+      "label_he": "מיתוג וזהות"
     },
     "packaging": {
       "label": "Packaging",
@@ -153,7 +162,8 @@
         "packaging",
         "graphic-design",
         "cgi-3d"
-      ]
+      ],
+      "label_he": "אריזות"
     },
     "digital-campaigns": {
       "label": "Digital campaigns & ads",
@@ -175,7 +185,8 @@
         "motion-design",
         "creative-technology",
         "illustration"
-      ]
+      ],
+      "label_he": "קמפיינים דיגיטליים ומודעות"
     },
     "influencer": {
       "label": "Influencer content",
@@ -184,7 +195,8 @@
       ],
       "crafts": [
         "content-studio"
-      ]
+      ],
+      "label_he": "תוכן משפיענים"
     },
     "game-art": {
       "label": "Game art",
@@ -195,7 +207,8 @@
         "game-art",
         "animation-3d",
         "illustration"
-      ]
+      ],
+      "label_he": "ארט למשחקים"
     },
     "illustration": {
       "label": "Illustration & key art",
@@ -206,7 +219,8 @@
       "crafts": [
         "illustration",
         "graphic-design"
-      ]
+      ],
+      "label_he": "איור וקי־ארט"
     },
     "sound-music": {
       "label": "Sound & music",
@@ -217,7 +231,8 @@
       "crafts": [
         "sound-design",
         "music-production"
-      ]
+      ],
+      "label_he": "סאונד ומוזיקה"
     },
     "ai-video": {
       "label": "AI video",
@@ -228,7 +243,8 @@
       "crafts": [
         "ai-creative",
         "motion-design"
-      ]
+      ],
+      "label_he": "וידאו AI"
     }
   }
 }
