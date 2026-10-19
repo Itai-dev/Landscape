@@ -23,6 +23,11 @@
   "size": "51-200",
   "status": "active",
   "website": "https://il.havas.com/",
+  "contact_url": "https://il.havas.com/contact/",
+  "careers_url": "https://il.havas.com/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/inbar-merhav-g"
+  },
   "services": [
     "Advertising",
     "Media planning & buying",
@@ -99,9 +104,12 @@
   ],
   "sources": [
     "https://il.havas.com/about-us/",
-    "https://www.havas.com/press_release/havas-group-acquires-israeli-full-service-agency-inbar-merhav-g-ltd/"
+    "https://www.havas.com/press_release/havas-group-acquires-israeli-full-service-agency-inbar-merhav-g-ltd/",
+    "https://il.havas.com/contact/",
+    "https://il.havas.com/careers/",
+    "https://www.linkedin.com/company/inbar-merhav-g"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-19"
 }

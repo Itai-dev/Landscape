@@ -299,7 +299,7 @@ def cmd_build(_args) -> int:
     }
     compact = dict(ensure_ascii=False, separators=(",", ":"))
     (out_dir / "dataset.json").write_text(json.dumps(dataset, **compact))
-    sigs = sorted(load_signals(), key=lambda x: x["date"], reverse=True)
+    sigs = sorted(link_signals(load_signals(), orgs), key=lambda x: x["date"], reverse=True)
     (out_dir / "signals.json").write_text(json.dumps({"generated": dataset["generated"], "signals": sigs}, **compact))
     (out_dir / "logos.json").write_text(json.dumps(logos, **compact))
     shutil_old = ROOT / "site" / "logos"
@@ -426,6 +426,29 @@ def cmd_signals(args) -> int:
             added += 1
     print(f"signals: added {added}, rejected {rejected}" + (" (dry run)" if args.dry_run else ""))
     return 1 if rejected and args.strict else 0
+
+
+def link_signals(sigs: list[dict], orgs: dict) -> list[dict]:
+    """At build time, point signals at orgs added after the signal was written
+    (by org name, and credited agency / production / studio names)."""
+    by_name = {}
+    for oid, o in orgs.items():
+        for n in [o["name"], *o.get("aka", [])]:
+            by_name.setdefault(norm_name(n), oid)
+    out = []
+    for sig in sigs:
+        sig = dict(sig)
+        if not sig.get("org_id"):
+            sig["org_id"] = by_name.get(norm_name(sig["org_name"]))
+        rel = list(sig.get("related_ids", []))
+        for name in (sig.get("credits") or {}).values():
+            oid = by_name.get(norm_name(name))
+            if oid and oid not in rel and oid != sig.get("org_id"):
+                rel.append(oid)
+        if rel:
+            sig["related_ids"] = rel
+        out.append(sig)
+    return out
 
 
 def org_needs(o: dict) -> list[str]:

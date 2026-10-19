@@ -16,10 +16,14 @@
     "country": "IL",
     "city": "Tel Aviv"
   },
-  "founded": 2002,
+  "founded": 2000,
   "size": "11-50",
   "status": "active",
   "website": "https://kpln.co.il/",
+  "contact_url": "https://kpln.co.il/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/kpln"
+  },
   "services": [
     "Strategy",
     "Creative",
@@ -71,10 +75,13 @@
   ],
   "sources": [
     "https://kpln.co.il/",
-    "https://www.globes.co.il/news/article.aspx?did=1001547082"
+    "https://www.globes.co.il/news/article.aspx?did=1001547082",
+    "https://kpln.co.il/about/",
+    "https://kpln.co.il/contact/",
+    "https://www.linkedin.com/company/kpln"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Ownership after the 2026 change is not fully clear (Globes says Eyal Chomski bought Boroda's shares). City assumed Tel Aviv."
 }

@@ -21,6 +21,11 @@
   "size": "501-1000",
   "status": "active",
   "website": "https://mccann.co.il/",
+  "contact_url": "https://mccann.co.il/about/",
+  "careers_url": "https://mccann.co.il/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/mccann-erickson-israel"
+  },
   "services": [
     "Creative advertising",
     "Strategy & planning",
@@ -47,10 +52,16 @@
     "Unilever",
     "Kotex"
   ],
+  "notable_work": [
+    "Bank Leumi app service campaign (2026)"
+  ],
   "key_people": [
     {
       "name": "Amit Mashiach",
-      "role": "CEO, McCann Group Israel (since 2015)"
+      "role": "CEO, McCann Group Israel",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Ilan Shiloach",
@@ -58,11 +69,59 @@
     },
     {
       "name": "Etti Avdi",
-      "role": "CEO, McCann advertising agency"
+      "role": "CEO, McCann advertising agency",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Sigal Avodi",
-      "role": "Chief Creative Officer"
+      "role": "Chief Creative Officer",
+      "role_type": "creative_lead",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Asa Keren",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    },
+    {
+      "name": "Yonatan Teitel",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    },
+    {
+      "name": "Yaron Perl",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Max Shtcherbakov",
+      "role": "SVP, Creative Factory",
+      "role_type": "creative_lead",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Natalie Amitai",
+      "role": "Production (agency producer)",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    },
+    {
+      "name": "Ben Vinik",
+      "role": "Production (agency producer)",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
     }
   ],
   "client_profile": {
@@ -114,10 +173,15 @@
     "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%90%D7%9F_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91",
     "https://www.ice.co.il/advertising-marketing/news/article/994550",
     "https://www.globes.co.il/news/article.aspx?did=1001558524",
-    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://mccann.co.il/careers/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+    "https://www.ice.co.il/advertising-marketing/news/article/1127519",
+    "https://www.ice.co.il/advertising-marketing/news/article/1129519",
+    "https://www.linkedin.com/company/mccann-erickson-israel"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "HQ: 2A Raoul Wallenberg St., Ramat HaHayal, Tel Aviv. Retained L'Oréal Israel (~NIS 100M, Oct 2026). Top scorer at Effie Israel 2026 (9 gold). Claims 3rd globally in 2023 Global Effie Index."
 }

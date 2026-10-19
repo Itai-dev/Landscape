@@ -18,13 +18,18 @@
   },
   "size": "201-500",
   "status": "active",
-  "website": "https://www.bbr.co.il",
   "notable_clients": [
     "Strauss Elite",
     "Super-Pharm",
     "Procter & Gamble",
     "Delek Motors",
-    "Shikun & Binui"
+    "Shikun & Binui",
+    "Strauss (Yotvata)",
+    "Israir"
+  ],
+  "notable_work": [
+    "Yotvata with Uri Vered (2026)",
+    "Israir tribute to Yigal Bashan, AI work by studio T (2026)"
   ],
   "key_people": [
     {
@@ -36,8 +41,25 @@
       "role": "Chairman & CEO, Publicis Groupe Israel (from 2018)"
     },
     {
-      "name": "Ben Muskal",
-      "role": "CEO, BBR Saatchi & Saatchi (from 2018)"
+      "name": "Shani Shaul Vingosh",
+      "role": "CEO (since Jan 2026; also CEO of Leo Burnett Israel)",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1130259",
+      "as_of": "2026-09-18"
+    },
+    {
+      "name": "Ran Alon",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1130259",
+      "as_of": "2026-09-18"
+    },
+    {
+      "name": "Nurit Rimon",
+      "role": "Producer",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1130259",
+      "as_of": "2026-09-18"
     }
   ],
   "client_profile": {
@@ -57,6 +79,14 @@
     {
       "type": "acquired_by",
       "target": "Publicis Groupe"
+    },
+    {
+      "type": "client",
+      "target": "israir"
+    },
+    {
+      "type": "client",
+      "target": "strauss-group"
     }
   ],
   "tags": [
@@ -69,10 +99,13 @@
     "https://everything-pr.com/publicis-groupe-bbr",
     "https://www.publicisgroupe.com/en/news/press-releases/publicis-groupe-announces-new-appointments-in-israel",
     "https://www.ice.co.il/advertising-marketing/news/article/994550",
-    "https://www.globes.co.il/news/article.aspx?did=1001541337"
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.ice.co.il/advertising-marketing/news/article/1099727",
+    "https://www.ice.co.il/advertising-marketing/news/article/1130259",
+    "https://www.ice.co.il/advertising-marketing/news/article/1132878"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Leadership per 2018 Publicis release; may have changed. Size band reflects 2012 headcount (220). Lotto account moved to Adler Chomski in Feb 2026. Effie Israel 2026 gold (Strauss Elite). bbr.co.il responds but had an expired TLS certificate on 2026-10-18."
+  "last_verified": "2026-10-19",
+  "notes": "Leadership per 2018 Publicis release; may have changed. Size band reflects 2012 headcount (220). Lotto account moved to Adler Chomski in Feb 2026. Effie Israel 2026 gold (Strauss Elite). bbr.co.il responds but had an expired TLS certificate on 2026-10-18. Website bbr.co.il unreachable as of 2026-10-19."
 }

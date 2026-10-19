@@ -14,6 +14,8 @@
   "founded": 2017,
   "status": "active",
   "website": "https://spring-valley.co.il/",
+  "contact_url": "https://spring-valley.co.il/contact-us/",
+  "careers_url": "https://spring-valley.co.il/careers/",
   "services": [
     "Digital strategy",
     "Web design & development",
@@ -33,15 +35,24 @@
   "key_people": [
     {
       "name": "Hana Rado",
-      "role": "Founder & Chair"
+      "role": "Founder & Chair",
+      "role_type": "founder",
+      "source": "https://spring-valley.co.il/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Emuna Shinberg",
-      "role": "Co-CEO"
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://spring-valley.co.il/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Adi Sasson Jerbi",
-      "role": "Co-CEO"
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://spring-valley.co.il/",
+      "as_of": "2026-10-19"
     }
   ],
   "relations": [
@@ -58,9 +69,11 @@
   "sources": [
     "https://spring-valley.co.il/",
     "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%90%D7%9F_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91",
-    "https://mccann.co.il/about/"
+    "https://mccann.co.il/about/",
+    "https://spring-valley.co.il/contact-us/",
+    "https://spring-valley.co.il/careers/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-19"
 }

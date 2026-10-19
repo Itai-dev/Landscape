@@ -26,11 +26,17 @@
   "key_people": [
     {
       "name": "Sagi Peleg",
-      "role": "Deputy CEO (per mccann.co.il)"
+      "role": "Deputy CEO",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Doron Zakai",
-      "role": "Commercial Director (per mccann.co.il)"
+      "role": "Commercial SVP",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
     }
   ],
   "relations": [
@@ -55,6 +61,6 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Not a direct commissioner of production, but controls media budgets of top advertisers. OMD Israel CEO Yaniv Sana was previously UM deputy CEO."
 }

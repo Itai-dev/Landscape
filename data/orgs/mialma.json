@@ -1,0 +1,50 @@
+{
+  "id": "mialma",
+  "name": "Mialma Production House",
+  "name_he": "מיאלמה",
+  "aka": [
+    "Miyalma"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Tel Aviv commercial production house credited on 2026 TV campaigns including Bank Hapoalim's 90s-themed spot with Irena and Hila Korach (Gitam BBDO, director Assaf Harel) and Israir's tribute to Yigal Bashan (Baumann Ber Rivnai, AI work by studio T).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.mialma.co.il/",
+  "contact_url": "https://www.mialma.co.il/elements/pages/contact/",
+  "links": {
+    "instagram": "https://instagram.com/mialmaprod",
+    "linkedin": "https://www.linkedin.com/company/mialma"
+  },
+  "notable_clients": [
+    "Bank Hapoalim",
+    "Israir"
+  ],
+  "notable_work": [
+    "Bank Hapoalim with Irena & Hila Korach (2026)",
+    "Israir 'Yigal Bashan' (2026)"
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "gitam-bbdo"
+    },
+    {
+      "type": "partner",
+      "target": "bbr-saatchi-saatchi"
+    }
+  ],
+  "sources": [
+    "https://www.mialma.co.il/elements/pages/contact/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1126468",
+    "https://www.ice.co.il/advertising-marketing/news/article/1132878"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

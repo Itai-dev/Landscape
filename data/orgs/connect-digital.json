@@ -14,6 +14,7 @@
   },
   "status": "active",
   "website": "https://connect.co.il/",
+  "contact_url": "https://connect.co.il/contact/",
   "services": [
     "Media planning & buying",
     "Social media management",
@@ -44,10 +45,11 @@
   ],
   "sources": [
     "https://connect.co.il/",
-    "https://www.bizportal.co.il/list/Tags/35924"
+    "https://www.bizportal.co.il/list/Tags/35924",
+    "https://connect.co.il/contact/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Address: Bezalel Yafe 10, Tel Aviv. Bizportal reported it was launched by Brokner Yaar Levy together with Midan (undated)."
 }

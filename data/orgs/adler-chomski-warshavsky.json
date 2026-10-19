@@ -23,6 +23,9 @@
   "founded": 1996,
   "size": "201-500",
   "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/adler-chomski-warshavsky"
+  },
   "services": [
     "Creative advertising",
     "Media planning & buying",
@@ -38,7 +41,9 @@
     "Clal Insurance",
     "Electra",
     "Strauss (Doritos)",
-    "Delta"
+    "Delta",
+    "Shufersal (via Brickman, from Dec 2025)",
+    "Israel Discount Bank (media via MediaCom)"
   ],
   "key_people": [
     {
@@ -72,6 +77,16 @@
     {
       "type": "subsidiary",
       "target": "lead-advertising"
+    },
+    {
+      "type": "subsidiary",
+      "target": "mediacom-israel",
+      "note": "MediaCom Connections, the group's international media arm"
+    },
+    {
+      "type": "client",
+      "target": "shufersal",
+      "note": "Via the group's Brickman agency (ICE, Dec 2025)"
     }
   ],
   "tags": [
@@ -85,10 +100,14 @@
     "https://he.wikipedia.org/wiki/%D7%90%D7%93%D7%9C%D7%A8_%D7%97%D7%95%D7%9E%D7%A1%D7%A7%D7%99_%26_%D7%95%D7%A8%D7%A9%D7%91%D7%A1%D7%A7%D7%99",
     "https://www.globes.co.il/news/article.aspx?did=1001559112",
     "https://www.globes.co.il/news/article.aspx?did=1001541337",
-    "https://www.ice.co.il/advertising-marketing/news/article/994550"
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.linkedin.com/company/adler-chomski-warshavsky",
+    "https://www.ice.co.il/advertising-marketing/news/article/1094607",
+    "https://www.ice.co.il/advertising-marketing/news/article/1081618",
+    "https://www.ice.co.il/advertising-marketing/news/article/973940"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Oct 2026: Leumi Partners and Discount Capital reportedly considering ~30% stake at ~NIS 500M valuation (not confirmed closed). Was publicly traded from 2007 before being taken private. Boroda-Kaplan (now KPLN) was formerly part of the group. Official website not confirmed."
 }

@@ -18,6 +18,10 @@
   },
   "status": "active",
   "website": "https://mdigital.co.il/",
+  "careers_url": "https://mdigital.co.il/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/universal-mccann-digital"
+  },
   "services": [
     "Total video",
     "Content",
@@ -39,11 +43,17 @@
   "key_people": [
     {
       "name": "Ophir Cohen",
-      "role": "Joint CEO (per mccann.co.il)"
+      "role": "Joint CEO",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Maor Chen",
-      "role": "Joint CEO (per mccann.co.il)"
+      "role": "Joint CEO",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
     }
   ],
   "client_profile": {
@@ -66,10 +76,12 @@
   "sources": [
     "https://mdigital.co.il/",
     "https://mccann.co.il/about/",
-    "https://mccann.co.il/"
+    "https://mccann.co.il/",
+    "https://mdigital.co.il/careers/",
+    "https://www.linkedin.com/company/universal-mccann-digital"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "umdigital.co.il redirects to mdigital.co.il. Sources are all McCann-owned sites."
 }

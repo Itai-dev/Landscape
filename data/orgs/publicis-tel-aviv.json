@@ -15,6 +15,9 @@
     "city": "Tel Aviv"
   },
   "status": "unknown",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/publicis-groupe-israel"
+  },
   "relations": [
     {
       "type": "parent",
@@ -28,10 +31,12 @@
   "sources": [
     "https://everything-pr.com/publicis-groupe-bbr",
     "https://www.publicisgroupe.com/en/news/press-releases/publicis-groupe-announces-new-appointments-in-israel",
-    "https://www.publicisgroupe.com/sites/default/files/press-release/20151124_PG_GSS_241115_FR_Final.pdf"
+    "https://www.publicisgroupe.com/sites/default/files/press-release/20151124_PG_GSS_241115_FR_Final.pdf",
+    "https://www.linkedin.com/company/publicis-groupe-israel",
+    "https://www.ice.co.il/advertising-marketing/news/article/1099727"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Listed in 2012, 2015 and 2018 Publicis releases (as Publicis GNS in 2018); not seen in 2023+ rankings, so may have been folded into other Publicis Israel agencies."
 }

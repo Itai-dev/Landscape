@@ -1,0 +1,50 @@
+{
+  "id": "sporta-digital",
+  "name": "Sporta Digital",
+  "name_he": "ספורטה דיגיטל",
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "pr-social",
+    "content-studio",
+    "branding"
+  ],
+  "description": "Israeli digital agency for sport: social media management, creative and design, video, campaigns and sponsorships for clubs, leagues and federations (Israel Football Association, the Winner basketball league administration, LaLiga's Hebrew channels). Designed the Israel Diamond Exchange's new logo and identity (Oct 2026), its first rebrand in about 50 years.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://sporta.digital/",
+  "contact_url": "https://sporta.digital/contact-us/",
+  "links": {
+    "instagram": "https://www.instagram.com/sportadigital/",
+    "facebook": "https://www.facebook.com/SportaDigital"
+  },
+  "services": [
+    "Social media management",
+    "Creative & design",
+    "Video",
+    "Campaigns & sponsorships",
+    "Landing pages"
+  ],
+  "notable_clients": [
+    "Israel Football Association",
+    "Israeli Basketball Super League administration",
+    "LaLiga (Hebrew social)",
+    "Israel Diamond Exchange",
+    "Hapoel Gilboa Galil"
+  ],
+  "notable_work": [
+    "Israel Diamond Exchange rebrand (2026)"
+  ],
+  "tags": [
+    "sports"
+  ],
+  "sources": [
+    "https://sporta.digital/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1134070"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

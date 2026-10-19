@@ -2,6 +2,9 @@
   "id": "lead-advertising",
   "name": "LEAD",
   "name_he": "ליד",
+  "aka": [
+    "LEAD Ogilvy"
+  ],
   "kind": "agency",
   "categories": [
     "advertising"
@@ -11,7 +14,13 @@
     "country": "IL",
     "city": "Tel Aviv"
   },
+  "founded": 2004,
   "status": "active",
+  "website": "https://leadogilvy.com/",
+  "contact_url": "https://leadogilvy.com/#contact",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/lead-ogilvy"
+  },
   "notable_clients": [
     "Super-Pharm",
     "Meuhedet",
@@ -19,12 +28,20 @@
     "Shlomo Sixt",
     "Carrefour",
     "KKL-JNF",
-    "Egged"
+    "Egged",
+    "Zoglowek",
+    "Altshuler Shaham",
+    "Tenbis",
+    "Microsoft",
+    "Israel Airports Authority"
   ],
   "key_people": [
     {
       "name": "Rami Yehudiha",
-      "role": "Owner / head"
+      "role": "Founder & owner",
+      "role_type": "founder",
+      "source": "https://leadogilvy.com/",
+      "as_of": "2026-10-19"
     },
     {
       "name": "Doron Ard",
@@ -54,10 +71,12 @@
   ],
   "sources": [
     "https://www.globes.co.il/news/article.aspx?did=1001548875",
-    "https://www.ice.co.il/advertising-marketing/news/article/464361"
+    "https://www.ice.co.il/advertising-marketing/news/article/464361",
+    "https://leadogilvy.com/",
+    "https://www.linkedin.com/company/lead-ogilvy"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "City assumed Tel Aviv. Website not found (lead.co.il is an unrelated packaging company)."
 }

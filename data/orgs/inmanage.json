@@ -16,6 +16,8 @@
   "size": "51-200",
   "status": "active",
   "website": "https://www.inmanage.co.il/",
+  "contact_url": "https://www.inmanage.co.il/#contact",
+  "careers_url": "https://www.inmanage.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
   "services": [
     "E-commerce platforms",
     "Websites",
@@ -51,10 +53,11 @@
     "e-commerce"
   ],
   "sources": [
-    "https://www.inmanage.co.il/"
+    "https://www.inmanage.co.il/",
+    "https://www.inmanage.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-10-19",
   "notes": "Address: Hashfela 3, Tel Aviv. Only official-site evidence."
 }
