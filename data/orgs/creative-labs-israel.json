@@ -18,6 +18,8 @@
   "size": "11-50",
   "status": "active",
   "website": "https://creativelabs.co.il",
+  "contact_url": "https://www.creativelabs.co.il/contact/",
+  "reel_url": "https://www.creativelabs.co.il/wp-content/uploads/2023/07/SecondShowreel4.mp4",
   "links": {
     "instagram": "https://www.instagram.com/creative_labs_israel",
     "linkedin": "https://www.linkedin.com/company/19009219"
@@ -28,9 +30,34 @@
     "interactive media",
     "immersive LED content"
   ],
+  "key_people": [
+    {
+      "name": "Ziv Harel",
+      "role": "Co-founder, CEO",
+      "role_type": "founder",
+      "source": "https://www.creativelabs.co.il/about/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Itay Appel",
+      "role": "Co-founder, Head of Creative Technology",
+      "role_type": "founder",
+      "source": "https://www.creativelabs.co.il/about/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Jonathan Shmukler",
+      "role": "Head of SpaceUX & Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.creativelabs.co.il/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "sources": [
     "https://creativelabs.co.il",
-    "https://prospeo.io/c/creative-labs-israel-email-format"
+    "https://prospeo.io/c/creative-labs-israel-email-format",
+    "https://www.creativelabs.co.il/about/",
+    "https://www.creativelabs.co.il/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

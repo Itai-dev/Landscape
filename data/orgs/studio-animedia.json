@@ -18,6 +18,12 @@
   "size": "1-10",
   "status": "active",
   "website": "https://studioanimedia.com",
+  "contact_url": "https://www.studioanimedia.com/contact/",
+  "reel_url": "https://vimeo.com/1219149861",
+  "links": {
+    "vimeo": "https://vimeo.com/user59374793",
+    "instagram": "https://www.instagram.com/studio_animedia/"
+  },
   "services": [
     "Animation",
     "Video and green screen",
@@ -35,13 +41,24 @@
     "Assuta",
     "Car2Go"
   ],
+  "key_people": [
+    {
+      "name": "Assaf Zellner",
+      "role": "Founder & Owner",
+      "role_type": "founder",
+      "source": "https://www.studioanimedia.com/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "explainers",
     "health"
   ],
   "sources": [
     "https://studioanimedia.com",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://www.studioanimedia.com/about/",
+    "https://vimeo.com/1219149861"
   ],
   "confidence": "high",
   "added": "2026-10-18",

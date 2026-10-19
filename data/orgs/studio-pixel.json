@@ -16,6 +16,12 @@
   "size": "11-50",
   "status": "active",
   "website": "https://studiopixel.co.il",
+  "reel_url": "https://vimeo.com/1180241439",
+  "links": {
+    "vimeo": "https://vimeo.com/pixelstudioz",
+    "instagram": "https://www.instagram.com/studiopixel_creativehouse/",
+    "youtube": "https://www.youtube.com/@studiopixel317"
+  },
   "services": [
     "Motion graphics",
     "2D/3D animation",
@@ -40,6 +46,22 @@
     "Adidas TLV Marathon",
     "Miss Universe Israel 2021"
   ],
+  "key_people": [
+    {
+      "name": "Jordan Barr",
+      "role": "Founder & CEO",
+      "role_type": "founder",
+      "source": "https://studiopixel.co.il/the-studio/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Koren Barr",
+      "role": "Founder",
+      "role_type": "founder",
+      "source": "https://studiopixel.co.il/the-studio/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "projection-mapping",
     "events",
@@ -47,7 +69,9 @@
   ],
   "sources": [
     "https://studiopixel.co.il",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://studiopixel.co.il/the-studio/",
+    "https://vimeo.com/1180241439"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

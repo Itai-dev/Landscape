@@ -13,9 +13,12 @@
     "city": "Tel Aviv"
   },
   "status": "active",
-  "website": "https://www.fontimonim.co.il",
+  "website": "https://fontimonim.co.il/",
+  "contact_url": "https://fontimonim.co.il/info/contact/",
   "links": {
-    "myfonts": "https://www.myfonts.com/collections/fontimonim/"
+    "myfonts": "https://www.myfonts.com/collections/fontimonim/",
+    "instagram": "https://www.instagram.com/fontimonim",
+    "facebook": "https://www.facebook.com/fontimonim"
   },
   "key_people": [
     {
@@ -35,10 +38,12 @@
   ],
   "sources": [
     "https://alefalefalef.co.il/en/?p=19697",
-    "https://luc.devroye.org/israel.html"
+    "https://luc.devroye.org/israel.html",
+    "https://fontimonim.co.il/",
+    "https://fontimonim.co.il/info/contact/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Website URL not verified (fetch failed); founding year not found."
+  "notes": "Website URL not verified (fetch failed); founding year not found. Site resolves at https://fontimonim.co.il/ (the www host returned an error on 2026-10-18)."
 }

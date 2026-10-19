@@ -18,6 +18,7 @@
   },
   "status": "active",
   "website": "https://www.parallax-vp.com/en",
+  "contact_url": "https://www.parallax-vp.com/en/contact",
   "links": {
     "linkedin": "https://il.linkedin.com/company/parallax-virtual-production-studio",
     "instagram": "https://www.instagram.com/parallaxvp/",
@@ -28,6 +29,22 @@
     "Custom Unreal Engine 3D environments",
     "Real-time camera tracking",
     "Real-time VFX"
+  ],
+  "key_people": [
+    {
+      "name": "Tom Goldwasser",
+      "role": "Cinematographer & Producer",
+      "role_type": "production",
+      "source": "https://www.parallax-vp.com/en/team",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Jonathan Geva",
+      "role": "Director, scriptwriter & VFX artist",
+      "role_type": "creative_lead",
+      "source": "https://www.parallax-vp.com/en/team",
+      "as_of": "2026-10-18"
+    }
   ],
   "relations": [
     {
@@ -43,7 +60,8 @@
   ],
   "sources": [
     "https://www.parallax-vp.com/en",
-    "https://il.linkedin.com/company/parallax-virtual-production-studio"
+    "https://il.linkedin.com/company/parallax-virtual-production-studio",
+    "https://www.parallax-vp.com/en/team"
   ],
   "confidence": "high",
   "added": "2026-10-18",

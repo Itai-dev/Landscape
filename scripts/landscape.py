@@ -150,8 +150,17 @@ def merge(old: dict, new: dict) -> dict:
             seen = {(r["type"], r["target"]) for r in old.get("relations", [])}
             out[k] = old.get("relations", []) + [r for r in v if (r["type"], r["target"]) not in seen]
         elif k == "key_people":
-            names = {p["name"] for p in old.get("key_people", [])}
-            out[k] = old.get("key_people", []) + [p for p in v if p["name"] not in names]
+            people = [dict(p) for p in old.get("key_people", [])]
+            by_name = {norm_name(p["name"]): p for p in people}
+            for p in v:
+                cur = by_name.get(norm_name(p["name"]))
+                if cur is None:
+                    people.append(p)
+                else:  # enrich an existing person; a fresher role wins
+                    for f, val in p.items():
+                        if f not in cur or (fresher and f in ("role", "role_type", "source", "as_of")):
+                            cur[f] = val
+            out[k] = people
         elif isinstance(v, dict) and isinstance(old.get(k), dict):
             out[k] = {**old[k], **v} if fresher else {**v, **old[k]}
         elif k == "confidence":

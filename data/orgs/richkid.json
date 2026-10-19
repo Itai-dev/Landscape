@@ -21,6 +21,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.richkid-tlv.com",
+  "contact_url": "https://www.richkid-tlv.com/en/company/contact/main/",
+  "links": {
+    "instagram": "https://www.instagram.com/richkid_tlv/",
+    "linkedin": "https://www.linkedin.com/company/3076569"
+  },
   "services": [
     "websites",
     "UX/UI",
@@ -38,7 +43,8 @@
   "sources": [
     "https://www.richkid-tlv.com",
     "https://clutch.co/il/web-designers",
-    "https://www.awwwards.com/directory/Israel/"
+    "https://www.awwwards.com/directory/Israel/",
+    "https://www.richkid-tlv.com/en/company/about/main/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

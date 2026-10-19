@@ -14,6 +14,9 @@
   "size": "1-10",
   "status": "active",
   "website": "https://funkeyzanimation.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/funkeyz-animation-studio-ltd/"
+  },
   "services": [
     "Character animation",
     "Outsourced game animation"
@@ -31,7 +34,8 @@
   ],
   "sources": [
     "https://funkeyzanimation.com",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://funkeyzanimation.com/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

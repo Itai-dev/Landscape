@@ -14,6 +14,9 @@
   "size": "1-10",
   "status": "active",
   "website": "https://animatorit.com",
+  "links": {
+    "youtube": "https://www.youtube.com/channel/UCVOxFoSt0zIzNnEd5kPk64A"
+  },
   "services": [
     "2D animated videos",
     "Design",
@@ -21,7 +24,8 @@
   ],
   "sources": [
     "https://animatorit.com",
-    "https://revenuebase.ai/companies/animation-studios/israel"
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://animatorit.com/"
   ],
   "confidence": "low",
   "added": "2026-10-18",

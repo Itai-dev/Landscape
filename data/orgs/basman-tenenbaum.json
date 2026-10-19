@@ -19,6 +19,7 @@
   "founded": 1984,
   "status": "active",
   "website": "https://www.btdesign.co.il",
+  "contact_url": "https://www.btdesign.co.il/contact-us/",
   "links": {
     "instagram": "https://www.instagram.com/basman_tenenbaum/",
     "linkedin": "https://www.linkedin.com/company/88030418/"
@@ -54,7 +55,8 @@
   "sources": [
     "https://www.btdesign.co.il",
     "https://www.designrush.com/agency/profile/basman-tenenbaum",
-    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://www.btdesign.co.il/about/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

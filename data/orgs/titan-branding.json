@@ -35,10 +35,11 @@
   ],
   "sources": [
     "https://clutch.co/profile/titan-branding",
-    "https://clutch.co/il/agencies/branding"
+    "https://clutch.co/il/agencies/branding",
+    "http://www.titan-branding.com/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Official site could not be read at verification time."
+  "notes": "Official site could not be read at verification time. 2026-10-18: site still answers but only with a bot-check page to automated fetches."
 }

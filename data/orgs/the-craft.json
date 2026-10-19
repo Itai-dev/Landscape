@@ -18,6 +18,8 @@
   "size": "1-10",
   "status": "active",
   "website": "https://the-craft.co",
+  "contact_url": "https://the-craft.co/contact",
+  "careers_url": "https://the-craft.co/join-us",
   "links": {
     "linkedin": "https://www.linkedin.com/company/the-craft-architectural-visualization",
     "behance": "https://www.behance.net/thecraft",
@@ -45,7 +47,8 @@
   ],
   "sources": [
     "https://the-craft.co",
-    "https://www.linkedin.com/company/the-craft-architectural-visualization"
+    "https://www.linkedin.com/company/the-craft-architectural-visualization",
+    "https://the-craft.co/join-us"
   ],
   "confidence": "high",
   "added": "2026-10-18",

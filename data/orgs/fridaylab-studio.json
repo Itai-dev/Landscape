@@ -17,6 +17,11 @@
   "size": "1-10",
   "status": "active",
   "website": "https://fridaylab.studio",
+  "links": {
+    "youtube": "https://www.youtube.com/@fridaylab_studio",
+    "linkedin": "https://www.linkedin.com/company/fridaylab-studio",
+    "instagram": "https://www.instagram.com/fridaylab_studio/"
+  },
   "services": [
     "Animation",
     "Rigging",
@@ -38,7 +43,8 @@
   ],
   "sources": [
     "https://fridaylab.studio",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://fridaylab.studio/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

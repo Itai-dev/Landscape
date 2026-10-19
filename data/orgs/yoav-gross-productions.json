@@ -30,6 +30,20 @@
     {
       "name": "Yoav Gross",
       "role": "Founder"
+    },
+    {
+      "name": "Ariel Weisbrod",
+      "role": "VP of Content & Partnerships",
+      "role_type": "executive",
+      "source": "https://www.yoavgross.com/our-team",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Maayan Avraham",
+      "role": "VP of Production",
+      "role_type": "production",
+      "source": "https://www.yoavgross.com/our-team",
+      "as_of": "2026-10-18"
     }
   ],
   "tags": [
@@ -42,7 +56,8 @@
   "sources": [
     "https://www.yoavgross.com/",
     "https://www.yoavgross.com/catalog",
-    "https://thetvdb.com:443/companies/yoav-gross-productions"
+    "https://thetvdb.com:443/companies/yoav-gross-productions",
+    "https://www.yoavgross.com/our-team"
   ],
   "confidence": "high",
   "added": "2026-10-18",

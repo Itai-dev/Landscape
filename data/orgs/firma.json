@@ -18,6 +18,8 @@
   "founded": 2005,
   "status": "active",
   "website": "https://www.firmabrands.com",
+  "careers_url": "https://www.firmabrands.com/careers/",
+  "reel_url": "https://vimeo.com/1147265505",
   "links": {
     "linkedin": "https://www.linkedin.com/company/firma--the-brandhouse",
     "instagram": "https://www.instagram.com/firma.businessdesign"
@@ -44,12 +46,21 @@
     {
       "name": "Elad Mishan",
       "role": "Co-founder"
+    },
+    {
+      "name": "Bernhard Freudhofmaier",
+      "role": "Creative Director",
+      "role_type": "creative_lead",
+      "source": "https://www.firmabrands.com/about/",
+      "as_of": "2026-10-18"
     }
   ],
   "sources": [
     "https://www.firmabrands.com",
     "https://alefalefalef.co.il/en/?p=7304",
-    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://www.firmabrands.com/about/",
+    "https://vimeo.com/1147265505"
   ],
   "confidence": "high",
   "added": "2026-10-18",

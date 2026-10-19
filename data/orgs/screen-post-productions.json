@@ -25,6 +25,7 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.screen-post.com",
+  "contact_url": "https://www.screen-post.com/contact",
   "links": {
     "instagram": "https://www.instagram.com/screenpostproduction/",
     "vimeo": "https://vimeo.com/user23010303"
@@ -88,7 +89,8 @@
   "sources": [
     "https://www.screen-post.com",
     "https://finance.walla.co.il/item/3680433",
-    "https://finance.walla.co.il/item/3695103"
+    "https://finance.walla.co.il/item/3695103",
+    "https://www.screen-post.com/contact"
   ],
   "confidence": "high",
   "added": "2026-10-18",

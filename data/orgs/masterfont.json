@@ -41,10 +41,11 @@
   ],
   "sources": [
     "https://www.myfonts.com/foundry/Masterfont/",
-    "https://luc.devroye.org/israel.html"
+    "https://luc.devroye.org/israel.html",
+    "http://www.masterfont.co.il/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Founding year differs between sources (1984 vs 1986). Official site returned 503 at verification time."
+  "notes": "Founding year differs between sources (1984 vs 1986). Official site returned 503 at verification time. On 2026-10-18 www.masterfont.co.il returned 404 and the bare domain failed TLS; activity not re-checked."
 }

@@ -20,6 +20,7 @@
   },
   "status": "active",
   "website": "https://www.thebract.com",
+  "contact_url": "https://www.thebract.com/contact",
   "links": {
     "instagram": "https://www.instagram.com/the.bract/",
     "linkedin": "https://www.linkedin.com/company/bract-agency/",
@@ -38,9 +39,19 @@
     "Claryx",
     "Acusurgical"
   ],
+  "key_people": [
+    {
+      "name": "Lisa Picovschi",
+      "role": "Founder & Strategist",
+      "role_type": "founder",
+      "source": "https://www.thebract.com/about",
+      "as_of": "2026-10-18"
+    }
+  ],
   "sources": [
     "https://www.thebract.com",
-    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://www.thebract.com/about"
   ],
   "confidence": "high",
   "added": "2026-10-18",

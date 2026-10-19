@@ -14,6 +14,7 @@
   "founded": 1973,
   "status": "active",
   "website": "https://www.tedy.co.il/",
+  "contact_url": "https://www.tedy.co.il/contact",
   "notable_work": [
     "Kochav Nolad",
     "HaKokhav HaBa / Rising Star",
@@ -37,7 +38,8 @@
     "artist-management"
   ],
   "sources": [
-    "https://he.wikipedia.org/wiki/%D7%98%D7%93%D7%99_%D7%99%D7%96%D7%9E%D7%95%D7%AA_%D7%95%D7%94%D7%A4%D7%A7%D7%95%D7%AA"
+    "https://he.wikipedia.org/wiki/%D7%98%D7%93%D7%99_%D7%99%D7%96%D7%9E%D7%95%D7%AA_%D7%95%D7%94%D7%A4%D7%A7%D7%95%D7%AA",
+    "https://www.tedy.co.il/contact"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

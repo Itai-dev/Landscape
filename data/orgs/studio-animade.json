@@ -20,6 +20,12 @@
   "size": "1-10",
   "status": "active",
   "website": "https://animade.me",
+  "contact_url": "https://animade.me/contact_us/",
+  "links": {
+    "youtube": "https://www.youtube.com/channel/UCsL0ps8rUEvq5mqSXkuvHCA",
+    "linkedin": "https://www.linkedin.com/company/animade-animation-studio/",
+    "instagram": "https://www.instagram.com/animadestudio/"
+  },
   "services": [
     "Animated explainer and marketing videos",
     "3D product visualization",
@@ -32,6 +38,15 @@
     "Zikaron BaSalon",
     "ClickPress"
   ],
+  "key_people": [
+    {
+      "name": "Baruch Gutman",
+      "role": "Studio Manager",
+      "role_type": "executive",
+      "source": "https://animade.me/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "explainers",
     "e-learning",
@@ -39,7 +54,8 @@
   ],
   "sources": [
     "https://animade.me",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://animade.me/about/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

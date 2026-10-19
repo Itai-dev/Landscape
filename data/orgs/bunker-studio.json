@@ -19,6 +19,7 @@
   "size": "1-10",
   "status": "active",
   "website": "https://bunker.co.il",
+  "reel_url": "https://www.youtube.com/watch?v=LQ_HbKchM4g",
   "links": {
     "facebook": "https://www.facebook.com/bunkerProductionsIsrael/",
     "youtube": "https://www.youtube.com/user/BunkerTubeChannel"
@@ -45,7 +46,8 @@
   ],
   "sources": [
     "https://bunker.co.il",
-    "https://revenuebase.ai/companies/post-production-companies/israel"
+    "https://revenuebase.ai/companies/post-production-companies/israel",
+    "https://www.youtube.com/watch?v=LQ_HbKchM4g"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

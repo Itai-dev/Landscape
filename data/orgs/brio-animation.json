@@ -14,6 +14,7 @@
   "size": "11-50",
   "status": "active",
   "website": "https://brioanimation.com",
+  "contact_url": "https://brioanimation.com/contact",
   "links": {
     "linkedin": "https://www.linkedin.com/company/brio-animation"
   },
@@ -33,7 +34,8 @@
   "sources": [
     "https://www.linkedin.com/company/brio-animation",
     "https://brioanimation.com",
-    "https://revenuebase.ai/companies/3d-rendering-companies/israel"
+    "https://revenuebase.ai/companies/3d-rendering-companies/israel",
+    "https://brioanimation.com/contact"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

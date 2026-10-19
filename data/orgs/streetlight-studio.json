@@ -17,6 +17,10 @@
   "size": "1-10",
   "status": "active",
   "website": "https://studiostreetlight.com",
+  "reel_url": "https://www.youtube.com/watch?v=ZadLEj5wxiM",
+  "links": {
+    "instagram": "https://www.instagram.com/studio.streetlight/"
+  },
   "services": [
     "product design",
     "web design and Webflow",
@@ -38,7 +42,9 @@
   ],
   "sources": [
     "https://studiostreetlight.com",
-    "https://www.awwwards.com/directory/Israel/"
+    "https://www.awwwards.com/directory/Israel/",
+    "https://www.studiostreetlight.com/",
+    "https://www.youtube.com/watch?v=ZadLEj5wxiM"
   ],
   "confidence": "high",
   "added": "2026-10-18",

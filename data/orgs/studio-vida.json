@@ -14,6 +14,7 @@
   "founded": 2010,
   "status": "active",
   "website": "https://vida3d.co.il",
+  "contact_url": "https://www.vida3d.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
   "links": {
     "facebook": "https://www.facebook.com/studiovida3d/",
     "instagram": "https://www.instagram.com/studio_vida3d/"
@@ -36,7 +37,8 @@
   ],
   "sources": [
     "https://vida3d.co.il",
-    "https://revenuebase.ai/companies/digital-effects-companies/israel"
+    "https://revenuebase.ai/companies/digital-effects-companies/israel",
+    "https://www.vida3d.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

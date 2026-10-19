@@ -15,6 +15,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://blackboardvfx.com",
+  "reel_url": "https://www.youtube.com/watch?v=OYKb-bqhE7w",
+  "links": {
+    "youtube": "https://www.youtube.com/channel/UCuJlRzg31sOW7O7OViM3Rgg",
+    "instagram": "https://www.instagram.com/blackboard_studios/"
+  },
   "services": [
     "3D animation and CGI",
     "Product and explainer videos",
@@ -41,7 +46,9 @@
   ],
   "sources": [
     "https://blackboardvfx.com",
-    "https://www.edvido.com/animation-studios/israel"
+    "https://www.edvido.com/animation-studios/israel",
+    "https://www.blackboardvfx.com/",
+    "https://www.youtube.com/watch?v=OYKb-bqhE7w"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

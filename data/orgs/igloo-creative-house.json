@@ -19,6 +19,13 @@
   "size": "11-50",
   "status": "active",
   "website": "https://igloocreative.co",
+  "contact_url": "https://www.igloocreative.co/contact/",
+  "careers_url": "https://www.igloocreative.co/jobs/",
+  "links": {
+    "vimeo": "https://vimeo.com/user103006430",
+    "linkedin": "https://www.linkedin.com/company/igloo---creative-house",
+    "instagram": "https://www.instagram.com/igloocreative/"
+  },
   "services": [
     "Brand videos",
     "Commercials",
@@ -50,7 +57,9 @@
   ],
   "sources": [
     "https://igloocreative.co",
-    "https://revenuebase.ai/companies/animation-studios/israel"
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://igloocreative.co/",
+    "https://www.igloocreative.co/who-what/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

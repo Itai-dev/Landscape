@@ -12,6 +12,7 @@
   },
   "status": "active",
   "website": "https://www.playstudios.com/tel-aviv/",
+  "careers_url": "https://www.playstudios.com/careers/",
   "links": {
     "linkedin": "https://www.linkedin.com/company/3163838/"
   },
@@ -31,7 +32,8 @@
   ],
   "sources": [
     "https://www.playstudios.com/tel-aviv/",
-    "https://www.playstudios.com/"
+    "https://www.playstudios.com/",
+    "https://www.playstudios.com/careers/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

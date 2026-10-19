@@ -16,6 +16,8 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.5ive.co.il",
+  "contact_url": "https://5ive.co.il/contact/",
+  "careers_url": "https://5ive.co.il/careers/",
   "links": {
     "facebook": "https://www.facebook.com/5ive.ux/",
     "linkedin": "https://www.linkedin.com/company/5ive-innovation-&-ux"
@@ -37,7 +39,9 @@
   ],
   "sources": [
     "https://www.5ive.co.il",
-    "https://clutch.co/il/agencies/ui-ux"
+    "https://clutch.co/il/agencies/ui-ux",
+    "https://5ive.co.il/careers/",
+    "https://5ive.co.il/contact/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

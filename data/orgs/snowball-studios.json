@@ -23,7 +23,13 @@
   "founded": 2005,
   "size": "51-200",
   "status": "unknown",
-  "website": "https://snowballvfx.com",
+  "website": "https://www.snowballvfx.com/",
+  "reel_url": "https://www.snowballvfx.com/showreel",
+  "links": {
+    "vimeo": "https://vimeo.com/snowballvfx",
+    "linkedin": "https://www.linkedin.com/company/209543",
+    "youtube": "https://www.youtube.com/channel/UCxWPno1rDy8U8Zv5Y731tnw"
+  },
   "services": [
     "3D animation",
     "Visual effects",
@@ -73,10 +79,13 @@
     "https://thejerusalemfilmfund.com/company/snowball-studios/",
     "https://nocamels.com/2015/03/disney-to-produce-tv-series-in-israel/",
     "https://www.timesofisrael.com/no-business-like-show-business/",
-    "https://en.wikipedia.org/wiki/Vipo:_Adventures_of_the_Flying_Dog"
+    "https://en.wikipedia.org/wiki/Vipo:_Adventures_of_the_Flying_Dog",
+    "https://www.snowballvfx.com/showreel",
+    "https://www.snowballvfx.com/about",
+    "https://vimeo.com/snowballvfx"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "snowballvfx.com now redirects to a dead domain (snowballffx.com) as of 2026-10; current activity unconfirmed. Size from Indeed (51-200), likely dated."
+  "notes": "snowballvfx.com now redirects to a dead domain (snowballffx.com) as of 2026-10; current activity unconfirmed. Size from Indeed (51-200), likely dated. Correction 2026-10-18: https://www.snowballvfx.com/ still loads (only the bare domain redirects to the dead snowballffx.com). Newest showreel listed is 2017 and newest Vimeo upload Feb 2021, so no 2025-26 activity seen."
 }

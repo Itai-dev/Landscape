@@ -20,6 +20,14 @@
   "size": "1-10",
   "status": "active",
   "website": "https://lirankapel.com",
+  "contact_url": "https://www.lirankapel.com/contact/",
+  "reel_url": "https://vimeo.com/1192022161",
+  "links": {
+    "vimeo": "https://vimeo.com/lirankapel",
+    "linkedin": "https://www.linkedin.com/company/liran-kapel-animation-studio/",
+    "instagram": "https://www.instagram.com/liran_kapel_animation/",
+    "youtube": "https://www.youtube.com/@lirankapel-creativedesigna9309"
+  },
   "services": [
     "Stop-motion animation",
     "Hand-drawn animation",
@@ -51,7 +59,9 @@
   ],
   "sources": [
     "https://lirankapel.com",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://lirankapel.com/",
+    "https://vimeo.com/1192022161"
   ],
   "confidence": "high",
   "added": "2026-10-18",

@@ -11,10 +11,13 @@
   },
   "status": "active",
   "website": "https://yesstudios.tv/",
+  "contact_url": "https://www.yesstudios.tv/contact2",
   "links": {
     "instagram": "https://www.instagram.com/yesstudios/",
     "facebook": "https://www.facebook.com/yesstudiosyes/",
-    "x": "https://twitter.com/YesstudiosT"
+    "x": "https://twitter.com/YesstudiosT",
+    "linkedin": "https://il.linkedin.com/company/yesstudios",
+    "youtube": "https://www.youtube.com/channel/UCKC1v1ihnxe0SVsjR5tmZCg"
   },
   "notable_work": [
     "Fauda",
@@ -42,7 +45,8 @@
   ],
   "sources": [
     "https://yesstudios.tv/",
-    "https://yesstudios.tv/about-us"
+    "https://yesstudios.tv/about-us",
+    "https://www.yesstudios.tv/about-us"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

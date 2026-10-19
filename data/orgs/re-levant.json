@@ -19,6 +19,7 @@
   "founded": 2003,
   "status": "active",
   "website": "https://www.re-levant.co.il",
+  "contact_url": "https://re-levant.co.il/%D7%93%D7%91%D7%A8%D7%95-%D7%90%D7%99%D7%AA%D7%A0%D7%95/",
   "links": {
     "instagram": "https://www.instagram.com/relevantdesign",
     "linkedin": "https://www.linkedin.com/company/re-levant-design"
@@ -54,7 +55,8 @@
   "sources": [
     "https://www.re-levant.co.il",
     "https://www.itsnicethat.com/news/re-levant-studio-bezalel-academy-graphicdesign-240718",
-    "https://alefalefalef.co.il/en/?p=7304"
+    "https://alefalefalef.co.il/en/?p=7304",
+    "https://re-levant.co.il/%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

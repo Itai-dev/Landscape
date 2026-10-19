@@ -15,9 +15,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.atreo.co",
+  "reel_url": "https://vimeo.com/1085440965",
   "links": {
     "linkedin": "https://www.linkedin.com/company/atreo/",
-    "instagram": "https://www.instagram.com/atreo.co"
+    "instagram": "https://www.instagram.com/atreo.co",
+    "vimeo": "https://vimeo.com/atreo"
   },
   "services": [
     "category design",
@@ -42,7 +44,8 @@
   ],
   "sources": [
     "https://www.atreo.co/",
-    "https://clutch.co/profile/atreo"
+    "https://clutch.co/profile/atreo",
+    "https://vimeo.com/1085440965"
   ],
   "confidence": "high",
   "added": "2026-10-18",

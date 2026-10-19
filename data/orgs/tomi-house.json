@@ -17,6 +17,7 @@
   "size": "11-50",
   "status": "active",
   "website": "https://tomihouse.com",
+  "contact_url": "https://tomihouse.com/contact/",
   "links": {
     "linkedin": "https://www.linkedin.com/company/tomi-house"
   },
@@ -35,7 +36,8 @@
   ],
   "sources": [
     "https://tomihouse.com",
-    "https://www.linkedin.com/company/tomi-house"
+    "https://www.linkedin.com/company/tomi-house",
+    "https://tomihouse.com/contact/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

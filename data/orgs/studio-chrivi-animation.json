@@ -17,6 +17,11 @@
   "size": "1-10",
   "status": "active",
   "website": "https://studiochrivi.com",
+  "contact_url": "https://www.studiochrivi.com/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8/",
+  "reel_url": "https://www.youtube.com/watch?v=56L0UgPut-g",
+  "links": {
+    "youtube": "https://www.youtube.com/channel/UCDty8GmbcOxdRiCnLEh_VYQ"
+  },
   "services": [
     "Promo and explainer animation",
     "Animated logos and infographics",
@@ -36,7 +41,9 @@
   ],
   "sources": [
     "https://studiochrivi.com",
-    "https://themanifest.com/il/video-production/motion-graphics/agencies"
+    "https://themanifest.com/il/video-production/motion-graphics/agencies",
+    "https://studiochrivi.com/",
+    "https://www.youtube.com/watch?v=56L0UgPut-g"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

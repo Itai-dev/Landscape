@@ -14,6 +14,7 @@
   "founded": 2017,
   "status": "active",
   "website": "https://gellerproduction.com/",
+  "contact_url": "https://gellerproduction.com/contacts",
   "links": {
     "instagram": "https://instagram.com/gellerproductions"
   },
@@ -30,7 +31,8 @@
   ],
   "sources": [
     "https://gellerproduction.com/about-us",
-    "https://www.productionparadise.com/member/tel_aviv/geller-productions/magazines/"
+    "https://www.productionparadise.com/member/tel_aviv/geller-productions/magazines/",
+    "https://gellerproduction.com/contacts"
   ],
   "confidence": "high",
   "added": "2026-10-18",

@@ -20,10 +20,13 @@
   "size": "1-10",
   "status": "active",
   "website": "https://on-airgraphics.com",
+  "contact_url": "https://on-airgraphics.com/contact-us/",
   "links": {
     "linkedin": "https://www.linkedin.com/company/onairgraphics/",
     "facebook": "https://www.facebook.com/OnAirGraphicsLtd/",
-    "x": "https://twitter.com/OnAirGraphics"
+    "x": "https://twitter.com/OnAirGraphics",
+    "instagram": "https://www.instagram.com/onairgraphics/",
+    "youtube": "https://www.youtube.com/channel/UCWSWT8qqs_QJP9iXVvvLA0A"
   },
   "services": [
     "Virtual studios (Unreal Engine)",
@@ -39,7 +42,8 @@
   ],
   "sources": [
     "https://on-airgraphics.com",
-    "https://revenuebase.ai/companies/vfx-studios/israel"
+    "https://revenuebase.ai/companies/vfx-studios/israel",
+    "https://on-airgraphics.com/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

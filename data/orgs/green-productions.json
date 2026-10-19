@@ -18,6 +18,7 @@
   "founded": 2009,
   "status": "active",
   "website": "https://www.greenproductions.co.il/",
+  "contact_url": "https://www.greenproductions.co.il/contact",
   "links": {
     "instagram": "https://www.instagram.com/green_productions_il",
     "vimeo": "https://vimeo.com/user23010303"
@@ -52,6 +53,41 @@
     {
       "name": "Roi Kurland",
       "role": "Co-founder, Producer"
+    },
+    {
+      "name": "Chen Avni",
+      "role": "COO",
+      "role_type": "executive",
+      "source": "https://www.greenproductions.co.il/about-production",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Maya Fischer",
+      "role": "Head of Film & TV department",
+      "role_type": "production",
+      "source": "https://www.greenproductions.co.il/about-production",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Ronen Hoffman",
+      "role": "Head of the commercial department",
+      "role_type": "production",
+      "source": "https://www.greenproductions.co.il/about-production",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Ruth Efroni",
+      "role": "Head of TV content",
+      "role_type": "production",
+      "source": "https://www.greenproductions.co.il/about-production",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Anat Shachar",
+      "role": "Line Producer, commercial department",
+      "role_type": "production",
+      "source": "https://www.greenproductions.co.il/about-production",
+      "as_of": "2026-10-18"
     }
   ],
   "relations": [
@@ -77,7 +113,8 @@
     "https://he.wikipedia.org/wiki/%D7%92%D7%A8%D7%99%D7%9F_%D7%A4%D7%A8%D7%95%D7%93%D7%A7%D7%A9%D7%A0%D7%A1",
     "https://www.maariv.co.il/business/Article-941394",
     "https://www.adsoftheworld.com/campaigns/the-legend",
-    "https://cinando.com/en/Company/green_productions_24860/Detail"
+    "https://cinando.com/en/Company/green_productions_24860/Detail",
+    "https://www.greenproductions.co.il/about-production"
   ],
   "confidence": "high",
   "added": "2026-10-18",

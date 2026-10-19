@@ -20,6 +20,8 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.studiodov.com",
+  "contact_url": "https://www.studiodov.com/contact/",
+  "reel_url": "https://www.studiodov.com/wp-content/uploads/2022/12/Showreel-NoSound.mp4",
   "links": {
     "facebook": "https://www.facebook.com/DovAbramsonStudio/",
     "instagram": "https://www.instagram.com/dovabramsonstudio/",
@@ -50,7 +52,8 @@
   "sources": [
     "https://www.studiodov.com",
     "https://alefalefalef.co.il/en/?p=7304",
-    "https://beyond-the-elite.huji.ac.il/node/3035586"
+    "https://beyond-the-elite.huji.ac.il/node/3035586",
+    "https://www.studiodov.com/our-story/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

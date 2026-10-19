@@ -15,6 +15,12 @@
   "size": "11-50",
   "status": "active",
   "website": "https://oronpro.co.il",
+  "contact_url": "https://www.oronpro.co.il/contact-oronpro",
+  "reel_url": "https://vimeo.com/569846493",
+  "links": {
+    "vimeo": "https://vimeo.com/oronpro",
+    "youtube": "https://www.youtube.com/user/OronTV"
+  },
   "services": [
     "Corporate films",
     "Animated films with original characters",
@@ -34,7 +40,9 @@
   ],
   "sources": [
     "https://oronpro.co.il",
-    "https://www.edvido.com/animation-studios/israel"
+    "https://www.edvido.com/animation-studios/israel",
+    "https://oronpro.co.il/",
+    "https://vimeo.com/569846493"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

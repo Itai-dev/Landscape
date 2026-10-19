@@ -19,10 +19,14 @@
   "founded": 2005,
   "status": "active",
   "website": "https://www.rabbi.co.il",
+  "contact_url": "https://www.rabbi.co.il/contact",
   "links": {
     "facebook": "https://www.facebook.com/rabbi.interactive",
     "linkedin": "https://www.linkedin.com/company/rabbi-interactive-agency",
-    "x": "https://twitter.com/rabbi_agency"
+    "x": "https://twitter.com/rabbi_agency",
+    "vimeo": "https://vimeo.com/rabbiagency",
+    "instagram": "https://www.instagram.com/rabbi_interactive/",
+    "youtube": "https://www.youtube.com/RabbiIlrabbi_agency"
   },
   "services": [
     "interactive TV and game shows",
@@ -42,6 +46,15 @@
     "Eurovision predictions app",
     "'Who Can Beat Israel' interactive TV game"
   ],
+  "key_people": [
+    {
+      "name": "Gil Rabbi",
+      "role": "Founder (2005)",
+      "role_type": "founder",
+      "source": "https://www.rabbi.co.il/page/rabbi_agency",
+      "as_of": "2026-10-18"
+    }
+  ],
   "relations": [
     {
       "type": "parent",
@@ -54,7 +67,8 @@
   ],
   "sources": [
     "https://www.rabbi.co.il",
-    "https://www.cbinsights.com/compare/moosh-studio-vs-rabbi-interactive-agency"
+    "https://www.cbinsights.com/compare/moosh-studio-vs-rabbi-interactive-agency",
+    "https://www.rabbi.co.il/page/rabbi_agency"
   ],
   "confidence": "high",
   "added": "2026-10-18",

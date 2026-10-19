@@ -15,6 +15,7 @@
   "founded": 2001,
   "status": "active",
   "website": "https://www.zedfilms.com/",
+  "contact_url": "https://zedfilms.com/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
   "links": {
     "facebook": "https://www.facebook.com/ZedFilms1/"
   },
@@ -26,6 +27,15 @@
     "Events and ceremonies production",
     "Production services in Israel"
   ],
+  "key_people": [
+    {
+      "name": "Gil Roeh",
+      "role": "Manages the company; independent film producer",
+      "role_type": "production",
+      "source": "https://zedfilms.com/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "corporate-video",
     "events",
@@ -34,7 +44,8 @@
   "sources": [
     "https://www.zedfilms.com/",
     "https://www.thelocationguide.com/israel/production-services",
-    "https://www.gov.il/BlobFolder/rfp/israeli_films_service_suppliers/he/List%20of%20providers%20included%20in%20the%20Israeli%20Film%20Service%20database.pdf"
+    "https://www.gov.il/BlobFolder/rfp/israeli_films_service_suppliers/he/List%20of%20providers%20included%20in%20the%20Israeli%20Film%20Service%20database.pdf",
+    "https://zedfilms.com/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

@@ -15,6 +15,11 @@
   "size": "1-10",
   "status": "active",
   "website": "https://pilanimation.com",
+  "contact_url": "https://pilanimation.com/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/pilanimation/",
+    "youtube": "https://www.youtube.com/channel/UCKvQkCwZfTBEy79pVjhDB2A"
+  },
   "services": [
     "Explainer and promo videos",
     "Commercials",
@@ -40,6 +45,15 @@
     "History in a Minute (National Geographic)",
     "Jump with Joey"
   ],
+  "key_people": [
+    {
+      "name": "Sharon Gazit",
+      "role": "Founder, Creative Director & co-CEO",
+      "role_type": "founder",
+      "source": "https://pilanimation.com/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "explainers",
     "kids-tv"
@@ -47,7 +61,8 @@
   "sources": [
     "https://pilanimation.com",
     "https://pilanimation.com/he/animated-series-production/",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://pilanimation.com/about/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

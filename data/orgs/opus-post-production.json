@@ -22,6 +22,7 @@
   "founded": 1993,
   "status": "active",
   "website": "https://www.opus-tv.com",
+  "contact_url": "https://www.opus-tv.com/contact",
   "links": {
     "facebook": "https://www.facebook.com/OPUSTLV/",
     "linkedin": "https://www.linkedin.com/company/opus-post-production"
@@ -65,7 +66,8 @@
     "https://www.opus-tv.com/",
     "https://www.opus-tv.com/team",
     "https://thejerusalemfilmfund.com/company/opus-productions-ltd/",
-    "https://www.avid.com/customer-stories/opus"
+    "https://www.avid.com/customer-stories/opus",
+    "https://www.opus-tv.com/contact"
   ],
   "confidence": "high",
   "added": "2026-10-18",

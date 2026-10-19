@@ -13,6 +13,10 @@
   "founded": 1999,
   "status": "active",
   "website": "https://www.fontbit.co.il",
+  "contact_url": "https://fontbit.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
+  "links": {
+    "instagram": "https://www.instagram.com/_fontbit"
+  },
   "services": [
     "retail Hebrew fonts",
     "special projects"
@@ -22,12 +26,29 @@
     "Azmel",
     "HaTzofen"
   ],
+  "key_people": [
+    {
+      "name": "Haim Kaduri",
+      "role": "CEO & Owner",
+      "role_type": "executive",
+      "source": "https://fontbit.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Nadav Ezra",
+      "role": "Type designer & Owner",
+      "role_type": "creative_lead",
+      "source": "https://fontbit.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "hebrew-type"
   ],
   "sources": [
     "https://www.fontbit.co.il",
-    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en"
+    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en",
+    "https://fontbit.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

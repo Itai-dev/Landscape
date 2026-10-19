@@ -16,6 +16,7 @@
   },
   "status": "active",
   "website": "https://www.odedezer.com",
+  "contact_url": "https://www.odedezer.com/contact",
   "services": [
     "custom typefaces",
     "logotypes",
@@ -44,7 +45,8 @@
   ],
   "sources": [
     "https://www.odedezer.com",
-    "https://luc.devroye.org/israel.html"
+    "https://luc.devroye.org/israel.html",
+    "https://www.odedezer.com/contact"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

@@ -22,6 +22,13 @@
   "size": "1-10",
   "status": "active",
   "website": "https://www.ankanimation.com",
+  "contact_url": "https://www.ankanimation.com/contact-us/",
+  "reel_url": "https://www.youtube.com/watch?v=94ljUnlc1tY",
+  "links": {
+    "instagram": "https://www.instagram.com/anka_studio",
+    "linkedin": "https://www.linkedin.com/company/10688377/",
+    "youtube": "https://www.youtube.com/channel/UC_9IV6tTU_M0SfKhCL8Pgxg"
+  },
   "services": [
     "Explainer videos",
     "Product videos",
@@ -50,7 +57,8 @@
   "sources": [
     "https://www.ankanimation.com",
     "https://www.animationisrael.com/copy-of-studios",
-    "https://clutch.co/il/agencies/video-production/animation/tel-aviv"
+    "https://clutch.co/il/agencies/video-production/animation/tel-aviv",
+    "https://www.ankanimation.com/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

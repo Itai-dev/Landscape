@@ -42,9 +42,11 @@
   "sources": [
     "https://www.fontype.co.il",
     "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en",
-    "https://luc.devroye.org/israel.html"
+    "https://luc.devroye.org/israel.html",
+    "https://www.fontype.co.il/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-18",
+  "notes": "As of 2026-10-18 the site carries unrelated spam pages (binary options, pharmacy), suggesting it is unmaintained or compromised."
 }

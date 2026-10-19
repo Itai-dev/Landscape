@@ -17,6 +17,9 @@
   },
   "status": "active",
   "website": "https://muzedesign.com",
+  "contact_url": "https://www.muzedesign.com/contact.html",
+  "careers_url": "https://www.muzedesign.com/careers.html",
+  "reel_url": "https://vimeo.com/259192313",
   "links": {
     "linkedin": "https://www.linkedin.com/company/muze-studio",
     "instagram": "https://www.instagram.com/muze.tlv",
@@ -38,10 +41,28 @@
     "Cipia",
     "BioT"
   ],
+  "key_people": [
+    {
+      "name": "Eyal Talmon",
+      "role": "Co-Founder",
+      "role_type": "founder",
+      "source": "https://www.muzedesign.com/about.html",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Yonatan Cohen",
+      "role": "Co-Founder",
+      "role_type": "founder",
+      "source": "https://www.muzedesign.com/about.html",
+      "as_of": "2026-10-18"
+    }
+  ],
   "sources": [
     "https://muzedesign.com",
     "https://clutch.co/il/agencies/ui-ux",
-    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://www.muzedesign.com/about.html",
+    "https://vimeo.com/259192313"
   ],
   "confidence": "high",
   "added": "2026-10-18",

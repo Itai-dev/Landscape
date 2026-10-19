@@ -19,6 +19,12 @@
   "size": "1-10",
   "status": "active",
   "website": "http://www.mustachestudio.com",
+  "reel_url": "https://www.mustachestudio.com/show-reel",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/mustache-creative-studio/",
+    "behance": "https://www.behance.net/mustache",
+    "instagram": "https://www.instagram.com/studio.mustache/"
+  },
   "services": [
     "Promo videos",
     "Animation",
@@ -39,7 +45,8 @@
   ],
   "sources": [
     "http://www.mustachestudio.com",
-    "https://www.edvido.com/animation-studios/israel"
+    "https://www.edvido.com/animation-studios/israel",
+    "https://www.mustachestudio.com/show-reel"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

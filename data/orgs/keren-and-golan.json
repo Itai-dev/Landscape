@@ -16,6 +16,7 @@
   },
   "status": "active",
   "website": "https://www.01kg.com",
+  "contact_url": "https://www.01kg.com/contact-us/",
   "links": {
     "facebook": "https://www.facebook.com/Keren.and.Golan",
     "instagram": "https://www.instagram.com/keren_and_golan/"
@@ -39,7 +40,8 @@
   ],
   "sources": [
     "https://www.01kg.com",
-    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://www.01kg.com/contact-us/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

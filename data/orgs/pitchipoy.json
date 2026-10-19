@@ -22,6 +22,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://pitchipoy.tv",
+  "contact_url": "https://pitchipoy.tv/about-us/contact/",
+  "links": {
+    "youtube": "https://www.youtube.com/user/pitchipoy",
+    "linkedin": "https://www.linkedin.com/company/pitchi-poy-animation-productions/"
+  },
   "services": [
     "Feature film animation",
     "TV series",
@@ -45,6 +50,13 @@
     {
       "name": "Noam Meshulam",
       "role": "Founder"
+    },
+    {
+      "name": "Ofir Shafir",
+      "role": "Executive Producer & Studio Manager",
+      "role_type": "production",
+      "source": "https://pitchipoy.tv/about-us/",
+      "as_of": "2026-10-18"
     }
   ],
   "tags": [
@@ -57,7 +69,8 @@
     "https://pitchipoy.tv",
     "https://www.awn.com/mag/issue5.06/5.06pages/orenrabbits.php3",
     "https://www.animationisrael.com/copy-of-studios",
-    "https://thejerusalemfilmfund.com/?p=3634"
+    "https://thejerusalemfilmfund.com/?p=3634",
+    "https://pitchipoy.tv/about-us/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

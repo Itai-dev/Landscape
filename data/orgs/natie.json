@@ -17,11 +17,13 @@
   },
   "status": "active",
   "website": "https://www.natie.com",
+  "reel_url": "https://vimeo.com/701249349",
   "links": {
     "linkedin": "https://www.linkedin.com/company/natie",
     "instagram": "https://www.instagram.com/natie_branding_agency",
     "facebook": "https://www.facebook.com/natieagency",
-    "x": "https://twitter.com/natiebranding"
+    "x": "https://twitter.com/natiebranding",
+    "youtube": "https://www.youtube.com/channel/UCeYuis_Iw7h8VaSywM7XGqQ"
   },
   "services": [
     "brand strategy",
@@ -41,6 +43,15 @@
     "The Jewish Agency",
     "Auschwitz Jewish Center Foundation"
   ],
+  "key_people": [
+    {
+      "name": "Eitan Chitayat",
+      "role": "Founder / Creative Director",
+      "role_type": "founder",
+      "source": "https://natie.com/team/eitan/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "startups",
     "nonprofit",
@@ -48,7 +59,9 @@
   ],
   "sources": [
     "https://www.natie.com",
-    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv"
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://natie.com/team/eitan/",
+    "https://vimeo.com/701249349"
   ],
   "confidence": "high",
   "added": "2026-10-18",

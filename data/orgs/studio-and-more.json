@@ -20,11 +20,16 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.nmore.co",
+  "contact_url": "https://nmore.co/contact",
+  "careers_url": "https://nmore.co/careers",
+  "reel_url": "https://vimeo.com/1150386021",
   "links": {
     "linkedin": "https://www.linkedin.com/company/studiomore",
     "instagram": "https://www.instagram.com/studionmore",
     "dribbble": "https://dribbble.com/studionmore",
-    "facebook": "https://www.facebook.com/studionmore"
+    "facebook": "https://www.facebook.com/studionmore",
+    "vimeo": "https://vimeo.com/studionmore",
+    "behance": "https://www.behance.net/studionmore"
   },
   "services": [
     "branding",
@@ -44,7 +49,9 @@
   ],
   "sources": [
     "https://www.nmore.co/",
-    "https://clutch.co/profile/studiomore"
+    "https://clutch.co/profile/studiomore",
+    "https://nmore.co/careers",
+    "https://vimeo.com/1150386021"
   ],
   "confidence": "high",
   "added": "2026-10-18",

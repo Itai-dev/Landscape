@@ -18,6 +18,9 @@
   },
   "status": "active",
   "website": "https://hellodesign.co",
+  "contact_url": "https://www.hellodesign.co/contact-us",
+  "careers_url": "https://www.hellodesign.co/career",
+  "reel_url": "https://www.youtube.com/watch?v=vnImIrkpO2M",
   "links": {
     "linkedin": "https://www.linkedin.com/company/we-are-hello/",
     "instagram": "https://www.instagram.com/we.are.hello/",
@@ -43,6 +46,22 @@
     "Nofar Energy",
     "Pointfive"
   ],
+  "key_people": [
+    {
+      "name": "Shira Porat",
+      "role": "Co-Founder & CEO",
+      "role_type": "founder",
+      "source": "https://www.hellodesign.co/about",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Ohad Shalev",
+      "role": "Co-Founder & Head of Design",
+      "role_type": "creative_lead",
+      "source": "https://www.hellodesign.co/about",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "startups",
     "b2b-tech",
@@ -52,7 +71,9 @@
   "sources": [
     "https://hellodesign.co",
     "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
-    "https://dribbble.com/we_are_hello/about"
+    "https://dribbble.com/we_are_hello/about",
+    "https://www.hellodesign.co/about",
+    "https://www.hellodesign.co/showreel"
   ],
   "confidence": "high",
   "added": "2026-10-18",

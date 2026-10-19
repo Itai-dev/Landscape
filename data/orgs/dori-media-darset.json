@@ -17,6 +17,11 @@
   },
   "status": "active",
   "website": "https://www.dorimedia.com/",
+  "contact_url": "https://dorimedia.com/contact-us/",
+  "links": {
+    "instagram": "https://www.instagram.com/dorimediagroup/",
+    "linkedin": "https://www.linkedin.com/company/dori-media-group/"
+  },
   "notable_work": [
     "Arab Labor (Avoda Aravit)",
     "Shababnikim",
@@ -44,7 +49,8 @@
   ],
   "sources": [
     "https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%A8%D7%99_%D7%9E%D7%93%D7%99%D7%94_%D7%93%D7%A8%D7%A1%D7%98",
-    "https://thetvdb.com/companies/dori-media-darset"
+    "https://thetvdb.com/companies/dori-media-darset",
+    "https://dorimedia.com/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

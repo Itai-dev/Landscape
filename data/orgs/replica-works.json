@@ -18,6 +18,15 @@
   "size": "1-10",
   "status": "active",
   "website": "https://replica.works",
+  "contact_url": "https://www.replica.works/contact",
+  "careers_url": "https://www.replica.works/careers",
+  "reel_url": "https://vimeo.com/1213570819",
+  "links": {
+    "vimeo": "https://vimeo.com/replicaworks",
+    "behance": "https://www.behance.net/replica",
+    "linkedin": "https://www.linkedin.com/company/replica-works/",
+    "instagram": "https://www.instagram.com/replica.works/"
+  },
   "services": [
     "3D visualization",
     "Motion design",
@@ -38,7 +47,10 @@
   ],
   "sources": [
     "https://replica.works",
-    "https://revenuebase.ai/companies/animation-studios/israel"
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://replica.works/",
+    "https://www.replica.works/careers",
+    "https://vimeo.com/1213570819"
   ],
   "confidence": "high",
   "added": "2026-10-18",

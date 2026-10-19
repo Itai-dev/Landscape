@@ -13,6 +13,7 @@
   },
   "status": "active",
   "website": "https://www.koda.co.il/",
+  "contact_url": "https://www.koda.co.il/contact/",
   "notable_work": [
     "Connected (Machuberim)",
     "The Embassy",
@@ -24,6 +25,27 @@
     {
       "name": "Ram Landes",
       "role": "Founder"
+    },
+    {
+      "name": "Anat Winner",
+      "role": "Co-CEO & CFO",
+      "role_type": "executive",
+      "source": "https://www.koda.co.il/our-team/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Limor Abekasis",
+      "role": "Executive Producer",
+      "role_type": "production",
+      "source": "https://www.koda.co.il/our-team/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Lavi Ben Gal",
+      "role": "Director & Head of Content",
+      "role_type": "creative_lead",
+      "source": "https://www.koda.co.il/our-team/",
+      "as_of": "2026-10-18"
     }
   ],
   "relations": [
@@ -41,7 +63,8 @@
   ],
   "sources": [
     "https://www.koda.co.il/",
-    "https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%93%D7%94_%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA"
+    "https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%93%D7%94_%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA",
+    "https://www.koda.co.il/our-team/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

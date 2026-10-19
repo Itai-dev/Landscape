@@ -17,6 +17,9 @@
   "founded": 2000,
   "status": "active",
   "website": "https://www.open.co.il",
+  "contact_url": "https://www.open.co.il/contact-us",
+  "careers_url": "https://www.open.co.il/grow-with-us",
+  "reel_url": "https://www.open.co.il/wp-content/uploads/2021/05/Main_Open_Showreel_2024_60MB.mp4",
   "links": {
     "facebook": "https://www.facebook.com/OPENTBE/",
     "linkedin": "https://www.linkedin.com/company/open---total-brand-experience",
@@ -46,7 +49,9 @@
   ],
   "sources": [
     "https://www.open.co.il",
-    "https://alefalefalef.co.il/en/?p=7304"
+    "https://alefalefalef.co.il/en/?p=7304",
+    "https://www.open.co.il/",
+    "https://www.open.co.il/grow-with-us"
   ],
   "confidence": "high",
   "added": "2026-10-18",

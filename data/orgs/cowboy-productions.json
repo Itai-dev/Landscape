@@ -17,6 +17,12 @@
   "size": "1-10",
   "status": "active",
   "website": "https://thecowboy.co.il",
+  "contact_url": "https://thecowboy.co.il/contact",
+  "links": {
+    "youtube": "https://www.youtube.com/@the_cowboy",
+    "instagram": "https://www.instagram.com/anicowboy/",
+    "linkedin": "https://www.linkedin.com/company/thecowboy"
+  },
   "services": [
     "2D/3D explainer videos",
     "Brand videos",
@@ -35,6 +41,15 @@
     "Skechers Israel",
     "Israel Ministry of Health"
   ],
+  "key_people": [
+    {
+      "name": "Avi Graiver",
+      "role": "Founder & Creative Director",
+      "role_type": "founder",
+      "source": "https://thecowboy.co.il/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "explainers",
     "pitch-videos",
@@ -43,7 +58,8 @@
   "sources": [
     "https://thecowboy.co.il",
     "https://www.animationisrael.com/copy-of-studios",
-    "https://revenuebase.ai/companies/animation-studios/israel"
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://thecowboy.co.il/about/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

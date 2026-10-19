@@ -12,6 +12,12 @@
   "size": "1-10",
   "status": "active",
   "website": "https://nuamotion.com",
+  "contact_url": "https://www.nuamotion.com/contact",
+  "links": {
+    "vimeo": "https://vimeo.com/nuamotion",
+    "linkedin": "https://www.linkedin.com/company/nua-motion/",
+    "behance": "https://www.behance.net/nuamotion"
+  },
   "services": [
     "Motion design",
     "Brand videos",
@@ -36,7 +42,8 @@
   ],
   "sources": [
     "https://nuamotion.com",
-    "https://laserbee.video"
+    "https://laserbee.video",
+    "https://nuamotion.com/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

@@ -24,6 +24,12 @@
   "size": "11-50",
   "status": "active",
   "website": "https://thehivepro.com",
+  "reel_url": "https://www.youtube.com/watch?v=muVpRJlkNk8",
+  "links": {
+    "vimeo": "https://vimeo.com/thehivepro",
+    "instagram": "https://www.instagram.com/thehivepro/",
+    "linkedin": "https://www.linkedin.com/company/thehivestudio/"
+  },
   "services": [
     "Content development",
     "Pre-production",
@@ -55,6 +61,13 @@
     {
       "name": "Hadas Gicelter",
       "role": "Head of Marketing and Distribution"
+    },
+    {
+      "name": "Avishai Simchovitch",
+      "role": "Line Producer",
+      "role_type": "production",
+      "source": "https://thehivepro.com/about/",
+      "as_of": "2026-10-18"
     }
   ],
   "tags": [
@@ -66,7 +79,8 @@
   "sources": [
     "https://thehivepro.com/about/",
     "https://en.wikipedia.org/wiki/The_Hive_(animation_studio)",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://www.youtube.com/watch?v=muVpRJlkNk8"
   ],
   "confidence": "high",
   "added": "2026-10-18",

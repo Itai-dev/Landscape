@@ -17,6 +17,7 @@
   "size": "1-10",
   "status": "active",
   "website": "https://entasis.co.il",
+  "contact_url": "https://entasis.co.il/en/contact",
   "links": {
     "linkedin": "https://www.linkedin.com/company/entasis-visualization"
   },
@@ -32,7 +33,8 @@
   ],
   "sources": [
     "https://entasis.co.il",
-    "https://www.linkedin.com/company/entasis-visualization"
+    "https://www.linkedin.com/company/entasis-visualization",
+    "https://entasis.co.il/en/contact"
   ],
   "confidence": "high",
   "added": "2026-10-18",

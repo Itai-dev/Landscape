@@ -22,6 +22,11 @@
   "size": "1-10",
   "status": "active",
   "website": "https://blue-monkeys.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/blue-monkeys-productions",
+    "instagram": "https://www.instagram.com/bluemonkeys_productions",
+    "youtube": "https://www.youtube.com/@BlueMonkeysPro"
+  },
   "services": [
     "Brand and product videos",
     "2D/3D animation",
@@ -47,7 +52,8 @@
   ],
   "sources": [
     "https://blue-monkeys.com",
-    "https://clutch.co/il/agencies/video-production/animation/tel-aviv"
+    "https://clutch.co/il/agencies/video-production/animation/tel-aviv",
+    "https://blue-monkeys.com/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

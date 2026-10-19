@@ -18,6 +18,8 @@
   "size": "11-50",
   "status": "active",
   "website": "https://videohead.co.il",
+  "contact_url": "https://videohead.co.il/contact/",
+  "reel_url": "https://www.youtube.com/watch?v=9wwi_7CvrpU",
   "services": [
     "Corporate promo films",
     "2D and typographic animation",
@@ -51,7 +53,9 @@
   ],
   "sources": [
     "https://videohead.co.il",
-    "https://revenuebase.ai/companies/animation-studios/israel"
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://videohead.co.il/",
+    "https://www.youtube.com/watch?v=9wwi_7CvrpU"
   ],
   "confidence": "high",
   "added": "2026-10-18",

@@ -15,6 +15,14 @@
   "size": "1-10",
   "status": "active",
   "website": "https://wayy.studio",
+  "reel_url": "https://vimeo.com/1041484055",
+  "links": {
+    "vimeo": "https://vimeo.com/wayystudio",
+    "behance": "https://www.behance.net/wayystudio",
+    "linkedin": "https://www.linkedin.com/company/wayy-studio",
+    "instagram": "https://www.instagram.com/wayy.studio",
+    "youtube": "https://www.youtube.com/@WayyStudio"
+  },
   "services": [
     "Branding",
     "Brand and product videos",
@@ -31,6 +39,29 @@
     "Forter",
     "Placer.ai"
   ],
+  "key_people": [
+    {
+      "name": "Yuval Leizerman",
+      "role": "Founder & CEO",
+      "role_type": "founder",
+      "source": "https://www.wayy.studio/about",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Avi Inbar",
+      "role": "Creative Director",
+      "role_type": "creative_lead",
+      "source": "https://www.wayy.studio/about",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Oded Abulafia",
+      "role": "Brand Director",
+      "role_type": "creative_lead",
+      "source": "https://www.wayy.studio/about",
+      "as_of": "2026-10-18"
+    }
+  ],
   "relations": [
     {
       "type": "spun_off_from",
@@ -46,7 +77,9 @@
   "sources": [
     "https://wayy.studio",
     "https://laserbee.video",
-    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv"
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv",
+    "https://www.wayy.studio/about",
+    "https://vimeo.com/1041484055"
   ],
   "confidence": "high",
   "added": "2026-10-18",

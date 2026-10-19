@@ -21,6 +21,22 @@
   "notable_work": [
     "Memory Forest (youth series)"
   ],
+  "key_people": [
+    {
+      "name": "Zafrir Kochanovsky",
+      "role": "Founder, Producer & CEO",
+      "role_type": "founder",
+      "source": "https://www.ttv.co.il/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Miri Ezra",
+      "role": "Head of Productions",
+      "role_type": "production",
+      "source": "https://www.ttv.co.il/",
+      "as_of": "2026-10-18"
+    }
+  ],
   "tags": [
     "tv-production",
     "drama",

@@ -13,6 +13,7 @@
   "founded": 2015,
   "status": "active",
   "website": "https://www.ndg-studios.com/",
+  "contact_url": "https://www.ndg-studios.com/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8/",
   "services": [
     "Dubbing",
     "Narration",
@@ -27,6 +28,13 @@
     {
       "name": "Ofir Kalfner",
       "role": "Founder"
+    },
+    {
+      "name": "Ori Fuchs",
+      "role": "VP of Operations",
+      "role_type": "executive",
+      "source": "https://www.ndg-studios.com/%D7%9E%D7%99-%D7%90%D7%A0%D7%97%D7%A0%D7%95/",
+      "as_of": "2026-10-18"
     }
   ],
   "tags": [
@@ -37,9 +45,11 @@
   ],
   "sources": [
     "https://www.ndg-studios.com/",
-    "https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%91%D7%95%D7%91_%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C"
+    "https://he.wikipedia.org/wiki/%D7%93%D7%99%D7%91%D7%95%D7%91_%D7%91%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
+    "https://www.ndg-studios.com/%D7%9E%D7%99-%D7%90%D7%A0%D7%97%D7%A0%D7%95/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18"
+  "last_verified": "2026-10-18",
+  "notes": "Team page spells the CEO's name 'Offir Klefner'."
 }

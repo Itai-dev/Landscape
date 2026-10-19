@@ -16,6 +16,9 @@
   },
   "status": "active",
   "website": "https://hybrid.co.il",
+  "contact_url": "https://hybrid.co.il/contact/",
+  "careers_url": "https://hybrid.co.il/careers/",
+  "reel_url": "https://vimeo.com/965720493",
   "links": {
     "instagram": "https://www.instagram.com/hybrid_partners",
     "linkedin": "https://www.linkedin.com/company/hybridfuture"
@@ -31,7 +34,9 @@
   ],
   "sources": [
     "https://hybrid.co.il",
-    "https://www.awwwards.com/directory/Israel/"
+    "https://www.awwwards.com/directory/Israel/",
+    "https://hybrid.co.il/",
+    "https://hybrid.co.il/careers/"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

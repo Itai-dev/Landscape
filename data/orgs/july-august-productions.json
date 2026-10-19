@@ -25,6 +25,13 @@
     {
       "name": "Yochanan Kredo",
       "role": "Head of Features and Drama Division"
+    },
+    {
+      "name": "Idit Mistriel",
+      "role": "Chief Producer, Format Division",
+      "role_type": "production",
+      "source": "https://www.july-august.com/",
+      "as_of": "2026-10-18"
     }
   ],
   "relations": [

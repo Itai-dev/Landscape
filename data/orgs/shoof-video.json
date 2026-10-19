@@ -20,6 +20,7 @@
   "size": "1-10",
   "status": "active",
   "website": "https://www.shoofvideo.co.il",
+  "reel_url": "https://www.youtube.com/watch?v=3pKKMU_InFw",
   "services": [
     "Scriptwriting",
     "2D/3D animation",
@@ -41,7 +42,9 @@
   ],
   "sources": [
     "https://www.shoofvideo.co.il",
-    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv"
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv",
+    "https://www.shoofvideo.co.il/",
+    "https://www.youtube.com/watch?v=3pKKMU_InFw"
   ],
   "confidence": "high",
   "added": "2026-10-18",

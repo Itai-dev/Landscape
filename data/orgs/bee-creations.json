@@ -19,6 +19,7 @@
   "founded": 2003,
   "status": "active",
   "website": "https://www.bee-creations.com",
+  "contact_url": "https://www.bee-creations.com/contact/",
   "links": {
     "instagram": "https://www.instagram.com/beecreations",
     "facebook": "https://www.facebook.com/beecreations"
@@ -49,7 +50,8 @@
   "sources": [
     "https://www.bee-creations.com",
     "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
-    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en"
+    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en",
+    "https://www.bee-creations.com/about/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

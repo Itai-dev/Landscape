@@ -19,6 +19,7 @@
   "size": "11-50",
   "status": "active",
   "website": "https://visual3d.co.il",
+  "reel_url": "https://www.visual3d.co.il/show-real",
   "services": [
     "3D product films",
     "Corporate videos",
@@ -38,7 +39,8 @@
   ],
   "sources": [
     "https://visual3d.co.il",
-    "https://revenuebase.ai/companies/post-production-companies/israel"
+    "https://revenuebase.ai/companies/post-production-companies/israel",
+    "https://www.visual3d.co.il/show-real"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

@@ -12,11 +12,13 @@
   "founded": 2008,
   "status": "active",
   "website": "https://www.gumfilms.com/",
+  "contact_url": "https://www.gumfilms.com/contact",
   "links": {
     "instagram": "https://www.instagram.com/gumfilms/",
     "linkedin": "https://www.linkedin.com/company/gum-films/",
     "vimeo": "https://vimeo.com/gumfilms",
-    "facebook": "https://www.facebook.com/GumFilms/"
+    "facebook": "https://www.facebook.com/GumFilms/",
+    "youtube": "https://www.youtube.com/channel/UCfR3We5VFEE9pZPv2pr8fUQ"
   },
   "notable_work": [
     "Tell Me Everything (TV series, 2024)",

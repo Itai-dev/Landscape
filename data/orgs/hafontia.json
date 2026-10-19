@@ -17,6 +17,7 @@
   },
   "status": "active",
   "website": "https://www.hafontia.com",
+  "contact_url": "https://hafontia.com/contact/",
   "links": {
     "instagram": "https://www.instagram.com/hafontia",
     "myfonts": "https://www.myfonts.com/collections/hafontia/"
@@ -51,7 +52,8 @@
   "sources": [
     "https://www.hafontia.com",
     "https://type-01.com/tactility-and-contrast-with-ben-nathan-of-hafontia/",
-    "https://luc.devroye.org/israel.html"
+    "https://luc.devroye.org/israel.html",
+    "https://hafontia.com/contact/"
   ],
   "confidence": "high",
   "added": "2026-10-18",

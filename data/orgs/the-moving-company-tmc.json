@@ -15,6 +15,13 @@
   "size": "1-10",
   "status": "active",
   "website": "https://tmc.studio",
+  "contact_url": "https://tmc.studio/contact/",
+  "reel_url": "https://vimeo.com/1137663727",
+  "links": {
+    "vimeo": "https://vimeo.com/user108546517",
+    "instagram": "https://www.instagram.com/tmc_animation/",
+    "youtube": "https://www.youtube.com/channel/UCoIHe7Wnfk6wCr62QDBvk0Q"
+  },
   "services": [
     "2D animation",
     "Educational and explainer videos"
@@ -32,7 +39,9 @@
   ],
   "sources": [
     "https://tmc.studio",
-    "https://www.animationisrael.com/copy-of-studios"
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://tmc.studio/",
+    "https://vimeo.com/1137663727"
   ],
   "confidence": "medium",
   "added": "2026-10-18",

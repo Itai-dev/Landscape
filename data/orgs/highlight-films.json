@@ -18,6 +18,13 @@
   "founded": 1998,
   "status": "active",
   "website": "https://www.highlight.co.il/",
+  "contact_url": "https://highlight.co.il/contact/",
+  "reel_url": "https://www.youtube.com/watch?v=6YrOo1rJDr4",
+  "links": {
+    "instagram": "https://www.instagram.com/highlightfilmsisrael/",
+    "linkedin": "https://www.linkedin.com/company/highlight-films",
+    "youtube": "https://www.youtube.com/user/HighlightFilmsIsrael"
+  },
   "services": [
     "Production services / fixing for foreign crews",
     "TV commercials",
@@ -41,10 +48,11 @@
     "https://www.highlight.co.il/production-services-in-tel-aviv",
     "https://productionparadise.com/member/tel_aviv/highlight-films.html",
     "https://www.sortlist.us/agency/highlight-films",
-    "https://www.thelocationguide.com/israel/production-services"
+    "https://www.thelocationguide.com/israel/production-services",
+    "https://highlight.co.il/"
   ],
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Location Guide lists the company under Bnei Brak; own site emphasises Tel Aviv."
+  "notes": "Location Guide lists the company under Bnei Brak; own site emphasises Tel Aviv. www.highlight.co.il served a bot-check on 2026-10-18; https://highlight.co.il/ loads normally."
 }

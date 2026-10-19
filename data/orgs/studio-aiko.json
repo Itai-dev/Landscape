@@ -20,6 +20,8 @@
   "size": "1-10",
   "status": "active",
   "website": "https://studio-aiko.com",
+  "contact_url": "https://www.studio-aiko.com/contact",
+  "reel_url": "https://www.studio-aiko.com/demoreel",
   "links": {
     "linkedin": "https://www.linkedin.com/company/studio-aiko",
     "facebook": "https://www.facebook.com/Studio.Aiko.3D/",
@@ -58,7 +60,8 @@
     "https://studio-aiko.com",
     "https://revenuebase.ai/companies/animation-studios/israel",
     "https://www.ani-mator.com/israeli_animated_films/",
-    "https://www.linkedin.com/company/studio-aiko"
+    "https://www.linkedin.com/company/studio-aiko",
+    "https://www.studio-aiko.com/demoreel"
   ],
   "confidence": "high",
   "added": "2026-10-18",

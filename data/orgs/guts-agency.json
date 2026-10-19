@@ -16,6 +16,8 @@
   },
   "status": "active",
   "website": "https://guts.agency",
+  "contact_url": "https://guts.agency/contact",
+  "reel_url": "https://vimeo.com/765443684",
   "links": {
     "facebook": "https://www.facebook.com/guts.agency/",
     "instagram": "https://www.instagram.com/guts_agency/",
@@ -34,7 +36,9 @@
   ],
   "sources": [
     "https://guts.agency",
-    "https://www.awwwards.com/directory/Israel/"
+    "https://www.awwwards.com/directory/Israel/",
+    "https://guts.agency/",
+    "https://vimeo.com/765443684"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
