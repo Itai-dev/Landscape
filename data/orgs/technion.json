@@ -1,0 +1,46 @@
+{
+  "id": "technion",
+  "name": "Technion - Israel Institute of Technology",
+  "name_he": "הטכניון - מכון טכנולוגי לישראל",
+  "aka": [
+    "Technion"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "education"
+  ],
+  "description": "Israel's oldest university, a public technical research university in Haifa (established 1912, classes from 1924), with marketing, external-relations and resource-development units.",
+  "location": {
+    "country": "IL",
+    "city": "Haifa"
+  },
+  "founded": 1912,
+  "status": "active",
+  "website": "https://www.technion.ac.il",
+  "careers_url": "https://hr.technion.ac.il/positions/",
+  "links": {
+    "linkedin": "https://il.linkedin.com/school/technion/",
+    "youtube": "https://www.youtube.com/user/Technion"
+  },
+  "client_profile": {
+    "industry": "higher education",
+    "creative_needs": [
+      "student recruitment campaigns",
+      "research explainer video",
+      "animation explainers",
+      "fundraising films"
+    ]
+  },
+  "tags": [
+    "higher-education"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Technion_%E2%80%93_Israel_Institute_of_Technology",
+    "https://www.technion.ac.il/en/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Ad agency and tender route not verified."
+}

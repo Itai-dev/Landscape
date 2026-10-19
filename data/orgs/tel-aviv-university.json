@@ -1,0 +1,69 @@
+{
+  "id": "tel-aviv-university",
+  "name": "Tel Aviv University",
+  "name_he": "אוניברסיטת תל אביב",
+  "aka": [
+    "TAU"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "education"
+  ],
+  "description": "Israel's largest public research university (founded 1956, ~30,000 students). Tenders its advertising: Zarmon DDB held the digital budget 2012-15 (NIS 1.5M in 2014) before a five-year digital tender in 2015; publishes tenders at tenders.tau.ac.il.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1956,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.tau.ac.il",
+  "contact_url": "https://www.tau.ac.il/how-to-reach-us",
+  "careers_url": "https://www.tau.ac.il/positions?qt-jobs_tabs=0#qt-jobs_tabs",
+  "links": {
+    "linkedin": "https://www.linkedin.com/school/3154",
+    "youtube": "https://www.youtube.com/user/TAUVOD"
+  },
+  "client_profile": {
+    "industry": "higher education",
+    "creative_needs": [
+      "student recruitment campaigns",
+      "digital campaigns",
+      "research explainer video",
+      "branding"
+    ],
+    "known_agencies": [
+      "Zarmon DDB (digital, 2012-15)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "Zarmon DDB",
+      "note": "Digital budget 2012-2015"
+    },
+    {
+      "type": "agency",
+      "target": "no-no-no-no-no-yes",
+      "note": "'The Cyber Horse' for the TAU Blavatnik Cyber Center (2016)"
+    },
+    {
+      "type": "agency",
+      "target": "connect-digital",
+      "note": "Listed as a client by CONNECT"
+    }
+  ],
+  "tags": [
+    "publishes-tenders"
+  ],
+  "sources": [
+    "https://www.bizportal.co.il/advertismentandmarketing/news/article/412025",
+    "http://tenders.tau.ac.il/",
+    "https://en.wikipedia.org/wiki/Tel_Aviv_University"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Size band inferred from student and staff numbers (Wikipedia). Winner of the 2015 digital tender not verified."
+}

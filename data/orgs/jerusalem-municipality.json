@@ -1,0 +1,51 @@
+{
+  "id": "jerusalem-municipality",
+  "name": "Jerusalem Municipality",
+  "name_he": "עיריית ירושלים",
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Municipality of Israel's largest city. Buys advertising across general, Haredi/religious and Arab sectors through public tenders; its 2014 tender (est. ~NIS 4M) required branding, website and digital-campaign experience and a first ad draft within 12 hours of a brief.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "status": "active",
+  "website": "https://www.jerusalem.muni.il",
+  "client_profile": {
+    "industry": "municipal government / city marketing",
+    "creative_needs": [
+      "public campaigns",
+      "multi-sector print and digital campaigns",
+      "branding",
+      "event campaigns"
+    ],
+    "known_agencies": [
+      "Inbar Merhav G, OPEN, Bolt Interactive, THE BOX and others (worked for the city before the 2014 tender)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "havas-tel-aviv",
+      "note": "Inbar Merhav G named among the city's past agencies (Bizportal, Nov 2014)"
+    },
+    {
+      "type": "agency",
+      "target": "open-total-brand-experience",
+      "note": "OPEN named among the city's past agencies (Bizportal, Nov 2014)"
+    }
+  ],
+  "tags": [
+    "municipal-tenders"
+  ],
+  "sources": [
+    "https://www.bizportal.co.il/advertismentandmarketing/news/article/396301",
+    "https://en.wikipedia.org/wiki/Jerusalem"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Winner of the 2014 tender and current agency not verified. Official site blocks automated access (403)."
+}

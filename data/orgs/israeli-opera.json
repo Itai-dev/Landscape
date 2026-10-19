@@ -1,0 +1,52 @@
+{
+  "id": "israeli-opera",
+  "name": "The Israeli Opera",
+  "name_he": "האופרה הישראלית",
+  "aka": [
+    "New Israeli Opera"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Israel's principal opera company, founded in 1985 and based at the Tel Aviv Performing Arts Center since 1994; also stages large outdoor productions (Israeli Opera Festival, Masada).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1985,
+  "status": "active",
+  "website": "https://www.israel-opera.co.il",
+  "contact_url": "https://www.israel-opera.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+  "links": {
+    "instagram": "https://www.instagram.com/israelopera/",
+    "facebook": "https://www.facebook.com/israeliopera",
+    "youtube": "https://www.youtube.com/user/IsraeliOpera"
+  },
+  "client_profile": {
+    "industry": "opera / culture",
+    "creative_needs": [
+      "branding",
+      "season campaigns",
+      "promo video",
+      "festival campaigns"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "firma",
+      "note": "Listed as a client by branding studio Firma"
+    }
+  ],
+  "tags": [
+    "culture"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israeli_Opera",
+    "https://www.firmabrands.com"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

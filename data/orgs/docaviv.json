@@ -1,0 +1,47 @@
+{
+  "id": "docaviv",
+  "name": "Docaviv - Tel Aviv International Documentary Film Festival",
+  "name_he": "דוקאביב",
+  "aka": [
+    "Docaviv"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "festival-event"
+  ],
+  "description": "Israel's only festival dedicated to documentary film and the largest film festival in Tel Aviv, run by a non-profit founded in 1998; also holds a five-day offshoot, Docaviv Galilee, in Ma'alot-Tarshiha.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1998,
+  "status": "active",
+  "website": "https://www.docaviv.co.il",
+  "contact_url": "https://www.docaviv.co.il/contact-us/",
+  "links": {
+    "instagram": "https://instagram.com/docaviv",
+    "facebook": "https://www.facebook.com/docaviv"
+  },
+  "client_profile": {
+    "industry": "film festival / culture",
+    "creative_needs": [
+      "festival trailer",
+      "festival identity / key art",
+      "event video",
+      "social video"
+    ]
+  },
+  "tags": [
+    "culture",
+    "film-festival",
+    "documentary"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Docaviv",
+    "https://www.docaviv.co.il/contact-us/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19"
+}

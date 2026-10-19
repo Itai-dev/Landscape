@@ -1,0 +1,67 @@
+{
+  "id": "israel-cancer-association",
+  "name": "Israel Cancer Association",
+  "name_he": "האגודה למלחמה בסרטן",
+  "aka": [
+    "ICA"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "health-pharma"
+  ],
+  "description": "Israeli non-profit for cancer prevention, research and patient support. Runs national awareness campaigns, e.g. colorectal-cancer screening campaigns with the Ministry of Health, created pro bono by Gitam BBDO (March 2024).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.cancer.org.il",
+  "contact_url": "https://www.cancer.org.il/contact/",
+  "links": {
+    "youtube": "https://www.youtube.com/user/cancerisrael"
+  },
+  "key_people": [
+    {
+      "name": "Moshe Bar Haim",
+      "role": "CEO",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1003602",
+      "as_of": "2024-03-06"
+    }
+  ],
+  "client_profile": {
+    "industry": "NGO / health",
+    "creative_needs": [
+      "awareness campaigns",
+      "TV spots",
+      "social video",
+      "radio spots"
+    ],
+    "known_agencies": [
+      "Gitam BBDO (pro bono)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "gitam-bbdo",
+      "note": "Pro bono colorectal-cancer screening campaign, Mar 2024"
+    },
+    {
+      "type": "partner",
+      "target": "israel-ministry-of-health"
+    }
+  ],
+  "tags": [
+    "ngo",
+    "pro-bono"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1003602",
+    "https://www.cancer.org.il/contact/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Founding year and HQ city not verified."
+}

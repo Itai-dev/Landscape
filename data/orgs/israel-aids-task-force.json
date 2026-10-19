@@ -1,0 +1,49 @@
+{
+  "id": "israel-aids-task-force",
+  "name": "Israel AIDS Task Force",
+  "name_he": "הוועד למלחמה באיידס",
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "health-pharma"
+  ],
+  "description": "Israeli non-profit fighting HIV/AIDS and HIV stigma. In January 2022 it ran an anti-stigma video campaign with GSK and the Living with HIV organisation, created by the Dibur agency and directed by Rachel Bar Or.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.aidsisrael.org.il",
+  "client_profile": {
+    "industry": "NGO / health",
+    "creative_needs": [
+      "awareness campaigns",
+      "social video",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "Dibur (2022)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "Dibur",
+      "note": "HIV-stigma campaign, Jan 2022"
+    },
+    {
+      "type": "partner",
+      "target": "GSK"
+    }
+  ],
+  "tags": [
+    "ngo"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/840259",
+    "https://www.aidsisrael.org.il"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "English name as commonly used; not confirmed on the Hebrew-only homepage."
+}

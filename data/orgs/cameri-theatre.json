@@ -1,0 +1,48 @@
+{
+  "id": "cameri-theatre",
+  "name": "Cameri Theatre",
+  "name_he": "התיאטרון הקאמרי",
+  "aka": [
+    "Cameri"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "One of Israel's leading theatres, established in 1944 in Tel Aviv and housed at the Tel Aviv Performing Arts Center; Israel Prize laureate.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1944,
+  "status": "active",
+  "website": "https://www.cameri.co.il",
+  "contact_url": "https://www.cameri.co.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa_%d7%a7%d7%a9%d7%a8/",
+  "careers_url": "https://www.cameri.co.il/%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d/",
+  "links": {
+    "instagram": "https://www.instagram.com/cameritheatre",
+    "facebook": "https://www.facebook.com/Cameri.Theatre",
+    "youtube": "https://www.youtube.com/channel/UC7TZcBE63ESyvpCokT2Q26Q"
+  },
+  "client_profile": {
+    "industry": "theatre / culture",
+    "creative_needs": [
+      "season campaigns",
+      "show posters and key art",
+      "promo video",
+      "social video",
+      "photography"
+    ]
+  },
+  "tags": [
+    "culture"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cameri_Theatre",
+    "https://www.cameri.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Agency roster not verified."
+}

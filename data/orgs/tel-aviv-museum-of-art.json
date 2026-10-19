@@ -1,0 +1,43 @@
+{
+  "id": "tel-aviv-museum-of-art",
+  "name": "Tel Aviv Museum of Art",
+  "name_he": "מוזיאון תל אביב לאמנות",
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Modern and contemporary art museum founded in 1932, focusing on Israeli art alongside international work; campus includes the Paulson Family Foundation Building, the Herta and Paul Amir Building (2011) and the Eyal Ofer Pavilion (reopened 2023). Publishes tenders and calls on its site.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1932,
+  "status": "active",
+  "website": "https://www.tamuseum.org.il",
+  "contact_url": "https://www.tamuseum.org.il/he/about/contact/",
+  "links": {
+    "instagram": "https://www.instagram.com/telavivmuseumofart/",
+    "facebook": "https://www.facebook.com/tamuseum/"
+  },
+  "client_profile": {
+    "industry": "museum / culture",
+    "creative_needs": [
+      "exhibition campaigns",
+      "graphic design",
+      "video content",
+      "photography"
+    ]
+  },
+  "tags": [
+    "culture",
+    "publishes-tenders"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Tel_Aviv_Museum_of_Art",
+    "https://www.tamuseum.org.il/he/publications-and-documents/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Tenders page currently lists construction tenders; no creative-services tender seen."
+}

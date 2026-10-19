@@ -1,0 +1,45 @@
+{
+  "id": "tel-aviv-cinematheque",
+  "name": "Tel Aviv Cinematheque",
+  "name_he": "סינמטק תל אביב",
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "festival-event"
+  ],
+  "description": "Cinematheque and film archive opened in Tel Aviv in 1973 (HaArba'a St.), screening repertory and new cinema and hosting festivals and pitching events, including a call for pitches at its Pride film festival.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1973,
+  "status": "active",
+  "website": "https://www.cinema.co.il",
+  "contact_url": "https://www.cinema.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+  "careers_url": "https://www.cinema.co.il/%d7%a7%d7%95%d7%9c-%d7%a7%d7%95%d7%a8%d7%90-%d7%9e%d7%a8%d7%9b%d7%96%d7%99%d7%9d-%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d/",
+  "links": {
+    "instagram": "https://www.instagram.com/cinematheque.tlv",
+    "facebook": "https://www.facebook.com/telaviv.cinematheque/"
+  },
+  "client_profile": {
+    "industry": "cinema / culture",
+    "creative_needs": [
+      "festival trailer",
+      "event campaigns",
+      "graphic design",
+      "social video"
+    ]
+  },
+  "tags": [
+    "culture",
+    "film-festival"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Tel_Aviv_Cinematheque",
+    "https://www.cinema.co.il/%d7%a7%d7%95%d7%9c-%d7%a7%d7%95%d7%a8%d7%90-%d7%9e%d7%a8%d7%9b%d7%96%d7%99%d7%9d-%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Publishes calls, tenders and jobs on one page; no creative-services tender listed at time of check."
+}

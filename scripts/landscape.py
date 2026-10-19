@@ -66,6 +66,11 @@ def norm_name(name: str) -> str:
     return n
 
 
+# hosts shared by many unrelated orgs: never treat a match on these as "same org"
+SHARED_HOSTS = {"facebook.com", "instagram.com", "linkedin.com", "il.linkedin.com", "behance.net", "vimeo.com",
+                "youtube.com", "linktr.ee", "gov.il", "wixsite.com", "wordpress.com", "sites.google.com"}
+
+
 def ordered(rec: dict) -> dict:
     out = {k: rec[k] for k in FIELD_ORDER if k in rec}
     return out
@@ -176,7 +181,7 @@ def find_match(rec: dict, orgs: dict[str, dict]) -> str | None:
     d = domain(rec.get("website"))
     n = norm_name(rec["name"])
     for oid, o in orgs.items():
-        if d and d == domain(o.get("website")) and d not in {"facebook.com", "instagram.com", "linkedin.com", "behance.net", "vimeo.com"}:
+        if d and d == domain(o.get("website")) and d not in SHARED_HOSTS:
             return oid
         if (n and n == norm_name(o["name"]) and o.get("kind") == rec.get("kind")
                 and o.get("location", {}).get("country") == rec.get("location", {}).get("country")):
@@ -193,7 +198,7 @@ def cmd_validate(_args) -> int:
     for oid, rec in orgs.items():
         errs = errors_for(rec, oid)
         d = domain(rec.get("website"))
-        if d and d in domains and d not in {"facebook.com", "instagram.com", "linkedin.com"}:
+        if d and d in domains and d not in SHARED_HOSTS:
             errs.append(f"same website as '{domains[d]}' (possible duplicate)")
         elif d:
             domains[d] = oid

@@ -1,0 +1,50 @@
+{
+  "id": "reichman-university",
+  "name": "Reichman University",
+  "name_he": "אוניברסיטת רייכמן",
+  "aka": [
+    "IDC Herzliya",
+    "Interdisciplinary Center Herzliya"
+  ],
+  "kind": "client",
+  "categories": [
+    "education"
+  ],
+  "description": "Israel's first private university, in Herzliya; founded in 1994 as the Interdisciplinary Center (IDC) Herzliya and recognised and renamed as a university in 2021. Markets heavily to Israeli and international students across social channels.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 1994,
+  "status": "active",
+  "website": "https://www.runi.ac.il",
+  "contact_url": "https://www.runi.ac.il/admissions/undergraduate/contact-us",
+  "careers_url": "https://www.runi.ac.il/about/jobs",
+  "links": {
+    "linkedin": "https://il.linkedin.com/school/reichman-university-idc-herzliya/",
+    "instagram": "https://www.instagram.com/reichmanuni/",
+    "facebook": "https://www.facebook.com/ReichmanUniversity/",
+    "youtube": "https://www.youtube.com/channel/UC0WxnDw45QL8MVDCgEgwYjw",
+    "tiktok": "https://www.tiktok.com/@reichmanuniversity"
+  },
+  "client_profile": {
+    "industry": "higher education",
+    "creative_needs": [
+      "student recruitment campaigns",
+      "social video",
+      "digital campaigns",
+      "branding"
+    ]
+  },
+  "tags": [
+    "private-university"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Reichman_University",
+    "https://www.runi.ac.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Studio/agency behind the 2021 rebrand not found. Being private, it is not bound by public-tender rules."
+}

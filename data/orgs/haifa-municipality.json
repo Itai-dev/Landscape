@@ -1,0 +1,43 @@
+{
+  "id": "haifa-municipality",
+  "name": "Haifa Municipality",
+  "name_he": "עיריית חיפה",
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Municipality of Israel's third-largest city and northern hub (pop. ~297,000 in 2024). Commissions city branding and campaign work; listed as a client by Haifa design studio NFH (NotFromHere).",
+  "location": {
+    "country": "IL",
+    "city": "Haifa"
+  },
+  "status": "active",
+  "website": "https://www.haifa.muni.il",
+  "client_profile": {
+    "industry": "municipal government / city marketing",
+    "creative_needs": [
+      "public campaigns",
+      "branding",
+      "graphic design",
+      "event campaigns"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "notfromhere",
+      "note": "Listed as a client by NFH (NotFromHere)"
+    }
+  ],
+  "tags": [
+    "municipal-tenders"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Haifa",
+    "https://notfromhere.net/en/"
+  ],
+  "confidence": "low",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No public report of its current ad agency or advertising tender found. Official site blocks automated access."
+}
