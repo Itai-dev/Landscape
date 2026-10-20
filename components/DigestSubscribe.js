@@ -3,13 +3,14 @@ import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { useUser } from "@/components/useUser";
 import { CRAFTS, CONSENT_TEXT } from "@/lib/taxonomy";
+import { callbackUrl } from "@/lib/authLink";
+import { firstSendLabel } from "@/lib/digestSchedule";
 
 const FREQS = [
   { slug: "weekly", he: "כל שבוע" },
   { slug: "biweekly", he: "כל שבועיים" },
   { slug: "monthly", he: "פעם בחודש" },
 ];
-export const PENDING_KEY = "landscape-digest-pending";
 
 function Chips({ options, value, onChange, name }) {
   const toggle = (slug) => onChange(value.includes(slug) ? value.filter((v) => v !== slug) : [...value, slug]);
@@ -25,8 +26,11 @@ function Chips({ options, value, onChange, name }) {
   );
 }
 
+const label = (slugs) => slugs.map((s) => CRAFTS.find((c) => c.slug === s)?.he || s).join(", ");
+
 // Email-only sign-up for the digest. The consent box starts unchecked (anti-spam law §30A): nothing is sent
-// without it. New readers confirm through the magic link; signed-in readers save straight away.
+// without it, and nothing is sent until the address is confirmed by opening the link in the email.
+// Signed-in readers (already confirmed) save straight away.
 export default function DigestSubscribe({ crafts: initialCrafts = [], compact = false, id = "subscribe" }) {
   const { supabase, configured } = useSupabase();
   const user = useUser();
@@ -45,19 +49,17 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים עליו באותו דפדפן, והגיליון הראשון יגיע ביום ראשון הקרוב. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים על הקישור במייל כדי לאשר את ההרשמה. הגיליון הראשון יגיע {firstSendLabel(frequency)}. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }
   if (state === "saved") {
     return (
       <div className="notice ok" role="status">
-        <b>נרשמתם. הגיליון הבא יגיע ביום ראשון.</b> אפשר לשנות תחומים ותדירות בכל רגע <a href="/digest/settings">כאן</a>.
+        <b>נרשמתם. הגיליון הראשון יגיע {firstSendLabel(frequency)}.</b> אפשר לשנות תחומים ותדירות בכל רגע <a href="/digest/settings">כאן</a>.
       </div>
     );
   }
-
-  const choice = { crafts, frequency, consent_text: CONSENT_TEXT };
 
   async function submit(e) {
     e.preventDefault();
@@ -65,18 +67,14 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
     setState("sending");
     setError("");
     if (user) {
-      const res = await fetch("/api/digest/prefs", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ...choice, consent: true }) });
+      const res = await fetch("/api/digest/prefs", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ frequency, crafts, consent: true }) });
       if (res.ok) setState("saved");
       else { setState("error"); setError("לא הצלחנו לשמור. אפשר לנסות שוב."); }
       return;
     }
-    try { localStorage.setItem(PENDING_KEY, JSON.stringify({ ...choice, at: Date.now() })); } catch {}
     const { error } = await supabase.auth.signInWithOtp({
       email: email.trim(),
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent("/digest/settings?welcome=1")}`,
-        data: { newsletter_opt_in: true, consent_text: CONSENT_TEXT, newsletter_frequency: frequency, newsletter_crafts: crafts },
-      },
+      options: { emailRedirectTo: callbackUrl({ next: "/digest/settings?welcome=1", subscribe: frequency, crafts }) },
     });
     if (error) {
       setState("error");
@@ -95,10 +93,14 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       )}
       {!compact && (
         <>
-          <div>
-            <span className="label">התחומים שלכם <span className="muted small">(אפשר לדלג ולקבל את הגיליון הכללי)</span></span>
+          <details className="craft-pick">
+            <summary>
+              <span className="label">התחומים שלכם</span>{" "}
+              <span className="muted small">{crafts.length ? label(crafts) : "הגיליון הכללי"}</span>{" "}
+              <span className="change">שינוי תחומים</span>
+            </summary>
             <Chips name="תחומים" options={CRAFTS} value={crafts} onChange={setCrafts} />
-          </div>
+          </details>
           <div>
             <span className="label">תדירות</span>
             <div className="chips" role="radiogroup" aria-label="תדירות">

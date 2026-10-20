@@ -417,6 +417,7 @@ details summary { cursor: pointer; color: var(--accent); font-weight: 500; }
 .invite .linkrow input { flex: 1 1 240px; }
 .invite .post { white-space: pre-wrap; font: inherit; font-size: var(--t-sm); background: var(--soft); border-radius: var(--r-sm); padding: var(--s-4); margin: var(--s-3) 0 0; }
 .invite .counter { font-size: var(--t-md); margin: 0; }
+.invite details > summary { min-height: 44px; display: flex; align-items: center; }
 .res h2 { font-size: var(--t-lg); margin: 0; }
 @media (max-width: 639px) {
   .res-kpis { grid-template-columns: 1fr; gap: var(--s-3); }
@@ -442,3 +443,37 @@ details summary { cursor: pointer; color: var(--accent); font-weight: 500; }
 .survey-banner b { font-weight: 600; }
 .survey-banner a { font-weight: 600; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
 @media (max-width: 639px) { .survey-banner { border-radius: var(--r); padding: var(--s-1) var(--s-4); } .survey-banner .sb-desc { display: none; } }
+
+/* Launch-pack fixes: tap targets, digest layout on phones, craft pickers, results as cards on phones */
+.tap { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 959px) {
+  /* Phones: the sign-up comes right after the heading, sharing and the survey after the updates. */
+  .dlayout { display: flex; flex-direction: column; }
+  .dside { display: contents; }
+  #subscribe-panel { order: 0; }
+  .dmain { order: 1; }
+  .dside .share { order: 2; }
+  .dside > .card:not(.share) { order: 3; }
+}
+.craft-filter, .craft-pick { border-radius: var(--r); }
+.craft-filter > summary, .craft-pick > summary { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 4px var(--s-2); min-height: 44px; color: var(--ink); font-weight: 400; }
+.craft-filter > summary::-webkit-details-marker, .craft-pick > summary::-webkit-details-marker { display: none; }
+.craft-filter > summary .change, .craft-pick > summary .change { color: var(--accent); font-weight: 600; }
+.craft-filter[open] > summary .change, .craft-pick[open] > summary .change { opacity: .7; }
+.craft-filter { background: var(--soft); padding: var(--s-2) var(--s-4); margin-block-end: var(--s-4); }
+.craft-filter .popular { justify-content: flex-start; margin-block: var(--s-2) var(--s-3); }
+.craft-pick .chips { margin-block-start: var(--s-2); }
+.craft-pick .label { display: inline; margin: 0; }
+.check { min-height: 44px; align-items: center; }
+.check input { margin-block-start: 0; }
+@media (max-width: 639px) {
+  .rtable { min-width: 0; display: block; }
+  .rtable thead { display: none; }
+  .rtable tbody { display: grid; gap: var(--s-3); }
+  .rtable tr { display: grid; grid-template-columns: 1fr 1fr; gap: 4px var(--s-3); background: var(--soft); border-radius: var(--r-sm); padding: var(--s-3) var(--s-4); }
+  .rtable tbody th { grid-column: 1 / -1; padding: 0; border: 0; }
+  .rtable td { padding: 0; border: 0; display: grid; gap: 2px; }
+  .rtable td::before { content: attr(data-label); font-size: var(--t-xs); color: var(--muted); font-weight: 600; }
+  .range { white-space: normal; }
+}
+@media (min-width: 960px) { .dlayout > .dside { grid-column: 2; grid-row: 1; } .dlayout > .dmain { grid-column: 1; grid-row: 1; } }

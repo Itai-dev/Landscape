@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
 import { cleanProfile, cleanPrefs, missingFields, makeSlug } from "@/lib/profile";
-import { CONSENT_TEXT } from "@/lib/taxonomy";
+import { savePrefs } from "@/lib/consent";
 import { seedById } from "@/lib/people";
 
 export const runtime = "nodejs";
@@ -57,20 +57,12 @@ export async function POST(request) {
     return err(500, "save_failed");
   }
 
+  let prefsError = null;
   if (data.prefs) {
     const prefs = cleanPrefs(data.prefs);
-    const { data: cur } = await sb.from("newsletter_prefs").select("consent_at").eq("user_id", user.id).maybeSingle();
-    const opted = prefs.frequency !== "off";
-    const update = {
-      user_id: user.id,
-      email: user.email || "",
-      ...prefs,
-      // Consent is recorded the moment someone turns the newsletter on; turning it off keeps the record.
-      ...(opted && !cur?.consent_at ? { consent_at: new Date().toISOString(), consent_text: CONSENT_TEXT } : {}),
-    };
-    const { error: prefsError } = await sb.from("newsletter_prefs").upsert(update, { onConflict: "user_id" });
-    if (prefsError) console.error("prefs save failed", prefsError.message);
+    const res = await savePrefs(adminClient(), user, { frequency: prefs.frequency, topics: prefs.topics, consent: data.prefs.consent === true });
+    if (!res.ok) prefsError = res.error;
   }
 
-  return NextResponse.json({ ok: true, slug: row.slug });
+  return NextResponse.json({ ok: true, slug: row.slug, ...(prefsError ? { prefs_error: prefsError } : {}) });
 }

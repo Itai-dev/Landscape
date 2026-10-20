@@ -13,7 +13,7 @@ export default async function Unsubscribe({ searchParams }) {
       <div className="wrap narrow">
         <div className="soon">
           <h1>ההסרה בוצעה</h1>
-          <p>לא נשלח יותר את הגיליון לכתובת הזו. אפשר לחזור בכל רגע מעמוד הגיליון.</p>
+          <p>הגיליון לא יישלח יותר לכתובת הזו. אפשר לחזור בכל רגע מעמוד הגיליון.</p>
           <a className="btn" href="/digest">לגיליון באתר</a>
         </div>
       </div>
@@ -28,7 +28,7 @@ export default async function Unsubscribe({ searchParams }) {
   return (
     <div className="wrap narrow">
       <div className="soon">
-        <h1>הסרה מהגיליון השבועי</h1>
+        <h1>הסרה מהגיליון</h1>
         {problem ? (
           <>
             <p>{problem}</p>
@@ -36,13 +36,13 @@ export default async function Unsubscribe({ searchParams }) {
           </>
         ) : (
           <>
-            <p>אחרי האישור לא נשלח יותר את ״השבוע בתעשייה״ לכתובת הזו. הפרופיל, אם יש, נשאר כמו שהוא.</p>
+            <p>אחרי האישור, ״השבוע בתעשייה״ לא יישלח יותר לכתובת הזו. הפרופיל, אם יש, נשאר כמו שהוא.</p>
             <form method="post" action="/api/digest/unsubscribe?form=1">
               <input type="hidden" name="u" value={u} />
               <input type="hidden" name="t" value={t} />
               <button className="btn primary">להפסיק לקבל את הגיליון</button>
             </form>
-            <a className="small" href="/digest/settings">אפשר גם רק לשנות תדירות או תחומים</a>
+            <a className="small tap" href="/digest/settings">אפשר גם רק לשנות תדירות או תחומים</a>
           </>
         )}
       </div>

@@ -5,7 +5,7 @@ export default function SurveyBanner() {
   if (!isOpen()) return null;
   return (
     <p className="survey-banner">
-      <span><b>סקר התעריפים ותנאי התשלום 2026</b><span className="sb-desc">: כמה גובים בתעשייה ומתי משלמים. 4 דקות, אנונימי.</span></span>
+      <span><b>סקר התעריפים 2026</b>: 4 דקות, ורואים את התוצאות</span>
       <a href="/survey">לענות על הסקר ‹</a>
     </p>
   );

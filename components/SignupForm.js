@@ -2,11 +2,13 @@
 import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
+import { callbackUrl } from "@/lib/authLink";
+import { firstSendLabel } from "@/lib/digestSchedule";
 import ComingSoon from "@/components/ComingSoon";
 
 // Email magic link. New people get an account; returning people just sign in.
-// The newsletter box starts unchecked: explicit opt-in (Israeli anti-spam law).
-export default function SignupForm({ next = "/onboard", compact = false }) {
+// The digest box starts unchecked: explicit opt-in (Israeli anti-spam law), confirmed by opening the link.
+export default function SignupForm({ next = "/onboard", digest = true }) {
   const { supabase, configured } = useSupabase();
   const [email, setEmail] = useState("");
   const [newsletter, setNewsletter] = useState(false);
@@ -21,7 +23,9 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
       <div className="notice ok" role="status">
         <b>שלחנו קישור כניסה ל־<span className="ltr">{email}</span>.</b>
         <br />
-        פותחים אותו באותו דפדפן וממשיכים. לא הגיע? כדאי לבדוק בספאם, או לנסות שוב בעוד דקה.
+        פותחים אותו מהמייל וממשיכים
+        {newsletter ? `. הלחיצה מאשרת גם את ההרשמה ל״השבוע בתעשייה״, והגיליון הראשון יגיע ${firstSendLabel("weekly")}` : ""}.
+        {" "}לא הגיע? כדאי לבדוק בספאם, או לנסות שוב בעוד דקה.
       </div>
     );
   }
@@ -32,10 +36,7 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
     setError("");
     const { error } = await supabase.auth.signInWithOtp({
       email: email.trim(),
-      options: {
-        emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}`,
-        data: { newsletter_opt_in: newsletter, consent_text: newsletter ? CONSENT_TEXT : null },
-      },
+      options: { emailRedirectTo: callbackUrl({ next, subscribe: newsletter ? "weekly" : "" }) },
     });
     if (error) {
       setState("error");
@@ -50,10 +51,12 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
         <input id="email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com"
           value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
-      <label className="check">
-        <input type="checkbox" checked={newsletter} onChange={(e) => setNewsletter(e.target.checked)} />
-        <span>{CONSENT_TEXT}</span>
-      </label>
+      {digest && (
+        <label className="check">
+          <input type="checkbox" checked={newsletter} onChange={(e) => setNewsletter(e.target.checked)} />
+          <span>{CONSENT_TEXT}</span>
+        </label>
+      )}
       {state === "error" && <div className="notice err" role="alert">{error}</div>}
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !email.includes("@")}>

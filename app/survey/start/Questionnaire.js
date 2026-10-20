@@ -10,10 +10,13 @@ import {
 } from "@/lib/survey/config";
 import ShareInvite from "../ShareInvite";
 
-const DRAFT = "landscape-survey-draft";
-const load = () => { try { return JSON.parse(localStorage.getItem(DRAFT) || "null"); } catch { return null; } };
-const keep = (a) => { try { localStorage.setItem(DRAFT, JSON.stringify(a)); } catch {} };
-const drop = () => { try { localStorage.removeItem(DRAFT); } catch {} };
+// A draft in this browser, per account (key includes the user id) so a shared device never shows one
+// person's rates to another. Sign-out clears every draft (components/SignOutButton.js).
+export const DRAFT = "landscape-survey-draft";
+let draftKey = null;
+const load = () => { try { return draftKey ? JSON.parse(localStorage.getItem(draftKey) || "null") : null; } catch { return null; } };
+const keep = (a) => { try { if (draftKey) localStorage.setItem(draftKey, JSON.stringify(a)); } catch {} };
+const drop = () => { try { if (draftKey) localStorage.removeItem(draftKey); } catch {} };
 
 // One choice (radio) or several (checkbox) as pill chips.
 function Choices({ name, options, value, onChange, multi = false, max = 99, label }) {
@@ -73,6 +76,8 @@ export default function Questionnaire() {
 
   useEffect(() => {
     if (!user) return;
+    draftKey = `${DRAFT}:${user.id}`;
+    try { localStorage.removeItem(DRAFT); } catch {} // drafts from before they were per account
     fetch("/api/survey", { cache: "no-store" }).then((r) => r.json()).then((s) => {
       if (s.open === false) return setPhase("closed");
       const server = s.response?.answers || {};

@@ -1,5 +1,4 @@
 import SignupForm from "@/components/SignupForm";
-import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
 import SurveyBanner from "@/components/SurveyBanner";
 import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon, SparkIcon } from "@/components/Icons";
@@ -71,39 +70,25 @@ export default function Home() {
             <div className="ico"><BellIcon size={22} /></div>
             <div>
               <h3>לדעת לפני כולם</h3>
-              <p className="muted">מי גייס, מי החליף משרד פרסום ומי מינה מנהל שיווק חדש.</p>
+              <p className="muted">גיוסים, החלפות משרד פרסום ומינויים חדשים בשיווק.</p>
             </div>
           </a>
         </div>
       </section>
 
-      <section className="wrap section" aria-labelledby="digest-h">
-        <div className="panel digest-band">
-          <div>
-            <h2 id="digest-h">השבוע בתעשייה, במייל</h2>
-            <p className="muted">כל יום ראשון: מי מינה מנהל שיווק, מי החליף משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם סיבה לפנות.</p>
-            <a href="/digest">לגיליון של השבוע</a>
+      <section className="wrap section" id="join" aria-labelledby="join-h">
+        <div className="panel join">
+          <div className="stack">
+            <h2 id="join-h">{open ? "הצטרפות, והגיליון במייל" : "השבוע בתעשייה"}</h2>
+            <p className="muted">
+              כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם סיבה לפנות.
+              {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}
+            </p>
+            <p><a className="tap" href="/digest">לגיליון של השבוע ‹</a></p>
           </div>
-          <div className="form"><DigestSubscribe compact id="home-digest" /></div>
+          {open && <div className="form"><SignupForm /></div>}
         </div>
       </section>
-
-      {open && (
-        <section className="wrap section" id="join">
-          <div className="panel join">
-            <div>
-              <h2>הצטרפות לקהילה</h2>
-              <p className="muted">משאירים מייל, נכנסים מהקישור, ותוך דקה יש פרופיל. בלי סיסמה ובלי טפסים: ה־AI מכין טיוטה, ואתם מאשרים.</p>
-              <ul className="ticks">
-                <li>טיוטה אוטומטית מתוך קורות החיים או מהפורטפוליו</li>
-                <li>שליטה מלאה במי שרואה את הפרופיל</li>
-                <li>ניוזלטר רק אם רוצים, בתדירות שבוחרים</li>
-              </ul>
-            </div>
-            <div className="form"><SignupForm /></div>
-          </div>
-        </section>
-      )}
     </>
   );
 }

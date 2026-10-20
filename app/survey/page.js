@@ -2,24 +2,24 @@ import SurveyCta from "@/components/SurveyCta";
 import RefCapture from "@/components/RefCapture";
 import { SparkIcon } from "@/components/Icons";
 import { CLOSES_LABEL, RESULTS_LABEL, K_MIN, isOpen } from "@/lib/survey/config";
-import { surveyAggregate } from "@/lib/survey/server";
+import { surveyResults } from "@/lib/survey/server";
 import { adminClient } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
 
 const TITLE = "סקר התעריפים ותנאי התשלום 2026";
-const DESC = "כמה גובים במושן, אנימציה, VFX, פוסט, סאונד ועיצוב בישראל, ומתי באמת משלמים. 4 דקות, אנונימי, והתוצאות פתוחות לכל מי שעונה.";
+const DESC = "כמה גובים במושן, אנימציה, VFX, פוסט, סאונד ועיצוב בישראל, ומתי באמת משלמים. 4 דקות. התשובות חסויות: לא מוצגות לאף אחד, ומתפרסמים רק נתונים מצטברים.";
 
 export const metadata = {
   title: TITLE,
   description: DESC,
-  openGraph: { title: TITLE, description: DESC, type: "website", locale: "he_IL", siteName: "Landscape" },
-  twitter: { card: "summary", title: TITLE, description: DESC },
+  openGraph: { title: TITLE, description: DESC, type: "website", locale: "he_IL", siteName: "Landscape", images: [{ url: "/og/survey.png", width: 1200, height: 630, alt: TITLE }] },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/og/survey.png"] },
 };
 
 export default async function SurveyPage() {
-  const agg = await surveyAggregate(adminClient()).catch(() => null);
-  const n = agg?.n || 0;
+  const res = await surveyResults(adminClient()).catch(() => null);
+  const nb = res?.data?.nb || 0;
   const open = isOpen();
   return (
     <>
@@ -30,9 +30,9 @@ export default async function SurveyPage() {
           <h1>כמה גובים בתעשייה? <em>ומתי באמת משלמים?</em></h1>
           <p className="lead">
             סקר התעריפים ותנאי התשלום של אנשי מושן, אנימציה, VFX, פוסט, סאונד ועיצוב בישראל.
-            4 דקות, אנונימי, והתוצאות פתוחות לכל מי שעונה.
+            4 דקות. התשובות חסויות: לא מוצגות לאף אחד, ומתפרסמים רק נתונים מצטברים.
           </p>
-          {n >= 10 && <p className="small muted">{n.toLocaleString("he-IL")} תשובות עד עכשיו</p>}
+          {nb >= 10 && <p className="small muted">{nb}+ תשובות עד עכשיו</p>}
         </div>
       </section>
 
@@ -80,8 +80,8 @@ export default async function SurveyPage() {
           <div className="card stack" id="anon">
             <h2>מה קורה עם התשובות</h2>
             <ul className="ticks">
-              <li>התשובות שמורות בחשבון שלכם, ואף אחד אחר לא רואה אותן.</li>
-              <li>מתפרסמים רק חציון וטווח של קבוצות עם {K_MIN} משיבים לפחות.</li>
+              <li>התשובות חסויות: לא מוצגות לאף אחד. צוות Landscape ניגש לנתונים רק לצורך תפעול.</li>
+              <li>מתפרסמים רק חציון וטווח של קבוצות עם {K_MIN} משיבים לפחות, אחוזים מעוגלים, ופעם ביום לכל היותר.</li>
               <li>טקסט חופשי לא מתפרסם אף פעם.</li>
               <li>מחיקת החשבון מוחקת גם את התשובות.</li>
             </ul>

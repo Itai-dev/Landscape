@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { serverClient, currentUser } from "@/lib/supabase/server";
-import { CRAFT_SLUGS, CONSENT_TEXT } from "@/lib/taxonomy";
+import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
+import { savePrefs } from "@/lib/consent";
+import { readJson, allow } from "@/lib/guard";
 
 export const runtime = "nodejs";
-const FREQS = ["weekly", "biweekly", "monthly", "off"];
 const err = (status, error) => NextResponse.json({ error }, { status });
 
-// The signed-in reader's digest choices.
+// The signed-in reader's digest choices (read with their own session; RLS lets them see only their row).
 export async function GET() {
   const sb = await serverClient();
   const user = await currentUser(sb);
@@ -15,28 +15,16 @@ export async function GET() {
   return NextResponse.json({ email: user.email, prefs: data || { frequency: "off", crafts: [], topics: [], consent_at: null } });
 }
 
-// POST { frequency, crafts, consent } — turning the digest on needs explicit consent once (anti-spam law §30A).
+// POST { frequency, crafts, consent }: saved by the server (service role). Turning the digest on needs
+// explicit consent once (anti-spam law §30A); the address is the account's own.
 export async function POST(request) {
   const sb = await serverClient();
   const user = await currentUser(sb);
   if (!user) return err(401, "signed_out");
-  const body = await request.json().catch(() => ({}));
-  const frequency = FREQS.includes(body.frequency) ? body.frequency : "off";
-  const crafts = [...new Set((Array.isArray(body.crafts) ? body.crafts : []).filter((c) => CRAFT_SLUGS.includes(c)))].slice(0, 12);
-  const { data: cur } = await sb.from("newsletter_prefs").select("consent_at").eq("user_id", user.id).maybeSingle();
-  if (frequency !== "off" && !cur?.consent_at && body.consent !== true) return err(400, "consent_required");
-  const row = {
-    user_id: user.id,
-    email: user.email || "",
-    frequency,
-    crafts,
-    unsubscribed_at: frequency === "off" ? new Date().toISOString() : null,
-    ...(frequency !== "off" && !cur?.consent_at ? { consent_at: new Date().toISOString(), consent_text: CONSENT_TEXT } : {}),
-  };
-  const { error } = await sb.from("newsletter_prefs").upsert(row, { onConflict: "user_id" });
-  if (error) {
-    console.error("digest prefs save failed", error.message);
-    return err(500, "save_failed");
-  }
-  return NextResponse.json({ ok: true, frequency, crafts });
+  if (!allow(`prefs:${user.id}`, { max: 20, windowMs: 10 * 60_000 })) return err(429, "rate_limited");
+  const body = await readJson(request);
+  if (!body) return err(400, "bad_json");
+  const res = await savePrefs(adminClient(), user, { frequency: body.frequency, crafts: body.crafts, consent: body.consent === true });
+  if (!res.ok) return err(res.error === "save_failed" ? 500 : res.error === "not_configured" ? 503 : 400, res.error);
+  return NextResponse.json({ ok: true, ...res.prefs });
 }

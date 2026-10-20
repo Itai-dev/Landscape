@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div className="wrap narrow">
       <RefCapture />
-      <div className="crumbs"><a href="/survey">סקר התעריפים ותנאי התשלום 2026</a></div>
+      <div className="crumbs"><a className="tap" href="/survey">סקר התעריפים ותנאי התשלום 2026</a></div>
       <Questionnaire />
     </div>
   );

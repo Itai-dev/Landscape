@@ -1,10 +1,12 @@
 "use client";
 import { useEffect } from "react";
 import { useUser } from "@/components/useUser";
+import { REF_KEY } from "@/lib/authLink";
 
-// Invite links (?ref=CODE): keep the code in this browser, and once the person is signed in,
-// tell the server who invited them (once). The magic link opens in the same browser, so it survives sign-in.
-const KEY = "landscape-ref";
+// Invite links (?ref=CODE): keep the code in this browser. Sign-up forms add it to the magic link
+// (lib/authLink.js), so /auth/callback credits it even if the link opens elsewhere. For someone already
+// signed in here, tell the server once; it counts only for a brand-new account (lib/survey/server.js).
+const KEY = REF_KEY;
 const SENT = "landscape-ref-sent";
 const CODE_RE = /^[a-z0-9]{8}$/;
 

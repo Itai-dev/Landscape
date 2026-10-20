@@ -6,6 +6,13 @@ export const runtime = "nodejs";
 
 // One-click unsubscribe (RFC 8058: mail clients POST "List-Unsubscribe=One-Click" to this URL),
 // and the confirm button on /digest/unsubscribe. The signed token identifies the reader; no sign-in needed.
+// Mail clients without one-click support open the List-Unsubscribe URL with GET: show the confirm page.
+export async function GET(request) {
+  const url = new URL(request.url);
+  const q = new URLSearchParams({ u: url.searchParams.get("u") || "", t: url.searchParams.get("t") || "" });
+  return NextResponse.redirect(new URL(`/digest/unsubscribe?${q}`, url.origin), 303);
+}
+
 export async function POST(request) {
   const url = new URL(request.url);
   let u = url.searchParams.get("u");

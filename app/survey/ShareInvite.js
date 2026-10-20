@@ -14,8 +14,8 @@ export default function ShareInvite({ showCounter = false }) {
   const link = `${window.location.origin}/survey?ref=${s.code}`;
   const post = [
     "עניתי על סקר התעריפים ותנאי התשלום 2026 של תעשיית הקריאייטיב בישראל: מושן, אנימציה, VFX, פוסט, סאונד ועיצוב.",
-    "4 דקות, אנונימי, ומי שעונה רואה את התוצאות: כמה גובים בכל תחום, מה תנאי התשלום המקובלים, ואיפה מאחרים בתשלום.",
-    "ככל שיותר אנשים עונים, ככה כולנו יודעים לתמחר טוב יותר:",
+    "4 דקות, התשובות חסויות, ומי שעונה רואה את התוצאות: כמה גובים בכל תחום, מה תנאי התשלום המקובלים, ואיפה מאחרים בתשלום.",
+    "ככל שיותר אנשים עונים, כך כולנו נדע לתמחר נכון יותר:",
     link,
   ].join("\n\n");
 
@@ -32,7 +32,7 @@ export default function ShareInvite({ showCounter = false }) {
       </p>
       {showCounter && (
         <p className="counter">
-          הזמנתם <b className="mono">{Math.min(s.referred || 0, UNLOCK_REFERRALS)}</b> מתוך <b className="mono">{UNLOCK_REFERRALS}</b>
+          <b className="mono">{Math.min(s.referred || 0, UNLOCK_REFERRALS)}</b> מתוך <b className="mono">{UNLOCK_REFERRALS}</b> מוזמנים כבר ענו <span className="small muted">(מתעדכן פעם ביום, עם התוצאות)</span>
         </p>
       )}
       <div className="linkrow">

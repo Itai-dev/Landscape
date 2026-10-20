@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useSupabase } from "@/components/Providers";
 import { useUser } from "@/components/useUser";
-import DigestSubscribe, { PENDING_KEY } from "@/components/DigestSubscribe";
+import DigestSubscribe from "@/components/DigestSubscribe";
+import { firstSendLabel } from "@/lib/digestSchedule";
 import { CRAFTS, CONSENT_TEXT } from "@/lib/taxonomy";
 
 const FREQS = [
@@ -13,7 +14,8 @@ const FREQS = [
   { slug: "off", he: "בלי מייל" },
 ];
 
-// After the magic link (?welcome=1): saves the choices made on the form, then lets the reader edit them.
+// After the magic link (?welcome=1) the choices made on the form are already saved (by /auth/callback,
+// once the link confirmed the address). Here the reader sees and edits them.
 export default function DigestSettings() {
   const { configured } = useSupabase();
   const user = useUser();
@@ -21,23 +23,12 @@ export default function DigestSettings() {
   const [prefs, setPrefs] = useState(null);
   const [consent, setConsent] = useState(false);
   const [state, setState] = useState("idle"); // idle | saving | saved | error
-  const [joined, setJoined] = useState(false);
+  const [saveError, setSaveError] = useState("");
 
   useEffect(() => {
     if (!user) return;
     (async () => {
-      let pending = null;
-      try { pending = JSON.parse(localStorage.getItem(PENDING_KEY) || "null"); } catch {}
-      if (pending && Date.now() - (pending.at || 0) < 7 * 864e5) {
-        const res = await fetch("/api/digest/prefs", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify({ frequency: pending.frequency, crafts: pending.crafts, consent: true }),
-        });
-        if (res.ok) setJoined(true);
-      }
-      try { localStorage.removeItem(PENDING_KEY); } catch {}
-      const res = await fetch("/api/digest/prefs");
+      const res = await fetch("/api/digest/prefs", { cache: "no-store" });
       if (res.ok) setPrefs((await res.json()).prefs);
       else setState("error");
     })();
@@ -72,14 +63,21 @@ export default function DigestSettings() {
       const j = await res.json();
       setPrefs({ ...prefs, ...j, consent_at: prefs.consent_at || (j.frequency !== "off" ? new Date().toISOString() : null) });
       setState("saved");
-    } else setState("error");
+    } else {
+      const j = await res.json().catch(() => ({}));
+      setSaveError(j.error === "consent_required" ? "כדי לקבל את הגיליון צריך לסמן את האישור." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setState("error");
+    }
   }
 
   const preview = `/digest${prefs.crafts.length ? `?crafts=${prefs.crafts.join(",")}` : ""}`;
   return (
     <form className="stack digest-form" onSubmit={save}>
-      {(welcome || joined) && on && (
-        <div className="notice ok" role="status"><b>נרשמתם לגיליון.</b> הגיליון הבא יגיע ביום ראשון בבוקר ל־<span className="ltr">{user.email}</span>.</div>
+      {welcome && on && state === "idle" && (
+        <div className="notice ok" role="status"><b>נרשמתם לגיליון.</b> הגיליון הראשון יגיע {firstSendLabel(prefs.frequency)} ל־<span className="ltr">{user.email}</span>.</div>
+      )}
+      {welcome && !on && state === "idle" && (
+        <div className="notice" role="status">ההרשמה לא הושלמה. בוחרים תדירות ושומרים.</div>
       )}
       <div className="card stack">
         <div>
@@ -111,7 +109,7 @@ export default function DigestSettings() {
           </label>
         )}
       </div>
-      {state === "error" && <div className="notice err" role="alert">לא הצלחנו לשמור. אפשר לנסות שוב.</div>}
+      {state === "error" && <div className="notice err" role="alert">{saveError || "לא הצלחנו לשמור. אפשר לנסות שוב."}</div>}
       {state === "saved" && <div className="notice ok" role="status">נשמר.</div>}
       <div className="row">
         <button className="btn primary" disabled={state === "saving" || (needsConsent && !consent)}>
