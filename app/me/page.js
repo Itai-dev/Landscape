@@ -4,10 +4,24 @@ import MeClient from "./MeClient";
 import ComingSoon from "@/components/ComingSoon";
 import AccountClient from "./AccountClient";
 import { PROFILES_ENABLED } from "@/lib/config";
+import FollowsClient from "./FollowsClient";
+import index from "@/lib/generated/orgs.json";
+
+const ORG_NAMES = new Map(index.orgs.map((o) => [o.id, o.name_he || o.name]));
 
 export const metadata = { title: PROFILES_ENABLED ? "הפרופיל שלי" : "החשבון שלי", robots: { index: false } };
 
-export default async function Me() {
+// The person's follows and alert choice, read with their own session (RLS: own rows only).
+async function loadFollows(sb, userId) {
+  const [{ data: rows }, { data: prefs }] = await Promise.all([
+    sb.from("org_follows").select("org_id, created_at").eq("user_id", userId).order("created_at", { ascending: false }),
+    sb.from("newsletter_prefs").select("alerts, alerts_consent_at").eq("user_id", userId).maybeSingle(),
+  ]);
+  const follows = (rows || []).filter((r) => ORG_NAMES.has(r.org_id)).map((r) => ({ id: r.org_id, name: ORG_NAMES.get(r.org_id), href: `/companies#${r.org_id}` }));
+  return { follows, alerts: prefs?.alerts || "off", consent: Boolean(prefs?.alerts_consent_at) };
+}
+
+export default async function Me({ searchParams }) {
   const sb = await serverClient();
   if (!sb) {
     return (
@@ -19,11 +33,14 @@ export default async function Me() {
   }
   const user = await currentUser(sb);
   if (!PROFILES_ENABLED) {
-    // Stage 1: an account is only the email behind the digest and the survey. No profile to edit.
+    // Stage 1: an account is only the email behind the digest, the alerts and the survey. No profile to edit.
     if (!user) redirect("/digest#subscribe");
+    const sp = await searchParams;
+    const follows = await loadFollows(sb, user.id);
     return (
       <div className="wrap narrow stack">
         <div className="pagehead"><h1>החשבון שלי</h1><p><bdi className="small">{user.email}</bdi></p></div>
+        <FollowsClient initial={follows} justFollowed={typeof sp?.followed === "string" ? sp.followed : ""} />
         <AccountClient />
       </div>
     );

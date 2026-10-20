@@ -124,3 +124,9 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - The site was following the phone's dark mode, which looked like a sudden switch. Light is now the default everywhere, with a header toggle: בהירה / כהה / לפי המכשיר.
 - The company detail panel on desktop opens from the reading side (right in Hebrew, left in English).
 
+
+## 2026-10-20 · Alerts on followed companies
+- Owner approved "מעקב והתראות": follow a company and get an email when something changes there. Email only, no profile.
+- Named "התראות על החברה" (bell) so it isn't confused with the companies app's local "מעקב" (pipeline). People who saved companies in that list are offered to turn on alerts for them.
+- A separate list from the digest, with its own consent wording and unsubscribe link. One email per day at most, bundling every new update; or a weekly summary on the digest's Sunday. Following an org only sends updates that reached the directory from the day of the follow.
+- Not done yet: removing an update from the weekly digest when the person already got it as an alert.

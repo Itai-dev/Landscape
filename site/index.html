@@ -335,6 +335,9 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
 .sheet h4 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
 .sheet p { margin: 8px 0 0; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.btn.follow.on { background: var(--accent-soft); border-color: transparent; }
+.btn.follow.on .ic { color: var(--accent); }
+.notice.syncnote { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--ink); margin: 0 0 16px; }
 .editor { display: grid; gap: 10px; margin-top: 12px; background: var(--soft); border-radius: 16px; padding: 14px; }
 .editor textarea, .field { width: 100%; min-height: 74px; resize: vertical; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
 .editor input[type="date"] { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--surface); min-height: 38px; }
@@ -535,7 +538,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "cr.title": "What do you make?", "cr.p": "Pick any. Brands that buy these move to the top of Best fit.", "done": "Done", "close": "Close",
       "ways.agency": "Their agency", "ways.worked": "Worked for them", "ways.users": "Brands that use them", "ways.clients": "Their clients", "ways.shares": "Shares clients with", "ways.group": "Group & deals", "ways.people": "People in public roles",
       "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
-      "sh.followup": " · follow up {0}", "sh.save": "Save to tracking", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
+      "sh.followup": " · follow up {0}", "sh.save": "Save to tracking", "sh.follow": "Alerts on this company", "sh.following": "Getting alerts",
+      "fo.title": "Email alerts on {0}", "fo.p": "An email when something changes at {0}: a new marketing head, an agency move, a new campaign. No password, no profile.", "fo.email": "Email",
+      "fo.consent": "I want email alerts from Landscape when something changes at the companies I chose. I can stop at any time.", "fo.send": "Send a confirmation link", "fo.on": "Turn on alerts",
+      "fo.sent": "We sent a confirmation link to {0}. Once you open it, alerts on {1} start. Not there? Check spam.", "fo.err": "Something went wrong. Try again.", "fo.rate": "Too many tries. Try again in a few minutes.",
+      "fo.off": "Saved, but your alerts are off. You can turn them on in My account.", "fo.limit": "You can follow up to 100 companies.", "fo.unconfirmed": "Confirm your email address first.",
+      "t.followed": "Alerts on for {0}", "t.unfollowed": "Alerts stopped for {0}", "pipe.sync": "Get email alerts on the {0} companies you saved here?", "pipe.syncbtn": "Turn on alerts", "t.synced": "Alerts on for {0} companies", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
       "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services and products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
       "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.over": "{0}+", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
@@ -584,7 +592,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "cr.title": "מה אתם עושים?", "cr.p": "אפשר לבחור כמה. מותגים שמזמינים את זה יעלו לראש הרשימה.", "done": "סיום", "close": "סגירה",
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים בתפקידים פומביים",
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
-      "sh.followup": " · תזכורת {0}", "sh.save": "שמירה למעקב", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
+      "sh.followup": " · תזכורת {0}", "sh.save": "שמירה למעקב", "sh.follow": "התראות על החברה", "sh.following": "מקבלים התראות",
+      "fo.title": "התראות במייל על {0}", "fo.p": "מייל כשמשהו משתנה ב־{0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה ובלי פרופיל.", "fo.email": "מייל",
+      "fo.consent": "אני רוצה לקבל במייל התראות מ־Landscape כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
+      "fo.sent": "שלחנו קישור אישור ל־{0}. אחרי הלחיצה עליו נתחיל לשלוח התראות על {1}. לא הגיע? כדאי לבדוק בספאם.", "fo.err": "משהו השתבש. אפשר לנסות שוב.", "fo.rate": "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות.",
+      "fo.off": "החברה נשמרה, אבל ההתראות כבויות. אפשר להפעיל אותן בחשבון שלי.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "צריך לאשר את כתובת המייל קודם.",
+      "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "להפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
       "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים ומוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · רמת ביטחון {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
       "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.over": "יותר מ־{0}", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גיוס: {0} מיליון $", "f.offices": "משרדים", "f.industry": "תעשייה",
@@ -645,7 +658,11 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     x: svgI('<path d="M18 6 6 18M6 6l12 12"/>'),
     check: svgI('<path d="M20 6 9 17l-5-5"/>'),
     fwd: svgI('<path d="m9 18 6-6-6-6"/>', "fwd"),
+    bell: svgI('<path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9Z"/><path d="M10 20a2 2 0 0 0 4 0"/>'),
   };
+  // Email alerts on followed companies (site only, /api/follows). null until loaded or when sign-up is off.
+  let FOLLOW = null;
+  const following = (id) => Boolean(FOLLOW && FOLLOW.signedIn && FOLLOW.follows.has(id));
   // "501-1000" → "501–1000 עובדים", "5001+" → "יותר מ־5,000 עובדים" (numbers isolated left-to-right).
   const sizeText = (s) => {
     if (!s) return "";
@@ -1085,6 +1102,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       <div class="actions">
         ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">${IC.saved} ${esc(stageLabel(e.stage))}${e.next_date ? esc(t("sh.followup", fmtDate(e.next_date))) : ""}</button>`
             : `<button class="btn primary" type="button" data-save ${Store.readOnly ? "disabled" : ""}>${IC.save} ${t("sh.save")}</button>`}
+        ${FOLLOW && FOLLOW.signup ? `<button class="btn follow${following(o.id) ? " on" : ""}" type="button" data-follow aria-pressed="${following(o.id)}">${following(o.id) ? IC.check : IC.bell} ${t(following(o.id) ? "sh.following" : "sh.follow")}</button>` : ""}
         ${Store.sample && Store.mode === "db" ? `<button class="btn" type="button" data-pitch>${IC.pen} ${t("sh.pitch")}</button>` : ""}
         ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">${t("sh.website")} ${IC.ext}</a>` : ""}
       </div>
@@ -1414,6 +1432,92 @@ Question: ${q}`;
     });
   }
 
+  // ---------- email alerts on a company (site only) ----------
+  async function postFollows(path, body) {
+    try {
+      const r = await fetch(path, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+      return { ok: r.ok, ...(await r.json().catch(() => ({}))) };
+    } catch (e) { return { ok: false }; }
+  }
+  const followErr = (e) => t(e === "rate_limited" ? "fo.rate" : e === "limit" ? "fo.limit" : e === "unconfirmed" ? "fo.unconfirmed" : "fo.err");
+  async function toggleFollow(o, consent) {
+    const on = !following(o.id);
+    const res = await postFollows("/api/follows", { org_id: o.id, on, ...(consent ? { consent: true } : {}) });
+    if (!res.ok) { toast(followErr(res.error)); return false; }
+    on ? FOLLOW.follows.add(o.id) : FOLLOW.follows.delete(o.id);
+    if (res.alerts) FOLLOW.alerts = res.alerts;
+    if (consent) FOLLOW.consent = true;
+    toast(on && FOLLOW.alerts === "off" ? t("fo.off") : t(on ? "t.followed" : "t.unfollowed", orgName(o)));
+    return true;
+  }
+  // Signed out: email + consent → sign-in link (the follow is recorded once the address is confirmed).
+  // Signed in for the first time: consent once, then one tap.
+  function openFollow(o) {
+    const signedIn = FOLLOW.signedIn;
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${esc(t("fo.title", orgName(o)))}</h2>
+      <p class="muted" style="margin:6px 0 0;font-size:14px">${esc(t("fo.p", orgName(o)))}</p>
+      <form id="foForm">
+        ${signedIn ? "" : `<div class="filtersec"><h4><label for="foEmail">${t("fo.email")}</label></h4><input id="foEmail" class="btn" type="email" required autocomplete="email" dir="ltr" placeholder="name@example.com" style="width:100%;justify-content:flex-start"></div>`}
+        <label class="filtersec" style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><input id="foConsent" type="checkbox" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--accent)"><span>${t("fo.consent")}</span></label>
+        <p id="foMsg" role="status" style="font-size:14px;margin:8px 0 0" hidden></p>
+        <div class="sheetfoot"><button class="btn primary" id="foSend" disabled>${t(signedIn ? "fo.on" : "fo.send")}</button></div>
+      </form>`;
+    showPanel(o.id);
+    $("foConsent").addEventListener("change", (e) => ($("foSend").disabled = !e.target.checked));
+    $("foForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!$("foConsent").checked) return;
+      $("foSend").disabled = true;
+      if (signedIn) {
+        if (await toggleFollow(o, true)) { closeAll(); openOrg(o.id); } else $("foSend").disabled = false;
+        return;
+      }
+      const email = $("foEmail").value.trim();
+      const res = await postFollows("/api/follows/start", { email, org_id: o.id, consent: true });
+      const m = $("foMsg"); m.hidden = false;
+      if (res.ok) { m.innerHTML = `<b>${esc(t("fo.sent", email, orgName(o)))}</b>`; $("foSend").hidden = true; }
+      else { m.textContent = followErr(res.error); $("foSend").disabled = false; }
+    });
+  }
+  async function onFollow(o) {
+    if (!FOLLOW || !FOLLOW.signup) return;
+    if (!FOLLOW.signedIn || (!following(o.id) && !FOLLOW.consent)) return openFollow(o);
+    if (await toggleFollow(o, false)) openOrg(o.id, true);
+  }
+  // Companies saved in this browser's tracking list that don't send alerts yet.
+  const unsynced = () => (FOLLOW && FOLLOW.signedIn ? Object.keys(Store.pipeline).filter((id) => BY_ID[id] && !FOLLOW.follows.has(id)) : []);
+  async function syncFollows() {
+    const ids = unsynced().slice(0, 100);
+    if (!ids.length) return;
+    if (!FOLLOW.consent) return openFollowSync(ids);
+    const res = await postFollows("/api/follows", { add: ids });
+    if (!res.ok) return toast(followErr(res.error));
+    (res.follows || ids).forEach((id) => FOLLOW.follows.add(id));
+    toast(t("t.synced", res.added ?? ids.length));
+    renderPipeline();
+  }
+  function openFollowSync(ids) {
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${esc(t("pipe.sync", ids.length))}</h2>
+      <form id="foForm">
+        <label class="filtersec" style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><input id="foConsent" type="checkbox" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--accent)"><span>${t("fo.consent")}</span></label>
+        <div class="sheetfoot"><button class="btn primary" id="foSend" disabled>${t("pipe.syncbtn")}</button></div>
+      </form>`;
+    showPanel();
+    $("foConsent").addEventListener("change", (e) => ($("foSend").disabled = !e.target.checked));
+    $("foForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!$("foConsent").checked) return;
+      const res = await postFollows("/api/follows", { add: ids, consent: true });
+      if (!res.ok) return toast(followErr(res.error));
+      FOLLOW.consent = true; if (res.alerts) FOLLOW.alerts = res.alerts;
+      (res.follows || ids).forEach((id) => FOLLOW.follows.add(id));
+      toast(t("t.synced", res.added ?? ids.length));
+      closeAll(); renderPipeline();
+    });
+  }
+
   // ---------- signals view ----------
   function sigCard(s, compact) {
     const o = s.org_id && BY_ID[s.org_id];
@@ -1460,6 +1564,8 @@ Question: ${q}`;
     }
     const row = (e) => { const o = BY_ID[e.org_id]; return `<button class="prow" type="button" data-id="${o.id}" style="${gstyle(o)}">${logo(o, "sm")}<span class="nm"><b><bdi>${esc(orgName(o))}</bdi></b><span dir="auto">${esc(e.note ? e.note : kindOne(o.kind) + " · " + (cityName(o.location.city) || ""))}</span></span>${e.next_date ? `<span class="due">${e.next_date <= today ? t("pipe.due") : ""}${fmtDate(e.next_date)}</span>` : ""}</button>`; };
     let h = "";
+    const toSync = unsynced();
+    if (toSync.length) h += `<div class="notice syncnote"><span>${esc(t("pipe.sync", toSync.length))}</span><button class="btn primary" type="button" data-sync-follows>${IC.bell} ${t("pipe.syncbtn")}</button></div>`;
     if (due.length) h += `<div><h2>${t("pipe.duenow")} <span class="badge">${due.length}</span></h2><div class="list">${due.map((e) => `<div class="duerow">${row(e)}<div class="acts"><button class="btn" type="button" data-snooze="${e.org_id}">${t("pipe.snooze")}</button><button class="btn" type="button" data-done-follow="${e.org_id}">${t("pipe.done")}</button></div></div>`).join("")}</div></div>`;
     STAGES.forEach((k) => {
       const list = entries.filter((e) => e.stage === k && !due.includes(e)).sort((a, b) => String(a.next_date || "9").localeCompare(String(b.next_date || "9")) || String(b.updated_at).localeCompare(String(a.updated_at)));
@@ -1554,6 +1660,8 @@ Question: ${q}`;
     const sid = $("sheet").dataset.id;
     if (d.pitch !== undefined && sid) return openPitch(BY_ID[sid]);
     if (d.report !== undefined && sid) return openReport(BY_ID[sid]);
+    if (d.follow !== undefined && sid) return onFollow(BY_ID[sid]);
+    if (d.syncFollows !== undefined) return syncFollows();
     if (d.save !== undefined && sid) { await Store.setEntry(sid, { stage: "to_pitch" }); toast(t("t.saved")); return; }
     if (d.toggleEditor !== undefined) { const ed = $("editor"); if (ed) { ed.hidden = !ed.hidden; b.setAttribute("aria-expanded", !ed.hidden); } return; }
     if (d.stage && sid) return Store.setEntry(sid, { stage: d.stage });
@@ -1622,6 +1730,12 @@ Question: ${q}`;
         if (cta && j.signedIn && j.profiles) { cta.href = "/me"; cta.textContent = "הפרופיל שלי"; }
       }).catch(() => {});
       loadHidden().catch(() => {});
+      fetch("/api/follows", { cache: "no-store" }).then((r) => r.json()).then((j) => {
+        if (!j || !j.signup) return;
+        FOLLOW = { signup: true, signedIn: !!j.signedIn, follows: new Set(j.follows || []), alerts: j.alerts || "off", consent: !!j.consent };
+        if ($("sheet").dataset.id && !$("sheet").hidden) openOrg($("sheet").dataset.id, true);
+        if (state.tab === "pipeline") renderPipeline();
+      }).catch(() => {});
     }
     Promise.all(checks).finally(() => { askChecked = true; renderAskBtn(); changed(); });
   }

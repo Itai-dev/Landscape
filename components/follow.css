@@ -1,0 +1,22 @@
+/* Follow a company ("התראות על החברה"): button + small popover. Tokens from app/globals.css. */
+.follow { position: relative; display: inline-flex; }
+.btn.icon { min-width: 44px; min-height: 44px; padding: 0; justify-content: center; border-radius: 50%; }
+.follow-btn { gap: 6px; }
+.follow-btn.on { background: var(--accent-soft); border-color: transparent; color: var(--accent-ink-soft, var(--ink)); }
+.follow-btn.on svg { color: var(--accent); }
+.follow-pop {
+  position: absolute; inset-block-start: calc(100% + 8px); inset-inline-end: 0; z-index: 20;
+  width: min(320px, calc(100vw - 32px)); background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--r-sm); box-shadow: var(--shadow); padding: var(--s-4);
+  text-align: start; white-space: normal;
+}
+.follow-pop p { margin: 0; }
+.follow-pop .err { color: var(--danger); }
+.follow-pop input[type="email"] { min-height: 44px; }
+/* Rows on /search: the row stays one link; the bell sits at its inline end. */
+.orow-wrap { position: relative; display: flex; align-items: center; gap: var(--s-2); min-width: 0; }
+.orow-wrap .orow { flex: 1; }
+/* Followed companies on /me */
+.follows-list { display: grid; gap: var(--s-2); margin: 0; padding: 0; list-style: none; }
+.follows-list li { display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--r-sm); min-height: 56px; }
+.follows-list a { color: var(--ink); font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

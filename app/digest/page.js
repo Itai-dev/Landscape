@@ -5,6 +5,7 @@ import DigestSubscribe from "@/components/DigestSubscribe";
 import CopyPost from "@/components/CopyPost";
 import Bidi from "@/components/Bidi";
 import { LinkIcon } from "@/components/Icons";
+import FollowButton from "@/components/FollowButton";
 
 // Crafts shown first in the picker; the rest sit under "עוד תחומים".
 const TOP = ["motion-design", "animation-3d", "animation-2d", "vfx", "post-production", "editing", "sound-design", "branding", "illustration", "commercial-production", "content-studio", "ai-creative"];
@@ -134,7 +135,10 @@ export default async function Digest({ searchParams }) {
               <ul className="dpicks">
                 {d.picks.map((p) => (
                   <li key={p.org.id}>
-                    <a className="pname tap" href={rel(p.org.href)}><bdi>{p.org.name}</bdi></a>
+                    <div className="row" style={{ justifyContent: "space-between", alignItems: "center", flexWrap: "nowrap" }}>
+                      <a className="pname tap" href={rel(p.org.href)}><bdi>{p.org.name}</bdi></a>
+                      {p.org.id && <FollowButton orgId={p.org.id} orgName={p.org.name} compact />}
+                    </div>
                     {p.craft && <span className="tag soft">{p.craft}</span>}
                     <p><Bidi>{p.reason}</Bidi></p>
                     {p.detail && <p className="muted small"><Bidi>{p.detail}</Bidi></p>}

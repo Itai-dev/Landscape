@@ -4,5 +4,8 @@
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "crons": [{ "path": "/api/cron/digest", "schedule": "0 4 * * *" }]
+  "crons": [
+    { "path": "/api/cron/digest", "schedule": "0 4 * * *" },
+    { "path": "/api/cron/alerts", "schedule": "0 5 * * *" }
+  ]
 }
