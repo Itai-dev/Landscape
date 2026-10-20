@@ -1,0 +1,55 @@
+{
+  "id": "crystalino-group",
+  "name": "Crystalino Group",
+  "name_he": "קריסטלינו גרופ",
+  "aka": [
+    "Kristalino"
+  ],
+  "kind": "client",
+  "categories": [
+    "consumer-goods",
+    "retail-fashion"
+  ],
+  "description": "Israeli import and marketing group whose brands include FAMILY air conditioners, Dreame home appliances and Swarovski.",
+  "description_he": "קבוצת יבוא ושיווק ישראלית שבין מותגיה מזגני FAMILY, מוצרי הבית של Dreame וסברובסקי.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "key_people": [
+    {
+      "name": "Eran Silnikov",
+      "role": "VP Marketing, Crystalino Group",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1113018",
+      "as_of": "2026-05-15"
+    }
+  ],
+  "client_profile": {
+    "industry": "consumer electronics import",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "product launches",
+      "seasonal campaigns"
+    ],
+    "known_agencies": [
+      "Peach"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "peach-content",
+      "note": "Family A/C campaign with Maggie Azarzar & Kuti Sabag, >NIS 10M budget, 2026-05 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1113018",
+    "https://www.calcalist.co.il/local_news/article/rj3y9fi0ll"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Official website not found. Calcalist reported the Rakia fund buying half of the Alboz family's shares (date not confirmed)."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "diboor",
+  "name": "Diboor",
+  "name_he": "דיבור",
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "pr-social"
+  ],
+  "description": "Tel Aviv 'social first' advertising agency (est. 2011): campaigns across TV, digital, social and influencers, plus the TikTok unit TOKS. Golden Drum Digital Agency of the Year for the AI-driven 'Listen to my Voice' campaign.",
+  "description_he": "משרד פרסום תל אביבי בגישת Social First (נוסד ב-2011): קמפיינים בטלוויזיה, דיגיטל, סושיאל ומשפיענים, ויחידת הטיקטוק TOKS. נבחר לסוכנות הדיגיטל של השנה ב-Golden Drum על קמפיין ה-AI \"הקשיבי בקולי\".",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2011,
+  "status": "active",
+  "website": "https://diboor.co.il",
+  "careers_url": "https://diboor.co.il/?page_id=1549",
+  "services": [
+    "advertising campaigns",
+    "social media",
+    "influencer marketing",
+    "TikTok marketing",
+    "content"
+  ],
+  "key_people": [
+    {
+      "name": "Dana Kol",
+      "role": "CEO & owner",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+      "as_of": "2026-05-05"
+    },
+    {
+      "name": "Eyal Guy",
+      "role": "Chief Creative Officer & partner",
+      "role_type": "creative_lead",
+      "source": "https://goldendrum.com/competition/juries/creative-media-excellence-jury/eyal-guy",
+      "as_of": "2026-10-20"
+    },
+    {
+      "name": "Nadav Bornshtein",
+      "role": "Creative Director",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+      "as_of": "2026-05-05"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "burger-king-israel",
+      "note": "'Drama King' with Omer Hikri, 2026-05 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "israel-ministry-of-tourism",
+      "note": "Israeli Tourism Month with Tzipi Shavit, 2025-10 (ICE credits)"
+    },
+    {
+      "type": "subsidiary",
+      "target": "TOKS"
+    }
+  ],
+  "sources": [
+    "https://diboor.co.il",
+    "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+    "https://www.ice.co.il/advertising-marketing/news/article/895642",
+    "https://goldendrum.com/competition/juries/creative-media-excellence-jury/eyal-guy"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Third-party profiles and site logos also name Hyundai, Mercedes-Benz, Domino's, Microsoft, Rapyd, Gad dairy and Landwer as clients (not verified one by one)."
+}

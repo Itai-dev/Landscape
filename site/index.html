@@ -330,8 +330,8 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
 .ways .items a.plain { color: var(--ink); text-decoration: none; border-style: solid; }
 .people { display: grid; gap: 4px; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); }
 .person { display: grid; gap: 1px; align-content: center; min-height: 52px; padding: 6px 12px; border-radius: 12px; background: var(--soft); color: var(--ink); text-decoration: none; min-width: 0; }
-.person .pn { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; }
-.person .pr { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.person .pn { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; justify-self: start; }
+.person .pr { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; justify-self: start; }
 @media (hover: hover) { a.person:hover { background: var(--soft-2); } }
 .minehint { color: var(--muted); font-size: 13px; white-space: nowrap; }
 @media (hover: hover) { .ways .items a.plain:hover { border-color: var(--muted); } }

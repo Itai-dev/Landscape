@@ -1,0 +1,75 @@
+{
+  "id": "burger-king-israel",
+  "name": "Burger King Israel",
+  "name_he": "בורגר קינג",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli Burger King franchise, controlled by Delek Israel since 2022; ~19 restaurants with plans for 100, many at Delek fuel stations.",
+  "description_he": "זכיינית בורגר קינג בישראל, בשליטת דלק ישראל מאז 2022; כ-19 סניפים ותוכנית להגיע ל-100, רבים מהם בתחנות דלק.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.burgerking.co.il",
+  "key_people": [
+    {
+      "name": "Dana Tuchner",
+      "role": "CEO, Burger King Israel",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+      "as_of": "2026-05-05"
+    },
+    {
+      "name": "Dudu Ben David",
+      "role": "Brand Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+      "as_of": "2026-05-05"
+    },
+    {
+      "name": "Iris Pappo",
+      "role": "Marketing Department Manager, Delek",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+      "as_of": "2026-05-05"
+    }
+  ],
+  "client_profile": {
+    "industry": "fast food",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "TikTok content"
+    ],
+    "known_agencies": [
+      "Diboor"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "delek-israel"
+    },
+    {
+      "type": "agency",
+      "target": "diboor",
+      "note": "'Drama King' campaign with Omer Hikri, 2026-05 (ICE credits)"
+    },
+    {
+      "type": "agency",
+      "target": "buzz-bros",
+      "note": "production, 'Drama King' 2026-05 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1111998",
+    "https://en.globes.co.il/en/article-1001542209",
+    "https://www.ynetnews.com/business/article/hyvwzdjofg"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "why-worry",
+  "name": "Why Worry",
+  "kind": "agency",
+  "categories": [
+    "advertising"
+  ],
+  "description": "Israeli creative agency founded by Gabi Attal; made Aviv Melisron's 51 PARK Herzliya film with Gwyneth Paltrow, shot in New York (2026).",
+  "description_he": "סוכנות קריאייטיב ישראלית שהקים גבי אטל; יצרה עבור אביב מליסרון את סרט 51 PARK הרצליה עם גווינת' פאלטרו, שצולם בניו יורק (2026).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "key_people": [
+    {
+      "name": "Gabi Attal",
+      "role": "Founder",
+      "role_type": "founder",
+      "source": "https://www.jta.org/2026/06/11/culture/gwyneth-paltrow-draws-backlash-after-starring-in-ad-for-luxury-israeli-development",
+      "as_of": "2026-06-11"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "aviv-melisron",
+      "note": "51 PARK Herzliya with Gwyneth Paltrow, 2026-06"
+    },
+    {
+      "type": "partner",
+      "target": "zoa-films",
+      "note": "production & post on 51 PARK, 2026-06"
+    }
+  ],
+  "sources": [
+    "https://www.jta.org/2026/06/11/culture/gwyneth-paltrow-draws-backlash-after-starring-in-ad-for-luxury-israeli-development",
+    "https://www.jewishnews.co.uk/gwyneth-paltrow-fronts-advertising-campaign-for-luxury-israeli-development/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Website not found; agency named in JTA/Jewish News coverage and in Zoa Films' credits."
+}

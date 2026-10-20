@@ -1,5 +1,37 @@
 [
   {
+    "type": "agency_move",
+    "org_id": "shufersal",
+    "org_name": "Shufersal",
+    "date": "2026-10-19",
+    "date_approx": false,
+    "headline": "Rani Rahav's PR firm returns to Shufersal after a two-year break, alongside Minkovsky and Dror, as the chain expands into meat and coffee",
+    "why": "New own-label categories like meat and coffee usually come with packaging, packshots and launch content.",
+    "headline_he": "משרד יחסי הציבור של רני רהב חוזר לשופרסל אחרי הפסקה של שנתיים, לצד מינקובסקי ודרור, כשהרשת מתרחבת לבשר וקפה",
+    "why_he": "קטגוריות חדשות של מותג פרטי, כמו בשר וקפה, מגיעות בדרך כלל עם אריזות, פאקשוטים ותוכן השקה.",
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1134246",
+    "source": "ICE",
+    "added": "2026-10-20",
+    "v": 1,
+    "id": "sig-2026-10-19-shufersal-1fc70c"
+  },
+  {
+    "type": "launch",
+    "org_name": "ekoh",
+    "date": "2026-10-19",
+    "date_approx": false,
+    "headline": "Ornstein Hushen and journalist Maayan Manla launch ekoh, a firm for reputation and employer-brand management",
+    "why": "Employer-brand work tends to commission culture videos, staff photography and recruitment content; a new firm is still building its supplier list.",
+    "headline_he": "אורנשטיין חושן והעיתונאית מעיין מנלה משיקים את ekoh, חברה לניהול מוניטין ומיתוג מעסיק",
+    "why_he": "עבודת מיתוג מעסיק מזמינה לרוב סרטוני תרבות ארגונית, צילומי עובדים ותוכן גיוס; חברה חדשה עוד בונה את רשימת הספקים שלה.",
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1134168",
+    "source": "ICE",
+    "added": "2026-10-20",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-19-ekoh-ef61bc"
+  },
+  {
     "id": "sig-2026-10-18-israel-diamond-exchange-3c6ae9",
     "type": "rebrand",
     "org_id": null,

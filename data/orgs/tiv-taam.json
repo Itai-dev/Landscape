@@ -1,0 +1,58 @@
+{
+  "id": "tiv-taam",
+  "name": "Tiv Taam",
+  "name_he": "טיב טעם",
+  "kind": "client",
+  "categories": [
+    "retail-fashion",
+    "food-beverage"
+  ],
+  "description": "Israeli supermarket chain (40+ branches, many open on Shabbat and some 24/7) and the country's largest producer and seller of non-kosher meat; TASE-listed, slogan 'the freedom to choose'.",
+  "description_he": "רשת סופרמרקטים ישראלית (40+ סניפים, רבים פתוחים בשבת וחלקם מסביב לשעון) והיצרנית והמשווקת הגדולה בארץ של בשר לא כשר; נסחרת בבורסה, סלוגן: \"החופש לבחור\".",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.tivtaam.co.il",
+  "key_people": [
+    {
+      "name": "Avivit Levi Naim",
+      "role": "Marketing & Sales Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1105175",
+      "as_of": "2026-03-06"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: TTAM"
+  },
+  "client_profile": {
+    "industry": "grocery retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "BBR Saatchi & Saatchi"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "bbr-saatchi-saatchi",
+      "note": "'Freedom to choose' message to the Iranian people with Beni Sabti, 2026-03 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1105175",
+    "https://jpost.com/israel-news/article-780401",
+    "https://www.google.com/finance/quote/TTAM:TLV"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Owner and CEO Hagai Shalom (per press)."
+}

@@ -1,0 +1,63 @@
+{
+  "id": "buyme",
+  "name": "BuyMe",
+  "kind": "client",
+  "categories": [
+    "retail-fashion",
+    "tech"
+  ],
+  "description": "Israeli digital gift-card platform (Tel Aviv), founded around 2011–2012 by Shai Darin, Micha Berkuz and Tal Zuri; majority-owned by Teleclal since 2020. Sells gift cards to consumers and to thousands of Israeli companies.",
+  "description_he": "פלטפורמת כרטיסי המתנה הדיגיטליים הישראלית (תל אביב), שנוסדה בסביבות 2011–2012 על ידי שי דרין, מיכה ברקוז וטל צורי; בשליטת טלקלאל מאז 2020. מוכרת כרטיסי מתנה לצרכנים ולאלפי חברות בישראל.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://buyme.co.il",
+  "key_people": [
+    {
+      "name": "Nitzan Yahali Alter",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1084598",
+      "as_of": "2025-09-19"
+    }
+  ],
+  "client_profile": {
+    "industry": "gift cards / e-commerce",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "influencer content"
+    ],
+    "known_agencies": [
+      "Peach"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "peach-content",
+      "note": "Rosh Hashana hosting campaign with Shalom Michaelshvili & Liel Eli, 2025-09 (ICE credits)"
+    },
+    {
+      "type": "agency",
+      "target": "peanuts-productions",
+      "note": "production, Rosh Hashana campaign 2025-09 (ICE credits)"
+    },
+    {
+      "type": "parent",
+      "target": "Teleclal"
+    }
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3826810,00.html",
+    "https://www.ice.co.il/advertising-marketing/news/article/1084598",
+    "https://pitchbook.com/profiles/company/277423-75"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Former CEO Tomer Cohen left in 2024 to run Wolt Israel (CTech, Aug 2024); current CEO not confirmed."
+}

@@ -22,7 +22,7 @@
   "relations": [
     {
       "type": "client",
-      "target": "Electra",
+      "target": "electra-consumer-products",
       "note": "summer campaign with Amir Benayoun & Lihi Kornowski, 2026-05, via Adler Chomski & Warshavsky (Grey) (production & editing) (ICE credits)"
     }
   ],

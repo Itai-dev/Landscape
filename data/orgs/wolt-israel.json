@@ -1,0 +1,71 @@
+{
+  "id": "wolt-israel",
+  "name": "Wolt Israel",
+  "name_he": "וולט",
+  "kind": "client",
+  "categories": [
+    "food-beverage",
+    "tech"
+  ],
+  "description": "Israeli arm of the Wolt food and retail delivery app (part of DoorDash), one of the country's biggest app advertisers; marketing team based in Ramat Gan.",
+  "description_he": "הזרוע הישראלית של אפליקציית המשלוחים Wolt (בבעלות DoorDash), מהמפרסמות הגדולות בתחום האפליקציות בישראל; צוות השיווק יושב ברמת גן.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "status": "active",
+  "website": "https://wolt.com/he/isr",
+  "careers_url": "https://careers.wolt.com",
+  "key_people": [
+    {
+      "name": "Tomer Cohen",
+      "role": "General Manager, Wolt Israel",
+      "role_type": "executive",
+      "source": "https://www.calcalistech.com/ctechnews/article/ckc4234t4",
+      "as_of": "2024-08-14"
+    }
+  ],
+  "client_profile": {
+    "industry": "delivery app",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "performance ads",
+      "influencer content"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "search-engine holiday campaign 2025-11; supermarket delivery with the Gordon family 2026-06 (ICE credits)"
+    },
+    {
+      "type": "agency",
+      "target": "carmi-and-cohen",
+      "note": "production on McCann campaigns 2025-11 and 2026-06 (ICE credits)"
+    },
+    {
+      "type": "agency",
+      "target": "aviv-advertising",
+      "note": "listed among Aviv Advertising's campaigns (agency site)"
+    },
+    {
+      "type": "parent",
+      "target": "Wolt (DoorDash)"
+    }
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctechnews/article/ckc4234t4",
+    "https://job-boards.greenhouse.io/wolt/jobs/7857670",
+    "https://wolt.com/he/isr"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Wolt has hired for an Israel Marketing Director (Ramat Gan) who partners with the country GM (Greenhouse posting, date not shown)."
+}

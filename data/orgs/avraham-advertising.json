@@ -41,12 +41,12 @@
   "relations": [
     {
       "type": "client",
-      "target": "Samsung Israel",
+      "target": "samsung-israel",
       "note": "Galaxy S26 launch with Noa Kirel, Eden Hason, Netta Alchimister & Alin Golan, 2026-03 (ICE credits)"
     },
     {
       "type": "client",
-      "target": "FINQ",
+      "target": "finq",
       "note": "AI pension & investments with Ruti Broudo, 2026-05 (ICE credits)"
     }
   ],
