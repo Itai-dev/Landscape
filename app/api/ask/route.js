@@ -45,6 +45,8 @@ export async function POST(request) {
     // Upstream status and error type (never the message) so a failing deploy can be diagnosed from outside.
     const upstream = typeof e?.status === "number" ? e.status : undefined;
     const type = typeof e?.error?.error?.type === "string" ? e.error.error.type : undefined;
-    return NextResponse.json({ error: code, upstream, type }, { status: code === "rate_limited" ? 429 : 502 });
+    // For 400s, Anthropic's message describes our request shape (no secrets), which is what we need to fix it.
+    const detail = upstream === 400 && typeof e?.error?.error?.message === "string" ? e.error.error.message.slice(0, 300) : undefined;
+    return NextResponse.json({ error: code, upstream, type, detail }, { status: code === "rate_limited" ? 429 : 502 });
   }
 }
