@@ -1,0 +1,52 @@
+{
+  "id": "hogla-kimberly",
+  "name": "Hogla-Kimberly",
+  "name_he": "הוגלה-קימברלי",
+  "aka": [
+    "Kimberly-Clark Israel"
+  ],
+  "kind": "client",
+  "categories": [
+    "consumer-goods"
+  ],
+  "description": "Kimberly-Clark's wholly owned Israeli subsidiary and the country's largest marketer of disposable consumer goods: Huggies, Titulim, Kotex, Kleenex, Lilly.",
+  "description_he": "החברה הבת הישראלית של קימברלי-קלארק (בבעלות מלאה) והמשווקת הגדולה בארץ של מוצרים חד-פעמיים: האגיס, טיטולים, קוטקס, קלינקס ולילי.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.kimberly-clark.co.il",
+  "client_profile": {
+    "industry": "personal care / hygiene",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "TikTok content",
+      "influencer content",
+      "product launches"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv (Kotex)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Kimberly-Clark"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "Kotex 'A new generation of girls' with Kim Or Azulay, 2026-01 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://en.globes.co.il/en/article-kimberly-clark-buys-hogla-diapers-from-hadera-paper-1001004210",
+    "https://www.shearman.com/News-and-Events/News/2015/01/Advises-Kimberly-Clark-on-Acquisition",
+    "https://www.ice.co.il/advertising-marketing/news/article/1099285"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Kimberly-Clark bought Hadera Paper's 49.9% in 2015. Market-share figures in sources date from 2010."
+}

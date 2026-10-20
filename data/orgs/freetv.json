@@ -1,0 +1,53 @@
+{
+  "id": "freetv",
+  "name": "FreeTV",
+  "kind": "client",
+  "categories": [
+    "media-broadcast"
+  ],
+  "description": "Israeli internet-TV service with 60+ live channels and VOD at a fixed monthly price; a joint venture of Keshet Media Group and RGE, launched to the open market in September 2023.",
+  "description_he": "שירות טלוויזיה באינטרנט עם יותר מ-60 ערוצים חיים ו-VOD במחיר חודשי קבוע; מיזם משותף של קשת ו-RGE, שהושק לקהל הרחב בספטמבר 2023.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.freetv.co.il",
+  "client_profile": {
+    "industry": "TV / streaming",
+    "creative_needs": [
+      "TV commercials",
+      "AI-generated video",
+      "promos",
+      "social video"
+    ],
+    "known_agencies": [
+      "No No No No No Yes (Gideon Amichay)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "keshet-media-group",
+      "note": "joint venture of Keshet and RGE"
+    },
+    {
+      "type": "agency",
+      "target": "no-no-no-no-no-yes",
+      "note": "FreeTV's usual agency (ICE, Oct 2025)"
+    },
+    {
+      "type": "agency",
+      "target": "green-productions",
+      "note": "all-AI musical spot to 'Lo LaMasmerim', 2025-10 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://digitaltveurope.com/2023/09/14/redge-media-powers-freetv-launch-in-isarel",
+    "https://www.ice.co.il/advertising-marketing/news/article/1085904",
+    "https://www.freetv.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Oct 2025 all-AI campaign was made with Keshet's commercial division (Yuval Horowitz, SVP creative) and Green Productions, not by its usual agency."
+}

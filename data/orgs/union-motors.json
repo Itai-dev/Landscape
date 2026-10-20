@@ -11,6 +11,7 @@
     "automotive"
   ],
   "description": "Israeli importer of Toyota, Lexus and Geely vehicles (est. 1991 by George Horesh), part of the Horesh family's Union Group.",
+  "description_he": "יבואנית רכבי טויוטה, לקסוס וג'ילי בישראל (נוסדה ב-1991 על ידי ג'ורג' חורש), חלק מקבוצת יוניון של משפחת חורש.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -51,6 +52,16 @@
       "type": "agency",
       "target": "yehoshua-tbwa",
       "note": "agency (per trade press / agency client list); Toyota"
+    },
+    {
+      "type": "agency",
+      "target": "leo-burnett-tel-aviv",
+      "note": "AION EV launch with Revital Witelson-Jacobs, 2025-10 (ICE credits)"
+    },
+    {
+      "type": "agency",
+      "target": "jiminy-creative",
+      "note": "production, AION launch 2025-10 (ICE credits)"
     }
   ],
   "sources": [
@@ -59,11 +70,11 @@
     "https://www.globes.co.il/news/article.aspx?did=1001534012",
     "https://www.toyota.co.il/owners/maintenance/contact-us",
     "https://unioncareer.co.il/departments/%D7%99%D7%95%D7%A0%D7%99%D7%95%D7%9F-%D7%9E%D7%95%D7%98%D7%95%D7%A8%D7%A1/",
-    "https://www.ice.co.il/advertising-marketing/news/article/1119069"
+    "https://www.ice.co.il/advertising-marketing/news/article/1119069",
+    "https://www.ynetnews.com/culture/article/bji11bop5lx"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "notes": "Toyota listed among Yehoshua TBWA clients (Globes, Nov 2025). Union Group also holds a stake in Super-Pharm. Group site: umigroup.co.il. Agency as of 2026-06: Yehoshua TBWA lists Toyota among its clients (ICE, Jun 2026).",
-  "description_he": "יבואנית רכבי טויוטה, לקסוס וג'ילי בישראל (נוסדה ב-1991 על ידי ג'ורג' חורש), חלק מקבוצת יוניון של משפחת חורש."
+  "last_verified": "2026-10-20",
+  "notes": "Toyota listed among Yehoshua TBWA clients (Globes, Nov 2025). Union Group also holds a stake in Super-Pharm. Group site: umigroup.co.il. Agency as of 2026-06: Yehoshua TBWA lists Toyota among its clients (ICE, Jun 2026). Sep 2025: launched GAC's AION electric-car brand in Israel (Ynet). A Jul 2026 report names Orion Mobility as AION's importer in the Super-Pharm online-sales deal; its link to Union Motors is unclear."
 }

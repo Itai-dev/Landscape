@@ -1,0 +1,66 @@
+{
+  "id": "samsung-israel",
+  "name": "Samsung Israel",
+  "name_he": "סמסונג ישראל",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "consumer-goods"
+  ],
+  "description": "Samsung Electronics' Israeli marketing arm (Galaxy phones, TVs, appliances); ranked #1 in computers & mobile in the 2026 Globes Brand Index, with in-house social marketing managers since 2023.",
+  "description_he": "זרוע השיווק הישראלית של סמסונג (סמארטפונים Galaxy, טלוויזיות ומוצרי חשמל); מקום ראשון בקטגוריית מחשבים וסלולר במדד המותגים של גלובס 2026, עם מנהלי סושיאל פנימיים מאז 2023.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.samsung.com/il/",
+  "key_people": [
+    {
+      "name": "Orit Bauer",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1106866",
+      "as_of": "2026-03-20"
+    },
+    {
+      "name": "Tzach Ben Ari",
+      "role": "Influencer Marketing Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1106866",
+      "as_of": "2026-03-20"
+    }
+  ],
+  "client_profile": {
+    "industry": "consumer electronics",
+    "creative_needs": [
+      "TV commercials",
+      "launch films",
+      "influencer content",
+      "social video",
+      "events"
+    ],
+    "known_agencies": [
+      "Avraham"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "avraham-advertising",
+      "note": "Galaxy S26 launch with Noa Kirel, Eden Hason, Netta Alchimister & Alin Golan, 2026-03 (ICE credits)"
+    },
+    {
+      "type": "parent",
+      "target": "Samsung Electronics"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1106866",
+    "https://adsoftheworld.com/campaigns/glitch-in-reality",
+    "https://www.samsung.com/il/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Galaxy launches (Feb–Mar) are the yearly peak: launch show, TV and influencer series."
+}

@@ -1,0 +1,52 @@
+{
+  "id": "gindi-holdings",
+  "name": "Gindi Holdings",
+  "name_he": "גינדי החזקות",
+  "aka": [
+    "Gindi Global"
+  ],
+  "kind": "client",
+  "categories": [
+    "real-estate"
+  ],
+  "description": "One of Israel's largest private residential developers (Gindi TLV, UpperHouse, Vogue at Sde Dov); its international arm Gindi Global develops abroad, including Cyprus.",
+  "description_he": "מהיזמיות הפרטיות הגדולות בישראל בתחום המגורים (Gindi TLV, UpperHouse, ווג בשדה דב); הזרוע הבינלאומית גינדי גלובל מפתחת פרויקטים בחו\"ל, כולל בקפריסין.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "client_profile": {
+    "industry": "residential real estate",
+    "creative_needs": [
+      "TV commercials",
+      "3D renderings / architectural visualization",
+      "project films",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "Fresh Nadlan"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "fresh-nadlan",
+      "note": "Gindi Global: 'The race to an apartment under a million' (Royal Dreams, Limassol) with Ron Shahar, 2026-02 (ICE credits)"
+    },
+    {
+      "type": "agency",
+      "target": "veople",
+      "note": "production, Gindi Global 2026-02 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://en.globes.co.il/en/article-gindi-undercuts-rivals-with-much-lower-sde-dov-prices-1001512098",
+    "https://en.globes.co.il/en/article-1001305231",
+    "https://www.ice.co.il/advertising-marketing/news/article/1102311"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Official website not verified (fetches failed). Not to be confused with Gindi Investments 1 (TASE: GIND.B1), controlled by cousins of the same family (Globes, 2016)."
+}

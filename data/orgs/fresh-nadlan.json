@@ -1,0 +1,45 @@
+{
+  "id": "fresh-nadlan",
+  "name": "Fresh Nadlan",
+  "name_he": "Fresh נדל\"ן",
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Israeli advertising agency specialising in real-estate marketing (digital, leads and project campaigns), led by CEO Tal Spivak.",
+  "description_he": "משרד פרסום ישראלי המתמחה בשיווק נדל\"ן (דיגיטל, לידים וקמפיינים לפרויקטים), בראשות המנכ\"ל טל ספיבק.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "key_people": [
+    {
+      "name": "Tal Spivak",
+      "role": "CEO",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1102311",
+      "as_of": "2026-02-06"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "gindi-holdings",
+      "note": "Gindi Global, Royal Dreams Limassol campaign with Ron Shahar, 2026-02 (ICE credits)"
+    },
+    {
+      "type": "partner",
+      "target": "veople",
+      "note": "production, 2026-02 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1102311",
+    "https://www.nadlancenter.co.il/video/698"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-20",
+  "last_verified": "2026-10-20",
+  "notes": "Website not found."
+}

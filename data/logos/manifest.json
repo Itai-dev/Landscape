@@ -63,6 +63,10 @@
   "source": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65d85069221f999621761943_Group%201261159146.png",
   "fetched": "2026-10-18"
  },
+ "arkia": {
+  "source": null,
+  "fetched": "2026-10-20"
+ },
  "arlo-digital": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://arlodigital.co.il&size=128",
   "fetched": "2026-10-18"
@@ -78,6 +82,14 @@
  "atreo": {
   "source": "https://cdn.prod.website-files.com/679085bea33c0a4e3728a7b1/67dd32c4a1b4d0d8a819c0d7_webclip.jpg",
   "fetched": "2026-10-18"
+ },
+ "aviv-advertising": {
+  "source": "https://avivadv.co.il/wp-content/uploads/2023/12/cropped-aviv-favicon-192x192.png",
+  "fetched": "2026-10-20"
+ },
+ "aviv-melisron": {
+  "source": "https://avivmelisron.co.il/wp-content/uploads/2024/03/cropped-aAsset-2-192x192.png",
+  "fetched": "2026-10-20"
  },
  "avraham-advertising": {
   "source": null,
@@ -191,9 +203,17 @@
   "source": "https://static.wixstatic.com/media/794dbc_7fe8881aeb294d399da3301577a9b3c5%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/794dbc_7fe8881aeb294d399da3301577a9b3c5%7Emv2.png",
   "fetched": "2026-10-18"
  },
+ "burger-king-israel": {
+  "source": "https://www.burgerking.co.il/wp-content/uploads/sites/106/2024/12/cropped-logos-02-192x192.png",
+  "fetched": "2026-10-20"
+ },
  "butcher-studio": {
   "source": "https://cdn.prod.website-files.com/68d28630dc033fd1054bdfe5/68d287889e342834f051bef9_ezgif-44fa43547bc5b8.webp",
   "fetched": "2026-10-18"
+ },
+ "buyme": {
+  "source": "https://buyme.co.il/images/fav/apple-touch-icon.png",
+  "fetched": "2026-10-20"
  },
  "buzz-bros": {
   "source": "https://buzzbros.co.il/wp-content/uploads/2023/11/Group-62-1-e1699191707991.png",
@@ -210,6 +230,10 @@
  "carmi-and-cohen": {
   "source": null,
   "fetched": "2026-10-19"
+ },
+ "carolina-lemke": {
+  "source": null,
+  "fetched": "2026-10-20"
  },
  "castro": {
   "source": "https://www.castro.com/pub/media/favicon/websites/1/favicon-castro.png",
@@ -279,6 +303,10 @@
   "source": null,
   "fetched": "2026-10-18"
  },
+ "crystalino-group": {
+  "source": null,
+  "fetched": "2026-10-20"
+ },
  "cyberark": {
   "source": "https://www.paloaltonetworks.com/etc/clientlibs/pan/img/favicons2020/apple-touch-icon-180x180.png",
   "fetched": "2026-10-18"
@@ -314,6 +342,10 @@
  "design-museum-holon": {
   "source": "https://www.dmh.org.il/wp-content/uploads/2021/11/cropped-LOGO-DMH-01-copy-192x192.png",
   "fetched": "2026-10-19"
+ },
+ "diboor": {
+  "source": null,
+  "fetched": "2026-10-20"
  },
  "diskin": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://diskin.com&size=128",
@@ -367,6 +399,10 @@
   "source": null,
   "fetched": "2026-10-18"
  },
+ "electra-consumer-products": {
+  "source": "https://www.ecp.co.il/cdn/shop/files/pacman.png?v=1770278011&width=180",
+  "fetched": "2026-10-20"
+ },
  "elementor": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://elementor.com&size=128",
   "fetched": "2026-10-18"
@@ -390,6 +426,10 @@
  "eyeview": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "finq": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://finqai.co.il&size=128",
+  "fetched": "2026-10-20"
  },
  "firma": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://firmabrands.com&size=128",
@@ -423,6 +463,15 @@
   "source": null,
   "fetched": "2026-10-18"
  },
+ "freetv": {
+  "source": "https://www.freetv.co.il/wp-content/uploads/2023/06/cropped-home1-192x192.png",
+  "fetched": "2026-10-20",
+  "rejected": "generic or non-logo image"
+ },
+ "fresh-nadlan": {
+  "source": null,
+  "fetched": "2026-10-20"
+ },
  "fridaylab-studio": {
   "source": null,
   "fetched": "2026-10-18"
@@ -450,6 +499,10 @@
  "gigi-productions": {
   "source": null,
   "fetched": "2026-10-18"
+ },
+ "gindi-holdings": {
+  "source": null,
+  "fetched": "2026-10-20"
  },
  "gitam-bbdo": {
   "source": null,
@@ -571,6 +624,10 @@
  "hiway": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://hiway.design&size=128",
   "fetched": "2026-10-18"
+ },
+ "hogla-kimberly": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kimberly-clark.co.il&size=128",
+  "fetched": "2026-10-20"
  },
  "hot": {
   "source": null,
@@ -1037,6 +1094,10 @@
   "source": "https://static.wixstatic.com/media/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png",
   "fetched": "2026-10-18"
  },
+ "parsman-baruch": {
+  "source": null,
+  "fetched": "2026-10-20"
+ },
  "partner-communications": {
   "source": "https://www.partner.co.il/favicon.ico",
   "fetched": "2026-10-18"
@@ -1121,6 +1182,11 @@
   "source": "https://cdn.prod.website-files.com/6808941b54478d5c7d4b1b65/68467f783d1d66ded81dbc11_powtoon-256.png",
   "fetched": "2026-10-18"
  },
+ "prashkovsky": {
+  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://prashkovsky.co.il&size=128",
+  "fetched": "2026-10-20",
+  "rejected": "generic or non-logo image"
+ },
  "primus-design-animation": {
   "source": null,
   "fetched": "2026-10-18"
@@ -1204,6 +1270,10 @@
  "sam-spiegel-film-school": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://jsfs.co.il&size=128",
   "fetched": "2026-10-19"
+ },
+ "samsung-israel": {
+  "source": "https://resources.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/app_ico.png",
+  "fetched": "2026-10-20"
  },
  "sano": {
   "source": null,
@@ -1442,6 +1512,10 @@
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://titan-branding.com&size=128",
   "fetched": "2026-10-18"
  },
+ "tiv-taam": {
+  "source": null,
+  "fetched": "2026-10-20"
+ },
  "tnuva": {
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://tnuva.co.il&size=128",
   "fetched": "2026-10-18"
@@ -1558,6 +1632,10 @@
   "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://webydo.com&size=128",
   "fetched": "2026-10-18"
  },
+ "why-worry": {
+  "source": null,
+  "fetched": "2026-10-20"
+ },
  "wibbitz": {
   "source": null,
   "fetched": "2026-10-18"
@@ -1581,6 +1659,10 @@
  "wochit": {
   "source": "https://www.wochit.com/wp-content/themes/wochit/favicon.png",
   "fetched": "2026-10-18"
+ },
+ "wolt-israel": {
+  "source": "https://wolt-com-static-assets.wolt.com/android-icon-192x192.png",
+  "fetched": "2026-10-20"
  },
  "wsc-sports": {
   "source": "https://wsc-sports.com/wp-content/uploads/2024/04/cropped-Favicon-192x192.png",
