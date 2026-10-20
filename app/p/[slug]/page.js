@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import { craftLabel, openToLabel } from "@/lib/taxonomy";
-import { initials } from "@/components/PersonCard";
+import { initials, coverClass } from "@/components/PersonCard";
 
 async function load(slug) {
   const sb = await serverClient();
@@ -35,38 +35,27 @@ export default async function Profile({ params }) {
           זה הפרופיל שלך ({p.visibility === "public" ? "ציבורי" : p.visibility === "members" ? "גלוי לחברי קהילה" : "מוסתר"}). <a href="/me">עריכה</a>
         </div>
       )}
-      <div className="card">
-        <div className="row" style={{ flexWrap: "nowrap", alignItems: "flex-start" }}>
-          <div className="avatar" aria-hidden style={{ width: 72, height: 72, fontSize: 28 }}>{initials(p.name)}</div>
-          <div style={{ minWidth: 0 }}>
-            <h1 style={{ marginBlockEnd: 4 }}>{p.name}</h1>
-            {p.headline && <div className="muted">{p.headline}</div>}
-            {p.city && <div className="small muted">{p.city}</div>}
-          </div>
-        </div>
+      <div className="phead">
+        <div className={`avatar lg ${coverClass(p.slug)}`} aria-hidden>{initials(p.name)}</div>
+        <h1>{p.name}</h1>
+        {p.headline && <div className="muted" style={{ fontSize: 18 }}>{p.headline}</div>}
+        {p.city && <div className="small muted">{p.city}</div>}
         <div className="meta">
           {p.crafts.map((c) => <span key={c} className="tag">{craftLabel(c)}</span>)}
+          {p.open_to.map((o) => <span key={o} className="tag ok">{openToLabel(o)}</span>)}
         </div>
-        {p.open_to.length > 0 && (
-          <p className="small" style={{ marginBlock: "14px 0" }}>
-            <b>פתוח/ה ל: </b>{p.open_to.map(openToLabel).join(" · ")}
-          </p>
-        )}
-      </div>
-
-      {p.bio && <div className="card"><p style={{ whiteSpace: "pre-line", margin: 0 }}>{p.bio}</p></div>}
-
-      {(p.portfolio_url || p.links.length > 0) && (
-        <div className="card">
-          <h2>עבודות וקישורים</h2>
+        {(p.portfolio_url || p.links.length > 0) && (
           <div className="row">
             {p.portfolio_url && <a className="btn primary" href={p.portfolio_url} rel="nofollow ugc noopener" target="_blank">פורטפוליו</a>}
             {p.links.map((l) => (
               <a key={l.url} className="btn" href={l.url} rel="nofollow ugc noopener" target="_blank">{l.label || new URL(l.url).hostname}</a>
             ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
+      <hr className="divider" />
+
+      {p.bio && <div className="card"><h2>על עצמי</h2><p style={{ whiteSpace: "pre-line", margin: 0 }}>{p.bio}</p></div>}
 
       {p.experience.length > 0 && (
         <div className="card">

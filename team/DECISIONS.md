@@ -59,3 +59,9 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Schema**: `profiles`, `newsletter_prefs` with RLS (owner writes; public rows to everyone; members rows to signed-in users). Migration is idempotent and runs on every Vercel build when the database URL is present.
 - **Graceful without config**: with no env vars the site builds and shows "בקרוב" notices instead of sign-up.
 - Next: people search with AI across people + companies, newsletter sending (Resend), contact requests, Hebrew-name slugs.
+
+## Visual design v2 (owner: "Dribbble's look, with Simply's purple")
+- **Look**: white canvas, deep-purple ink, dark pill primary buttons, soft grey pill search with a round accent button, outlined pill tags, image-first people cards (cover tile, headline on hover, avatar + name below). Inspiration only: no Dribbble name, logo, copy or assets.
+- **Colour**: one accent, Simply's `--color-primary-purple-haze` `#8217ff` (from hellosimply.com's CSS); ink is Simply's deep purple `#110034`. Both pass WCAG AA on white. Org-group colours (makers / tech / buyers) stay for the map; buyer moved from magenta to raspberry so it doesn't read as the accent.
+- **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
+- **One product**: the same tokens in `app/globals.css` and `site/app.html`.
