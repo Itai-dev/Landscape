@@ -22,10 +22,11 @@
   "key_people": [
     {
       "name": "Miri Shaul",
-      "role": "Head of Communications & Spokesperson Division (client lead on IEC campaigns)",
+      "role": "Head of Communications & Spokesperson Division",
       "role_type": "marketing",
       "source": "https://www.mako.co.il/news-business/cactus/Article-1e720b1a4de6491026.htm",
-      "as_of": "2025-01-16"
+      "as_of": "2025-01-16",
+      "note": "client lead on IEC campaigns"
     }
   ],
   "client_profile": {

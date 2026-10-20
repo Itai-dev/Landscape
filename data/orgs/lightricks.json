@@ -57,7 +57,8 @@
     },
     {
       "name": "Asaf Porat",
-      "role": "Head of Facetune (post-split)"
+      "role": "Head of Facetune",
+      "note": "post-split"
     }
   ],
   "funding": {

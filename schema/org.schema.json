@@ -192,6 +192,10 @@
           "as_of": {
             "type": "string",
             "format": "date"
+          },
+          "note": {
+            "type": "string",
+            "description": "Research context kept out of the title (when appointed, where the title was reported). Not shown as the title."
           }
         }
       },

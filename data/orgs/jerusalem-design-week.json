@@ -33,10 +33,11 @@
   "key_people": [
     {
       "name": "Ran Wolf",
-      "role": "General management (Ran Wolf Ltd.)",
+      "role": "General management",
       "role_type": "production",
       "source": "https://2019.jdw.co.il/en/about-jdw/",
-      "as_of": "2019-06-01"
+      "as_of": "2019-06-01",
+      "note": "Ran Wolf Ltd."
     },
     {
       "name": "Anat Safran",

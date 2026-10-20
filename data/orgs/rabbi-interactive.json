@@ -49,10 +49,11 @@
   "key_people": [
     {
       "name": "Gil Rabbi",
-      "role": "Founder (2005)",
+      "role": "Founder",
       "role_type": "founder",
       "source": "https://www.rabbi.co.il/page/rabbi_agency",
-      "as_of": "2026-10-18"
+      "as_of": "2026-10-18",
+      "note": "founded 2005"
     }
   ],
   "relations": [

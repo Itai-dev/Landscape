@@ -34,18 +34,21 @@
   "key_people": [
     {
       "name": "Yoram Baumann",
-      "role": "Founder; President of Publicis Groupe Israel leadership committee (2018)"
+      "role": "Founder",
+      "note": "President of Publicis Groupe Israel leadership committee (2018)"
     },
     {
       "name": "Yossi Lubaton",
-      "role": "Chairman & CEO, Publicis Groupe Israel (from 2018)"
+      "role": "Chairman & CEO, Publicis Groupe Israel",
+      "note": "from 2018"
     },
     {
       "name": "Shani Shaul Vingosh",
-      "role": "CEO (since Jan 2026; also CEO of Leo Burnett Israel)",
+      "role": "CEO",
       "role_type": "executive",
       "source": "https://www.ice.co.il/advertising-marketing/news/article/1130259",
-      "as_of": "2026-09-18"
+      "as_of": "2026-09-18",
+      "note": "since Jan 2026; also CEO of Leo Burnett Israel"
     },
     {
       "name": "Ran Alon",

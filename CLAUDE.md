@@ -12,3 +12,9 @@ Data layer mapping the creative industry (Israel first). See PLAN.md for the vis
 - Per-person data (pipeline, notes, crafts) lives only in the Artifact database under `data/users/<id>/` — private to each person. Never read or write it from research runs.
 - Ids never change; merges go in `data/redirects.json`.
 - Product decisions: `team/DECISIONS.md`.
+- Community app: Next.js at the repo root (`app/`, `components/`, `lib/`), deployed on Vercel. `npm run build` copies the companies app (`site/app.html`) to `public/companies/` (served at `/companies`; `/map` redirects there), builds `lib/generated/people.json` (people already in `key_people`, with a source) and `orgs.json` for search, and runs `supabase/migrations/*.sql` (idempotent) when `POSTGRES_URL_NON_POOLING` is set. Must build with no env vars.
+- Header and footer have one source for both apps: `lib/chrome.mjs` (links) and `app/chrome.css` (styles). The build writes them into `/companies` between the `chrome:` markers in `site/app.html`; edit them there, not in `site/app.html`.
+- Search rules live in `lib/match.js` (craft names and aliases from `schema/taxonomy.json` → `craft_aliases`, Hebrew title words); `site/app.html` mirrors the craft rule.
+- People's profiles live in Supabase only (RLS). Never put personal data in the repo; research runs don't touch it.
+- Naming: the company directory is "חברות" (never "מפה"); market updates are "עדכונים". Hebrew UI copy is gender-neutral (plural / infinitive), no "את/ה" slashes.
+- `/api/ask` answers questions about the directory with Claude (read-only tools over `site/data/`, no per-person data, rate-limited). Hidden when `ANTHROPIC_API_KEY` is unset.

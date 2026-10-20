@@ -72,11 +72,13 @@
     },
     {
       "name": "Yehuda Rivivo",
-      "role": "Creative director (from 2024)"
+      "role": "Creative director",
+      "note": "from 2024"
     },
     {
       "name": "Ivan Danisenko",
-      "role": "Head of compositing (from 2024)"
+      "role": "Head of compositing",
+      "note": "from 2024"
     }
   ],
   "client_profile": {
