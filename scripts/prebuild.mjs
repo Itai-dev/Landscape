@@ -5,13 +5,24 @@
 // 4. applies the database migration when a Postgres URL is available (Vercel + Supabase integration).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
+import { headerHtml, footerHtml } from "../lib/chrome.mjs";
 
 // 1. Companies app. site/app.html is a page body (the Artifact host adds the document shell),
 // so here it gets a real shell: doctype (standards mode), charset, phone viewport, Hebrew + RTL.
 rmSync("public/map", { recursive: true, force: true });
 rmSync("public/companies", { recursive: true, force: true });
 mkdirSync("public/companies/data", { recursive: true });
-const body = readFileSync("site/app.html", "utf8").replaceAll('fetch("data/', 'fetch("/companies/data/');
+// The header and footer come from the same source as the Next.js pages (lib/chrome.mjs, app/chrome.css).
+const between = (s, open, close, put) => {
+  const a = s.indexOf(open), b = s.indexOf(close);
+  if (a < 0 || b < a) throw new Error(`prebuild: marker ${open} missing in site/app.html`);
+  return s.slice(0, a) + put + s.slice(b + close.length);
+};
+let body = readFileSync("site/app.html", "utf8").replaceAll('fetch("data/', 'fetch("/companies/data/');
+body = between(body, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8"));
+body = between(body, "<!-- chrome:header -->", "<!-- /chrome:header -->",
+  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
+body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
 const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
@@ -54,7 +65,7 @@ for (const o of dataset.orgs) {
     const entry = people.get(id) || { id, name, roles: [] };
     entry.roles.push({
       role,
-      note,
+      note: p.note || note,
       role_type: p.role_type || "other",
       org_id: o.id,
       org: o.name,

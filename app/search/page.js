@@ -5,6 +5,8 @@ import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
+import { craftOfQuery } from "@/lib/match";
+import { supabaseConfig } from "@/lib/config";
 
 export const metadata = { title: "חיפוש", robots: { index: false } };
 
@@ -13,9 +15,14 @@ const qs = (o) => new URLSearchParams(Object.fromEntries(Object.entries(o).filte
 // One search box for the whole site: companies and people together.
 export default async function Search({ searchParams }) {
   const sp = await searchParams;
-  const q = String(sp?.q || "").slice(0, 80).trim();
-  const craft = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
+  const typed = String(sp?.q || "").slice(0, 80).trim();
+  const asked = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
+  // A query that is a craft's name ("מושן", "VFX") is that craft: the same results and counts as the craft page.
+  const named = asked ? "" : craftOfQuery(typed);
+  const craft = asked || named;
+  const q = named ? "" : typed;
   const any = Boolean(q || craft);
+  const claim = Boolean(supabaseConfig());
 
   const [{ members }, hidden] = await Promise.all([loadMembers({ q, craft, limit: 8 }), hiddenSeeds()]);
   const companies = any ? searchCompanies(q, craft) : [];
@@ -34,7 +41,7 @@ export default async function Search({ searchParams }) {
         {any ? <p>{companies.length} חברות · {people} אנשים</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
       </div>
       <form className="psearch lg searchbox" role="search" action="/search">
-        <input type="search" name="q" defaultValue={q} placeholder="חברה, תחום, תפקיד או שם" aria-label="חיפוש בכל האתר" />
+        <input type="search" name="q" defaultValue={q} placeholder={craft && !q ? `חיפוש בתוך ${craftLabel(craft)}` : "חברה, תחום, תפקיד או שם"} aria-label="חיפוש בכל האתר" />
         {craft && <input type="hidden" name="craft" value={craft} />}
         <button className="go" aria-label="חיפוש"><SearchIcon size={20} /></button>
       </form>
@@ -78,7 +85,7 @@ export default async function Search({ searchParams }) {
             <a className="btn sm" href={`/people?${qs({ q, craft })}`}>{people > 6 ? "לכל האנשים ברשימה" : "לרשימת האנשים"}</a>
           </div>
           {members.length > 0 && <div className="grid" style={{ marginBlockEnd: 24 }}>{members.map((p) => <PersonCard key={p.slug} p={p} />)}</div>}
-          {seeds.length > 0 && <div className="pgrid">{seeds.slice(0, 6).map((p) => <SeedCard key={p.id} p={p} />)}</div>}
+          {seeds.length > 0 && <div className="pgrid">{seeds.slice(0, 6).map((p) => <SeedCard key={p.id} p={p} claim={claim} />)}</div>}
         </section>
       )}
 
@@ -89,7 +96,7 @@ export default async function Search({ searchParams }) {
             {CRAFTS.slice(0, 12).map((c) => (
               <a key={c.slug} className="craft" href={`/search?craft=${c.slug}`}>
                 <span className="ico"><CraftIcon craft={c.slug} size={28} /></span>
-                {c.he}
+                <span className="lbl">{c.he}</span>
               </a>
             ))}
           </div>

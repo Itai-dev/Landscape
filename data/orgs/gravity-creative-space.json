@@ -53,11 +53,13 @@
   "key_people": [
     {
       "name": "Effi Wizen",
-      "role": "Founder (1994)"
+      "role": "Founder",
+      "note": "founded 1994"
     },
     {
       "name": "Yoram Altman",
-      "role": "Owner (per Globes, 2010)"
+      "role": "Owner",
+      "note": "per Globes, 2010"
     }
   ],
   "relations": [

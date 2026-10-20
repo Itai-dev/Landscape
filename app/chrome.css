@@ -1,0 +1,38 @@
+/* Header and footer, shared by the Next.js pages and the companies app (scripts/prebuild.mjs copies this file
+   into /companies). Uses only tokens both apps define: --bg --ink --soft --accent --accent-ink --line --muted --max --gutter.
+   Edit here, not in site/app.html. */
+header.top { position: sticky; top: 0; z-index: 12; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: saturate(1.4) blur(12px); }
+header.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+header.top .brand, footer.foot .brand { font-family: "Mona Sans", "Heebo", system-ui, sans-serif; font-weight: 800; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.035em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+header.top .brand span, footer.foot .brand span { color: var(--accent); }
+header.top .nav { display: flex; gap: 4px; align-items: center; }
+header.top .nav a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 999px; font-size: 15px; font-weight: 600; line-height: 1; text-decoration: none; }
+header.top .nav a[aria-current="page"] { background: var(--soft); }
+header.top .end { margin-inline-start: auto; display: flex; align-items: center; gap: 8px; }
+header.top .cta { background: var(--ink); color: var(--bg); min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 15px; line-height: 1; text-decoration: none; white-space: nowrap; }
+@media (hover: hover) {
+  header.top .nav a:hover { background: var(--soft); text-decoration: none; }
+  header.top .cta:hover { background: var(--accent); color: var(--accent-ink); text-decoration: none; }
+}
+@media (max-width: 560px) {
+  header.top .wrap { gap: 8px; min-height: 64px; }
+  header.top .brand { font-size: 19px; }
+  header.top .nav { gap: 2px; }
+  header.top .nav a { padding: 0 12px; }
+  header.top .cta { padding: 0 16px; font-size: 14px; }
+}
+@media (max-width: 400px) {
+  header.top .wrap { gap: 4px; }
+  header.top .brand { font-size: 18px; }
+  header.top .nav a { padding: 0 10px; }
+  header.top .cta { padding: 0 14px; }
+}
+@media (max-width: 340px) { header.top .brand span { display: none; } header.top .nav a { padding: 0 8px; } }
+
+footer.foot { border-block-start: 1px solid var(--line); padding-block: 32px 48px; color: var(--muted); font-size: 14px; }
+footer.foot .wrap { display: flex; gap: 0 24px; flex-wrap: wrap; align-items: center; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+footer.foot .brand { font-size: 19px; margin-inline-end: 8px; }
+footer.foot a:not(.brand) { color: var(--ink); font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+footer.foot .fine { margin-inline-start: auto; }
+@media (hover: hover) { footer.foot a:not(.brand):hover { text-decoration: underline; text-underline-offset: 3px; } }
+@media (max-width: 560px) { footer.foot .wrap { gap: 0 18px; } footer.foot .fine { margin-inline-start: 0; flex-basis: 100%; } }

@@ -1,11 +1,11 @@
 import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import AutoSelect from "@/components/AutoSelect";
-import ComingSoon from "@/components/ComingSoon";
 import { SearchIcon } from "@/components/Icons";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { ROLE_TYPES, searchSeeds } from "@/lib/people";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
+import { craftOfQuery } from "@/lib/match";
 
 export const metadata = {
   title: "אנשים",
@@ -16,8 +16,12 @@ const PAGE = 24;
 
 export default async function People({ searchParams }) {
   const sp = await searchParams;
-  const q = String(sp?.q || "").slice(0, 80).trim();
-  const craft = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
+  const typed = String(sp?.q || "").slice(0, 80).trim();
+  const asked = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
+  // "מושן" typed in the box is the motion craft, as everywhere on the site.
+  const named = asked ? "" : craftOfQuery(typed);
+  const craft = asked || named;
+  const q = named ? "" : typed;
   const role = ROLE_TYPES.some((r) => r.slug === sp?.role) ? sp.role : "";
   const page = Math.max(1, Math.min(50, Number.parseInt(sp?.page, 10) || 1));
 
@@ -33,7 +37,7 @@ export default async function People({ searchParams }) {
     const s = new URLSearchParams(p).toString();
     return s ? `/people?${s}` : "/people";
   };
-  const filtered = Boolean(q || craft || role);
+  const signup = configured && !role;
 
   return (
     <div className="wrap">
@@ -60,56 +64,49 @@ export default async function People({ searchParams }) {
         ))}
       </nav>
 
-      {!role && (
+      {error && <div className="notice err" style={{ marginBlockStart: 32 }}>לא הצלחנו לטעון את חברי הקהילה כרגע. נסו לרענן.</div>}
+      {members.length > 0 && (
         <section aria-labelledby="members-h">
           <div className="subhead">
-            <h2 id="members-h">חברי הקהילה</h2>
+            <h2 id="members-h">חברי הקהילה <span className="count">{members.length}</span></h2>
             <p>פרופילים שבעליהם בנו בעצמם</p>
           </div>
-          {!configured && <ComingSoon text="בינתיים אפשר להכיר את האנשים שכבר במאגר, כאן למטה, ולעבור על החברות." />}
-          {error && <div className="notice err">לא הצלחנו לטעון את חברי הקהילה כרגע. נסו לרענן.</div>}
-          {configured && !error && members.length === 0 && (
-            <div className="soon">
-              <h3>{filtered ? "אין חברי קהילה שמתאימים לחיפוש" : "עוד אין חברי קהילה. הפרופיל הראשון יכול להיות שלכם."}</h3>
-              <p>{filtered ? "אפשר לבדוק את האנשים מפרסומים פומביים, כאן למטה." : "פרופיל אישי מופיע ראשון, עם תחומים, עבודות וקישורים."}</p>
-              <a className="btn primary" href="/onboard">בניית פרופיל</a>
-            </div>
-          )}
-          {members.length > 0 && <div className="grid">{members.map((p) => <PersonCard key={p.slug} p={p} />)}</div>}
-          {configured && !user && members.length > 0 && (
-            <p className="small muted center" style={{ marginBlockStart: 24 }}>
-              חלק מהפרופילים גלויים רק לחברי קהילה. <a href="/onboard">ההצטרפות</a> לוקחת דקה.
-            </p>
-          )}
+          <div className="grid">{members.map((p) => <PersonCard key={p.slug} p={p} />)}</div>
+          {!user && <p className="small muted center" style={{ marginBlockStart: 24 }}>חלק מהפרופילים גלויים רק לחברי קהילה. <a href="/onboard">ההצטרפות</a> לוקחת דקה.</p>}
         </section>
       )}
 
       <section aria-labelledby="seeds-h">
         <div className="subhead">
-          <h2 id="seeds-h">מפרסומים פומביים</h2>
+          <h2 id="seeds-h">מפרסומים פומביים <span className="count">{seeds.length}</span></h2>
           <p>
-            {seeds.length} אנשים, לפי תפקידים שפורסמו באתרי החברות ובעיתונות המקצועית. בלי פרטי קשר.{" "}
-            <a href="/privacy#public">איך זה עובד</a>
+            לפי תפקידים שפורסמו באתרי החברות ובעיתונות המקצועית. בלי פרטי קשר. <a href="/privacy#public">איך זה עובד</a>
           </p>
         </div>
         {seeds.length === 0 ? (
           <div className="soon">
             <h3>לא מצאנו אנשים{craft ? ` ב${craftLabel(craft)}` : ""}{q ? <> עבור <bdi>״{q}״</bdi></> : ""}</h3>
             <p>אפשר לנסות מילה אחרת, או לחפש את החברה עצמה.</p>
-            <a className="btn" href={`/search?q=${encodeURIComponent(q)}`}>חיפוש בכל האתר</a>
+            <a className="btn" href={`/search?q=${encodeURIComponent(q || craftLabel(craft))}`}>חיפוש בכל האתר</a>
           </div>
         ) : (
           <>
-            <div className="pgrid">{shown.map((p) => <SeedCard key={p.id} p={p} />)}</div>
+            <div className="pgrid">{shown.map((p) => <SeedCard key={p.id} p={p} claim={configured} />)}</div>
             {shown.length < seeds.length && (
               <div className="pager"><a className="btn" href={href({ page: String(page + 1) })}>עוד אנשים</a></div>
             )}
-            <p className="small muted center" style={{ marginBlockStart: 32 }}>
-              מופיעים כאן? אפשר לבנות פרופיל מלא בלחיצה על ״זה אני״, או לבקש הסרה מהתפריט שבכרטיס.
-            </p>
           </>
         )}
       </section>
+
+      <p className="small muted center" style={{ marginBlockStart: 40 }}>
+        {signup && members.length === 0 && !error
+          ? <>עוד אין פרופילים אישיים. <a href="/onboard">לבניית הפרופיל הראשון</a></>
+          : !configured
+            ? "פרופילים אישיים נפתחים בקרוב."
+            : null}
+        {configured ? <> מופיעים כאן? אפשר לבנות פרופיל מלא בלחיצה על ״זה אני״, או לבקש הסרה מהתפריט שבכרטיס.</> : <> מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.</>}
+      </p>
     </div>
   );
 }

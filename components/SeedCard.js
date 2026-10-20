@@ -11,15 +11,20 @@ const host = (u) => {
 };
 const month = (d) => (d ? new Date(d).toLocaleDateString("he-IL", { month: "long", year: "numeric" }) : "");
 
-function Role({ r }) {
-  if (!r.role) return null;
-  const he = roleHe(r.role);
-  return <p className="role" title={he ? r.role : undefined}><bdi>{he || r.role}</bdi></p>;
+// One role: the company and the title as published, as a single link to the company (a large tap area).
+function RoleLink({ r }) {
+  const he = r.role ? roleHe(r.role) : null;
+  return (
+    <a className="orgline" href={companyHref(r.org_id)}>
+      <span className="org"><bdi>{orgLabel(r)}</bdi></span>
+      {r.role && <span className="role" title={he ? r.role : undefined}><bdi>{he || r.role}</bdi></span>}
+    </a>
+  );
 }
 
 // A person listed from public sources (a company site, the trade press). Not a member: no profile page, no contact details.
-// The page explains "from public sources" once, so the card doesn't repeat it.
-export default function SeedCard({ p }) {
+// The page explains "from public sources" once, so the card doesn't repeat it. "זה אני" shows only when sign-up is open.
+export default function SeedCard({ p, claim = false }) {
   const [first, ...rest] = p.roles;
   return (
     <article className="pcard">
@@ -37,22 +42,19 @@ export default function SeedCard({ p }) {
           </div>
         </details>
       </div>
-      <div>
-        {[first, ...rest.slice(0, 1)].map((r, i) => (
-          <div key={i} style={i ? { marginBlockStart: 8 } : undefined}>
-            <p className="org"><a href={companyHref(r.org_id)}><bdi>{orgLabel(r)}</bdi></a></p>
-            <Role r={r} />
-          </div>
-        ))}
+      <div className="roles">
+        {[first, ...rest.slice(0, 1)].map((r, i) => <RoleLink key={i} r={r} />)}
         {rest.length > 1 && <p className="role muted">ועוד {rest.length - 1} תפקידים</p>}
       </div>
       <div className="meta">
-        <a href={first.source} rel="nofollow noopener" target="_blank"><LinkIcon size={13} /> <bdi>{host(first.source)}</bdi></a>
+        <a href={first.source} rel="nofollow noopener" target="_blank"><LinkIcon size={14} /> <bdi>{host(first.source)}</bdi></a>
         {first.as_of && <span>נכון ל{month(first.as_of)}</span>}
       </div>
-      <div className="acts">
-        <a className="btn sm soft" href={`/onboard?claim=${encodeURIComponent(p.id)}`}>זה אני</a>
-      </div>
+      {claim && (
+        <div className="acts">
+          <a className="btn sm soft" href={`/onboard?claim=${encodeURIComponent(p.id)}`}>זה אני</a>
+        </div>
+      )}
     </article>
   );
 }

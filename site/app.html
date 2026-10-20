@@ -69,29 +69,51 @@ button { cursor: pointer; }
 .mono { font-variant-numeric: tabular-nums; }
 .muted { color: var(--muted); }
 
-/* Top bar: same as the Next.js site (app/globals.css .top) */
-header.top { position: sticky; top: 0; z-index: 12; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: saturate(1.4) blur(12px); }
-header.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; }
-.brand { font-weight: 800; font-size: 22px; color: var(--ink); letter-spacing: -.035em; flex: none; text-decoration: none;  min-height: 44px; display: inline-flex; align-items: center; }
-.brand span { color: var(--accent); }
-.sitenav { display: flex; gap: 4px; align-items: center; }
-.sitenav a { color: var(--ink); padding: 8px 16px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; }
-.sitenav a:hover, .sitenav a[aria-current="page"] { background: var(--soft); }
+/* chrome:css — header and footer; the site build replaces this block with app/chrome.css (edit it there) */
+/* Header and footer, shared by the Next.js pages and the companies app (scripts/prebuild.mjs copies this file
+   into /companies). Uses only tokens both apps define: --bg --ink --soft --accent --accent-ink --line --muted --max --gutter.
+   Edit here, not in site/app.html. */
+header.top { position: sticky; top: 0; z-index: 12; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: saturate(1.4) blur(12px); }
+header.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+header.top .brand, footer.foot .brand { font-family: "Mona Sans", "Heebo", system-ui, sans-serif; font-weight: 800; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.035em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+header.top .brand span, footer.foot .brand span { color: var(--accent); }
+header.top .nav { display: flex; gap: 4px; align-items: center; }
+header.top .nav a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 999px; font-size: 15px; font-weight: 600; line-height: 1; text-decoration: none; }
+header.top .nav a[aria-current="page"] { background: var(--soft); }
 header.top .end { margin-inline-start: auto; display: flex; align-items: center; gap: 8px; }
-.cta { background: var(--ink); color: var(--bg); padding: 0 24px; min-height: 44px; display: inline-flex; align-items: center; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
-.cta:hover { background: var(--accent); color: var(--accent-ink); }
-html:not([data-site]) .sitenav, html:not([data-site]) .cta { display: none; }
-html:not([data-site]) .brand { pointer-events: none; }
+header.top .cta { background: var(--ink); color: var(--bg); min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 15px; line-height: 1; text-decoration: none; white-space: nowrap; }
+@media (hover: hover) {
+  header.top .nav a:hover { background: var(--soft); text-decoration: none; }
+  header.top .cta:hover { background: var(--accent); color: var(--accent-ink); text-decoration: none; }
+}
 @media (max-width: 560px) {
   header.top .wrap { gap: 8px; min-height: 64px; }
-  .brand { font-size: 19px; }
-  .sitenav a { padding: 8px 10px; font-size: 14px; }
-  .cta { padding: 0 16px; font-size: 14px; }
-  .langbtn { padding-inline: 10px; }
+  header.top .brand { font-size: 19px; }
+  header.top .nav { gap: 2px; }
+  header.top .nav a { padding: 0 12px; }
+  header.top .cta { padding: 0 16px; font-size: 14px; }
 }
-@media (max-width: 359px) { .brand span { display: none; } .sitenav a { padding-inline: 8px; } }
+@media (max-width: 400px) {
+  header.top .wrap { gap: 4px; }
+  header.top .brand { font-size: 18px; }
+  header.top .nav a { padding: 0 10px; }
+  header.top .cta { padding: 0 14px; }
+}
+@media (max-width: 340px) { header.top .brand span { display: none; } header.top .nav a { padding: 0 8px; } }
+
+footer.foot { border-block-start: 1px solid var(--line); padding-block: 32px 48px; color: var(--muted); font-size: 14px; }
+footer.foot .wrap { display: flex; gap: 0 24px; flex-wrap: wrap; align-items: center; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+footer.foot .brand { font-size: 19px; margin-inline-end: 8px; }
+footer.foot a:not(.brand) { color: var(--ink); font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+footer.foot .fine { margin-inline-start: auto; }
+@media (hover: hover) { footer.foot a:not(.brand):hover { text-decoration: underline; text-underline-offset: 3px; } }
+@media (max-width: 560px) { footer.foot .wrap { gap: 0 18px; } footer.foot .fine { margin-inline-start: 0; flex-basis: 100%; } }
+/* /chrome:css */
+html:not([data-site]) header.top .nav, html:not([data-site]) header.top .cta { display: none; }
+html:not([data-site]) header.top .brand { pointer-events: none; }
+@media (max-width: 560px) { .langbtn { padding-inline: 10px; } }
 .langbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; min-height: 36px; padding: 2px 12px; font-size: 13px; font-weight: 600; }
-.meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.meta { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
 .notice { margin-top: 8px; font-size: 13px; color: var(--muted); background: var(--soft); border: 0; border-radius: 12px; padding: 10px 14px; }
 
 /* controls: only the search stays on screen */
@@ -99,53 +121,53 @@ html:not([data-site]) .brand { pointer-events: none; }
 @media (min-width: 561px) { .sbar { top: 72px; } }
 .bar { padding-block: 4px 12px; display: grid; gap: 12px; }
 .vhead { text-align: center; padding-block: clamp(20px, 5vw, 48px) 8px; display: grid; gap: 8px; justify-items: center; }
-.vhead h1 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(28px, 4.4vw, 44px); line-height: 1.1; letter-spacing: -.03em; text-wrap: balance; }
+.vhead h1 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(28px, 4.4vw, 44px); line-height: 1.15; letter-spacing: 0; text-wrap: balance; }
 .vhead p { margin: 0; color: var(--muted); font-size: 16px; max-width: 560px; }
-#v-explore .search, #v-explore .bar { max-width: 920px; margin-inline: auto; width: 100%; }
+#v-explore .search, #v-explore .bar { width: 100%; }
 .seg { max-width: 560px; width: 100%; margin-inline: auto; }
 .ic { width: 1em; height: 1em; flex: none; vertical-align: -.125em; }
 html[dir="rtl"] .fwd { transform: scaleX(-1); }
 html[data-site] .langbtn { display: none !important; }
 .search { display: flex; align-items: center; gap: 8px; background: var(--soft); border: 1px solid transparent; border-radius: 999px; padding-inline: 18px 6px; min-height: 52px; transition: background .15s, box-shadow .15s; }
-.search:hover { background: var(--soft-2); }
+@media (hover: hover) { .search:hover { background: var(--soft-2); } }
 .search:focus-within { background: var(--surface); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .search svg { flex: none; color: var(--muted); }
 .search input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 10px 0; outline: none; font-size: 16px; }
 .askbtn { flex: none; min-height: 40px; border: 0; border-radius: 999px; padding: 4px 16px; background: var(--accent); color: var(--accent-ink); font-size: 14px; font-weight: 600; }
-.askbtn:hover { background: var(--accent-hover); }
+@media (hover: hover) { .askbtn:hover { background: var(--accent-hover); } }
 .seg { display: flex; background: var(--soft); border: 0; border-radius: 999px; padding: 4px; gap: 2px; }
 .seg button { flex: 1; min-height: 38px; border: 0; background: none; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--muted); }
 .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--line); }
 .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-.scroller { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.scroller { display: flex; gap: 6px; align-items: center; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
 .scroller::-webkit-scrollbar { display: none; }
 .chip { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 500; white-space: nowrap; text-decoration: none; color: var(--ink); transition: border-color .15s, background .15s; }
-.chip:hover { border-color: var(--muted); }
+@media (hover: hover) { .chip:hover { border-color: var(--muted); } }
 button.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 a.chip { color: var(--accent); }
 .chip.add { color: var(--accent); border-style: dashed; }
 .chip .x { opacity: .6; }
 .chip.label { border: 0; background: none; padding-inline: 0 2px; color: var(--muted); font-size: 13px; font-weight: 600; }
 .tools { display: flex; gap: 8px; align-items: center; }
-.tools .count { margin-inline-start: auto; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.tools .count { margin-inline-start: auto; font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
 .btn { min-height: 40px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 600; text-decoration: none; color: var(--ink); transition: background .15s, border-color .15s, color .15s; }
-.btn:hover { border-color: var(--muted); }
+@media (hover: hover) { .btn:hover { border-color: var(--muted); } }
 .btn.primary { background: var(--ink); border-color: var(--ink); color: var(--bg); }
-.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+@media (hover: hover) { .btn.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); } }
 .btn.ghost { background: none; border-color: transparent; color: var(--accent); padding-inline: 6px; }
 .btn[disabled] { opacity: .45; cursor: default; }
 select.btn { padding-inline: 10px; }
-.badge { font-family: var(--f-mono); font-size: 11px; min-width: 18px; padding: 0 5px; border-radius: 9px; background: var(--now); color: var(--bg); text-align: center; line-height: 18px; }
+.badge { font-family: var(--f-mono); font-size: 13px; font-weight: 600; min-width: 22px; padding: 0 6px; border-radius: 11px; background: var(--now); color: var(--bg); text-align: center; line-height: 22px; }
 
 /* cards */
 main { padding-block: 6px 24px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 12px; }
 .card { text-align: start; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .15s, transform .15s, box-shadow .15s; }
-.card:hover { border-color: color-mix(in srgb, var(--g) 55%, var(--line)); box-shadow: 0 8px 28px rgba(17, 0, 52, .08); }
-@media (prefers-reduced-motion: no-preference) { .card:hover { transform: translateY(-1px); } }
+@media (hover: hover) { .card:hover { border-color: color-mix(in srgb, var(--g) 55%, var(--line)); box-shadow: 0 8px 28px rgba(17, 0, 52, .08); } }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .card:hover { transform: translateY(-1px); } }
 .card .top { display: flex; gap: 12px; align-items: center; }
 .card .nm { flex: 1; min-width: 0; display: grid; gap: 1px; }
-.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 17px; line-height: 1.25; margin: 0; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 17px; line-height: 1.25; margin: 0; letter-spacing: 0; overflow-wrap: anywhere; }
 .he, .alt { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; justify-self: start; }
 .kind { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 13px; font-weight: 600; color: var(--ink); }
 .where { color: var(--muted); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
@@ -153,13 +175,13 @@ main { padding-block: 6px 24px; }
 .card p.line { color: var(--ink); }
 .line { font-size: 14px; margin: 0; overflow-wrap: anywhere; }
 .line b { font-weight: 500; }
-.line .k { color: var(--muted); font-size: 12px; font-weight: 600; margin-inline-end: 6px; }
+.line .k { color: var(--muted); font-size: 13px; font-weight: 600; margin-inline-end: 6px; }
 .fit { color: var(--ok); font-weight: 500; }
-.tag { display: inline-block; font-size: 12px; padding: 2px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); margin-block: 0 4px; margin-inline: 0 4px; }
+.tag { display: inline-block; font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); margin-block: 0 4px; margin-inline: 0 4px; }
 .tag.hit { border-color: var(--ok); color: var(--ok); }
 .nowline { display: flex; gap: 8px; align-items: baseline; font-size: 13px; background: var(--now-soft); color: var(--ink); border-radius: 10px; padding: 6px 10px; }
-.nowline .t { color: var(--now); font-weight: 600; font-size: 12px; flex: none; }
-.stage { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--accent); flex: none; }
+.nowline .t { color: var(--now); font-weight: 600; font-size: 13px; flex: none; }
+.stage { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; color: var(--accent); flex: none; }
 .logo { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--logo-bg); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
 .logo img { width: 78%; height: 78%; object-fit: contain; }
 .logo.mono { background: color-mix(in srgb, var(--g) 14%, var(--surface)); border-color: color-mix(in srgb, var(--g) 30%, var(--line)); color: var(--g); font-weight: 700; font-size: 15px; font-family: var(--f-body); }
@@ -177,25 +199,25 @@ main { padding-block: 6px 24px; }
 .sig.hidden { opacity: .4; border-style: dashed; }
 .sig .head { display: flex; gap: 10px; align-items: center; }
 .sig .head .nm { flex: 1; min-width: 0; }
-.sig .type { font-size: 12px; font-weight: 600; color: var(--now); }
+.sig .type { font-size: 13px; font-weight: 600; color: var(--now); }
 .sig .org { font-weight: 600; font-size: 15px; border: 0; background: none; padding: 0; text-align: start; color: var(--ink); }
 .sig button.org { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
 .sig .h { margin: 0; font-size: 15px; }
 .sig .why { margin: 0; font-size: 14px; color: var(--muted); }
-.sig .foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 12px; color: var(--muted); }
+.sig .foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 13px; color: var(--muted); }
 .sig .foot .acts { margin-inline-start: auto; display: flex; gap: 6px; align-items: center; }
 .credits { font-size: 13px; color: var(--muted); }
-.ennote { font-size: 12px; color: var(--muted); }
+.ennote { font-size: 13px; color: var(--muted); }
 
 /* pipeline */
 .pipe { display: grid; gap: 18px; max-width: 760px; }
-.pipe h2 { font-size: 12px; color: var(--muted); margin: 0 0 8px; font-weight: 600; display: flex; gap: 8px; align-items: center; }
+.pipe h2 { font-size: 13px; color: var(--muted); margin: 0 0 8px; font-weight: 600; display: flex; gap: 8px; align-items: center; }
 .pipe .list { display: grid; gap: 8px; }
 .prow { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 10px 12px; text-align: start; width: 100%; min-height: 56px; }
 .prow .nm { flex: 1; min-width: 0; display: grid; }
 .prow .nm b { font-weight: 600; }
 .prow .nm span { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.prow .due { font-family: var(--f-mono); font-size: 12px; color: var(--now); flex: none; }
+.prow .due { font-family: var(--f-mono); font-size: 13px; color: var(--now); flex: none; }
 .duerow { display: grid; gap: 8px; background: var(--now-soft); border-radius: 16px; padding: 10px; }
 .duerow .acts { display: flex; gap: 6px; justify-content: flex-end; }
 
@@ -210,17 +232,17 @@ main { padding-block: 6px 24px; }
 .home { max-width: 800px; margin-inline: auto; }
 .hero { padding-block: clamp(24px, 6vw, 64px) 8px; display: grid; gap: 16px; text-align: center; justify-items: center; }
 .hero > * { width: 100%; }
-.hero h1, .hero h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 7vw, 48px); line-height: 1.06; letter-spacing: -.035em; text-wrap: balance; }
+.hero h1, .hero h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 7vw, 48px); line-height: 1.12; letter-spacing: 0; text-wrap: balance; }
 .hero p { margin: 0 auto; color: var(--muted); font-size: 16px; max-width: 560px; }
 .metarow { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: -4px; }
 #lang2 { display: none; }
 @media (max-width: 560px) { html[data-site] #lang { display: none; } html[data-site] #lang2 { display: inline-flex; align-items: center; } }
 .askbox { text-align: start; display: flex; align-items: flex-end; gap: 8px; background: var(--soft); border: 1px solid transparent; border-radius: 28px; padding: 8px; padding-inline: 22px 8px; transition: background .15s, box-shadow .15s; }
-.askbox:hover { background: var(--soft-2); }
+@media (hover: hover) { .askbox:hover { background: var(--soft-2); } }
 .askbox:focus-within { background: var(--surface); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .askbox textarea { flex: 1; min-width: 0; border: 0; background: transparent; resize: none; outline: none; font-size: 17px; line-height: 1.4; padding-block: 8px; max-height: 160px; }
 .askgo { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); font-size: 20px; font-weight: 600; }
-.askgo:hover { background: var(--accent-hover); }
+@media (hover: hover) { .askgo:hover { background: var(--accent-hover); } }
 .askgo[disabled] { opacity: .4; }
 .prompts { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .prompts button { flex: 0 1 auto; max-width: 100%; white-space: normal; text-align: start; line-height: 1.3; padding-block: 7px; }
@@ -239,11 +261,11 @@ main { padding-block: 6px 24px; }
 .racts { display: flex; flex-wrap: wrap; gap: 6px; }
 .racts .btn { min-height: 36px; padding-block: 4px; font-size: 13px; }
 .week { display: grid; gap: 8px; padding-block: 18px 6px; }
-.week h3 { margin: 0; font-size: 12px; color: var(--muted); font-weight: 600; }
+.week h3 { margin: 0; font-size: 13px; color: var(--muted); font-weight: 600; }
 .wrow { display: flex; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 8px 12px; text-align: start; width: 100%; min-height: 52px; }
 .wrow .nm { flex: 1; min-width: 0; display: grid; font-size: 14px; }
 .wrow .nm span { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.wrow .ty { font-size: 11px; font-weight: 600; color: var(--now); }
+.wrow .ty { font-size: 13px; font-weight: 600; color: var(--now); }
 
 /* sections: pill sub-nav on desktop, tab bar on phones */
 .subnav { display: none; }
@@ -261,7 +283,7 @@ main { padding-block: 6px 24px; }
 nav.tabbar { position: fixed; inset: auto 0 0 0; z-index: 15; background: var(--surface); border-top: 1px solid var(--line);
   padding: 4px max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)); }
 nav.tabbar .in { max-width: 600px; margin: 0 auto; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; }
-nav.tabbar button { border: 0; background: none; min-height: 54px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 12px; font-weight: 500; color: var(--muted); position: relative; }
+nav.tabbar button { border: 0; background: none; min-height: 54px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 13px; font-weight: 500; color: var(--muted); position: relative; }
 nav.tabbar button svg { width: 22px; height: 22px; }
 nav.tabbar button[aria-current="page"] { color: var(--accent); }
 nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% + 6px); }
@@ -281,16 +303,16 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
 .sheet .close { position: sticky; top: 0; float: inline-end; margin-inline-start: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 44px; height: 44px; font-size: 20px; line-height: 1; z-index: 1; }
 .sheet .ident { display: flex; gap: 14px; align-items: center; margin-top: 2px; }
 .sheet .ident > div { min-width: 0; }
-.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 25px; line-height: 1.15; letter-spacing: -.02em; margin: 2px 0 0; text-wrap: balance; }
+.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 25px; line-height: 1.2; letter-spacing: 0; margin: 2px 0 0; text-wrap: balance; }
 .sheet .he, .sheet .alt { font-size: 16px; }
 .sheet section { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; }
-.sheet h4 { margin: 0 0 8px; font-size: 12px; color: var(--muted); font-weight: 600; }
+.sheet h4 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
 .sheet p { margin: 8px 0 0; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .editor { display: grid; gap: 10px; margin-top: 12px; background: var(--soft); border-radius: 16px; padding: 14px; }
 .editor textarea, .field { width: 100%; min-height: 74px; resize: vertical; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
 .editor input[type="date"] { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--surface); min-height: 38px; }
-.editor .saved { font-size: 12px; color: var(--muted); }
+.editor .saved { font-size: 13px; color: var(--muted); }
 .ways { display: grid; gap: 12px; }
 .ways .grp { display: grid; gap: 6px; }
 .ways .grp > span { font-size: 13px; color: var(--muted); }
@@ -298,14 +320,20 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
 .ways .items button, .asklist button { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding-block: 3px; padding-inline: 4px 10px; font-size: 14px; text-align: start; }
 .ways .items .plain { display: inline-flex; align-items: center; min-height: 36px; padding: 3px 12px; font-size: 14px; color: var(--muted); border: 1px dashed var(--line); border-radius: 999px; }
 .ways .items a.plain { color: var(--ink); text-decoration: none; border-style: solid; }
-.ways .items a.plain:hover { border-color: var(--muted); }
+.people { display: grid; gap: 4px; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); }
+.person { display: grid; gap: 1px; align-content: center; min-height: 52px; padding: 6px 12px; border-radius: 12px; background: var(--soft); color: var(--ink); text-decoration: none; min-width: 0; }
+.person .pn { font-weight: 600; font-size: 14px; overflow-wrap: anywhere; justify-self: start; }
+.person .pr { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; justify-self: start; }
+@media (hover: hover) { a.person:hover { background: var(--soft-2); } }
+.minehint { color: var(--muted); font-size: 13px; white-space: nowrap; }
+@media (hover: hover) { .ways .items a.plain:hover { border-color: var(--muted); } }
 .facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 14px; margin: 0; }
 .facts dt { color: var(--muted); }
 .facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 ul.plain { margin: 0; padding-inline-start: 18px; font-size: 14px; }
-details summary { cursor: pointer; font-size: 12px; color: var(--muted); font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+details summary { cursor: pointer; font-size: 13px; color: var(--muted); font-weight: 600; min-height: 32px; display: flex; align-items: center; }
 details[open] summary { margin-bottom: 8px; }
-.sources { font-size: 12px; display: grid; gap: 2px; }
+.sources { font-size: 13px; display: grid; gap: 2px; }
 .sources a { overflow-wrap: anywhere; }
 .chipset { display: flex; flex-wrap: wrap; gap: 6px; }
 .filtersec { display: grid; gap: 8px; margin-top: 14px; }
@@ -313,7 +341,7 @@ details[open] summary { margin-bottom: 8px; }
 .sheetfoot { position: sticky; bottom: calc(-28px - env(safe-area-inset-bottom, 0px)); background: var(--surface); padding-block: 12px; margin-top: 14px; display: flex; gap: 8px; justify-content: flex-end; border-top: 1px solid var(--line); }
 #panel select, #panel input.btn { width: 100%; max-width: 100%; min-width: 0; text-overflow: ellipsis; }
 #panel .row input.btn { width: auto; }
-textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--soft); }
+textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); font-size: 13px; border: 1px solid var(--line); border-radius: 12px; padding: 10px; background: var(--soft); }
 @media (pointer: coarse), (max-width: 560px) {
   .chip, .btn, .seg button, .langbtn, .ways .items button, .ways .items .plain, .racts .btn { min-height: 44px; }
   .sitenav a { min-height: 44px; display: inline-flex; align-items: center; }
@@ -325,19 +353,15 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 </style>
 
 <script>if (window.LANDSCAPE_SITE) document.documentElement.setAttribute("data-site", "");</script>
+<!-- chrome:header -->
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Landscape">Landscape<span>.</span></a>
-    <nav class="sitenav" aria-label="ניווט ראשי">
-      <a href="/people" data-i18n="nav.people">People</a>
-      <a href="/companies" aria-current="page" data-i18n="nav.companies">Companies</a>
-    </nav>
-    <div class="end">
-      <button class="langbtn" type="button" id="lang" lang="en">English</button>
-      <a class="cta" href="/onboard" data-i18n="nav.join">Join</a>
-    </div>
+    <a class="brand" href="/" lang="en" aria-label="Landscape">Landscape<span>.</span></a>
+    <nav class="nav sitenav" aria-label="ניווט ראשי"><a href="/people" data-i18n="nav.people">People</a><a href="/companies" aria-current="page" data-i18n="nav.companies">Companies</a></nav>
+    <div class="end"><button class="langbtn" type="button" id="lang" lang="en">English</button><a class="cta" href="/onboard" data-cta data-i18n="nav.join">Join</a></div>
   </div>
 </header>
+<!-- /chrome:header -->
 <nav class="subnav wrap" aria-label="Sections">
     <button type="button" data-tab="explore" aria-current="page">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span data-i18n="tab.explore">All companies</span></button>
@@ -432,6 +456,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   </section>
 </div>
 
+<!-- chrome:footer --><!-- /chrome:footer -->
+
 <nav class="tabbar" aria-label="Sections">
   <div class="in">
     <button type="button" data-tab="explore" aria-current="page">
@@ -459,8 +485,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "app.sub": "· Israel’s creative industry", "nav.people": "People", "nav.companies": "Companies", "nav.join": "Join", "loading": "Loading…", "loadfail": "Couldn’t load the data. Reload to try again.",
       "meta": "{0} companies · {1} updates · updated {2}",
       "search.ph": "Search companies: name, craft or city", "ex.h": "Companies", "ex.sub": "{0} studios, brands and agencies. By craft, city or name.",
-      "lens.brands": "Brands & agencies", "lens.collab": "Studios", "lens.all": "All",
-      "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ My crafts (to rank by fit)", "mine.remove": "Remove {0}",
+      "lens.brands": "Clients", "lens.collab": "Studios", "lens.all": "All",
+      "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts", "mine.hint": "What fits you comes first", "t.noorg": "Company not found", "mine.remove": "Remove {0}",
       "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
@@ -482,9 +508,9 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "ways.agency": "Their agency", "ways.worked": "Worked for them", "ways.users": "Brands that use them", "ways.clients": "Their clients", "ways.shares": "Shares clients with", "ways.group": "Group & deals", "ways.people": "People in public roles",
       "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
       "sh.followup": " · follow up {0}", "sh.save": "Save to tracking", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
-      "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services / products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
+      "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services and products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
-      "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
+      "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.over": "{0}+", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
       "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page",
       "sig.notinmap": "· not in the directory yet", "sig.save": "Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
       "sig.footer": "New updates arrive every Sunday. Each one links to its source.", "sig.empty.h": "No updates yet", "sig.empty.p": "New ones arrive every Sunday.",
@@ -507,8 +533,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
       "meta": "{0} חברות · {1} עדכונים · עודכן {2}",
       "search.ph": "חיפוש בחברות: שם, תחום או עיר", "ex.h": "חברות בתעשייה", "ex.sub": "{0} סטודיואים, מותגים וסוכנויות. לפי תחום, עיר או שם.",
-      "lens.brands": "מותגים וסוכנויות", "lens.collab": "סטודיואים", "lens.all": "הכול",
-      "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ התחומים שלי (לדירוג לפי התאמה)", "mine.remove": "הסרת {0}",
+      "lens.brands": "לקוחות", "lens.collab": "סטודיואים", "lens.all": "הכול",
+      "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
       "filters": "סינון", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
       "empty.h": "אין תוצאות", "empty.p": "אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
@@ -530,9 +556,9 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים בתפקידים פומביים",
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
       "sh.followup": " · תזכורת {0}", "sh.save": "שמירה למעקב", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
-      "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים / מוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · ודאות {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
+      "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים ומוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · רמת ביטחון {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
-      "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גייסו ${0}M", "f.offices": "משרדים", "f.industry": "תעשייה",
+      "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.over": "יותר מ־{0}", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גיוס: {0} מיליון $", "f.offices": "משרדים", "f.industry": "תעשייה",
       "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר",
       "sig.notinmap": "· עדיין לא במאגר", "sig.save": "שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
       "sig.footer": "עדכונים חדשים נוספים בכל יום ראשון. כל עדכון מקושר למקור שלו.", "sig.empty.h": "עדיין אין עדכונים", "sig.empty.p": "עדכונים חדשים נוספים בכל יום ראשון.",
@@ -591,6 +617,13 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     check: svgI('<path d="M20 6 9 17l-5-5"/>'),
     fwd: svgI('<path d="m9 18 6-6-6-6"/>', "fwd"),
   };
+  // "501-1000" → "501–1000 עובדים", "5001+" → "יותר מ־5,000 עובדים" (numbers isolated left-to-right).
+  const sizeText = (s) => {
+    if (!s) return "";
+    const n = (x) => Number(x).toLocaleString(locale());
+    const num = s.endsWith("+") ? t("f.over", "\u2066" + n(Number.parseInt(s, 10) - 1) + "\u2069") : "\u2066" + s.split("-").map(n).join("–") + "\u2069";
+    return t("f.people", num);
+  };
   const countryName = (c) => (c === "IL" ? (LANG === "he" ? "ישראל" : "Israel") : c || "");
   const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "")
     .replace(/\b(ltd|inc|israel|group|studios?|productions?|tel aviv|tlv|the)\b/g, "").replace(/[^a-z0-9֐-׿]+/g, "");
@@ -599,13 +632,23 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   const locale = () => (LANG === "he" ? "he-IL" : "en-GB");
   const fmtDate = (d) => new Date(d).toLocaleDateString(locale(), { day: "numeric", month: "short" });
   const isoDay = (date) => new Date(date.getTime() - date.getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
-  const trim = (s, n) => (s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s);
+  // Shorten at a word boundary, and never inside brackets (a cut list of names breaks right-to-left order).
+  const trim = (s, n) => {
+    if (s.length <= n) return s;
+    let c = s.slice(0, n - 1);
+    const sp = c.lastIndexOf(" ");
+    if (sp > n * 0.6) c = c.slice(0, sp);
+    const op = c.lastIndexOf("(");
+    if (op > c.lastIndexOf(")")) c = c.slice(0, op);
+    return c.replace(/[\s,;:–—-]+$/, "") + "…";
+  };
   let toastT;
   function toast(msg) { const el = $("toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => (el.hidden = true), 2600); }
 
   // ---------- data ----------
   let ORGS = [], BY_ID = {}, BY_NAME = {}, TAX, NEEDS = {}, CRAFTS = [], LOGOS = {}, GENERATED = "";
   let BASE_SIGNALS = [];
+  let HIDDEN_PEOPLE = new Set(); // names of people who asked to be removed (site only, from /api/hidden)
   const REV = { clientOf: {}, agencyOf: {}, rel: {} };
   const catLabel = (c) => (LANG === "he" && TAX.categories_he?.[c]) || TAX.categories[c] || c;
   const needLabel = (n) => (LANG === "he" && NEEDS[n]?.label_he) || NEEDS[n]?.label || n;
@@ -615,14 +658,24 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   const sigHead = (s) => (LANG === "he" && s.headline_he) || s.headline;
   const sigWhy = (s) => (LANG === "he" && s.why_he) || s.why;
 
-  function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
+  // Same rule as lib/match.js: fold the text, then an exact craft name or alias means the craft.
+  const foldQ = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/[\u05f4"\u05f3'`\u2019]/g, "").replace(/[\u05be\u2010-\u2015-]/g, " ").replace(/\s+/g, " ").trim();
+  let CRAFT_BY_NAME = new Map();
+  const craftOfQuery = (q) => CRAFT_BY_NAME.get(foldQ(q)) || "";
+  function lookup(name) {
+    if (!name) return undefined;
+    const n = String(name), inner = n.match(/\(([^)]+)\)/);
+    return BY_ID[n] || BY_NAME[norm(n)] || BY_NAME[norm(n.replace(/\s*\([^)]*\)\s*/g, " "))] || (inner ? BY_NAME[norm(inner[1])] : undefined);
+  }
   function push(map, k, v) { (map[k] = map[k] || []).push(v); }
 
   function index(data) {
     TAX = data.taxonomy; NEEDS = data.needs || {}; ORGS = data.orgs; GENERATED = data.generated;
     CRAFTS = (TAX.facets && TAX.facets.craft) || [];
+    CRAFT_BY_NAME = new Map();
+    CRAFTS.forEach((c) => [TAX.categories[c], TAX.categories_he?.[c], ...((TAX.craft_aliases || {})[c] || [])].forEach((n) => n && CRAFT_BY_NAME.set(foldQ(n), c)));
     ORGS.forEach((o) => {
-      BY_ID[o.id] = o; BY_NAME[norm(o.name)] = o;
+      BY_ID[o.id] = o; BY_NAME[norm(o.name)] = o; if (o.name_he) BY_NAME[norm(o.name_he)] = BY_NAME[norm(o.name_he)] || o;
       (o.aka || []).forEach((a) => (BY_NAME[norm(a)] = BY_NAME[norm(a)] || o));
       o.needs = o.needs || [];
       o._crafts = [...new Set([...o.categories, ...o.needs.flatMap((n) => NEEDS[n]?.crafts || [])])];
@@ -793,7 +846,9 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     if (state.inds.length && !state.inds.some((c) => o.categories.includes(c))) return false;
     if (state.needs.length && !state.needs.some((n) => o.needs.includes(n))) return false;
     if (state.city && (o.location.city || "—") !== state.city) return false;
-    if (state.q) { for (const w of state.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!o._text.includes(w)) return false; }
+    const qc = craftOfQuery(state.q);
+    if (qc) { if (!o._crafts.includes(qc)) return false; }
+    else if (state.q) { for (const w of state.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!o._text.includes(w)) return false; }
     return true;
   }
   function initials(name) {
@@ -807,7 +862,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   }
   function gstyle(o) { return `--g:var(--g-${GROUP[o.kind] || "maker"})`; }
   function kindLine(o) {
-    return `<div class="kind">${kindOne(o.kind)} <span class="where">· ${esc(cityName(o.location.city) || countryName(o.location.country))}${o.size ? ` · <span dir="ltr">${esc(o.size)}</span>` : ""}${o.status && o.status !== "active" ? " · " + esc(t("status." + o.status)) : ""}</span></div>`;
+    return `<div class="kind">${kindOne(o.kind)} <span class="where">· ${esc(cityName(o.location.city) || countryName(o.location.country))}${o.size ? ` · ${esc(sizeText(o.size))}` : ""}${o.status && o.status !== "active" ? " · " + esc(t("status." + o.status)) : ""}</span></div>`;
   }
   function names(o) {
     // primary name in the UI language, the other one beneath it
@@ -847,9 +902,11 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 
   function renderMine() {
     const mine = myCrafts();
-    $("mine").innerHTML = `<span class="chip label">${t("mine.label")}</span>` +
-      mine.map((c) => `<button class="chip" type="button" data-rmcraft="${c}" aria-label="${esc(t("mine.remove", catLabel(c)))}">${esc(catLabel(c))} <span class="x">${IC.x}</span></button>`).join("") +
-      `<button class="chip add" type="button" data-crafts>${mine.length ? t("mine.edit") : t("mine.pick")}</button>`;
+    $("mine").innerHTML = mine.length
+      ? `<span class="chip label">${t("mine.label")}</span>` +
+        mine.map((c) => `<button class="chip" type="button" data-rmcraft="${c}" aria-label="${esc(t("mine.remove", catLabel(c)))}">${esc(catLabel(c))} <span class="x">${IC.x}</span></button>`).join("") +
+        `<button class="chip add" type="button" data-crafts>${t("mine.edit")}</button>`
+      : `<button class="chip add" type="button" data-crafts>${t("mine.pick")}</button><span class="minehint">${t("mine.hint")}</span>`;
   }
   function renderAskBtn() { document.querySelectorAll("[data-asktab]").forEach((b) => (b.hidden = !askReady())); }
 
@@ -876,6 +933,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       founded: (a, b) => (b.founded || 0) - (a.founded || 0),
     }[state.sort];
     list.sort(by);
+    if (state.sort === "fit" && !myCrafts().length && !state.q && !state.kinds.length && state.lens === "all") {
+      const q = { buyer: [], maker: [], tech: [] };
+      list.forEach((o) => q[GROUP[o.kind] || "maker"].push(o));
+      list.length = 0;
+      while (q.buyer.length || q.maker.length || q.tech.length) ["maker", "buyer", "tech"].forEach((g) => q[g].length && list.push(q[g].shift()));
+    }
     $("count").textContent = list.length === 1 ? t("count1") : t("count", list.length);
     $("exSub").textContent = t("ex.sub", ORGS.length);
     if ($("fShow")) $("fShow").textContent = list.length === 1 ? t("fl.show1") : t("fl.show", list.length);
@@ -945,9 +1008,11 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       const mm = take([...m, ...famRev]);
       if (mm.length || p.length) groups.push([t("ways.group"), items(mm) + plain(p)]);
     }
-    if ((o.key_people || []).length) groups.push([t("ways.people"), window.LANDSCAPE_SITE
-      ? o.key_people.map((p) => `<a class="plain" href="/people?q=${encodeURIComponent(p.name)}"><bdi>${esc(p.name)}</bdi> · <bdi>${esc(p.role)}</bdi></a>`).join("")
-      : plain(o.key_people.map((p) => `${p.name} · ${p.role}`))]);
+    const ppl = (o.key_people || []).filter((p) => !HIDDEN_PEOPLE.has(p.name));
+    if (ppl.length) groups.push([t("ways.people"), `<div class="people">${ppl.map((p) => {
+      const inner = `<bdi class="pn">${esc(p.name)}</bdi><bdi class="pr">${esc(p.role)}</bdi>`;
+      return window.LANDSCAPE_SITE ? `<a class="person" href="/people?q=${encodeURIComponent(p.name)}">${inner}</a>` : `<div class="person">${inner}</div>`;
+    }).join("")}</div>`]);
     return groups;
   }
 
@@ -976,7 +1041,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     const hits = new Set(needHits(o));
     const buyer = GROUP[o.kind] === "buyer" || o.needs.length;
     const nm = names(o);
-    const facts = [[t("f.founded"), o.founded], [t("f.size"), o.size && t("f.people", "\u2066" + o.size + "\u2069")], [t("f.status"), o.status !== "active" ? t("status." + o.status) : ""],
+    const facts = [[t("f.founded"), o.founded], [t("f.size"), sizeText(o.size)], [t("f.status"), o.status !== "active" ? t("status." + o.status) : ""],
       [t("f.funding"), o.funding && [o.funding.public ? `${t("f.public")}${o.funding.ticker ? " (" + o.funding.ticker + ")" : ""}` : o.funding.stage, o.funding.total_usd_m ? t("f.raised", o.funding.total_usd_m) : ""].filter(Boolean).join(" · ")],
       [t("f.offices"), (o.location.other_offices || []).join(", ")], [t("f.industry"), LANG === "he" ? "" : o.client_profile?.industry]].filter(([, v]) => v);
     const links = [o.reel_url && [t("l.reel"), o.reel_url], o.careers_url && [t("l.careers"), o.careers_url], o.contact_url && [t("l.contact"), o.contact_url],
@@ -999,7 +1064,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
         ${LANG !== "he" && o.client_profile?.creative_needs?.length ? `<p class="muted" style="font-size:13px" dir="auto">${esc(o.client_profile.creative_needs.join(" · "))}</p>` : ""}
         ${!myCrafts().length ? `<p style="font-size:13px"><button class="btn ghost" type="button" data-crafts>${t("sh.pickcrafts")}</button>${t("sh.pickcrafts2")}</p>` : ""}
         ${o.client_profile?.in_house_studio ? `<p style="font-size:13px">${t("sh.inhouse")}</p>` : ""}</section>` : ""}
-      ${ways.length ? `<section><h4>${t("sh.ways")}</h4><div class="ways">${ways.map(([h, x]) => `<div class="grp"><span>${h}</span><div class="items">${x}</div></div>`).join("")}</div></section>` : ""}
+      ${ways.length ? `<section><h4>${t("sh.ways")}</h4><div class="ways">${ways.map(([h, x]) => `<div class="grp"><span>${h}</span>${x.startsWith('<div class="people">') ? x : `<div class="items">${x}</div>`}</div>`).join("")}</div></section>` : ""}
       <section><h4>${t("sh.about")}</h4><p style="margin-top:0" dir="auto">${bidi(orgDesc(o))}</p>
         ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
         ${facts.length ? `<dl class="facts" style="margin-top:10px">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
@@ -1322,10 +1387,10 @@ Question: ${q}`;
     const o = s.org_id && BY_ID[s.org_id];
     const old = daysAgo(s.date) > 60;
     const inPipe = o && Store.entry(o.id);
-    const cr = s.credits ? Object.entries(s.credits).map(([k, v]) => `${t("credit." + k)}: ${v}`).join(" · ") : "";
+    const cr = s.credits && !(LANG === "he" && s.headline_he) ? Object.entries(s.credits).map(([k, v]) => `${t("credit." + k)}: ${v}`).join(" · ") : "";
     const head = compact ? `<div class="type">${esc(sigType(s.type))}</div>`
       : `<div class="head">${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<div class="nm"><div class="type">${esc(sigType(s.type))}</div>
-        ${o ? `<button class="org" type="button" data-id="${o.id}"><bdi>${esc(orgName(o))}</bdi></button>` : `<span class="org"><bdi>${esc(s.org_name)}</bdi></span> <span class="muted" style="font-size:12px">${t("sig.notinmap")}</span>`}</div></div>`;
+        ${o ? `<button class="org" type="button" data-id="${o.id}"><bdi>${esc(orgName(o))}</bdi></button>` : `<span class="org"><bdi>${esc(s.org_name)}</bdi></span> <span class="muted" style="font-size:13px">${t("sig.notinmap")}</span>`}</div></div>`;
     return `<article class="sig${old ? " old" : ""}${s.hidden ? " hidden" : ""}">${head}
       <p class="h" dir="auto">${bidi(sigHead(s))}</p>
       <p class="why" dir="auto">${bidi(sigWhy(s))}</p>
@@ -1394,7 +1459,8 @@ Question: ${q}`;
     else n.hidden = true;
   }
   function renderBadges() {
-    const fresh = signals().filter((s) => !s.hidden && daysAgo(s.date) <= 14).length;
+    let seen = ""; try { seen = localStorage.getItem("landscape-updates-seen") || ""; } catch (e) {}
+    const fresh = signals().filter((s) => !s.hidden && daysAgo(s.date) <= 14 && (!seen || (s.added || s.date) > seen)).length;
     ["sigBadge", "ssigBadge"].forEach((id) => { $(id).hidden = !fresh; $(id).textContent = fresh; });
     const today = isoDay(new Date());
     const due = Object.values(Store.pipeline).filter((e) => e.next_date && e.next_date <= today && e.stage !== "passed").length;
@@ -1407,7 +1473,7 @@ Question: ${q}`;
     document.querySelectorAll("nav.tabbar button, nav.subnav button").forEach((b) => (b.dataset.tab === state.tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
     if (state.tab === "ask") renderHome();
     else if (state.tab === "explore") renderExplore();
-    else if (state.tab === "signals") renderSignals();
+    else if (state.tab === "signals") { renderSignals(); try { localStorage.setItem("landscape-updates-seen", isoDay(new Date()) + "T99"); } catch (e) {} renderBadges(); }
     else renderPipeline();
   }
   function refresh() { state.shown = PAGE; saveView(); renderView(); }
@@ -1470,6 +1536,21 @@ Question: ${q}`;
     if (e.target.id === "next") Store.setEntry(sid, { next_date: e.target.value || null });
   });
 
+  // People who asked to be removed: the server sends short hashes of their keys (as in scripts/prebuild.mjs).
+  const personKey = (s) => String(s || "").trim().normalize("NFKD").toLowerCase().replace(/[^a-z0-9\u0590-\u05ff]+/g, "-").replace(/^-|-$/g, "");
+  async function loadHidden() {
+    const j = await fetch("/api/hidden").then((r) => r.json());
+    const hashes = new Set(j.hashes || []);
+    if (!hashes.size || !(window.crypto && crypto.subtle)) return;
+    const names = new Set(ORGS.flatMap((o) => (o.key_people || []).map((p) => p.name)));
+    for (const n of names) {
+      const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(personKey(n)));
+      const hex = [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 16);
+      if (hashes.has(hex)) HIDDEN_PEOPLE.add(n);
+    }
+    if (HIDDEN_PEOPLE.size && $("sheet").dataset.id) openOrg($("sheet").dataset.id, true);
+  }
+
   // ---------- boot ----------
   async function boot() {
     applyLang();
@@ -1495,13 +1576,21 @@ Question: ${q}`;
     }
     renderMine(); renderBadges(); renderView();
     if (h && BY_ID[h]) openOrg(h);
+    else if (h && !["explore", "signals", "pipeline", "ask"].includes(h)) toast(t("t.noorg"));
     window.addEventListener("hashchange", () => {
       const k = location.hash.slice(1);
-      if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); }
+      if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); } else if (k) toast(t("t.noorg"));
     });
     fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
     const checks = [Store.init()];
-    if (window.LANDSCAPE_SITE) checks.push(fetch("/api/ask").then((r) => r.json()).then((j) => { SERVER_AI = !!j.ready; }).catch(() => {}));
+    if (window.LANDSCAPE_SITE) {
+      checks.push(fetch("/api/ask").then((r) => r.json()).then((j) => { SERVER_AI = !!j.ready; }).catch(() => {}));
+      fetch("/api/session").then((r) => r.json()).then((j) => {
+        const cta = document.querySelector("[data-cta]");
+        if (cta && j.signedIn) { cta.href = "/me"; cta.textContent = "הפרופיל שלי"; }
+      }).catch(() => {});
+      loadHidden().catch(() => {});
+    }
     Promise.all(checks).finally(() => { askChecked = true; renderAskBtn(); changed(); });
   }
   boot();

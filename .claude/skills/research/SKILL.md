@@ -39,6 +39,8 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    - `confidence`: high = official site + independent source agree; medium = one solid source; low = thin.
    - `key_people`: only publicly announced business roles, each with `role_type`
      (founder / executive / creative_lead / production / marketing / other), `source` and `as_of`.
+     `role` is the title as published ("CEO", "Head of Production"); context such as when someone was
+     appointed or where the title was reported goes in `note`, never in brackets inside `role`.
      Prioritise people who *commission* work: heads of production, agency producers, marketing heads.
      No personal phones or emails, ever.
    - Fill `contact_url` (public contact page), `careers_url` and `reel_url` when they exist.

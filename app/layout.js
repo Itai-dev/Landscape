@@ -1,11 +1,14 @@
 import "./globals.css";
+import "./chrome.css";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
+import MenuCloser from "@/components/MenuCloser";
 import { supabaseConfig } from "@/lib/config";
+import { FOOTER, TAGLINE } from "@/lib/chrome.mjs";
 
 export const metadata = {
   title: { default: "Landscape · תעשיית הקריאייטיב בישראל", template: "%s · Landscape" },
-  description: "אנשים, סטודיואים, חברות הפקה, מותגים וסוכנויות בתעשיית הקריאייטיב בישראל. פרופיל מקצועי בדקה, ישר מקורות החיים או מהפורטפוליו.",
+  description: "אנשים, סטודיואים, חברות הפקות, מותגים וסוכנויות בתעשיית הקריאייטיב בישראל. פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.",
   icons: { icon: "/favicon.svg" },
 };
 
@@ -27,16 +30,13 @@ export default function RootLayout({ children }) {
       <body>
         <Providers supabase={cfg}>
           <Header />
+          <MenuCloser />
           <main>{children}</main>
-          <footer>
+          <footer className="foot">
             <div className="wrap">
-              <a className="brand" href="/">Landscape<span>.</span></a>
-              <a href="/people">אנשים</a>
-              <a href="/companies">חברות</a>
-              <a href="/companies#signals">עדכונים</a>
-              <a href="/onboard">הצטרפות</a>
-              <a href="/privacy">פרטיות</a>
-              <span className="fine">תעשיית הקריאייטיב בישראל, במקום אחד</span>
+              <a className="brand" href="/" lang="en">Landscape<span>.</span></a>
+              {FOOTER.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}
+              <span className="fine">{TAGLINE}</span>
             </div>
           </footer>
         </Providers>

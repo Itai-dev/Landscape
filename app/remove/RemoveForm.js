@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const ERR = {
-  not_configured: "השליחה לא זמינה כרגע. מה שמילאתם נשאר כאן, אפשר לנסות שוב בעוד כמה דקות.",
+  not_configured: "אי אפשר לשלוח את הבקשה מהאתר הזה כרגע.",
   save_failed: "השמירה נכשלה. מה שמילאתם נשאר כאן, אפשר לנסות שוב.",
   confirm: "צריך לסמן את התיבה.",
   not_found: "לא מצאנו את האדם הזה במאגר. אולי כבר הוסר.",
@@ -30,7 +30,7 @@ export default function RemoveForm({ id, email = "" }) {
   if (state.done) {
     return (
       <div className="notice ok" role="status">
-        <b>הבקשה התקבלה.</b> הכרטיס יורד מהאתר, והשם יוסר מרשומת החברה בסבב העדכון הקרוב.
+        <b>הבקשה התקבלה.</b> השם ירד מעמוד האנשים ומדפי החברות בתוך דקה, וימחק מרשומת החברה במאגר בעדכון הקרוב.
       </div>
     );
   }
@@ -52,7 +52,7 @@ export default function RemoveForm({ id, email = "" }) {
       {state.error && (
         <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>
           {state.error}
-          {email && <> אפשר גם לכתוב ל־<a href={`mailto:${email}`} className="ltr">{email}</a>.</>}
+          {email && <> אפשר לכתוב ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־Landscape")}`} className="ltr">{email}</a> ולציין את השם.</>}
         </div>
       )}
       <button className="btn primary" disabled={!confirm || state.busy}>

@@ -80,9 +80,11 @@ export default function Onboard({ claim = null }) {
   const Claim = () =>
     claim ? (
       <div className="notice">
-        בונים את הפרופיל של <b><bdi>{claim.name}</bdi></b>, לפי מה שפורסם:{" "}
-        {claim.roles.map((r, i) => <span key={i}>{i > 0 ? " · " : ""}<bdi>{r.role}</bdi>, <bdi>{r.org}</bdi></span>)}.
-        הכרטיס מפרסומים פומביים יוחלף בפרופיל המלא.
+        <p style={{ margin: 0 }}>בונים את הפרופיל של <b><bdi>{claim.name}</bdi></b>, לפי מה שפורסם:</p>
+        <ul style={{ margin: "6px 0", paddingInlineStart: 20 }}>
+          {claim.roles.map((r, i) => <li key={i}>{r.shown ? <><bdi>{r.shown}</bdi> ב־</> : null}<bdi>{r.org}</bdi></li>)}
+        </ul>
+        <p style={{ margin: 0 }}>הכרטיס מפרסומים פומביים יוחלף בפרופיל המלא.</p>
       </div>
     ) : null;
 

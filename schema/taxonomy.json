@@ -194,7 +194,7 @@
     "commercial-production": "הפקת פרסומות",
     "content-studio": "סטודיו תוכן וסושיאל",
     "photography": "צילום",
-    "ai-creative": "הפקה יצירתית עם AI",
+    "ai-creative": "יצירה עם AI",
     "packaging": "עיצוב אריזות",
     "typography": "טיפוגרפיה",
     "gen-ai-video": "AI גנרטיבי — וידאו",
@@ -283,5 +283,154 @@
     "Yokneam": "יקנעם",
     "Nazareth": "נצרת",
     "Beit Shemesh": "בית שמש"
+  },
+  "craft_aliases": {
+    "animation-2d": [
+      "אנימציה דו ממדית",
+      "אנימציית דו ממד",
+      "2d",
+      "2d animation"
+    ],
+    "animation-3d": [
+      "אנימציה תלת ממדית",
+      "אנימציית תלת ממד",
+      "3d animation"
+    ],
+    "motion-design": [
+      "מושן",
+      "מושן דיזיין",
+      "מושן גרפיקס",
+      "motion",
+      "motion design",
+      "motion graphics"
+    ],
+    "vfx": [
+      "vfx",
+      "אפקטים",
+      "אפקטים ויזואליים",
+      "visual effects"
+    ],
+    "cgi-3d": [
+      "cgi",
+      "תלת ממד",
+      "3d",
+      "הדמיות",
+      "הדמיות תלת ממד"
+    ],
+    "post-production": [
+      "פוסט",
+      "פוסט פרודקשן",
+      "post",
+      "post production"
+    ],
+    "color-grading": [
+      "קולור",
+      "צביעה",
+      "color grading"
+    ],
+    "editing": [
+      "עריכה",
+      "עריכת וידאו",
+      "editing"
+    ],
+    "sound-design": [
+      "סאונד",
+      "עיצוב סאונד",
+      "פוסט סאונד",
+      "sound",
+      "sound design"
+    ],
+    "music-production": [
+      "הפקה מוזיקלית",
+      "music production"
+    ],
+    "branding": [
+      "מיתוג",
+      "מיתוג וזהות",
+      "branding",
+      "brand identity"
+    ],
+    "graphic-design": [
+      "עיצוב גרפי",
+      "גרפיקה",
+      "graphic design"
+    ],
+    "illustration": [
+      "איור",
+      "איורים",
+      "illustration"
+    ],
+    "digital-design": [
+      "ux",
+      "ui",
+      "ux ui",
+      "עיצוב דיגיטלי",
+      "digital design"
+    ],
+    "creative-technology": [
+      "קריאייטיב טק",
+      "creative tech",
+      "creative technology"
+    ],
+    "experiential": [
+      "חוויה",
+      "אירועים",
+      "מיצבים",
+      "experiential"
+    ],
+    "xr": [
+      "ar",
+      "vr",
+      "xr",
+      "מציאות רבודה",
+      "מציאות מדומה"
+    ],
+    "game-art": [
+      "ארט למשחקים",
+      "game art"
+    ],
+    "game-development": [
+      "משחקים",
+      "פיתוח משחקים",
+      "games",
+      "gaming"
+    ],
+    "film-production": [
+      "קולנוע",
+      "טלוויזיה",
+      "הפקת קולנוע",
+      "film production"
+    ],
+    "commercial-production": [
+      "הפקת פרסומות",
+      "פרסומות",
+      "commercials"
+    ],
+    "content-studio": [
+      "סטודיו תוכן"
+    ],
+    "photography": [
+      "צילום",
+      "צלם",
+      "photography"
+    ],
+    "ai-creative": [
+      "ai",
+      "בינה מלאכותית",
+      "genai",
+      "gen ai",
+      "יצירה עם ai"
+    ],
+    "packaging": [
+      "אריזות",
+      "עיצוב אריזות",
+      "packaging"
+    ],
+    "typography": [
+      "טיפוגרפיה",
+      "פונטים",
+      "typography",
+      "type design"
+    ]
   }
 }
