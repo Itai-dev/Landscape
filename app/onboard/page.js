@@ -1,4 +1,5 @@
 import Onboard from "./Onboard";
+import RefCapture from "@/components/RefCapture";
 import { seedById, orgLabel, roleHe } from "@/lib/people";
 
 export const metadata = { title: "בניית פרופיל" };
@@ -12,6 +13,7 @@ export default async function Page({ searchParams }) {
     : null;
   return (
     <div className="wrap narrow">
+      <RefCapture />
       <Onboard claim={claim} />
     </div>
   );

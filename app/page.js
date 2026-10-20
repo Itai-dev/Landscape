@@ -1,6 +1,7 @@
 import SignupForm from "@/components/SignupForm";
 import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
+import SurveyBanner from "@/components/SurveyBanner";
 import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon, SparkIcon } from "@/components/Icons";
 import { craftLabel } from "@/lib/taxonomy";
 import { STATS, companiesWithCraft } from "@/lib/companies";
@@ -28,6 +29,7 @@ export default function Home() {
             <button className="go" aria-label="חיפוש"><SearchIcon size={22} /></button>
           </form>
         </div>
+        <SurveyBanner />
       </section>
 
       <section className="wrap section tight" aria-labelledby="crafts-h">

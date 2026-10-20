@@ -23,4 +23,5 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: node scripts/test-survey.mjs
       - run: npm run build
