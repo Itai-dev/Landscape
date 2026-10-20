@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import { craftLabel, openToLabel } from "@/lib/taxonomy";
 import { initials, coverClass } from "@/components/PersonCard";
+import { VerifiedIcon } from "@/components/Icons";
 
 async function load(slug) {
   const sb = await serverClient();
@@ -32,12 +33,13 @@ export default async function Profile({ params }) {
     <div className="wrap narrow stack">
       {mine && (
         <div className="notice">
-          זה הפרופיל שלך ({p.visibility === "public" ? "ציבורי" : p.visibility === "members" ? "גלוי לחברי קהילה" : "מוסתר"}). <a href="/me">עריכה</a>
+          זה הפרופיל שלכם ({p.visibility === "public" ? "ציבורי" : p.visibility === "members" ? "גלוי לחברי קהילה" : "מוסתר"}). <a href="/me">עריכה</a>
         </div>
       )}
       <div className="phead">
         <div className={`avatar lg ${coverClass(p.slug)}`} aria-hidden>{initials(p.name)}</div>
         <h1>{p.name}</h1>
+        <span className="badge verified" title="הפרופיל נבנה ואושר על ידי בעליו"><VerifiedIcon size={14} /> פרופיל מאומת</span>
         {p.headline && <div className="muted" style={{ fontSize: 18 }}>{p.headline}</div>}
         {p.city && <div className="small muted">{p.city}</div>}
         <div className="meta">
@@ -55,7 +57,7 @@ export default async function Profile({ params }) {
       </div>
       <hr className="divider" />
 
-      {p.bio && <div className="card"><h2>על עצמי</h2><p style={{ whiteSpace: "pre-line", margin: 0 }}>{p.bio}</p></div>}
+      {p.bio && <div className="card"><h2>קצת עליי</h2><p style={{ whiteSpace: "pre-line", margin: 0 }}>{p.bio}</p></div>}
 
       {p.experience.length > 0 && (
         <div className="card">
@@ -78,7 +80,7 @@ export default async function Profile({ params }) {
         </div>
       )}
 
-      <p className="small muted">יצירת קשר דרך הפלטפורמה תיפתח בקרוב. אנחנו לא מציגים מיילים וטלפונים.</p>
+      <p className="small muted center">יצירת קשר דרך האתר תיפתח בקרוב. אנחנו לא מציגים מיילים וטלפונים.</p>
     </div>
   );
 }

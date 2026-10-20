@@ -47,6 +47,9 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
      if a need matches nothing there, add a `match` pattern rather than a new free-text variant.
    - Ingest only adds: lists are unioned and notes appended. To remove something stale (an old agency,
      a person who left, a dead website) edit `data/orgs/<id>.json` directly and say so in the PR.
+   - Removal requests: people can ask to be taken off `/people` (stored in the Supabase table `removal_requests`:
+     `seed_id`, `name`, `org_ids`). When the owner hands you that list, delete those people from `key_people` in the
+     listed orgs and never re-add them. Never research private details about them.
    - Ids never change once merged. If two records turn out to be the same org, keep one and add
      `"old-id": "kept-id"` to `data/redirects.json`.
    - `relations.target`: an existing org id where one matches, otherwise the plain name.

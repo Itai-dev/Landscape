@@ -6,7 +6,7 @@
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 </head>
 <body>
-<title>Landscape Israel</title>
+<title>חברות · Landscape</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +42,8 @@
   --f-body: "Mona Sans", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --tabbar: 62px;
+  --max: 1200px;
+  --gutter: clamp(20px, 5vw, 48px);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -61,7 +63,7 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  margin: 0; overflow-x: clip;
   padding-bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 16px);
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
@@ -69,20 +71,39 @@ a { color: var(--accent); }
 button, input, select, textarea { font: inherit; color: inherit; }
 button { cursor: pointer; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.wrap { max-width: 1120px; margin: 0 auto; }
+.wrap { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin: 0 auto;
+  padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px)) max(var(--gutter), env(safe-area-inset-right, 0px)); }
 .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
 .muted { color: var(--muted); }
 
-header.top { padding-block: 18px 4px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
-header.top h1 { font-family: var(--f-display); font-weight: 800; font-size: clamp(24px, 6vw, 32px); line-height: 1.1; margin: 0; letter-spacing: -.025em; }
-header.top h1 span { font-weight: 400; color: var(--muted); }
-header.top .side { display: flex; gap: 10px; align-items: baseline; }
-header.top .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
-.langbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; min-height: 32px; padding: 2px 12px; font-size: 13px; }
+/* Top bar: same as the Next.js site (app/globals.css .top) */
+header.top { position: sticky; top: 0; z-index: 12; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: saturate(1.4) blur(12px); }
+header.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+.brand { font-weight: 800; font-size: 22px; color: var(--ink); letter-spacing: -.035em; flex: none; text-decoration: none; }
+.brand span { color: var(--accent); }
+.sitenav { display: flex; gap: 4px; align-items: center; }
+.sitenav a { color: var(--ink); padding: 8px 16px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; }
+.sitenav a:hover, .sitenav a[aria-current="page"] { background: var(--soft); }
+header.top .end { margin-inline-start: auto; display: flex; align-items: center; gap: 8px; }
+.cta { background: var(--ink); color: var(--bg); padding: 0 24px; min-height: 44px; display: inline-flex; align-items: center; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+.cta:hover { background: var(--accent); color: var(--accent-ink); }
+html:not([data-site]) .sitenav, html:not([data-site]) .cta { display: none; }
+html:not([data-site]) .brand { pointer-events: none; }
+@media (max-width: 560px) {
+  header.top .wrap { gap: 8px; min-height: 64px; }
+  .brand { font-size: 19px; }
+  .sitenav a { padding: 8px 10px; font-size: 14px; }
+  .cta { padding: 0 16px; min-height: 40px; font-size: 14px; }
+  .langbtn { padding-inline: 10px; }
+}
+@media (max-width: 359px) { .brand span { display: none; } .sitenav a { padding-inline: 8px; } }
+.langbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; min-height: 36px; padding: 2px 12px; font-size: 13px; font-weight: 600; }
+.meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
 .notice { margin-top: 8px; font-size: 13px; color: var(--muted); background: var(--soft); border: 0; border-radius: 12px; padding: 10px 14px; }
 
 /* sticky controls */
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px 8px; display: grid; gap: 10px; }
+.bar { position: sticky; top: 64px; z-index: 5; background: var(--bg); padding-block: 10px 8px; display: grid; gap: 10px; }
+@media (min-width: 561px) { .bar { top: 72px; } }
 .search { display: flex; align-items: center; gap: 8px; background: var(--soft); border: 1px solid transparent; border-radius: 999px; padding-inline: 18px 6px; min-height: 52px; transition: background .15s, box-shadow .15s; }
 .search:hover { background: var(--soft-2); }
 .search:focus-within { background: var(--surface); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
@@ -185,18 +206,22 @@ main { padding-block: 6px 24px; }
 .examples button { white-space: normal; text-align: start; }
 
 /* ask home */
-.home { max-width: 760px; }
-.hero { padding-block: 22px 8px; display: grid; gap: 12px; }
+.home { max-width: 800px; margin-inline: auto; }
+.hero { padding-block: clamp(24px, 6vw, 64px) 8px; display: grid; gap: 16px; text-align: center; justify-items: center; }
+.hero > * { width: 100%; }
 .hero h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 7vw, 48px); line-height: 1.06; letter-spacing: -.035em; text-wrap: balance; }
-.hero p { margin: 0; color: var(--muted); font-size: 14px; }
-.askbox { display: flex; align-items: flex-end; gap: 8px; background: var(--soft); border: 1px solid transparent; border-radius: 28px; padding: 8px; padding-inline: 22px 8px; transition: background .15s, box-shadow .15s; }
+.hero p { margin: 0 auto; color: var(--muted); font-size: 16px; max-width: 560px; }
+.metarow { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: -4px; }
+#lang2 { display: none; }
+@media (max-width: 560px) { html[data-site] #lang { display: none; } html[data-site] #lang2 { display: inline-flex; align-items: center; } }
+.askbox { text-align: start; display: flex; align-items: flex-end; gap: 8px; background: var(--soft); border: 1px solid transparent; border-radius: 28px; padding: 8px; padding-inline: 22px 8px; transition: background .15s, box-shadow .15s; }
 .askbox:hover { background: var(--soft-2); }
 .askbox:focus-within { background: var(--surface); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .askbox textarea { flex: 1; min-width: 0; border: 0; background: transparent; resize: none; outline: none; font-size: 17px; line-height: 1.4; padding-block: 8px; max-height: 160px; }
 .askgo { flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); font-size: 20px; font-weight: 600; }
 .askgo:hover { background: var(--accent-hover); }
 .askgo[disabled] { opacity: .4; }
-.prompts { display: flex; flex-wrap: wrap; gap: 6px; }
+.prompts { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
 .prompts button { flex: 0 1 auto; max-width: 100%; white-space: normal; text-align: start; line-height: 1.3; padding-block: 7px; }
 .turn { display: grid; gap: 12px; padding-block: 18px; border-top: 1px solid var(--line); }
 .turn .q { font-weight: 600; font-size: 17px; }
@@ -278,21 +303,29 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 .toast { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 12px); background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 999px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
 </style>
 
-<div class="wrap">
-  <header class="top">
-    <h1>Landscape <span data-i18n="app.sub">· Israel’s creative industry</span></h1>
-    <div class="side">
-      <div class="meta" id="meta">Loading…</div>
+<script>if (window.LANDSCAPE_SITE) document.documentElement.setAttribute("data-site", "");</script>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Landscape">Landscape<span>.</span></a>
+    <nav class="sitenav" aria-label="ניווט ראשי">
+      <a href="/people" data-i18n="nav.people">People</a>
+      <a href="/companies" aria-current="page" data-i18n="nav.companies">Companies</a>
+    </nav>
+    <div class="end">
       <button class="langbtn" type="button" id="lang" lang="en">English</button>
+      <a class="cta" href="/onboard" data-i18n="nav.join">Join</a>
     </div>
-  </header>
+  </div>
+</header>
+<div class="wrap">
   <div class="notice" id="storeNotice" hidden></div>
 
   <!-- ASK (home) -->
   <section id="v-ask" class="home" aria-label="Ask">
     <div class="hero">
       <h2 data-i18n="home.h">What are you looking for?</h2>
-      <p data-i18n="home.sub">Ask in plain words. Answers come from the map, with the companies behind them.</p>
+      <p data-i18n="home.sub">Ask in plain words. Answers come from the directory, with the companies behind them.</p>
+      <div class="metarow"><span class="meta" id="meta">Loading…</span><button class="langbtn" type="button" id="lang2" lang="en">English</button></div>
       <form class="askbox" id="askForm">
         <textarea id="askQ" rows="2" dir="auto" data-i18n-ph="home.ph" placeholder="e.g. Brands that need 3D product visuals this quarter" aria-label="Question"></textarea>
         <button class="askgo" id="askGo" type="submit" aria-label="Ask">↑</button>
@@ -388,20 +421,20 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   // ---------- strings (English / Hebrew) ----------
   const I18N = {
     en: {
-      "app.sub": "· Israel’s creative industry", "loading": "Loading…", "loadfail": "Couldn’t load the map data. Reload to try again.",
-      "meta": "{0} organizations · {1} signals · updated {2}",
+      "app.sub": "· Israel’s creative industry", "nav.people": "People", "nav.companies": "Companies", "nav.join": "Join", "loading": "Loading…", "loadfail": "Couldn’t load the data. Reload to try again.",
+      "meta": "{0} companies · {1} signals · updated {2}",
       "search.ph": "Search, or ask a question…", "ask.btn": "Ask ✦",
       "lens.brands": "Brands", "lens.collab": "Collaborators", "lens.all": "All",
       "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts to rank by fit", "mine.remove": "Remove {0}",
       "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
-      "tab.ask": "Ask", "tab.explore": "Browse", "tab.signals": "Signals",
-      "home.h": "What are you looking for?", "home.sub": "Ask in plain words. Answers come from the map, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
-      "home.week": "This week", "home.offline": "AI answers work when Landscape is opened in claude.ai. Showing the closest matches from the map for now.", "home.nores": "Nothing in the map matches that yet. Try other words, or browse.",
+      "tab.ask": "Ask", "tab.explore": "All companies", "tab.signals": "Signals",
+      "home.h": "What are you looking for?", "home.sub": "Ask in plain words. Answers come from the directory, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
+      "home.week": "This week", "home.offline": "AI answers work when Landscape is opened in claude.ai. Showing the closest matches from the directory for now.", "home.nores": "Nothing in the directory matches that yet. Try other words, or browse.",
       "home.p.need": "Who needs {0} right now?", "home.p.agency": "Which agencies commission {0}?", "home.p.collab": "Studios I could team up with on {0}",
-      "step.search": "Searching the map{0}", "step.org": "Reading about {0}", "step.signals": "Checking recent signals", "step.pipe": "Looking at your pipeline", "step.write": "Writing the answer", "step.start": "Thinking",
-      "r.open": "Open", "r.pitch": "✎ Pitch", "r.match": "Matches: {0}", "tab.pipeline": "Pipeline", "export": "Export my data",
+      "step.search": "Searching the directory{0}", "step.org": "Reading about {0}", "step.signals": "Checking recent signals", "step.pipe": "Looking at your pipeline", "step.write": "Writing the answer", "step.start": "Thinking",
+      "r.open": "Open", "r.pitch": "✎ Pitch", "r.match": "Matches: {0}", "tab.pipeline": "Tracking", "export": "Export my data",
       "k1.studio": "Studio", "k1.production_company": "Production co.", "k1.startup": "Startup", "k1.agency": "Agency", "k1.client": "Brand", "k1.community": "Community",
       "km.studio": "Studios", "km.production_company": "Production", "km.startup": "Startups", "km.agency": "Agencies", "km.client": "Brands", "km.community": "Community",
       "status.acquired": "acquired", "status.closed": "closed", "status.merged": "merged", "status.unknown": "status unknown",
@@ -418,7 +451,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
       "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.status": "Status", "f.funding": "Funding", "f.public": "Public", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
       "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page",
-      "sig.notinmap": "· not in the map yet", "sig.save": "☆ Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
+      "sig.notinmap": "· not in the directory yet", "sig.save": "☆ Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
       "sig.footer": "The weekly research run adds new signals on Sundays. Each one links to its source.", "sig.empty.h": "No signals yet", "sig.empty.p": "The research run adds new ones every Sunday.",
       "credit.agency": "Agency", "credit.production": "Production", "credit.studio": "Studio", "credit.post": "Post", "credit.director": "Director",
       "pipe.summary": "{0} saved", "pipe.duecount": " · {0} due", "pipe.empty.h": "Your pipeline is empty", "pipe.empty.p": "Save a brand or studio from Explore or Signals. Notes and follow-ups stay private to you.", "pipe.find": "Find brands to pitch", "pipe.duenow": "Due now", "pipe.due": "due ", "pipe.snooze": "+1 week", "pipe.done": "Done",
@@ -428,57 +461,57 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "p.title": "Pitch {0}", "p.sub": "One short, specific message. You edit it and send it yourself — Landscape never sends anything.", "p.why": "Why now", "p.other": "Something else (write it)", "p.whyph": "e.g. Saw your new summer campaign on ICE", "p.who": "Who", "p.viaag": "Via their agency · {0}", "p.general": "No name (general)",
       "p.me": "About you (one line)", "p.meph": "e.g. Noa, motion designer in Tel Aviv, 8 years in brand work", "p.show": "What to show", "p.addsample": "+ Add a work sample", "p.titleph": "Title, e.g. Bezeq launch, 3D product spots", "p.urlph": "Link (Vimeo, Behance…)", "p.lang": "Language",
       "p.go": "Write the draft", "p.draft": "Draft", "p.save": "Save draft · follow up in 1 week", "p.writing": "Writing…", "p.done": "Edit it, then copy and send it yourself.", "p.needwhy": "Add a reason to reach out now.", "p.needsample": "Pick or add one work sample to show.", "p.fail": "Couldn’t finish. Try again.",
-      "err.not_granted": "Allow Claude for this page first.", "err.rate_limited": "Too many requests right now. Try again in a minute.", "err.sampling_disabled": "Claude isn’t available on this account.", "err.prompt_too_large": "Too much text. Shorten it.", "err.refused": "Claude declined this one. Try rewording.", "err.tools_unavailable": "This view can’t run map lookups. Try the claude.ai app.",
+      "err.not_granted": "Allow Claude for this page first.", "err.rate_limited": "Too many requests right now. Try again in a minute.", "err.sampling_disabled": "Claude isn’t available on this account.", "err.prompt_too_large": "Too much text. Shorten it.", "err.refused": "Claude declined this one. Try rewording.", "err.tools_unavailable": "This view can’t search the directory. Try the claude.ai app.",
       "r.title": "Report a mistake", "r.about": "About {0}. The next research run checks reports and fixes the record.", "r.what": "What’s wrong?", "r.ph": "e.g. They moved to McCann in 2026; the website is dead; wrong city", "r.src": "Source (optional)", "r.srcph": "Link that shows the right info", "r.send": "Send report",
-      "ask.title": "Ask the map", "ask.sub": "Answers use only the map’s data and list the companies they’re based on.", "ask.ph": "e.g. Which brands buy animation and work with McCann?", "ask.go": "Ask", "ask.thinking": "Looking through the map… this can take up to a minute.", "ask.found": "In the map",
+      "ask.title": "Ask the directory", "ask.sub": "Answers use only the directory’s data and list the companies they’re based on.", "ask.ph": "e.g. Which brands buy animation and work with McCann?", "ask.go": "Ask", "ask.thinking": "Looking through the directory… this can take up to a minute.", "ask.found": "In the directory",
       "ask.ex1": "Which brands buy animation or motion graphics, and through which agency?", "ask.ex2": "Who are the heads of production at the big agencies?", "ask.ex3": "Which studios have worked for telecom brands?", "ask.ex4": "What changed this month that could mean new work for a 3D artist?",
       "ago.today": "today", "ago.yesterday": "yesterday", "ago.d": "{0}d ago", "ago.w": "{0}w ago", "ago.mo": "{0}mo ago",
     },
     he: {
-      "app.sub": "· התעשייה היצירתית בישראל", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את נתוני המפה. טענו מחדש.",
-      "meta": "{0} ארגונים · {1} סיגנלים · עודכן {2}",
-      "search.ph": "חיפוש או שאלה…", "ask.btn": "שאלה ✦",
-      "lens.brands": "מותגים", "lens.collab": "שותפים ליצירה", "lens.all": "הכול",
-      "mine.label": "אני עושה", "mine.edit": "+ עריכה", "mine.pick": "+ בחרו תחומים כדי לדרג לפי התאמה", "mine.remove": "הסרת {0}",
-      "filters": "סינון", "sort.fit": "ההתאמה הטובה", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
-      "count": "{0} תוצאות", "count1": "תוצאה אחת", "more": "עוד",
-      "empty.h": "אין תוצאות", "empty.p": "נסו פחות מסננים, או חפשו באנגלית (לא לכל הארגונים יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
-      "tab.ask": "שאלו", "tab.explore": "עיון", "tab.signals": "סיגנלים",
-      "home.h": "מה אתם מחפשים?", "home.sub": "שאלו במילים פשוטות. התשובות מגיעות מהמפה, עם הארגונים שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
-      "home.week": "השבוע", "home.offline": "תשובות AI עובדות כשפותחים את Landscape ב-claude.ai. בינתיים מוצגות ההתאמות הקרובות מהמפה.", "home.nores": "עדיין אין במפה משהו שמתאים לזה. נסו מילים אחרות, או עיינו.",
+      "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
+      "meta": "{0} חברות · {1} סיגנלים · עודכן {2}",
+      "search.ph": "שם, תחום, עיר, או שאלה…", "ask.btn": "שאלו ✦",
+      "lens.brands": "מותגים", "lens.collab": "סטודיואים והפקה", "lens.all": "הכול",
+      "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחרו את התחומים שלכם, ונדרג לפי התאמה", "mine.remove": "הסרת {0}",
+      "filters": "סינון", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
+      "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
+      "empty.h": "אין תוצאות", "empty.p": "נסו פחות מסננים, או חפשו באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
+      "tab.ask": "שאלו", "tab.explore": "כל החברות", "tab.signals": "סיגנלים",
+      "home.h": "מה אתם מחפשים?", "home.sub": "שאלו במילים פשוטות. התשובות מגיעות מהמאגר, עם החברות שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
+      "home.week": "השבוע", "home.offline": "תשובות ה־AI עוד לא זמינות כאן. בינתיים מוצגות ההתאמות הקרובות מהמאגר.", "home.nores": "עדיין אין במאגר משהו שמתאים לזה. נסו מילים אחרות, או עברו לכל החברות.",
       "home.p.need": "מי צריך {0} עכשיו?", "home.p.agency": "אילו סוכנויות מזמינות {0}?", "home.p.collab": "סטודיואים לשיתוף פעולה ב{0}",
-      "step.search": "מחפש במפה{0}", "step.org": "קורא על {0}", "step.signals": "בודק סיגנלים אחרונים", "step.pipe": "בודק את הפייפליין שלך", "step.write": "כותב תשובה", "step.start": "חושב",
-      "r.open": "פתיחה", "r.pitch": "✎ פנייה", "r.match": "התאמה: {0}", "tab.pipeline": "פייפליין", "export": "ייצוא הנתונים שלי",
+      "step.search": "מחפשים במאגר{0}", "step.org": "קוראים על {0}", "step.signals": "בודקים סיגנלים אחרונים", "step.pipe": "בודקים את רשימת המעקב", "step.write": "כותבים תשובה", "step.start": "חושבים",
+      "r.open": "פתיחה", "r.pitch": "✎ פנייה", "r.match": "התאמה: {0}", "tab.pipeline": "מעקב", "export": "ייצוא הנתונים שלי",
       "k1.studio": "סטודיו", "k1.production_company": "חברת הפקות", "k1.startup": "סטארטאפ", "k1.agency": "סוכנות", "k1.client": "מותג", "k1.community": "קהילה",
       "km.studio": "סטודיואים", "km.production_company": "הפקות", "km.startup": "סטארטאפים", "km.agency": "סוכנויות", "km.client": "מותגים", "km.community": "קהילה",
       "status.acquired": "נרכש", "status.closed": "נסגר", "status.merged": "מוזג", "status.unknown": "סטטוס לא ידוע",
       "st.watch": "במעקב", "st.to_pitch": "לפנות", "st.contacted": "נוצר קשר", "st.in_talks": "בשיחות", "st.client": "לקוח", "st.passed": "ירד מהפרק", "st.saved": "שמור",
-      "sig.funding": "גיוס הון", "sig.acquisition": "רכישה", "sig.agency_move": "מעבר משרד פרסום", "sig.ownership": "בעלות", "sig.rebrand": "מיתוג מחדש", "sig.new_exec": "מנהל/ת שיווק חדש/ה", "sig.campaign": "קמפיין", "sig.launch": "השקה", "sig.hiring": "דרושים", "sig.award": "פרס", "sig.closure": "סגירה",
-      "sigf.all": "הכול", "sigf.hiring": "דרושים", "sigf.funding": "גיוסים", "sigf.agency_move": "מעברי משרדים", "sigf.new_exec": "אנשים", "sigf.campaign": "קמפיינים", "sigf.launch": "השקות", "sigf.rebrand": "מיתוגים", "sigf.ownership": "בעלות", "sigf.acquisition": "עסקאות",
+      "sig.funding": "גיוס הון", "sig.acquisition": "רכישה", "sig.agency_move": "החלפת משרד פרסום", "sig.ownership": "בעלות", "sig.rebrand": "מיתוג מחדש", "sig.new_exec": "מינוי בשיווק", "sig.campaign": "קמפיין", "sig.launch": "השקה", "sig.hiring": "דרושים", "sig.award": "פרס", "sig.closure": "סגירה",
+      "sigf.all": "הכול", "sigf.hiring": "דרושים", "sigf.funding": "גיוסים", "sigf.agency_move": "החלפות משרד", "sigf.new_exec": "מינויים", "sigf.campaign": "קמפיינים", "sigf.launch": "השקות", "sigf.rebrand": "מיתוגים", "sigf.ownership": "בעלות", "sigf.acquisition": "עסקאות",
       "card.buys": "קונים", "card.via": "דרך", "card.clients": "לקוחות",
       "fl.title": "סינון", "fl.type": "סוג", "fl.needs": "מה הם קונים", "fl.craft": "תחום", "fl.industry": "תעשייה", "fl.product": "מוצר (סטארטאפים)", "fl.city": "עיר", "fl.anycity": "כל הערים", "fl.show": "הצגת תוצאות",
-      "cr.title": "מה אתם עושים?", "cr.p": "בחרו כמה שרוצים. מותגים שקונים את זה יעלו לראש רשימת ההתאמה.", "done": "סיום", "close": "סגירה",
+      "cr.title": "מה אתם עושים?", "cr.p": "בחרו כמה שרוצים. מותגים שקונים את זה יעלו לראש הרשימה.", "done": "סיום", "close": "סגירה",
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים (תפקידים פומביים)",
-      "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהפייפליין",
-      "sh.followup": " · תזכורת {0}", "sh.save": "☆ שמירה לפייפליין", "sh.pitch": "✎ טיוטת פנייה", "sh.website": "אתר ↗", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם קונים", "sh.pickcrafts": "בחרו תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
-      "sh.ways": "דרכים פנימה", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים / מוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · ודאות {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
+      "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
+      "sh.followup": " · תזכורת {0}", "sh.save": "☆ שמירה למעקב", "sh.pitch": "✎ טיוטת פנייה", "sh.website": "אתר ↗", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם קונים", "sh.pickcrafts": "בחרו תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
+      "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים / מוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · ודאות {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
       "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "ציבורית", "f.raised": "גייסו ${0}M", "f.offices": "משרדים", "f.industry": "תעשייה",
       "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר",
-      "sig.notinmap": "· עדיין לא במפה", "sig.save": "☆ שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
-      "sig.footer": "המחקר השבועי מוסיף סיגנלים חדשים בימי ראשון. כל סיגנל מקושר למקור שלו.", "sig.empty.h": "עדיין אין סיגנלים", "sig.empty.p": "המחקר מוסיף חדשים בכל יום ראשון.",
+      "sig.notinmap": "· עדיין לא במאגר", "sig.save": "☆ שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
+      "sig.footer": "סיגנלים חדשים נוספים בכל יום ראשון. כל סיגנל מקושר למקור שלו.", "sig.empty.h": "עדיין אין סיגנלים", "sig.empty.p": "סיגנלים חדשים נוספים בכל יום ראשון.",
       "credit.agency": "משרד", "credit.production": "הפקה", "credit.studio": "סטודיו", "credit.post": "פוסט", "credit.director": "בימוי",
-      "pipe.summary": "{0} שמורים", "pipe.duecount": " · {0} לטיפול", "pipe.empty.h": "הפייפליין ריק", "pipe.empty.p": "שמרו מותג או סטודיו מתוך גילוי או סיגנלים. ההערות והתזכורות פרטיות רק לכם.", "pipe.find": "מצאו מותגים לפנות אליהם", "pipe.duenow": "לטיפול עכשיו", "pipe.due": "עד ", "pipe.snooze": "+שבוע", "pipe.done": "בוצע",
-      "export.title": "הנתונים שלכם", "export.p": "העתיקו ושמרו את ה-JSON הזה. הוא כולל את הפייפליין, ההערות והתחומים שלכם.", "copy": "העתקה", "copied": "הועתק", "selected": "מסומן. העתיקו מכאן.", "exported": "יוצא",
-      "notice.ro": "אפשר לעיין בהכול. כדי לשמור לפייפליין צריך הרשאת Contributor מהבעלים.", "notice.local": "הפייפליין נשמר רק במכשיר הזה. פתחו את Landscape ב-claude.ai כדי לשמור אותו באופן פרטי ומסונכרן.",
-      "t.saveerr": "השמירה נכשלה. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר לפייפליין · לפנות", "t.removed": "הוסר מהפייפליין", "t.hidden": "הסיגנל הוסתר לכולם", "t.shown": "הסיגנל מוצג שוב", "t.reportok": "תודה. נשלח לבדיקה במחקר הבא.", "t.reporterr": "השליחה נכשלה. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
+      "pipe.summary": "{0} במעקב", "pipe.duecount": " · {0} לטיפול", "pipe.empty.h": "רשימת המעקב ריקה", "pipe.empty.p": "שמרו מותג או סטודיו מתוך כל החברות או הסיגנלים. ההערות והתזכורות פרטיות, רק לכם.", "pipe.find": "מצאו מותגים לפנות אליהם", "pipe.duenow": "לטיפול עכשיו", "pipe.due": "עד ", "pipe.snooze": "+שבוע", "pipe.done": "בוצע",
+      "export.title": "הנתונים שלכם", "export.p": "העתיקו ושמרו את ה־JSON הזה. הוא כולל את רשימת המעקב, ההערות והתחומים שלכם.", "copy": "העתקה", "copied": "הועתק", "selected": "מסומן. העתיקו מכאן.", "exported": "יוצא",
+      "notice.ro": "אפשר לעיין בהכול. כדי לשמור למעקב צריך הרשאת Contributor מהבעלים.", "notice.local": "רשימת המעקב נשמרת רק במכשיר הזה. בקרוב: שמירה בחשבון, מסונכרנת בין מכשירים.",
+      "t.saveerr": "השמירה נכשלה. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר למעקב · לפנות", "t.removed": "הוסר מהמעקב", "t.hidden": "הסיגנל הוסתר לכולם", "t.shown": "הסיגנל מוצג שוב", "t.reportok": "תודה. נבדוק ונתקן בסבב העדכון הבא.", "t.reporterr": "השליחה נכשלה. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
       "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם — Landscape לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
       "p.me": "עליכם (שורה אחת)", "p.meph": "למשל: נועה, מעצבת מושן מתל אביב, 8 שנים בעבודה עם מותגים", "p.show": "מה להראות", "p.addsample": "+ הוספת עבודה", "p.titleph": "שם העבודה, למשל: השקת בזק, סרטוני מוצר בתלת־ממד", "p.urlph": "קישור (Vimeo, Behance…)", "p.lang": "שפה",
-      "p.go": "כתיבת טיוטה", "p.draft": "טיוטה", "p.save": "שמירת טיוטה · תזכורת בעוד שבוע", "p.writing": "כותב…", "p.done": "ערכו, העתיקו ושלחו בעצמכם.", "p.needwhy": "הוסיפו סיבה לפנות עכשיו.", "p.needsample": "בחרו או הוסיפו עבודה אחת להראות.", "p.fail": "לא הצלחנו לסיים. נסו שוב.",
-      "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "יותר מדי טקסט. קצרו.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במפה. נסו באפליקציית claude.ai.",
-      "r.title": "דיווח על טעות", "r.about": "לגבי {0}. המחקר הבא בודק את הדיווחים ומתקן.", "r.what": "מה לא נכון?", "r.ph": "למשל: עברו למקאן ב-2026; האתר לא עובד; עיר שגויה", "r.src": "מקור (לא חובה)", "r.srcph": "קישור שמראה את המידע הנכון", "r.send": "שליחה",
-      "ask.title": "שאלו את המפה", "ask.sub": "התשובות מבוססות רק על נתוני המפה, עם הארגונים שעליהם הן נשענות.", "ask.ph": "למשל: אילו מותגים קונים אנימציה ועובדים עם מקאן?", "ask.go": "שאלה", "ask.thinking": "מחפש במפה… זה יכול לקחת עד דקה.", "ask.found": "במפה",
-      "ask.ex1": "אילו מותגים קונים אנימציה או מושן, ודרך איזה משרד?", "ask.ex2": "מי מנהלי ההפקה במשרדי הפרסום הגדולים?", "ask.ex3": "אילו סטודיואים עבדו עם חברות תקשורת?", "ask.ex4": "מה השתנה החודש שיכול להביא עבודה לאמן/ית תלת־ממד?",
+      "p.go": "כתיבת טיוטה", "p.draft": "טיוטה", "p.save": "שמירת טיוטה · תזכורת בעוד שבוע", "p.writing": "כותבים…", "p.done": "ערכו, העתיקו ושלחו בעצמכם.", "p.needwhy": "הוסיפו סיבה לפנות עכשיו.", "p.needsample": "בחרו או הוסיפו עבודה אחת להראות.", "p.fail": "לא הצלחנו לסיים. נסו שוב.",
+      "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "יותר מדי טקסט. קצרו.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במאגר. נסו שוב מאוחר יותר.",
+      "r.title": "דיווח על טעות", "r.about": "לגבי {0}. סבב העדכון הבא בודק את הדיווחים ומתקן.", "r.what": "מה לא נכון?", "r.ph": "למשל: עברו למקאן ב-2026; האתר לא עובד; עיר שגויה", "r.src": "מקור (לא חובה)", "r.srcph": "קישור שמראה את המידע הנכון", "r.send": "שליחה",
+      "ask.title": "שאלו את המאגר", "ask.sub": "התשובות מבוססות רק על נתוני המאגר, עם החברות שעליהן הן נשענות.", "ask.ph": "למשל: אילו מותגים קונים אנימציה ועובדים עם מקאן?", "ask.go": "שאלה", "ask.thinking": "מחפשים במאגר… זה יכול לקחת עד דקה.", "ask.found": "במאגר",
+      "ask.ex1": "אילו מותגים קונים אנימציה או מושן, ודרך איזה משרד?", "ask.ex2": "מי מנהלי ההפקה במשרדי הפרסום הגדולים?", "ask.ex3": "אילו סטודיואים עבדו עם חברות תקשורת?", "ask.ex4": "מה השתנה החודש שיכול להביא עבודה לאמני תלת־ממד?",
       "ago.today": "היום", "ago.yesterday": "אתמול", "ago.d": "לפני {0} ימים", "ago.w": "לפני {0} שבועות", "ago.mo": "לפני {0} חודשים",
     },
   };
@@ -661,8 +694,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     document.documentElement.dir = LANG === "he" ? "rtl" : "ltr";
     document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
     document.querySelectorAll("[data-i18n-ph]").forEach((el) => (el.placeholder = t(el.dataset.i18nPh)));
-    $("lang").textContent = LANG === "he" ? "English" : "עברית";
-    $("lang").lang = LANG === "he" ? "en" : "he";
+    ["lang", "lang2"].forEach((id) => { $(id).textContent = LANG === "he" ? "English" : "עברית"; $(id).lang = LANG === "he" ? "en" : "he"; });
     if (ORGS.length) $("meta").textContent = t("meta", ORGS.length, BASE_SIGNALS.length, new Date(GENERATED).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" }));
   }
   function setLang(l) {
@@ -1271,7 +1303,9 @@ Question: ${q}`;
   // ---------- shell ----------
   function renderNotice() {
     const n = $("storeNotice");
-    if (Store.readOnly) { n.hidden = false; n.textContent = t("notice.ro"); }
+    // Only where it matters: the private tracking list.
+    if (state.tab !== "pipeline") n.hidden = true;
+    else if (Store.readOnly) { n.hidden = false; n.textContent = t("notice.ro"); }
     else if (Store.mode === "local") { n.hidden = false; n.textContent = t("notice.local"); }
     else n.hidden = true;
   }
@@ -1284,6 +1318,7 @@ Question: ${q}`;
   }
   function renderView() {
     ["ask", "explore", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = state.tab !== v));
+    renderNotice();
     document.querySelectorAll("nav.tabbar button").forEach((b) => (b.dataset.tab === state.tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
     if (state.tab === "ask") renderHome();
     else if (state.tab === "explore") renderExplore();
@@ -1301,7 +1336,7 @@ Question: ${q}`;
   $("askForm").addEventListener("submit", (e) => { e.preventDefault(); ask($("askQ").value); });
   $("askQ").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask($("askQ").value); } });
   $("askQ").addEventListener("input", autosize);
-  $("lang").addEventListener("click", () => setLang(LANG === "he" ? "en" : "he"));
+  ["lang", "lang2"].forEach((id) => $(id).addEventListener("click", () => setLang(LANG === "he" ? "en" : "he")));
   $("lens").addEventListener("click", (e) => { const b = e.target.closest("[data-lens]"); if (b) { state.lens = b.dataset.lens; state.kinds = []; refresh(); } });
   $("sort").addEventListener("change", (e) => { state.sort = e.target.value; refresh(); });
   $("openFilters").addEventListener("click", openFilters);
@@ -1314,7 +1349,7 @@ Question: ${q}`;
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !($("sheet").hidden && $("panel").hidden)) dismiss(); });
 
   document.addEventListener("click", async (e) => {
-    const b = e.target.closest("button, a"); if (!b || b.closest("nav.tabbar") || b.closest("#lens") || b.id === "askBtn" || b.id === "lang") return;
+    const b = e.target.closest("button, a"); if (!b || b.closest("nav.tabbar") || b.closest("#lens") || b.id === "askBtn" || b.id === "lang" || b.id === "lang2") return;
     const d = b.dataset;
     if (b.classList.contains("close")) return dismiss();
     if (d.goto) { closeAll(); return goTab(d.goto); }
@@ -1368,6 +1403,13 @@ Question: ${q}`;
     applyLang();
     const h = location.hash.slice(1);
     if (["explore", "signals", "pipeline"].includes(h)) state.tab = h;
+    // Links from the site search: /companies?q=…&craft=… open the full list, filtered.
+    const qp = new URLSearchParams(location.search);
+    if (qp.has("q") || qp.has("craft")) {
+      Object.assign(state, { tab: "explore", lens: "all", q: (qp.get("q") || "").slice(0, 80), kinds: [], inds: [], needs: [], city: "",
+        cats: TAX.categories[qp.get("craft")] ? [qp.get("craft")] : [] });
+      $("q").value = state.q;
+    }
     renderMine(); renderBadges(); renderView();
     if (h && BY_ID[h]) openOrg(h);
     window.addEventListener("hashchange", () => {

@@ -1,4 +1,5 @@
 import { craftLabel, openToLabel } from "@/lib/taxonomy";
+import { VerifiedIcon } from "@/components/Icons";
 
 export const initials = (name = "") =>
   name.trim().split(/\s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase() || "?";
@@ -10,7 +11,7 @@ export const coverClass = (seed = "") => {
   return `cover-${h % 6}`;
 };
 
-// Image-first card: a cover tile (headline on hover), then avatar + name + main craft.
+// A registered member: image-first card, verified badge, headline on hover.
 export default function PersonCard({ p }) {
   const craft = (p.crafts || [])[0];
   const open = (p.open_to || [])[0];
@@ -18,6 +19,7 @@ export default function PersonCard({ p }) {
     <a className="shot" href={`/p/${p.slug}`}>
       <div className={`thumb ${coverClass(p.slug)}`}>
         <span className="big" aria-hidden>{initials(p.name)}</span>
+        <span className="badge verified vbadge"><VerifiedIcon size={14} /> מאומת</span>
         {(p.headline || p.city) && (
           <div className="over">{[p.headline, p.city].filter(Boolean).join(" · ")}</div>
         )}
@@ -27,7 +29,7 @@ export default function PersonCard({ p }) {
         <b>{p.name}</b>
         {craft && <span className="tag">{craftLabel(craft)}</span>}
       </div>
-      {open && <div className="sub">{open === "hiring" ? openToLabel(open) : `פתוח/ה ל${openToLabel(open)}`}</div>}
+      {open && <div className="sub">{open === "hiring" ? openToLabel(open) : `זמינות: ${openToLabel(open)}`}</div>}
     </a>
   );
 }

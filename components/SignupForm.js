@@ -13,7 +13,7 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
   const [error, setError] = useState("");
 
   if (!configured) {
-    return <div className="notice">ההרשמה נפתחת בקרוב. בינתיים אפשר לשוטט ב<a href="/map/app.html">מפה</a>.</div>;
+    return <div className="notice">ההרשמה נפתחת בקרוב. בינתיים אפשר לעבור על <a href="/companies">החברות</a> ועל <a href="/people">האנשים</a> במאגר.</div>;
   }
   if (state === "sent") {
     return (
@@ -45,7 +45,7 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
   return (
     <form onSubmit={submit} className="stack" noValidate={false}>
       <div>
-        <label htmlFor="email">{compact ? "אימייל" : "האימייל שלך"}</label>
+        <label htmlFor="email">מייל</label>
         <input id="email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com"
           value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
@@ -59,10 +59,10 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
           שלחו לי קישור כניסה
         </button>
-        <span className="small muted">בלי סיסמה. נרשמים ונכנסים עם קישור במייל.</span>
+        <span className="small muted">בלי סיסמה: נכנסים עם קישור במייל.</span>
       </div>
       <p className="small muted">
-        בהרשמה את/ה מסכים/ה ל<a href="/privacy">מדיניות הפרטיות</a>. הפרופיל לא מתפרסם בלי אישור שלך.
+        ההרשמה כפופה ל<a href="/privacy">מדיניות הפרטיות</a>. הפרופיל לא מתפרסם בלי אישור.
       </p>
     </form>
   );

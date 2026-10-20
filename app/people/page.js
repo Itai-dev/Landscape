@@ -1,88 +1,110 @@
-import { serverClient, currentUser } from "@/lib/supabase/server";
 import PersonCard from "@/components/PersonCard";
+import SeedCard from "@/components/SeedCard";
 import { SearchIcon } from "@/components/Icons";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
+import { ROLE_TYPES, searchSeeds } from "@/lib/people";
+import { loadMembers, hiddenSeeds } from "@/lib/members";
 
-export const metadata = { title: "אנשים" };
+export const metadata = {
+  title: "אנשים",
+  description: "אנשי מקצוע בתעשיית הקריאייטיב בישראל: מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק.",
+};
 
-const POPULAR = ["motion-design", "animation-3d", "branding", "vfx", "editing", "sound-design", "illustration", "digital-design", "ai-creative"];
-
-function Intro() {
-  return (
-    <>
-      <div className="crumbs"><a href="/">דף הבית</a> / <b>אנשים</b></div>
-      <h1 style={{ marginBlockEnd: 8 }}>אנשים בתעשייה</h1>
-      <p className="muted" style={{ maxWidth: "60ch" }}>מושן, אנימציה, פוסט, מיתוג, סאונד ועוד. מחפשים לפי שם, תחום, כלי או עיר.</p>
-    </>
-  );
-}
+const PAGE = 24;
 
 export default async function People({ searchParams }) {
   const sp = await searchParams;
-  const q = String(sp?.q || "").slice(0, 80);
+  const q = String(sp?.q || "").slice(0, 80).trim();
   const craft = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
-  const sb = await serverClient();
+  const role = ROLE_TYPES.some((r) => r.slug === sp?.role) ? sp.role : "";
+  const page = Math.max(1, Math.min(50, Number.parseInt(sp?.page, 10) || 1));
 
-  if (!sb) {
-    return (
-      <div className="wrap stack">
-        <Intro />
-        <div className="notice">ספריית האנשים נפתחת בקרוב, יחד עם ההרשמה. בינתיים: <a href="/map/app.html">המפה</a>.</div>
-      </div>
-    );
-  }
-
-  const user = await currentUser(sb);
-  let query = sb
-    .from("profiles")
-    .select("slug, name, headline, city, crafts, open_to")
-    .neq("visibility", "hidden")
-    .order("updated_at", { ascending: false })
-    .limit(60);
-  // Strip characters that have meaning in PostgREST filter syntax.
-  const term = q.replace(/[%,()*\\:."']/g, " ").trim();
-  if (term) query = query.or(`name.ilike.%${term}%,headline.ilike.%${term}%,bio.ilike.%${term}%,city.ilike.%${term}%`);
-  if (craft) query = query.contains("crafts", [craft]);
-  const { data: people, error } = await query;
-  const craftHref = (c) => `/people?${new URLSearchParams({ ...(q ? { q } : {}), ...(c ? { craft: c } : {}) })}`;
+  const [{ configured, user, members, error }, hidden] = await Promise.all([
+    role ? { configured: true, user: null, members: [], error: null } : loadMembers({ q, craft }),
+    hiddenSeeds(),
+  ]);
+  const seeds = searchSeeds({ q, craft, role, exclude: hidden });
+  const shown = seeds.slice(0, page * PAGE);
+  const href = (over) => {
+    const p = { ...(q ? { q } : {}), ...(craft ? { craft } : {}), ...(role ? { role } : {}), ...over };
+    Object.keys(p).forEach((k) => !p[k] && delete p[k]);
+    const s = new URLSearchParams(p).toString();
+    return s ? `/people?${s}` : "/people";
+  };
+  const filtered = Boolean(q || craft || role);
 
   return (
-    <div className="wrap stack">
-      <Intro />
-      <div className="popular" style={{ marginBlockStart: 0 }}>
-        <b>פופולרי:</b>
-        <a className={`tag${craft ? "" : " on"}`} href={craftHref("")}>הכול</a>
-        {POPULAR.map((c) => <a key={c} className={`tag${craft === c ? " on" : ""}`} href={craftHref(c)}>{craftLabel(c)}</a>)}
+    <div className="wrap">
+      <div className="pagehead">
+        <h1>אנשים בתעשייה</h1>
+        <p>מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק. לפי שם, תפקיד, חברה או תחום.</p>
       </div>
-      <form className="filters" role="search" action="/people">
+
+      <form className="toolbar" role="search" action="/people">
         <div className="psearch">
-          <input type="search" name="q" defaultValue={q} placeholder="שם, תחום, כלי, עיר…" aria-label="חיפוש אנשים" />
-          <button className="go" aria-label="חיפוש"><SearchIcon /></button>
+          <input type="search" name="q" defaultValue={q} placeholder="שם, תפקיד, חברה או תחום" aria-label="חיפוש אנשים" />
+          <button className="go" aria-label="חיפוש"><SearchIcon size={20} /></button>
         </div>
         <select name="craft" defaultValue={craft} aria-label="תחום">
           <option value="">כל התחומים</option>
           {CRAFTS.map((c) => <option key={c.slug} value={c.slug}>{c.he}</option>)}
         </select>
+        {role && <input type="hidden" name="role" value={role} />}
       </form>
-      <hr className="divider" />
-      {!user && (
-        <div className="notice">
-          חלק מהפרופילים גלויים רק לחברי קהילה. <a href="/#join">הצטרפות</a> לוקחת דקה.
+      <div className="popular">
+        <a className={`tag${role ? "" : " on"}`} href={href({ role: "", page: "" })}>כל התפקידים</a>
+        {ROLE_TYPES.map((r) => (
+          <a key={r.slug} className={`tag${role === r.slug ? " on" : ""}`} href={href({ role: r.slug, page: "" })}>{r.he}</a>
+        ))}
+      </div>
+
+      {!role && (
+        <section aria-labelledby="members-h">
+          <div className="subhead">
+            <h2 id="members-h">חברי הקהילה</h2>
+            <p>פרופילים שבעליהם בנו ואישרו</p>
+          </div>
+          {!configured && <div className="notice">ההרשמה נפתחת בקרוב. בינתיים אפשר להכיר את האנשים שכבר במאגר, כאן למטה.</div>}
+          {error && <div className="notice err">לא הצלחנו לטעון את חברי הקהילה כרגע. נסו לרענן.</div>}
+          {configured && !error && members.length === 0 && (
+            <div className="panel empty">
+              <h3>{filtered ? "אין חברי קהילה שמתאימים לחיפוש" : "עוד אין חברי קהילה. הפרופיל הראשון יכול להיות שלכם."}</h3>
+              <p>{filtered ? "בדקו את האנשים מהמאגר, כאן למטה." : "פרופיל מאומת מופיע ראשון, עם תחומים, עבודות וקישורים."}</p>
+              <a className="btn primary" href="/onboard">בניית פרופיל</a>
+            </div>
+          )}
+          {members.length > 0 && <div className="grid">{members.map((p) => <PersonCard key={p.slug} p={p} />)}</div>}
+          {configured && !user && members.length > 0 && (
+            <p className="small muted center" style={{ marginBlockStart: 24 }}>
+              חלק מהפרופילים גלויים רק לחברי קהילה. <a href="/onboard">הצטרפות</a> לוקחת דקה.
+            </p>
+          )}
+        </section>
+      )}
+
+      <section aria-labelledby="seeds-h">
+        <div className="subhead">
+          <h2 id="seeds-h">מהמאגר</h2>
+          <p>{seeds.length} אנשים בתפקידים שפורסמו באתרי החברות ובעיתונות המקצועית</p>
         </div>
-      )}
-      {error && <div className="notice err">לא הצלחנו לטעון אנשים כרגע.</div>}
-      {people && people.length === 0 && (
-        <div className="panel" style={{ textAlign: "center" }}>
-          <h3>{term || craft ? `לא נמצאו אנשים${craft ? ` ב${craftLabel(craft)}` : ""}${term ? ` עבור "${q}"` : ""}` : "עוד אין פרופילים. אולי את/ה הראשון/ה?"}</h3>
-          <a className="btn primary" href="/onboard">בניית פרופיל</a>
-        </div>
-      )}
-      {people && people.length > 0 && (
-        <>
-          <p className="small muted">{people.length} אנשים</p>
-          <div className="grid">{people.map((p) => <PersonCard key={p.slug} p={p} />)}</div>
-        </>
-      )}
+        {seeds.length === 0 ? (
+          <div className="panel empty">
+            <h3>לא מצאנו אנשים{craft ? ` ב${craftLabel(craft)}` : ""}{q ? <> עבור <bdi>"{q}"</bdi></> : ""}</h3>
+            <p>נסו מילה אחרת, או חפשו את החברה עצמה.</p>
+            <a className="btn" href={`/search?q=${encodeURIComponent(q)}`}>חיפוש בכל האתר</a>
+          </div>
+        ) : (
+          <>
+            <div className="pgrid">{shown.map((p) => <SeedCard key={p.id} p={p} />)}</div>
+            {shown.length < seeds.length && (
+              <div className="pager"><a className="btn" href={href({ page: String(page + 1) })}>עוד אנשים</a></div>
+            )}
+            <p className="small muted center" style={{ marginBlockStart: 32 }}>
+              רק תפקידים מקצועיים שפורסמו, עם מקור. בלי פרטי קשר. מכירים את עצמכם? אפשר לבנות פרופיל מלא או לבקש הסרה. <a href="/privacy#public">איך זה עובד</a>
+            </p>
+          </>
+        )}
+      </section>
     </div>
   );
 }

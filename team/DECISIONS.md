@@ -65,3 +65,12 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Colour**: one accent, Simply's `--color-primary-purple-haze` `#8217ff` (from hellosimply.com's CSS); ink is Simply's deep purple `#110034`. Both pass WCAG AA on white. Org-group colours (makers / tech / buyers) stay for the map; buyer moved from magenta to raspberry so it doesn't read as the accent.
 - **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
 - **One product**: the same tokens in `app/globals.css` and `site/app.html`.
+
+## Design round 1: layout, naming, people seed (owner feedback on v2)
+- **Layout**: search moved out of the header. Header = logo, People, Companies, one call to action (same bar in the companies app). Centered hero and section intros; one container (max 1200px, side gutter 20–48px); spacing, type and radius scales as tokens.
+- **Naming**: the directory was called "the map", but it isn't one. It's now **חברות** (Companies) at `/companies`, everywhere: nav, buttons, numbers, footer, titles. `/map` and `/map/app.html` redirect there (an `#org-id` still opens the company). Its tabs: שאלו / כל החברות / סיגנלים / מעקב.
+- **Hero**: craft tiles are icons (Lucide style, one stroke weight, soft purple halo) with short names and a company count; they link to a craft search.
+- **One search**: the home search box goes to `/search`, which returns companies and people together, with links to the full lists (`/companies?q=…&craft=…` opens the companies app filtered).
+- **People seed**: `/people` starts with the 546 people already published in company records (`key_people`: public business roles with a source). Shown as compact cards marked "ממקורות פומביים", with role, company link, source and date; no contact details, photos or anything inferred. Registered members rank first with a "מאומת" badge. Each listed card has "זה אני" (onboarding prefilled with name, role and company; the profile stores `claimed_from` and replaces the card) and "בקשת הסרה" (no account needed; the card is hidden as soon as the request arrives; the research run then removes the name from the company record). Explained on `/privacy#public`.
+- **Copy**: Hebrew rewritten to gender-neutral plural / infinitive, one word per concept (חברות, מאגר, סיגנלים, מעקב).
+

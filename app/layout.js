@@ -4,8 +4,8 @@ import Header from "@/components/Header";
 import { supabaseConfig } from "@/lib/config";
 
 export const metadata = {
-  title: { default: "Landscape — מפת תעשיית הקריאייטיב", template: "%s · Landscape" },
-  description: "המפה והקהילה של תעשיית הקריאייטיב בישראל: סטודיואים, חברות, לקוחות ואנשים. פרופיל שנבנה לבד מקורות החיים או מהפורטפוליו.",
+  title: { default: "Landscape · תעשיית הקריאייטיב בישראל", template: "%s · Landscape" },
+  description: "אנשים, סטודיואים, חברות הפקה, מותגים וסוכנויות בתעשיית הקריאייטיב בישראל. פרופיל מקצועי שנבנה לבד מקורות החיים או מהפורטפוליו.",
 };
 
 export const viewport = { width: "device-width", initialScale: 1, themeColor: "#ffffff" };
@@ -30,11 +30,12 @@ export default function RootLayout({ children }) {
           <footer>
             <div className="wrap">
               <a className="brand" href="/">Landscape<span>.</span></a>
-              <a href="/map/app.html">המפה</a>
               <a href="/people">אנשים</a>
-              <a href="/onboard">בניית פרופיל</a>
+              <a href="/companies">חברות</a>
+              <a href="/companies#signals">סיגנלים</a>
+              <a href="/onboard">הצטרפות</a>
               <a href="/privacy">פרטיות</a>
-              <span className="fine">מפת תעשיית הקריאייטיב בישראל</span>
+              <span className="fine">תעשיית הקריאייטיב בישראל, במקום אחד</span>
             </div>
           </footer>
         </Providers>
