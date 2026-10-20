@@ -6,12 +6,19 @@ import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon, SparkIcon } 
 import { craftLabel } from "@/lib/taxonomy";
 import { STATS, companiesWithCraft } from "@/lib/companies";
 import { supabaseConfig, PROFILES_ENABLED } from "@/lib/config";
+import TenderCard from "@/components/TenderCard";
+import { listTenders } from "@/lib/tenders";
+import "./tenders/tenders.css";
+
+// Tender deadlines count down: rebuild the page hourly.
+export const revalidate = 3600;
 
 // Eight crafts on the home page, named exactly as everywhere else on the site (schema/taxonomy.json).
 const CRAFTS = ["motion-design", "animation-3d", "vfx", "branding", "sound-design", "editing", "illustration", "ai-creative"];
 
 export default function Home() {
   const open = Boolean(supabaseConfig());
+  const tenders = listTenders();
   return (
     <>
       <div className="wrap"><AuthNotice /></div>
@@ -58,6 +65,16 @@ export default function Home() {
           })}
         </div>
       </section>
+
+      {tenders.length > 0 && (
+        <section className="wrap tstrip" aria-labelledby="tenders-h">
+          <div className="subhead">
+            <h2 id="tenders-h">מכרזים פתוחים עכשיו <span className="count">{tenders.length}</span></h2>
+            <a href="/tenders">לכל המכרזים ‹</a>
+          </div>
+          <div className="tgrid">{tenders.slice(0, 3).map((t) => <TenderCard key={t.id} t={t} compact />)}</div>
+        </section>
+      )}
 
       <section className="wrap section">
         <div className="intro">
@@ -106,7 +123,7 @@ export default function Home() {
             <div className="stack">
               <h2 id="join-h">השבוע בתעשייה, במייל</h2>
               <p className="muted">
-                כל יום ראשון בבוקר: מינויים בשיווק, החלפות משרד, קמפיינים ומי עשה אותם, ומי מזמין עכשיו את מה שאתם עושים. לפי התחומים שלכם, חינם.
+                כל יום ראשון בבוקר: מינויים בשיווק, החלפות משרד, קמפיינים ומי עשה אותם, מכרזים פתוחים, ומי מזמין עכשיו את מה שאתם עושים. לפי התחומים שלכם, חינם.
               </p>
               <p><a className="tap" href="/digest">לגיליון של השבוע ‹</a></p>
             </div>

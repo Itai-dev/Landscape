@@ -5,6 +5,7 @@ import DigestSubscribe from "@/components/DigestSubscribe";
 import CopyPost from "@/components/CopyPost";
 import Bidi from "@/components/Bidi";
 import { LinkIcon } from "@/components/Icons";
+import "../tenders/tenders.css";
 
 // Crafts shown first in the picker; the rest sit under "עוד תחומים".
 const TOP = ["motion-design", "animation-3d", "animation-2d", "vfx", "post-production", "editing", "sound-design", "branding", "illustration", "commercial-production", "content-studio", "ai-creative"];
@@ -116,6 +117,23 @@ export default async function Digest({ searchParams }) {
               <h3>{who ? `השבוע לא היו עדכונים שעוסקים ב${who}` : "השבוע עוד לא היו עדכונים"}</h3>
               <p>המאגר מתעדכן כל שבוע. בינתיים, הנה מה שכן קרה, ומי מזמין את התחומים האלה.</p>
             </div>
+          )}
+
+          {d.tenders.length > 0 && (
+            <section aria-labelledby="d-tenders">
+              <div className="subhead">
+                <h2 id="d-tenders">{who ? `מכרזים פתוחים ב${who}` : "מכרזים פתוחים"} <span className="count">{d.tenders.length}</span></h2>
+                <a className="tap" href={`/tenders${chosen.length === 1 ? `?craft=${chosen[0]}` : ""}`}>לכל המכרזים ‹</a>
+              </div>
+              <div className="tresults">
+                {d.tenders.map((t) => (
+                  <a key={t.id} className="trow" href={t.url} target="_blank" rel="noopener noreferrer">
+                    <b>{t.summary}</b>
+                    <span>{t.buyer} · {t.countdown} · הגשה עד <bdi>{t.deadline}</bdi> · למכרז במקור הרשמי</span>
+                  </a>
+                ))}
+              </div>
+            </section>
           )}
 
           {d.more.length > 0 && (

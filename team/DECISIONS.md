@@ -124,3 +124,9 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - The site was following the phone's dark mode, which looked like a sudden switch. Light is now the default everywhere, with a header toggle: בהירה / כהה / לפי המכשיר.
 - The company detail panel on desktop opens from the reading side (right in Hebrew, left in English).
 
+## Open tenders (2026-10-20)
+- New section "מכרזים" (`/tenders`): public tenders and supplier-pool calls for creative work, soonest deadline first, with a countdown and a link to the official notice only. Also a home-page strip (top 3), in site search, and a section in the weekly digest (max 3, matched to the reader's crafts). An open tender in the reader's crafts makes an edition worth sending.
+- Records live in git like signals (`data/tenders/YYYY-MM.json`, `schema/tender.schema.json`, `landscape.py tenders`). The weekly research run collects them (step 5c, `research/tenders-sources.md`); mr.gov.il is the main source, collected politely by `scripts/tenders_mrgov.py` as candidates that a person or the agent reviews.
+- Facts only: title as published, buyer, number, dates, plus our own one-line summary. Never contact names or emails, never aggregator content, never fetch around a block. לפ"מ exemption notices are signals (who was hired), not tenders.
+- "מכרזים" joins the header nav. To keep the header one 64px row on phones, the colour-theme button moves to the footer under 480px, and under 380px the newsletter button becomes an envelope icon.
+

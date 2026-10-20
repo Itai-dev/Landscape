@@ -67,6 +67,21 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    ("new marketing heads often review suppliers"), never an instruction or a sales line.
    Merge with `python3 scripts/landscape.py signals research/staging/signals-<date>.json`.
    Orgs named in signals but missing from the map are discovery candidates for this run.
+5c. **Tenders** (every cycle): open tenders and supplier-pool calls for creative work. Sources, URL patterns,
+   category codes, keywords and the rules are in `research/tenders-sources.md`: read it first.
+   - Run `python3 scripts/tenders_mrgov.py` (polite: ≤40 requests, 1.5 s apart) to collect mr.gov.il
+     candidates into `research/staging/tenders-candidates-<date>.json`. They are **candidates**: open each
+     detail page, keep only creative work, and copy title, buyer, number, publish date and deadline as published.
+   - Then check Dekel, the Be'er Sheva JSON, Haifa (WebFetch), Weizmann and TAU, and web-search the
+     blocked sources (gov.il, Kan, government companies, other municipalities). Never fetch around a block.
+   - mr.gov.il **exemption notices** (`s=EXEMPTION`, e.g. לפ"מ hiring a production company) are not tenders:
+     write them as signals in step 5b (company names only, never individual directors or talent).
+   - Write `research/staging/tenders-<date>.json` per `schema/tender.schema.json`: `id` = `mr-<publication no.>`
+     (or `<source>-<number>`), official `source_url` only, `scope_summary` in our own Hebrew words, `crafts`
+     from `taxonomy.facets.craft`, `link_only: true` for TAU. No contact names, emails or phones.
+   - Re-check known open tenders (deadline moved, cancelled, documents updated) and add the changed fields
+     with today's `last_checked_at`. Merge with `python3 scripts/landscape.py tenders research/staging/tenders-<date>.json`
+     (adds new ids, updates known ones). Tenders past their deadline close by themselves at build time.
 6. **Merge**: `python3 scripts/landscape.py ingest research/staging/<file>.json` then
    `python3 scripts/landscape.py validate` (must pass), `python3 scripts/landscape.py logos` (fetches logos
    for new orgs; needs `pip install pillow`) and `python3 scripts/landscape.py build`.
@@ -75,8 +90,8 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    `- YYYY-MM-DD · <mode> · <segment> · +N new, ~M updated · notes`. Tick the segment in
    `research/queue.md` when its coverage looks reasonably complete.
 8. **Ship**: commit on a new branch `research/<YYYY-MM-DD>-<segment>`, push, and open a PR
-   titled `Research: <segment> (+N orgs, +S signals, ~M)` listing the new orgs (name — kind — city),
-   new signals and notable corrections. Staging files are gitignored (merged data is the record).
+   titled `Research: <segment> (+N orgs, +S signals, +T tenders, ~M)` listing the new orgs (name — kind — city),
+   new signals, new open tenders (title — buyer — deadline) and notable corrections. Staging files are gitignored (merged data is the record).
 9. **Live signals** (if the `ArtifactData` tool is available): also write each new signal to the app
    database so it shows before the PR merges — `ArtifactData batch` of `set` ops into collection
    `signals` (doc_id = signal id) on https://claude.ai/artifact/GKnvThtikDhCYRNxhSb2xF.

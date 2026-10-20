@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mr-4000618665",
+    "source": "mr.gov.il",
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000618665",
+    "title": "פנייה לאיתור מנהל אמנותי עבור חג המוסיקה הישראלית",
+    "buyer": "משרד המדע התרבות והספורט",
+    "buyer_type": "ministry",
+    "kind": "call",
+    "published_at": "2026-06-23",
+    "deadline_at": "2026-07-12T12:00",
+    "status": "closed",
+    "scope_summary": "ניהול אמנותי לחג המוסיקה הישראלית.",
+    "crafts": [
+      "experiential",
+      "music-production"
+    ],
+    "keywords_matched": [
+      "אירועים",
+      "תרבות"
+    ],
+    "last_checked_at": "2026-10-20",
+    "added": "2026-10-20"
+  },
+  {
+    "id": "mr-4000618294",
+    "source": "mr.gov.il",
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000618294",
+    "title": "איור קריקטורות לצורכי הסברה והעברת מסרים מדיניים לשימוש בעמודים רשמיים של משרד החוץ בערבית, פרסית ושפות נוספות",
+    "buyer": "משרד החוץ",
+    "buyer_type": "ministry",
+    "kind": "tender",
+    "published_at": "2026-06-15",
+    "deadline_at": "2026-07-14T15:00",
+    "status": "closed",
+    "scope_summary": "איור קריקטורות לעמודי ההסברה של משרד החוץ בערבית, בפרסית ובשפות נוספות.",
+    "crafts": [
+      "illustration"
+    ],
+    "keywords_matched": [
+      "איור",
+      "הסברה"
+    ],
+    "last_checked_at": "2026-10-20",
+    "added": "2026-10-20"
+  }
+]

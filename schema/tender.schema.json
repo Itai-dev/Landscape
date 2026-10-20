@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tender",
+  "description": "A public tender, framework or call to join a supplier pool for creative work, as published by an official buyer. Facts only (title, buyer, number, dates) with a link to the official page. Never contact names, emails or phone numbers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "source", "source_url", "title", "buyer", "buyer_type", "kind", "deadline_at", "status", "scope_summary", "crafts", "last_checked_at", "added"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+-[A-Za-z0-9-]+$",
+      "description": "<source>-<native number>, e.g. mr-4000622386. Stable; never changes."
+    },
+    "source": {
+      "enum": ["mr.gov.il", "dekel", "data.gov.il", "municipality", "university", "gov-company", "public-body", "other"],
+      "description": "Where the official notice lives"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://",
+      "description": "The official notice page (never an aggregator)"
+    },
+    "title": { "type": "string", "minLength": 3, "description": "As published" },
+    "buyer": { "type": "string", "description": "The publishing body, as published" },
+    "buyer_type": { "enum": ["ministry", "municipality", "gov_company", "university", "public_body", "ngo"] },
+    "buyer_org_id": { "type": ["string", "null"], "description": "Org id in data/orgs when the buyer is in the directory" },
+    "procedure_no": { "type": "string", "description": "The buyer's number, e.g. 17/26" },
+    "kind": { "enum": ["tender", "framework", "pool_call", "rfi", "call"] },
+    "published_at": { "type": "string", "format": "date" },
+    "deadline_at": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2})?$",
+      "description": "Submission deadline, Israel local time (Asia/Jerusalem), YYYY-MM-DDTHH:MM"
+    },
+    "status": {
+      "enum": ["open", "cancelled", "closed"],
+      "description": "As published. The build marks a tender closed once its deadline has passed."
+    },
+    "scope_summary": { "type": "string", "minLength": 10, "description": "One line in our own Hebrew words: what is being bought" },
+    "crafts": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Craft slugs from taxonomy facets.craft"
+    },
+    "keywords_matched": { "type": "array", "items": { "type": "string" } },
+    "fee_ils": { "type": "number", "minimum": 0, "description": "Fee to buy the tender documents, if any" },
+    "submission_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+    "related_org_ids": { "type": "array", "items": { "type": "string" } },
+    "link_only": { "type": "boolean", "description": "The source's terms restrict reuse: show title, buyer, deadline and the link only" },
+    "last_checked_at": { "type": "string", "format": "date" },
+    "added": { "type": "string", "format": "date" },
+    "note": { "type": "string" }
+  }
+}
