@@ -1,0 +1,68 @@
+{
+  "id": "humanz",
+  "name": "Humanz",
+  "aka": [
+    "Humanz.ai"
+  ],
+  "kind": "startup",
+  "categories": [
+    "creator-economy",
+    "pr-social"
+  ],
+  "description": "Tel Aviv creator-marketing platform (founded 2017) that connects brands with influencers and creators for partnership ads, UGC, affiliate commerce and advocacy programs, with audience verification and attribution. Raised $15M in Dec 2025 (total $32M) and acquired Ubiquitous and Bambassadors to expand in the US.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2017,
+  "status": "active",
+  "website": "https://www.humanz.com",
+  "services": [
+    "Influencer/creator marketing platform",
+    "Partnership ads & UGC",
+    "Affiliate & creator commerce",
+    "Managed influencer campaigns"
+  ],
+  "key_people": [
+    {
+      "name": "Liran Liberman",
+      "role": "CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Growth",
+    "total_usd_m": 32,
+    "investors": [
+      "NGN Partners",
+      "Buffett Group"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "Ubiquitous",
+      "note": "US influencer agency, Dec 2025"
+    },
+    {
+      "type": "acquired",
+      "target": "Bambassadors",
+      "note": "UGC / paid social tech, Dec 2025"
+    }
+  ],
+  "tags": [
+    "influencer marketing",
+    "UGC",
+    "creators"
+  ],
+  "sources": [
+    "https://www.humanz.com",
+    "https://www.netinfluencer.com/ai-creator-platform-humanz-raises-15m-acquires-ubiquitous-bambassadors/",
+    "https://tech.eu/2021/01/14/humanz-seed-funding/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Site suggests operations in South Africa and Turkey as well.",
+  "description_he": "פלטפורמת שיווק יוצרים תל אביבית (נוסדה ב-2017) המחברת מותגים עם משפיענים ויוצרי תוכן לפרסומות שיתופי פעולה, UGC, מסחר אפיליאייט ותוכניות שגרירים, עם אימות קהלים ומדידת ייחוס. גייסה 15 מיליון דולר בדצמבר 2025 (32 מיליון דולר בסך הכול) ורכשה את Ubiquitous ואת Bambassadors כדי להתרחב בארה\"ב."
+}

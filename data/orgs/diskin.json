@@ -1,0 +1,111 @@
+{
+  "id": "diskin",
+  "name": "DISKIN",
+  "kind": "studio",
+  "categories": [
+    "experiential",
+    "creative-technology",
+    "xr"
+  ],
+  "description": "Experience-design company in Glil Yam (Herzliya area), active for three decades, creating visitor centers, museums, pavilions and immersive physical-digital environments with in-house design, architecture, technology and production. Work includes the Rafael and Technion visitor centers, Israel Pavilions at Expo 2010 Shanghai and Expo 2012 Yeosu, SodaStream, Strauss and Tnuva visitor centers, the Israel Police Museum and the Peres Peace library.",
+  "location": {
+    "country": "IL",
+    "city": "Glil Yam"
+  },
+  "status": "active",
+  "website": "https://www.diskin.com/",
+  "contact_url": "https://www.diskin.com/contact",
+  "services": [
+    "Visitor centers",
+    "Museums & exhibitions",
+    "Expo pavilions",
+    "Interactive & immersive installations",
+    "Experiential lobbies"
+  ],
+  "notable_clients": [
+    "Rafael",
+    "Technion",
+    "SodaStream",
+    "Strauss",
+    "Tnuva",
+    "Intel Haifa",
+    "Israel Police",
+    "Shikun & Binui",
+    "Ministry of Foreign Affairs (Expo pavilions)"
+  ],
+  "notable_work": [
+    "Rafael Visitors Center",
+    "Technion Visitor Center",
+    "Israel Pavilion, Expo 2010 Shanghai",
+    "Israel Pavilion, Expo 2012 Yeosu",
+    "SodaStream Visitor Center",
+    "Israel Police Museum, Beit Shemesh"
+  ],
+  "key_people": [
+    {
+      "name": "Moshe Yeyni",
+      "role": "CEO",
+      "role_type": "executive",
+      "source": "https://www.diskin.com/about",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Arnon Diskin",
+      "role": "Chairman & Founder",
+      "role_type": "founder",
+      "source": "https://www.diskin.com/about",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Ran Diskin",
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://www.diskin.com/about",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Daria Farkash Shine",
+      "role": "Art Director",
+      "role_type": "creative_lead",
+      "source": "https://www.diskin.com/about",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "technion"
+    },
+    {
+      "type": "client",
+      "target": "sodastream"
+    },
+    {
+      "type": "client",
+      "target": "strauss-group"
+    },
+    {
+      "type": "client",
+      "target": "tnuva"
+    },
+    {
+      "type": "client",
+      "target": "israel-police"
+    }
+  ],
+  "tags": [
+    "visitor-centers",
+    "museums",
+    "expo",
+    "immersive"
+  ],
+  "sources": [
+    "https://www.diskin.com/",
+    "https://www.diskin.com/about",
+    "https://www.diskin.com/work"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "חברת עיצוב חוויה בגליל ים (אזור הרצליה), הפועלת כבר שלושה עשורים ויוצרת מרכזי מבקרים, מוזיאונים, ביתנים וסביבות אימרסיביות פיזיות-דיגיטליות, עם עיצוב, אדריכלות, טכנולוגיה והפקה בבית. בין העבודות: מרכזי המבקרים של רפאל והטכניון, ביתני ישראל באקספו 2010 בשנגחאי ובאקספו 2012 ביאוסו, מרכזי המבקרים של סודהסטרים, שטראוס ותנובה, מוזיאון משטרת ישראל וספריית פרס לשלום."
+}

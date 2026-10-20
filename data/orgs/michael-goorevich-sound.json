@@ -1,0 +1,49 @@
+{
+  "id": "michael-goorevich-sound",
+  "name": "Michael Goorevich Sound Design & Mix",
+  "name_he": "מיכאל גורביץ' – עיצוב פסקול ומיקס לסרטים",
+  "kind": "studio",
+  "categories": [
+    "sound-design",
+    "post-production"
+  ],
+  "description": "Central Tel Aviv film-sound studio with a large hybrid mixing/editing stage built to theatrical Dolby specs (4 m screen, JBL cinema monitoring): original sound design for features and TV, 5.1/7.1 film mixing and production sound, drawing on a 25-year library of self-recorded effects; credits span documentaries, features, dramas, sports and wildlife.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://goorevich.com/",
+  "contact_url": "https://goorevich.com/index.php/contact/",
+  "links": {
+    "facebook": "https://www.facebook.com/mgoorevich/"
+  },
+  "services": [
+    "Film sound design",
+    "5.1 / 7.1 film mixing",
+    "Production sound recording",
+    "Sound-effects library"
+  ],
+  "key_people": [
+    {
+      "name": "Michael Goorevich",
+      "role": "Founder, Sound designer & re-recording mixer",
+      "role_type": "founder",
+      "source": "https://goorevich.com/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "film-sound",
+    "mix-stage",
+    "documentary"
+  ],
+  "sources": [
+    "https://goorevich.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "סטודיו סאונד לקולנוע במרכז תל אביב עם במת מיקס ועריכה היברידית גדולה שנבנתה לפי מפרטי Dolby לבתי קולנוע (מסך 4 מ', מוניטורים קולנועיים של JBL): עיצוב פסקול מקורי לסרטים עלילתיים ולטלוויזיה, מיקס 5.1/7.1 לקולנוע וסאונד בצילומים, על בסיס ספריית אפקטים שהוקלטו עצמאית לאורך 25 שנה; הקרדיטים כוללים דוקומנטרי, סרטים עלילתיים, דרמות, ספורט וטבע."
+}

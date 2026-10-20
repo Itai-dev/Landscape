@@ -1,0 +1,80 @@
+{
+  "id": "spring-valley",
+  "name": "Spring Valley",
+  "name_he": "ספרינג ואלי",
+  "kind": "agency",
+  "categories": [
+    "digital-agency"
+  ],
+  "description": "Digital marketing agency founded in 2017 at Kibbutz Ma'oz Haim in the Spring Valley (Emek HaMaayanot) region as part of the McCann Tel Aviv group. Provides web design/development, SEO and Google Ads, social media management, branding and content.",
+  "location": {
+    "country": "IL",
+    "city": "Kibbutz Ma'oz Haim"
+  },
+  "founded": 2017,
+  "status": "active",
+  "website": "https://spring-valley.co.il/",
+  "contact_url": "https://spring-valley.co.il/contact-us/",
+  "careers_url": "https://spring-valley.co.il/careers/",
+  "services": [
+    "Digital strategy",
+    "Web design & development",
+    "SEO / Google Ads",
+    "Social media management",
+    "Branding",
+    "Content"
+  ],
+  "notable_clients": [
+    "Caesarstone",
+    "Domino's Pizza",
+    "SodaStream",
+    "AXE",
+    "Honda (Meir Group)",
+    "Amdocs"
+  ],
+  "key_people": [
+    {
+      "name": "Hana Rado",
+      "role": "Founder & Chair",
+      "role_type": "founder",
+      "source": "https://spring-valley.co.il/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Emuna Shinberg",
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://spring-valley.co.il/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Adi Sasson Jerbi",
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://spring-valley.co.il/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "mccann-tel-aviv"
+    }
+  ],
+  "tags": [
+    "periphery",
+    "north",
+    "omnicom"
+  ],
+  "sources": [
+    "https://spring-valley.co.il/",
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%90%D7%9F_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91",
+    "https://mccann.co.il/about/",
+    "https://spring-valley.co.il/contact-us/",
+    "https://spring-valley.co.il/careers/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "description_he": "סוכנות שיווק דיגיטלי שנוסדה ב-2017 בקיבוץ מעוז חיים שבעמק המעיינות, כחלק מקבוצת מקאן תל אביב. מספקת עיצוב ופיתוח אתרים, SEO ו-Google Ads, ניהול סושיאל, מיתוג ותוכן."
+}

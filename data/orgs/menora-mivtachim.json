@@ -1,0 +1,49 @@
+{
+  "id": "menora-mivtachim",
+  "name": "Menora Mivtachim",
+  "name_he": "מנורה מבטחים",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "One of Israel's largest insurance and pension groups (roots in 1935), TASE-listed and headquartered at the Menora Mivtachim Tower in Ramat Gan; runs insurance, pension, provident and finance businesses.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1935,
+  "status": "active",
+  "website": "https://www.menoramivt.co.il",
+  "contact_url": "https://www.menoramivt.co.il/general-contact-us/",
+  "careers_url": "https://www.menoramivt.co.il/job-posting/jobs",
+  "client_profile": {
+    "industry": "insurance and pensions",
+    "creative_needs": [
+      "TV commercials",
+      "celebrity presenter campaigns",
+      "social video",
+      "explainer animation",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "Yehoshua TBWA"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "yehoshua-tbwa",
+      "note": "2021 campaign with Yaniv Biton (Walla); not re-confirmed since"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A0%D7%95%D7%A8%D7%94_%D7%9E%D7%91%D7%98%D7%97%D7%99%D7%9D_%D7%94%D7%97%D7%96%D7%A7%D7%95%D7%AA",
+    "https://finance.walla.co.il/item/3462917",
+    "https://www.menoramivt.co.il/main-lobby/about-us"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Agency link is from 2021; check before pitching.",
+  "description_he": "מקבוצות הביטוח והפנסיה הגדולות בישראל (שורשיה ב-1935), נסחרת בבורסת תל אביב ומטהּ במגדל מנורה מבטחים ברמת גן; פועלת בתחומי הביטוח, הפנסיה, הגמל והפיננסים."
+}

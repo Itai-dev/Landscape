@@ -1,0 +1,55 @@
+{
+  "id": "yes-studios",
+  "name": "yes Studios",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Content sales, distribution, development and co-production arm of Israeli pay-TV provider yes, representing high-end Israeli series such as Fauda, Shtisel, The Beauty Queen of Jerusalem and Your Honor and selling finished tape and formats worldwide.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://yesstudios.tv/",
+  "contact_url": "https://www.yesstudios.tv/contact2",
+  "links": {
+    "instagram": "https://www.instagram.com/yesstudios/",
+    "facebook": "https://www.facebook.com/yesstudiosyes/",
+    "x": "https://twitter.com/YesstudiosT",
+    "linkedin": "https://il.linkedin.com/company/yesstudios",
+    "youtube": "https://www.youtube.com/channel/UCKC1v1ihnxe0SVsjR5tmZCg"
+  },
+  "notable_work": [
+    "Fauda",
+    "Shtisel",
+    "The Beauty Queen of Jerusalem",
+    "Your Honor"
+  ],
+  "key_people": [
+    {
+      "name": "Sharon Levi",
+      "role": "Managing Director"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "yes"
+    }
+  ],
+  "tags": [
+    "distribution",
+    "format-sales",
+    "co-production",
+    "drama"
+  ],
+  "sources": [
+    "https://yesstudios.tv/",
+    "https://yesstudios.tv/about-us",
+    "https://www.yesstudios.tv/about-us"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "זרוע מכירת התוכן, ההפצה, הפיתוח והקופרודוקציות של ספקית הטלוויזיה הרב-ערוצית yes, שמייצגת סדרות ישראליות איכותיות כמו 'פאודה', 'שטיסל', 'מלכת היופי של ירושלים' ו'כבוד השופט', ומוכרת סדרות מוגמרות ופורמטים בכל העולם."
+}

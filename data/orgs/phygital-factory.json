@@ -1,0 +1,44 @@
+{
+  "id": "phygital-factory",
+  "name": "Phygital Factory",
+  "kind": "studio",
+  "categories": [
+    "experiential",
+    "creative-technology",
+    "animation-3d"
+  ],
+  "description": "Herzliya creative-technology and integration studio for art exhibitions, public and commercial spaces, visitor centers, 3D video mapping, corporate events, live TV specials, concerts and national ceremonies; early adopter of LED, holograms, water screens and 360° projection, offering concept, design, interactive, sound and 2D/3D animation under one roof.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.phygital.co.il/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/phygitalfactory"
+  },
+  "services": [
+    "3D video mapping / projection",
+    "Visitor centers & exhibitions",
+    "Holograms & 360° projection",
+    "Interactive media",
+    "Event & ceremony content"
+  ],
+  "tags": [
+    "projection-mapping",
+    "visitor-centers",
+    "ceremonies",
+    "led"
+  ],
+  "sources": [
+    "https://www.phygital.co.il/",
+    "https://il.linkedin.com/company/phygitalfactory",
+    "https://il.linkedin.com/company/locomotion-studios"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Its self-description matches that of Herzliya-based Locomotion Studios (founded 1998; 3D mapping for Jerusalem Light Festival, Peres Academic Center) — possibly the same team rebranded; unconfirmed. Site partly placeholder.",
+  "description_he": "סטודיו לטכנולוגיה קריאייטיבית ואינטגרציה בהרצליה לתערוכות אמנות, חללים ציבוריים ומסחריים, מרכזי מבקרים, וידאו מאפינג תלת-ממדי, אירועי חברה, מופעי טלוויזיה חיים, הופעות וטקסים ממלכתיים; מהראשונים לאמץ LED, הולוגרמות, מסכי מים והקרנות 360°, ומציע קונספט, עיצוב, אינטראקטיב, סאונד ואנימציה דו-ממדית ותלת-ממדית תחת קורת גג אחת."
+}

@@ -1,0 +1,88 @@
+{
+  "id": "wayy-studio",
+  "name": "Wayy Studio",
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "motion-design",
+    "digital-design"
+  ],
+  "description": "Israeli creative studio for startups offering branding, motion/brand videos, ad campaigns and websites; founded by former Laserbee partners. Work recognized by Behance features and Motion Design Awards.",
+  "location": {
+    "country": "IL",
+    "city": "Netaim"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://wayy.studio",
+  "reel_url": "https://vimeo.com/1041484055",
+  "links": {
+    "vimeo": "https://vimeo.com/wayystudio",
+    "behance": "https://www.behance.net/wayystudio",
+    "linkedin": "https://www.linkedin.com/company/wayy-studio",
+    "instagram": "https://www.instagram.com/wayy.studio",
+    "youtube": "https://www.youtube.com/@WayyStudio"
+  },
+  "services": [
+    "Branding",
+    "Brand and product videos",
+    "Campaigns",
+    "Websites"
+  ],
+  "notable_clients": [
+    "Fiverr",
+    "WalkMe",
+    "HP",
+    "Yotpo",
+    "Fireblocks",
+    "Cato Networks",
+    "Forter",
+    "Placer.ai"
+  ],
+  "key_people": [
+    {
+      "name": "Yuval Leizerman",
+      "role": "Founder & CEO",
+      "role_type": "founder",
+      "source": "https://www.wayy.studio/about",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Avi Inbar",
+      "role": "Creative Director",
+      "role_type": "creative_lead",
+      "source": "https://www.wayy.studio/about",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Oded Abulafia",
+      "role": "Brand Director",
+      "role_type": "creative_lead",
+      "source": "https://www.wayy.studio/about",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "relations": [
+    {
+      "type": "spun_off_from",
+      "target": "laserbee",
+      "note": "Founded by Laserbee founding partners"
+    }
+  ],
+  "tags": [
+    "startups",
+    "saas",
+    "branding"
+  ],
+  "sources": [
+    "https://wayy.studio",
+    "https://laserbee.video",
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv",
+    "https://www.wayy.studio/about",
+    "https://vimeo.com/1041484055"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו קריאייטיב ישראלי לסטארטאפים המציע מיתוג, סרטוני מושן ומותג, קמפיינים פרסומיים ואתרים; הוקם על ידי שותפים לשעבר ב-Laserbee. עבודותיו זכו להכרה ב-Behance וב-Motion Design Awards."
+}

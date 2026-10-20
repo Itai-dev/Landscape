@@ -1,0 +1,68 @@
+{
+  "id": "crew972",
+  "name": "Crew972",
+  "aka": [
+    "Crew 972"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d"
+  ],
+  "description": "Tel Aviv 3D animation production company founded in 2005 by Alex and Michelle Orrelle; now presented as the production company of director/animator Alex Orrelle. Credits include Wile E. Coyote and Road Runner CG segments for The Looney Tunes Show, Cartoon Network 'Nood' bumpers and the VIPO series.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2005,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://crew972.com",
+  "contact_url": "https://www.crew972.com/contact",
+  "services": [
+    "3D character animation",
+    "Direction and story",
+    "Animation service production"
+  ],
+  "notable_clients": [
+    "Cartoon Network",
+    "Warner Bros. Animation",
+    "Coca-Cola"
+  ],
+  "notable_work": [
+    "The Looney Tunes Show (Road Runner CG segments)",
+    "Cartoon Network 'Nood' bumpers",
+    "Sir Billi (2010)",
+    "VIPO: Adventures of the Flying Dog"
+  ],
+  "key_people": [
+    {
+      "name": "Alex Orrelle",
+      "role": "Co-founder, Director"
+    },
+    {
+      "name": "Michelle Orrelle",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "snowball-studios",
+      "note": "VIPO co-production"
+    }
+  ],
+  "tags": [
+    "character-animation",
+    "tv-series"
+  ],
+  "sources": [
+    "https://crew972.com",
+    "https://en.wikipedia.org/wiki/Crew972",
+    "https://www.crew972.com/contact"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website is minimal; current team size estimated.",
+  "description_he": "חברת הפקות אנימציית תלת-ממד מתל אביב שנוסדה ב-2005 על ידי אלכס ומישל אורל; כיום מוצגת כחברת ההפקה של הבמאי והאנימטור אלכס אורל. בין הקרדיטים: קטעי ה-CG של וויל אי. קויוטי ורוד ראנר ב-The Looney Tunes Show, באמפרים 'Nood' לקרטון נטוורק וסדרת VIPO."
+}

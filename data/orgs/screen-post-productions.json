@@ -1,0 +1,120 @@
+{
+  "id": "screen-post-productions",
+  "name": "Screen Post Productions",
+  "name_he": "סקרין פוסט פרודקשן",
+  "aka": [
+    "Screen"
+  ],
+  "kind": "studio",
+  "categories": [
+    "post-production",
+    "editing",
+    "color-grading",
+    "vfx",
+    "motion-design"
+  ],
+  "description": "Israeli end-to-end post-production studio serving production companies, advertisers and agencies, from editing and color correction to 3D, VFX, motion graphics and AI video work. It has branches in Tel Aviv (Ramat HaHayal) and Bnei Brak, and reported about 45 employees in 2024; its site also mentions an office in Australia.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Bnei Brak",
+      "Australia"
+    ]
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.screen-post.com",
+  "contact_url": "https://www.screen-post.com/contact",
+  "links": {
+    "instagram": "https://www.instagram.com/screenpostproduction/",
+    "vimeo": "https://vimeo.com/user23010303"
+  },
+  "services": [
+    "Editing",
+    "Color correction",
+    "Compositing",
+    "3D",
+    "VFX",
+    "Motion graphics",
+    "Virtual studios for events",
+    "AI video"
+  ],
+  "notable_clients": [
+    "YES",
+    "Partner",
+    "Strauss",
+    "Samsung",
+    "Huggies",
+    "Maccabi",
+    "Tnuva",
+    "Osem",
+    "Bank Leumi",
+    "L'Oréal",
+    "IKEA",
+    "Teva",
+    "eToro",
+    "Pepper",
+    "Bissli (Osem-Nestlé)"
+  ],
+  "notable_work": [
+    "Pepper — new-language launch with creator Ido Katzir (2025)",
+    "Bissli (Osem-Nestlé) — characters podcast with Matan Peretz (AI) (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Efrat (Sisi) Or",
+      "role": "Co-managing partner, Ramat HaHayal branch"
+    },
+    {
+      "name": "Pnina Segev",
+      "role": "Co-managing partner, Bnei Brak branch"
+    },
+    {
+      "name": "Yehuda Rivivo",
+      "role": "Creative director (from 2024)"
+    },
+    {
+      "name": "Ivan Danisenko",
+      "role": "Head of compositing (from 2024)"
+    }
+  ],
+  "client_profile": {
+    "known_agencies": [
+      "McCann",
+      "Publicis",
+      "Adler Chomsky",
+      "Anbar Merchav"
+    ]
+  },
+  "relations": [
+    {
+      "type": "client",
+      "target": "pepper",
+      "note": "new-language launch with creator Ido Katzir, 2025-10, via McCann Tel Aviv, dir. Adam Sanderson (post) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "osem-nestle",
+      "note": "characters podcast with Matan Peretz (AI), 2026-02, via McCann Tel Aviv, dir. Ben Bachar (post (AI)) (ICE credits)"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "advertising-post",
+    "ai-video"
+  ],
+  "sources": [
+    "https://www.screen-post.com",
+    "https://finance.walla.co.il/item/3680433",
+    "https://finance.walla.co.il/item/3695103",
+    "https://www.screen-post.com/contact",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089107",
+    "https://www.ice.co.il/advertising-marketing/news/article/1103666"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Clients list per Walla (July 2024). Hebrew name per press as 'סקרין פרודקשן'.",
+  "description_he": "סטודיו פוסט-פרודקשן ישראלי מקצה לקצה שמשרת חברות הפקה, מפרסמים ומשרדי פרסום – מעריכה ותיקוני צבע ועד תלת-ממד, VFX, מושן גרפיקס ועבודות וידאו ב-AI. יש לו סניפים בתל אביב (רמת החייל) ובבני ברק, ודיווח על כ-45 עובדים ב-2024; באתר מוזכר גם משרד באוסטרליה."
+}

@@ -1,0 +1,63 @@
+{
+  "id": "waves-audio",
+  "name": "Waves Audio",
+  "aka": [
+    "Waves"
+  ],
+  "kind": "startup",
+  "categories": [
+    "music-tech",
+    "sound-design"
+  ],
+  "description": "Tel Aviv developer of professional audio plugins and signal-processing technology, founded in 1992 by Gilad Keren and Meir Shaashua; its Q10 is described as the first commercial audio plugin. Over 200 products for music production, mixing, mastering, live sound and broadcast; Technical Grammy recipient (2011).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "United States",
+      "China",
+      "Taiwan"
+    ]
+  },
+  "founded": 1992,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.waves.com",
+  "services": [
+    "Audio plugins (mixing, mastering, vocal, restoration)",
+    "Live sound hardware/software (SoundGrid)",
+    "Audio tech licensing for consumer devices"
+  ],
+  "key_people": [
+    {
+      "name": "Gilad Keren",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Meir Shaashua",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Private",
+    "public": false
+  },
+  "tags": [
+    "audio plugins",
+    "mixing",
+    "mastering",
+    "pro audio",
+    "Grammy"
+  ],
+  "sources": [
+    "https://www.waves.com",
+    "https://en.wikipedia.org/wiki/Waves_Audio",
+    "https://www.mixonline.com/recording/view-from-the-top-gilad-keren-ceo-waves-audio-ltd"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Wikipedia lists ~260 employees (undated).",
+  "description_he": "מפתחת פלאגיני אודיו מקצועיים וטכנולוגיות עיבוד אותות מתל אביב, שנוסדה ב-1992 על ידי גלעד קרן ומאיר שעשוע; ה-Q10 שלה מתואר כפלאגין האודיו המסחרי הראשון. יותר מ-200 מוצרים להפקה מוזיקלית, מיקס, מאסטרינג, סאונד חי ושידור; זוכת פרס גראמי טכני (2011).",
+  "name_he": "וייבס"
+}

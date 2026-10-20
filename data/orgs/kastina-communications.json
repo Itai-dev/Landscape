@@ -1,0 +1,43 @@
+{
+  "id": "kastina-communications",
+  "name": "Kastina Communications",
+  "name_he": "קסטינה תקשורת",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Israeli production company established in 2005 that has produced over 300 documentaries and TV programs, plus scripted series including season 1 of Fauda (with Tender Productions), The Chef, Bloody Murray and Chanshi; documentaries include Screams Before Silence and #Nova.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2005,
+  "status": "active",
+  "website": "https://www.kastina.co.il/",
+  "notable_clients": [
+    "yes",
+    "HOT",
+    "Kan 11",
+    "Keshet 12"
+  ],
+  "notable_work": [
+    "Fauda (season 1, co-production)",
+    "Bloody Murray",
+    "Chanshi",
+    "The Chef",
+    "Screams Before Silence",
+    "#Nova",
+    "The One (Kan 11)"
+  ],
+  "tags": [
+    "documentary",
+    "tv-production",
+    "drama-series"
+  ],
+  "sources": [
+    "https://www.kastina.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "חברת הפקות ישראלית שהוקמה ב-2005 והפיקה יותר מ-300 סרטים תיעודיים ותוכניות טלוויזיה, וכן סדרות דרמה ובהן העונה הראשונה של פאודה (עם טנדר הפקות), The Chef, Bloody Murray וחנשי; בין התיעודיים: Screams Before Silence ו-#Nova."
+}

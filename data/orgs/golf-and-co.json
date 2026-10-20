@@ -1,0 +1,39 @@
+{
+  "id": "golf-and-co",
+  "name": "Golf & Co (Golf Group)",
+  "name_he": "קבוצת גולף",
+  "aka": [
+    "Golf&Co",
+    "Golf A.K. Group"
+  ],
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "TASE-listed Israeli retail group (listed since 2006) that designs and sells apparel and home goods, best known for the Golf&Co home-design chain; it operated about 326 stores across Israel as of 2019.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.golfco.co.il",
+  "client_profile": {
+    "industry": "fashion and home-goods retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "catalog / product photography",
+      "home styling photography"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A7%D7%91%D7%95%D7%A6%D7%AA_%D7%92%D7%95%D7%9C%D7%A3_%D7%90.%D7%A7.",
+    "https://www.maariv.co.il/lifestyle/fashion/article-1238614"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No current agency or marketing head found in trade press; CEO Eyal Greenberg per he.wikipedia. 2025 collection with the Israel Nature and Parks Authority (Maariv).",
+  "description_he": "קבוצת קמעונאות ישראלית הנסחרת בבורסת תל אביב (מאז 2006), המעצבת ומוכרת ביגוד ומוצרי בית, ומוכרת בעיקר בזכות רשת עיצוב הבית Golf&Co; נכון ל-2019 הפעילה כ-326 חנויות ברחבי הארץ."
+}

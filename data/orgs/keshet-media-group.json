@@ -1,0 +1,80 @@
+{
+  "id": "keshet-media-group",
+  "name": "Keshet Media Group",
+  "name_he": "קשת",
+  "aka": [
+    "Keshet Broadcasting",
+    "Keshet 12"
+  ],
+  "kind": "client",
+  "categories": [
+    "media-broadcast"
+  ],
+  "description": "Israel's leading commercial broadcaster (est. 1993): Keshet 12, mako, N12, the freeTV streaming JV and global producer/distributor Keshet International. Controlled by Central Bottling Company.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1993,
+  "status": "active",
+  "website": "https://www.mako.co.il",
+  "contact_url": "https://www.mako.co.il/help/Article-9446174b77b2a31006.htm",
+  "careers_url": "https://jobs.keshet-mediagroup.com/",
+  "links": {
+    "keshet_international": "https://www.keshetinternational.com"
+  },
+  "notable_clients": [
+    "Mizrahi Tefahot"
+  ],
+  "notable_work": [
+    "Mizrahi Tefahot — 'Dominique' branded content series with Guy Beer Gurevich & Dvir Benedek (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Avi Nir",
+      "role": "Group CEO"
+    }
+  ],
+  "client_profile": {
+    "industry": "commercial TV / digital media",
+    "creative_needs": [
+      "on-air promos",
+      "channel branding / idents",
+      "title sequences",
+      "motion graphics",
+      "social video",
+      "key art",
+      "format and series production"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "central-bottling-company"
+    },
+    {
+      "type": "client",
+      "target": "FreeTV",
+      "note": "all-AI musical spot to 'Lo LaMasmerim', 2025-10 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "mizrahi-tefahot",
+      "note": "'Dominique' branded content series with Guy Beer Gurevich & Dvir Benedek, 2026-10, via Reuveni Pridan, dir. Yogev Yefet (content production (Keshet commercial division)) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Keshet_Media_Group",
+    "https://he.wikipedia.org/wiki/%D7%A9%D7%99%D7%93%D7%95%D7%A8%D7%99_%D7%A7%D7%A9%D7%AA",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.mako.co.il/help/Article-9446174b77b2a31006.htm",
+    "https://jobs.keshet-mediagroup.com/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1085904",
+    "https://www.ice.co.il/advertising-marketing/news/article/1131943"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "freeTV (Keshet + RGE) was Israel's biggest TV advertiser in 2025 (~NIS 48M, Yifat via Globes).",
+  "description_he": "השדרן המסחרי המוביל בישראל (נוסד ב-1993): קשת 12, mako, N12, מיזם הסטרימינג המשותף freeTV וחברת ההפקה וההפצה הגלובלית Keshet International. בשליטת החברה המרכזית להפצת משקאות."
+}

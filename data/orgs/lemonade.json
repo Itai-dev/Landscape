@@ -1,0 +1,45 @@
+{
+  "id": "lemonade",
+  "name": "Lemonade",
+  "kind": "client",
+  "categories": [
+    "banking-finance",
+    "tech"
+  ],
+  "description": "AI-driven insurance company (renters, home, car, pet, life), founded in 2015 by Daniel Schreiber and Shai Wininger; NYSE: LMND, NYC HQ with a Tel Aviv office. Known for a playful, in-house-led brand and heavy ad spend.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2015,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.lemonade.com",
+  "careers_url": "https://makers.lemonade.com/",
+  "funding": {
+    "public": true,
+    "ticker": "NYSE: LMND"
+  },
+  "client_profile": {
+    "industry": "insurtech",
+    "creative_needs": [
+      "social video",
+      "motion graphics",
+      "illustration",
+      "performance ads",
+      "brand campaigns"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Lemonade,_Inc.",
+    "https://makers.lemonade.com/",
+    "https://www.sec.gov/Archives/edgar/data/0001691421/000169142126000055/lmnd-20260630.htm",
+    "https://www.lemonade.com/investor/news/lemonade-adds-paypals-cmo-to-its-board-of-directors"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Advertising spend $118.7M in H1 2026 (10-Q). Added PayPal CMO Geoff Seeley to its board in Oct 2025 to scale global marketing.",
+  "description_he": "חברת ביטוח מבוססת AI (ביטוח שוכרים, דירה, רכב, חיות מחמד וחיים), שנוסדה ב-2015 על ידי דניאל שרייבר ושי ויננגר; נסחרת ב-NYSE תחת LMND, המטה בניו יורק ומשרד בתל אביב. ידועה במותג שובב שמנוהל בעיקר בבית ובהוצאות פרסום כבדות.",
+  "name_he": "למונייד"
+}

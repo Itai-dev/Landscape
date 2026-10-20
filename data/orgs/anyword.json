@@ -1,0 +1,59 @@
+{
+  "id": "anyword",
+  "name": "Anyword",
+  "aka": [
+    "Keywee"
+  ],
+  "kind": "startup",
+  "categories": [
+    "adtech-creative"
+  ],
+  "description": "AI copywriting and performance-prediction platform for marketers (formerly Keywee) that generates ad, social, email and landing-page copy and scores it for predicted engagement against brand guidelines. New York / Tel Aviv.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2013,
+  "status": "active",
+  "website": "https://www.anyword.com",
+  "services": [
+    "AI copywriting",
+    "Predictive performance scoring",
+    "Brand-voice governance"
+  ],
+  "key_people": [
+    {
+      "name": "Yaniv Makover",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Omer Rabin",
+      "role": "Co-founder & CRO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "total_usd_m": 30,
+    "investors": [
+      "Innovation Endeavors",
+      "Group 11",
+      "UpWest Labs"
+    ]
+  },
+  "tags": [
+    "ai-copywriting",
+    "ad-creative"
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3922904,00.html",
+    "https://dealroom.co/companies/anyword/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$21M round (Nov 2021) led by Innovation Endeavors brought total above $30M. Text (copy) rather than visual creative.",
+  "description_he": "פלטפורמת קופירייטינג מבוססת AI וחיזוי ביצועים למשווקים (לשעבר Keywee), שמייצרת טקסטים למודעות, לסושיאל, למיילים ולדפי נחיתה ומדרגת אותם לפי מעורבות חזויה מול הנחיות המותג. ניו יורק / תל אביב."
+}

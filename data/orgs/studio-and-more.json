@@ -1,0 +1,60 @@
+{
+  "id": "studio-and-more",
+  "name": "studio&more",
+  "aka": [
+    "Studio&more",
+    "nmore"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design",
+    "motion-design"
+  ],
+  "description": "Tel Aviv creative studio founded in 2016 that builds brands for technology companies, covering branding, web, product/UX, 3D and motion design.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2016,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.nmore.co",
+  "contact_url": "https://nmore.co/contact",
+  "careers_url": "https://nmore.co/careers",
+  "reel_url": "https://vimeo.com/1150386021",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/studiomore",
+    "instagram": "https://www.instagram.com/studionmore",
+    "dribbble": "https://dribbble.com/studionmore",
+    "facebook": "https://www.facebook.com/studionmore",
+    "vimeo": "https://vimeo.com/studionmore",
+    "behance": "https://www.behance.net/studionmore"
+  },
+  "services": [
+    "branding",
+    "web design",
+    "product/UX design",
+    "3D",
+    "motion design"
+  ],
+  "notable_clients": [
+    "Checkmarx",
+    "Autofleet",
+    "Nexar",
+    "Mobileye",
+    "Toyota Israel",
+    "Waves",
+    "Storemaven"
+  ],
+  "sources": [
+    "https://www.nmore.co/",
+    "https://clutch.co/profile/studiomore",
+    "https://nmore.co/careers",
+    "https://vimeo.com/1150386021"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו קריאייטיב בתל אביב שנוסד ב-2016 ובונה מותגים לחברות טכנולוגיה, כולל מיתוג, אתרים, מוצר ו-UX, תלת-ממד ומושן."
+}

@@ -1,0 +1,62 @@
+{
+  "id": "wibbitz",
+  "name": "Wibbitz",
+  "kind": "startup",
+  "categories": [
+    "video-tools"
+  ],
+  "description": "Tel Aviv AI-powered short-form video creation platform that let publishers and business teams turn text and media into branded social videos with templates and automated editing. Acquired by Vimeo in late 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2011,
+  "status": "acquired",
+  "services": [
+    "Text-to-video creation",
+    "Enterprise/publisher video editor"
+  ],
+  "key_people": [
+    {
+      "name": "Zohar Dayan",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Yotam Cohen",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Acquired",
+    "total_usd_m": 30.8,
+    "investors": [
+      "Bertelsmann Digital Media Investments (BDMI)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Vimeo",
+      "note": "Announced 10 Nov 2021"
+    }
+  ],
+  "tags": [
+    "text-to-video",
+    "publishers",
+    "exit",
+    "publisher-video"
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3922264,00.html",
+    "https://techcrunch.com/2021/11/10/vimeo-snaps-up-ai-video-startup-wibbitz-and-shoppable-video-tech-maker-wirewax-to-expand-its-enterprise-video-tools/",
+    "https://startupim.com/company/wibbitz"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City from memory (Tel Aviv) — not confirmed in fetched sources. Vimeo's Israel centre largely shut Jan 2026.",
+  "description_he": "פלטפורמה מבוססת AI מתל אביב ליצירת וידאו קצר, שאפשרה למוציאים לאור ולצוותים עסקיים להפוך טקסט ומדיה לסרטוני סושיאל ממותגים באמצעות תבניות ועריכה אוטומטית. נרכשה על ידי Vimeo בסוף 2021."
+}

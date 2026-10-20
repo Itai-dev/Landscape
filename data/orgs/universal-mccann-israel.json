@@ -1,0 +1,67 @@
+{
+  "id": "universal-mccann-israel",
+  "name": "Universal McCann Israel",
+  "name_he": "יוניברסל מקאן",
+  "aka": [
+    "UM Israel",
+    "Universal"
+  ],
+  "kind": "agency",
+  "categories": [
+    "media-agency"
+  ],
+  "description": "Media planning and buying agency wholly owned by McCann Tel Aviv, representing the UM network in Israel. Handles media buying for major McCann clients, including L'Oréal Israel's ~NIS 100M account retained in Oct 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "services": [
+    "Media planning",
+    "Media buying"
+  ],
+  "notable_clients": [
+    "L'Oréal Israel"
+  ],
+  "key_people": [
+    {
+      "name": "Sagi Peleg",
+      "role": "Deputy CEO",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Doron Zakai",
+      "role": "Commercial SVP",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "mccann-tel-aviv"
+    },
+    {
+      "type": "parent",
+      "target": "Omnicom (via McCann Worldgroup / IPG)"
+    }
+  ],
+  "tags": [
+    "media-buying",
+    "omnicom",
+    "ipg"
+  ],
+  "sources": [
+    "https://mccann.co.il/about/",
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%90%D7%9F_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91",
+    "https://www.globes.co.il/news/article.aspx?did=1001558524"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Not a direct commissioner of production, but controls media budgets of top advertisers. OMD Israel CEO Yaniv Sana was previously UM deputy CEO.",
+  "description_he": "משרד תכנון וקניית מדיה בבעלות מלאה של מקאן תל אביב, שמייצג את רשת UM בישראל. מטפל בקניית המדיה של לקוחות גדולים של מקאן, כולל תקציב לוריאל ישראל בהיקף של כ-100 מיליון ₪ שנשמר באוקטובר 2026."
+}

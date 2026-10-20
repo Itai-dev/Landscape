@@ -1,0 +1,74 @@
+{
+  "id": "animix-festival",
+  "name": "Animix – Tel Aviv International Animation, Comics and Caricature Festival",
+  "name_he": "אנימיקס – הפסטיבל הבינלאומי לאנימציה, קומיקס וקריקטורה",
+  "aka": [
+    "Animix"
+  ],
+  "kind": "community",
+  "categories": [
+    "festival-event",
+    "animation-2d",
+    "illustration"
+  ],
+  "description": "Israel's largest animation, comics and caricature festival, held every August since 2000 at the Tel Aviv Cinematheque: screenings, Israeli and international animation competitions, workshops, artist talks, industry and mingling events and a big comics market (Shukomix); ~20,000 visitors a year. The 2026 edition ran 4–8 August.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2000,
+  "status": "active",
+  "website": "https://animix.co.il/",
+  "contact_url": "https://animix.co.il/about/",
+  "services": [
+    "Annual festival (August)",
+    "Israeli & international animation competition",
+    "Gross Prize",
+    "Shukomix comics market",
+    "Industry events"
+  ],
+  "key_people": [
+    {
+      "name": "Nissim Hezkiyahu (Nusko)",
+      "role": "Founder & Artistic Director",
+      "role_type": "founder",
+      "source": "https://animix.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Aviv Ziv",
+      "role": "Animation curator & Deputy Artistic Director",
+      "role_type": "creative_lead",
+      "source": "https://animix.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Galit Barsky",
+      "role": "Festival Producer",
+      "role_type": "production",
+      "source": "https://animix.co.il/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "tel-aviv-cinematheque",
+      "note": "Host venue since 2000"
+    }
+  ],
+  "tags": [
+    "festival",
+    "animation",
+    "comics",
+    "networking"
+  ],
+  "sources": [
+    "https://animix.co.il/",
+    "https://animix.co.il/about/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "פסטיבל האנימציה, הקומיקס והקריקטורה הגדול בישראל, שמתקיים בכל אוגוסט מאז 2000 בסינמטק תל אביב: הקרנות, תחרויות אנימציה ישראלית ובינלאומית, סדנאות, מפגשים עם יוצרים, אירועי תעשייה ונטוורקינג ושוק קומיקס גדול (שוקומיקס); כ-20,000 מבקרים בשנה. מהדורת 2026 התקיימה ב-4–8 באוגוסט."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "isracard",
+  "name": "Isracard",
+  "name_he": "ישראכרט",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli credit-card issuer and payments company (est. 1975 by Bank Hapoalim), issuing Isracard, Mastercard, Amex and co-branded cards such as El Al's Fly Card.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 1975,
+  "status": "active",
+  "website": "https://www.isracard.co.il",
+  "contact_url": "https://www.isracard.co.il/contact-us/private",
+  "careers_url": "https://www.isracard.co.il/career",
+  "key_people": [
+    {
+      "name": "Adar Goren",
+      "role": "VP Data, Digital & Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001534875",
+      "as_of": "2026-02-12"
+    }
+  ],
+  "client_profile": {
+    "industry": "payments / credit cards",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "Reuveni-Pridan"
+    ]
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "el-al",
+      "note": "Fly Card co-brand"
+    },
+    {
+      "type": "agency",
+      "target": "reuveni-pridan",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Isracard",
+    "https://www.globes.co.il/news/article.aspx?did=1001476945",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.isracard.co.il/contact-us/private",
+    "https://www.isracard.co.il/career",
+    "https://www.globes.co.il/news/article.aspx?did=1001546956",
+    "https://www.globes.co.il/news/article.aspx?did=1001534875"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Apr 2024: NIS 25M budget moved from Publicis to Reuveni-Pridan after 12 years. The Aug 2026 Fly Card (El Al + Isracard) ad was made by McCann Tel Aviv (Globes). Agency as of 2026-06: Reuveni-Pridan lists Isracard among its main clients (Globes, Jun 2026). Marketing VP Amit Sagi left in 2025; successor not confirmed in trade press. Feb 2026: Adar Goren (Isracard marketing & data manager for four years, acting marketing VP) promoted to VP Data, Digital & Marketing under new CEO Itamar Forman (Globes).",
+  "description_he": "מנפיקת כרטיסי אשראי וחברת תשלומים ישראלית (נוסדה ב-1975 על ידי בנק הפועלים), המנפיקה כרטיסי ישראכרט, מסטרקארד, אמריקן אקספרס וכרטיסים משותפים כמו כרטיס Fly Card של אל על."
+}

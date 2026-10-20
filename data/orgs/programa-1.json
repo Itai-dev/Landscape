@@ -1,0 +1,55 @@
+{
+  "id": "programa-1",
+  "name": "Programa 1 Design Studio",
+  "name_he": "פרוגרמה 1 – סדנאות לעיצוב והמחשה",
+  "kind": "studio",
+  "categories": [
+    "experiential",
+    "creative-technology"
+  ],
+  "description": "Museum and visitor-center design studio founded in 1986 by museum designer Eliav Nahlieli: heritage walk-through experiences, memorial sites and themed attractions (archaeology, Jewish and Zionist history, military museums) with architects, graphic and industrial designers and scriptwriters. THEA Awards for the Palmach Museum (2000) and the Chain of Generations Center (2007).",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1986,
+  "status": "active",
+  "website": "https://www.programa1.com",
+  "contact_url": "https://www.programa1.com/contact",
+  "services": [
+    "Museum design",
+    "Visitor centers",
+    "Heritage & memorial sites",
+    "Audio-visual & interactive exhibits",
+    "Exhibit scriptwriting"
+  ],
+  "notable_work": [
+    "Palmach Museum (THEA Award 2000)",
+    "Chain of Generations Center, Western Wall (THEA Award 2007)",
+    "Levi Eshkol House visitor center (2019)",
+    "Interactive postal & philately display, Eretz Israel Museum"
+  ],
+  "key_people": [
+    {
+      "name": "Eliav Nahlieli",
+      "role": "Founder, Museum designer",
+      "role_type": "founder",
+      "source": "https://programa1.com/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "museums",
+    "heritage",
+    "visitor-centers",
+    "thea-award"
+  ],
+  "sources": [
+    "https://programa1.com/",
+    "https://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%99%D7%90%D7%91_%D7%A0%D7%97%D7%9C%D7%99%D7%90%D7%9C%D7%99"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "City not stated on the site.",
+  "description_he": "סטודיו לעיצוב מוזיאונים ומרכזי מבקרים שהקים ב-1986 מעצב המוזיאונים אליאב נחליאלי: חוויות מורשת במסלול הליכה, אתרי הנצחה ואטרקציות נושאיות (ארכיאולוגיה, היסטוריה יהודית וציונית, מוזיאונים צבאיים) בשיתוף אדריכלים, מעצבים גרפיים ותעשייתיים ותסריטאים. זכה בפרסי THEA על מוזיאון הפלמ\"ח (2000) ועל מרכז שרשרת הדורות (2007)."
+}

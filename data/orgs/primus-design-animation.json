@@ -1,0 +1,46 @@
+{
+  "id": "primus-design-animation",
+  "name": "Primus Design & Animation",
+  "aka": [
+    "Primus"
+  ],
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "vfx",
+    "animation-3d",
+    "post-production"
+  ],
+  "description": "Tel Aviv design, post-production and animation company founded in 1997, specializing in motion design, VFX, CG animation, commercials, broadcast promos and branding packages, plus original pre-school content development.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1997,
+  "size": "11-50",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/primus-design-&-animation"
+  },
+  "services": [
+    "Motion design",
+    "VFX",
+    "CG animation",
+    "Commercials",
+    "Broadcast promos",
+    "On-air branding",
+    "Pre-school content development"
+  ],
+  "tags": [
+    "broadcast-design",
+    "promos"
+  ],
+  "sources": [
+    "https://www.linkedin.com/company/primus-design-&-animation"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website listed on LinkedIn (primus-dg.com) did not respond on 2026-10-18; activity level unverified.",
+  "description_he": "חברת עיצוב, פוסט-פרודקשן ואנימציה בתל אביב שנוסדה ב-1997, ומתמחה בעיצוב מושן, VFX, אנימציית CG, פרסומות, פרומואים לשידור וחבילות מיתוג, לצד פיתוח תוכן מקורי לגיל הרך."
+}

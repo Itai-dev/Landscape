@@ -1,0 +1,51 @@
+{
+  "id": "ayalon-insurance",
+  "name": "Ayalon Insurance",
+  "name_he": "איילון חברה לביטוח",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli insurance company (est. 1976, Ramat Gan HQ) that recently entered the provident-fund business; held by the WeSure (Wisor) holding group, which is buying Altshuler Shaham Finance.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1976,
+  "status": "active",
+  "website": "https://www.ayalon-ins.co.il",
+  "client_profile": {
+    "industry": "insurance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "explainer animation"
+    ],
+    "known_agencies": [
+      "No, No, No, No, No, Yes"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "no-no-no-no-no-yes",
+      "note": "agency since Aug 2025, ~NIS 10M budget (Globes, Sep 2026)"
+    },
+    {
+      "type": "parent",
+      "target": "WeSure (Wisor) holding",
+      "note": "per Globes, Sep 2026"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%99%D7%9C%D7%95%D7%9F_%D7%97%D7%91%D7%A8%D7%94_%D7%9C%D7%91%D7%99%D7%98%D7%95%D7%97",
+    "https://www.globes.co.il/news/article.aspx?did=1001555401",
+    "https://www.ice.co.il/positions/news/article/1078972"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Sep 2026: a possible merger of marketing with Altshuler Shaham (LEAD) could reshuffle the agency setup (Globes). Agency as of 2026-09: No, No, No, No, No, Yes (Gideon Amichay) has handled the ~NIS 10M budget since Aug 2025 (Globes). Aug 2025: marketing VP Yael Peer Segal left after 15.5 years; no successor reported (ICE).",
+  "description_he": "חברת ביטוח ישראלית (נוסדה ב-1976, מטה ברמת גן) שנכנסה לאחרונה לתחום קופות הגמל; מוחזקת על ידי קבוצת האחזקות WeSure (ויזור), שרוכשת את אלטשולר שחם פיננסים."
+}

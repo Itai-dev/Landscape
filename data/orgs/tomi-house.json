@@ -1,0 +1,46 @@
+{
+  "id": "tomi-house",
+  "name": "Tomi House",
+  "kind": "studio",
+  "categories": [
+    "cgi-3d",
+    "vfx",
+    "xr",
+    "animation-3d"
+  ],
+  "description": "Tel Aviv 3D VFX and CGI art house founded in 2018, creating digital art, 3D animation, mixed-reality and fake-out-of-home (FOOH) content and indoor/outdoor installations for brands; it also runs an academy.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2018,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://tomihouse.com",
+  "contact_url": "https://tomihouse.com/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/tomi-house"
+  },
+  "services": [
+    "CGI",
+    "3D animation",
+    "VFX",
+    "Mixed reality / FOOH",
+    "Digital art installations",
+    "Training academy"
+  ],
+  "tags": [
+    "fooh",
+    "cgi-art",
+    "mixed-reality"
+  ],
+  "sources": [
+    "https://tomihouse.com",
+    "https://www.linkedin.com/company/tomi-house",
+    "https://tomihouse.com/contact/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "בית אמנות תלת-ממד, VFX ו-CGI בתל אביב שנוסד ב-2018, ויוצר אמנות דיגיטלית, אנימציית תלת-ממד, תוכן מציאות מעורבת ו-FOOH (פרסומות חוצות מדומות) ומיצבי פנים וחוץ למותגים; מפעיל גם אקדמיה."
+}

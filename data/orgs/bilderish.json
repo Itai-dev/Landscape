@@ -1,0 +1,79 @@
+{
+  "id": "bilderish",
+  "name": "Bilderish",
+  "name_he": "בילדריש",
+  "aka": [
+    "Bilderish | Creativity in Motion"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "post-production"
+  ],
+  "description": "Tel Aviv animation, video and post-production studio with 13+ years of experience making explainers, training videos, social ads, commercials and animated series for high-tech, visitor centers and gaming clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://bilderish.com",
+  "contact_url": "https://bilderish.com/%D7%93%D7%91%D7%A8%D7%95-%D7%90%D7%99%D7%AA%D7%A0%D7%95/",
+  "reel_url": "https://vimeo.com/726949635",
+  "links": {
+    "vimeo": "https://vimeo.com/bilderish",
+    "instagram": "https://www.instagram.com/bilderish/",
+    "linkedin": "https://www.linkedin.com/company/bilderish-studio/",
+    "youtube": "https://www.youtube.com/user/Bilderish"
+  },
+  "services": [
+    "Explainer videos",
+    "Training videos",
+    "Social ads",
+    "Commercials",
+    "Animated series",
+    "Post-production"
+  ],
+  "notable_clients": [
+    "AppsFlyer",
+    "Riskified",
+    "Amdocs",
+    "IKEA",
+    "Kimberly-Clark",
+    "Playtika",
+    "Israel Railways",
+    "Israel Nature and Parks Authority"
+  ],
+  "key_people": [
+    {
+      "name": "Eran Roth",
+      "role": "Co-founder & Art Director",
+      "role_type": "founder",
+      "source": "https://bilderish.com/%D7%A2%D7%9C%D7%99%D7%A0%D7%95/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Naftali Vanunu",
+      "role": "Co-founder & Project Manager",
+      "role_type": "founder",
+      "source": "https://bilderish.com/%D7%A2%D7%9C%D7%99%D7%A0%D7%95/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "explainers",
+    "tech"
+  ],
+  "sources": [
+    "https://bilderish.com",
+    "https://clutch.co/il/agencies/video-production/explainer/tel-aviv",
+    "https://bilderish.com/",
+    "https://bilderish.com/%D7%A2%D7%9C%D7%99%D7%A0%D7%95/",
+    "https://vimeo.com/726949635"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו לאנימציה, וידאו ופוסט מתל אביב עם יותר מ-13 שנות ניסיון, שמפיק סרטוני הסבר, סרטוני הדרכה, מודעות לסושיאל, פרסומות וסדרות אנימציה ללקוחות הייטק, מרכזי מבקרים וגיימינג."
+}

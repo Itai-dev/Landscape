@@ -1,0 +1,62 @@
+{
+  "id": "gong",
+  "name": "Gong",
+  "aka": [
+    "Gong.io"
+  ],
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Revenue AI platform for sales teams, founded in 2015 by Amit Bendov and Eilon Reshef; US HQ with its Israeli office at Icon Tower, Ramat Gan. Known for bold B2B brand campaigns.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 2015,
+  "status": "active",
+  "website": "https://www.gong.io",
+  "contact_url": "https://www.gong.io/contact-us",
+  "careers_url": "https://www.gong.io/careers",
+  "key_people": [
+    {
+      "name": "Emily He",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.gong.io/press/gong-appoints-emily-he-as-chief-marketing-officer-2",
+      "as_of": "2024-05-15"
+    }
+  ],
+  "client_profile": {
+    "industry": "B2B SaaS / sales AI",
+    "creative_needs": [
+      "brand campaigns",
+      "social video",
+      "motion graphics",
+      "event content",
+      "web design"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "atreo",
+      "note": "listed as an Atreo client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "5ive-ux",
+      "note": "listed as a 5ive UX client (studio website)"
+    }
+  ],
+  "sources": [
+    "https://www.gong.io/about",
+    "https://www.gong.io/press/gong-appoints-emily-he-as-chief-marketing-officer-2",
+    "https://www.atreo.co/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Founders and founding year from general knowledge.",
+  "description_he": "פלטפורמת Revenue AI לצוותי מכירות, שנוסדה ב-2015 על ידי עמית בנדוב ואילון רשף; המטה בארה\"ב והמשרד הישראלי במגדל אייקון ברמת גן. ידועה בקמפייני מותג B2B נועזים."
+}

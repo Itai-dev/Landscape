@@ -1,0 +1,78 @@
+{
+  "id": "rabbi-interactive",
+  "name": "Rabbi Interactive",
+  "name_he": "רבי אינטראקטיב",
+  "aka": [
+    "Rabbi Interactive Agency"
+  ],
+  "kind": "studio",
+  "categories": [
+    "creative-technology",
+    "digital-design",
+    "xr"
+  ],
+  "description": "Tel Aviv digital and technology agency producing digital products since 2005, known for interactive TV game shows, second-screen and real-time audience participation tech, AR effects and festival crowd-sync apps for media and entertainment clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2005,
+  "status": "active",
+  "website": "https://www.rabbi.co.il",
+  "contact_url": "https://www.rabbi.co.il/contact",
+  "links": {
+    "facebook": "https://www.facebook.com/rabbi.interactive",
+    "linkedin": "https://www.linkedin.com/company/rabbi-interactive-agency",
+    "x": "https://twitter.com/rabbi_agency",
+    "vimeo": "https://vimeo.com/rabbiagency",
+    "instagram": "https://www.instagram.com/rabbi_interactive/",
+    "youtube": "https://www.youtube.com/RabbiIlrabbi_agency"
+  },
+  "services": [
+    "interactive TV and game shows",
+    "apps and websites",
+    "AR effects",
+    "branding and campaigns"
+  ],
+  "notable_clients": [
+    "Keshet 12",
+    "mako",
+    "N12",
+    "Aviv Geffen"
+  ],
+  "notable_work": [
+    "Hitlist (mako music chart)",
+    "Crowdr Festigal crowd-sync app",
+    "Eurovision predictions app",
+    "'Who Can Beat Israel' interactive TV game"
+  ],
+  "key_people": [
+    {
+      "name": "Gil Rabbi",
+      "role": "Founder (2005)",
+      "role_type": "founder",
+      "source": "https://www.rabbi.co.il/page/rabbi_agency",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Rabbi Group"
+    },
+    {
+      "type": "client",
+      "target": "keshet-12"
+    }
+  ],
+  "sources": [
+    "https://www.rabbi.co.il",
+    "https://www.cbinsights.com/compare/moosh-studio-vs-rabbi-interactive-agency",
+    "https://www.rabbi.co.il/page/rabbi_agency"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Site profiles Gil Rabbi of the parent Rabbi Group; his exact role was not confirmed.",
+  "description_he": "סוכנות דיגיטל וטכנולוגיה בתל אביב שמפיקה מוצרים דיגיטליים מאז 2005, ומוכרת בזכות שעשועוני טלוויזיה אינטראקטיביים, טכנולוגיות מסך שני והשתתפות קהל בזמן אמת, אפקטי AR ואפליקציות לסנכרון קהל בפסטיבלים עבור לקוחות מדיה ובידור."
+}

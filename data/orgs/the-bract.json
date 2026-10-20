@@ -1,0 +1,60 @@
+{
+  "id": "the-bract",
+  "name": "The Bract Agency",
+  "aka": [
+    "Bract"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Strategic branding agency for tech founders headquartered on Rothschild Boulevard, Tel Aviv, with offices in Paris and San Francisco; offers fixed-scope programmes for fundraising, launch and rebrand (brand strategy, identity, pitch decks, websites).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Paris",
+      "San Francisco"
+    ]
+  },
+  "status": "active",
+  "website": "https://www.thebract.com",
+  "contact_url": "https://www.thebract.com/contact",
+  "links": {
+    "instagram": "https://www.instagram.com/the.bract/",
+    "linkedin": "https://www.linkedin.com/company/bract-agency/",
+    "behance": "https://www.behance.net/thebractagency"
+  },
+  "services": [
+    "brand strategy",
+    "brand identity",
+    "pitch deck design",
+    "websites",
+    "messaging"
+  ],
+  "notable_clients": [
+    "Darika",
+    "Coltac Therapeutics",
+    "Claryx",
+    "Acusurgical"
+  ],
+  "key_people": [
+    {
+      "name": "Lisa Picovschi",
+      "role": "Founder & Strategist",
+      "role_type": "founder",
+      "source": "https://www.thebract.com/about",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "sources": [
+    "https://www.thebract.com",
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://www.thebract.com/about"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סוכנות מיתוג אסטרטגי למייסדי טכנולוגיה שמטה שלה בשדרות רוטשילד בתל אביב, עם משרדים בפריז ובסן פרנסיסקו; מציעה תוכניות בהיקף קבוע לגיוס, השקה ומיתוג מחדש (אסטרטגיית מותג, זהות, מצגות משקיעים, אתרים)."
+}

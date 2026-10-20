@@ -1,0 +1,54 @@
+{
+  "id": "atreo",
+  "name": "Atreo",
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "motion-design"
+  ],
+  "description": "Tel Aviv 'movement design' agency for B2B tech founded in 2012, combining category design, strategic narrative and messaging with brand identity, motion and launch campaigns.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2012,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.atreo.co",
+  "reel_url": "https://vimeo.com/1085440965",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/atreo/",
+    "instagram": "https://www.instagram.com/atreo.co",
+    "vimeo": "https://vimeo.com/atreo"
+  },
+  "services": [
+    "category design",
+    "strategic narrative and messaging",
+    "brand identity",
+    "brand video and launch campaigns",
+    "website design"
+  ],
+  "notable_clients": [
+    "JFrog",
+    "Gong",
+    "Similarweb",
+    "Taboola",
+    "Overwolf",
+    "Checkmarx",
+    "Cato Networks",
+    "Quantum Machines"
+  ],
+  "tags": [
+    "b2b-tech",
+    "narrative"
+  ],
+  "sources": [
+    "https://www.atreo.co/",
+    "https://clutch.co/profile/atreo",
+    "https://vimeo.com/1085440965"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סוכנות 'movement design' מתל אביב לחברות טכנולוגיה B2B, שנוסדה ב-2012 ומשלבת עיצוב קטגוריה, נרטיב אסטרטגי ומסרים עם זהות מותג, מושן וקמפייני השקה."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "carmi-and-cohen",
+  "name": "Carmi & Cohen",
+  "name_he": "כרמי וכהן",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli commercial production company credited by ICE on McDonald's Israel's 2024 campaign with the Mosseri brothers (Yehoshua TBWA) and on McCann work for Pepper (with creator Ido Katzir) and Wolt (2025–2026, director Assaf Harel).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "McDonald's Israel",
+    "Pepper",
+    "Wolt"
+  ],
+  "notable_work": [
+    "McDonald's Israel — Mosseri brothers campaign (2024)",
+    "Pepper — new-language launch with creator Ido Katzir (2025)",
+    "Wolt — search-engine holiday campaign with Adi Himelbloy & Ben Zini (2025)",
+    "Wolt — supermarket delivery with the Gordon family (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "pepper",
+      "note": "new-language launch with creator Ido Katzir, 2025-10, via McCann Tel Aviv, dir. Adam Sanderson (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Wolt",
+      "note": "search-engine holiday campaign with Adi Himelbloy & Ben Zini, 2025-11, via McCann Tel Aviv, dir. Assaf Harel (production); supermarket delivery with the Gordon family, 2026-06, via McCann Tel Aviv, dir. Assaf Harel (production) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1015710",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089107",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089951",
+    "https://www.ice.co.il/advertising-marketing/news/article/1115664"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "חברת הפקת פרסומות ישראלית ש-ICE מקרדט על קמפיין מקדונלד'ס ישראל (2024) עם האחים מוסרי (יהושע TBWA) ועל עבודות של מקאן לפפר (עם היוצר עידו קציר) ול-Wolt (2025–2026, בבימוי אסף הראל)."
+}

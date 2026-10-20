@@ -1,0 +1,121 @@
+{
+  "id": "peach-content",
+  "name": "Peach",
+  "aka": [
+    "Peach Content We Like"
+  ],
+  "kind": "agency",
+  "categories": [
+    "content-studio",
+    "pr-social"
+  ],
+  "description": "Content agency of the Gitam BBDO group: branded content, original series, documentaries and music videos, TV/radio/digital integrations, influencer teams and content strategy; its Peach Agendot unit works for non-profits. Credited on Strauss's 2026 Energy campaign with Hila Saada.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.peachcontent.com/",
+  "contact_url": "https://www.peachcontent.com/contact/",
+  "careers_url": "https://www.peachcontent.com/jobs/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/peachcontent"
+  },
+  "services": [
+    "Branded content",
+    "Original series & documentaries",
+    "TV/radio/digital integrations",
+    "Influencer teams",
+    "Content strategy"
+  ],
+  "notable_clients": [
+    "Bank Hapoalim",
+    "Fox Group",
+    "Paz",
+    "Sonol",
+    "Clal Insurance",
+    "Sano",
+    "Mei Eden",
+    "Electra",
+    "Strauss (Energy)"
+  ],
+  "notable_work": [
+    "Energy with Hila Saada (Strauss, 2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Eyal Saada",
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://www.peachcontent.com/people/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Sarel Denir",
+      "role": "Co-CEO",
+      "role_type": "executive",
+      "source": "https://www.peachcontent.com/people/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Dafna Guy Shtegman",
+      "role": "CEO & founder, Peach Agendot",
+      "role_type": "founder",
+      "source": "https://www.peachcontent.com/people/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Nessi Bachar",
+      "role": "VP Clients",
+      "role_type": "other",
+      "source": "https://www.peachcontent.com/people/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Ronen Hoffman",
+      "role": "Producer",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1131001",
+      "as_of": "2026-09-25"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "gitam-bbdo"
+    },
+    {
+      "type": "client",
+      "target": "strauss-group"
+    },
+    {
+      "type": "client",
+      "target": "BuyMe",
+      "note": "Rosh Hashana hosting campaign with Shalom Michaelshvili & Liel Eli, 2025-09 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Family air conditioners (Crystalino)",
+      "note": "Family A/C campaign with Maggie Azarzar & Kuti Sabag, 2026-05 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "el-al",
+      "note": "Fly Card / Matmid club with Deni Avdija & Niv Sultan (with Isracard), 2026-06 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.peachcontent.com/about/",
+    "https://www.peachcontent.com/people/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1131001",
+    "https://www.ice.co.il/advertising-marketing/news/article/1090591",
+    "https://www.ice.co.il/advertising-marketing/news/article/1084598",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113018",
+    "https://www.ice.co.il/advertising-marketing/news/article/1116579"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "סוכנות התוכן של קבוצת גיתם BBDO: תוכן שיווקי, סדרות מקור, דוקומנטרי וקליפים, אינטגרציות בטלוויזיה, ברדיו ובדיגיטל, צוותי משפיענים ואסטרטגיית תוכן; יחידת Peach Agendot שלה עובדת עם עמותות. מופיעה בקרדיטים של קמפיין Energy של שטראוס ל-2026 עם הילה סעדה."
+}

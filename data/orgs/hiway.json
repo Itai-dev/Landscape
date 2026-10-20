@@ -1,0 +1,40 @@
+{
+  "id": "hiway",
+  "name": "Hiway",
+  "kind": "startup",
+  "categories": [
+    "cgi-3d",
+    "real-estate"
+  ],
+  "description": "Tel Aviv company founded in 2022 that turns architectural plans into interactive, customizable 3D experiences for real-estate developers and homebuyers, including layout transformations, virtual staging, immersive 3D tours and personalized design options.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2022,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://hiway.design",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/hiway-design"
+  },
+  "services": [
+    "Interactive 3D apartment visualization",
+    "Virtual staging",
+    "3D tours",
+    "Real-estate sales tools"
+  ],
+  "tags": [
+    "archviz",
+    "proptech",
+    "real-estate"
+  ],
+  "sources": [
+    "https://hiway.design",
+    "https://www.linkedin.com/company/hiway-design"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "חברה תל אביבית שנוסדה ב-2022 והופכת תוכניות אדריכליות לחוויות תלת-ממד אינטראקטיביות וניתנות להתאמה עבור יזמי נדל\"ן ורוכשי דירות, כולל שינויי תכנון, הלבשה וירטואלית של דירות, סיורי תלת-ממד אימרסיביים ואפשרויות עיצוב מותאמות אישית."
+}

@@ -1,0 +1,78 @@
+{
+  "id": "monday-com",
+  "name": "monday.com",
+  "name_he": "מאנדיי",
+  "aka": [
+    "DaPulse"
+  ],
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Tel Aviv-based work-management software company (founded 2012 as DaPulse, Nasdaq: MNDY) known for heavy video-led performance and brand marketing worldwide.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2012,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://monday.com",
+  "contact_url": "https://monday.com/sales/contact-us",
+  "careers_url": "https://monday.com/careers/",
+  "key_people": [
+    {
+      "name": "Roy Mann",
+      "role": "Co-founder & Co-CEO"
+    },
+    {
+      "name": "Eran Zinman",
+      "role": "Co-founder & Co-CEO"
+    },
+    {
+      "name": "Harris Beber",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.mi-3.com.au/19-06-2025/mondaycom-nabs-google-workplace-marketer-harris-beber-global-cmo-role",
+      "as_of": "2025-06-19"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: MNDY"
+  },
+  "client_profile": {
+    "industry": "SaaS",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals",
+      "performance ad variations"
+    ],
+    "known_agencies": [
+      "K Agency"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "K Agency",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Monday.com",
+    "https://www.globes.co.il/news/article.aspx?did=1001504828",
+    "https://www.mi-3.com.au/19-06-2025/mondaycom-nabs-google-workplace-marketer-harris-beber-global-cmo-role",
+    "https://monday.com/sales/contact-us",
+    "https://monday.com/careers/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Globes (Mar 2025) lists monday.com among K Agency's clients.",
+  "description_he": "חברת תוכנה לניהול עבודה מתל אביב (נוסדה ב-2012 בשם DaPulse, נאסד\"ק: MNDY), שידועה בשיווק פרפורמנס ומותג מבוסס וידאו בהיקף נרחב ברחבי העולם."
+}

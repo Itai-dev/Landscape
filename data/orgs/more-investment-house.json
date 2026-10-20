@@ -1,0 +1,56 @@
+{
+  "id": "more-investment-house",
+  "name": "More Investment House",
+  "name_he": "מור בית השקעות",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "TASE-listed Israeli investment house (est. 2006, Ramat Gan) managing provident and study funds, pensions, portfolios and mutual funds; ~180 employees. Actress Keren Mor is its long-running presenter.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 2006,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.moreinvest.co.il",
+  "careers_url": "https://www.moreinvest.co.il/%D7%A2%D7%9C%D7%99%D7%A0%D7%95/%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94/",
+  "key_people": [
+    {
+      "name": "Hadar Raz",
+      "role": "VP Marketing, External Relations & Communications",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/996595",
+      "as_of": "2024-01-17"
+    }
+  ],
+  "client_profile": {
+    "industry": "investment and pensions",
+    "creative_needs": [
+      "TV commercials",
+      "celebrity presenter campaigns",
+      "financial-education video series",
+      "social video"
+    ],
+    "known_agencies": [
+      "Citymedia"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "Citymedia",
+      "note": "agency per Funder (undated) on a Keren Mor campaign promoting a financial-education video channel"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%95%D7%A8_%D7%91%D7%99%D7%AA_%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA",
+    "https://www.funder.co.il/article/160211",
+    "https://www.ice.co.il/advertising-marketing/news/article/996595"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "בית השקעות ישראלי הנסחר בבורסת תל אביב (נוסד ב-2006, רמת גן) שמנהל קופות גמל וקרנות השתלמות, פנסיה, תיקי השקעות וקרנות נאמנות; כ-180 עובדים. השחקנית קרן מור היא הפרזנטורית הוותיקה שלו."
+}

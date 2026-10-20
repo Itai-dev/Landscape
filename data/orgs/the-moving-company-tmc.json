@@ -1,0 +1,51 @@
+{
+  "id": "the-moving-company-tmc",
+  "name": "The Moving Company (TMC)",
+  "aka": [
+    "TMC Animation"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d"
+  ],
+  "description": "Small international 2D animation studio ('Animation That Matters') producing story-driven educational and explainer content for NGOs, universities and companies.",
+  "location": {
+    "country": "IL"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://tmc.studio",
+  "contact_url": "https://tmc.studio/contact/",
+  "reel_url": "https://vimeo.com/1137663727",
+  "links": {
+    "vimeo": "https://vimeo.com/user108546517",
+    "instagram": "https://www.instagram.com/tmc_animation/",
+    "youtube": "https://www.youtube.com/channel/UCoIHe7Wnfk6wCr62QDBvk0Q"
+  },
+  "services": [
+    "2D animation",
+    "Educational and explainer videos"
+  ],
+  "notable_clients": [
+    "UNESCO",
+    "Rutgers University",
+    "RC Cola",
+    "Browsi",
+    "Speedata"
+  ],
+  "tags": [
+    "educational",
+    "impact"
+  ],
+  "sources": [
+    "https://tmc.studio",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://tmc.studio/",
+    "https://vimeo.com/1137663727"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City not stated; Israeli phone number and Animation Israel listing.",
+  "description_he": "סטודיו אנימציית 2D בינלאומי קטן ('Animation That Matters') שמפיק תוכן חינוכי וסרטוני הסבר מבוססי סיפור לעמותות, אוניברסיטאות וחברות."
+}

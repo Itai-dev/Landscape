@@ -1,0 +1,55 @@
+{
+  "id": "israel-police",
+  "name": "Israel Police",
+  "name_he": "משטרת ישראל",
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Israel's national civilian police force. Runs ongoing recruitment campaigns through LAPAM: in May 2026 the LAPAM tender committee approved ~NIS 1.69M (NIS 400K production) with Grey Content for a one-minute patrol-officer recruitment film on the 'Daka LeShmone' strip on channels 11, 12 and 13.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "status": "active",
+  "website": "https://www.police.gov.il",
+  "client_profile": {
+    "industry": "government / law enforcement",
+    "creative_needs": [
+      "recruitment campaigns",
+      "TV spots",
+      "brand film",
+      "social video"
+    ],
+    "known_agencies": [
+      "Grey Content (Daka LeShmone, 2026)",
+      "LAPAM"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "lapam",
+      "note": "Recruitment campaigns procured via LAPAM"
+    },
+    {
+      "type": "agency",
+      "target": "Grey Content Ltd.",
+      "note": "Exclusive operator of 'Daka LeShmone'; media + production for 2026 recruitment film"
+    }
+  ],
+  "tags": [
+    "via-lapam",
+    "recruitment-campaigns"
+  ],
+  "sources": [
+    "https://www.mr.gov.il/ilgstorefront/he/p/attachment/005056BFAF4C1FE193912F9658D172F5/%D7%A4%D7%A8%D7%95%D7%98%D7%95%D7%A7%D7%95%D7%9C%20%D7%95%D7%A2%D7%93%D7%94",
+    "https://www.maariv.co.il/news/military/article-1080810",
+    "https://en.wikipedia.org/wiki/Israel_Police"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Recruitment campaigns use real officers rather than actors (Maariv). Official site blocks automated access.",
+  "description_he": "משטרת ישראל, משטרת האזרחים הארצית. מריצה קמפייני גיוס שוטפים דרך לפ\"ם: במאי 2026 אישרה ועדת המכרזים של לפ\"ם כ-1.69 מיליון ₪ (מתוכם 400 אלף ₪ להפקה) עם Grey Content לסרט גיוס באורך דקה לשוטרי סיור ברצועת 'דקה לשמונה' בערוצים 11, 12 ו-13."
+}

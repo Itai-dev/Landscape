@@ -1,0 +1,56 @@
+{
+  "id": "harel-insurance",
+  "name": "Harel Insurance & Finance",
+  "name_he": "הראל",
+  "aka": [
+    "Harel Insurance Investments & Financial Services"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "One of Israel's largest insurance and long-term-savings groups (roots in 1935), covering insurance, pensions, health and investment products.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1935,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.harel-group.co.il",
+  "contact_url": "https://www.harel-group.co.il/contact",
+  "key_people": [
+    {
+      "name": "Liat Sadan",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/auto/news/article/1096361",
+      "as_of": "2025-12-21"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: HARL"
+  },
+  "client_profile": {
+    "industry": "insurance / finance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Harel_Group",
+    "https://www.harel-group.co.il",
+    "https://www.ice.co.il/auto/news/article/1096361",
+    "https://www.harel-group.co.il/contact"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Agency of record not confirmed in recent trade press.",
+  "description_he": "אחת מקבוצות הביטוח והחיסכון ארוך הטווח הגדולות בישראל (שורשיה ב-1935), הפועלת בביטוח, פנסיה, בריאות ומוצרי השקעה."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "oded-ezer-typography",
+  "name": "Oded Ezer Design Studio",
+  "aka": [
+    "Oded Ezer Typography",
+    "Ezer Type House"
+  ],
+  "kind": "studio",
+  "categories": [
+    "typography",
+    "graphic-design"
+  ],
+  "description": "Typography and design studio of Israeli typographer and artist Oded Ezer (est. c. 2000), creating Hebrew and Latin typefaces, logotypes, type systems and experimental typographic work exhibited at MoMA and the V&A.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.odedezer.com",
+  "contact_url": "https://www.odedezer.com/contact",
+  "services": [
+    "custom typefaces",
+    "logotypes",
+    "type systems",
+    "typographic installations"
+  ],
+  "notable_clients": [
+    "Google",
+    "Samsung",
+    "Waze",
+    "Weizmann Institute of Science"
+  ],
+  "notable_work": [
+    "Biotypography",
+    "The Typosexual Mohawk"
+  ],
+  "key_people": [
+    {
+      "name": "Oded Ezer",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "hebrew-type",
+    "experimental-typography"
+  ],
+  "sources": [
+    "https://www.odedezer.com",
+    "https://luc.devroye.org/israel.html",
+    "https://www.odedezer.com/contact"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Location given as Givatayim (Devroye) or Tel Aviv (foundry catalogue); founding year given as 2000 or 2001 in different sources.",
+  "description_he": "סטודיו הטיפוגרפיה והעיצוב של הטיפוגרף והאמן הישראלי עודד עזר (נוסד בסביבות 2000), שיוצר פונטים בעברית ובלטינית, לוגוטייפים, מערכות טיפוגרפיות ועבודות טיפוגרפיה ניסיוניות שהוצגו ב-MoMA וב-V&A."
+}

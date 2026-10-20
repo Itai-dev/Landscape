@@ -1,0 +1,69 @@
+{
+  "id": "avraham-advertising",
+  "name": "Avraham",
+  "name_he": "משרד הפרסום אברהם",
+  "aka": [
+    "Avraham Advertising",
+    "Pirsum Avraham"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising"
+  ],
+  "description": "Independent Israeli advertising agency controlled by Yariv Avraham (2011 ownership: 60% Avraham, 20% Dudik Katz, 20% Nissim Moyal). Ranked No.9 in the 2023 Yifat-based agency ranking; past clients include Audi (Champion Motors) and Crowne Plaza.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "51-200",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/avraham-adv",
+    "facebook": "https://www.facebook.com/avraham.advertising"
+  },
+  "notable_clients": [
+    "Audi / Champion Motors",
+    "Crowne Plaza (Israel)",
+    "Fujicom"
+  ],
+  "key_people": [
+    {
+      "name": "Yariv Avraham",
+      "role": "Owner"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "post-production"
+    ]
+  },
+  "relations": [
+    {
+      "type": "client",
+      "target": "Samsung Israel",
+      "note": "Galaxy S26 launch with Noa Kirel, Eden Hason, Netta Alchimister & Alin Golan, 2026-03 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "FINQ",
+      "note": "AI pension & investments with Ruti Broudo, 2026-05 (ICE credits)"
+    }
+  ],
+  "tags": [
+    "independent"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/298995",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.ice.co.il/advertising-marketing/news/article/464361",
+    "https://www.linkedin.com/company/avraham-adv",
+    "https://www.ice.co.il/advertising-marketing/news/article/1106866",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113835"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Ownership/client info dates from 2011-2012. City assumed Tel Aviv.",
+  "description_he": "משרד פרסום ישראלי עצמאי בשליטת יריב אברהם (בעלות ב-2011: 60% אברהם, 20% דודיק כץ, 20% ניסים מויאל). דורג במקום ה-9 בדירוג משרדי הפרסום לשנת 2023 על בסיס נתוני יפעת; בין לקוחות העבר: אאודי (צ'מפיון מוטורס) וקראון פלאזה."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "mind-the-gap-animation",
+  "name": "Mind the Gap Animation",
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "film-production"
+  ],
+  "description": "Israeli animation production company 'focusing on films that make a difference'; produced the satirical post-apocalyptic web series 'Sof HaDerech' (Dead End) for Kan 11 digital, created by Nir Berger, nominated at the 2019 Israeli Academy awards.",
+  "location": {
+    "country": "IL"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.mindthegapanimation.com",
+  "contact_url": "https://www.mindthegapanimation.com/contact",
+  "services": [
+    "Animated films and series",
+    "Character development",
+    "Social-impact animation"
+  ],
+  "notable_clients": [
+    "Kan 11",
+    "Hebrew University"
+  ],
+  "notable_work": [
+    "Sof HaDerech / Dead End (Kan 11 web series)",
+    "Dear Fredy",
+    "The True Story of Ghati and Rhobi"
+  ],
+  "key_people": [
+    {
+      "name": "Yael Ozsinay",
+      "role": "Founder; animator, animation director and producer",
+      "role_type": "founder",
+      "source": "https://www.mindthegapanimation.com/about",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "web-series",
+    "impact"
+  ],
+  "sources": [
+    "https://www.mindthegapanimation.com",
+    "https://he.wikipedia.org/wiki/%D7%A1%D7%95%D7%A3_%D7%94%D7%93%D7%A8%D7%9A_(%D7%A1%D7%93%D7%A8%D7%AA_%D7%A8%D7%A9%D7%AA)",
+    "https://www.mindthegapanimation.com/about"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City not stated (series supported by Jerusalem Film & TV Fund; possibly Jerusalem).",
+  "description_he": "חברת הפקת אנימציה ישראלית \"שמתמקדת בסרטים שעושים שינוי\"; הפיקה את סדרת הרשת הסאטירית הפוסט-אפוקליפטית \"סוף הדרך\" (Dead End) עבור כאן 11 דיגיטל, שיצר ניר ברגר, ושהייתה מועמדת בפרסי האקדמיה הישראלית ב-2019."
+}

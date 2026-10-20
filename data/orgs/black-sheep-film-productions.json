@@ -1,0 +1,54 @@
+{
+  "id": "black-sheep-film-productions",
+  "name": "Black Sheep Film Productions",
+  "name_he": "בלאק שיפ הפקות סרטים",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Israeli film and TV production company founded around 2010 by producers Saar Yogev and Naomi Levari, developing and producing features, documentaries and drama series that have premiered at Cannes, Venice, Berlin and Toronto; sister company Electric Sheep GmbH operates in Germany.",
+  "location": {
+    "country": "IL",
+    "other_offices": [
+      "Germany (Electric Sheep GmbH)"
+    ]
+  },
+  "founded": 2010,
+  "status": "active",
+  "website": "https://www.bsheepfilms.com/",
+  "contact_url": "https://www.bsheepfilms.com/watch-contact",
+  "notable_work": [
+    "One Week and a Day",
+    "Fig Tree",
+    "Facing the Wall",
+    "Across the Line",
+    "Mama's Angel (TV)",
+    "Dismissed (TV)",
+    "Teacher Irena (doc)"
+  ],
+  "key_people": [
+    {
+      "name": "Saar Yogev",
+      "role": "Co-founder, Producer"
+    },
+    {
+      "name": "Naomi Levari",
+      "role": "Co-founder, Producer"
+    }
+  ],
+  "tags": [
+    "feature-films",
+    "documentary",
+    "drama-series",
+    "international-coproduction"
+  ],
+  "sources": [
+    "https://www.bsheepfilms.com/",
+    "https://he.wikipedia.org/wiki/%D7%91%D7%9C%D7%90%D7%A7_%D7%A9%D7%99%D7%A4_%D7%94%D7%A4%D7%A7%D7%95%D7%AA_%D7%A1%D7%A8%D7%98%D7%99%D7%9D",
+    "https://www.bsheepfilms.com/watch-contact"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "חברת הפקות קולנוע וטלוויזיה ישראלית שנוסדה בסביבות 2010 על ידי המפיקים סער יוגב ונעמי לבארי, ומפתחת ומפיקה סרטים עלילתיים, סרטים תיעודיים וסדרות דרמה שהוצגו בבכורה בקאן, ונציה, ברלין וטורונטו; חברת האחות Electric Sheep GmbH פועלת בגרמניה."
+}

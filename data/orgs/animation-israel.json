@@ -1,0 +1,35 @@
+{
+  "id": "animation-israel",
+  "name": "Animation Israel",
+  "kind": "community",
+  "categories": [
+    "association"
+  ],
+  "description": "Non-profit (est. 2019) promoting the Israeli animation industry internationally: brings master classes to Israel, represents Israeli studios at markets such as Annecy and MIPCOM, lobbied for production rebates, and links Israeli animators with international service work and co-productions. Maintains a public directory of Israeli studios.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2019,
+  "status": "active",
+  "website": "https://www.animationisrael.com",
+  "services": [
+    "Industry promotion",
+    "Master classes",
+    "International market representation",
+    "Studio directory"
+  ],
+  "tags": [
+    "industry-body",
+    "directory"
+  ],
+  "sources": [
+    "https://www.animationisrael.com/about",
+    "https://www.animationisrael.com/masters",
+    "https://www.animationisrael.com/copy-of-studios"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Useful source list for Israeli studios (23 listed in 2026).",
+  "description_he": "עמותה (נוסדה ב-2019) לקידום תעשיית האנימציה הישראלית בעולם: מביאה כיתות אמן לישראל, מייצגת סטודיואים ישראליים בשווקים כמו אנסי ו-MIPCOM, פעלה לקידום תמריצי הפקה (rebates) ומחברת בין אנימטורים ישראלים לעבודות שירות ולהפקות משותפות בינלאומיות. מתחזקת אינדקס ציבורי של סטודיואים ישראליים."
+}

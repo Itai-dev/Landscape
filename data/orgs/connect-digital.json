@@ -1,0 +1,56 @@
+{
+  "id": "connect-digital",
+  "name": "CONNECT",
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "media-agency",
+    "pr-social"
+  ],
+  "description": "Tel Aviv digital advertising, media and technology agency, part of the Brokner Yaar Levy (BYL) advertising group. Services include media buying, social, social listening, influencer marketing, SEO/GEO and performance, with proprietary tools such as AudienceLab and GEO Radar.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://connect.co.il/",
+  "contact_url": "https://connect.co.il/contact/",
+  "services": [
+    "Media planning & buying",
+    "Social media management",
+    "Social listening",
+    "Influencer marketing",
+    "SEO / GEO",
+    "Performance marketing",
+    "E-commerce performance"
+  ],
+  "notable_clients": [
+    "Milka",
+    "Citroën",
+    "Dior",
+    "Oreo",
+    "Heineken",
+    "Gilead",
+    "Tel Aviv University"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "brokner-yaar-levy"
+    }
+  ],
+  "tags": [
+    "digital",
+    "independent"
+  ],
+  "sources": [
+    "https://connect.co.il/",
+    "https://www.bizportal.co.il/list/Tags/35924",
+    "https://connect.co.il/contact/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Address: Bezalel Yafe 10, Tel Aviv. Bizportal reported it was launched by Brokner Yaar Levy together with Midan (undated).",
+  "description_he": "סוכנות פרסום דיגיטלי, מדיה וטכנולוגיה מתל אביב, חלק מקבוצת הפרסום ברוקנר יער לוי (BYL). השירותים כוללים קניית מדיה, סושיאל, ניטור רשתות (social listening), שיווק משפיענים, SEO/GEO ופרפורמנס, עם כלים פנימיים כמו AudienceLab ו-GEO Radar."
+}

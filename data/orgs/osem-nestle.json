@@ -1,0 +1,66 @@
+{
+  "id": "osem-nestle",
+  "name": "Osem-Nestlé",
+  "name_he": "אסם",
+  "aka": [
+    "Osem"
+  ],
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli food manufacturer (est. 1942), wholly owned by Nestlé since 2016; brands include Bamba, Bissli, Osem soups and pasta, and Tivall.",
+  "location": {
+    "country": "IL",
+    "city": "Shoham"
+  },
+  "founded": 1942,
+  "status": "active",
+  "website": "https://www.osem.co.il",
+  "key_people": [
+    {
+      "name": "Einat Moskovitz",
+      "role": "Head of Snacks Division (Bamba)",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1000749",
+      "as_of": "2024-02-16"
+    }
+  ],
+  "client_profile": {
+    "industry": "food",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Nestlé"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Osem_(company)",
+    "https://www.mccann.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001557557",
+    "https://www.globes.co.il/news/article.aspx?did=1001555265",
+    "https://www.ice.co.il/advertising-marketing/news/article/1000749"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Osem, Bamba and Bisli logos appear on McCann Tel Aviv's client wall (2026); not confirmed by trade press here. Agency as of 2026-09: McCann Tel Aviv credited on Osem and Bamba ads in Globes' weekly ad ranking (Sep 2026).",
+  "description_he": "יצרנית מזון ישראלית (נוסדה ב-1942), בבעלות מלאה של נסטלה מאז 2016; בין המותגים: במבה, ביסלי, מרקים ופסטות אסם וטבעול."
+}

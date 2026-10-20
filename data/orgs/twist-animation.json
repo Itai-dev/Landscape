@@ -1,0 +1,63 @@
+{
+  "id": "twist-animation",
+  "name": "Twist Animation",
+  "aka": [
+    "Twist3D Animation",
+    "Twist Animation Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "content-studio"
+  ],
+  "description": "Tel Aviv studio behind TuTiTu, a 3D-animated preschool series that became one of YouTube's most-watched kids channels (billions of views, 18 languages), and its follow-up NuNi. Co-founded by Yossi Dahan and Tal Gamliel; global rights licensed to bulbKIDZ in 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "links": {
+    "youtube": "https://www.youtube.com/user/tutitutv"
+  },
+  "notable_work": [
+    "TuTiTu",
+    "NuNi"
+  ],
+  "key_people": [
+    {
+      "name": "Yossi Dahan",
+      "role": "Co-founder, Creator"
+    },
+    {
+      "name": "Tal Gamliel",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Sarit Ido Schechter",
+      "role": "CEO (TuTiTu)"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "bulbKIDZ",
+      "note": "Global distribution and licensing of TuTiTu and NuNi (2021)"
+    }
+  ],
+  "tags": [
+    "preschool",
+    "youtube",
+    "original-ip"
+  ],
+  "sources": [
+    "https://www.timesofisrael.com/masters-of-the-child-animation-universe/",
+    "https://senalnews.com/en/content/bulbkidz-to-globally-distribute-tutitu-and-nuni-toddler-series",
+    "https://kidscreen.com/?p=91520"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "No official studio website found; size estimated.",
+  "description_he": "סטודיו מתל אביב שמאחורי TuTiTu, סדרת אנימציה בתלת-ממד לגיל הרך שהפכה לאחד מערוצי הילדים הנצפים ביוטיוב (מיליארדי צפיות, 18 שפות), ומאחורי סדרת ההמשך NuNi. נוסד בשותפות יוסי דהן וטל גמליאל; הזכויות הגלובליות הועברו ברישיון ל-bulbKIDZ ב-2021."
+}

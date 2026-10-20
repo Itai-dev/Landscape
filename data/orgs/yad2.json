@@ -1,0 +1,60 @@
+{
+  "id": "yad2",
+  "name": "Yad2",
+  "name_he": "יד2",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "real-estate"
+  ],
+  "description": "Israel's largest classifieds site (founded 2005) for cars, real estate, second-hand goods and jobs; acquired by Apax from KKR in Dec 2025 (~$950M). A major TV advertiser.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2005,
+  "status": "active",
+  "website": "https://www.yad2.co.il",
+  "key_people": [
+    {
+      "name": "Ayelet Nitzan",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001557536",
+      "as_of": "2026-09-27"
+    }
+  ],
+  "client_profile": {
+    "industry": "online classifieds",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Apax Partners"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%99%D7%932",
+    "https://www.globes.co.il/news/article.aspx?did=1001528342",
+    "https://www.globes.co.il/news/article.aspx?did=1001557536",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Budget moved from Reuveni-Pridan to McCann Tel Aviv from 2026 (Globes, Dec 2025). Rival Madlan went to Reuveni-Pridan (Jun 2026). Agency as of 2026-10: McCann Tel Aviv lists Yad2 among its main budgets (Globes, Oct 2026).",
+  "description_he": "אתר הלוחות הגדול בישראל (נוסד ב-2005) לרכב, נדל\"ן, יד שנייה ודרושים; נרכש על ידי Apax מ-KKR בדצמבר 2025 (כ-950 מיליון דולר). מפרסם גדול בטלוויזיה."
+}

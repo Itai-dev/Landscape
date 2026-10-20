@@ -1,0 +1,85 @@
+{
+  "id": "idomoo",
+  "name": "Idomoo",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative",
+    "gen-ai-video"
+  ],
+  "description": "Ra'anana-based personalized-video company whose AI video agent 'Lucas' and proprietary Strata model generate data-driven, personalized and interactive videos at scale for customer communications, onboarding and video ads. Traded on the Tel Aviv Stock Exchange since 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Ra'anana",
+    "other_offices": [
+      "New York",
+      "London"
+    ]
+  },
+  "founded": 2007,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.idomoo.com",
+  "services": [
+    "Personalized video at scale",
+    "Interactive video",
+    "Lucas AI video creator",
+    "Video APIs",
+    "Lucas AI video agent",
+    "AI video ads"
+  ],
+  "notable_clients": [
+    "Google",
+    "J.P. Morgan",
+    "Oracle",
+    "Fidelity",
+    "Vodafone",
+    "Samsung",
+    "Adidas"
+  ],
+  "key_people": [
+    {
+      "name": "Yaron Kalish",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Danny Kalish",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Assaf Fogel",
+      "role": "Co-founder & VP R&D"
+    }
+  ],
+  "funding": {
+    "stage": "Public",
+    "total_usd_m": 47.3,
+    "investors": [
+      "Target Global",
+      "Disruptive Technologies VC",
+      "Pitango",
+      "Marker LLC"
+    ],
+    "public": true
+  },
+  "tags": [
+    "personalized video",
+    "fintech marketing",
+    "enterprise video",
+    "personalized-video",
+    "tase"
+  ],
+  "sources": [
+    "https://www.idomoo.com",
+    "https://en.globes.co.il/en/article-1001368441",
+    "https://en.globes.co.il/en/article-personalized-video-co-idomoo-raises-18m-1001304841",
+    "https://www.idomoo.com/",
+    "https://startupim.com/company/idomoo"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Client names are logos shown on the company site.",
+  "description_he": "חברת וידאו מותאם אישית מרעננה, שסוכן הווידאו מבוסס ה-AI שלה 'Lucas' ומודל Strata הקנייני שלה מייצרים בהיקפים גדולים סרטונים מבוססי דאטה, מותאמים אישית ואינטראקטיביים לתקשורת עם לקוחות, אונבורדינג ופרסומות וידאו. נסחרת בבורסת תל אביב מאז 2021.",
+  "name_he": "אידומו"
+}

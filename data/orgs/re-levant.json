@@ -1,0 +1,65 @@
+{
+  "id": "re-levant",
+  "name": "Re-Levant",
+  "name_he": "רה-לבנט",
+  "aka": [
+    "Re-Levant Design",
+    "Relevant Design"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "graphic-design"
+  ],
+  "description": "Tel Aviv branding and graphic design studio founded in 2003 by Bezalel graduate Amnon Illuz (started in Jerusalem, moved to Tel Aviv in 2008). Works on identity, strategy, campaigns, motion, digital and curation, largely for cultural and public institutions; known for Bezalel graduation-show identities.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2003,
+  "status": "active",
+  "website": "https://www.re-levant.co.il",
+  "contact_url": "https://re-levant.co.il/%D7%93%D7%91%D7%A8%D7%95-%D7%90%D7%99%D7%AA%D7%A0%D7%95/",
+  "links": {
+    "instagram": "https://www.instagram.com/relevantdesign",
+    "linkedin": "https://www.linkedin.com/company/re-levant-design"
+  },
+  "services": [
+    "visual identity",
+    "brand strategy",
+    "advertising campaigns",
+    "motion graphics",
+    "curation"
+  ],
+  "notable_clients": [
+    "Bezalel Academy of Arts and Design",
+    "The Knesset",
+    "Batsheva Dance Company",
+    "Ashdod Port",
+    "Museum of the City"
+  ],
+  "notable_work": [
+    "Bezalel Academy graduation exhibition identity (2018)"
+  ],
+  "key_people": [
+    {
+      "name": "Amnon Illuz",
+      "role": "Founder"
+    }
+  ],
+  "tags": [
+    "culture",
+    "public-sector",
+    "trilingual-typography"
+  ],
+  "sources": [
+    "https://www.re-levant.co.il",
+    "https://www.itsnicethat.com/news/re-levant-studio-bezalel-academy-graphicdesign-240718",
+    "https://alefalefalef.co.il/en/?p=7304",
+    "https://re-levant.co.il/%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%99%D7%95/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו למיתוג ועיצוב גרפי בתל אביב שהקים ב-2003 בוגר בצלאל אמנון אילוז (התחיל בירושלים ועבר לתל אביב ב-2008). עובד על זהות חזותית, אסטרטגיה, קמפיינים, מושן, דיגיטל ואוצרות, בעיקר עבור מוסדות תרבות וגופים ציבוריים; מוכר בזכות הזהויות החזותיות של תערוכות הבוגרים של בצלאל."
+}

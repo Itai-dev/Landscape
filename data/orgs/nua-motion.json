@@ -1,0 +1,52 @@
+{
+  "id": "nua-motion",
+  "name": "Nua Motion",
+  "kind": "studio",
+  "categories": [
+    "motion-design"
+  ],
+  "description": "Israeli motion design studio making brand, product and rebranding videos for tech companies; founded by former Laserbee partners.",
+  "location": {
+    "country": "IL"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://nuamotion.com",
+  "contact_url": "https://www.nuamotion.com/contact",
+  "links": {
+    "vimeo": "https://vimeo.com/nuamotion",
+    "linkedin": "https://www.linkedin.com/company/nua-motion/",
+    "behance": "https://www.behance.net/nuamotion"
+  },
+  "services": [
+    "Motion design",
+    "Brand videos",
+    "Product videos",
+    "Rebrand launch videos"
+  ],
+  "notable_clients": [
+    "Melio",
+    "HP",
+    "Fiverr"
+  ],
+  "relations": [
+    {
+      "type": "spun_off_from",
+      "target": "laserbee",
+      "note": "Founded by Laserbee founding partners"
+    }
+  ],
+  "tags": [
+    "saas",
+    "tech"
+  ],
+  "sources": [
+    "https://nuamotion.com",
+    "https://laserbee.video",
+    "https://nuamotion.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו ישראלי לעיצוב מושן שמייצר סרטוני מותג, מוצר ומיתוג מחדש לחברות טכנולוגיה; הוקם על ידי שותפים לשעבר ב-Laserbee."
+}

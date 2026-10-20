@@ -1,0 +1,94 @@
+{
+  "id": "kpln",
+  "name": "KPLN (Kaplan)",
+  "name_he": "משרד הפרסום קפלן",
+  "aka": [
+    "Boroda-Kaplan",
+    "Boroda Kaplan"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Israeli creative and strategy agency founded in 2002 by Guy Boroda, with Ron Kaplan joining a year later; formerly part of the Adler Chomski group. Renamed KPLN in 2026 after Boroda's exit, led by CEO Ron Kaplan; ~35 employees, with an in-house studio & adaptation unit and performance media.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2000,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://kpln.co.il/",
+  "contact_url": "https://kpln.co.il/contact/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/kpln"
+  },
+  "services": [
+    "Strategy",
+    "Creative",
+    "Performance media",
+    "Studio & adaptation"
+  ],
+  "notable_clients": [
+    "Meitav",
+    "Tadiran",
+    "WeSure",
+    "Yohananof"
+  ],
+  "notable_work": [
+    "Meitav campaign featuring David Schwimmer"
+  ],
+  "key_people": [
+    {
+      "name": "Ron Kaplan",
+      "role": "CEO"
+    },
+    {
+      "name": "Guy Boroda",
+      "role": "Co-founder (left 2026)"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production"
+    ],
+    "in_house_studio": true
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "A2",
+      "note": "Digital agency integrated into the firm"
+    },
+    {
+      "type": "spun_off_from",
+      "target": "adler-chomski-warshavsky",
+      "note": "Was part of the Adler Chomski group; Chomski bought Boroda's shares"
+    },
+    {
+      "type": "client",
+      "target": "yochananof",
+      "note": "campaign with Einav Bublil, 2026-03 (ICE credits)"
+    }
+  ],
+  "tags": [
+    "independent",
+    "rebrand-2026"
+  ],
+  "sources": [
+    "https://kpln.co.il/",
+    "https://www.globes.co.il/news/article.aspx?did=1001547082",
+    "https://kpln.co.il/about/",
+    "https://kpln.co.il/contact/",
+    "https://www.linkedin.com/company/kpln",
+    "https://www.ice.co.il/advertising-marketing/news/article/1106021"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Ownership after the 2026 change is not fully clear (Globes says Eyal Chomski bought Boroda's shares). City assumed Tel Aviv.",
+  "description_he": "משרד קריאייטיב ואסטרטגיה ישראלי שנוסד ב-2002 על ידי גיא בורודה, כשרון קפלן הצטרף שנה לאחר מכן; היה בעבר חלק מקבוצת אדלר חומסקי. שמו שונה ל-KPLN ב-2026 לאחר פרישתו של בורודה, ובראשו המנכ\"ל רון קפלן; כ-35 עובדים, עם יחידת סטודיו ואדפטציות פנימית ומדיה לפרפורמנס."
+}

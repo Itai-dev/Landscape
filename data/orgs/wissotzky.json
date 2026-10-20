@@ -1,0 +1,35 @@
+{
+  "id": "wissotzky",
+  "name": "Wissotzky Tea",
+  "name_he": "תה ויסוצקי",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli-international tea company founded in Moscow in 1849 by Kalonymus Wolf Wissotzky and later based in Israel; Tel Aviv HQ (Beit Wissotzky), ~250 employees; teas, herbal infusions and coffee.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.wissotzky.co.il",
+  "client_profile": {
+    "industry": "tea and beverages",
+    "creative_needs": [
+      "TV commercials",
+      "packaging",
+      "product photography",
+      "social video",
+      "seasonal gift campaigns"
+    ]
+  },
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%AA%D7%94_%D7%95%D7%99%D7%A1%D7%95%D7%A6%D7%A7%D7%99"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No current agency or marketing head found.",
+  "description_he": "חברת תה ישראלית-בינלאומית שנוסדה במוסקבה ב-1849 על ידי קלונימוס זאב ויסוצקי ובהמשך התבססה בישראל; מטה בתל אביב (בית ויסוצקי), כ-250 עובדים; תה, חליטות צמחים וקפה."
+}

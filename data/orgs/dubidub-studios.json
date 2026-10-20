@@ -1,0 +1,54 @@
+{
+  "id": "dubidub-studios",
+  "name": "DubiDub Studios",
+  "kind": "studio",
+  "categories": [
+    "dubbing-localization",
+    "sound-design",
+    "post-production"
+  ],
+  "description": "Tel Aviv Hebrew localization, dubbing and post-production studio founded by CEO Ami Offir, working since 1999 for cinema, TV, streaming/VOD and games — theatrical dubbing, Dolby Atmos mixing, metadata, title customization and visual services for Israeli platforms and global distributors.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1999,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://dubidubstudios.com/",
+  "contact_url": "https://dubidubstudios.com/contact-us/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/dubidubstudios/",
+    "facebook": "https://www.facebook.com/DubiDub-Studios-1630745770528464",
+    "youtube": "https://www.youtube.com/channel/UCETxEWQxT2bM6AdX4Rl9YoA"
+  },
+  "services": [
+    "Hebrew dubbing & localization",
+    "Theatrical dubbing",
+    "Dolby Atmos mixing",
+    "Post-production",
+    "Titles & metadata"
+  ],
+  "key_people": [
+    {
+      "name": "Ami Offir",
+      "role": "Founder & CEO",
+      "role_type": "founder",
+      "source": "https://dubidubstudios.com/about-us/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "dubbing",
+    "dolby-atmos",
+    "localization"
+  ],
+  "sources": [
+    "https://dubidubstudios.com/about-us/",
+    "https://il.linkedin.com/company/dubidubstudios"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "סטודיו תל אביבי ללוקליזציה לעברית, דיבוב ופוסט שנוסד על ידי המנכ\"ל עמי אופיר, ופועל מאז 1999 עבור קולנוע, טלוויזיה, סטרימינג/VOD ומשחקים – דיבוב לבתי קולנוע, מיקס Dolby Atmos, מטא-דאטה, התאמת כותרים ושירותים ויזואליים לפלטפורמות ישראליות ולמפיצים גלובליים."
+}

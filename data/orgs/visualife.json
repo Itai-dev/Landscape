@@ -1,0 +1,38 @@
+{
+  "id": "visualife",
+  "name": "visualife",
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "animation-3d"
+  ],
+  "description": "Small Tel Aviv VFX and 3D production studio offering 3D modeling, texturing, lighting, animation and rendering, green-screen filming, and post-production services such as 3D tracking, stabilization and compositing, plus VR/interactive work.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/visualife"
+  },
+  "services": [
+    "3D modeling & animation",
+    "Green-screen shoots",
+    "3D tracking",
+    "Compositing",
+    "VR / interactive"
+  ],
+  "tags": [
+    "compositing",
+    "small-studio"
+  ],
+  "sources": [
+    "https://www.linkedin.com/company/visualife"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website listed on LinkedIn (visualife.co.il) did not respond on 2026-10-18; activity unverified.",
+  "description_he": "סטודיו קטן ל-VFX והפקות תלת-ממד בתל אביב, המציע מידול, טקסטורות, תאורה, אנימציה ורינדור בתלת-ממד, צילומי מסך ירוק ושירותי פוסט כמו טרקינג בתלת-ממד, ייצוב תמונה וקומפוזיטינג, וגם עבודות VR ואינטראקטיב."
+}

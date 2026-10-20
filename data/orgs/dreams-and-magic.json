@@ -1,0 +1,80 @@
+{
+  "id": "dreams-and-magic",
+  "name": "Dreams & Magic",
+  "aka": [
+    "Studio3DM",
+    "Dreams & Magic LTD"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-3d",
+    "xr",
+    "creative-technology",
+    "commercial-production"
+  ],
+  "description": "Israeli creative-technology and production company (active since at least 2006) producing commercials, corporate and technical videos, animation, virtual production, and immersive VR/AR experiences for hi-tech, defence, gaming and consumer brands.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://studio3dm.com",
+  "contact_url": "https://www.studio3dm.com/contact",
+  "reel_url": "https://www.youtube.com/watch?v=hV6SMgzb4Io",
+  "links": {
+    "vimeo": "https://vimeo.com/studio3dm",
+    "instagram": "https://www.instagram.com/studio3dm/",
+    "linkedin": "https://www.linkedin.com/company/studio3dm/",
+    "youtube": "https://www.youtube.com/channel/UCAlAyCm-Rixb98Yr88yeD6Q"
+  },
+  "services": [
+    "Animation",
+    "Corporate and technical videos",
+    "Commercials",
+    "Virtual production",
+    "VR/AR experiences",
+    "AI films"
+  ],
+  "notable_clients": [
+    "Check Point",
+    "Rafael",
+    "Samsung",
+    "Playtika",
+    "Kan 11",
+    "Keshet",
+    "FedEx"
+  ],
+  "key_people": [
+    {
+      "name": "Eldar Brantman",
+      "role": "Producer",
+      "role_type": "production",
+      "source": "https://www.studio3dm.com/about",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Itay Berlinsky",
+      "role": "Producer",
+      "role_type": "production",
+      "source": "https://www.studio3dm.com/about",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "xr",
+    "defence",
+    "tech"
+  ],
+  "sources": [
+    "https://studio3dm.com",
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://www.studio3dm.com/about",
+    "https://www.youtube.com/watch?v=hV6SMgzb4Io"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Client list from logo wall.",
+  "description_he": "חברת קריאייטיב טכנולוגי והפקה ישראלית (פעילה לפחות מאז 2006) שמפיקה פרסומות, סרטי תדמית וסרטונים טכניים, אנימציה, הפקה וירטואלית וחוויות VR/AR אימרסיביות למותגי הייטק, ביטחון, גיימינג וצרכנות."
+}

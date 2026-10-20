@@ -1,0 +1,73 @@
+{
+  "id": "etoro",
+  "name": "eToro",
+  "name_he": "איטורו",
+  "aka": [
+    "RetailFX"
+  ],
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Social investing platform founded in Tel Aviv in 2007, HQ Bnei Brak; IPO on Nasdaq (ETOR) in May 2025. Prolific advertiser: Super Bowl spot (2022), AI-generated Olympics ad (2024), European football and F1 sponsorships.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 2007,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.etoro.com",
+  "contact_url": "https://www.etoro.com/customer-service/",
+  "careers_url": "https://www.etoro.com/about/careers/",
+  "key_people": [
+    {
+      "name": "Yoni Assia",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Nir Szmulewicz",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.etoro.com/about/team/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Yanai Politi",
+      "role": "VP Branding",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1064126",
+      "as_of": "2025-05-11"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: ETOR"
+  },
+  "client_profile": {
+    "industry": "fintech / trading",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals",
+      "TV commercials",
+      "sports sponsorship content",
+      "AI-generated video"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/EToro",
+    "https://www.etoro.com/about/team/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1064126",
+    "https://www.etoro.com/customer-service/",
+    "https://www.etoro.com/about/careers/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "description_he": "פלטפורמת השקעות חברתית שנוסדה בתל אביב ב-2007, מטה בבני ברק; הנפקה בנאסד\"ק (ETOR) במאי 2025. מפרסמת פורייה: פרסומת בסופרבול (2022), פרסומת אולימפית שנוצרה ב-AI (2024), וחסויות בכדורגל האירופי וב-F1."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "playstudios-tel-aviv",
+  "name": "PLAYSTUDIOS Tel Aviv",
+  "kind": "studio",
+  "categories": [
+    "game-development"
+  ],
+  "description": "Tel Aviv development studio of US-listed mobile games publisher PLAYSTUDIOS (myVEGAS, POP! Slots, Tetris titles), located in the Florentin neighborhood and organized into small autonomous game teams.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.playstudios.com/tel-aviv/",
+  "careers_url": "https://www.playstudios.com/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/3163838/"
+  },
+  "notable_work": [
+    "POP! Slots",
+    "Tetris Block Party"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "PLAYSTUDIOS"
+    }
+  ],
+  "tags": [
+    "mobile-games",
+    "social-casino"
+  ],
+  "sources": [
+    "https://www.playstudios.com/tel-aviv/",
+    "https://www.playstudios.com/",
+    "https://www.playstudios.com/careers/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Exact titles developed in Tel Aviv not confirmed; job listings reference POP! Slots and Tetris Block Party.",
+  "description_he": "סטודיו הפיתוח התל אביבי של מו\"לית משחקי המובייל PLAYSTUDIOS הנסחרת בארה\"ב (myVEGAS, POP! Slots, משחקי Tetris), שממוקם בשכונת פלורנטין ומאורגן בצוותי משחק קטנים ועצמאיים."
+}

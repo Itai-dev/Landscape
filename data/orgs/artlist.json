@@ -1,0 +1,87 @@
+{
+  "id": "artlist",
+  "name": "Artlist",
+  "kind": "startup",
+  "categories": [
+    "stock-media",
+    "music-tech",
+    "video-tools"
+  ],
+  "description": "Israeli creative-content platform founded in 2016 that licenses royalty-free music, sound effects and stock footage (Artgrid) to video creators under subscription, and runs the Motion Array templates marketplace and FXhome video software. It reported ~$260M ARR at end-2025 and is pivoting toward an AI-native creative suite.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Ra'anana",
+      "New York"
+    ]
+  },
+  "founded": 2016,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://artlist.io",
+  "services": [
+    "Royalty-free music & SFX licensing",
+    "Artgrid stock footage",
+    "Motion Array video templates & plugins",
+    "FXhome / HitFilm video editing software",
+    "Subscription licensing for creators and brands"
+  ],
+  "key_people": [
+    {
+      "name": "Ira Belsky",
+      "role": "Co-founder & Co-CEO"
+    },
+    {
+      "name": "Itzik Elbaz",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series B (2020) / growth",
+    "total_usd_m": 48,
+    "investors": [
+      "KKR",
+      "Elephant Partners"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "Motion Array",
+      "note": "US video-templates marketplace (founded 2013) acquired Dec 2020, reportedly ~$65M; operated as an Artlist brand"
+    },
+    {
+      "type": "acquired",
+      "target": "FXhome",
+      "note": "UK video software developer (HitFilm), acquired 2021"
+    },
+    {
+      "type": "investor",
+      "target": "KKR",
+      "note": "Led $48M round, June 2020"
+    }
+  ],
+  "tags": [
+    "royalty-free music",
+    "stock footage",
+    "subscription",
+    "creators",
+    "Artgrid",
+    "Motion Array"
+  ],
+  "sources": [
+    "https://artlist.io",
+    "https://www.businesswire.com/news/home/20200629005155/en/KKR-Leads-48M-Round-into-Stock-Digital-Content-Platform-Artlist",
+    "https://www.gtlaw-israelpractice.com/2020/12/28/congratulations-to-our-client-artlist-for-successfully-acquiring-us-motion-array/",
+    "https://www.intellinews.com/israeli-ai-company-artlist-to-lay-off-200-of-its-500-workers-449150/",
+    "https://pulse2.com/artlist-profile-ira-belsky-interview/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founded at Kibbutz Afikim. ~500 staff before a June 2026 reorganisation that cut ~200 roles; size band reflects post-cut estimate. Artgrid is an in-house brand (launched 2019), not an acquisition. Motion Array kept inside this record (US-founded, no separate Israeli entity confirmed).",
+  "description_he": "פלטפורמת תוכן קריאייטיב ישראלית שנוסדה ב-2016 ומעניקה ליוצרי וידאו רישוי למוזיקה, אפקטים קוליים וסטוק פוטג' (Artgrid) ללא תמלוגים במודל מנוי, ומפעילה גם את מרקטפלייס התבניות Motion Array ואת תוכנות הווידאו של FXhome. דיווחה על ARR של כ-260 מיליון דולר בסוף 2025 ומבצעת פיבוט לחבילת קריאייטיב מבוססת AI.",
+  "name_he": "ארטליסט"
+}

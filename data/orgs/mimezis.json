@@ -1,0 +1,36 @@
+{
+  "id": "mimezis",
+  "name": "Mimezis",
+  "kind": "studio",
+  "categories": [
+    "xr",
+    "experiential"
+  ],
+  "description": "Tel Aviv creative production studio for immersive experiences (VR, AR / mixed reality) and video content for brands, artists and entertainment, handling spec, design and development end to end.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/mimezis-production-studio"
+  },
+  "services": [
+    "VR experiences",
+    "AR / mixed reality",
+    "Video content"
+  ],
+  "tags": [
+    "vr",
+    "ar"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/mimezis-production-studio"
+  ],
+  "confidence": "low",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "LinkedIn only; activity level unknown.",
+  "description_he": "סטודיו הפקה קריאייטיבי בתל אביב לחוויות אימרסיביות (VR, AR / מציאות מעורבת) ולתוכן וידאו עבור מותגים, אמנים ותעשיית הבידור, שמטפל בכל השלבים – אפיון, עיצוב ופיתוח."
+}

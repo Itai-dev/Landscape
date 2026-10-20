@@ -1,0 +1,65 @@
+{
+  "id": "jiminy-creative",
+  "name": "Jiminy Creative",
+  "name_he": "ג'ימיני",
+  "aka": [
+    "Jiminy",
+    "Jiminy Ltd"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "film-production"
+  ],
+  "description": "Production company (Jiminy Ltd) for TV commercials, digital campaigns, film/TV and immersive content, working with a global network of directors; its site lists work for monday.com, Papaya Global, SodaStream, Fiverr and Huawei. ICE credits it on Carolina Lemke's Oct 2025 campaign with Bar Refaeli and Yehuda Levi and on Leo Burnett's AION EV launch.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://jiminy.tv/",
+  "contact_url": "https://jiminy.tv/contact/",
+  "services": [
+    "TV commercials",
+    "digital campaigns",
+    "films & TV",
+    "immersive",
+    "photoshoots"
+  ],
+  "notable_clients": [
+    "monday.com",
+    "Papaya Global",
+    "SodaStream",
+    "Fiverr",
+    "Huawei",
+    "Carolina Lemke",
+    "AION"
+  ],
+  "notable_work": [
+    "Carolina Lemke — winter campaign with Bar Refaeli & Yehuda Levi (2025)",
+    "AION — EV launch with Revital Witelson-Jacobs (2025)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "Carolina Lemke",
+      "note": "winter campaign with Bar Refaeli & Yehuda Levi, 2025-10, dir. Roy Kafri (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "AION",
+      "note": "EV launch with Revital Witelson-Jacobs, 2025-10, via Leo Burnett Tel Aviv, dir. Eli Sverdlov (production) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://jiminy.tv/",
+    "https://jiminy.tv/about/",
+    "https://jiminy.tv/contact/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1087334",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089160"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Country inferred from Israeli campaign credits on ICE; the site does not state an address.",
+  "description_he": "חברת הפקות (ג'ימיני בע\"מ) לפרסומות טלוויזיה, קמפיינים דיגיטליים, קולנוע וטלוויזיה ותוכן אימרסיבי, העובדת עם רשת גלובלית של במאים; באתר שלה מופיעות עבודות עבור monday.com, Papaya Global, סודהסטרים, Fiverr ו-Huawei. ICE מייחס לה את קמפיין קרולינה למקה מאוקטובר 2025 עם בר רפאלי ויהודה לוי ואת השקת הרכב החשמלי AION של ליאו ברנט."
+}

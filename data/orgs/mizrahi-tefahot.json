@@ -1,0 +1,75 @@
+{
+  "id": "mizrahi-tefahot",
+  "name": "Mizrahi Tefahot Bank",
+  "name_he": "בנק מזרחי טפחות",
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli bank (est. 1923) and the country's largest mortgage lender; its 2025 campaign was rated the most memorable of the year by Globes' ad index.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 1923,
+  "status": "active",
+  "website": "https://www.mizrahi-tefahot.co.il",
+  "contact_url": "https://www.mizrahi-tefahot.co.il/contact-us/",
+  "careers_url": "https://www.mizrahi-tefahot.co.il/about-mizrahi-tefahot-he/career/open-jobs/",
+  "key_people": [
+    {
+      "name": "Teri Yaskil",
+      "role": "VP, Head of Marketing, Advertising & Business Development Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001547643",
+      "as_of": "2026-07-01"
+    },
+    {
+      "name": "Sigal Zakshansky",
+      "role": "Head of Marketing Department",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/finance/news/article/1115803",
+      "as_of": "2026-06-07"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: MZTF"
+  },
+  "client_profile": {
+    "industry": "banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics",
+      "celebrity presenter campaigns"
+    ],
+    "known_agencies": [
+      "Reuveni-Pridan"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "reuveni-pridan",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Bank_Mizrahi-Tefahot",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001547643",
+    "https://www.ice.co.il/finance/news/article/1115803",
+    "https://www.mizrahi-tefahot.co.il/contact-us/",
+    "https://www.mizrahi-tefahot.co.il/about-mizrahi-tefahot-he/career/open-jobs/",
+    "https://www.globes.co.il/news/article.aspx?did=1001546956"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "2026 Effie Gold (financial services) with Reuveni-Pridan; presenter changed in 2026 (Globes). Agency as of 2026-06: Reuveni-Pridan (Effie 2026 gold for \"Don't call me\"; listed among its main clients Jun 2026).",
+  "description_he": "בנק ישראלי (נוסד ב-1923) ונותן המשכנתאות הגדול במדינה; הקמפיין שלו ב-2025 דורג כזכיר ביותר של השנה במדד הפרסומות של גלובס."
+}

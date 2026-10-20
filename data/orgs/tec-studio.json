@@ -1,0 +1,73 @@
+{
+  "id": "tec-studio",
+  "name": "TEC Studio",
+  "aka": [
+    "The Expert Collective"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Strategy-led Tel Aviv brand and design studio established in 2016, working with founders and marketing teams at deep tech, defense, SaaS, hospitality and impact organisations on branding, websites, pitch decks and campaigns.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2016,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://tec.studio",
+  "contact_url": "https://tec.studio/contacts/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/tecstudio/",
+    "youtube": "https://www.youtube.com/@tecstudioreels",
+    "instagram": "https://www.instagram.com/theexpertcollective/"
+  },
+  "services": [
+    "brand identity",
+    "websites",
+    "pitch decks",
+    "campaigns",
+    "conference booths"
+  ],
+  "notable_clients": [
+    "Arbe",
+    "TeraSky",
+    "GreenRoad",
+    "Hyro",
+    "Bancor"
+  ],
+  "key_people": [
+    {
+      "name": "Erin Kopelow",
+      "role": "Co-Founder, Creative Director, Strategy",
+      "role_type": "founder",
+      "source": "https://tec.studio/about-us/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Tomi Nelkin Fantini",
+      "role": "Co-Founder, Creative Director, Branding",
+      "role_type": "founder",
+      "source": "https://tec.studio/about-us/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Janna Palankin",
+      "role": "Partner, Creative Director, Digital",
+      "role_type": "creative_lead",
+      "source": "https://tec.studio/about-us/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "sources": [
+    "https://tec.studio",
+    "https://clutch.co/profile/tec-studio",
+    "https://tec.studio/about-us/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו מיתוג ועיצוב מתל אביב המונחה אסטרטגיה, שהוקם ב-2016 ועובד עם מייסדים וצוותי שיווק בארגוני דיפ-טק, ביטחון, SaaS, אירוח ואימפקט על מיתוג, אתרים, מצגות משקיעים וקמפיינים."
+}

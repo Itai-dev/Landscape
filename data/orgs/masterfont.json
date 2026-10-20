@@ -1,0 +1,52 @@
+{
+  "id": "masterfont",
+  "name": "Masterfont",
+  "name_he": "מאסטרפונט",
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Long-established Tel Aviv Hebrew type foundry (founded 1984 per MyFonts; 1986 per Fonts.com) owned by Piki and Zvika Rosenberg, with a large Hebrew and Latin library including the Aharoni MF family.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1984,
+  "status": "active",
+  "website": "http://www.masterfont.co.il",
+  "links": {
+    "myfonts": "https://www.myfonts.com/foundry/Masterfont/"
+  },
+  "services": [
+    "retail Hebrew fonts",
+    "custom fonts"
+  ],
+  "notable_work": [
+    "Aharoni MF",
+    "Mechola",
+    "Shiboota"
+  ],
+  "key_people": [
+    {
+      "name": "Zvika Rosenberg",
+      "role": "Owner / type designer"
+    },
+    {
+      "name": "Piki Rosenberg",
+      "role": "Owner"
+    }
+  ],
+  "tags": [
+    "hebrew-type"
+  ],
+  "sources": [
+    "https://www.myfonts.com/foundry/Masterfont/",
+    "https://luc.devroye.org/israel.html",
+    "http://www.masterfont.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year differs between sources (1984 vs 1986). Official site returned 503 at verification time. On 2026-10-18 www.masterfont.co.il returned 404 and the bare domain failed TLS; activity not re-checked.",
+  "description_he": "בית יציקת פונטים עבריים ותיק בתל אביב (נוסד ב-1984 לפי MyFonts; ב-1986 לפי Fonts.com) בבעלות פיקי וצביקה רוזנברג, עם ספרייה גדולה של פונטים בעברית ובלטינית, כולל משפחת Aharoni MF."
+}

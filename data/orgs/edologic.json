@@ -1,0 +1,53 @@
+{
+  "id": "edologic",
+  "name": "Edologic",
+  "name_he": "אידיאולוג'יק",
+  "kind": "agency",
+  "categories": [
+    "digital-agency"
+  ],
+  "description": "Israeli digital advertising agency founded in 1999 by Doron Tal, Yinon Landenberg and Amir Natan; an early mover in online video advertising (2004) and social media (2006). Became part of Publicis Groupe and was merged into its other Israeli units in 2013.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1999,
+  "status": "merged",
+  "notable_clients": [
+    "Central Bottling Company (Coca-Cola Israel)",
+    "HP",
+    "Orange",
+    "Delek Motors",
+    "Nestlé"
+  ],
+  "key_people": [
+    {
+      "name": "Doron Tal",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yinon Landenberg",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Publicis Groupe Israel",
+      "note": "Merged into other Publicis Israel units in 2013"
+    }
+  ],
+  "tags": [
+    "historical",
+    "publicis"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%90%D7%99%D7%93%D7%99%D7%90%D7%95%D7%9C%D7%95%D7%92'%D7%99%D7%A7",
+    "https://everything-pr.com/publicis-groupe-bbr"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City assumed Tel Aviv.",
+  "description_he": "סוכנות פרסום דיגיטלי ישראלית שנוסדה ב-1999 על ידי דורון טל, ינון לנדנברג ואמיר נתן; מהראשונות בפרסום וידאו אונליין (2004) ובסושיאל (2006). הפכה לחלק מ-Publicis Groupe ומוזגה ב-2013 ליחידות הישראליות האחרות של הקבוצה."
+}

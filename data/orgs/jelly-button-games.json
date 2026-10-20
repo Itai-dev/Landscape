@@ -1,0 +1,35 @@
+{
+  "id": "jelly-button-games",
+  "name": "Jelly Button Games",
+  "kind": "studio",
+  "categories": [
+    "game-development"
+  ],
+  "description": "Israeli mobile game studio behind Pirate Kings, acquired by Playtika in 2017; Pirate Kings remains part of Playtika's game portfolio.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "acquired",
+  "notable_work": [
+    "Pirate Kings"
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "playtika",
+      "note": "2017"
+    }
+  ],
+  "tags": [
+    "mobile-games"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Playtika",
+    "https://www.playtika.com/"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Current status as a standalone studio not verified; no independent website found.",
+  "description_he": "סטודיו משחקי מובייל ישראלי שמאחורי Pirate Kings, שנרכש על ידי פלייטיקה ב-2017; Pirate Kings עדיין חלק מפורטפוליו המשחקים של פלייטיקה."
+}

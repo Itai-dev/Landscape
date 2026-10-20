@@ -1,0 +1,59 @@
+{
+  "id": "mifal-hapais",
+  "name": "Mifal HaPais (Israel National Lottery)",
+  "name_he": "מפעל הפיס",
+  "aka": [
+    "Israel Lottery",
+    "Pais"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Israel's national lottery (est. 1951) running Lotto, Chance, 777 and scratch cards; proceeds fund schools, culture halls, clinics and arts grants. Ad budget ~NIS 60M.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1951,
+  "status": "active",
+  "website": "https://www.pais.co.il",
+  "key_people": [
+    {
+      "name": "Shai Liraz",
+      "role": "Head of Image & Research Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001549399",
+      "as_of": "2026-07-15"
+    }
+  ],
+  "client_profile": {
+    "industry": "lottery / public",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "draw-show graphics",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky Grey"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Mifal_HaPais",
+    "https://www.globes.co.il/news/article.aspx?did=1001534160",
+    "https://www.globes.co.il/news/article.aspx?did=1001549399"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Feb 2026: Lotto's ~NIS 15M/yr budget moved from BBR Saatchi & Saatchi (Baumann Ber Rivnay) to Adler Chomski, which now handles most of Pais's ~NIS 60M budget.",
+  "description_he": "הלוטו הלאומי של ישראל (נוסד ב-1951), שמפעיל את לוטו, צ'אנס, 777 וכרטיסי גירוד; ההכנסות מממנות בתי ספר, היכלי תרבות, מרפאות ומענקים לאמנות. תקציב פרסום של כ-60 מיליון ₪."
+}

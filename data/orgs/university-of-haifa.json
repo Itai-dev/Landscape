@@ -1,0 +1,60 @@
+{
+  "id": "university-of-haifa",
+  "name": "University of Haifa",
+  "name_he": "אוניברסיטת חיפה",
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "education"
+  ],
+  "description": "Public research university on Mount Carmel, Haifa. Tenders its advertising and media buying (~NIS 3M a year in 2015, including student recruitment): Avraham won in 2015, replacing Yarkoni; publishes tenders at tender.haifa.ac.il.",
+  "location": {
+    "country": "IL",
+    "city": "Haifa"
+  },
+  "status": "active",
+  "website": "https://www.haifa.ac.il",
+  "client_profile": {
+    "industry": "higher education",
+    "creative_needs": [
+      "student recruitment campaigns",
+      "digital campaigns",
+      "brand campaign",
+      "media buying"
+    ],
+    "known_agencies": [
+      "Avraham (from 2015)",
+      "Yarkoni (2011-15)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "avraham-advertising",
+      "note": "Won the advertising + media tender, Mar 2015"
+    },
+    {
+      "type": "agency",
+      "target": "Yarkoni",
+      "note": "Previous agency until 2015"
+    },
+    {
+      "type": "agency",
+      "target": "arlo-digital",
+      "note": "Listed as a client by Arlo Digital"
+    }
+  ],
+  "tags": [
+    "publishes-tenders"
+  ],
+  "sources": [
+    "https://www.bizportal.co.il/advertismentandmarketing/news/article/405007",
+    "https://tender.haifa.ac.il/",
+    "https://www.haifa.ac.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Current agency after the 2015 contract not verified.",
+  "description_he": "אוניברסיטת מחקר ציבורית על הכרמל בחיפה. מוציאה למכרז את הפרסום וקניית המדיה שלה (כ-3 מיליון ₪ בשנה ב-2015, כולל גיוס סטודנטים): אברהם זכה ב-2015 במקום ירקוני; מפרסמת מכרזים ב-tender.haifa.ac.il."
+}

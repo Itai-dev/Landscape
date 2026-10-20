@@ -1,0 +1,75 @@
+{
+  "id": "renuar",
+  "name": "Renuar",
+  "name_he": "רנואר",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israeli fashion chain (est. 1993) selling women's and men's apparel, accessories and a home line (Renuar & More), plus the young-adult brand Twentyfourseven; about 95 points of sale and ~1,300 employees, owned by its founders.",
+  "location": {
+    "country": "IL",
+    "city": "Rishon LeZion"
+  },
+  "founded": 1993,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.renuar.co.il",
+  "contact_url": "https://renuar.co.il/pages/contact",
+  "careers_url": "https://www.renuar.co.il/pages/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+  "key_people": [
+    {
+      "name": "Ron Kahan",
+      "role": "Creative Director (client side)",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1033405",
+      "as_of": "2024-10-11"
+    },
+    {
+      "name": "Noa Ariel",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1119573",
+      "as_of": "2026-07-05"
+    }
+  ],
+  "client_profile": {
+    "industry": "fashion retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "seasonal campaigns",
+      "fashion photography",
+      "celebrity presenter campaigns",
+      "influencer collaborations"
+    ],
+    "known_agencies": [
+      "Avraham"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "avraham-advertising",
+      "note": "Oct 2024 campaign with Yael Shelbia shot in New York (ICE)"
+    },
+    {
+      "type": "agency",
+      "target": "uri-amitai-productions",
+      "note": "production company on the Oct 2024 campaign (ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A8%D7%A0%D7%95%D7%90%D7%A8_(%D7%9E%D7%95%D7%AA%D7%92)",
+    "https://www.ice.co.il/advertising-marketing/news/article/1033405",
+    "https://www.ice.co.il/advertising-marketing/news/article/1116241",
+    "https://renuar.co.il/pages/contact",
+    "https://www.ice.co.il/advertising-marketing/news/article/1119573",
+    "https://www.renuar.co.il/pages/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Marketing VP Yifat Pasternak left in June 2026 after ~7 years (ICE); successor not reported yet — a reason to reach out now. Jul 2026: Noa Ariel (ex-Renuar brand manager) returned as group VP marketing, replacing Yifat Pasternak (ICE).",
+  "description_he": "רשת אופנה ישראלית (נוסדה ב-1993) שמוכרת ביגוד לנשים ולגברים, אקססוריז וקו לבית (Renuar & More), לצד מותג הצעירים Twentyfourseven; כ-95 נקודות מכירה וכ-1,300 עובדים, בבעלות המייסדים."
+}

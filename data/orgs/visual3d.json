@@ -1,0 +1,49 @@
+{
+  "id": "visual3d",
+  "name": "Visual3D",
+  "aka": [
+    "Visual 3D Ltd"
+  ],
+  "kind": "studio",
+  "categories": [
+    "cgi-3d",
+    "animation-3d",
+    "xr"
+  ],
+  "description": "Petah Tikva studio operating since 1998 as part of the Ticomsoft Group, producing 3D product and technical films, corporate videos, training films and interactive AR/VR/web applications.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1998,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://visual3d.co.il",
+  "reel_url": "https://www.visual3d.co.il/show-real",
+  "services": [
+    "3D product films",
+    "Corporate videos",
+    "Training films",
+    "AR / VR apps",
+    "Interactive web"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Ticomsoft Group"
+    }
+  ],
+  "tags": [
+    "product-videos",
+    "technical-animation"
+  ],
+  "sources": [
+    "https://visual3d.co.il",
+    "https://revenuebase.ai/companies/post-production-companies/israel",
+    "https://www.visual3d.co.il/show-real"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו מפתח תקווה שפועל מאז 1998 כחלק מקבוצת Ticomsoft, ומפיק סרטי מוצר וסרטים טכניים בתלת-ממד, סרטי תדמית, סרטי הדרכה ואפליקציות אינטראקטיביות ב-AR, VR ו-ווב."
+}

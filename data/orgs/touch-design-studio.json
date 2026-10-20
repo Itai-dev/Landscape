@@ -1,0 +1,45 @@
+{
+  "id": "touch-design-studio",
+  "name": "Touch",
+  "aka": [
+    "Touch Design Studio",
+    "Studio Touch"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "graphic-design"
+  ],
+  "description": "Tel Aviv branding, campaign and graphic design studio producing identities, campaigns, catalogues, event design and websites, with many cultural and municipal clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.studio-touch.co.il",
+  "links": {
+    "facebook": "https://www.facebook.com/studio.touch.like",
+    "instagram": "https://www.instagram.com/touchtlv"
+  },
+  "services": [
+    "branding",
+    "campaigns",
+    "catalogues",
+    "event design",
+    "websites"
+  ],
+  "notable_clients": [
+    "Expo Tel Aviv",
+    "Tel Aviv City BID",
+    "Jerusalem City Libraries",
+    "DSV"
+  ],
+  "sources": [
+    "https://www.studio-touch.co.il",
+    "https://www.dexigner.com/directory/cat/Graphic-Design/Design-Studios/loc/Israel"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו למיתוג, קמפיינים ועיצוב גרפי בתל אביב שמפיק זהויות, קמפיינים, קטלוגים, עיצוב אירועים ואתרים, עם לקוחות רבים מתחומי התרבות והרשויות המקומיות."
+}

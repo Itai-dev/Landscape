@@ -1,0 +1,1361 @@
+<title>Landscape Israel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Type: Rubik (Latin + Hebrew) in weights, Plex Mono for dates and counts.
+   Layout: header + view (Explore / Signals / Pipeline) + fixed bottom tab bar; detail opens as a bottom sheet (phone) / side panel (desktop).
+   Colour: three org groups — makers (studios, production), tech (startups), buyers (brands, agencies); blue accent only for actions.
+   Direction: logical properties throughout so the Hebrew UI (dir=rtl) mirrors cleanly. */
+:root {
+  --bg: #f2f4f3;
+  --surface: #ffffff;
+  --ink: #15201f;
+  --muted: #5d6b69;
+  --line: #d9dfdd;
+  --accent: #1f4fd6;
+  --accent-ink: #ffffff;
+  --accent-soft: #e6ecfb;
+  --g-maker: #c2410c;
+  --g-tech: #0f766e;
+  --g-buyer: #9d2b8c;
+  --now: #b45309;
+  --now-soft: #fdf1df;
+  --ok: #15803d;
+  --logo-bg: #ffffff;
+  --scrim: rgba(10, 18, 18, .45);
+  --shadow: 0 10px 40px rgba(16, 30, 30, .18);
+  --f-display: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --tabbar: 62px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1514; --surface: #182120; --ink: #e8eeec; --muted: #9aaaa7; --line: #2a3634;
+    --accent: #8aa8ff; --accent-ink: #0f1514; --accent-soft: #1e2a4a;
+    --g-maker: #fb923c; --g-tech: #2dd4bf; --g-buyer: #e879d4; --now: #fbbf24; --now-soft: #3a2c12; --ok: #4ade80;
+    --scrim: rgba(0, 0, 0, .6); --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1514; --surface: #182120; --ink: #e8eeec; --muted: #9aaaa7; --line: #2a3634;
+  --accent: #8aa8ff; --accent-ink: #0f1514; --accent-soft: #1e2a4a;
+  --g-maker: #fb923c; --g-tech: #2dd4bf; --g-buyer: #e879d4; --now: #fbbf24; --now-soft: #3a2c12; --ok: #4ade80;
+  --scrim: rgba(0, 0, 0, .6); --shadow: 0 10px 40px rgba(0, 0, 0, .5); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 16px);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+
+header.top { padding-block: 18px 4px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+header.top h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(24px, 6vw, 32px); line-height: 1.1; margin: 0; letter-spacing: -.025em; }
+header.top h1 span { font-weight: 400; color: var(--muted); }
+header.top .side { display: flex; gap: 10px; align-items: baseline; }
+header.top .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.langbtn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; min-height: 32px; padding: 2px 12px; font-size: 13px; }
+.notice { margin-top: 8px; font-size: 13px; color: var(--muted); background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; padding: 8px 12px; }
+
+/* sticky controls */
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 10px 8px; display: grid; gap: 10px; }
+.search { display: flex; align-items: center; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding-inline: 12px 6px; min-height: 46px; }
+.search svg { flex: none; color: var(--muted); }
+.search input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 10px 0; outline: none; font-size: 16px; }
+.askbtn { flex: none; min-height: 34px; border: 0; border-radius: 9px; padding: 4px 12px; background: var(--accent); color: var(--accent-ink); font-size: 14px; font-weight: 500; }
+.seg { display: flex; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 3px; gap: 3px; }
+.seg button { flex: 1; min-height: 38px; border: 0; background: none; border-radius: 9px; font-size: 14px; font-weight: 500; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.scroller { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.scroller::-webkit-scrollbar { display: none; }
+.chip { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: 4px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; white-space: nowrap; text-decoration: none; color: var(--ink); }
+button.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+a.chip { color: var(--accent); }
+.chip.add { color: var(--accent); border-style: dashed; }
+.chip .x { opacity: .6; }
+.chip.label { border: 0; background: none; padding-inline: 0 2px; color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+.tools { display: flex; gap: 8px; align-items: center; }
+.tools .count { margin-inline-start: auto; font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.btn { min-height: 38px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-size: 14px; font-weight: 500; text-decoration: none; color: var(--ink); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.ghost { background: none; border-color: transparent; color: var(--accent); padding-inline: 6px; }
+.btn[disabled] { opacity: .45; cursor: default; }
+select.btn { padding-inline: 10px; }
+.badge { font-family: var(--f-mono); font-size: 11px; min-width: 18px; padding: 0 5px; border-radius: 9px; background: var(--now); color: var(--bg); text-align: center; line-height: 18px; }
+
+/* cards */
+main { padding-block: 6px 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 12px; }
+.card { text-align: start; width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .15s, transform .15s; }
+.card:hover { border-color: var(--g); }
+@media (prefers-reduced-motion: no-preference) { .card:hover { transform: translateY(-1px); } }
+.card .top { display: flex; gap: 12px; align-items: center; }
+.card .nm { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.card h3 { font-family: var(--f-display); font-weight: 600; font-size: 17px; line-height: 1.25; margin: 0; letter-spacing: -.01em; overflow-wrap: anywhere; }
+.he, .alt { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; justify-self: start; }
+.kind { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; font-weight: 600; color: var(--g); }
+.kind::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 2px; background: var(--g); }
+.where { color: var(--muted); font-size: 13px; font-weight: 400; text-transform: none; letter-spacing: 0; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card p.line { color: var(--ink); }
+.line { font-size: 14px; margin: 0; overflow-wrap: anywhere; }
+.line b { font-weight: 500; }
+.line .k { color: var(--muted); font-size: 12px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; margin-inline-end: 6px; }
+.fit { color: var(--ok); font-weight: 500; }
+.tag { display: inline-block; font-size: 12px; padding: 2px 8px; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); margin-block: 0 4px; margin-inline: 0 4px; }
+.tag.hit { border-color: var(--ok); color: var(--ok); }
+.nowline { display: flex; gap: 8px; align-items: baseline; font-size: 13px; background: var(--now-soft); color: var(--ink); border-radius: 8px; padding: 6px 10px; }
+.nowline .t { color: var(--now); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; flex: none; }
+.stage { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--accent); flex: none; }
+.logo { flex: none; width: 44px; height: 44px; border-radius: 10px; background: var(--logo-bg); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
+.logo img { width: 78%; height: 78%; object-fit: contain; }
+.logo.mono { background: color-mix(in srgb, var(--g) 14%, var(--surface)); border-color: color-mix(in srgb, var(--g) 30%, var(--line)); color: var(--g); font-weight: 700; font-size: 15px; font-family: var(--f-body); letter-spacing: .02em; }
+.logo.lg { width: 64px; height: 64px; border-radius: 14px; font-size: 20px; }
+.logo.sm { width: 32px; height: 32px; border-radius: 8px; font-size: 12px; }
+.empty { text-align: center; color: var(--muted); padding: 40px 16px; display: grid; gap: 10px; justify-items: center; }
+.empty h3 { margin: 0; color: var(--ink); font-size: 17px; }
+.more { display: flex; justify-content: center; padding-top: 14px; }
+
+/* signals */
+.feed { display: grid; gap: 10px; max-width: 760px; }
+.sig { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; }
+.sheet .sig { background: var(--bg); }
+.sig.old { opacity: .62; }
+.sig.hidden { opacity: .4; border-style: dashed; }
+.sig .head { display: flex; gap: 10px; align-items: center; }
+.sig .head .nm { flex: 1; min-width: 0; }
+.sig .type { font-size: 12px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--now); }
+.sig .org { font-weight: 600; font-size: 15px; border: 0; background: none; padding: 0; text-align: start; color: var(--ink); }
+.sig button.org { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.sig .h { margin: 0; font-size: 15px; }
+.sig .why { margin: 0; font-size: 14px; color: var(--muted); }
+.sig .foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 12px; color: var(--muted); }
+.sig .foot .acts { margin-inline-start: auto; display: flex; gap: 6px; align-items: center; }
+.credits { font-size: 13px; color: var(--muted); }
+.ennote { font-size: 12px; color: var(--muted); }
+
+/* pipeline */
+.pipe { display: grid; gap: 18px; max-width: 760px; }
+.pipe h2 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; font-weight: 600; display: flex; gap: 8px; align-items: center; }
+.pipe .list { display: grid; gap: 8px; }
+.prow { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; text-align: start; width: 100%; min-height: 56px; }
+.prow .nm { flex: 1; min-width: 0; display: grid; }
+.prow .nm b { font-weight: 600; }
+.prow .nm span { font-size: 13px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.prow .due { font-family: var(--f-mono); font-size: 12px; color: var(--now); flex: none; }
+.duerow { display: grid; gap: 8px; background: var(--now-soft); border-radius: 12px; padding: 10px; }
+.duerow .acts { display: flex; gap: 6px; justify-content: flex-end; }
+
+/* ask */
+.answer { white-space: pre-wrap; font-size: 15px; line-height: 1.55; margin: 0; }
+.answer.wait { color: var(--muted); }
+.asklist { display: grid; gap: 8px; }
+.examples { display: flex; flex-wrap: wrap; gap: 6px; }
+.examples button { white-space: normal; text-align: start; }
+
+/* ask home */
+.home { max-width: 760px; }
+.hero { padding-block: 22px 8px; display: grid; gap: 12px; }
+.hero h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 7vw, 38px); line-height: 1.08; letter-spacing: -.03em; text-wrap: balance; }
+.hero p { margin: 0; color: var(--muted); font-size: 14px; }
+.askbox { display: flex; align-items: flex-end; gap: 8px; background: var(--surface); border: 1.5px solid var(--ink); border-radius: 18px; padding: 8px 8px 8px 14px; padding-inline: 14px 8px; box-shadow: 0 6px 24px rgba(16, 30, 30, .08); }
+.askbox textarea { flex: 1; min-width: 0; border: 0; background: transparent; resize: none; outline: none; font-size: 17px; line-height: 1.4; padding-block: 8px; max-height: 160px; }
+.askgo { flex: none; width: 44px; height: 44px; border-radius: 12px; border: 0; background: var(--accent); color: var(--accent-ink); font-size: 20px; font-weight: 600; }
+.askgo[disabled] { opacity: .4; }
+.prompts { display: flex; flex-wrap: wrap; gap: 6px; }
+.prompts button { flex: 0 1 auto; max-width: 100%; white-space: normal; text-align: start; line-height: 1.3; padding-block: 7px; }
+.turn { display: grid; gap: 12px; padding-block: 18px; border-top: 1px solid var(--line); }
+.turn .q { font-weight: 600; font-size: 17px; }
+.steps { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.steps span::before { content: "· "; }
+.steps .live { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .steps .live { animation: pulse 1.2s ease-in-out infinite; } @keyframes pulse { 50% { opacity: .45; } } }
+.results { display: grid; gap: 10px; }
+.rcard { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: grid; gap: 8px; }
+.rhead { display: flex; gap: 12px; align-items: center; border: 0; background: none; padding: 0; text-align: start; width: 100%; }
+.rhead .nm { flex: 1; min-width: 0; display: grid; }
+.rhead b { font-size: 16px; font-weight: 600; }
+.rwhy { margin: 0; font-size: 14px; }
+.rwhy::before { content: "✦ "; color: var(--accent); }
+.racts { display: flex; flex-wrap: wrap; gap: 6px; }
+.racts .btn { min-height: 36px; padding-block: 4px; font-size: 13px; }
+.week { display: grid; gap: 8px; padding-block: 18px 6px; }
+.week h3 { margin: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.wrow { display: flex; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; text-align: start; width: 100%; min-height: 52px; }
+.wrow .nm { flex: 1; min-width: 0; display: grid; font-size: 14px; }
+.wrow .nm span { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wrow .ty { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--now); }
+
+/* tab bar */
+nav.tabbar { position: fixed; inset: auto 0 0 0; z-index: 15; background: var(--surface); border-top: 1px solid var(--line);
+  padding: 4px max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)); }
+nav.tabbar .in { max-width: 600px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+nav.tabbar button { border: 0; background: none; min-height: 54px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 12px; font-weight: 500; color: var(--muted); position: relative; }
+nav.tabbar button svg { width: 22px; height: 22px; }
+nav.tabbar button[aria-current="page"] { color: var(--accent); }
+nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% + 6px); }
+
+/* sheets */
+.scrim { position: fixed; inset: 0; background: var(--scrim); z-index: 20; }
+.sheet { position: fixed; z-index: 21; background: var(--surface); box-shadow: var(--shadow); overflow-y: auto; overscroll-behavior: contain;
+  inset: auto 0 0 0; max-height: 90vh; border-radius: 18px 18px 0 0;
+  padding: 10px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
+.sheet::before { content: ""; display: block; width: 40px; height: 4px; border-radius: 2px; background: var(--line); margin: 0 auto 8px; }
+@media (min-width: 860px) {
+  .sheet.side { inset-block: 0; inset-inline: auto 0; width: 540px; max-height: none; border-radius: 0; padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
+  .sheet.side::before { display: none; }
+  .sheet.center { inset: 10vh auto auto 50%; transform: translateX(-50%); width: 560px; max-height: 80vh; border-radius: 18px; }
+  .sheet.center::before { display: none; }
+}
+.sheet .close { position: sticky; top: 0; float: inline-end; margin-inline-start: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 44px; height: 44px; font-size: 20px; line-height: 1; z-index: 1; }
+.sheet .ident { display: flex; gap: 14px; align-items: center; margin-top: 2px; }
+.sheet .ident > div { min-width: 0; }
+.sheet h2 { font-family: var(--f-display); font-weight: 700; font-size: 25px; line-height: 1.15; letter-spacing: -.02em; margin: 2px 0 0; text-wrap: balance; }
+.sheet .he, .sheet .alt { font-size: 16px; }
+.sheet section { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; }
+.sheet h4 { margin: 0 0 8px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.sheet p { margin: 8px 0 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.editor { display: grid; gap: 10px; margin-top: 12px; background: var(--bg); border-radius: 12px; padding: 12px; }
+.editor textarea, .field { width: 100%; min-height: 74px; resize: vertical; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
+.editor input[type="date"] { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--surface); min-height: 38px; }
+.editor .saved { font-size: 12px; color: var(--muted); }
+.ways { display: grid; gap: 12px; }
+.ways .grp { display: grid; gap: 6px; }
+.ways .grp > span { font-size: 13px; color: var(--muted); }
+.ways .items { display: flex; flex-wrap: wrap; gap: 6px; }
+.ways .items button, .asklist button { min-height: 40px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding-block: 3px; padding-inline: 4px 10px; font-size: 14px; text-align: start; }
+.ways .items .plain { display: inline-flex; align-items: center; min-height: 36px; padding: 3px 10px; font-size: 14px; color: var(--muted); border: 1px dashed var(--line); border-radius: 10px; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 14px; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+ul.plain { margin: 0; padding-inline-start: 18px; font-size: 14px; }
+details summary { cursor: pointer; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; min-height: 32px; display: flex; align-items: center; }
+details[open] summary { margin-bottom: 8px; }
+.sources { font-size: 12px; display: grid; gap: 2px; }
+.sources a { overflow-wrap: anywhere; }
+.chipset { display: flex; flex-wrap: wrap; gap: 6px; }
+.filtersec { display: grid; gap: 8px; margin-top: 14px; }
+.filtersec h4 { margin: 0; }
+.sheetfoot { position: sticky; bottom: calc(-28px - env(safe-area-inset-bottom, 0px)); background: var(--surface); padding-block: 12px; margin-top: 14px; display: flex; gap: 8px; justify-content: flex-end; border-top: 1px solid var(--line); }
+#panel select, #panel input.btn { width: 100%; max-width: 100%; min-width: 0; text-overflow: ellipsis; }
+#panel .row input.btn { width: auto; }
+textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); font-size: 12px; border: 1px solid var(--line); border-radius: 10px; padding: 8px; background: var(--bg); }
+.toast { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 12px); background: var(--ink); color: var(--bg); padding: 10px 16px; border-radius: 10px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>Landscape <span data-i18n="app.sub">· Israel’s creative industry</span></h1>
+    <div class="side">
+      <div class="meta" id="meta">Loading…</div>
+      <button class="langbtn" type="button" id="lang" lang="en">English</button>
+    </div>
+  </header>
+  <div class="notice" id="storeNotice" hidden></div>
+
+  <!-- ASK (home) -->
+  <section id="v-ask" class="home" aria-label="Ask">
+    <div class="hero">
+      <h2 data-i18n="home.h">What are you looking for?</h2>
+      <p data-i18n="home.sub">Ask in plain words. Answers come from the map, with the companies behind them.</p>
+      <form class="askbox" id="askForm">
+        <textarea id="askQ" rows="2" dir="auto" data-i18n-ph="home.ph" placeholder="e.g. Brands that need 3D product visuals this quarter" aria-label="Question"></textarea>
+        <button class="askgo" id="askGo" type="submit" aria-label="Ask">↑</button>
+      </form>
+      <div class="prompts" id="prompts"></div>
+      <div class="notice" id="askNotice" hidden></div>
+    </div>
+    <div id="thread"></div>
+    <div class="week" id="week"></div>
+  </section>
+
+  <!-- EXPLORE -->
+  <section id="v-explore" aria-label="Explore" hidden>
+    <div class="bar">
+      <label class="search" for="q">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" data-i18n-ph="search.ph" placeholder="Search, or ask a question…" autocomplete="off">
+        <button class="askbtn" type="button" id="askBtn" hidden data-i18n="ask.btn">Ask ✦</button>
+      </label>
+      <div class="seg" id="lens" role="group" aria-label="Lens">
+        <button type="button" data-lens="brands" data-i18n="lens.brands">Brands</button>
+        <button type="button" data-lens="collab" data-i18n="lens.collab">Collaborators</button>
+        <button type="button" data-lens="all" data-i18n="lens.all">All</button>
+      </div>
+      <div class="scroller" id="mine" aria-label="What I make"></div>
+      <div class="tools">
+        <button class="btn" type="button" id="openFilters">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          <span data-i18n="filters">Filters</span> <span class="badge" id="fcount" hidden></span>
+        </button>
+        <select class="btn" id="sort" aria-label="Sort">
+          <option value="fit" data-i18n="sort.fit">Best fit</option>
+          <option value="name" data-i18n="sort.name">A → Z</option>
+          <option value="size" data-i18n="sort.size">Largest</option>
+          <option value="founded" data-i18n="sort.founded">Newest</option>
+        </select>
+        <span class="count" id="count"></span>
+      </div>
+      <div class="scroller" id="active" hidden></div>
+    </div>
+    <main>
+      <div class="grid" id="grid"></div>
+      <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more" data-i18n="more">Show more</button></div>
+      <div class="empty" id="empty" hidden>
+        <h3 data-i18n="empty.h">Nothing matches</h3>
+        <span data-i18n="empty.p">Try fewer filters, or search in English (only some names have Hebrew).</span>
+        <button class="btn" type="button" id="clearAll" data-i18n="clear">Clear filters</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- SIGNALS -->
+  <section id="v-signals" aria-label="Signals" hidden>
+    <div class="bar">
+      <div class="scroller" id="sigTypes" role="group" aria-label="Signal type"></div>
+    </div>
+    <main><div class="feed" id="feed"></div></main>
+  </section>
+
+  <!-- PIPELINE -->
+  <section id="v-pipeline" aria-label="Pipeline" hidden>
+    <div class="bar">
+      <div class="tools">
+        <span class="muted" id="pipeSummary"></span>
+        <button class="btn" type="button" id="export" style="margin-inline-start:auto" data-i18n="export">Export my data</button>
+      </div>
+    </div>
+    <main><div class="pipe" id="pipe"></div></main>
+  </section>
+</div>
+
+<nav class="tabbar" aria-label="Sections">
+  <div class="in">
+    <button type="button" data-tab="ask" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg><span data-i18n="tab.ask">Ask</span></button>
+    <button type="button" data-tab="explore">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span data-i18n="tab.explore">Explore</span></button>
+    <button type="button" data-tab="signals">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span data-i18n="tab.signals">Signals</span><span class="badge" id="sigBadge" hidden></span></button>
+    <button type="button" data-tab="pipeline">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h6"/></svg><span data-i18n="tab.pipeline">Pipeline</span><span class="badge" id="pipeBadge" hidden></span></button>
+  </div>
+</nav>
+
+<div class="scrim" id="scrim" hidden></div>
+<aside class="sheet side" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-name"></aside>
+<aside class="sheet center" id="panel" hidden role="dialog" aria-modal="true" aria-label="Options"></aside>
+<div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+  // ---------- strings (English / Hebrew) ----------
+  const I18N = {
+    en: {
+      "app.sub": "· Israel’s creative industry", "loading": "Loading…", "loadfail": "Couldn’t load the map data. Reload to try again.",
+      "meta": "{0} organizations · {1} signals · updated {2}",
+      "search.ph": "Search, or ask a question…", "ask.btn": "Ask ✦",
+      "lens.brands": "Brands", "lens.collab": "Collaborators", "lens.all": "All",
+      "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts to rank by fit", "mine.remove": "Remove {0}",
+      "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
+      "count": "{0} matches", "count1": "1 match", "more": "Show more",
+      "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
+      "tab.ask": "Ask", "tab.explore": "Browse", "tab.signals": "Signals",
+      "home.h": "What are you looking for?", "home.sub": "Ask in plain words. Answers come from the map, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
+      "home.week": "This week", "home.offline": "AI answers work when Landscape is opened in claude.ai. Showing the closest matches from the map for now.", "home.nores": "Nothing in the map matches that yet. Try other words, or browse.",
+      "home.p.need": "Who needs {0} right now?", "home.p.agency": "Which agencies commission {0}?", "home.p.collab": "Studios I could team up with on {0}",
+      "step.search": "Searching the map{0}", "step.org": "Reading about {0}", "step.signals": "Checking recent signals", "step.pipe": "Looking at your pipeline", "step.write": "Writing the answer", "step.start": "Thinking",
+      "r.open": "Open", "r.pitch": "✎ Pitch", "r.match": "Matches: {0}", "tab.pipeline": "Pipeline", "export": "Export my data",
+      "k1.studio": "Studio", "k1.production_company": "Production co.", "k1.startup": "Startup", "k1.agency": "Agency", "k1.client": "Brand", "k1.community": "Community",
+      "km.studio": "Studios", "km.production_company": "Production", "km.startup": "Startups", "km.agency": "Agencies", "km.client": "Brands", "km.community": "Community",
+      "status.acquired": "acquired", "status.closed": "closed", "status.merged": "merged", "status.unknown": "status unknown",
+      "st.watch": "Watching", "st.to_pitch": "To pitch", "st.contacted": "Contacted", "st.in_talks": "In talks", "st.client": "Client", "st.passed": "Passed", "st.saved": "Saved",
+      "sig.funding": "Funding", "sig.acquisition": "Acquisition", "sig.agency_move": "Agency move", "sig.ownership": "Ownership", "sig.rebrand": "Rebrand", "sig.new_exec": "New marketing head", "sig.campaign": "Campaign", "sig.launch": "Launch", "sig.hiring": "Hiring", "sig.award": "Award", "sig.closure": "Closure",
+      "sigf.all": "All", "sigf.hiring": "Hiring", "sigf.funding": "Funding", "sigf.agency_move": "Agency moves", "sigf.new_exec": "People", "sigf.campaign": "Campaigns", "sigf.launch": "Launches", "sigf.rebrand": "Rebrands", "sigf.ownership": "Ownership", "sigf.acquisition": "Deals",
+      "card.buys": "Buys", "card.via": "Via", "card.clients": "Clients",
+      "fl.title": "Filters", "fl.type": "Type", "fl.needs": "What they buy", "fl.craft": "Craft", "fl.industry": "Industry", "fl.product": "Product (startups)", "fl.city": "City", "fl.anycity": "Any city", "fl.show": "Show results",
+      "cr.title": "What do you make?", "cr.p": "Pick any. Brands that buy these move to the top of Best fit.", "done": "Done", "close": "Close",
+      "ways.agency": "Their agency", "ways.worked": "Worked for them", "ways.users": "Brands that use them", "ways.clients": "Their clients", "ways.shares": "Shares clients with", "ways.group": "Group & deals", "ways.people": "People (public roles)",
+      "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
+      "sh.followup": " · follow up {0}", "sh.save": "☆ Save to pipeline", "sh.pitch": "✎ Draft a pitch", "sh.website": "Website ↗", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
+      "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services / products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
+      "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
+      "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.status": "Status", "f.funding": "Funding", "f.public": "Public", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
+      "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page",
+      "sig.notinmap": "· not in the map yet", "sig.save": "☆ Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
+      "sig.footer": "The weekly research run adds new signals on Sundays. Each one links to its source.", "sig.empty.h": "No signals yet", "sig.empty.p": "The research run adds new ones every Sunday.",
+      "credit.agency": "Agency", "credit.production": "Production", "credit.studio": "Studio", "credit.post": "Post", "credit.director": "Director",
+      "pipe.summary": "{0} saved", "pipe.duecount": " · {0} due", "pipe.empty.h": "Your pipeline is empty", "pipe.empty.p": "Save a brand or studio from Explore or Signals. Notes and follow-ups stay private to you.", "pipe.find": "Find brands to pitch", "pipe.duenow": "Due now", "pipe.due": "due ", "pipe.snooze": "+1 week", "pipe.done": "Done",
+      "export.title": "Your data", "export.p": "Copy and keep this JSON. It holds your pipeline, notes and crafts.", "copy": "Copy", "copied": "Copied", "selected": "Selected. Copy it from here.", "exported": "Exported",
+      "notice.ro": "You can browse everything here. Saving to a pipeline needs Contributor access from the owner.", "notice.local": "Your pipeline is saved on this device only. Open Landscape in claude.ai to keep it private and in sync across devices.",
+      "t.saveerr": "Couldn’t save. Try again.", "t.ro": "You can browse, but saving needs Contributor access.", "t.saved": "Saved to pipeline · To pitch", "t.removed": "Removed from pipeline", "t.hidden": "Signal hidden for everyone", "t.shown": "Signal shown again", "t.reportok": "Thanks. Sent to the research queue.", "t.reporterr": "Couldn’t send the report. Try again.", "t.draftsaved": "Draft saved · follow-up in a week",
+      "p.title": "Pitch {0}", "p.sub": "One short, specific message. You edit it and send it yourself — Landscape never sends anything.", "p.why": "Why now", "p.other": "Something else (write it)", "p.whyph": "e.g. Saw your new summer campaign on ICE", "p.who": "Who", "p.viaag": "Via their agency · {0}", "p.general": "No name (general)",
+      "p.me": "About you (one line)", "p.meph": "e.g. Noa, motion designer in Tel Aviv, 8 years in brand work", "p.show": "What to show", "p.addsample": "+ Add a work sample", "p.titleph": "Title, e.g. Bezeq launch, 3D product spots", "p.urlph": "Link (Vimeo, Behance…)", "p.lang": "Language",
+      "p.go": "Write the draft", "p.draft": "Draft", "p.save": "Save draft · follow up in 1 week", "p.writing": "Writing…", "p.done": "Edit it, then copy and send it yourself.", "p.needwhy": "Add a reason to reach out now.", "p.needsample": "Pick or add one work sample to show.", "p.fail": "Couldn’t finish. Try again.",
+      "err.not_granted": "Allow Claude for this page first.", "err.rate_limited": "Too many requests right now. Try again in a minute.", "err.sampling_disabled": "Claude isn’t available on this account.", "err.prompt_too_large": "Too much text. Shorten it.", "err.refused": "Claude declined this one. Try rewording.", "err.tools_unavailable": "This view can’t run map lookups. Try the claude.ai app.",
+      "r.title": "Report a mistake", "r.about": "About {0}. The next research run checks reports and fixes the record.", "r.what": "What’s wrong?", "r.ph": "e.g. They moved to McCann in 2026; the website is dead; wrong city", "r.src": "Source (optional)", "r.srcph": "Link that shows the right info", "r.send": "Send report",
+      "ask.title": "Ask the map", "ask.sub": "Answers use only the map’s data and list the companies they’re based on.", "ask.ph": "e.g. Which brands buy animation and work with McCann?", "ask.go": "Ask", "ask.thinking": "Looking through the map… this can take up to a minute.", "ask.found": "In the map",
+      "ask.ex1": "Which brands buy animation or motion graphics, and through which agency?", "ask.ex2": "Who are the heads of production at the big agencies?", "ask.ex3": "Which studios have worked for telecom brands?", "ask.ex4": "What changed this month that could mean new work for a 3D artist?",
+      "ago.today": "today", "ago.yesterday": "yesterday", "ago.d": "{0}d ago", "ago.w": "{0}w ago", "ago.mo": "{0}mo ago",
+    },
+    he: {
+      "app.sub": "· התעשייה היצירתית בישראל", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את נתוני המפה. טענו מחדש.",
+      "meta": "{0} ארגונים · {1} סיגנלים · עודכן {2}",
+      "search.ph": "חיפוש או שאלה…", "ask.btn": "שאלה ✦",
+      "lens.brands": "מותגים", "lens.collab": "שותפים ליצירה", "lens.all": "הכול",
+      "mine.label": "אני עושה", "mine.edit": "+ עריכה", "mine.pick": "+ בחרו תחומים כדי לדרג לפי התאמה", "mine.remove": "הסרת {0}",
+      "filters": "סינון", "sort.fit": "ההתאמה הטובה", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
+      "count": "{0} תוצאות", "count1": "תוצאה אחת", "more": "עוד",
+      "empty.h": "אין תוצאות", "empty.p": "נסו פחות מסננים, או חפשו באנגלית (לא לכל הארגונים יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
+      "tab.ask": "שאלו", "tab.explore": "עיון", "tab.signals": "סיגנלים",
+      "home.h": "מה אתם מחפשים?", "home.sub": "שאלו במילים פשוטות. התשובות מגיעות מהמפה, עם הארגונים שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
+      "home.week": "השבוע", "home.offline": "תשובות AI עובדות כשפותחים את Landscape ב-claude.ai. בינתיים מוצגות ההתאמות הקרובות מהמפה.", "home.nores": "עדיין אין במפה משהו שמתאים לזה. נסו מילים אחרות, או עיינו.",
+      "home.p.need": "מי צריך {0} עכשיו?", "home.p.agency": "אילו סוכנויות מזמינות {0}?", "home.p.collab": "סטודיואים לשיתוף פעולה ב{0}",
+      "step.search": "מחפש במפה{0}", "step.org": "קורא על {0}", "step.signals": "בודק סיגנלים אחרונים", "step.pipe": "בודק את הפייפליין שלך", "step.write": "כותב תשובה", "step.start": "חושב",
+      "r.open": "פתיחה", "r.pitch": "✎ פנייה", "r.match": "התאמה: {0}", "tab.pipeline": "פייפליין", "export": "ייצוא הנתונים שלי",
+      "k1.studio": "סטודיו", "k1.production_company": "חברת הפקות", "k1.startup": "סטארטאפ", "k1.agency": "סוכנות", "k1.client": "מותג", "k1.community": "קהילה",
+      "km.studio": "סטודיואים", "km.production_company": "הפקות", "km.startup": "סטארטאפים", "km.agency": "סוכנויות", "km.client": "מותגים", "km.community": "קהילה",
+      "status.acquired": "נרכש", "status.closed": "נסגר", "status.merged": "מוזג", "status.unknown": "סטטוס לא ידוע",
+      "st.watch": "במעקב", "st.to_pitch": "לפנות", "st.contacted": "נוצר קשר", "st.in_talks": "בשיחות", "st.client": "לקוח", "st.passed": "ירד מהפרק", "st.saved": "שמור",
+      "sig.funding": "גיוס הון", "sig.acquisition": "רכישה", "sig.agency_move": "מעבר משרד פרסום", "sig.ownership": "בעלות", "sig.rebrand": "מיתוג מחדש", "sig.new_exec": "מנהל/ת שיווק חדש/ה", "sig.campaign": "קמפיין", "sig.launch": "השקה", "sig.hiring": "דרושים", "sig.award": "פרס", "sig.closure": "סגירה",
+      "sigf.all": "הכול", "sigf.hiring": "דרושים", "sigf.funding": "גיוסים", "sigf.agency_move": "מעברי משרדים", "sigf.new_exec": "אנשים", "sigf.campaign": "קמפיינים", "sigf.launch": "השקות", "sigf.rebrand": "מיתוגים", "sigf.ownership": "בעלות", "sigf.acquisition": "עסקאות",
+      "card.buys": "קונים", "card.via": "דרך", "card.clients": "לקוחות",
+      "fl.title": "סינון", "fl.type": "סוג", "fl.needs": "מה הם קונים", "fl.craft": "תחום", "fl.industry": "תעשייה", "fl.product": "מוצר (סטארטאפים)", "fl.city": "עיר", "fl.anycity": "כל הערים", "fl.show": "הצגת תוצאות",
+      "cr.title": "מה אתם עושים?", "cr.p": "בחרו כמה שרוצים. מותגים שקונים את זה יעלו לראש רשימת ההתאמה.", "done": "סיום", "close": "סגירה",
+      "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים (תפקידים פומביים)",
+      "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהפייפליין",
+      "sh.followup": " · תזכורת {0}", "sh.save": "☆ שמירה לפייפליין", "sh.pitch": "✎ טיוטת פנייה", "sh.website": "אתר ↗", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם קונים", "sh.pickcrafts": "בחרו תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
+      "sh.ways": "דרכים פנימה", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים / מוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · ודאות {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
+      "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
+      "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "ציבורית", "f.raised": "גייסו ${0}M", "f.offices": "משרדים", "f.industry": "תעשייה",
+      "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר",
+      "sig.notinmap": "· עדיין לא במפה", "sig.save": "☆ שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
+      "sig.footer": "המחקר השבועי מוסיף סיגנלים חדשים בימי ראשון. כל סיגנל מקושר למקור שלו.", "sig.empty.h": "עדיין אין סיגנלים", "sig.empty.p": "המחקר מוסיף חדשים בכל יום ראשון.",
+      "credit.agency": "משרד", "credit.production": "הפקה", "credit.studio": "סטודיו", "credit.post": "פוסט", "credit.director": "בימוי",
+      "pipe.summary": "{0} שמורים", "pipe.duecount": " · {0} לטיפול", "pipe.empty.h": "הפייפליין ריק", "pipe.empty.p": "שמרו מותג או סטודיו מתוך גילוי או סיגנלים. ההערות והתזכורות פרטיות רק לכם.", "pipe.find": "מצאו מותגים לפנות אליהם", "pipe.duenow": "לטיפול עכשיו", "pipe.due": "עד ", "pipe.snooze": "+שבוע", "pipe.done": "בוצע",
+      "export.title": "הנתונים שלכם", "export.p": "העתיקו ושמרו את ה-JSON הזה. הוא כולל את הפייפליין, ההערות והתחומים שלכם.", "copy": "העתקה", "copied": "הועתק", "selected": "מסומן. העתיקו מכאן.", "exported": "יוצא",
+      "notice.ro": "אפשר לעיין בהכול. כדי לשמור לפייפליין צריך הרשאת Contributor מהבעלים.", "notice.local": "הפייפליין נשמר רק במכשיר הזה. פתחו את Landscape ב-claude.ai כדי לשמור אותו באופן פרטי ומסונכרן.",
+      "t.saveerr": "השמירה נכשלה. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר לפייפליין · לפנות", "t.removed": "הוסר מהפייפליין", "t.hidden": "הסיגנל הוסתר לכולם", "t.shown": "הסיגנל מוצג שוב", "t.reportok": "תודה. נשלח לבדיקה במחקר הבא.", "t.reporterr": "השליחה נכשלה. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
+      "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם — Landscape לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
+      "p.me": "עליכם (שורה אחת)", "p.meph": "למשל: נועה, מעצבת מושן מתל אביב, 8 שנים בעבודה עם מותגים", "p.show": "מה להראות", "p.addsample": "+ הוספת עבודה", "p.titleph": "שם העבודה, למשל: השקת בזק, סרטוני מוצר בתלת־ממד", "p.urlph": "קישור (Vimeo, Behance…)", "p.lang": "שפה",
+      "p.go": "כתיבת טיוטה", "p.draft": "טיוטה", "p.save": "שמירת טיוטה · תזכורת בעוד שבוע", "p.writing": "כותב…", "p.done": "ערכו, העתיקו ושלחו בעצמכם.", "p.needwhy": "הוסיפו סיבה לפנות עכשיו.", "p.needsample": "בחרו או הוסיפו עבודה אחת להראות.", "p.fail": "לא הצלחנו לסיים. נסו שוב.",
+      "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "יותר מדי טקסט. קצרו.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במפה. נסו באפליקציית claude.ai.",
+      "r.title": "דיווח על טעות", "r.about": "לגבי {0}. המחקר הבא בודק את הדיווחים ומתקן.", "r.what": "מה לא נכון?", "r.ph": "למשל: עברו למקאן ב-2026; האתר לא עובד; עיר שגויה", "r.src": "מקור (לא חובה)", "r.srcph": "קישור שמראה את המידע הנכון", "r.send": "שליחה",
+      "ask.title": "שאלו את המפה", "ask.sub": "התשובות מבוססות רק על נתוני המפה, עם הארגונים שעליהם הן נשענות.", "ask.ph": "למשל: אילו מותגים קונים אנימציה ועובדים עם מקאן?", "ask.go": "שאלה", "ask.thinking": "מחפש במפה… זה יכול לקחת עד דקה.", "ask.found": "במפה",
+      "ask.ex1": "אילו מותגים קונים אנימציה או מושן, ודרך איזה משרד?", "ask.ex2": "מי מנהלי ההפקה במשרדי הפרסום הגדולים?", "ask.ex3": "אילו סטודיואים עבדו עם חברות תקשורת?", "ask.ex4": "מה השתנה החודש שיכול להביא עבודה לאמן/ית תלת־ממד?",
+      "ago.today": "היום", "ago.yesterday": "אתמול", "ago.d": "לפני {0} ימים", "ago.w": "לפני {0} שבועות", "ago.mo": "לפני {0} חודשים",
+    },
+  };
+  let LANG = "en";
+  LANG = "he"; // Hebrew-first (Israeli market); English via the toggle
+  try { LANG = localStorage.getItem("landscape-lang") === "en" ? "en" : "he"; } catch (e) {}
+  const t = (k, ...a) => { let s = I18N[LANG][k] ?? I18N.en[k] ?? k; a.forEach((v, i) => (s = s.replace("{" + i + "}", v))); return s; };
+  const kindOne = (k) => t("k1." + k), kindMany = (k) => t("km." + k), stageLabel = (k) => t("st." + k), sigType = (k) => t("sig." + k);
+
+  // ---------- constants ----------
+  const GROUP = { studio: "maker", production_company: "maker", community: "maker", startup: "tech", client: "buyer", agency: "buyer" };
+  const KINDS = ["studio", "production_company", "startup", "agency", "client", "community"];
+  const LENS_KINDS = { brands: ["client", "agency"], collab: ["studio", "production_company", "community"], all: null };
+  const SIZE_RANK = { "1-10": 1, "11-50": 2, "51-200": 3, "201-500": 4, "501-1000": 5, "1001-5000": 6, "5001+": 7 };
+  const STAGES = ["watch", "to_pitch", "contacted", "in_talks", "client", "passed"];
+  const SIG_FILTERS = ["", "hiring", "funding", "agency_move", "new_exec", "campaign", "launch", "rebrand", "acquisition", "ownership"];
+  const LINK_LABEL = { linkedin: "LinkedIn", instagram: "Instagram", behance: "Behance", vimeo: "Vimeo", youtube: "YouTube", crunchbase: "Crunchbase", x: "X", twitter: "X", facebook: "Facebook", imdb: "IMDb", dribbble: "Dribbble", wikipedia: "Wikipedia", artstation: "ArtStation" };
+  const PAGE = 60;
+  const DAY = 864e5;
+  const TODAY = new Date(new Date().toDateString());
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "")
+    .replace(/\b(ltd|inc|israel|group|studios?|productions?|tel aviv|tlv|the)\b/g, "").replace(/[^a-z0-9֐-׿]+/g, "");
+  const daysAgo = (d) => Math.round((TODAY - new Date(d)) / DAY);
+  const ago = (d) => { const n = daysAgo(d); return n <= 0 ? t("ago.today") : n === 1 ? t("ago.yesterday") : n < 14 ? t("ago.d", n) : n < 60 ? t("ago.w", Math.round(n / 7)) : t("ago.mo", Math.round(n / 30)); };
+  const locale = () => (LANG === "he" ? "he-IL" : "en-GB");
+  const fmtDate = (d) => new Date(d).toLocaleDateString(locale(), { day: "numeric", month: "short" });
+  const isoDay = (date) => new Date(date.getTime() - date.getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+  const trim = (s, n) => (s.length > n ? s.slice(0, n - 1).trimEnd() + "…" : s);
+  let toastT;
+  function toast(msg) { const el = $("toast"); el.textContent = msg; el.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => (el.hidden = true), 2600); }
+
+  // ---------- data ----------
+  let ORGS = [], BY_ID = {}, BY_NAME = {}, TAX, NEEDS = {}, CRAFTS = [], LOGOS = {}, GENERATED = "";
+  let BASE_SIGNALS = [];
+  const REV = { clientOf: {}, agencyOf: {}, rel: {} };
+  const catLabel = (c) => (LANG === "he" && TAX.categories_he?.[c]) || TAX.categories[c] || c;
+  const needLabel = (n) => (LANG === "he" && NEEDS[n]?.label_he) || NEEDS[n]?.label || n;
+  const orgName = (o) => (LANG === "he" && o.name_he) || o.name;
+  const orgDesc = (o) => (LANG === "he" && o.description_he) || o.description;
+  const cityName = (c) => (LANG === "he" && TAX.cities_he?.[c]) || c;
+  const sigHead = (s) => (LANG === "he" && s.headline_he) || s.headline;
+  const sigWhy = (s) => (LANG === "he" && s.why_he) || s.why;
+
+  function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
+  function push(map, k, v) { (map[k] = map[k] || []).push(v); }
+
+  function index(data) {
+    TAX = data.taxonomy; NEEDS = data.needs || {}; ORGS = data.orgs; GENERATED = data.generated;
+    CRAFTS = (TAX.facets && TAX.facets.craft) || [];
+    ORGS.forEach((o) => {
+      BY_ID[o.id] = o; BY_NAME[norm(o.name)] = o;
+      (o.aka || []).forEach((a) => (BY_NAME[norm(a)] = BY_NAME[norm(a)] || o));
+      o.needs = o.needs || [];
+      o._text = [o.name, o.name_he, (o.aka || []).join(" "), o.description, o.description_he, o.location.city, TAX.cities_he?.[o.location.city], KINDS.includes(o.kind) ? I18N.en["k1." + o.kind] + " " + I18N.he["k1." + o.kind] : "",
+        o.categories.map((c) => TAX.categories[c] + " " + (TAX.categories_he?.[c] || "")).join(" "), o.needs.map((n) => NEEDS[n]?.label + " " + (NEEDS[n]?.label_he || "")).join(" "),
+        (o.client_profile?.creative_needs || []).join(" "), (o.client_profile?.known_agencies || []).join(" "),
+        (o.services || []).join(" "), (o.notable_clients || []).join(" "), (o.notable_work || []).join(" "),
+        (o.tags || []).join(" "), (o.key_people || []).map((p) => p.name + " " + p.role).join(" ")].join(" ").toLowerCase();
+    });
+    ORGS.forEach((o) => {
+      (o.notable_clients || []).forEach((c) => { const x = lookup(c); if (x && x !== o) push(REV.clientOf, x.id, o); });
+      (o.client_profile?.known_agencies || []).forEach((a) => { const x = lookup(a); if (x && x !== o) push(REV.agencyOf, x.id, o); });
+      (o.relations || []).forEach((r) => { const x = r.target_id ? BY_ID[r.target_id] : lookup(r.target); if (x && x !== o) push(REV.rel, x.id, { org: o, type: r.type }); });
+    });
+  }
+
+  // ---------- storage (per-person, private) ----------
+  const Store = {
+    mode: "loading", isOwner: false, uid: null, db: null, downloads: null, sample: null, readOnly: false,
+    pipeline: {}, prefs: { crafts: [] }, dbSignals: {},
+    chains: {},
+    key: "landscape-v2",
+    async init() {
+      let db = null, user = null;
+      try {
+        if (window.claude && typeof window.claude.use === "function") {
+          [db, user] = await Promise.all([window.claude.use("db"), window.claude.use("user")]);
+          this.downloads = await window.claude.use("downloads").catch(() => null);
+          this.sample = await window.claude.use("sample").catch(() => null);
+        }
+      } catch (e) { db = null; }
+      if (user) {
+        try { this.uid = await user.id(); } catch (e) {}
+        try { this.isOwner = await user.isOwner(); } catch (e) {}
+      }
+      if (db && this.uid) {
+        this.mode = "db"; this.db = db;
+        const base = "data/users/" + this.uid;
+        db.doc(base + "/prefs").onSnapshot((s) => { if (s.exists) { this.prefs = { crafts: [], ...s.data() }; changed("prefs"); } }, () => {});
+        db.doc(base + "/crm").collection("pipeline").onSnapshot((snap) => {
+          const p = {}; snap.docs.forEach((d) => (p[d.id] = d.data())); this.pipeline = p; changed("pipeline");
+        }, () => {});
+      } else {
+        this.mode = "local";
+        try { const s = JSON.parse(localStorage.getItem(this.key) || "{}"); this.pipeline = s.pipeline || {}; this.prefs = { crafts: [], ...(s.prefs || {}) }; } catch (e) {}
+      }
+      if (db) {
+        db.collection("signals").onSnapshot((snap) => {
+          const m = {}; snap.docs.forEach((d) => (m[d.id] = d.data())); this.dbSignals = m; changed("signals");
+        }, () => {});
+      }
+      changed("store");
+    },
+    saveLocal() { try { localStorage.setItem(this.key, JSON.stringify({ pipeline: this.pipeline, prefs: this.prefs })); } catch (e) {} },
+    serial(path, fn) { const prev = this.chains[path] || Promise.resolve(); const next = prev.then(fn, fn); this.chains[path] = next.catch(() => {}); return next; },
+    async write(path, body) {
+      if (this.readOnly) return false;
+      if (this.mode !== "db") { this.saveLocal(); return true; }
+      try {
+        await this.serial(path, () => (body ? this.db.doc(path).set(body) : this.db.doc(path).delete()));
+        return true;
+      } catch (e) {
+        if (e && e.code === "invalid_argument") { this.readOnly = true; changed("store"); toast(t("t.ro")); }
+        else toast(t("t.saveerr"));
+        return false;
+      }
+    },
+    entry(id) { return this.pipeline[id]; },
+    async setEntry(id, patch) {
+      const cur = this.pipeline[id] || { org_id: id, stage: "watch", added: isoDay(new Date()) };
+      const next = { ...cur, ...patch, org_id: id, updated_at: new Date().toISOString(), v: 1 };
+      Object.keys(next).forEach((k) => next[k] === null && delete next[k]);
+      this.pipeline = { ...this.pipeline, [id]: next }; changed("pipeline");
+      return this.write("data/users/" + this.uid + "/crm/pipeline/" + id, next);
+    },
+    async removeEntry(id) {
+      const p = { ...this.pipeline }; delete p[id]; this.pipeline = p; changed("pipeline");
+      return this.write("data/users/" + this.uid + "/crm/pipeline/" + id, null);
+    },
+    async setCrafts(crafts) { return this.setPrefs({ crafts }); },
+    async setPrefs(patch) {
+      this.prefs = { ...this.prefs, ...patch, v: 1 }; changed("prefs");
+      return this.write("data/users/" + this.uid + "/prefs", this.prefs);
+    },
+    async report(item) {
+      if (this.mode !== "db" || this.readOnly) return false;
+      const ref = this.db.doc("reports/" + this.uid);
+      try {
+        await this.serial(ref.path, async () => {
+          const cur = await ref.get();
+          const items = cur.exists ? [...(cur.data().items || [])] : [];
+          items.push(item);
+          await ref.set({ items: items.slice(-200), v: 1 });
+        });
+        return true;
+      } catch (e) { toast(t("t.reporterr")); return false; }
+    },
+    async hideSignal(sig, hidden) {
+      if (!this.isOwner || this.mode !== "db") return;
+      const body = { ...sig, hidden };
+      this.dbSignals = { ...this.dbSignals, [sig.id]: body }; changed("signals");
+      await this.write("signals/" + sig.id, body);
+    },
+  };
+
+  function signals() {
+    const m = {}; BASE_SIGNALS.forEach((s) => (m[s.id] = s));
+    Object.entries(Store.dbSignals).forEach(([id, s]) => (m[id] = { ...(m[id] || {}), ...s, id }));
+    return Object.values(m).filter((s) => s && s.headline).sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  }
+  function signalsFor(o) { return signals().filter((s) => !s.hidden && (s.org_id === o.id || (s.related_ids || []).includes(o.id))); }
+
+  // ---------- view state ----------
+  const state = { tab: "ask", q: "", lens: "brands", sort: "fit", kinds: [], cats: [], inds: [], needs: [], city: "", sigType: "", shown: PAGE };
+  try { Object.assign(state, JSON.parse(localStorage.getItem("landscape-view") || "{}"), { shown: PAGE, tab: "ask" }); } catch (e) {}
+  function saveView() { try { const { shown, ...v } = state; localStorage.setItem("landscape-view", JSON.stringify(v)); } catch (e) {} }
+
+  function changed() {
+    if (!ORGS.length) return;
+    renderNotice(); renderBadges(); renderMine(); renderAskBtn(); renderView();
+    if (!$("sheet").hidden && $("sheet").dataset.id) openOrg($("sheet").dataset.id, true);
+  }
+
+  // ---------- language ----------
+  function applyLang() {
+    document.documentElement.lang = LANG;
+    document.documentElement.dir = LANG === "he" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
+    document.querySelectorAll("[data-i18n-ph]").forEach((el) => (el.placeholder = t(el.dataset.i18nPh)));
+    $("lang").textContent = LANG === "he" ? "English" : "עברית";
+    $("lang").lang = LANG === "he" ? "en" : "he";
+    if (ORGS.length) $("meta").textContent = t("meta", ORGS.length, BASE_SIGNALS.length, new Date(GENERATED).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" }));
+  }
+  function setLang(l) {
+    LANG = l; try { localStorage.setItem("landscape-lang", l); } catch (e) {}
+    applyLang(); changed();
+  }
+
+  // ---------- scoring ----------
+  function myCrafts() { return Store.prefs.crafts || []; }
+  function needHits(o) {
+    const mine = new Set(myCrafts()); if (!mine.size) return [];
+    return o.needs.filter((n) => (NEEDS[n]?.crafts || []).some((c) => mine.has(c)));
+  }
+  function freshSignal(o) { return signalsFor(o).find((s) => daysAgo(s.date) <= 60); }
+  function score(o) {
+    let s = 0;
+    if (GROUP[o.kind] === "buyer" || o.needs.length) {
+      s += needHits(o).length * 3 + (myCrafts().length ? 0 : o.needs.length * .5);
+      if ((o.client_profile?.known_agencies || []).length || REV.agencyOf[o.id]) s += 1;
+      if ((o.key_people || []).some((p) => ["marketing", "production", "creative_lead"].includes(p.role_type))) s += .5;
+    } else {
+      const mine = new Set(myCrafts());
+      s += o.categories.filter((c) => mine.has(c)).length * 2;
+    }
+    if (freshSignal(o)) s += 2.5;
+    if (o.confidence === "high") s += .3;
+    if (Store.entry(o.id)) s += .2;
+    return s;
+  }
+
+  // ---------- explore ----------
+  function matches(o) {
+    const kinds = state.kinds.length ? state.kinds : LENS_KINDS[state.lens];
+    if (kinds && !kinds.includes(o.kind)) {
+      if (!(state.lens === "brands" && !state.kinds.length && o.kind === "startup" && o.needs.length)) return false;
+    }
+    if (state.cats.length && !state.cats.some((c) => o.categories.includes(c))) return false;
+    if (state.inds.length && !state.inds.some((c) => o.categories.includes(c))) return false;
+    if (state.needs.length && !state.needs.some((n) => o.needs.includes(n))) return false;
+    if (state.city && (o.location.city || "—") !== state.city) return false;
+    if (state.q) { for (const w of state.q.toLowerCase().split(/\s+/).filter(Boolean)) if (!o._text.includes(w)) return false; }
+    return true;
+  }
+  function initials(name) {
+    const w = name.replace(/[^\p{L}\p{N} &]/gu, " ").split(/\s+/).filter((x) => x && !/^(the|&|and|of)$/i.test(x));
+    return ((w[0] || "?")[0] + (w[1] ? w[1][0] : (w[0] || "")[1] || "")).toUpperCase();
+  }
+  function logo(o, size = "") {
+    const src = LOGOS[o.id];
+    return src ? `<span class="logo ${size}"><img src="${esc(src)}" alt="" loading="lazy"></span>`
+      : `<span class="logo mono ${size}" aria-hidden="true">${esc(initials(o.name))}</span>`;
+  }
+  function gstyle(o) { return `--g:var(--g-${GROUP[o.kind] || "maker"})`; }
+  function kindLine(o) {
+    return `<div class="kind">${kindOne(o.kind)} <span class="where">· ${esc(cityName(o.location.city) || o.location.country)}${o.size ? ` · <span dir="ltr">${esc(o.size)}</span>` : ""}${o.status && o.status !== "active" ? " · " + esc(t("status." + o.status)) : ""}</span></div>`;
+  }
+  function names(o) {
+    // primary name in the UI language, the other one beneath it
+    const main = orgName(o), alt = main === o.name ? o.name_he : o.name;
+    return { main, alt: alt && alt !== main ? alt : "" };
+  }
+  function agencyOf(o) {
+    const a = (o.client_profile?.known_agencies || [])[0];
+    if (a) return a.replace(/\s*\(.*?\)\s*/g, " ").trim();
+    const r = (o.relations || []).find((r) => r.type === "agency");
+    return r ? (BY_ID[r.target_id]?.name || r.target) : "";
+  }
+  function card(o) {
+    const buyer = GROUP[o.kind] === "buyer" || (o.kind === "startup" && o.needs.length);
+    const e = Store.entry(o.id);
+    const sig = freshSignal(o);
+    const hits = new Set(needHits(o));
+    const nm = names(o);
+    let body = "";
+    if (buyer && o.needs.length) {
+      const needs = [...o.needs].sort((a, b) => hits.has(b) - hits.has(a)).slice(0, 4);
+      body += `<p class="line"><span class="k">${t("card.buys")}</span>${needs.map((n) => hits.has(n) ? `<b class="fit">${esc(needLabel(n))}</b>` : esc(needLabel(n))).join(" · ")}</p>`;
+      const ag = agencyOf(o);
+      if (ag && o.kind !== "agency") body += `<p class="line"><span class="k">${t("card.via")}</span><bdi>${esc(ag)}</bdi></p>`;
+    } else if (o.kind === "agency" && (o.notable_clients || []).length) {
+      body += `<p class="line"><span class="k">${t("card.clients")}</span><bdi>${esc(o.notable_clients.slice(0, 3).join(" · "))}</bdi></p>`;
+    } else {
+      body += `<p dir="auto">${esc(orgDesc(o))}</p>`;
+      const shown = o.categories.filter((c) => GROUP[o.kind] !== "maker" || CRAFTS.includes(c)).slice(0, 3);
+      if (shown.length) body += `<div>${shown.map((c) => `<span class="tag${myCrafts().includes(c) ? " hit" : ""}">${esc(catLabel(c))}</span>`).join("")}</div>`;
+    }
+    if (sig) body += `<div class="nowline"><span class="t">${esc(sigType(sig.type))}</span><span dir="auto">${esc(trim(sigHead(sig), 90))} <span class="mono muted">${ago(sig.date)}</span></span></div>`;
+    return `<button class="card" type="button" data-id="${o.id}" style="${gstyle(o)}">
+      <div class="top">${logo(o)}<div class="nm"><h3><bdi>${esc(nm.main)}</bdi></h3>${nm.alt ? `<bdi class="alt" dir="auto">${esc(nm.alt)}</bdi>` : ""}${kindLine(o)}</div>
+      ${e ? `<span class="stage">★ ${esc(stageLabel(e.stage) || t("st.saved"))}</span>` : ""}</div>${body}</button>`;
+  }
+
+  function renderMine() {
+    const mine = myCrafts();
+    $("mine").innerHTML = `<span class="chip label">${t("mine.label")}</span>` +
+      mine.map((c) => `<button class="chip" type="button" data-rmcraft="${c}" aria-label="${esc(t("mine.remove", catLabel(c)))}">${esc(catLabel(c))} <span class="x">✕</span></button>`).join("") +
+      `<button class="chip add" type="button" data-crafts>${mine.length ? t("mine.edit") : t("mine.pick")}</button>`;
+  }
+  function renderAskBtn() { $("askBtn").hidden = false; }
+
+  function renderExplore() {
+    document.querySelectorAll("#lens button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lens === state.lens));
+    if ($("q").value.trim() !== state.q) $("q").value = state.q;
+    $("sort").value = state.sort;
+    const nf = state.kinds.length + state.cats.length + state.inds.length + state.needs.length + (state.city ? 1 : 0);
+    $("fcount").hidden = !nf; $("fcount").textContent = nf;
+    const act = [
+      ...state.kinds.map((k) => ["kinds", k, kindMany(k)]), ...state.needs.map((k) => ["needs", k, needLabel(k)]),
+      ...state.cats.map((k) => ["cats", k, catLabel(k)]), ...state.inds.map((k) => ["inds", k, catLabel(k)]),
+      ...(state.city ? [["city", state.city, cityName(state.city)]] : []),
+    ];
+    $("active").hidden = !act.length;
+    $("active").innerHTML = act.map(([f, v, l]) => `<button class="chip" type="button" data-unf="${f}" data-v="${esc(v)}">${esc(l)} <span class="x">✕</span></button>`).join("") +
+      (act.length ? `<button class="chip add" type="button" data-unf="all">${t("clearAll")}</button>` : "");
+    const list = ORGS.filter(matches);
+    if (state.sort === "fit") list.forEach((o) => (o._s = score(o)));
+    const by = {
+      fit: (a, b) => b._s - a._s || a.name.localeCompare(b.name),
+      name: (a, b) => orgName(a).localeCompare(orgName(b), locale()),
+      size: (a, b) => (SIZE_RANK[b.size] || 0) - (SIZE_RANK[a.size] || 0) || a.name.localeCompare(b.name),
+      founded: (a, b) => (b.founded || 0) - (a.founded || 0),
+    }[state.sort];
+    list.sort(by);
+    $("count").textContent = list.length === 1 ? t("count1") : t("count", list.length);
+    $("empty").hidden = list.length > 0;
+    $("grid").innerHTML = list.slice(0, state.shown).map(card).join("");
+    $("moreWrap").hidden = list.length <= state.shown;
+  }
+
+  // ---------- filters & crafts panels ----------
+  function chipset(field, keys, label) {
+    return `<div class="chipset">${keys.map((k) => `<button class="chip" type="button" data-f="${field}" data-v="${esc(k)}" aria-pressed="${state[field].includes(k)}">${esc(label(k))}</button>`).join("")}</div>`;
+  }
+  function closeBtn() { return `<button class="close" type="button" aria-label="${t("close")}">×</button>`; }
+  function openFilters() {
+    const used = (facet) => (TAX.facets?.[facet] || []).filter((c) => ORGS.some((o) => o.categories.includes(c)));
+    const cities = {}; ORGS.forEach((o) => { const c = o.location.city; if (c) cities[c] = (cities[c] || 0) + 1; });
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${t("fl.title")}</h2>
+      <div class="filtersec"><h4>${t("fl.type")}</h4>${chipset("kinds", KINDS, kindMany)}</div>
+      <div class="filtersec"><h4>${t("fl.needs")}</h4>${chipset("needs", Object.keys(NEEDS), needLabel)}</div>
+      <div class="filtersec"><h4>${t("fl.craft")}</h4>${chipset("cats", used("craft"), catLabel)}</div>
+      <div class="filtersec"><h4>${t("fl.industry")}</h4>${chipset("inds", used("industry"), catLabel)}</div>
+      <div class="filtersec"><h4>${t("fl.product")}</h4>${chipset("cats", used("product"), catLabel)}</div>
+      <div class="filtersec"><h4>${t("fl.city")}</h4><select class="btn" id="fcity" aria-label="${t("fl.city")}"><option value="">${t("fl.anycity")}</option>${Object.entries(cities).sort((a, b) => b[1] - a[1]).map(([c, n]) => `<option value="${esc(c)}"${state.city === c ? " selected" : ""}>${esc(cityName(c))} (${n})</option>`).join("")}</select></div>
+      <div class="sheetfoot"><button class="btn ghost" type="button" data-unf="all">${t("clearAll")}</button><button class="btn primary" type="button" data-done>${t("fl.show")}</button></div>`;
+    showPanel();
+    $("fcity").addEventListener("change", (e) => { state.city = e.target.value; refresh(); });
+  }
+  function openCrafts() {
+    const mine = myCrafts();
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${t("cr.title")}</h2>
+      <p class="muted" style="margin:6px 0 0">${t("cr.p")}</p>
+      <div class="filtersec"><div class="chipset">${CRAFTS.map((c) => `<button class="chip" type="button" data-craft="${c}" aria-pressed="${mine.includes(c)}">${esc(catLabel(c))}</button>`).join("")}</div></div>
+      <div class="sheetfoot"><button class="btn primary" type="button" data-done>${t("done")}</button></div>`;
+    showPanel();
+  }
+  function showPanel(back) { if (back) $("panel").dataset.back = back; else delete $("panel").dataset.back; $("sheet").hidden = true; $("panel").hidden = false; $("scrim").hidden = false; $("panel").scrollTop = 0; $("panel").querySelector(".close").focus({ preventScroll: true }); }
+
+  // ---------- detail sheet ----------
+  function orgChip(x) { return `<button type="button" data-id="${x.id}" style="${gstyle(x)}">${logo(x, "sm")}<bdi>${esc(orgName(x))}</bdi></button>`; }
+  function waysIn(o) {
+    const groups = [];
+    const seen = new Set([o.id]);
+    const take = (arr) => arr.filter((x) => x && !seen.has(x.id) && seen.add(x.id));
+    const items = (orgs) => orgs.map(orgChip).join("");
+    const plain = (ns) => ns.map((n) => `<span class="plain"><bdi>${esc(n)}</bdi></span>`).join("");
+    const split = (ns) => { const inMap = [], out = []; ns.forEach((n) => { const x = lookup(n); x && x.id !== o.id ? inMap.push(x) : out.push(n); }); return [inMap, out]; };
+    const agNames = [...(o.client_profile?.known_agencies || []), ...(o.relations || []).filter((r) => r.type === "agency").map((r) => r.target_id || r.target)];
+    if (agNames.length) { const [m, p] = split([...new Set(agNames)]); const mm = take(m); if (mm.length || p.length) groups.push([t("ways.agency"), items(mm) + plain(p)]); }
+    const worked = take([...(REV.clientOf[o.id] || []), ...(REV.rel[o.id] || []).filter((r) => r.type === "client").map((r) => r.org)]);
+    if (worked.length) groups.push([t("ways.worked"), items(worked)]);
+    const agencyClients = take([...(REV.agencyOf[o.id] || []), ...(REV.rel[o.id] || []).filter((r) => r.type === "agency").map((r) => r.org)]);
+    if (agencyClients.length) groups.push([t("ways.users"), items(agencyClients)]);
+    const clientNames = [...(o.notable_clients || []), ...(o.relations || []).filter((r) => r.type === "client").map((r) => r.target_id || r.target)];
+    if (clientNames.length) { const [m, p] = split([...new Set(clientNames)]); const mm = take(m); if (mm.length || p.length) groups.push([t("ways.clients"), items(mm) + plain(p.slice(0, 12))]); }
+    const mine = new Set((o.notable_clients || []).map(norm));
+    if (mine.size) {
+      const sh = take(ORGS.filter((x) => x.id !== o.id && !seen.has(x.id) && (x.notable_clients || []).some((c) => mine.has(norm(c))))).slice(0, 10);
+      if (sh.length) groups.push([t("ways.shares"), items(sh)]);
+    }
+    const famTypes = ["parent", "subsidiary", "acquired", "acquired_by", "partner", "spun_off_from", "investor"];
+    const fam = (o.relations || []).filter((r) => famTypes.includes(r.type));
+    const famRev = (REV.rel[o.id] || []).filter((r) => famTypes.includes(r.type)).map((r) => r.org);
+    if (fam.length || famRev.length) {
+      const [m, p] = split(fam.map((r) => r.target_id || r.target));
+      const mm = take([...m, ...famRev]);
+      if (mm.length || p.length) groups.push([t("ways.group"), items(mm) + plain(p)]);
+    }
+    if ((o.key_people || []).length) groups.push([t("ways.people"), plain(o.key_people.map((p) => `${p.name} · ${p.role}`))]);
+    return groups;
+  }
+
+  function editor(e) {
+    return `<div class="editor" id="editor">
+      <div class="chipset" role="group" aria-label="${t("ed.stage")}">${STAGES.map((k) => `<button class="chip" type="button" data-stage="${k}" aria-pressed="${e.stage === k}">${stageLabel(k)}</button>`).join("")}</div>
+      <label class="muted" for="note" style="font-size:13px">${t("ed.note")}</label>
+      <textarea id="note" dir="auto" placeholder="${esc(t("ed.noteph"))}">${esc(e.note || "")}</textarea>
+      <div class="row"><span class="muted" style="font-size:13px">${t("ed.follow")}</span>
+        ${[1, 7, 30].map((n) => `<button class="chip" type="button" data-quick="${n}">${t("q." + n)}</button>`).join("")}
+        <input type="date" id="next" value="${esc(e.next_date || "")}" aria-label="${t("ed.date")}">
+        ${e.next_date ? `<button class="btn ghost" type="button" data-clear-date>${t("ed.clear")}</button>` : ""}
+      </div>
+      <div class="row" style="justify-content:space-between"><span class="saved">${e.updated_at ? t("ed.saved", ago(e.updated_at.slice(0, 10))) : ""}${Store.mode === "local" ? t("ed.device") : ""}</span>
+        <button class="btn ghost" type="button" data-remove>${t("ed.remove")}</button></div>
+    </div>`;
+  }
+
+  function openOrg(id, keepScroll) {
+    const o = BY_ID[id]; if (!o) return;
+    const sh = $("sheet"); const scroll = sh.scrollTop;
+    const noteEl = $("note");
+    if (keepScroll && noteEl && document.activeElement === noteEl) return; // don't re-render under the cursor
+    const e = Store.entry(o.id);
+    const sigs = signalsFor(o);
+    const hits = new Set(needHits(o));
+    const buyer = GROUP[o.kind] === "buyer" || o.needs.length;
+    const nm = names(o);
+    const facts = [[t("f.founded"), o.founded], [t("f.size"), o.size && t("f.people", "\u2066" + o.size + "\u2069")], [t("f.status"), o.status !== "active" ? t("status." + o.status) : ""],
+      [t("f.funding"), o.funding && [o.funding.public ? `${t("f.public")}${o.funding.ticker ? " (" + o.funding.ticker + ")" : ""}` : o.funding.stage, o.funding.total_usd_m ? t("f.raised", o.funding.total_usd_m) : ""].filter(Boolean).join(" · ")],
+      [t("f.offices"), (o.location.other_offices || []).join(", ")], [t("f.industry"), o.client_profile?.industry]].filter(([, v]) => v);
+    const links = [o.reel_url && [t("l.reel"), o.reel_url], o.careers_url && [t("l.careers"), o.careers_url], o.contact_url && [t("l.contact"), o.contact_url],
+      ...Object.entries(o.links || {}).map(([k, v]) => [LINK_LABEL[k] || k, v])].filter(Boolean);
+    const ways = waysIn(o);
+    sh.dataset.id = o.id;
+    sh.innerHTML = `${closeBtn()}
+      <div class="ident" style="${gstyle(o)}">${logo(o, "lg")}<div>${kindLine(o)}<h2 id="d-name"><bdi>${esc(nm.main)}</bdi></h2>${nm.alt ? `<bdi class="alt" dir="auto">${esc(nm.alt)}</bdi>` : ""}</div></div>
+      <div class="actions">
+        ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">★ ${esc(stageLabel(e.stage))}${e.next_date ? esc(t("sh.followup", fmtDate(e.next_date))) : ""}</button>`
+            : `<button class="btn primary" type="button" data-save ${Store.readOnly ? "disabled" : ""}>${t("sh.save")}</button>`}
+        ${Store.sample && Store.mode === "db" ? `<button class="btn" type="button" data-pitch>${t("sh.pitch")}</button>` : ""}
+        ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">${t("sh.website")}</a>` : ""}
+      </div>
+      ${e ? editor(e) : ""}
+      ${e && e.draft ? `<section><h4>${t("sh.draft")}</h4><p style="white-space:pre-wrap;font-size:14px;margin-top:0" dir="auto">${esc(e.draft)}</p></section>` : ""}
+      ${sigs.length ? `<section><h4>${t("sh.whynow")}</h4><div class="feed">${sigs.slice(0, 4).map((s) => sigCard(s, true)).join("")}</div></section>` : ""}
+      ${buyer && (o.needs.length || o.client_profile?.creative_needs?.length) ? `<section><h4>${t("sh.buy")}</h4>
+        <div>${o.needs.map((n) => `<span class="tag${hits.has(n) ? " hit" : ""}">${hits.has(n) ? "✓ " : ""}${esc(needLabel(n))}</span>`).join("")}</div>
+        ${LANG !== "he" && o.client_profile?.creative_needs?.length ? `<p class="muted" style="font-size:13px" dir="auto">${esc(o.client_profile.creative_needs.join(" · "))}</p>` : ""}
+        ${!myCrafts().length ? `<p style="font-size:13px"><button class="btn ghost" type="button" data-crafts>${t("sh.pickcrafts")}</button>${t("sh.pickcrafts2")}</p>` : ""}
+        ${o.client_profile?.in_house_studio ? `<p style="font-size:13px">${t("sh.inhouse")}</p>` : ""}</section>` : ""}
+      ${ways.length ? `<section><h4>${t("sh.ways")}</h4><div class="ways">${ways.map(([h, x]) => `<div class="grp"><span>${h}</span><div class="items">${x}</div></div>`).join("")}</div></section>` : ""}
+      <section><h4>${t("sh.about")}</h4><p style="margin-top:0" dir="auto">${esc(orgDesc(o))}</p>
+        ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
+        ${facts.length ? `<dl class="facts" style="margin-top:10px">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
+        <div style="margin-top:10px">${o.categories.map((c) => `<span class="tag">${esc(catLabel(c))}</span>`).join("")}</div>
+      </section>
+      ${(o.services?.length || o.notable_work?.length || o.funding?.investors?.length) ? `<section><details><summary>${t("sh.work")}</summary>
+        ${o.services?.length ? `<h4>${t("sh.services")}</h4><ul class="plain" dir="auto">${o.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+        ${o.notable_work?.length ? `<h4 style="margin-top:10px">${t("sh.notable")}</h4><ul class="plain" dir="auto">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
+        ${o.funding?.investors?.length ? `<h4 style="margin-top:10px">${t("sh.investors")}</h4><p style="margin:0;font-size:14px">${esc(o.funding.investors.join(", "))}</p>` : ""}
+      </details></section>` : ""}
+      ${links.length ? `<section><h4>${t("sh.links")}</h4><div class="chipset">${links.map(([l, u]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ↗</a>`).join("")}</div></section>` : ""}
+      <section><details><summary>${esc(t("sh.sources", t("conf." + o.confidence), fmtDate(o.last_verified)))}</summary>
+        <div class="sources" dir="ltr">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></details>
+        ${Store.mode === "db" && !Store.readOnly ? `<button class="btn ghost" type="button" data-report style="margin-top:6px">${t("sh.report")}</button>` : ""}</section>`;
+    if (sh.hidden) { $("panel").hidden = true; sh.hidden = false; $("scrim").hidden = false; sh.scrollTop = 0; sh.querySelector(".close").focus({ preventScroll: true }); }
+    else sh.scrollTop = keepScroll ? scroll : 0;
+    try { history.replaceState(null, "", "#" + o.id); } catch (err) {}
+  }
+  let aiCtl = null;
+  function closeAll() {
+    if (aiCtl) { aiCtl.abort(); aiCtl = null; }
+    $("sheet").hidden = true; $("panel").hidden = true; $("scrim").hidden = true; delete $("sheet").dataset.id;
+    try { history.replaceState(null, "", location.pathname + location.search + (state.tab !== "ask" ? "#" + state.tab : "")); } catch (e) {}
+  }
+  const errText = (e) => (e && e.code === "cancelled" ? "" : (e && I18N.en["err." + e.code] ? t("err." + e.code) : t("p.fail")));
+
+  // ---------- pitch draft (drafts only, never sends) ----------
+  function pitchPeople(o) {
+    const ppl = (o.key_people || []).map((p) => ({ v: `${p.name} (${p.role})`, l: `${p.name} · ${p.role}`, pri: ["marketing", "production", "creative_lead"].includes(p.role_type) ? 0 : /market|brand|produc|creative|content|שיווק|הפקה|קריאייטיב/i.test(p.role) ? 1 : 2 }));
+    ppl.sort((a, b) => a.pri - b.pri);
+    const ag = agencyOf(o);
+    const out = ppl.filter((p) => p.pri < 2).map((p) => [p.v, p.l]);
+    if (ag && o.kind !== "agency") out.push([`their agency, ${ag}`, t("p.viaag", ag)]);
+    out.push(["", t("p.general")]);
+    return [...out, ...ppl.filter((p) => p.pri === 2).map((p) => [p.v, p.l])];
+  }
+  function openPitch(o) {
+    const sigs = signalsFor(o).slice(0, 6);
+    const samples = Store.prefs.samples || [];
+    const opt = (v, l, sel) => `<option value="${esc(v)}"${sel ? " selected" : ""}>${esc(l)}</option>`;
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${esc(t("p.title", orgName(o)))}</h2>
+      <p class="muted" style="margin:6px 0 0;font-size:13px">${t("p.sub")}</p>
+      <div class="filtersec"><h4>${t("p.why")}</h4>
+        <select class="btn" id="pWhy" aria-label="${t("p.why")}">${sigs.map((s, i) => opt("sig:" + s.id, `${sigType(s.type)} · ${trim(sigHead(s), 70)}`, i === 0)).join("")}${opt("other", t("p.other"), !sigs.length)}</select>
+        <textarea id="pWhyText" class="field" dir="auto" placeholder="${esc(t("p.whyph"))}" ${sigs.length ? "hidden" : ""} style="min-height:54px"></textarea></div>
+      <div class="filtersec"><h4>${t("p.who")}</h4><select class="btn" id="pWho" aria-label="${t("p.who")}">${pitchPeople(o).map(([v, l], i) => opt(v, l, i === 0)).join("")}</select></div>
+      <div class="filtersec"><h4>${t("p.me")}</h4><input id="pMe" class="btn" dir="auto" value="${esc(Store.prefs.me || "")}" placeholder="${esc(t("p.meph"))}"></div>
+      <div class="filtersec"><h4>${t("p.show")}</h4>
+        <select class="btn" id="pShow" aria-label="${t("p.show")}">${samples.map((w, i) => opt(String(i), w.title, i === 0)).join("")}${opt("new", t("p.addsample"), !samples.length)}</select>
+        <div class="row" id="pNew" ${samples.length ? "hidden" : ""}><input id="pNewTitle" class="btn" style="flex:1 1 160px" dir="auto" placeholder="${esc(t("p.titleph"))}"><input id="pNewUrl" class="btn" style="flex:1 1 160px" type="url" dir="ltr" placeholder="${esc(t("p.urlph"))}"></div></div>
+      <div class="filtersec"><h4>${t("p.lang")}</h4><div class="seg" id="pLang"><button type="button" data-plang="English" aria-pressed="${LANG !== "he"}">English</button><button type="button" data-plang="Hebrew" aria-pressed="${LANG === "he"}">עברית</button></div></div>
+      <div class="filtersec"><button class="btn primary" type="button" id="pGo">${t("p.go")}</button><span class="muted" id="pStatus" style="font-size:13px"></span></div>
+      <div class="filtersec" id="pOut" hidden><h4>${t("p.draft")}</h4><textarea id="pText" class="field" dir="auto" style="min-height:220px"></textarea>
+        <div class="row"><button class="btn" type="button" id="pCopy">${t("copy")}</button><button class="btn primary" type="button" id="pSave">${t("p.save")}</button></div></div>`;
+    showPanel(o.id);
+    $("pWhy").addEventListener("change", (e) => ($("pWhyText").hidden = e.target.value !== "other"));
+    $("pShow").addEventListener("change", (e) => ($("pNew").hidden = e.target.value !== "new"));
+    $("pLang").addEventListener("click", (e) => { const b = e.target.closest("[data-plang]"); if (!b) return; $("pLang").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b)); });
+    $("pGo").addEventListener("click", () => runPitch(o, sigs));
+    $("pCopy").addEventListener("click", () => copyText($("pText")));
+    $("pSave").addEventListener("click", async () => {
+      const n = new Date(); n.setDate(n.getDate() + 7);
+      const cur = Store.entry(o.id);
+      await Store.setEntry(o.id, { draft: $("pText").value.trim(), stage: cur && cur.stage !== "watch" ? cur.stage : "to_pitch", next_date: isoDay(n) });
+      toast(t("t.draftsaved")); closeAll(); openOrg(o.id);
+    });
+  }
+  function copyText(el) {
+    const fallback = () => { el.focus(); el.select(); toast(t("selected")); };
+    try { navigator.clipboard.writeText(el.value).then(() => toast(t("copied")), fallback); } catch (e) { fallback(); }
+  }
+  async function runPitch(o, sigs) {
+    const whySel = $("pWhy").value;
+    const sig = whySel.startsWith("sig:") ? sigs.find((s) => "sig:" + s.id === whySel) : null;
+    const why = sig ? `${sig.headline} (${sig.source}, ${sig.date}). Context: ${sig.why}` : $("pWhyText").value.trim();
+    const me = $("pMe").value.trim();
+    let sample = null;
+    if ($("pShow").value === "new") {
+      const title = $("pNewTitle").value.trim(), url = $("pNewUrl").value.trim();
+      if (title) { sample = { title, url }; await Store.setPrefs({ samples: [...(Store.prefs.samples || []), sample] }); }
+    } else sample = (Store.prefs.samples || [])[Number($("pShow").value)];
+    if (!why) { $("pStatus").textContent = t("p.needwhy"); return; }
+    if (!sample) { $("pStatus").textContent = t("p.needsample"); return; }
+    if (me !== (Store.prefs.me || "")) Store.setPrefs({ me });
+    const lang = $("pLang").querySelector('[aria-pressed="true"]').dataset.plang;
+    const who = $("pWho").value;
+    const facts = {
+      company: o.name, company_he: o.name_he, kind: I18N.en["k1." + o.kind], city: o.location.city, about: o.description, about_he: o.description_he,
+      buys: o.needs.map((n) => NEEDS[n]?.label), creative_needs: o.client_profile?.creative_needs, agency: agencyOf(o) || undefined,
+      notable_clients: (o.notable_clients || []).slice(0, 6),
+    };
+    const prompt = `You draft ONE short outreach message from an independent creative professional to a company in Israel's creative industry. The sender will edit and send it themselves.
+
+Write in ${lang}${lang === "Hebrew" ? " (natural, direct Israeli business Hebrew; informal-professional, not stiff; use the company's Hebrew name if given)" : ""}.
+Format exactly:
+Subject: <short, specific subject>
+
+<message body>
+
+Body rules:
+- 70–120 words. Plain text, no markdown, no emojis.
+- Open with the reason to write now, as an observation (1 sentence).
+- Then who the sender is and the ONE work sample, with its link if given (1–2 sentences). Connect the sample to what the company buys.
+- ${who ? `Address it to: ${who}. If this is an agency, write to them as the people who commission production for their client.` : "No named recipient: use a neutral greeting."}
+- End with one light, concrete ask (e.g. a 15-minute call or "happy to send a few more references"). No pressure.
+- Use ONLY the facts below. Never invent results, numbers, mutual contacts, past work for this company, or details about the recipient.
+- No hype words ("cutting-edge", "AI-powered", "passionate", "synergy"), no flattery.
+Output only the subject line and the body.${lang === "Hebrew" ? ' Write "Subject:" as "נושא:".' : ""}
+
+FACTS
+Why now: ${why}
+Sender: ${me || "(not given — keep the self-introduction generic)"}
+Work sample: ${sample.title}${sample.url ? " — " + sample.url : ""}
+Company: ${JSON.stringify(facts)}`;
+    aiCtl?.abort();
+    aiCtl = new AbortController();
+    $("pGo").disabled = true; $("pStatus").textContent = t("p.writing"); $("pOut").hidden = false; $("pText").value = "";
+    try {
+      await Store.sample(prompt, { modelTier: "default", cache: false, signal: aiCtl.signal, onText: ({ text }) => { $("pText").value = text; } });
+      $("pStatus").textContent = t("p.done");
+    } catch (e) {
+      if (e && e.text && $("pText")) $("pText").value = e.text;
+      if ($("pStatus")) $("pStatus").textContent = errText(e);
+    } finally { if ($("pGo")) $("pGo").disabled = false; }
+  }
+
+  // ---------- ask the map ----------
+  function compactOrg(o) {
+    return { id: o.id, name: o.name, name_he: o.name_he, kind: o.kind, city: o.location.city, needs: o.needs.length ? o.needs : undefined,
+      crafts: o.categories.filter((c) => CRAFTS.includes(c)), agency: agencyOf(o) || undefined };
+  }
+  function mapIndex() {
+    // one line per org: id|kind|city|needs|crafts — small enough to send with every question
+    return ORGS.map((o) => [o.id, o.kind, o.location.city || "", o.needs.join(","), o.categories.filter((c) => CRAFTS.includes(c)).slice(0, 4).join(",")].join("|")).join("\n");
+  }
+  const ASK_TOOLS = [
+    { name: "search_orgs", description: "Search the map. Filters are optional and combine with AND. Returns up to `limit` orgs (id, name, kind, city, needs, crafts, agency).",
+      inputSchema: { type: "object", properties: { text: { type: "string", description: "Words to match in names, descriptions, clients, people, notes" }, kind: { type: "string", enum: KINDS }, need: { type: "string", description: "A 'needs' key such as animation, 3d-cgi, social-video" }, craft: { type: "string", description: "A craft category key such as motion-design, vfx" }, city: { type: "string" }, limit: { type: "number" } } },
+      execute(inp) {
+        const words = String(inp.text || "").toLowerCase().split(/\s+/).filter(Boolean);
+        const res = ORGS.filter((o) => (!inp.kind || o.kind === inp.kind) && (!inp.need || o.needs.includes(String(inp.need))) && (!inp.craft || o.categories.includes(String(inp.craft)))
+          && (!inp.city || String(o.location.city || "").toLowerCase() === String(inp.city).toLowerCase()) && words.every((w) => o._text.includes(w)));
+        return res.slice(0, Math.min(Number(inp.limit) || 25, 60)).map(compactOrg);
+      } },
+    { name: "get_org", description: "Full details for one org id: description, what it buys, agencies, public people with roles, clients, relations (who worked with whom), recent signals.",
+      inputSchema: { type: "object", properties: { id: { type: "string" } }, required: ["id"] },
+      execute(inp) {
+        const o = BY_ID[String(inp.id)]; if (!o) throw new Error("No org with that id");
+        return { ...compactOrg(o), description: o.description, description_he: o.description_he, size: o.size, website: o.website, creative_needs: o.client_profile?.creative_needs, known_agencies: o.client_profile?.known_agencies,
+          people: (o.key_people || []).map((p) => ({ name: p.name, role: p.role, role_type: p.role_type, as_of: p.as_of })),
+          notable_clients: (o.notable_clients || []).slice(0, 15), notable_work: (o.notable_work || []).slice(0, 8),
+          relations: (o.relations || []).slice(0, 25).map((r) => ({ type: r.type, target: r.target_id || r.target, note: r.note })),
+          worked_for_them: (REV.clientOf[o.id] || []).concat((REV.rel[o.id] || []).filter((r) => r.type === "client").map((r) => r.org)).slice(0, 15).map((x) => x.id),
+          signals: signalsFor(o).slice(0, 5).map((s) => ({ type: s.type, date: s.date, headline: s.headline })) };
+      } },
+    { name: "recent_signals", description: "Recent signals (funding, agency moves, new marketing heads, campaigns with credits, hiring…), newest first.",
+      inputSchema: { type: "object", properties: { type: { type: "string", enum: ["funding", "acquisition", "agency_move", "ownership", "rebrand", "new_exec", "campaign", "launch", "hiring", "award", "closure"] }, days: { type: "number" } } },
+      execute(inp) {
+        const days = Number(inp.days) || 60;
+        return signals().filter((s) => !s.hidden && daysAgo(s.date) <= days && (!inp.type || s.type === inp.type)).slice(0, 30)
+          .map((s) => ({ type: s.type, org_id: s.org_id, org_name: s.org_name, related_ids: s.related_ids, date: s.date, headline: s.headline, credits: s.credits }));
+      } },
+    { name: "my_pipeline", description: "The viewer's own saved companies with stage and follow-up date.",
+      execute() { return Object.values(Store.pipeline).map((e) => ({ org_id: e.org_id, stage: e.stage, next_date: e.next_date, note: e.note ? trim(e.note, 120) : undefined })); } },
+  ];
+  // ---------- ask (home) ----------
+  let thread = [];
+  try { thread = JSON.parse(localStorage.getItem("landscape-thread") || "[]").filter((x) => x && x.q && !x.running).slice(0, 6); } catch (e) {}
+  const saveThread = () => { try { localStorage.setItem("landscape-thread", JSON.stringify(thread.slice(0, 6))); } catch (e) {} };
+  let askCtl = null;
+  const aiReady = () => !!(Store.sample && Store.mode === "db");
+
+  function homePrompts() {
+    const crafts = myCrafts();
+    const out = [];
+    if (crafts.length) {
+      const c = crafts[0];
+      const need = Object.keys(NEEDS).find((n) => (NEEDS[n].crafts || []).includes(c));
+      const what = need ? needLabel(need) : catLabel(c);
+      out.push(t("home.p.need", what), t("home.p.agency", what), t("home.p.collab", catLabel(c)));
+    }
+    out.push(t("ask.ex4"), t("ask.ex1"), t("ask.ex2"), t("ask.ex3"));
+    return [...new Set(out)].slice(0, 5);
+  }
+  function rcard(o, why) {
+    const e = Store.entry(o.id);
+    const nm = names(o);
+    const hits = new Set(needHits(o));
+    const buys = o.needs.length ? `<p class="line"><span class="k">${t("card.buys")}</span>${[...o.needs].sort((a, b) => hits.has(b) - hits.has(a)).slice(0, 3).map((n) => hits.has(n) ? `<b class="fit">${esc(needLabel(n))}</b>` : esc(needLabel(n))).join(" · ")}</p>` : "";
+    return `<article class="rcard" style="${gstyle(o)}">
+      <button class="rhead" type="button" data-id="${o.id}">${logo(o)}<span class="nm"><b><bdi>${esc(nm.main)}</bdi></b>${kindLine(o)}</span></button>
+      ${why ? `<p class="rwhy" dir="auto">${esc(why)}</p>` : ""}${buys}
+      <div class="racts">
+        ${e ? `<span class="stage">★ ${esc(stageLabel(e.stage))}</span>` : `<button class="btn" type="button" data-save-org="${o.id}" ${Store.readOnly ? "disabled" : ""}>${t("sig.save")}</button>`}
+        ${aiReady() ? `<button class="btn" type="button" data-pitch-org="${o.id}">${t("r.pitch")}</button>` : ""}
+        <button class="btn ghost" type="button" data-id="${o.id}">${t("r.open")} →</button>
+      </div></article>`;
+  }
+  function renderHome() {
+    $("prompts").innerHTML = thread.length ? "" : homePrompts().map((q) => `<button class="chip" type="button" data-ask="${esc(q)}">${esc(q)}</button>`).join("");
+    $("askNotice").hidden = aiReady() || Store.mode === "loading";
+    $("askNotice").textContent = t("home.offline");
+    $("thread").innerHTML = thread.map((x, i) => `<div class="turn">
+      <div class="q" dir="auto">${esc(x.q)}</div>
+      ${x.running ? `<div class="steps">${(x.steps || []).map((st, j, all) => `<span class="${j === all.length - 1 ? "live" : ""}">${esc(st)}</span>`).join("")}</div>` : ""}
+      ${x.summary ? `<p class="answer" dir="auto">${esc(x.summary)}</p>` : ""}
+      ${x.error ? `<p class="muted">${esc(x.error)}</p>` : ""}
+      ${(x.results || []).length ? `<div class="results">${x.results.filter((r) => BY_ID[r.id]).map((r) => rcard(BY_ID[r.id], r.why)).join("")}</div>` : (!x.running && !x.summary && !x.error ? `<p class="muted">${t("home.nores")}</p>` : "")}
+      ${(x.followups || []).length && i === 0 ? `<div class="prompts">${x.followups.map((q) => `<button class="chip" type="button" data-ask="${esc(q)}">${esc(q)}</button>`).join("")}</div>` : ""}
+    </div>`).join("");
+    const week = signals().filter((s) => !s.hidden).slice(0, 4);
+    $("week").innerHTML = week.length ? `<h3>${t("home.week")}</h3>` + week.map((s) => { const o = s.org_id && BY_ID[s.org_id];
+      return `<button class="wrow" type="button" ${o ? `data-id="${o.id}"` : `data-goto="signals"`}>${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<span class="nm"><span class="ty">${esc(sigType(s.type))} · ${ago(s.date)}</span><b><bdi>${esc(o ? orgName(o) : s.org_name)}</bdi></b><span dir="auto">${esc(sigHead(s))}</span></span></button>`; }).join("") : "";
+  }
+  function localAnswer(q) {
+    // keyword fallback when Claude isn't available: score orgs by word hits
+    const stop = new Set("the a an and or of for to in on at with who which what that this me my i we are is be can could need needs right now work".split(" "));
+    const words = q.toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !stop.has(w));
+    const scored = ORGS.map((o) => {
+      const hitW = words.filter((w) => o._text.includes(w));
+      return { o, s: hitW.length * 2 + (hitW.length ? score(o) * .2 : 0), hitW };
+    }).filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 10);
+    return { results: scored.map((x) => ({ id: x.o.id, why: t("r.match", x.hitW.join(", ")) })), summary: "", followups: [] };
+  }
+  function parseAnswer(text) {
+    const m = text.match(/\{[\s\S]*\}/);
+    if (m) { try { const j = JSON.parse(m[0]); return { summary: String(j.summary || ""), results: (j.results || []).filter((r) => r && BY_ID[r.id]).slice(0, 10), followups: (j.followups || []).slice(0, 3).map(String) }; } catch (e) {} }
+    const ids = [...new Set((text.match(/[a-z0-9]+(?:-[a-z0-9]+)+/g) || []).filter((id) => BY_ID[id]))];
+    return { summary: text.replace(/\{[\s\S]*$/, "").trim(), results: ids.map((id) => ({ id, why: "" })), followups: [] };
+  }
+  async function ask(q) {
+    q = (q || "").trim(); if (!q) return;
+    if (state.tab !== "ask") goTab("ask");
+    $("askQ").value = ""; autosize();
+    const turn = { q, steps: [t("step.start")], running: true };
+    thread.unshift(turn); thread = thread.slice(0, 6);
+    renderHome(); window.scrollTo({ top: 0 });
+    if (!aiReady()) { Object.assign(turn, localAnswer(q), { running: false }); saveThread(); return renderHome(); }
+    const step = (msg) => { turn.steps = [...turn.steps, msg]; renderHome(); };
+    const tools = ASK_TOOLS.map((tool) => ({ ...tool, execute: (inp, ctx) => {
+      if (tool.name === "search_orgs") step(t("step.search", [inp.need && needLabel(String(inp.need)), inp.kind && kindMany(String(inp.kind)), inp.text].filter(Boolean).map((x) => " · " + x).join("")));
+      else if (tool.name === "get_org") step(t("step.org", BY_ID[String(inp.id)] ? orgName(BY_ID[String(inp.id)]) : String(inp.id)));
+      else if (tool.name === "recent_signals") step(t("step.signals"));
+      else if (tool.name === "my_pipeline") step(t("step.pipe"));
+      return tool.execute(inp, ctx);
+    } }));
+    const history = thread.slice(1, 4).filter((x) => x.summary).map((x) => `Q: ${x.q}\nA: ${x.summary} (orgs: ${(x.results || []).map((r) => r.id).join(", ")})`).join("\n\n");
+    const prompt = `You are the search assistant of "Landscape", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands and public bodies that buy creative work). The person is a creative professional looking for clients, collaborators or work.
+${myCrafts().length ? `They make: ${myCrafts().join(", ")}.` : ""}
+
+Rules:
+- Use ONLY the map: the index below and the tools. Call get_org before stating people, agencies, clients or campaigns. Never use outside knowledge; if the map lacks something, say so in the summary.
+- Prefer orgs with a concrete reason now (recent signal, matching need, known agency or commissioning person).
+- Write in ${LANG === "he" ? "Hebrew" : "English"}; company names may keep their usual spelling.
+- Return ONLY this JSON, nothing else:
+{"summary": "<2-3 short sentences that answer directly>", "results": [{"id": "<org id from the map>", "why": "<one specific line: why this org fits — what they buy, a dated signal, their agency or the person who commissions>"}], "followups": ["<short follow-up question>", "<another>", "<another>"]}
+- At most 8 results, best first.
+${history ? `\nEarlier in this conversation:\n${history}\n` : ""}
+Needs keys: ${Object.keys(NEEDS).join(", ")}
+Index (id|kind|city|needs|crafts):
+${mapIndex()}
+
+Question: ${q}`;
+    askCtl?.abort(); askCtl = new AbortController();
+    let wrote = false;
+    try {
+      const r = await Store.sample(prompt, { modelTier: "default", signal: askCtl.signal, tools,
+        onText: ({ text }) => { if (!wrote && text.includes("{")) { wrote = true; step(t("step.write")); } } });
+      Object.assign(turn, parseAnswer(r.text || ""));
+    } catch (e) {
+      Object.assign(turn, e && e.text ? parseAnswer(e.text) : {}, { error: errText(e) });
+      if (!turn.results?.length && !turn.summary) Object.assign(turn, localAnswer(q));
+    }
+    turn.running = false; delete turn.steps;
+    saveThread(); renderHome();
+  }
+  function autosize() { const el = $("askQ"); el.style.height = "auto"; el.style.height = Math.min(el.scrollHeight, 160) + "px"; }
+
+  // ---------- report a mistake ----------
+  function openReport(o) {
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${t("r.title")}</h2>
+      <p class="muted" style="margin:6px 0 0;font-size:13px">${esc(t("r.about", orgName(o)))}</p>
+      <div class="filtersec"><h4>${t("r.what")}</h4><textarea id="rText" class="field" dir="auto" style="min-height:100px" placeholder="${esc(t("r.ph"))}"></textarea></div>
+      <div class="filtersec"><h4>${t("r.src")}</h4><input id="rUrl" class="btn" type="url" dir="ltr" placeholder="${esc(t("r.srcph"))}"></div>
+      <div class="sheetfoot"><button class="btn primary" type="button" id="rSend">${t("r.send")}</button></div>`;
+    showPanel(o.id);
+    $("rSend").addEventListener("click", async () => {
+      const text = $("rText").value.trim(); if (!text) return;
+      const ok = await Store.report({ org_id: o.id, text, url: $("rUrl").value.trim() || undefined, at: new Date().toISOString() });
+      if (ok) { toast(t("t.reportok")); closeAll(); openOrg(o.id); }
+    });
+  }
+
+  // ---------- signals view ----------
+  function sigCard(s, compact) {
+    const o = s.org_id && BY_ID[s.org_id];
+    const old = daysAgo(s.date) > 60;
+    const inPipe = o && Store.entry(o.id);
+    const cr = s.credits ? Object.entries(s.credits).map(([k, v]) => `${t("credit." + k)}: ${v}`).join(" · ") : "";
+    const head = compact ? `<div class="type">${esc(sigType(s.type))}</div>`
+      : `<div class="head">${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<div class="nm"><div class="type">${esc(sigType(s.type))}</div>
+        ${o ? `<button class="org" type="button" data-id="${o.id}"><bdi>${esc(orgName(o))}</bdi></button>` : `<span class="org"><bdi>${esc(s.org_name)}</bdi></span> <span class="muted" style="font-size:12px">${t("sig.notinmap")}</span>`}</div></div>`;
+    return `<article class="sig${old ? " old" : ""}${s.hidden ? " hidden" : ""}">${head}
+      <p class="h" dir="auto">${esc(sigHead(s))}</p>
+      <p class="why" dir="auto">${esc(sigWhy(s))}</p>
+      ${cr ? `<div class="credits" dir="auto">${esc(cr)}</div>` : ""}
+      <div class="foot"><span class="mono">${s.date_approx ? "≈ " : ""}${fmtDate(s.date)}</span>
+        <a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source || t("sig.source"))} ↗</a>
+        <span class="acts">
+          ${!compact && o ? (inPipe ? `<span class="stage">★ ${esc(stageLabel(inPipe.stage))}</span>` : `<button class="btn" type="button" data-save-org="${o.id}" ${Store.readOnly ? "disabled" : ""}>${t("sig.save")}</button>`) : ""}
+          ${Store.isOwner && Store.mode === "db" ? `<button class="btn ghost" type="button" data-hide="${esc(s.id)}">${s.hidden ? t("sig.unhide") : t("sig.hide")}</button>` : ""}
+        </span></div>
+    </article>`;
+  }
+  function renderSignals() {
+    const vis = signals().filter((s) => !s.hidden || Store.isOwner);
+    const counts = {}; vis.forEach((s) => (counts[s.type] = (counts[s.type] || 0) + 1));
+    if (state.sigType && !counts[state.sigType]) state.sigType = "";
+    $("sigTypes").innerHTML = SIG_FILTERS.filter((k) => !k || counts[k]).map((k) =>
+      `<button class="chip" type="button" data-sigtype="${k}" aria-pressed="${state.sigType === k}">${t("sigf." + (k || "all"))}${k ? ` <span class="mono">${counts[k]}</span>` : ""}</button>`).join("");
+    const list = vis.filter((s) => !state.sigType || s.type === state.sigType);
+    $("feed").innerHTML = list.length ? list.map((s) => sigCard(s)).join("") + `<p class="muted" style="font-size:13px;text-align:center">${t("sig.footer")}</p>`
+      : `<div class="empty"><h3>${t("sig.empty.h")}</h3><span>${t("sig.empty.p")}</span></div>`;
+  }
+
+  // ---------- pipeline view ----------
+  function renderPipeline() {
+    const entries = Object.values(Store.pipeline).filter((e) => BY_ID[e.org_id]);
+    const today = isoDay(new Date());
+    const due = entries.filter((e) => e.next_date && e.next_date <= today && e.stage !== "passed").sort((a, b) => a.next_date.localeCompare(b.next_date));
+    $("pipeSummary").textContent = entries.length ? t("pipe.summary", entries.length) + (due.length ? t("pipe.duecount", due.length) : "") : "";
+    $("export").disabled = !entries.length;
+    if (!entries.length) {
+      $("pipe").innerHTML = `<div class="empty"><h3>${t("pipe.empty.h")}</h3><span>${t("pipe.empty.p")}</span>
+        <button class="btn primary" type="button" data-goto="explore">${t("pipe.find")}</button></div>`;
+      return;
+    }
+    const row = (e) => { const o = BY_ID[e.org_id]; return `<button class="prow" type="button" data-id="${o.id}" style="${gstyle(o)}">${logo(o, "sm")}<span class="nm"><b><bdi>${esc(orgName(o))}</bdi></b><span dir="auto">${esc(e.note ? e.note : kindOne(o.kind) + " · " + (cityName(o.location.city) || ""))}</span></span>${e.next_date ? `<span class="due">${e.next_date <= today ? t("pipe.due") : ""}${fmtDate(e.next_date)}</span>` : ""}</button>`; };
+    let h = "";
+    if (due.length) h += `<div><h2>${t("pipe.duenow")} <span class="badge">${due.length}</span></h2><div class="list">${due.map((e) => `<div class="duerow">${row(e)}<div class="acts"><button class="btn" type="button" data-snooze="${e.org_id}">${t("pipe.snooze")}</button><button class="btn" type="button" data-done-follow="${e.org_id}">${t("pipe.done")}</button></div></div>`).join("")}</div></div>`;
+    STAGES.forEach((k) => {
+      const list = entries.filter((e) => e.stage === k && !due.includes(e)).sort((a, b) => String(a.next_date || "9").localeCompare(String(b.next_date || "9")) || String(b.updated_at).localeCompare(String(a.updated_at)));
+      if (list.length) h += `<div><h2>${stageLabel(k)} <span class="mono">${list.length}</span></h2><div class="list">${list.map(row).join("")}</div></div>`;
+    });
+    $("pipe").innerHTML = h;
+  }
+  async function exportData() {
+    const payload = JSON.stringify({ exported: new Date().toISOString(), app: "landscape", v: 1, prefs: Store.prefs, pipeline: Object.values(Store.pipeline) }, null, 2);
+    if (Store.downloads) {
+      try { await Store.downloads.save({ filename: `landscape-pipeline-${isoDay(new Date())}.json`, data: payload }); toast(t("exported")); return; }
+      catch (e) { if (e && e.code === "declined") return; }
+    }
+    $("panel").innerHTML = `${closeBtn()}<h2 style="margin:4px 0 8px;font-size:22px">${t("export.title")}</h2>
+      <p class="muted" style="margin:0 0 8px">${t("export.p")}</p>
+      <textarea class="export" id="exportText" readonly dir="ltr">${esc(payload)}</textarea>
+      <div class="sheetfoot"><button class="btn primary" type="button" id="copyExport">${t("copy")}</button></div>`;
+    showPanel();
+    $("copyExport").addEventListener("click", () => copyText($("exportText")));
+  }
+
+  // ---------- shell ----------
+  function renderNotice() {
+    const n = $("storeNotice");
+    if (Store.readOnly) { n.hidden = false; n.textContent = t("notice.ro"); }
+    else if (Store.mode === "local") { n.hidden = false; n.textContent = t("notice.local"); }
+    else n.hidden = true;
+  }
+  function renderBadges() {
+    const fresh = signals().filter((s) => !s.hidden && daysAgo(s.date) <= 14).length;
+    $("sigBadge").hidden = !fresh; $("sigBadge").textContent = fresh;
+    const today = isoDay(new Date());
+    const due = Object.values(Store.pipeline).filter((e) => e.next_date && e.next_date <= today && e.stage !== "passed").length;
+    $("pipeBadge").hidden = !due; $("pipeBadge").textContent = due;
+  }
+  function renderView() {
+    ["ask", "explore", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = state.tab !== v));
+    document.querySelectorAll("nav.tabbar button").forEach((b) => (b.dataset.tab === state.tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
+    if (state.tab === "ask") renderHome();
+    else if (state.tab === "explore") renderExplore();
+    else if (state.tab === "signals") renderSignals();
+    else renderPipeline();
+  }
+  function refresh() { state.shown = PAGE; saveView(); renderView(); }
+  function goTab(v) { state.tab = v; saveView(); renderView(); window.scrollTo(0, 0); try { history.replaceState(null, "", v === "ask" ? location.pathname + location.search : "#" + v); } catch (e) {} }
+
+  // ---------- events ----------
+  let qT;
+  $("q").addEventListener("input", (e) => { clearTimeout(qT); qT = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 120); });
+  $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && /\?|\s\S+\s\S+\s/.test(e.target.value)) { e.preventDefault(); ask(e.target.value.trim()); } });
+  $("askBtn").addEventListener("click", (e) => { e.preventDefault(); ask($("q").value.trim()); });
+  $("askForm").addEventListener("submit", (e) => { e.preventDefault(); ask($("askQ").value); });
+  $("askQ").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask($("askQ").value); } });
+  $("askQ").addEventListener("input", autosize);
+  $("lang").addEventListener("click", () => setLang(LANG === "he" ? "en" : "he"));
+  $("lens").addEventListener("click", (e) => { const b = e.target.closest("[data-lens]"); if (b) { state.lens = b.dataset.lens; state.kinds = []; refresh(); } });
+  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; refresh(); });
+  $("openFilters").addEventListener("click", openFilters);
+  $("more").addEventListener("click", () => { state.shown += PAGE; renderExplore(); });
+  $("clearAll").addEventListener("click", () => { Object.assign(state, { q: "", kinds: [], cats: [], inds: [], needs: [], city: "" }); $("q").value = ""; refresh(); });
+  $("export").addEventListener("click", exportData);
+  document.querySelector("nav.tabbar").addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { closeAll(); goTab(b.dataset.tab); } });
+  const dismiss = () => { const wasPanel = !$("panel").hidden; const back = wasPanel && $("panel").dataset.back; closeAll(); if (back) return openOrg(back); if (wasPanel) refresh(); };
+  $("scrim").addEventListener("click", dismiss);
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !($("sheet").hidden && $("panel").hidden)) dismiss(); });
+
+  document.addEventListener("click", async (e) => {
+    const b = e.target.closest("button, a"); if (!b || b.closest("nav.tabbar") || b.closest("#lens") || b.id === "askBtn" || b.id === "lang") return;
+    const d = b.dataset;
+    if (b.classList.contains("close")) return dismiss();
+    if (d.goto) { closeAll(); return goTab(d.goto); }
+    if (d.crafts !== undefined) return openCrafts();
+    if (d.rmcraft) return Store.setCrafts(myCrafts().filter((c) => c !== d.rmcraft));
+    if (d.craft) { const m = new Set(myCrafts()); m.has(d.craft) ? m.delete(d.craft) : m.add(d.craft); b.setAttribute("aria-pressed", m.has(d.craft)); return Store.setCrafts([...m]); }
+    if (d.done !== undefined) { closeAll(); return refresh(); }
+    if (d.f) { const arr = state[d.f]; const i = arr.indexOf(d.v); i >= 0 ? arr.splice(i, 1) : arr.push(d.v); b.setAttribute("aria-pressed", i < 0); return refresh(); }
+    if (d.unf) {
+      if (d.unf === "all") { Object.assign(state, { kinds: [], cats: [], inds: [], needs: [], city: "" }); if (!$("panel").hidden) openFilters(); }
+      else if (d.unf === "city") state.city = ""; else state[d.unf] = state[d.unf].filter((x) => x !== d.v);
+      return refresh();
+    }
+    if (d.sigtype !== undefined) { state.sigType = d.sigtype; saveView(); return renderSignals(); }
+    if (d.hide) { const s = signals().find((x) => x.id === d.hide); if (s) { const was = !!s.hidden; await Store.hideSignal(s, !was); toast(was ? t("t.shown") : t("t.hidden")); } return; }
+    if (d.ask) return ask(d.ask);
+    if (d.pitchOrg) return BY_ID[d.pitchOrg] && openPitch(BY_ID[d.pitchOrg]);
+    if (d.saveOrg) { await Store.setEntry(d.saveOrg, { stage: "to_pitch" }); toast(t("t.saved")); return; }
+    if (d.snooze) { const n = new Date(); n.setDate(n.getDate() + 7); return Store.setEntry(d.snooze, { next_date: isoDay(n) }); }
+    if (d.doneFollow) { const e2 = Store.entry(d.doneFollow); return Store.setEntry(d.doneFollow, { next_date: null, stage: e2 && e2.stage === "to_pitch" ? "contacted" : e2?.stage }); }
+    const sid = $("sheet").dataset.id;
+    if (d.pitch !== undefined && sid) return openPitch(BY_ID[sid]);
+    if (d.report !== undefined && sid) return openReport(BY_ID[sid]);
+    if (d.save !== undefined && sid) { await Store.setEntry(sid, { stage: "to_pitch" }); toast(t("t.saved")); return; }
+    if (d.toggleEditor !== undefined) { const ed = $("editor"); if (ed) { ed.hidden = !ed.hidden; b.setAttribute("aria-expanded", !ed.hidden); } return; }
+    if (d.stage && sid) return Store.setEntry(sid, { stage: d.stage });
+    if (d.quick && sid) { const n = new Date(); n.setDate(n.getDate() + Number(d.quick)); return Store.setEntry(sid, { next_date: isoDay(n) }); }
+    if (d.clearDate !== undefined && sid) return Store.setEntry(sid, { next_date: null });
+    if (d.remove !== undefined && sid) { await Store.removeEntry(sid); toast(t("t.removed")); return; }
+    if (d.id) { e.preventDefault(); return openOrg(d.id); }
+  });
+  document.addEventListener("change", (e) => {
+    const sid = $("sheet").dataset.id; if (!sid || !Store.entry(sid)) return;
+    if (e.target.id === "note") { const v = e.target.value.trim(); if (v !== (Store.entry(sid).note || "")) Store.setEntry(sid, { note: v || null }); }
+    if (e.target.id === "next") Store.setEntry(sid, { next_date: e.target.value || null });
+  });
+
+  // ---------- boot ----------
+  async function boot() {
+    applyLang();
+    $("meta").textContent = t("loading");
+    let data, sig;
+    try {
+      [data, sig] = await Promise.all([
+        fetch("data/dataset.json").then((r) => r.json()),
+        fetch("data/signals.json").then((r) => r.json()).catch(() => ({ signals: [] })),
+      ]);
+    } catch (e) { $("meta").textContent = t("loadfail"); return; }
+    index(data);
+    BASE_SIGNALS = sig.signals || [];
+    applyLang();
+    const h = location.hash.slice(1);
+    if (["explore", "signals", "pipeline"].includes(h)) state.tab = h;
+    renderMine(); renderBadges(); renderView();
+    if (h && BY_ID[h]) openOrg(h);
+    window.addEventListener("hashchange", () => {
+      const k = location.hash.slice(1);
+      if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); }
+    });
+    fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
+    Store.init();
+  }
+  boot();
+})();
+</script>

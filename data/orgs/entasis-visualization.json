@@ -1,0 +1,44 @@
+{
+  "id": "entasis-visualization",
+  "name": "Entasis Visualization",
+  "aka": [
+    "Entasis Ltd"
+  ],
+  "kind": "studio",
+  "categories": [
+    "cgi-3d"
+  ],
+  "description": "Israeli visualization studio founded in 2008 producing photorealistic architectural, engineering and product renderings, animations, virtual tours and 3D-printed models to represent and promote projects.",
+  "location": {
+    "country": "IL",
+    "city": "Kfar Saba"
+  },
+  "founded": 2008,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://entasis.co.il",
+  "contact_url": "https://entasis.co.il/en/contact",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/entasis-visualization"
+  },
+  "services": [
+    "Architectural visualization",
+    "Engineering & industrial visualization",
+    "3D animation",
+    "Virtual tours",
+    "3D-printed models"
+  ],
+  "tags": [
+    "archviz"
+  ],
+  "sources": [
+    "https://entasis.co.il",
+    "https://www.linkedin.com/company/entasis-visualization",
+    "https://entasis.co.il/en/contact"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Site lists Kfar Saba address; LinkedIn lists Tel Aviv.",
+  "description_he": "סטודיו הדמיות ישראלי שנוסד ב-2008, ומפיק הדמיות פוטוריאליסטיות לאדריכלות, הנדסה ומוצרים, אנימציות, סיורים וירטואליים ומודלים בהדפסת תלת-ממד להצגה ולקידום פרויקטים."
+}

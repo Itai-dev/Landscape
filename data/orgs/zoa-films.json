@@ -1,0 +1,58 @@
+{
+  "id": "zoa-films",
+  "name": "ZOA Films",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "film-production",
+    "post-production"
+  ],
+  "description": "Israeli boutique production company and creative collective for TV commercials, digital, music videos, film and TV (One Day in October; feature Matchmaking 2), also offering production services for filming in Israel. Commercial clients include Volkswagen ID.4, FIBI, BYD and Touch; ICE credits it with production and post of Aviv Melisron's 2026 PARK51 campaign with Gwyneth Paltrow, shot in New York.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.zoafilms.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/zoa-films-ltd",
+    "instagram": "https://www.instagram.com/zoafilms/",
+    "vimeo": "https://vimeo.com/zoafilms",
+    "facebook": "https://www.facebook.com/zoapro/"
+  },
+  "services": [
+    "TV commercials",
+    "digital",
+    "music videos",
+    "films & TV",
+    "production services in Israel"
+  ],
+  "notable_clients": [
+    "Volkswagen",
+    "First International Bank of Israel",
+    "BYD",
+    "Touch",
+    "Aviv Melisron"
+  ],
+  "notable_work": [
+    "One Day in October (TV series)",
+    "Matchmaking 2 (feature film)",
+    "The Badchan (feature film)",
+    "Aviv Melisron — PARK51 Herzliya with Gwyneth Paltrow (shot in New York) (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "Aviv Melisron",
+      "note": "PARK51 Herzliya with Gwyneth Paltrow (shot in New York), 2026-06, via Why Worry, dir. Guy Bolandi (production & post) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.zoafilms.com/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1008732",
+    "https://www.ice.co.il/advertising-marketing/news/article/1115860"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "חברת הפקות בוטיק וקולקטיב קריאייטיב ישראלי לפרסומות טלוויזיה, דיגיטל, קליפים, קולנוע וטלוויזיה ('יום אחד באוקטובר'; הסרט העלילתי 'שידוכים 2'), שמציעה גם שירותי הפקה לצילומים בישראל. בין הלקוחות המסחריים: פולקסווגן ID.4, הבינלאומי (FIBI), BYD ו-Touch; ICE מייחס לה את ההפקה והפוסט של קמפיין PARK51 של אביב מליסרון מ-2026 עם גווינת' פאלטרו, שצולם בניו יורק."
+}

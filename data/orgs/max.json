@@ -1,0 +1,77 @@
+{
+  "id": "max",
+  "name": "Max",
+  "name_he": "מקס",
+  "aka": [
+    "Max It Finance",
+    "Leumi Card"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli credit-card and consumer-finance company (formerly Leumi Card, rebranded 2019) offering cards, loans and travel products such as Skymax; owned by Clal Holdings since 2023.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 1996,
+  "status": "active",
+  "website": "https://www.max.co.il",
+  "contact_url": "https://www.max.co.il/contactus",
+  "key_people": [
+    {
+      "name": "Galit Harel",
+      "role": "Head of Marketing Communications",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1069355",
+      "as_of": "2025-06-13"
+    },
+    {
+      "name": "Rafi Shauli",
+      "role": "VP Marketing, Private Customers",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001468984",
+      "as_of": "2024-01-31"
+    }
+  ],
+  "client_profile": {
+    "industry": "payments / credit cards",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "clal-insurance"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://www.max.co.il",
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%A1_%D7%90%D7%99%D7%98_%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%9D",
+    "https://www.globes.co.il/news/article.aspx?did=1001551330",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.max.co.il/contactus",
+    "https://www.globes.co.il/news/article.aspx?did=1001559741",
+    "https://www.ice.co.il/advertising-marketing/news/article/1069355",
+    "https://www.globes.co.il/news/article.aspx?did=1001468984"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "McCann Tel Aviv credited on Max campaigns in 2025 review, 2026 Effies and the 2026 Skymax launch (Globes). Agency as of 2026-10: McCann Tel Aviv handles Max campaigns (Sky Max, Max Travel) while also serving rival FLY CARD (Globes, Aug and Oct 2026). Marketing contacts from 2024-25 sources (ICE, Globes); not re-confirmed in 2026.",
+  "description_he": "חברת כרטיסי אשראי ופיננסים צרכניים ישראלית (לשעבר לאומי קארד, מיתוג מחדש ב-2019) שמציעה כרטיסי אשראי, הלוואות ומוצרי תיירות כמו Skymax; בבעלות כלל החזקות מאז 2023."
+}

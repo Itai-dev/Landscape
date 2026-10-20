@@ -1,0 +1,84 @@
+{
+  "id": "promo-com",
+  "name": "Promo.com",
+  "aka": [
+    "Slidely",
+    "Promo",
+    "Promo AI Marketing Ltd."
+  ],
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative",
+    "gen-ai-video"
+  ],
+  "description": "Tel Aviv company (started 2012 as slideshow app Slidely) offering an online video maker for businesses with licensed footage, templates for social and video ads, the PromoAI social media manager and 'ActiveCast' AI video generation with commercial rights.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Warsaw",
+      "New York"
+    ]
+  },
+  "founded": 2012,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://promo.com",
+  "services": [
+    "Template-based marketing video maker",
+    "Stock footage & music library",
+    "PromoAI video generator",
+    "Social media video tools",
+    "Online video ad maker",
+    "Stock-footage templates",
+    "PromoAI social planner",
+    "ActiveCast AI video generation"
+  ],
+  "key_people": [
+    {
+      "name": "Tom More",
+      "role": "Founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "investors": [
+      "Benson Oak Capital",
+      "Getty Images"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Getty Images",
+      "note": "Content partner and 2021 investor"
+    },
+    {
+      "type": "partner",
+      "target": "Shutterstock",
+      "note": "Stock clip library access (2018)"
+    }
+  ],
+  "tags": [
+    "video marketing",
+    "SMB",
+    "templates",
+    "stock footage",
+    "smb-video",
+    "video-ads"
+  ],
+  "sources": [
+    "https://promo.com",
+    "https://en.wikipedia.org/wiki/Promo.com",
+    "https://nocamels.com/2014/04/slidely-raises-7-3m/",
+    "https://promo.com/about",
+    "https://promo.com/privacy-policy"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Tel Aviv address (Alon Towers, Yigal Alon St.) from privacy policy. Founders/funding not verified in this pass.",
+  "description_he": "חברה מתל אביב (החלה ב-2012 כאפליקציית המצגות Slidely) שמציעה לעסקים כלי אונליין ליצירת וידאו עם צילומי סטוק ברישיון, תבניות לפרסומות בסושיאל ובווידאו, מנהל הסושיאל PromoAI ויצירת וידאו ב-AI בשם 'ActiveCast' עם זכויות שימוש מסחרי."
+}

@@ -1,0 +1,60 @@
+{
+  "id": "studio-t-ai",
+  "name": "studio T",
+  "kind": "studio",
+  "categories": [
+    "ai-creative",
+    "gen-ai-video"
+  ],
+  "description": "Israeli AI production studio credited with the AI work, direction (Tom Shahar) and creative direction (Tomer Tzruya) on Israir's Oct 2026 campaign honouring Yigal Bashan, made with Baumann Ber Rivnai and Mialma.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Israir"
+  ],
+  "notable_work": [
+    "Israir 'Yigal Bashan' (2026)",
+    "Israir — Wide-body fleet campaign to Yigal Bashan's 'Shamayim' (AI) (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Tom Shahar",
+      "role": "Director",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1132878",
+      "as_of": "2026-10-09"
+    },
+    {
+      "name": "Tomer Tzruya",
+      "role": "Creative director",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1132878",
+      "as_of": "2026-10-09"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "bbr-saatchi-saatchi"
+    },
+    {
+      "type": "partner",
+      "target": "mialma"
+    },
+    {
+      "type": "client",
+      "target": "israir",
+      "note": "Wide-body fleet campaign to Yigal Bashan's 'Shamayim' (AI), 2026-10, via BBR Saatchi & Saatchi, dir. Tom Shachar (studio T) (AI production & direction) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1132878"
+  ],
+  "confidence": "low",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Only known from ICE credits. Not the same as studiot.co.il (a product-design studio).",
+  "description_he": "סטודיו הפקות AI ישראלי שמופיע בקרדיטים על עבודת ה-AI, הבימוי (תום שחר) והקריאייטיב (תומר צרויה) בקמפיין של ישראייר מאוקטובר 2026 לזכרו של יגאל בשן, שנעשה עם באומן בר ריבנאי ו-Mialma."
+}

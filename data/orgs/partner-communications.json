@@ -1,0 +1,74 @@
+{
+  "id": "partner-communications",
+  "name": "Partner Communications",
+  "name_he": "פרטנר",
+  "aka": [
+    "Orange Israel"
+  ],
+  "kind": "client",
+  "categories": [
+    "telecom"
+  ],
+  "description": "Israeli telecom group (formerly Orange Israel) providing mobile, fiber internet and TV (Partner TV) services. Listed on the Tel Aviv Stock Exchange; a consistent top-ranked TV advertiser.",
+  "location": {
+    "country": "IL",
+    "city": "Rosh HaAyin"
+  },
+  "founded": 1999,
+  "status": "active",
+  "website": "https://www.partner.co.il",
+  "key_people": [
+    {
+      "name": "Asaf Aviv",
+      "role": "VP, Head of Marketing Division",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/local-news/news/article/1133277",
+      "as_of": "2026-10-12"
+    },
+    {
+      "name": "Sarit Strassmeister",
+      "role": "Head of Marketing Communications",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1129186",
+      "as_of": "2026-09-08"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: PTNR"
+  },
+  "client_profile": {
+    "industry": "telecom",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital display ads",
+      "brand campaigns",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Partner_Communications_Company",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.mccann.co.il",
+    "https://www.ice.co.il/local-news/news/article/1133277",
+    "https://www.ice.co.il/positions/news/article/1129186",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Globes' 2025 ad review and the 2026 Effie results credit Partner campaigns to McCann Tel Aviv; Partner TV is the group's TV brand. Agency as of 2026-10: McCann Tel Aviv lists Partner among its main budgets (Globes, Oct 2026).",
+  "description_he": "קבוצת תקשורת ישראלית (לשעבר אורנג' ישראל) שמספקת שירותי סלולר, אינטרנט בסיבים וטלוויזיה (פרטנר TV). נסחרת בבורסת תל אביב; באופן עקבי בין המפרסמים המובילים בטלוויזיה."
+}

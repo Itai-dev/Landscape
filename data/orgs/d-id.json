@@ -1,0 +1,67 @@
+{
+  "id": "d-id",
+  "name": "D-ID",
+  "kind": "startup",
+  "categories": [
+    "avatars",
+    "gen-ai-video",
+    "dubbing-localization"
+  ],
+  "description": "Tel Aviv-founded digital-human company whose Creative Reality Studio and API turn photos and text into talking-avatar videos, real-time interactive 'visual AI agents' and translated videos. Originally a face de-identification company; it powered MyHeritage's Deep Nostalgia. Acquired German explainer-video company simpleshow in September 2025.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2017,
+  "status": "active",
+  "website": "https://www.d-id.com",
+  "services": [
+    "AI avatar video generator",
+    "Visual AI agents",
+    "Video Translate",
+    "Live/Speaking Portrait API"
+  ],
+  "key_people": [
+    {
+      "name": "Gil Perry",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Sella Blondheim",
+      "role": "Co-founder & CSO"
+    },
+    {
+      "name": "Eliran Kuta",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "total_usd_m": 48,
+    "investors": [
+      "Macquarie Capital"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired",
+      "target": "simpleshow",
+      "note": "September 2025"
+    }
+  ],
+  "tags": [
+    "digital-humans",
+    "talking-avatars",
+    "api"
+  ],
+  "sources": [
+    "https://www.d-id.com/about/",
+    "https://www.calcalistech.com/ctechnews/article/s13bsvpg5",
+    "https://thedeadpixelssociety.com/tag/d-id/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$25M Series B (2022) led by Macquarie Capital brought total to ~$48M; aggregators list a later undisclosed 2024 round (NTT Finance reported as investor).",
+  "description_he": "חברת דיגיטל יומנז שנוסדה בתל אביב, שה-Creative Reality Studio וה-API שלה הופכים תמונות וטקסט לסרטוני אווטאר מדברים, ל'סוכני AI ויזואליים' אינטראקטיביים בזמן אמת ולסרטונים מתורגמים. במקור חברה לטשטוש זהות בפנים; הטכנולוגיה שלה עמדה מאחורי Deep Nostalgia של MyHeritage. רכשה בספטמבר 2025 את חברת סרטוני ההסבר הגרמנית simpleshow."
+}

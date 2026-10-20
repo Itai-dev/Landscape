@@ -1,0 +1,70 @@
+{
+  "id": "parallax-virtual-production-studio",
+  "name": "Parallax Virtual Production Studio",
+  "aka": [
+    "Parallax Studio",
+    "Parallax VP"
+  ],
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "xr",
+    "creative-technology"
+  ],
+  "description": "Tel Aviv virtual production studio using Unreal Engine environments on a high-end LED wall with OptiTrack camera tracking for TV commercials, music videos, film and television. Located in the former Israeli Television main studios in Ramat Aviv and partnered with film rental house Movie Mobile.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.parallax-vp.com/en",
+  "contact_url": "https://www.parallax-vp.com/en/contact",
+  "links": {
+    "linkedin": "https://il.linkedin.com/company/parallax-virtual-production-studio",
+    "instagram": "https://www.instagram.com/parallaxvp/",
+    "youtube": "https://www.youtube.com/channel/UCkwf5NvACF4KV6yAEu558dA/videos"
+  },
+  "services": [
+    "LED volume virtual production",
+    "Custom Unreal Engine 3D environments",
+    "Real-time camera tracking",
+    "Real-time VFX"
+  ],
+  "key_people": [
+    {
+      "name": "Tom Goldwasser",
+      "role": "Cinematographer & Producer",
+      "role_type": "production",
+      "source": "https://www.parallax-vp.com/en/team",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Jonathan Geva",
+      "role": "Director, scriptwriter & VFX artist",
+      "role_type": "creative_lead",
+      "source": "https://www.parallax-vp.com/en/team",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Movie Mobile",
+      "note": "Film equipment rental house hosting the studio"
+    }
+  ],
+  "tags": [
+    "virtual-production",
+    "unreal-engine",
+    "led-wall"
+  ],
+  "sources": [
+    "https://www.parallax-vp.com/en",
+    "https://il.linkedin.com/company/parallax-virtual-production-studio",
+    "https://www.parallax-vp.com/en/team"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו להפקה וירטואלית בתל אביב שעובד עם סביבות Unreal Engine על קיר LED מתקדם ומעקב מצלמה של OptiTrack, לפרסומות טלוויזיה, קליפים, קולנוע וטלוויזיה. ממוקם באולפנים הראשיים לשעבר של הטלוויזיה הישראלית ברמת אביב ופועל בשותפות עם חברת השכרת הציוד Movie Mobile."
+}

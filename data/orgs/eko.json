@@ -1,0 +1,64 @@
+{
+  "id": "eko",
+  "name": "eko",
+  "aka": [
+    "Interlude"
+  ],
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "creative-technology"
+  ],
+  "description": "Interactive video technology and content company founded in 2009 (as Interlude) by Israeli musician Yoni Bloch with Tal Zubalsky and Barak Feldman; its tools let viewers choose story paths and shoppable experiences. HQ in New York with an office in Tel Aviv; formed a joint venture with Walmart (reported $250M) in 2018.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2009,
+  "status": "active",
+  "website": "https://helloeko.com",
+  "services": [
+    "Interactive / choose-your-path video",
+    "Interactive shoppable video",
+    "Interactive content production tools"
+  ],
+  "key_people": [
+    {
+      "name": "Yoni Bloch",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Tal Zubalsky",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Barak Feldman",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Walmart",
+      "note": "W*E Interactive Ventures JV, 2018"
+    }
+  ],
+  "tags": [
+    "interactive video",
+    "branching narrative",
+    "shoppable video"
+  ],
+  "sources": [
+    "https://helloeko.com",
+    "https://en.globes.co.il/en/article-walmart-to-invest-250m-in-israeli-interactive-video-co-eko-1001256153",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3747457,00.html"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Official site returned 503 at verification; current activity level not confirmed. Funding totals conflict ($36.5M by 2018 vs. higher aggregator figures).",
+  "description_he": "חברת טכנולוגיה ותוכן לווידאו אינטראקטיבי שנוסדה ב-2009 (בשם Interlude) על ידי המוזיקאי הישראלי יוני בלוך יחד עם טל זובלסקי וברק פלדמן; הכלים שלה מאפשרים לצופים לבחור מסלולי עלילה וחוויות קנייה בתוך הווידאו. מטה בניו יורק ומשרד בתל אביב; הקימה ב-2018 מיזם משותף עם וולמארט (לפי הדיווחים, 250 מיליון דולר)."
+}

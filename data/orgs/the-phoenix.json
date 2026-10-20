@@ -1,0 +1,47 @@
+{
+  "id": "the-phoenix",
+  "name": "The Phoenix",
+  "name_he": "הפניקס",
+  "aka": [
+    "The Phoenix Holdings",
+    "Phoenix Insurance"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "Israeli insurance, pension and investment group offering car, home, health and life insurance, provident funds, wealth management and non-bank credit.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.fnx.co.il",
+  "contact_url": "https://www.fnx.co.il/customer-service/contact-us/",
+  "careers_url": "https://www.fnx.co.il/career/",
+  "client_profile": {
+    "industry": "insurance / finance",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "animation explainers",
+      "motion graphics"
+    ],
+    "known_agencies": [
+      "The First"
+    ]
+  },
+  "sources": [
+    "https://www.fnx.co.il",
+    "https://www.fnx.co.il/customer-service/contact-us/",
+    "https://www.fnx.co.il/career/",
+    "https://www.globes.co.il/news/article.aspx?did=1001558951",
+    "https://www.globes.co.il/news/article.aspx?did=1001557557"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Agency of record not confirmed. HQ city (Tel Aviv) from general knowledge. Agency as of 2026-10: The First credited on the long-running \"Phoenix Smart\" taxi campaign (Globes weekly ad ranking, Sep-Oct 2026).",
+  "description_he": "קבוצת ביטוח, פנסיה והשקעות ישראלית המציעה ביטוח רכב, דירה, בריאות וחיים, קופות גמל, ניהול השקעות ואשראי חוץ-בנקאי."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "way-studio",
+  "name": "WAY Studio",
+  "aka": [
+    "WAY",
+    "WAY Editors"
+  ],
+  "kind": "studio",
+  "categories": [
+    "post-production",
+    "editing",
+    "color-grading",
+    "vfx",
+    "animation-2d"
+  ],
+  "description": "Post-production and creative studio in Rishon LeZion offering editing, VFX, 2D/3D animation, colour grading and compositing for TV commercials and music videos; ICE credits it as post house on Gitam BBDO's Bank Hapoalim campaigns (2025–2026) and Avraham's FINQ campaign (2026).",
+  "location": {
+    "country": "IL",
+    "city": "Rishon LeZion"
+  },
+  "status": "active",
+  "website": "https://www.waystudio.co.il/",
+  "contact_url": "https://www.waystudio.co.il/about",
+  "links": {
+    "instagram": "https://www.instagram.com/way_studios/",
+    "facebook": "https://www.facebook.com/WAYEDITORS"
+  },
+  "services": [
+    "video editing",
+    "TV commercials",
+    "music videos",
+    "VFX",
+    "2D & 3D animation",
+    "colour & compositing"
+  ],
+  "notable_clients": [
+    "Bank Hapoalim",
+    "FINQ"
+  ],
+  "notable_work": [
+    "Bank Hapoalim — 'Dan' financial-assistant campaign with Hila Korach & Liat Har Lev (2025)",
+    "Bank Hapoalim — 'Young people invest for free' with Ori Vered (2025)",
+    "FINQ — AI pension & investments with Ruti Broudo (2026)",
+    "Bank Hapoalim — Kids money-management service with Liat Har Lev & Hila Korach (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "bank-hapoalim",
+      "note": "'Young people invest for free' with Ori Vered, 2025-12, via Gitam BBDO, dir. Assaf Harel (post); Kids money-management service with Liat Har Lev & Hila Korach, 2026-08, via Gitam BBDO, dir. Assaf Harel (post) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "FINQ",
+      "note": "AI pension & investments with Ruti Broudo, 2026-05, via Avraham, dir. Roman Bochachki (post) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.waystudio.co.il/",
+    "https://www.waystudio.co.il/about",
+    "https://www.ice.co.il/advertising-marketing/news/article/1077363",
+    "https://www.ice.co.il/advertising-marketing/news/article/1094211",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113835",
+    "https://www.ice.co.il/advertising-marketing/news/article/1126468"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Different company from wayy-studio (Wayy Studio, startup branding).",
+  "description_he": "סטודיו פוסט וקריאייטיב בראשון לציון המציע עריכה, VFX, אנימציית 2D/3D, תיקוני צבע וקומפוזיטינג לפרסומות טלוויזיה ולקליפים; ICE מייחס לו את הפוסט בקמפייני בנק הפועלים של גיתם BBDO (2025–2026) ובקמפיין FINQ של אברהם (2026)."
+}

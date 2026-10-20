@@ -1,0 +1,45 @@
+{
+  "id": "israel-philharmonic-orchestra",
+  "name": "Israel Philharmonic Orchestra",
+  "name_he": "התזמורת הפילהרמונית הישראלית",
+  "aka": [
+    "IPO"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Israel's leading symphony orchestra, founded in 1936 and based in Tel Aviv; its principal venue since 1957 is Heichal HaTarbut (Charles Bronfman Auditorium).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1936,
+  "status": "active",
+  "website": "https://www.ipo.co.il",
+  "contact_url": "https://www.ipo.co.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%a7%d7%a9%d7%a8/",
+  "links": {
+    "youtube": "https://www.youtube.com/c/IsraelPhilharmonicOrchestra"
+  },
+  "client_profile": {
+    "industry": "orchestra / culture",
+    "creative_needs": [
+      "season campaigns",
+      "concert video and live-stream content",
+      "graphic design",
+      "photography"
+    ]
+  },
+  "tags": [
+    "culture"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israel_Philharmonic_Orchestra",
+    "https://www.ipo.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Agency roster not verified.",
+  "description_he": "התזמורת הסימפונית המובילה בישראל, שנוסדה ב-1936 ויושבת בתל אביב; האולם המרכזי שלה מאז 1957 הוא היכל התרבות (אודיטוריום צ'רלס ברונפמן)."
+}

@@ -1,0 +1,69 @@
+{
+  "id": "teva-israel",
+  "name": "Teva Israel",
+  "name_he": "טבע ישראל",
+  "kind": "client",
+  "categories": [
+    "health-pharma"
+  ],
+  "description": "Israeli arm of Teva Pharmaceutical Industries (est. 1935, Tel Aviv HQ, TASE/NYSE: TEVA), selling generics, specialty and OTC medicines locally; Teva employs ~37,000 people worldwide.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1935,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.teva.co.il",
+  "contact_url": "https://www.teva.co.il/contact-us/",
+  "careers_url": "https://www.teva.co.il/career/",
+  "links": {
+    "global": "https://www.tevapharm.com"
+  },
+  "client_profile": {
+    "industry": "pharmaceuticals",
+    "creative_needs": [
+      "medical explainer animation",
+      "corporate video",
+      "3D medical animation",
+      "event content",
+      "employer-brand video"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Teva Pharmaceutical Industries"
+    },
+    {
+      "type": "agency",
+      "target": "moveo-group",
+      "note": "listed as a client (agency website)"
+    },
+    {
+      "type": "agency",
+      "target": "screen-post-productions",
+      "note": "listed as a post-production client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "shoof-video",
+      "note": "listed as a client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "studio-animade",
+      "note": "listed as an animation client (studio website)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Teva_Pharmaceuticals",
+    "https://www.teva.co.il/about-teva/",
+    "https://www.shoofvideo.co.il",
+    "https://animade.me"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "הזרוע הישראלית של טבע תעשיות פרמצבטיות (נוסדה ב-1935, מטה בתל אביב, בורסת תל אביב/NYSE: TEVA), שמשווקת בארץ תרופות גנריות, תרופות מקור ותרופות ללא מרשם; בטבע מועסקים כ-37,000 עובדים ברחבי העולם."
+}

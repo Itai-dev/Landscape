@@ -1,0 +1,54 @@
+{
+  "id": "jerusalem-film-festival",
+  "name": "Jerusalem Film Festival",
+  "name_he": "פסטיבל הקולנוע ירושלים",
+  "aka": [
+    "JFF"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "festival-event"
+  ],
+  "description": "Israel's main international film festival, held every summer for ten days in Jerusalem with 200+ films from about 60 countries. Established in 1984 by Lia van Leer, founder of the Jerusalem Cinematheque - Israel Film Archive, which runs it.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 1984,
+  "status": "active",
+  "website": "https://www.jff.org.il",
+  "links": {
+    "instagram": "https://www.instagram.com/jerus_cin/",
+    "facebook": "https://www.facebook.com/cinematheque.jerusalem"
+  },
+  "client_profile": {
+    "industry": "film festival / culture",
+    "creative_needs": [
+      "festival trailer",
+      "festival identity / key art",
+      "event video",
+      "social video"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Jerusalem Cinematheque - Israel Film Archive"
+    }
+  ],
+  "tags": [
+    "culture",
+    "film-festival"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Jerusalem_Film_Festival",
+    "https://www.jer-cin.org.il",
+    "https://en.wikipedia.org/wiki/Jerusalem_Cinematheque"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Studios behind past festival trailers not verified. Contact runs via the Cinematheque (jer-cin.org.il).",
+  "description_he": "פסטיבל הקולנוע הבינלאומי המרכזי של ישראל, המתקיים בכל קיץ במשך עשרה ימים בירושלים עם יותר מ-200 סרטים מכ-60 מדינות. נוסד ב-1984 על ידי ליה ון ליר, מייסדת סינמטק ירושלים – ארכיון הסרטים הישראלי, שמפיק אותו."
+}

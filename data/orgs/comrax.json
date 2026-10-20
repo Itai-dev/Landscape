@@ -1,0 +1,41 @@
+{
+  "id": "comrax",
+  "name": "Comrax",
+  "name_he": "קומרקס",
+  "kind": "studio",
+  "categories": [
+    "digital-design"
+  ],
+  "description": "Tel Aviv technology and UX company with 20+ years of experience designing and developing websites, apps and AI-based systems, with UX research and UI design as a core practice.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.comrax.com",
+  "links": {
+    "linkedin": "https://il.linkedin.com/company/comrax-ux-technology",
+    "facebook": "https://www.facebook.com/comrax"
+  },
+  "services": [
+    "UX research and design",
+    "web and app development",
+    "AI systems",
+    "digital transformation"
+  ],
+  "notable_clients": [
+    "Suzuki",
+    "KKL-JNF",
+    "Haifa Chemicals",
+    "Inbal Insurance"
+  ],
+  "sources": [
+    "https://www.comrax.com",
+    "https://clutch.co/il/agencies/ui-ux"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "חברת טכנולוגיה ו-UX מתל אביב עם יותר מ-20 שנות ניסיון בעיצוב ופיתוח אתרים, אפליקציות ומערכות מבוססות AI, כשמחקר UX ועיצוב UI הם ליבת הפעילות."
+}

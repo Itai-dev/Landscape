@@ -1,0 +1,57 @@
+{
+  "id": "madlan",
+  "name": "Madlan",
+  "name_he": "מדלן",
+  "kind": "client",
+  "categories": [
+    "real-estate",
+    "tech"
+  ],
+  "description": "Israeli real-estate listings and data site competing with Yad2; moved its ~NIS 10M marketing budget to Reuveni Pridan and its digital unit Arlo in June 2026.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.madlan.co.il",
+  "key_people": [
+    {
+      "name": "Guy Barak",
+      "role": "CMO / SVP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001546956",
+      "as_of": "2026-06-24"
+    }
+  ],
+  "client_profile": {
+    "industry": "real-estate listings",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "digital campaigns",
+      "performance ads"
+    ],
+    "known_agencies": [
+      "Reuveni Pridan",
+      "Arlo Digital"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "reuveni-pridan",
+      "note": "won the ~NIS 10M account, Jun 2026 (Globes)"
+    },
+    {
+      "type": "agency",
+      "target": "arlo-digital",
+      "note": "digital work via Reuveni Pridan's digital unit (Globes)"
+    }
+  ],
+  "sources": [
+    "https://www.globes.co.il/news/article.aspx?did=1001546956"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "אתר מודעות ומידע נדל\"ן ישראלי המתחרה ביד2; ביוני 2026 העביר את תקציב השיווק שלו, בהיקף של כ-10 מיליון ₪, לראובני פרידן ולזרוע הדיגיטל שלו Arlo."
+}

@@ -1,0 +1,63 @@
+{
+  "id": "check-point",
+  "name": "Check Point Software Technologies",
+  "name_he": "צ'ק פוינט",
+  "kind": "client",
+  "categories": [
+    "tech"
+  ],
+  "description": "Israeli cybersecurity pioneer (founded 1993 by Gil Shwed, Marius Nacht and Shlomo Kramer), Nasdaq-listed, ~6,800 employees; produces global brand, product and event (CPX) content.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1993,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.checkpoint.com",
+  "contact_url": "https://www.checkpoint.com/about-us/contact-us/",
+  "careers_url": "https://careers.checkpoint.com/",
+  "key_people": [
+    {
+      "name": "Gil Shwed",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Nadav Zafrir",
+      "role": "CEO"
+    },
+    {
+      "name": "Brett Theiss",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.checkpoint.com/press-releases/check-point-software-technologies-appoints-brett-theiss-as-chief-marketing-officer-to-drive-global-brand-and-growth-strategy/",
+      "as_of": "2025-09-04"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "NASDAQ: CHKP"
+  },
+  "client_profile": {
+    "industry": "cybersecurity",
+    "creative_needs": [
+      "brand videos",
+      "animated product explainers",
+      "motion graphics",
+      "social video ads",
+      "event / conference content",
+      "3D product visuals"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Check_Point",
+    "https://www.checkpoint.com",
+    "https://www.checkpoint.com/press-releases/check-point-software-technologies-appoints-brett-theiss-as-chief-marketing-officer-to-drive-global-brand-and-growth-strategy/",
+    "https://www.checkpoint.com/about-us/contact-us/",
+    "https://careers.checkpoint.com/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "description_he": "חלוצת הסייבר הישראלית (נוסדה ב-1993 על ידי גיל שויד, מריוס נחט ושלמה קרמר), נסחרת בנאסד\"ק, כ-6,800 עובדים; מפיקה תוכן מותג, מוצר ואירועים (CPX) גלובלי."
+}

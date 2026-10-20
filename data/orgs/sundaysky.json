@@ -1,0 +1,86 @@
+{
+  "id": "sundaysky",
+  "name": "SundaySky",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "adtech-creative",
+    "gen-ai-video",
+    "avatars"
+  ],
+  "description": "Founded in Israel in 2006, SundaySky is an enterprise video platform for creating, personalizing and distributing video at scale (AI Copilot script-to-video, AI avatars and voices, data-driven personalization), used mainly in financial services, insurance, healthcare and tech. Acquired by Clearhaven Partners in 2022; offices in New York, Tel Aviv and Tokyo.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York",
+      "Tokyo"
+    ]
+  },
+  "founded": 2006,
+  "size": "51-200",
+  "status": "acquired",
+  "website": "https://sundaysky.com",
+  "services": [
+    "Personalized video",
+    "Enterprise video creation (Create)",
+    "Video distribution/analytics (Amplify)",
+    "Video advertising (Advertise)",
+    "AI Copilot video creation",
+    "AI avatars & voices"
+  ],
+  "key_people": [
+    {
+      "name": "Shmulik Weller",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yaniv Axen",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Drake Pruitt",
+      "role": "CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Acquired",
+    "investors": [
+      "Viola Private Equity",
+      "Clearhaven Partners"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "investor",
+      "target": "Clearhaven Partners",
+      "note": "Controlling interest, $100M, July 2022"
+    },
+    {
+      "type": "acquired_by",
+      "target": "Clearhaven Partners",
+      "note": "July 2022, reported $100M"
+    }
+  ],
+  "tags": [
+    "personalized video",
+    "enterprise",
+    "financial services marketing",
+    "personalized-video",
+    "enterprise-video"
+  ],
+  "sources": [
+    "https://sundaysky.com/about-us/",
+    "https://www.businesswire.com/news/home/20220711005604/en/Clearhaven-Partners-invests-$100M-for-a-controlling-interest-in-SundaySky",
+    "https://en.globes.co.il/en/article-israeli-personalized-video-co-sundaysky-raises-30m-1001130714",
+    "https://sundaysky.com/leadership/",
+    "https://startupim.com/company/sundaysky"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Still operating as a company after the PE acquisition; status 'acquired' reflects the ownership change. Total funding ~$68.75M per one directory (unconfirmed).",
+  "description_he": "SundaySky, שנוסדה בישראל ב-2006, היא פלטפורמת וידאו לארגונים ליצירה, התאמה אישית והפצה של וידאו בהיקפים גדולים (AI Copilot מתסריט לווידאו, אווטארים וקולות AI, התאמה אישית מבוססת נתונים), שמשמשת בעיקר בשירותים פיננסיים, ביטוח, בריאות וטכנולוגיה. נרכשה על ידי Clearhaven Partners ב-2022; משרדים בניו יורק, בתל אביב ובטוקיו.",
+  "name_he": "סאנדיי סקיי"
+}

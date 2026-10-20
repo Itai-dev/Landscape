@@ -1,0 +1,64 @@
+{
+  "id": "hebrew-university-of-jerusalem",
+  "name": "Hebrew University of Jerusalem",
+  "name_he": "האוניברסיטה העברית בירושלים",
+  "aka": [
+    "HUJI"
+  ],
+  "kind": "client",
+  "categories": [
+    "public-sector",
+    "education"
+  ],
+  "description": "Public research university in Jerusalem co-founded in 1918 by Albert Einstein and Chaim Weizmann. Known for out-of-home registration stunts such as a 34-metre climbing-wall billboard ('Hard, but the best', 2014) by Gefen TEAM; publishes tenders at tenders.huji.ac.il.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 1918,
+  "status": "active",
+  "website": "https://new.huji.ac.il",
+  "contact_url": "https://new.huji.ac.il/node/117259",
+  "careers_url": "https://hr.huji.ac.il/mihrazim",
+  "client_profile": {
+    "industry": "higher education",
+    "creative_needs": [
+      "student recruitment campaigns",
+      "experiential / out-of-home",
+      "video content",
+      "branding"
+    ],
+    "known_agencies": [
+      "Gefen TEAM (2014 registration campaign)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "Gefen TEAM",
+      "note": "Climbing-wall registration campaign, Feb 2014"
+    },
+    {
+      "type": "agency",
+      "target": "dov-abramson-studio",
+      "note": "Listed as a client by Dov Abramson Studio"
+    },
+    {
+      "type": "agency",
+      "target": "mind-the-gap-animation",
+      "note": "Listed as a client by Mind the Gap Animation"
+    }
+  ],
+  "tags": [
+    "publishes-tenders"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Hebrew_University_of_Jerusalem",
+    "https://www.bizportal.co.il/advertismentandmarketing/news/article/378997",
+    "http://tenders.huji.ac.il/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "אוניברסיטת מחקר ציבורית בירושלים שנוסדה ב-1918, בין היתר על ידי אלברט איינשטיין וחיים ויצמן. ידועה בפעלולי חוצות לקראת ההרשמה, כמו שלט חוצות בגובה 34 מטר בצורת קיר טיפוס ('קשה, אבל הכי טוב', 2014) של גפן TEAM; מפרסמת מכרזים ב-tenders.huji.ac.il."
+}

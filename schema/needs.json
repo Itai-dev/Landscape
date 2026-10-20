@@ -1,0 +1,250 @@
+{
+  "_doc": "Controlled list of what buyers commission. 'match' are lowercase regexes run over client_profile.creative_needs; 'crafts' are the craft categories that can deliver it (used for Best fit).",
+  "needs": {
+    "tv-commercials": {
+      "label": "TV commercials",
+      "match": [
+        "tv ",
+        "commercial",
+        "radio",
+        "on-air",
+        "promo",
+        "celebrity",
+        "car launch"
+      ],
+      "crafts": [
+        "commercial-production",
+        "film-production",
+        "editing",
+        "color-grading",
+        "post-production",
+        "vfx",
+        "sound-design"
+      ],
+      "label_he": "פרסומות טלוויזיה"
+    },
+    "social-video": {
+      "label": "Social video",
+      "match": [
+        "social",
+        "short-form",
+        "ugc",
+        "digital content",
+        "digital/social",
+        "beauty"
+      ],
+      "crafts": [
+        "content-studio",
+        "motion-design",
+        "editing",
+        "commercial-production",
+        "animation-2d"
+      ],
+      "label_he": "וידאו לסושיאל"
+    },
+    "motion-graphics": {
+      "label": "Motion graphics",
+      "match": [
+        "motion",
+        "ui animation",
+        "menu-board",
+        "draw-show",
+        "title sequence",
+        "idents"
+      ],
+      "crafts": [
+        "motion-design",
+        "animation-2d",
+        "graphic-design"
+      ],
+      "label_he": "מושן גרפיקס"
+    },
+    "animation": {
+      "label": "Animation",
+      "match": [
+        "animation",
+        "animated",
+        "explainer",
+        "cinematics"
+      ],
+      "crafts": [
+        "animation-2d",
+        "animation-3d",
+        "motion-design",
+        "illustration"
+      ],
+      "label_he": "אנימציה"
+    },
+    "3d-cgi": {
+      "label": "3D / CGI",
+      "match": [
+        "3d",
+        "cgi",
+        "packshot",
+        "visualization"
+      ],
+      "crafts": [
+        "cgi-3d",
+        "animation-3d",
+        "vfx"
+      ],
+      "label_he": "תלת־ממד / CGI"
+    },
+    "post-production": {
+      "label": "Post-production",
+      "match": [
+        "post-production",
+        "localization"
+      ],
+      "crafts": [
+        "post-production",
+        "editing",
+        "color-grading",
+        "vfx",
+        "sound-design"
+      ],
+      "label_he": "פוסט־פרודקשן"
+    },
+    "brand-films": {
+      "label": "Brand & content films",
+      "match": [
+        "brand video",
+        "brand film",
+        "destination",
+        "documentary",
+        "format",
+        "series",
+        "sports sponsorship",
+        "event",
+        "conference",
+        "in-flight",
+        "large-scale",
+        "lookbook"
+      ],
+      "crafts": [
+        "film-production",
+        "commercial-production",
+        "content-studio",
+        "editing"
+      ],
+      "label_he": "סרטי מותג ותוכן"
+    },
+    "photography": {
+      "label": "Photography",
+      "match": [
+        "photograph",
+        "product imagery"
+      ],
+      "crafts": [
+        "photography"
+      ],
+      "label_he": "צילום"
+    },
+    "branding": {
+      "label": "Branding & identity",
+      "match": [
+        "branding",
+        "identity"
+      ],
+      "crafts": [
+        "branding",
+        "graphic-design",
+        "typography"
+      ],
+      "label_he": "מיתוג וזהות"
+    },
+    "packaging": {
+      "label": "Packaging",
+      "match": [
+        "packaging"
+      ],
+      "crafts": [
+        "packaging",
+        "graphic-design",
+        "cgi-3d"
+      ],
+      "label_he": "אריזות"
+    },
+    "digital-campaigns": {
+      "label": "Digital campaigns & ads",
+      "match": [
+        "digital campaign",
+        "display",
+        "performance",
+        "ua video",
+        "marketing campaign",
+        "brand campaign",
+        "seasonal",
+        "public",
+        "print",
+        "key art"
+      ],
+      "crafts": [
+        "digital-design",
+        "graphic-design",
+        "motion-design",
+        "creative-technology",
+        "illustration"
+      ],
+      "label_he": "קמפיינים דיגיטליים ומודעות"
+    },
+    "influencer": {
+      "label": "Influencer content",
+      "match": [
+        "influencer"
+      ],
+      "crafts": [
+        "content-studio"
+      ],
+      "label_he": "תוכן משפיענים"
+    },
+    "game-art": {
+      "label": "Game art",
+      "match": [
+        "game art"
+      ],
+      "crafts": [
+        "game-art",
+        "animation-3d",
+        "illustration"
+      ],
+      "label_he": "ארט למשחקים"
+    },
+    "illustration": {
+      "label": "Illustration & key art",
+      "match": [
+        "illustration",
+        "key art"
+      ],
+      "crafts": [
+        "illustration",
+        "graphic-design"
+      ],
+      "label_he": "איור וקי־ארט"
+    },
+    "sound-music": {
+      "label": "Sound & music",
+      "match": [
+        "sound",
+        "music"
+      ],
+      "crafts": [
+        "sound-design",
+        "music-production"
+      ],
+      "label_he": "סאונד ומוזיקה"
+    },
+    "ai-video": {
+      "label": "AI video",
+      "match": [
+        "ai-generated",
+        "ai video"
+      ],
+      "crafts": [
+        "ai-creative",
+        "motion-design"
+      ],
+      "label_he": "וידאו AI"
+    }
+  }
+}

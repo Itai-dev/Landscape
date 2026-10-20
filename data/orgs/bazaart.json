@@ -1,0 +1,71 @@
+{
+  "id": "bazaart",
+  "name": "Bazaart",
+  "kind": "startup",
+  "categories": [
+    "design-tools",
+    "photo-tools",
+    "gen-ai-image"
+  ],
+  "description": "Tel Aviv maker of the Bazaart design app (iOS, Android, Mac, web) offering AI photo and video editing for small businesses and creators: background removal, AI product photoshoots, AI on-model shots, home staging and social/ad templates. Profitable, subscription-based.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2012,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.bazaart.com",
+  "services": [
+    "Mobile & web design editor",
+    "Background remover",
+    "Product photo tools",
+    "Templates",
+    "AI photo editor",
+    "AI product photoshoots",
+    "AI models",
+    "Design templates"
+  ],
+  "key_people": [
+    {
+      "name": "Stas Goferman",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Dror Yaffe",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Gili Golander",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Uri Kogan",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "investors": [
+      "Dreamit Ventures"
+    ]
+  },
+  "tags": [
+    "mobile design",
+    "e-commerce sellers",
+    "photo editing",
+    "mobile-app",
+    "smb-design"
+  ],
+  "sources": [
+    "https://bazaart.com",
+    "https://officesnapshots.com/2023/02/17/bazaart-offices-tel-aviv/",
+    "https://thenextweb.com/news/the-most-promising-israeli-startups-for-2013",
+    "https://www.bazaart.com",
+    "https://startupim.com/company/bazaart"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Size from directory estimates (6-20+); treat as approximate.",
+  "description_he": "חברה תל אביבית שמפתחת את אפליקציית העיצוב Bazaart (iOS, אנדרואיד, Mac ווב), המציעה עריכת תמונות ווידאו מבוססת AI לעסקים קטנים וליוצרים: הסרת רקע, צילומי מוצר ב-AI, צילומים על דוגמנים ב-AI, הום סטייג'ינג ותבניות לסושיאל ולמודעות. רווחית, במודל מנוי."
+}

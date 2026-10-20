@@ -1,0 +1,56 @@
+{
+  "id": "kan",
+  "name": "Kan – Israeli Public Broadcasting Corporation",
+  "name_he": "כאן",
+  "aka": [
+    "Kan",
+    "IPBC",
+    "Makan"
+  ],
+  "kind": "client",
+  "categories": [
+    "media-broadcast",
+    "public-sector"
+  ],
+  "description": "Israel's public broadcaster (on air since May 2017, replacing the IBA), running Kan 11, Makan 33, Kan Educational, eight radio stations and the Kan Box VOD service; a major commissioner of drama and documentaries.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "founded": 2014,
+  "status": "active",
+  "website": "https://www.kan.org.il",
+  "key_people": [
+    {
+      "name": "Oren Peldi",
+      "role": "VP On-Air Presentation, Creative & Promo",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1034147",
+      "as_of": "2024-10-15"
+    }
+  ],
+  "client_profile": {
+    "industry": "public broadcasting",
+    "creative_needs": [
+      "on-air promos",
+      "channel branding / idents",
+      "title sequences",
+      "motion graphics",
+      "social video",
+      "key art",
+      "documentary and drama commissions",
+      "animation for kids' content"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israeli_Public_Broadcasting_Corporation",
+    "https://www.kan.org.il",
+    "https://www.ice.co.il/positions/news/article/1034147",
+    "https://www.ice.co.il/positions/news/article/1018053"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Jun 2024: Oren Peldi (head of Kan promo and creative since 2016) appointed to a new VP role covering on-air look, creative and promo, overseeing editing/creative teams and all trailers and marketing output (ICE).",
+  "description_he": "השידור הציבורי של ישראל (משדר מאז מאי 2017, במקום רשות השידור), המפעיל את כאן 11, מכאן 33, כאן חינוכית, שמונה תחנות רדיו ושירות ה-VOD כאן Box; מזמין מרכזי של דרמה ותיעודיות."
+}

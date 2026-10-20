@@ -1,0 +1,48 @@
+{
+  "id": "zenith-israel",
+  "name": "Zenith Israel",
+  "aka": [
+    "ZenithOptimedia Israel"
+  ],
+  "kind": "agency",
+  "categories": [
+    "media-agency"
+  ],
+  "description": "Israeli office of Publicis Media's Zenith network; part of the BBR Group since 1995 and listed among Publicis Groupe Israel's agency brands in 2015 and 2018. Publishes Israeli ad-spend forecasts.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "services": [
+    "Media planning",
+    "Media buying",
+    "Ad-spend forecasting"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Publicis Groupe Israel"
+    },
+    {
+      "type": "partner",
+      "target": "bbr-saatchi-saatchi",
+      "note": "Part of BBR Group since 1995"
+    }
+  ],
+  "tags": [
+    "media-buying",
+    "publicis"
+  ],
+  "sources": [
+    "https://www.publicisgroupe.com/en/news/press-releases/publicis-groupe-announces-new-appointments-in-israel",
+    "https://www.publicisgroupe.com/sites/default/files/press-release/20151124_PG_GSS_241115_FR_Final.pdf",
+    "https://everything-pr.com/publicis-groupe-bbr"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "zenith.co.il is an unrelated family office. Current leadership/website not verified.",
+  "description_he": "הסניף הישראלי של רשת Zenith של Publicis Media; חלק מקבוצת BBR מאז 1995, ונמנה בין מותגי המשרדים של פובליסיס גרופ ישראל ב-2015 וב-2018. מפרסם תחזיות להוצאות הפרסום בישראל.",
+  "name_he": "זניט ישראל"
+}

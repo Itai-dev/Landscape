@@ -1,0 +1,82 @@
+{
+  "id": "og-productions",
+  "name": "Og Productions",
+  "name_he": "אוג",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Israeli commercial production company credited on TV spots including Tadiran (agency Boroda Kaplan, director Rani Carmeli), Gad Dairies' 'Ray of Cheese' with chef Eyal Shani (Reuveni Pridan) and Bank Yahav (Lead Ogilvy).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Tadiran",
+    "Gad Dairies",
+    "Bank Yahav",
+    "Delek Israel",
+    "ONE ZERO",
+    "Yochananof"
+  ],
+  "notable_work": [
+    "Delek Israel 75th anniversary, AI-driven spot to Mosh Ben Ari's 'Derech' (agency GO, Oct 2026)",
+    "ONE ZERO — zero-commission investment track with Gilad Kahana (2025)",
+    "Yochananof — campaign with Einav Bublil (2026)",
+    "Delek Israel — 75th anniversary AI spot to Mosh Ben Ari's song (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Gilad Schneider",
+      "role": "Responsible producer",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1133657",
+      "as_of": "2026-10-16"
+    },
+    {
+      "name": "Tamir Wexler",
+      "role": "Chief producer",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1133657",
+      "as_of": "2026-10-16"
+    }
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "go-advertising",
+      "note": "Production company on GO's Delek Israel 75th campaign (2026)"
+    },
+    {
+      "type": "client",
+      "target": "one-zero-bank",
+      "note": "zero-commission investment track with Gilad Kahana, 2025-12, via Fresman Baruch (פרסמן ברוך), dir. Assaf Harel (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "yochananof",
+      "note": "campaign with Einav Bublil, 2026-03, via KPLN (Kaplan), dir. Ofir Boaz (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "delek-israel",
+      "note": "75th anniversary AI spot to Mosh Ben Ari's song, 2026-10, via GO, dir. Eli Sverdlov (production) (ICE credits)"
+    }
+  ],
+  "tags": [
+    "commercials"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/774129",
+    "https://www.ice.co.il/advertising-marketing/news/article/945425",
+    "https://www.ice.co.il/advertising-marketing/news/article/1001739",
+    "https://www.ice.co.il/advertising-marketing/news/article/1133657",
+    "https://www.ice.co.il/advertising-marketing/news/article/1096198",
+    "https://www.ice.co.il/advertising-marketing/news/article/1106021"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "English name is a transliteration of the Hebrew credit 'אוג'; no website found.",
+  "description_he": "חברת הפקות פרסומות ישראלית שמופיעה בקרדיטים של תשדירי טלוויזיה, בהם תדיראן (משרד בורודה קפלן, בימוי רני כרמלי), \"קרן של גבינה\" של מחלבות גד עם השף אייל שני (ראובני פרידן) ובנק יהב (Lead Ogilvy)."
+}

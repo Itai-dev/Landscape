@@ -1,0 +1,57 @@
+{
+  "id": "the-craft",
+  "name": "The Craft",
+  "aka": [
+    "The Craft Architectural & Interior Design Visualization",
+    "The Craft TLV"
+  ],
+  "kind": "studio",
+  "categories": [
+    "cgi-3d"
+  ],
+  "description": "Tel Aviv architectural and interior visualization studio founded in 2015, crafting high-fidelity renderings, animations and virtual experiences for hotel brands, developers, architects, interior designers and branding agencies, with projects in Israel, the US, UK and the Gulf.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2015,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://the-craft.co",
+  "contact_url": "https://the-craft.co/contact",
+  "careers_url": "https://the-craft.co/join-us",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/the-craft-architectural-visualization",
+    "behance": "https://www.behance.net/thecraft",
+    "instagram": "https://www.instagram.com/thecrafttlv/",
+    "youtube": "https://www.youtube.com/@TheCraftTLV",
+    "x": "https://twitter.com/TheCraftTLV"
+  },
+  "services": [
+    "Architectural visualization",
+    "Interior visualization",
+    "3D animation",
+    "Competition visuals",
+    "Hospitality visualization",
+    "Product visualization"
+  ],
+  "notable_work": [
+    "The King Cole Bar at St. Regis New York (visualization)",
+    "The Ritz-Carlton Grand Cayman (visualization)",
+    "Emirates Palace (visualization)"
+  ],
+  "tags": [
+    "archviz",
+    "hospitality",
+    "real-estate"
+  ],
+  "sources": [
+    "https://the-craft.co",
+    "https://www.linkedin.com/company/the-craft-architectural-visualization",
+    "https://the-craft.co/join-us"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו להדמיות אדריכלות ועיצוב פנים בתל אביב שנוסד ב-2015, ויוצר הדמיות ברמת נאמנות גבוהה, אנימציות וחוויות וירטואליות לרשתות מלונות, יזמים, אדריכלים, מעצבי פנים וסוכנויות מיתוג, עם פרויקטים בישראל, בארה\"ב, בבריטניה ובמפרץ."
+}

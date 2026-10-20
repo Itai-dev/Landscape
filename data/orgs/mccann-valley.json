@@ -1,0 +1,67 @@
+{
+  "id": "mccann-valley",
+  "name": "McCann Valley",
+  "name_he": "מקאן ואלי",
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "advertising"
+  ],
+  "description": "Digital/360 advertising agency in Mitzpe Ramon, founded in 2013 by McCann Tel Aviv as a business and social initiative to develop the Negev. Offers digital media, strategy, creative and account management; reports 7 Effie awards.",
+  "location": {
+    "country": "IL",
+    "city": "Mitzpe Ramon"
+  },
+  "founded": 2013,
+  "size": "51-200",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/mccann-valley"
+  },
+  "services": [
+    "Digital media",
+    "Strategy",
+    "Creative",
+    "Account management"
+  ],
+  "notable_clients": [
+    "Assuta",
+    "Tambour",
+    "Suzuki",
+    "Honda",
+    "Dyson",
+    "Shenkar"
+  ],
+  "key_people": [
+    {
+      "name": "Michal Romi",
+      "role": "CEO, McCann & Valley",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "mccann-tel-aviv"
+    }
+  ],
+  "tags": [
+    "negev",
+    "periphery",
+    "omnicom"
+  ],
+  "sources": [
+    "https://www.mccann-valley.co.il/",
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%90%D7%9F_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91",
+    "https://clutch.co/il/agencies.md",
+    "https://www.linkedin.com/company/mccann-valley",
+    "https://mccann.co.il/about/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Address: Har Bukar 10, Mitzpe Ramon. Size band from Clutch (50-249). Absorbed McCann Boutique in 2014. Website mccann-valley.co.il unreachable as of 2026-10-19.",
+  "description_he": "משרד פרסום דיגיטלי/360 במצפה רמון, שהוקם ב-2013 על ידי מקאן תל אביב כיוזמה עסקית וחברתית לפיתוח הנגב. מציע מדיה דיגיטלית, אסטרטגיה, קריאייטיב וניהול לקוחות; מדווח על 7 פרסי אפי."
+}

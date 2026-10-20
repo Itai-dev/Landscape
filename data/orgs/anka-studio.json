@@ -1,0 +1,68 @@
+{
+  "id": "anka-studio",
+  "name": "ANKA Studio",
+  "name_he": "סטודיו אנקה",
+  "aka": [
+    "AnKa | Video & Animation",
+    "ANKA Productions",
+    "אנקה הפקות"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "commercial-production"
+  ],
+  "description": "Givatayim-based veteran animation and video studio producing promotional, product, explainer, exhibition and pitch videos since 2013, combining animation with live action for corporates and tech companies.",
+  "location": {
+    "country": "IL",
+    "city": "Givatayim"
+  },
+  "founded": 2013,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.ankanimation.com",
+  "contact_url": "https://www.ankanimation.com/contact-us/",
+  "reel_url": "https://www.youtube.com/watch?v=94ljUnlc1tY",
+  "links": {
+    "instagram": "https://www.instagram.com/anka_studio",
+    "linkedin": "https://www.linkedin.com/company/10688377/",
+    "youtube": "https://www.youtube.com/channel/UC_9IV6tTU_M0SfKhCL8Pgxg"
+  },
+  "services": [
+    "Explainer videos",
+    "Product videos",
+    "Corporate promos",
+    "Exhibition videos",
+    "Ad campaigns",
+    "Pitch videos"
+  ],
+  "notable_clients": [
+    "Tel Aviv Municipality",
+    "Clalit",
+    "Altshuler Shaham",
+    "Harel",
+    "Leumi",
+    "Facebook",
+    "Amdocs",
+    "SolarEdge",
+    "Maytronics",
+    "IBM"
+  ],
+  "tags": [
+    "explainers",
+    "tech",
+    "corporate"
+  ],
+  "sources": [
+    "https://www.ankanimation.com",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://clutch.co/il/agencies/video-production/animation/tel-aviv",
+    "https://www.ankanimation.com/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founded year 2013 from its own directory blurb ('since 2013').",
+  "description_he": "סטודיו ותיק לאנימציה ווידאו מגבעתיים, שמפיק מאז 2013 סרטוני תדמית, מוצר, הסבר, תערוכות ופיץ', בשילוב אנימציה ולייב אקשן, לחברות ולחברות טכנולוגיה."
+}

@@ -1,0 +1,53 @@
+# Optional GitHub-side research runner (the main schedule runs as a Claude scheduled task).
+# Needs one repo secret: CLAUDE_CODE_OAUTH_TOKEN (run `claude setup-token`) or ANTHROPIC_API_KEY.
+# Run on demand: Actions → Research → Run workflow (pick mode / segment).
+name: Research
+on:
+  schedule:
+    - cron: "17 4 1 * *" # monthly backup run, 1st of the month ~07:17 Israel time
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "cycle | discover | refresh"
+        default: cycle
+      segment:
+        description: "Segment from research/queue.md or free text (blank = next in queue)"
+        default: ""
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - id: check
+        env:
+          T1: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          T2: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "$T1$T2" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "::notice::No Claude secret set; skipping research run."; fi
+      - if: steps.check.outputs.ok == 'true'
+        uses: actions/checkout@v4
+      - if: steps.check.outputs.ok == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - if: steps.check.outputs.ok == 'true'
+        run: pip install jsonschema pillow
+      - if: steps.check.outputs.ok == 'true'
+        uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          prompt: |
+            Follow .claude/skills/research/SKILL.md exactly.
+            Mode: ${{ github.event.inputs.mode || 'cycle' }}
+            Segment: ${{ github.event.inputs.segment || '(next unticked in research/queue.md)' }}
+            Open the PR with `gh pr create`.
+          claude_args: >-
+            --max-turns 200
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"

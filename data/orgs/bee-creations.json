@@ -1,0 +1,60 @@
+{
+  "id": "bee-creations",
+  "name": "Bee-Creations",
+  "aka": [
+    "Bee Creations"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "packaging",
+    "digital-design",
+    "typography"
+  ],
+  "description": "Tel Aviv branding and digital design studio founded in 2003, offering brand strategy, Hebrew corporate typeface design, packaging and wine labels, and web/app design.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2003,
+  "status": "active",
+  "website": "https://www.bee-creations.com",
+  "contact_url": "https://www.bee-creations.com/contact/",
+  "links": {
+    "instagram": "https://www.instagram.com/beecreations",
+    "facebook": "https://www.facebook.com/beecreations"
+  },
+  "services": [
+    "branding and strategy",
+    "Hebrew corporate typefaces",
+    "packaging and wine labels",
+    "web and app design"
+  ],
+  "notable_clients": [
+    "Volkswagen",
+    "Mercedes-Benz",
+    "Russell's Bakery",
+    "Insoundz",
+    "Wizer"
+  ],
+  "key_people": [
+    {
+      "name": "Eran Bacharach",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Ido Zemach",
+      "role": "Co-founder"
+    }
+  ],
+  "sources": [
+    "https://www.bee-creations.com",
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en",
+    "https://www.bee-creations.com/about/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו למיתוג ועיצוב דיגיטלי מתל אביב שנוסד ב-2003, ומציע אסטרטגיית מותג, עיצוב פונטים ארגוניים בעברית, אריזות ותוויות יין, ועיצוב אתרים ואפליקציות."
+}

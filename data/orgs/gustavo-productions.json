@@ -1,0 +1,33 @@
+{
+  "id": "gustavo-productions",
+  "name": "Gustavo Productions",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Tel Aviv production company offering commercial production and production services (Hebrew, English, Spanish), credited as production company on Gitam BBDO's 'Their Will Your Power' spot for Beit Issie Shapiro.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Beit Issie Shapiro"
+  ],
+  "notable_work": [
+    "Beit Issie Shapiro 'Their Will Your Power' (Gitam BBDO)"
+  ],
+  "tags": [
+    "commercials",
+    "production-services"
+  ],
+  "sources": [
+    "https://www.thelocationguide.com/israel/tel-aviv/global-directory/gustavo-productions",
+    "https://www.adsoftheworld.com/campaigns/their-will-your-power"
+  ],
+  "confidence": "low",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "No official website found.",
+  "description_he": "חברת הפקות תל אביבית המציעה הפקת פרסומות ושירותי הפקה (בעברית, אנגלית וספרדית), עם קרדיט כחברת ההפקה של הספוט 'Their Will Your Power' של גיתם BBDO עבור בית איזי שפירא."
+}

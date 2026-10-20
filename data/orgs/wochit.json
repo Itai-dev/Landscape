@@ -1,0 +1,78 @@
+{
+  "id": "wochit",
+  "name": "Wochit",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "media-infrastructure"
+  ],
+  "description": "Video creation platform for publishers, brands and social teams that automates short-form/social video production from text, licensed footage and templates. Founded in Israel in 2012, with offices in New York, London and the Tel Aviv area.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York",
+      "London"
+    ]
+  },
+  "founded": 2012,
+  "status": "active",
+  "website": "https://www.wochit.com",
+  "services": [
+    "Wochit Studio video creation",
+    "Frame white-label video editor",
+    "WAVE automated video generation",
+    "Licensed media library",
+    "Online video creation platform",
+    "Social video templates"
+  ],
+  "notable_clients": [
+    "NBC",
+    "CBS",
+    "Sky",
+    "Hearst",
+    "ProSieben",
+    "Pfizer"
+  ],
+  "key_people": [
+    {
+      "name": "Dror Ginzberg",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Ran Oz",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Series C",
+    "total_usd_m": 28.75,
+    "investors": [
+      "Redpoint Ventures",
+      "Cedar Fund",
+      "Greycroft",
+      "Marker LLC",
+      "ProSieben",
+      "SPH Media Fund"
+    ],
+    "public": false
+  },
+  "tags": [
+    "publisher video",
+    "social video",
+    "newsrooms",
+    "publisher-video",
+    "social-video"
+  ],
+  "sources": [
+    "https://www.wochit.com",
+    "https://en.globes.co.il/en/article-israeli-social-video-creation-co-wochit-raises-13m-1001157684",
+    "https://en.globes.co.il/en/article-automated-video-clip-co-wochit-raises-11m-1000937792",
+    "https://www.wochit.com/wp-content/uploads/about-wochit.pdf"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "HQ listed variously as New York or Beit Dagan/Tel Aviv; R&D in Israel.",
+  "description_he": "פלטפורמה ליצירת וידאו למוציאים לאור, מותגים וצוותי סושיאל, שמבצעת אוטומציה של הפקת וידאו קצר לסושיאל מטקסט, מצולמים ברישיון ותבניות. נוסדה בישראל ב-2012, עם משרדים בניו יורק, בלונדון ובאזור תל אביב."
+}

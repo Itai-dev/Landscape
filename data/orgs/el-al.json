@@ -1,0 +1,79 @@
+{
+  "id": "el-al",
+  "name": "El Al Israel Airlines",
+  "name_he": "אל על",
+  "kind": "client",
+  "categories": [
+    "travel-hospitality"
+  ],
+  "description": "Israel's national flag carrier (est. 1948), listed on the TASE; runs the Fly Card co-branded credit card with Isracard. Its ad was voted most-liked in Globes' 2025 year-end survey.",
+  "location": {
+    "country": "IL",
+    "city": "Lod"
+  },
+  "founded": 1948,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.elal.com",
+  "key_people": [
+    {
+      "name": "Ofir Goldman",
+      "role": "Head of Marketing & Digital Division",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001525894",
+      "as_of": "2025-11-09"
+    },
+    {
+      "name": "Yonatan Regev",
+      "role": "VP Marketing, FLY CARD & El Al Matmid frequent-flyer club",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1129186",
+      "as_of": "2026-09-08"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: ELAL"
+  },
+  "client_profile": {
+    "industry": "airline",
+    "creative_needs": [
+      "TV commercials",
+      "destination films",
+      "social video",
+      "in-flight safety video",
+      "brand campaigns"
+    ],
+    "known_agencies": [
+      "McCann Tel Aviv",
+      "Peach (Gitam group, FLY CARD)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "peach-content",
+      "note": "Fly Card / Matmid club with Deni Avdija & Niv Sultan (with Isracard), 2026-06 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/El_Al",
+    "https://www.globes.co.il/news/article.aspx?did=1001531557",
+    "https://www.globes.co.il/news/article.aspx?did=1001551330",
+    "https://www.mccann.co.il",
+    "https://www.globes.co.il/news/article.aspx?did=1001525894",
+    "https://www.ice.co.il/positions/news/article/1129186",
+    "https://www.globes.co.il/news/article.aspx?did=1001558746",
+    "https://www.ice.co.il/advertising-marketing/news/article/1116579"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "HQ at Ben Gurion Airport (near Lod). Agency as of 2026-10: McCann Tel Aviv lists El Al and FLY CARD among its main budgets (Globes, Oct 2026); FLY CARD earlier campaigns were by Peach (Gitam group) before McCann took over (Globes, Aug 2026).",
+  "description_he": "חברת התעופה הלאומית של ישראל (נוסדה ב-1948), נסחרת בבורסת תל אביב; מפעילה עם ישראכרט את כרטיס האשראי המשותף Fly Card. הפרסומת שלה נבחרה לאהודה ביותר בסקר סוף השנה של גלובס ל-2025."
+}

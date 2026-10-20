@@ -1,0 +1,53 @@
+{
+  "id": "hagilda",
+  "name": "Hagilda",
+  "name_he": "הגילדה",
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Tel Aviv Hebrew type foundry founded in 2002 by Bezalel graduates Michal Sahar and Danny Meirav as a cooperative platform for quality fonts; also publishes Hebrew versions of international families (e.g. Fedra Sans, Greta).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2002,
+  "status": "active",
+  "website": "https://hagilda.com",
+  "links": {
+    "facebook": "https://www.facebook.com/HAGILDA/",
+    "instagram": "https://www.instagram.com/hagilda/"
+  },
+  "services": [
+    "retail Hebrew fonts",
+    "custom fonts"
+  ],
+  "notable_work": [
+    "FrankRühl Universal",
+    "Simpler Pro",
+    "Greta Serif Variable (Hebrew)",
+    "Fedra Sans Variable (Hebrew)",
+    "Levit 1950"
+  ],
+  "key_people": [
+    {
+      "name": "Michal Sahar",
+      "role": "Co-founder / type designer"
+    },
+    {
+      "name": "Danny Meirav",
+      "role": "Co-founder / type designer"
+    }
+  ],
+  "tags": [
+    "hebrew-type"
+  ],
+  "sources": [
+    "https://hagilda.com/",
+    "https://luc.devroye.org/israel.html"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "בית יציקה תל אביבי לפונטים עבריים שנוסד ב-2002 על ידי בוגרי בצלאל מיכל סהר ודני מירב כפלטפורמה שיתופית לפונטים איכותיים; מוציא לאור גם גרסאות עבריות למשפחות בינלאומיות (למשל Fedra Sans ו-Greta)."
+}

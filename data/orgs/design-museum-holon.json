@@ -1,0 +1,52 @@
+{
+  "id": "design-museum-holon",
+  "name": "Design Museum Holon",
+  "name_he": "מוזיאון העיצוב חולון",
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Israel's first museum dedicated to design, opened in March 2010 in a building by Ron Arad (with Bruno Asa); exhibits historical and contemporary design, commissions and academic projects, and runs a design mediatheque.",
+  "location": {
+    "country": "IL",
+    "city": "Holon"
+  },
+  "founded": 2010,
+  "status": "active",
+  "website": "https://www.dmh.org.il",
+  "contact_url": "https://www.dmh.org.il/contact/",
+  "links": {
+    "instagram": "https://www.instagram.com/designmuseumholon/",
+    "facebook": "https://www.facebook.com/DesignMuseumHolon/",
+    "youtube": "https://www.youtube.com/user/DesignMuseumHolon"
+  },
+  "client_profile": {
+    "industry": "museum / design culture",
+    "creative_needs": [
+      "exhibition branding",
+      "graphic design",
+      "commissioned design works",
+      "video content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "keren-and-golan",
+      "note": "Listed as a client by Keren & Golan"
+    }
+  ],
+  "tags": [
+    "culture",
+    "design"
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Design_Museum_Holon",
+    "https://www.dmh.org.il/contact/",
+    "https://www.01kg.com"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "המוזיאון הראשון בישראל המוקדש לעיצוב, שנפתח במרץ 2010 בבניין שתכנן רון ארד (עם ברונו אסא); מציג עיצוב היסטורי ועכשווי, עבודות בהזמנה ופרויקטים אקדמיים, ומפעיל מדיאטק לעיצוב."
+}

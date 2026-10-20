@@ -1,0 +1,54 @@
+{
+  "id": "sam-spiegel-film-school",
+  "name": "Sam Spiegel Film & Television School",
+  "name_he": "בית הספר לקולנוע ולטלוויזיה סם שפיגל",
+  "aka": [
+    "JSFS",
+    "Jerusalem Sam Spiegel Film School"
+  ],
+  "kind": "community",
+  "categories": [
+    "education",
+    "film-production"
+  ],
+  "description": "Jerusalem film and television school (3 Menora St.) with directing and screenwriting tracks, extension studies and an international film lab whose projects appear at Venice and San Sebastian. Graduates' films regularly reach major festivals; a key network for Israeli directors and producers.",
+  "location": {
+    "country": "IL",
+    "city": "Jerusalem"
+  },
+  "status": "active",
+  "website": "https://jsfs.co.il/",
+  "links": {
+    "linkedin": "https://il.linkedin.com/school/sam-speigel-film-school/",
+    "vimeo": "https://vimeo.com/user17267390",
+    "facebook": "https://www.facebook.com/Jerusalem.SamSpiegel.FilmSchool/",
+    "instagram": "https://www.instagram.com/samspiegel.filmschool/"
+  },
+  "services": [
+    "Film directing & screenwriting programs",
+    "Extension courses",
+    "Sam Spiegel International Film Lab",
+    "Sam Spiegel VOD"
+  ],
+  "key_people": [
+    {
+      "name": "Dana Blankstein Cohen",
+      "role": "CEO / Executive Director",
+      "role_type": "executive",
+      "source": "https://jsfs.co.il/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "tags": [
+    "school",
+    "film-school",
+    "talent-pipeline"
+  ],
+  "sources": [
+    "https://jsfs.co.il/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "בית ספר לקולנוע ולטלוויזיה בירושלים (רחוב מנורה 3) עם מסלולי בימוי ותסריטאות, לימודי המשך ומעבדת קולנוע בינלאומית שפרויקטים שלה מוצגים בוונציה ובסן סבסטיאן. סרטי הבוגרים מגיעים באופן קבוע לפסטיבלים מרכזיים; רשת קשרים חשובה לבמאים ולמפיקים ישראלים."
+}

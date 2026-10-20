@@ -1,0 +1,52 @@
+{
+  "id": "wakingapp",
+  "name": "WakingApp",
+  "aka": [
+    "WakingApp Realities"
+  ],
+  "kind": "startup",
+  "categories": [
+    "xr",
+    "creative-technology"
+  ],
+  "description": "Tel Aviv AR company (founded 2013) whose cloud platform let businesses build interactive 3D/AR experiences via drag-and-drop or JavaScript, with white-label and native-app integration, used for training, advertising, healthcare and automotive. Acquired by Scope AR in December 2019.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2013,
+  "status": "acquired",
+  "services": [
+    "AR content-creation platform"
+  ],
+  "key_people": [
+    {
+      "name": "Alon Melchner",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Adiel Gur",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Scope AR",
+      "note": "December 2019"
+    }
+  ],
+  "tags": [
+    "augmented reality",
+    "no-code AR",
+    "3D experiences"
+  ],
+  "sources": [
+    "https://startupim.com/company/wakingapp"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Israeli entity recorded as voluntarily dissolved (Jan 2026) per registrar data on startupim.",
+  "description_he": "חברת AR מתל אביב (נוסדה ב-2013) שהפלטפורמה מבוססת הענן שלה אפשרה לעסקים לבנות חוויות תלת-ממד ו-AR אינטראקטיביות בגרירה ושחרור או ב-JavaScript, עם אפשרות white-label ושילוב באפליקציות נייטיב, לשימוש בהדרכה, פרסום, בריאות ורכב. נרכשה על ידי Scope AR בדצמבר 2019."
+}

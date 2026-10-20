@@ -1,0 +1,37 @@
+{
+  "id": "fundbox",
+  "name": "Fundbox",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Small-business credit and payments platform founded in Israel in 2013 by Eyal Shinar, Tomer Michaeli and Yuval Ariav; HQ San Francisco with an R&D office in Tel Aviv.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2013,
+  "status": "active",
+  "website": "https://fundbox.com",
+  "contact_url": "https://fundbox.com/contact/",
+  "careers_url": "https://fundbox.com/careers/",
+  "client_profile": {
+    "industry": "B2B fintech",
+    "creative_needs": [
+      "explainer animation",
+      "performance ads",
+      "motion graphics",
+      "social video"
+    ]
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/Fundbox",
+    "https://fundbox.com/careers/",
+    "https://fundbox.com/contact/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "פלטפורמת אשראי ותשלומים לעסקים קטנים שנוסדה בישראל ב-2013 על ידי אייל שינר, תומר מיכאלי ויובל אריאב; המטה בסן פרנסיסקו ומרכז פיתוח בתל אביב."
+}

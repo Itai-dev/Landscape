@@ -1,0 +1,78 @@
+{
+  "id": "magisto",
+  "name": "Magisto",
+  "aka": [
+    "SightEra"
+  ],
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "gen-ai-video"
+  ],
+  "description": "Ness Ziona-founded AI video editor (web and mobile) that automatically analyzed users' clips and photos and edited them into short, music-backed videos; an early consumer/SMB 'smart video' pioneer. Acquired by Vimeo in April 2019 (~$200M) and later folded into Vimeo's products.",
+  "location": {
+    "country": "IL",
+    "city": "Ness Ziona",
+    "other_offices": [
+      "Mountain View"
+    ]
+  },
+  "founded": 2009,
+  "status": "acquired",
+  "website": "https://www.magisto.com",
+  "links": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Magisto"
+  },
+  "services": [
+    "Automated smart video editor",
+    "Marketing video creation for SMBs"
+  ],
+  "key_people": [
+    {
+      "name": "Oren Boiman",
+      "role": "Founder & CEO"
+    },
+    {
+      "name": "Alex Rav-Acha",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Acquired",
+    "total_usd_m": 29.1,
+    "investors": [
+      "Horizons Ventures",
+      "Magma Venture Partners",
+      "Qualcomm Ventures",
+      "SanDisk",
+      "Mail.Ru Group",
+      "OurCrowd"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Vimeo",
+      "note": "April 2019, reported ~$200M"
+    }
+  ],
+  "tags": [
+    "video editing",
+    "AI editing",
+    "SMB marketing",
+    "exit",
+    "automated-editing"
+  ],
+  "sources": [
+    "https://en.globes.co.il/en/article-vimeo-buys-israeli-video-creation-co-magisto-for-200m-1001282344",
+    "https://techcrunch.com/2019/04/15/vimeo-has-acquired-short-form-video-creation-platform-magisto",
+    "https://www.calcalistech.com/ctechnews/article/sjtjgbabzx",
+    "https://en.wikipedia.org/wiki/Magisto",
+    "https://startupim.com/company/magisto"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Vimeo was itself acquired by Bending Spoons (closed Nov 2025). Calcalist (20 Jan 2026): most Israeli staff laid off, local ops expected to shut.",
+  "description_he": "עורך וידאו מבוסס AI (ווב ומובייל) שנוסד בנס ציונה, שניתח אוטומטית את הקליפים והתמונות של המשתמשים וערך אותם לסרטונים קצרים עם מוזיקה; מחלוצי ה'וידאו החכם' לצרכנים ולעסקים קטנים. נרכש על ידי Vimeo באפריל 2019 (כ-200 מיליון דולר) ושולב בהמשך במוצרי Vimeo."
+}

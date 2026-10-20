@@ -1,0 +1,70 @@
+{
+  "id": "cloudinary",
+  "name": "Cloudinary",
+  "kind": "startup",
+  "categories": [
+    "media-infrastructure",
+    "photo-tools",
+    "video-tools"
+  ],
+  "description": "Image and video management platform (digital asset management, transformation, optimization and delivery APIs) used by developers and marketing teams. Founded in Israel in 2012 by Itai Lahan, Tal Lev-Ami and Nadav Soferman; major R&D in Petah Tikva, US HQ in Santa Clara. Valued at $2B in a 2022 Blackstone secondary.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva",
+    "other_offices": [
+      "Santa Clara",
+      "London",
+      "Kraków"
+    ]
+  },
+  "founded": 2012,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://cloudinary.com",
+  "services": [
+    "Image & video APIs",
+    "Digital asset management (DAM)",
+    "Media optimization & CDN delivery",
+    "AI media tagging/editing"
+  ],
+  "key_people": [
+    {
+      "name": "Itai Lahan",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Tal Lev-Ami",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Nadav Soferman",
+      "role": "Co-founder & CPO"
+    }
+  ],
+  "funding": {
+    "stage": "Private (secondary rounds)",
+    "investors": [
+      "Blackstone Growth",
+      "Bessemer Venture Partners",
+      "Salesforce Ventures"
+    ],
+    "public": false
+  },
+  "tags": [
+    "DAM",
+    "APIs",
+    "image optimization",
+    "unicorn"
+  ],
+  "sources": [
+    "https://cloudinary.com",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3929533,00.html",
+    "https://en.wikipedia.org/wiki/Cloudinary"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Reported $100M ARR in 2021. Headcount estimates 325-411 (third-party).",
+  "description_he": "פלטפורמה לניהול תמונות ווידאו (ניהול נכסים דיגיטליים ו-APIs להמרה, אופטימיזציה והגשה) שמשמשת מפתחים וצוותי שיווק. נוסדה בישראל ב-2012 על ידי איתי להן, טל לב-עמי ונדב סופרמן; מרכז פיתוח גדול בפתח תקווה, מטה אמריקאי בסנטה קלרה. הוערכה ב-2 מיליארד דולר בעסקת סקנדרי של Blackstone ב-2022.",
+  "name_he": "קלאודינרי"
+}

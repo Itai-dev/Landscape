@@ -1,0 +1,154 @@
+{
+  "id": "gitam-bbdo",
+  "name": "Gitam BBDO",
+  "name_he": "גיתם BBDO",
+  "aka": [
+    "Gitam"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Tel Aviv advertising agency founded in 1979 by Moshe Theumim and Yochanan Goldberg; BBDO (Omnicom) acquired a 49% stake in 1994, the first international ownership of an Israeli agency. The group includes strategic consulting arm BBDO IM and agency Pitch, and co-owns media agency OMD Israel with Yehoshua TBWA. Won the Winner sports-betting account in 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1979,
+  "status": "active",
+  "website": "https://www.gitam.co.il",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/gitam-bbdo"
+  },
+  "notable_clients": [
+    "Toto / Winner",
+    "L'Oréal Paris (Israel)",
+    "Israel Cancer Association",
+    "Fly Card (early campaign, via Pitch)",
+    "Bank Hapoalim",
+    "Winner (Israel Sports Betting Board)"
+  ],
+  "notable_work": [
+    "Israel Cancer Association 'Second hand market' (2008)",
+    "Bank Hapoalim 90s campaign with Irena and Hila Korach (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Moshe (Moshik) Theumim",
+      "role": "Co-founder, Chairman"
+    },
+    {
+      "name": "Yochanan Goldberg",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Eddo Har-Tov",
+      "role": "Partner & Group CEO (Globes, 2025-26)"
+    },
+    {
+      "name": "Lior Tanner",
+      "role": "CEO",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1113422",
+      "as_of": "2026-05-18"
+    },
+    {
+      "name": "Ron Litani",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1126468",
+      "as_of": "2026-08-21"
+    },
+    {
+      "name": "Adam Feder",
+      "role": "VP Creative (joined from Reuveni Pridan, May 2026)",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1113422",
+      "as_of": "2026-05-18"
+    },
+    {
+      "name": "Roi Turgeman",
+      "role": "Production (agency producer)",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1126468",
+      "as_of": "2026-08-21"
+    },
+    {
+      "name": "Udi Lazar",
+      "role": "Production (agency producer)",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1126468",
+      "as_of": "2026-08-21"
+    },
+    {
+      "name": "Sagi Wallenstein",
+      "role": "Studio manager",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1126468",
+      "as_of": "2026-08-21"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "BBDO / Omnicom",
+      "note": "BBDO holds 49% (since 1994)"
+    },
+    {
+      "type": "subsidiary",
+      "target": "omd-israel",
+      "note": "Co-owned with Yehoshua TBWA"
+    },
+    {
+      "type": "subsidiary",
+      "target": "Pitch",
+      "note": "Agency in the Gitam group"
+    },
+    {
+      "type": "subsidiary",
+      "target": "BBDO IM",
+      "note": "Strategic consulting & crisis management"
+    },
+    {
+      "type": "subsidiary",
+      "target": "peach-content",
+      "note": "Content agency of the Gitam group"
+    },
+    {
+      "type": "client",
+      "target": "bank-hapoalim"
+    }
+  ],
+  "tags": [
+    "omnicom",
+    "bbdo",
+    "network-agency",
+    "top-agency"
+  ],
+  "sources": [
+    "https://israeliamerican.org/node/3614",
+    "https://www.globes.co.il/news/article.aspx?did=1001528646",
+    "https://www.globes.co.il/news/article.aspx?did=1001540738",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.adsoftheworld.com/campaigns/second-hand-market",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113422",
+    "https://www.ice.co.il/advertising-marketing/news/article/1126468",
+    "https://www.ice.co.il/advertising-marketing/news/article/1081618",
+    "https://www.ice.co.il/advertising-marketing/news/article/1110615",
+    "https://www.linkedin.com/company/gitam-bbdo",
+    "https://www.ice.co.il/advertising-marketing/news/article/1090591"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "gitam.co.il showed an under-construction page on 2026-10-18. Theumim received an Effie Israel lifetime achievement award in 2026.",
+  "description_he": "משרד פרסום תל אביבי שנוסד ב-1979 על ידי משה תאומים ויוחנן גולדברג; ב-1994 רכשה BBDO (אומניקום) 49% ממניותיו, הבעלות הבינלאומית הראשונה במשרד פרסום ישראלי. הקבוצה כוללת את זרוע הייעוץ האסטרטגי BBDO IM ואת משרד הפרסום Pitch, ומחזיקה יחד עם יהושע TBWA במשרד המדיה OMD ישראל. המשרד זכה בתקציב ווינר ב-2026."
+}

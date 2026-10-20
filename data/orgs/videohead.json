@@ -1,0 +1,64 @@
+{
+  "id": "videohead",
+  "name": "VideoHead",
+  "name_he": "וידאו הד",
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "commercial-production",
+    "ai-creative"
+  ],
+  "description": "Israeli studio for ads, promo films and animation founded in 2010 by Itai Efrimi and Roi Katri, producing typographic and 2D animation, 3D product content, TV/digital ads and AI-generated video for government, corporate and sports clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2010,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://videohead.co.il",
+  "contact_url": "https://videohead.co.il/contact/",
+  "reel_url": "https://www.youtube.com/watch?v=9wwi_7CvrpU",
+  "services": [
+    "Corporate promo films",
+    "2D and typographic animation",
+    "TV and digital ads",
+    "Training videos",
+    "AI-generated video",
+    "3D product content"
+  ],
+  "notable_clients": [
+    "Israel Ministry of Foreign Affairs",
+    "Israel Aerospace Industries",
+    "Clal Insurance",
+    "Bezeq",
+    "Intel",
+    "Maccabi Tel Aviv"
+  ],
+  "key_people": [
+    {
+      "name": "Itai Efrimi",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Roi Katri",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "ai-video",
+    "government"
+  ],
+  "sources": [
+    "https://videohead.co.il",
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://videohead.co.il/",
+    "https://www.youtube.com/watch?v=9wwi_7CvrpU"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו ישראלי לפרסומות, סרטי תדמית ואנימציה שנוסד ב-2010 על ידי איתי אפרימי ורועי קטרי, ומפיק אנימציה טיפוגרפית ו-2D, תוכן מוצר בתלת-ממד, פרסומות לטלוויזיה ולדיגיטל ווידאו שנוצר ב-AI ללקוחות ממשלתיים, עסקיים ומעולם הספורט."
+}

@@ -1,0 +1,57 @@
+{
+  "id": "replay-technologies",
+  "name": "Replay Technologies",
+  "kind": "startup",
+  "categories": [
+    "sports-media",
+    "3d-tools",
+    "creative-technology"
+  ],
+  "description": "Tel Aviv company (founded 2011) that developed freeD 'free-dimensional video', capturing live scenes as 3D data so broadcasters could render replays from any angle; used in sports broadcasts such as the YES Network's 'YES View'. Acquired by Intel in March 2016 (reported $175M).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Newark"
+    ]
+  },
+  "founded": 2011,
+  "status": "acquired",
+  "services": [
+    "freeD volumetric 360° replay for sports broadcasting"
+  ],
+  "key_people": [
+    {
+      "name": "Oren Yogev",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Matteo Shapira",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Aviv Shapira",
+      "role": "Co-founder & COO"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Intel",
+      "note": "March 2016, reported $175M"
+    }
+  ],
+  "tags": [
+    "volumetric video",
+    "sports replay",
+    "broadcast"
+  ],
+  "sources": [
+    "https://startupim.com/company/replay-technologies"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single directory source fetched; Intel acquisition widely reported but not re-verified here.",
+  "description_he": "חברה מתל אביב (נוסדה ב-2011) שפיתחה את freeD – \"וידאו חופשי-ממדים\" שמצלם סצנות חיות כדאטה תלת-ממדי ומאפשר לגופי שידור לייצר ריפליי מכל זווית; שימשה בשידורי ספורט כמו 'YES View' של YES Network. נרכשה על ידי אינטל במרץ 2016 (לפי הדיווחים תמורת 175 מיליון דולר)."
+}

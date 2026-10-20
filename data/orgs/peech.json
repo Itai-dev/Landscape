@@ -1,0 +1,58 @@
+{
+  "id": "peech",
+  "name": "Peech",
+  "aka": [
+    "Peech AI"
+  ],
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "gen-ai-video"
+  ],
+  "description": "Tel Aviv AI video-editing platform that automatically edits talking-head and webinar footage (removing pauses and filler words), applies brand kits, adds captions and repurposes long videos into branded short clips for marketing teams.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2020,
+  "status": "unknown",
+  "services": [
+    "AI video editing",
+    "Brand-kit automation",
+    "Video repurposing"
+  ],
+  "key_people": [
+    {
+      "name": "Danielle Dafni",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Johnathan Amit Kanarek",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Seed",
+    "total_usd_m": 8.3,
+    "investors": [
+      "Ibex Investors",
+      "Cardumen Capital",
+      "Fresh Fund",
+      "Nas Daily"
+    ]
+  },
+  "tags": [
+    "content-marketing",
+    "video-repurposing"
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctechnews/article/sj7mwerp9",
+    "https://www.israelhayom.com/2022/08/02/ai-content-creation-startup-peech-raises-8-3m-in-seed-funding",
+    "https://voicebot.ai/2022/08/18/ai-video-editor-startup-peech-raises-8-3m/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "As of 2026-10-18 the former website domain (peech-ai.com) no longer resolves and peech.ai is a parked domain-for-sale page - company may have shut down or rebranded; verify. Founder roles (CEO/CTO) per common reporting.",
+  "description_he": "פלטפורמת עריכת וידאו מבוססת AI מתל אביב שעורכת אוטומטית צילומי טוקינג-הד ווובינרים (מסירה הפסקות ומילות מילוי), מחילה ערכות מותג, מוסיפה כתוביות וממירה סרטונים ארוכים לקליפים קצרים ממותגים עבור צוותי שיווק."
+}

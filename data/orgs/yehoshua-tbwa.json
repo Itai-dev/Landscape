@@ -1,0 +1,127 @@
+{
+  "id": "yehoshua-tbwa",
+  "name": "Yehoshua TBWA",
+  "name_he": "יהושע TBWA",
+  "aka": [
+    "TBWA\\Yehoshua",
+    "Yehoshua\\TBWA"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising"
+  ],
+  "description": "Tel Aviv advertising agency founded by Rami Yehoshua in 1994; TBWA (Omnicom) bought a 25% stake in 1997. Co-owns media agency OMD Israel with Gitam BBDO. Handled the Toto/Winner account 2009-2026; known for work for adidas, Maccabi, Discount Bank, LG and The North Face.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1994,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://www.ytbwa.co.il/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/yehoshua-tbwa",
+    "facebook": "https://www.facebook.com/TBWA.YEHOSHUA",
+    "instagram": "https://www.instagram.com/ytbwa/"
+  },
+  "notable_clients": [
+    "Assuta",
+    "adidas",
+    "Maccabi Healthcare Services",
+    "Israel Discount Bank",
+    "LG",
+    "The North Face",
+    "Toto (2009-2026)",
+    "Toyota",
+    "McDonald's",
+    "IBI",
+    "De'Longhi",
+    "Of Tov",
+    "BAT",
+    "Sugat",
+    "Bar-Ilan University",
+    "Jerusalem Municipality"
+  ],
+  "notable_work": [
+    "The North Face 'Happy Winter' (2018)",
+    "Maccabi 'Mobile meds' (2013)",
+    "adidas 'Speed bump' (2010)"
+  ],
+  "key_people": [
+    {
+      "name": "Rami Yehoshua",
+      "role": "Chairman & owner",
+      "role_type": "founder",
+      "source": "https://www.ytbwa.co.il/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Moran Dai",
+      "role": "CEO (appointed Nov 2025)",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1089808",
+      "as_of": "2025-11-05"
+    },
+    {
+      "name": "Amir Nissani",
+      "role": "VP Production",
+      "role_type": "production",
+      "source": "https://www.ytbwa.co.il/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Yigal Ezra",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ytbwa.co.il/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "David Unger",
+      "role": "VP Design",
+      "role_type": "creative_lead",
+      "source": "https://www.ytbwa.co.il/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "TBWA / Omnicom",
+      "note": "TBWA acquired 25% stake in 1997"
+    },
+    {
+      "type": "subsidiary",
+      "target": "omd-israel",
+      "note": "Co-owned with Gitam BBDO"
+    }
+  ],
+  "tags": [
+    "omnicom",
+    "tbwa",
+    "network-agency"
+  ],
+  "sources": [
+    "https://www.globes.co.il/news/article.aspx?did=138811",
+    "https://www.globes.co.il/news/article.aspx?did=1001540738",
+    "https://www.globes.co.il/news/article.aspx?did=1001528646",
+    "https://blogs.timesofisrael.com/author/rami-yehoshua/",
+    "https://www.adsoftheworld.com/campaigns/happy-winter",
+    "https://www.ytbwa.co.il/",
+    "https://www.linkedin.com/company/yehoshua-tbwa",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089808",
+    "https://www.ice.co.il/advertising-marketing/news/article/1119069"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Domain yehoshua-tbwa.co.il appears to exist but could not be verified.",
+  "description_he": "משרד פרסום תל אביבי שייסד רמי יהושע ב-1994; TBWA (אומניקום) רכשה 25% ממנו ב-1997. שותף עם גיתם BBDO בבעלות על משרד המדיה OMD ישראל. החזיק בתקציב טוטו/ווינר ב-2009–2026; ידוע בעבודותיו עבור אדידס, מכבי, בנק דיסקונט, LG ו-The North Face."
+}

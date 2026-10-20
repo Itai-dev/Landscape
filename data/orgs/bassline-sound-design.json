@@ -1,0 +1,65 @@
+{
+  "id": "bassline-sound-design",
+  "name": "Bassline Sound Design",
+  "name_he": "בייסליין",
+  "kind": "studio",
+  "categories": [
+    "sound-design",
+    "music-production"
+  ],
+  "description": "Israeli sound studio credited by ICE for sound on TV campaigns including Albar with Assaf Granit (Reuveni Pridan, 2024), Migdal with Noa Tishby (Gitam BBDO, 2025) and BuyMe's Rosh Hashana campaign (Peach, 2025).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/bassline-sound-design"
+  },
+  "services": [
+    "Sound design for commercials",
+    "Game & interactive audio",
+    "Film sound",
+    "Radio & podcasts"
+  ],
+  "notable_clients": [
+    "BuyMe",
+    "Albar",
+    "Migdal"
+  ],
+  "notable_work": [
+    "BuyMe TV campaign with Shalom Michaelshvili & Liel Eli (2025)",
+    "Albar — campaign with Assaf Granit (2024)",
+    "Migdal — campaign with Noa Tishby (2025)",
+    "BuyMe — Rosh Hashana hosting campaign with Shalom Michaelshvili & Liel Eli (2025)"
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "grossman-tv",
+      "note": "Shared credits on BuyMe campaign (2025)"
+    },
+    {
+      "type": "client",
+      "target": "BuyMe",
+      "note": "Rosh Hashana hosting campaign with Shalom Michaelshvili & Liel Eli, 2025-09, via Peach, dir. Ben Bachar (sound) (ICE credits)"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "sound-mix",
+    "games"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/bassline-sound-design",
+    "https://www.ice.co.il/advertising-marketing/news/article/1084598",
+    "https://www.ice.co.il/advertising-marketing/news/article/1012022",
+    "https://www.ice.co.il/advertising-marketing/news/article/1052337"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "No website found; ICE credit reads 'סאונד: בייסליין'.",
+  "description_he": "סטודיו סאונד ישראלי ש-ICE מקרדט על עיצוב הסאונד בקמפייני טלוויזיה, ובהם אלבר עם אסף גרניט (ראובני פרידן, 2024), מגדל עם נועה תשבי (גיתם BBDO, 2025) וקמפיין ראש השנה של BuyMe (Peach, 2025)."
+}

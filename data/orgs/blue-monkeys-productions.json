@@ -1,0 +1,62 @@
+{
+  "id": "blue-monkeys-productions",
+  "name": "Blue Monkeys Productions",
+  "aka": [
+    "Blue Monkeys"
+  ],
+  "kind": "studio",
+  "categories": [
+    "commercial-production",
+    "animation-2d",
+    "animation-3d",
+    "motion-design"
+  ],
+  "description": "Family-run video studio for tech and B2B brands, operating from Israel and Portugal, offering end-to-end production with live action, 2D/3D and AI-assisted animation, motion graphics and post for SaaS, cyber, fintech and gaming companies.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Porto, Portugal"
+    ]
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://blue-monkeys.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/blue-monkeys-productions",
+    "instagram": "https://www.instagram.com/bluemonkeys_productions",
+    "youtube": "https://www.youtube.com/@BlueMonkeysPro"
+  },
+  "services": [
+    "Brand and product videos",
+    "2D/3D animation",
+    "Motion graphics",
+    "Live action",
+    "TV commercials",
+    "IPO roadshow videos"
+  ],
+  "key_people": [
+    {
+      "name": "Barak Shavit",
+      "role": "Co-CEO & Creative Director"
+    },
+    {
+      "name": "Orr Shavit",
+      "role": "Co-CEO & Marketing"
+    }
+  ],
+  "tags": [
+    "tech",
+    "b2b",
+    "explainers"
+  ],
+  "sources": [
+    "https://blue-monkeys.com",
+    "https://clutch.co/il/agencies/video-production/animation/tel-aviv",
+    "https://blue-monkeys.com/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו וידאו משפחתי למותגי טכנולוגיה ו-B2B, הפועל מישראל ומפורטוגל, ומציע הפקה מקצה לקצה עם לייב אקשן, אנימציה דו-ממדית ותלת-ממדית ואנימציה בסיוע AI, מושן גרפיקס ופוסט לחברות SaaS, סייבר, פינטק וגיימינג."
+}

@@ -1,0 +1,75 @@
+{
+  "id": "leo-burnett-tel-aviv",
+  "name": "Leo Burnett Tel Aviv",
+  "name_he": "ליאו ברנט תל אביב",
+  "aka": [
+    "Leo Burnett Israel",
+    "Leo Israel"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising"
+  ],
+  "description": "Tel Aviv office of the Leo Burnett network and a long-standing agency brand within Publicis Groupe Israel. Ranked No.8 in the 2023 Yifat-based Israeli agency ranking.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/leo-burnett-israel",
+    "facebook": "https://www.facebook.com/LeoBurnettil/"
+  },
+  "notable_work": [
+    "BBF 'Your best bathroom friend' (2018)"
+  ],
+  "key_people": [
+    {
+      "name": "Adam Polachek",
+      "role": "CEO (credited 2018)"
+    },
+    {
+      "name": "Shani Shaul Vingosh",
+      "role": "CEO, Leo Burnett Israel; since Jan 2026 also CEO of Baumann Ber Rivnai",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1099727",
+      "as_of": "2026-01-13"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Publicis Groupe Israel"
+    },
+    {
+      "type": "client",
+      "target": "AION",
+      "note": "EV launch with Revital Witelson-Jacobs, 2025-10 (ICE credits)"
+    }
+  ],
+  "tags": [
+    "publicis",
+    "network-agency"
+  ],
+  "sources": [
+    "https://www.publicisgroupe.com/en/news/press-releases/publicis-groupe-announces-new-appointments-in-israel",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.adsoftheworld.com/campaigns/your-best-bathroom-friend",
+    "https://www.globes.co.il/news/article.aspx?did=1001528646",
+    "https://www.ice.co.il/advertising-marketing/news/article/1099727",
+    "https://www.linkedin.com/company/leo-burnett-israel",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089160"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Leo Burnett network rebranded globally; local branding not verified. 5 finalists at Granot 2025 competition. Leadership from 2018 credits.",
+  "description_he": "הסניף התל אביבי של רשת ליאו ברנט ומותג משרד פרסום ותיק בתוך פובליסיס גרופ ישראל. דורג במקום ה-8 בדירוג משרדי הפרסום הישראליים לשנת 2023 המבוסס על נתוני יפעת."
+}

@@ -1,0 +1,117 @@
+{
+  "id": "scpg-shortcut-playground",
+  "name": "SCPG – Shortcut Playground",
+  "aka": [
+    "Shortcut Playground"
+  ],
+  "kind": "studio",
+  "categories": [
+    "motion-design",
+    "vfx",
+    "branding",
+    "experiential",
+    "xr"
+  ],
+  "description": "Tel Aviv design, motion and VFX house formed in 2010 by merging Shortcut (content & animation) and Playground (broadcast branding & promos for HOT). Does broadcast design, branding, commercial VFX (3D, compositing, color), experience design for museums, facades and visitor centers, and AR/VR; work includes KAN's Eurovision 2019, HOT, Amdocs, 888 and the Google Store.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2010,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://scpg.tv/",
+  "contact_url": "https://scpg.tv/contact/",
+  "careers_url": "https://scpg.tv/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/shortcut-playground/",
+    "vimeo": "https://vimeo.com/user7202017",
+    "instagram": "https://www.instagram.com/shortcut_playground/",
+    "facebook": "https://www.facebook.com/ShortcutPlayground"
+  },
+  "services": [
+    "Broadcast design & on-air promos",
+    "Branding",
+    "Commercial VFX & post",
+    "Experience design (museums, facades, visitor centers)",
+    "AR / VR / interactive",
+    "Animated content"
+  ],
+  "notable_clients": [
+    "HOT",
+    "KAN",
+    "Amdocs",
+    "888",
+    "Google",
+    "Datarails",
+    "Park Tzafon"
+  ],
+  "notable_work": [
+    "Eurovision Song Contest Tel Aviv 2019 (KAN)",
+    "HOT brand",
+    "Amdocs Studios"
+  ],
+  "key_people": [
+    {
+      "name": "Naor Ron",
+      "role": "CEO, Founder",
+      "role_type": "founder",
+      "source": "https://scpg.tv/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Adam Feinberg",
+      "role": "CCO, Senior Partner",
+      "role_type": "creative_lead",
+      "source": "https://scpg.tv/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Amit Krasny",
+      "role": "CTO, Head of Interactive",
+      "role_type": "executive",
+      "source": "https://scpg.tv/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Hila Shmueli",
+      "role": "COO, Executive VP Clients",
+      "role_type": "executive",
+      "source": "https://scpg.tv/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Osnat Baum",
+      "role": "Head of Project Management",
+      "role_type": "production",
+      "source": "https://scpg.tv/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "hot"
+    },
+    {
+      "type": "client",
+      "target": "kan"
+    }
+  ],
+  "tags": [
+    "broadcast-design",
+    "museums",
+    "eurovision",
+    "vfx",
+    "interactive"
+  ],
+  "sources": [
+    "https://scpg.tv/about/",
+    "https://il.linkedin.com/company/shortcut-playground"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "ICE ad credits list a post house 'פלייגראונד' (Playground) on Mizrahi Tefahot and Arkia 2026 spots — likely SCPG but not confirmed, so not linked.",
+  "description_he": "בית עיצוב, מושן ו-VFX בתל אביב שהוקם ב-2010 ממיזוג של Shortcut (תוכן ואנימציה) ו-Playground (מיתוג ערוצים ופרומואים עבור HOT). עוסק בעיצוב לשידור, מיתוג, VFX לפרסומות (תלת-ממד, קומפוזיטינג, צבע), עיצוב חוויה למוזיאונים, חזיתות ומרכזי מבקרים, ו-AR/VR; בין העבודות: האירוויזיון 2019 של כאן, HOT, אמדוקס, 888 וה-Google Store."
+}

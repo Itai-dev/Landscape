@@ -1,0 +1,65 @@
+{
+  "id": "bigvu",
+  "name": "BIGVU",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "creator-economy",
+    "avatars"
+  ],
+  "description": "Be'er Sheva-founded AI video studio for creators, realtors, coaches and marketers: teleprompter recording, AI captions and editing, AI script writing, voice cloning and 'AI twin' avatars, plus a done-for-you 'SuperAgent' video service.",
+  "location": {
+    "country": "IL",
+    "city": "Be'er Sheva",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2016,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://bigvu.tv",
+  "services": [
+    "Teleprompter app",
+    "Auto-captions & video editing",
+    "Social publishing & scheduling",
+    "AI scripts / avatars",
+    "AI video editing & captions",
+    "AI twin avatar",
+    "Voice cloning"
+  ],
+  "key_people": [
+    {
+      "name": "David Amselem",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Herve Muyal",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "total_usd_m": 3.1,
+    "investors": [
+      "SIBF",
+      "SuperCapital",
+      "Intempo Ventures"
+    ]
+  },
+  "tags": [
+    "teleprompter",
+    "talking-head video",
+    "social video",
+    "creator-tools"
+  ],
+  "sources": [
+    "https://bigvu.tv",
+    "https://startupim.com/company/bigvu",
+    "https://bigvu.tv/terms"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Official site lists BIGVU Inc. in New York; Israeli HQ (Be'er Sheva) per startupim/registry. Israeli entity flagged for unfiled annual reports since 2022 — current Israeli operations unclear.",
+  "description_he": "סטודיו וידאו מבוסס AI שנוסד בבאר שבע, ליוצרים, מתווכי נדל\"ן, מאמנים ומשווקים: הקלטה עם טלפרומפטר, כתוביות ועריכה ב-AI, כתיבת תסריטים ב-AI, שיבוט קול ואווטארים של 'תאום AI', לצד שירות וידאו מלא 'SuperAgent'."
+}

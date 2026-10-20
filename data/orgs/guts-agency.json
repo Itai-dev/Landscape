@@ -1,0 +1,47 @@
+{
+  "id": "guts-agency",
+  "name": "Guts",
+  "aka": [
+    "guts.agency"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design"
+  ],
+  "description": "Tel Aviv creative agency working with tech and consumer companies on brand and strategy, digital experiences and products.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://guts.agency",
+  "contact_url": "https://guts.agency/contact",
+  "reel_url": "https://vimeo.com/765443684",
+  "links": {
+    "facebook": "https://www.facebook.com/guts.agency/",
+    "instagram": "https://www.instagram.com/guts_agency/",
+    "linkedin": "https://www.linkedin.com/company/guts-agency"
+  },
+  "services": [
+    "branding and strategy",
+    "digital experiences",
+    "product design"
+  ],
+  "notable_clients": [
+    "HP (Drupa)",
+    "Google Cloud",
+    "Darrow",
+    "Evigence"
+  ],
+  "sources": [
+    "https://guts.agency",
+    "https://www.awwwards.com/directory/Israel/",
+    "https://guts.agency/",
+    "https://vimeo.com/765443684"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "משרד קריאייטיב תל אביבי שעובד עם חברות טכנולוגיה וצרכנות על מותג ואסטרטגיה, חוויות דיגיטליות ומוצרים."
+}

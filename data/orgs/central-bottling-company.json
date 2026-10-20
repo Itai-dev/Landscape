@@ -1,0 +1,58 @@
+{
+  "id": "central-bottling-company",
+  "name": "Central Bottling Company (Coca-Cola Israel)",
+  "name_he": "החברה המרכזית לייצור משקאות קלים",
+  "aka": [
+    "CBC Group",
+    "Coca-Cola Israel"
+  ],
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israel's Coca-Cola bottler (est. 1968), controlled by the Wertheim family; group also includes Neviot water, Prigat juices, Tara dairy and Israel Breweries (Carlsberg, Tuborg), and controls broadcaster Keshet.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 1968,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.cbcsales.co.il",
+  "key_people": [
+    {
+      "name": "Amit Yanai",
+      "role": "Marketing Manager, Carbonated Drinks Business Unit",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1117353",
+      "as_of": "2026-06-17"
+    }
+  ],
+  "client_profile": {
+    "industry": "beverages",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ]
+  },
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "keshet-media-group",
+      "note": "CBC holds ~64.6% of Keshet Broadcasting (he.wikipedia)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%94%D7%97%D7%91%D7%A8%D7%94_%D7%94%D7%9E%D7%A8%D7%9B%D7%96%D7%99%D7%AA_%D7%9C%D7%99%D7%99%D7%A6%D7%95%D7%A8_%D7%9E%D7%A9%D7%A7%D7%90%D7%95%D7%AA_%D7%A7%D7%9C%D7%99%D7%9D",
+    "https://www.ice.co.il/advertising-marketing/news/article/1117353"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Agency of record not confirmed in recent trade press.",
+  "description_he": "זכיינית קוקה-קולה בישראל (נוסדה ב-1968), בשליטת משפחת ורטהיים; בקבוצה גם מי עדן נביעות, מיצי פריגת, מחלבות טרה ומבשלות בירה ישראל (קרלסברג, טובורג), והיא שולטת בגוף השידור קשת."
+}

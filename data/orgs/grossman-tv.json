@@ -1,0 +1,80 @@
+{
+  "id": "grossman-tv",
+  "name": "Grossman TV",
+  "name_he": "גרוסמן TV",
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "post-production",
+    "color-grading",
+    "motion-design"
+  ],
+  "description": "Tel Aviv VFX, post-production and color-grade boutique led by Omri Grossman. Credited as post house on Bank Discount's 2025 campaign (Adler Chomski Warshavsky, Mola Productions) and BuyMe's 2025 campaign (Peach); site work includes mobile-game spots (Bingo Blitz, Solitaire Grand Harvest, Best Fiends), Samsung Fold, Clalit and N12.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.grossman.tv",
+  "contact_url": "https://www.grossman.tv/contact",
+  "reel_url": "https://www.grossman.tv/showreel",
+  "links": {
+    "facebook": "https://www.facebook.com/omrigman/"
+  },
+  "services": [
+    "VFX & compositing",
+    "Online / finishing",
+    "Color grading",
+    "Motion design"
+  ],
+  "notable_clients": [
+    "Israel Discount Bank",
+    "BuyMe",
+    "Samsung",
+    "Clalit",
+    "N12"
+  ],
+  "notable_work": [
+    "Discount Bank youth campaign with Rotem Sela & Idan Telem (2025)",
+    "BuyMe campaign (2025)"
+  ],
+  "key_people": [
+    {
+      "name": "Omri Grossman",
+      "role": "Post / VFX lead (founder)",
+      "role_type": "founder",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1084598",
+      "as_of": "2025-09-19"
+    }
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "israel-discount-bank"
+    },
+    {
+      "type": "client",
+      "target": "adler-chomski-warshavsky"
+    },
+    {
+      "type": "partner",
+      "target": "mola-productions"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "vfx",
+    "finishing",
+    "mobile-games"
+  ],
+  "sources": [
+    "https://www.grossman.tv/bio",
+    "https://www.ice.co.il/advertising-marketing/news/article/1073960",
+    "https://www.ice.co.il/advertising-marketing/news/article/1084598"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "בוטיק VFX, פוסט ותיקוני צבע מתל אביב בהובלת עמרי גרוסמן. קיבל קרדיט כבית הפוסט של קמפיין בנק דיסקונט 2025 (אדלר חומסקי ורשבסקי, מולה הפקות) ושל קמפיין BuyMe 2025 (Peach); באתר עבודות לפרסומות משחקי מובייל (Bingo Blitz, Solitaire Grand Harvest, Best Fiends), סמסונג Fold, כללית ו-N12."
+}

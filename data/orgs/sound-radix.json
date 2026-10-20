@@ -1,0 +1,60 @@
+{
+  "id": "sound-radix",
+  "name": "Sound Radix",
+  "kind": "startup",
+  "categories": [
+    "music-tech",
+    "sound-design"
+  ],
+  "description": "Tel Aviv audio-software company founded in 2010 by Nir Averbuch, Yair Chuchem and Dan Raviv, making plug-ins for music production, mixing and audio post such as Auto-Align (multi-mic phase/time alignment), SurferEQ, Drum Leveler and Muteomatic. Auto-Align Post earned a 2020 Technical Emmy and a 2025 Sci-Tech Oscar.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2010,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.soundradix.com",
+  "services": [
+    "Auto-Align 2 / Auto-Align Post 2",
+    "SurferEQ 2",
+    "Drum Leveler",
+    "Muteomatic",
+    "POWAIR",
+    "Radical1 instrument"
+  ],
+  "key_people": [
+    {
+      "name": "Nir Averbuch",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Yair Chuchem",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Dan Raviv",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Bootstrapped",
+    "public": false
+  },
+  "tags": [
+    "audio plugins",
+    "post-production audio",
+    "mixing",
+    "Emmy",
+    "Oscar Sci-Tech"
+  ],
+  "sources": [
+    "https://www.soundradix.com/about/",
+    "https://startupim.com/company/sound-radix"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Size from startupim (9 employees). Official site says it had no outside investors at the start.",
+  "description_he": "חברת תוכנות אודיו מתל אביב שנוסדה ב-2010 על ידי ניר אברבוך, יאיר חוכם ודן רביב, ומפתחת פלאגינים להפקה מוזיקלית, מיקס ופוסט אודיו, כמו Auto-Align (יישור פאזה וזמן בין מיקרופונים), SurferEQ, Drum Leveler ו-Muteomatic. Auto-Align Post זכה בפרס אמי טכני ב-2020 ובאוסקר מדעי-טכני (Sci-Tech) ב-2025."
+}

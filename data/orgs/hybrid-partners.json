@@ -1,0 +1,45 @@
+{
+  "id": "hybrid-partners",
+  "name": "Hybrid",
+  "name_he": "הייבריד",
+  "aka": [
+    "Hybrid Partners Ltd"
+  ],
+  "kind": "studio",
+  "categories": [
+    "digital-design",
+    "branding"
+  ],
+  "description": "Israeli studio combining strategy, technology, design and digital marketing, formed by merging the creative studio Wicked with the technology company Quattro.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://hybrid.co.il",
+  "contact_url": "https://hybrid.co.il/contact/",
+  "careers_url": "https://hybrid.co.il/careers/",
+  "reel_url": "https://vimeo.com/965720493",
+  "links": {
+    "instagram": "https://www.instagram.com/hybrid_partners",
+    "linkedin": "https://www.linkedin.com/company/hybridfuture"
+  },
+  "services": [
+    "web development",
+    "brand strategy and design",
+    "UX/UI",
+    "digital marketing"
+  ],
+  "tags": [
+    "web"
+  ],
+  "sources": [
+    "https://hybrid.co.il",
+    "https://www.awwwards.com/directory/Israel/",
+    "https://hybrid.co.il/",
+    "https://hybrid.co.il/careers/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו ישראלי המשלב אסטרטגיה, טכנולוגיה, עיצוב ושיווק דיגיטלי, שנוצר ממיזוג סטודיו הקריאייטיב Wicked עם חברת הטכנולוגיה Quattro."
+}

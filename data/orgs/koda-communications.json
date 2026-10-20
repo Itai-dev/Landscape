@@ -1,0 +1,74 @@
+{
+  "id": "koda-communications",
+  "name": "Koda Communications",
+  "name_he": "קודה תקשורת",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Herzliya-based TV production company founded by Ram Landes (former founding editor of Channel 10 News), producing drama, documentary, reality, game shows and children's programming; formats include the reality series Connected (Machuberim), sold internationally.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "status": "active",
+  "website": "https://www.koda.co.il/",
+  "contact_url": "https://www.koda.co.il/contact/",
+  "notable_work": [
+    "Connected (Machuberim)",
+    "The Embassy",
+    "Walls of Jerusalem",
+    "Loving Anna",
+    "Your Honor"
+  ],
+  "key_people": [
+    {
+      "name": "Ram Landes",
+      "role": "Founder"
+    },
+    {
+      "name": "Anat Winner",
+      "role": "Co-CEO & CFO",
+      "role_type": "executive",
+      "source": "https://www.koda.co.il/our-team/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Limor Abekasis",
+      "role": "Executive Producer",
+      "role_type": "production",
+      "source": "https://www.koda.co.il/our-team/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Lavi Ben Gal",
+      "role": "Director & Head of Content",
+      "role_type": "creative_lead",
+      "source": "https://www.koda.co.il/our-team/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "relations": [
+    {
+      "type": "investor",
+      "target": "Liam Productions",
+      "note": "Eyal Golan's company bought part of the ownership in 2023 (per Hebrew Wikipedia)"
+    }
+  ],
+  "tags": [
+    "tv-production",
+    "reality",
+    "documentary",
+    "formats"
+  ],
+  "sources": [
+    "https://www.koda.co.il/",
+    "https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%93%D7%94_%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA",
+    "https://www.koda.co.il/our-team/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year given as 2006 on official site and 2005 on Hebrew Wikipedia; omitted.",
+  "description_he": "חברת הפקות טלוויזיה מהרצליה שהקים רם לנדס (העורך המייסד לשעבר של חדשות ערוץ 10), המפיקה דרמה, תיעודיות, ריאליטי, שעשועונים ותוכניות ילדים; בין הפורמטים: סדרת הריאליטי 'מחוברים', שנמכרה בעולם."
+}

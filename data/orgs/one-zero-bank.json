@@ -1,0 +1,81 @@
+{
+  "id": "one-zero-bank",
+  "name": "ONE ZERO",
+  "name_he": "וואן זירו",
+  "aka": [
+    "ONE ZERO Digital Bank"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance",
+    "tech"
+  ],
+  "description": "Israeli digital bank (licensed 2019, operating since 2021), founded by Marius Nacht and Prof. Amnon Shashua (now sole controller); Tel Aviv HQ, ~390 employees. Sponsored the top football league as the 'ONE ZERO League'.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2019,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://www.onezerobank.com",
+  "key_people": [
+    {
+      "name": "Nirit Ben Kish",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1096198",
+      "as_of": "2025-12-19"
+    },
+    {
+      "name": "Miri Melamed",
+      "role": "Head of Brand & Marketing Communications",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1113556",
+      "as_of": "2026-05-19"
+    }
+  ],
+  "client_profile": {
+    "industry": "digital banking",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "brand identity",
+      "custom typeface",
+      "web design",
+      "sports sponsorship content"
+    ],
+    "known_agencies": [
+      "Pressman-Baruch"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "fontef",
+      "note": "listed as a Fontef type-foundry client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "richkid",
+      "note": "listed as a Richkid client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "Fresman Baruch (פרסמן ברוך)",
+      "note": "zero-commission investment track with Gilad Kahana, 2025-12 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/ONE_ZERO",
+    "https://www.fontef.com",
+    "https://www.richkid-tlv.com",
+    "https://www.ice.co.il/advertising-marketing/news/article/1096198",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113556"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "CEO Eyal Gefen since 2025 (he.wikipedia); ad agency not confirmed. Agency as of 2025-12: Pressman-Baruch credited on the \"free investing for life\" campaign with presenter Gilad Kahana (ICE ad of the week).",
+  "description_he": "בנק דיגיטלי ישראלי (קיבל רישיון ב-2019, פועל מאז 2021) שהקימו מריוס נכט ופרופ' אמנון שעשוע (כיום בעל השליטה היחיד); מטה בתל אביב, כ-390 עובדים. נתן חסות לליגת העל בכדורגל תחת השם \"ליגת ONE ZERO\"."
+}

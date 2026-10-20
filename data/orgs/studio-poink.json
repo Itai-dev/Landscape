@@ -1,0 +1,75 @@
+{
+  "id": "studio-poink",
+  "name": "Studio Poink",
+  "aka": [
+    "Poink Animations"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design"
+  ],
+  "description": "Tel Aviv 2D animation studio making explainer videos, motion graphics, character animation and animated commercials, focused on tech, SaaS and cybersecurity brands.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://studiopoink.com",
+  "contact_url": "https://studiopoink.com/contact/",
+  "reel_url": "https://vimeo.com/1043090744",
+  "links": {
+    "youtube": "https://www.youtube.com/@studiopoinkanima9961",
+    "instagram": "https://www.instagram.com/studiopoink/",
+    "linkedin": "https://www.linkedin.com/company/poink-animation-studio"
+  },
+  "services": [
+    "Explainer videos",
+    "Motion graphics",
+    "Character animation",
+    "Animated commercials"
+  ],
+  "notable_clients": [
+    "Wiz",
+    "CyberArk",
+    "Check Point",
+    "TikTok",
+    "Fiverr",
+    "Amdocs",
+    "Playtika",
+    "Cyera",
+    "WalkMe"
+  ],
+  "key_people": [
+    {
+      "name": "Lynn Polyak",
+      "role": "Partner; producer (leads production and client relationships)",
+      "role_type": "production",
+      "source": "https://studiopoink.com/about-us/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Assaf Benharroch",
+      "role": "Partner; Art Director, illustrator & motion designer",
+      "role_type": "creative_lead",
+      "source": "https://studiopoink.com/about-us/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "explainers",
+    "saas",
+    "cybersecurity"
+  ],
+  "sources": [
+    "https://studiopoink.com",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://studiopoink.com/about-us/",
+    "https://vimeo.com/1043090744"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו אנימציית 2D בתל אביב שמפיק סרטוני הסבר, מושן גרפיקס, אנימציית דמויות ופרסומות מונפשות, עם התמקדות במותגי טכנולוגיה, SaaS וסייבר."
+}

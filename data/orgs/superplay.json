@@ -1,0 +1,64 @@
+{
+  "id": "superplay",
+  "name": "SuperPlay",
+  "kind": "startup",
+  "categories": [
+    "game-development"
+  ],
+  "description": "Israeli casual mobile game studio founded in 2019 by gaming and film industry veterans, maker of Dice Dreams, Domino Dreams and Disney Solitaire; its Dice Dreams title now appears in Playtika's portfolio.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2019,
+  "status": "acquired",
+  "website": "https://www.superplay.co/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/superplay/",
+    "instagram": "https://www.instagram.com/dicedreams_official/",
+    "facebook": "https://www.facebook.com/DiceDreams/"
+  },
+  "notable_work": [
+    "Dice Dreams",
+    "Domino Dreams",
+    "Disney Solitaire"
+  ],
+  "client_profile": {
+    "industry": "gaming",
+    "creative_needs": [
+      "game art",
+      "UA video ads",
+      "music & sound"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "playtika",
+      "note": "Dice Dreams listed among Playtika games; SuperPlay site uses Playtika's responsible-gaming service"
+    },
+    {
+      "type": "client",
+      "target": "tomer-biran-audio-artists",
+      "note": "Disney Solitaire campaign music"
+    },
+    {
+      "type": "client",
+      "target": "knob-music",
+      "note": "Dice Dreams music"
+    }
+  ],
+  "tags": [
+    "mobile-games",
+    "casual"
+  ],
+  "sources": [
+    "https://www.superplay.co/about",
+    "https://www.playtika.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Acquisition terms not verified in this pass; SuperPlay says it has 4 office locations.",
+  "description_he": "סטודיו ישראלי למשחקי מובייל קז'ואל שנוסד ב-2019 על ידי ותיקי תעשיות הגיימינג והקולנוע, ומפתח את Dice Dreams, Domino Dreams ו-Disney Solitaire; המשחק Dice Dreams מופיע כיום בפורטפוליו של פלייטיקה.",
+  "name_he": "סופרפליי"
+}

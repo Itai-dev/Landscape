@@ -1,0 +1,47 @@
+{
+  "id": "vector-4-studio",
+  "name": "Vector 4",
+  "aka": [
+    "Vector4",
+    "V4 Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "xr",
+    "creative-technology",
+    "ai-creative",
+    "cgi-3d"
+  ],
+  "description": "Tel Aviv creative production studio (Rothschild Blvd) working across four disciplines: commercials for social and TV (direction, shoot, post), generative-AI campaign assets, 3D product/environment/motion, and XR & interactive — real-time, web and experiential work.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.studio-v4.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/vector4-studio/",
+    "instagram": "https://instagram.com/v4studio"
+  },
+  "services": [
+    "XR & interactive",
+    "AI content",
+    "3D animation",
+    "Commercial production"
+  ],
+  "tags": [
+    "real-time",
+    "ai",
+    "3d",
+    "experiential"
+  ],
+  "sources": [
+    "https://www.studio-v4.com/",
+    "https://il.linkedin.com/company/vector4-studio"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "סטודיו הפקות קריאייטיב בתל אביב (שדרות רוטשילד) שעובד בארבעה תחומים: פרסומות לסושיאל ולטלוויזיה (בימוי, צילום, פוסט), נכסי קמפיין ב-AI גנרטיבי, תלת-ממד למוצר, סביבות ומושן, ו-XR ואינטראקטיב — עבודות בזמן אמת, ווב וחוויתיות."
+}

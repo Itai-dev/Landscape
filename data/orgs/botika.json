@@ -1,0 +1,54 @@
+{
+  "id": "botika",
+  "name": "Botika",
+  "kind": "startup",
+  "categories": [
+    "gen-ai-image",
+    "photo-tools"
+  ],
+  "description": "Tel Aviv startup that uses generative AI to turn basic product photos into studio-quality on-model fashion images with AI-generated models and backgrounds, serving online clothing brands via web and an iOS app.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://botika.com",
+  "services": [
+    "AI fashion model photography",
+    "E-commerce product imagery app"
+  ],
+  "key_people": [
+    {
+      "name": "Eran Dagan",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Yarin Didi Meir",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Seed",
+    "total_usd_m": 8,
+    "investors": [
+      "Stardom Ventures",
+      "Secret Chord Ventures",
+      "Seedcamp"
+    ]
+  },
+  "tags": [
+    "fashion-ecommerce",
+    "virtual-models"
+  ],
+  "sources": [
+    "https://botika.com/about",
+    "https://botika.io/thethread/a-big-step-forward-botikas-mobile-app-and-8m-seed-round",
+    "https://petapixel.com/2025/01/16/ai-company-aims-to-remove-photographers-and-models-from-fashion/",
+    "https://pulse2.com/botika-8-million-seed-secured-for-ai-generated-fashion-model-platform/amp/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$8M seed Jan 2025. Caplight lists a Dec 2025 Series A (total $18M, Infinity Ventures) - unconfirmed.",
+  "description_he": "סטארטאפ תל אביבי שמשתמש בג'נרטיב AI כדי להפוך צילומי מוצר בסיסיים לתמונות אופנה על דוגמנים באיכות סטודיו, עם דוגמנים ורקעים שנוצרו ב-AI, ומשרת מותגי ביגוד אונליין דרך הווב ואפליקציית iOS."
+}

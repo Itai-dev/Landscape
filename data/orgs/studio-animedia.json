@@ -1,0 +1,67 @@
+{
+  "id": "studio-animedia",
+  "name": "Animedia",
+  "aka": [
+    "Studio Animedia"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "sound-design"
+  ],
+  "description": "Ramat HaSharon visual-storytelling studio producing animation of all types alongside video/green-screen production, scriptwriting, voice acting, sound design and music for brands, health organizations and startups.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat HaSharon"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://studioanimedia.com",
+  "contact_url": "https://www.studioanimedia.com/contact/",
+  "reel_url": "https://vimeo.com/1219149861",
+  "links": {
+    "vimeo": "https://vimeo.com/user59374793",
+    "instagram": "https://www.instagram.com/studio_animedia/"
+  },
+  "services": [
+    "Animation",
+    "Video and green screen",
+    "Writing and direction",
+    "Sound design and voice",
+    "Music composition"
+  ],
+  "notable_clients": [
+    "Keshet",
+    "Israeli Football League",
+    "McDonald's Israel",
+    "Zebra Medical",
+    "Mapi Pharma",
+    "Maccabi",
+    "Assuta",
+    "Car2Go"
+  ],
+  "key_people": [
+    {
+      "name": "Assaf Zellner",
+      "role": "Founder & Owner",
+      "role_type": "founder",
+      "source": "https://www.studioanimedia.com/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "explainers",
+    "health"
+  ],
+  "sources": [
+    "https://studioanimedia.com",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://www.studioanimedia.com/about/",
+    "https://vimeo.com/1219149861"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו לסיפור חזותי ברמת השרון שמפיק אנימציה מכל הסוגים, לצד הפקות וידאו ומסך ירוק, כתיבת תסריטים, דיבוב, עיצוב סאונד ומוזיקה למותגים, לארגוני בריאות ולסטארטאפים."
+}

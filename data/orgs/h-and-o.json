@@ -1,0 +1,48 @@
+{
+  "id": "h-and-o",
+  "name": "H&O",
+  "name_he": "H&O",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israeli family fashion chain (est. 1992 by HaMashbir) selling clothing for men, women and kids plus footwear, homewares, bedding and toiletries; owned by the Livnat family, ~800 employees.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1992,
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://www.h-o.co.il",
+  "contact_url": "https://www.h-o.co.il/contact",
+  "client_profile": {
+    "industry": "family fashion retail",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "radio spots",
+      "seasonal campaigns",
+      "celebrity presenter campaigns",
+      "fashion photography"
+    ],
+    "known_agencies": [
+      "Cannibal Media"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "Cannibal Media",
+      "note": "Spring/Summer 2024 campaign with Chen Amsalem, ~NIS 1.5M (ICE, Mar 2024)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/H&O",
+    "https://www.ice.co.il/advertising-marketing/news/article/1004652",
+    "https://www.h-o.co.il"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "רשת אופנה ישראלית למשפחה (נוסדה ב-1992 על ידי המשביר) המוכרת ביגוד לגברים, נשים וילדים וגם הנעלה, מוצרי בית, מצעים וטואלטיקה; בבעלות משפחת לבנת, כ-800 עובדים."
+}

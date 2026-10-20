@@ -1,0 +1,68 @@
+{
+  "id": "gad-dairies",
+  "name": "Gad Dairies",
+  "name_he": "מחלבות גד",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli dairy producer (est. 1980) of cheeses, yogurts and desserts; listed on the TASE in Sept 2025. Its campaign won Platinum at the 2026 Effie Awards.",
+  "location": {
+    "country": "IL",
+    "city": "Bat Yam"
+  },
+  "founded": 1980,
+  "status": "active",
+  "website": "https://www.gad-dairy.co.il",
+  "contact_url": "https://gad-dairy.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+  "careers_url": "https://gad-dairy.co.il/gad-careers/",
+  "key_people": [
+    {
+      "name": "Maayan Dar Hasson",
+      "role": "VP Marketing & Sales",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001520086",
+      "as_of": "2025-08-27"
+    }
+  ],
+  "client_profile": {
+    "industry": "dairy",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "Reuveni-Pridan",
+      "Munch (influencers)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "reuveni-pridan",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "munch",
+      "note": "agency (per trade press / agency client list); influencers"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%97%9C%D7%91%D7%95%D7%AA_%D7%92%D7%93",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001495438",
+    "https://gad-dairy.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+    "https://gad-dairy.co.il/gad-careers/",
+    "https://www.globes.co.il/news/article.aspx?did=1001520086"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Agency as of 2026-04: Reuveni-Pridan (Effie 2026 Platinum gold).",
+  "description_he": "יצרנית מוצרי חלב ישראלית (נוסדה ב-1980) של גבינות, יוגורטים וקינוחים; הונפקה בבורסת תל אביב בספטמבר 2025. הקמפיין שלה זכה בפלטינה בתחרות אפי 2026."
+}

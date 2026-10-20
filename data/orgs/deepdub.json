@@ -1,0 +1,61 @@
+{
+  "id": "deepdub",
+  "name": "Deepdub",
+  "kind": "startup",
+  "categories": [
+    "dubbing-localization",
+    "gen-ai-audio"
+  ],
+  "description": "Tel Aviv AI dubbing and voice company offering emotional text-to-speech, voice cloning and a virtual dubbing studio in 130+ languages for film/TV studios, streamers and enterprises; its work includes the Netflix film 'Every Time I Die' and a multi-series deal with Topic.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2019,
+  "status": "active",
+  "website": "https://deepdub.ai",
+  "services": [
+    "AI dubbing & localization",
+    "Emotional TTS (eTTS)",
+    "Voice cloning API",
+    "Virtual dubbing studio"
+  ],
+  "notable_clients": [
+    "Topic",
+    "Netflix (Every Time I Die)"
+  ],
+  "key_people": [
+    {
+      "name": "Ofir Krakowski",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Nir Krakowski",
+      "role": "Co-founder & CTO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "total_usd_m": 26,
+    "investors": [
+      "Insight Partners",
+      "Booster Ventures",
+      "Stardom Ventures",
+      "Swift VC"
+    ]
+  },
+  "tags": [
+    "ai-dubbing",
+    "voice-cloning",
+    "media-localization"
+  ],
+  "sources": [
+    "https://deepdub.ai/about",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3929183,00.html",
+    "https://www.insightpartners.com/ideas/deepdub-raises-20-million-in-series-a-funding-led-by-insight-partners-to-bring-ai-based-dubbing-global/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "חברת דיבוב וקול מבוססת AI מתל אביב שמציעה הקראה רגשית (text-to-speech), שיבוט קול ואולפן דיבוב וירטואלי ביותר מ-130 שפות לאולפני קולנוע וטלוויזיה, לסטרימרים ולארגונים; בין עבודותיה סרט הנטפליקס 'Every Time I Die' ועסקה רב-סדרתית עם Topic."
+}

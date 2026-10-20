@@ -1,0 +1,46 @@
+{
+  "id": "pan-animation",
+  "name": "Pan Animation",
+  "aka": [
+    "Pananimation"
+  ],
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "animation-3d",
+    "cgi-3d"
+  ],
+  "description": "Israeli VFX and 3D animation studio led by VFX supervisor Ariad Shiknagi, creating compositing, visual effects and 3D animation for films and TV series screened at international festivals, and 3D product/tech animations for high-tech and commerce companies. It also runs a training academy.",
+  "location": {
+    "country": "IL",
+    "city": "Olesh"
+  },
+  "status": "active",
+  "website": "https://pananimation.co.il",
+  "services": [
+    "VFX",
+    "Compositing",
+    "3D animation",
+    "Tech & product 3D animation",
+    "VFX training (Pananimation Academy)"
+  ],
+  "key_people": [
+    {
+      "name": "Ariad Shiknagi",
+      "role": "Founder / VFX supervisor"
+    }
+  ],
+  "tags": [
+    "film-vfx",
+    "tv-vfx",
+    "tech-animation"
+  ],
+  "sources": [
+    "https://pananimation.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Self-reported: 28 film & TV series, 8000 tech & commerce 3D shots. Address: 13 Nof Sadot St, Olesh (moshav, Sharon). Site returned only a bot-check page to automated fetches on 2026-10-18 (not necessarily down).",
+  "description_he": "סטודיו ישראלי ל-VFX ואנימציה תלת-ממדית בהובלת מפקח ה-VFX אריעד שיקנאגי, שיוצר קומפוזיטינג, אפקטים ויזואליים ואנימציית תלת-ממד לסרטים ולסדרות טלוויזיה שהוקרנו בפסטיבלים בינלאומיים, ואנימציות תלת-ממד למוצרים וטכנולוגיה לחברות הייטק ומסחר. מפעיל גם אקדמיה להכשרה."
+}

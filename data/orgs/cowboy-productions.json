@@ -1,0 +1,69 @@
+{
+  "id": "cowboy-productions",
+  "name": "Cowboy Productions",
+  "name_he": "קאובוי הפקות",
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "animation-3d",
+    "motion-design"
+  ],
+  "description": "Israeli corporate animation studio operating since 2009, producing 2D and 3D brand, explainer, product, training and investor-pitch videos end to end for tech companies, public bodies and consumer brands.",
+  "location": {
+    "country": "IL",
+    "city": "Hod HaSharon"
+  },
+  "founded": 2009,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://thecowboy.co.il",
+  "contact_url": "https://thecowboy.co.il/contact",
+  "links": {
+    "youtube": "https://www.youtube.com/@the_cowboy",
+    "instagram": "https://www.instagram.com/anicowboy/",
+    "linkedin": "https://www.linkedin.com/company/thecowboy"
+  },
+  "services": [
+    "2D/3D explainer videos",
+    "Brand videos",
+    "Product videos",
+    "Training videos",
+    "Investor pitch videos"
+  ],
+  "notable_clients": [
+    "Siemens",
+    "El Al",
+    "AudioCodes",
+    "NICE",
+    "Bright Data",
+    "Clalit",
+    "Israel Electric Corporation",
+    "Skechers Israel",
+    "Israel Ministry of Health"
+  ],
+  "key_people": [
+    {
+      "name": "Avi Graiver",
+      "role": "Founder & Creative Director",
+      "role_type": "founder",
+      "source": "https://thecowboy.co.il/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "explainers",
+    "pitch-videos",
+    "tech"
+  ],
+  "sources": [
+    "https://thecowboy.co.il",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://revenuebase.ai/companies/animation-studios/israel",
+    "https://thecowboy.co.il/about/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "City from revenuebase directory, not on site.",
+  "description_he": "סטודיו ישראלי לאנימציה עסקית הפועל מאז 2009, ומפיק מקצה לקצה סרטוני מותג, הסבר, מוצר, הדרכה ופיץ' למשקיעים בדו-ממד ובתלת-ממד לחברות טכנולוגיה, לגופים ציבוריים ולמותגי צריכה."
+}

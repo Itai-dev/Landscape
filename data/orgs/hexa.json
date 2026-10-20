@@ -1,0 +1,80 @@
+{
+  "id": "hexa",
+  "name": "Hexa",
+  "aka": [
+    "Hexa3D",
+    "Hexa 3D",
+    "Fitix Visualization"
+  ],
+  "kind": "startup",
+  "categories": [
+    "3d-tools",
+    "cgi-3d"
+  ],
+  "description": "Tel Aviv company whose AI-assisted SaaS platform converts 2D product images into interactive 3D models and AR/visual assets for e-commerce brands in furniture, fashion and electronics; started as a virtual dressing-room technology.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2018,
+  "status": "active",
+  "website": "https://www.hexa3d.io",
+  "services": [
+    "2D-to-3D product modeling",
+    "3D/AR viewers for e-commerce",
+    "Digital twins & 3D asset management",
+    "2D-to-3D asset creation",
+    "3D/AR asset management",
+    "3D product visuals"
+  ],
+  "notable_clients": [
+    "Amazon",
+    "Macy's",
+    "Logitech",
+    "Crate & Barrel"
+  ],
+  "key_people": [
+    {
+      "name": "Yehiel Atias",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Jonathan Clark",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Ran Buchnik",
+      "role": "Co-founder & CPO"
+    }
+  ],
+  "funding": {
+    "stage": "Series A",
+    "investors": [
+      "Point72 Ventures",
+      "Samurai Incubate",
+      "Sarona Partners",
+      "HTC"
+    ],
+    "public": false,
+    "total_usd_m": 27
+  },
+  "tags": [
+    "3D commerce",
+    "AR",
+    "digital twins",
+    "3d-commerce",
+    "ar"
+  ],
+  "sources": [
+    "https://www.citybiz.co/article/387245/hexa-raises-20-5m-in-series-a/",
+    "https://www.vcbacked.co/company/hexa-tel-aviv",
+    "https://craft.co/hexa3d",
+    "https://blogs.nvidia.com/blog/2023/03/07/ai-startup-renders-3d-product-models-for-retailers/",
+    "https://dealroom.co/companies/hexa/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "$20.5M Series A (March 2023) led by Point72; total ~$26.9M per press, other DBs differ. Website URL not directly verified.",
+  "description_he": "חברה תל אביבית שפלטפורמת ה-SaaS שלה, בסיוע AI, הופכת תמונות מוצר דו-ממדיות למודלי תלת-ממד אינטראקטיביים ולנכסי AR וויז'ואל עבור מותגי איקומרס בתחומי הריהוט, האופנה והאלקטרוניקה; התחילה כטכנולוגיה של חדר הלבשה וירטואלי."
+}

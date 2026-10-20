@@ -1,0 +1,63 @@
+{
+  "id": "terminal-x",
+  "name": "Terminal X",
+  "name_he": "טרמינל איקס",
+  "kind": "client",
+  "categories": [
+    "retail-fashion"
+  ],
+  "description": "Israeli online fashion and lifestyle retailer launched by Fox-Wizel in November 2017, selling Fox-group and international brands; TASE-listed, and in 2025 it agreed to buy 51% of Israeli jewellery and fashion brand AINKER.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2017,
+  "status": "active",
+  "website": "https://www.terminalx.com",
+  "contact_url": "https://www.terminalx.com/help-contactus",
+  "key_people": [
+    {
+      "name": "Adi Orel",
+      "role": "VP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.globes.co.il/news/article.aspx?did=1001553829",
+      "as_of": "2026-08-31"
+    }
+  ],
+  "client_profile": {
+    "industry": "e-commerce fashion",
+    "creative_needs": [
+      "social video",
+      "TV commercials",
+      "e-commerce product photography",
+      "fashion photography",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "Peach – Content We Like"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "fox-group",
+      "note": "controlled by Fox-Wizel (he.wikipedia)"
+    },
+    {
+      "type": "agency",
+      "target": "Peach – Content We Like",
+      "note": "agency and production since launch; Oct 2021 campaign directed by Omer Tobi (ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A4%D7%95%D7%A7%D7%A1-%D7%95%D7%99%D7%96%D7%9C",
+    "https://www.ice.co.il/advertising-marketing/news/article/833940",
+    "https://www.terminalx.com",
+    "https://www.globes.co.il/news/article.aspx?did=1001553829",
+    "https://www.globes.co.il/news/article.aspx?did=1001525894"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "2021 ICE credits named Dana Polak Olsher as marketing VP — too old to list as current. Nov 2025: marketing VP Adi Orel said Terminal X runs an in-house community of 300+ influencers rather than via outside agencies (Globes).",
+  "description_he": "קמעונאית אופנה ולייפסטייל אונליין ישראלית שהשיקה פוקס-ויזל בנובמבר 2017, ומוכרת מותגים של קבוצת פוקס ומותגים בינלאומיים; נסחרת בבורסת תל אביב, וב-2025 הסכימה לרכוש 51% ממותג התכשיטים והאופנה הישראלי AINKER."
+}

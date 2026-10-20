@@ -1,0 +1,56 @@
+{
+  "id": "shalmor-avnon-amichay-yr",
+  "name": "Shalmor Avnon Amichay / Y&R",
+  "name_he": "שלמור אבנון עמיחי",
+  "aka": [
+    "Y&R Israel",
+    "SAA Y&R"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising"
+  ],
+  "description": "Israeli advertising agency founded in 1989 by Rami Shalmor and Shlomi Avnon, joined by Gideon Amichay in 1994; affiliated with Young & Rubicam (WPP) from 1999 and renamed Y&R Israel in 2012. Once Israel's most-awarded agency at Cannes (19 Lions), it declined after 2012 and entered liquidation proceedings in 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Herzliya"
+  },
+  "founded": 1989,
+  "status": "closed",
+  "website": "http://www.yr.co.il",
+  "key_people": [
+    {
+      "name": "Rami Shalmor",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Shlomi Avnon",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Gideon Amichay",
+      "role": "Partner & CCO (1994-2011)"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Young & Rubicam / WPP"
+    }
+  ],
+  "tags": [
+    "historical",
+    "wpp",
+    "cannes"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A9%D7%9C%D7%9E%D7%95%D7%A8_%D7%90%D7%91%D7%A0%D7%95%D7%9F_%D7%A2%D7%9E%D7%99%D7%97%D7%99",
+    "https://en.wikipedia.org/wiki/Gideon_Amichay",
+    "https://www.globes.co.il/news/%D7%A9%D7%9C%D7%9E%D7%95%D7%A8_%D7%90%D7%91%D7%A0%D7%95%D7%9F_%D7%A2%D7%9E%D7%99%D7%97%D7%99.tag"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Liquidation filing March 2021 (debts ~NIS 17M per Calcalist). Website yr.co.il no longer resolves. No confirmed WPP creative (VML/Ogilvy) successor operation in Israel found.",
+  "description_he": "משרד פרסום ישראלי שנוסד ב-1989 על ידי רמי שלמור ושלומי אבנון, וגדעון עמיחי הצטרף אליהם ב-1994; מזוהה עם Young & Rubicam (WPP) מ-1999 ושינה את שמו ל-Y&R ישראל ב-2012. בעבר המשרד הישראלי עטור הפרסים ביותר בקאן (19 אריות), הוא דעך אחרי 2012 ונכנס להליכי פירוק ב-2021."
+}

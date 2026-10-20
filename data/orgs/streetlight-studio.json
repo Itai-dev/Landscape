@@ -1,0 +1,53 @@
+{
+  "id": "streetlight-studio",
+  "name": "Streetlight",
+  "aka": [
+    "Studio Streetlight"
+  ],
+  "kind": "studio",
+  "categories": [
+    "digital-design",
+    "branding"
+  ],
+  "description": "Tel Aviv one-person design studio run by Matan Ben David, covering product UX/UI, Webflow websites and brand identity for clients worldwide; recognised with Awwwards honourable mentions.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://studiostreetlight.com",
+  "reel_url": "https://www.youtube.com/watch?v=ZadLEj5wxiM",
+  "links": {
+    "instagram": "https://www.instagram.com/studio.streetlight/"
+  },
+  "services": [
+    "product design",
+    "web design and Webflow",
+    "brand identity",
+    "motion and illustration"
+  ],
+  "notable_clients": [
+    "Taboola",
+    "SpaceIL",
+    "SPNI",
+    "Davidson Institute",
+    "Kovrr"
+  ],
+  "key_people": [
+    {
+      "name": "Matan Ben David",
+      "role": "Founder"
+    }
+  ],
+  "sources": [
+    "https://studiostreetlight.com",
+    "https://www.awwwards.com/directory/Israel/",
+    "https://www.studiostreetlight.com/",
+    "https://www.youtube.com/watch?v=ZadLEj5wxiM"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו עיצוב של אדם אחד בתל אביב בהובלת מתן בן דוד, שעוסק ב-UX/UI למוצרים, אתרי Webflow וזהות מותג ללקוחות בכל העולם; זכה באזכורי כבוד (Honorable Mention) ב-Awwwards."
+}

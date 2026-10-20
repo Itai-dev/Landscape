@@ -1,0 +1,60 @@
+{
+  "id": "rapyd",
+  "name": "Rapyd",
+  "kind": "client",
+  "categories": [
+    "tech",
+    "banking-finance"
+  ],
+  "description": "Fintech-as-a-service payments platform founded in Tel Aviv in 2016 by Arik Shtilman, Arkady Karpman and Omer Priel; Israel's largest private tech company. Title sponsor of Maccabi Rapyd Tel Aviv basketball since 2025.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2016,
+  "status": "active",
+  "website": "https://www.rapyd.net",
+  "contact_url": "https://www.rapyd.net/contact/",
+  "careers_url": "https://www.rapyd.net/company/careers/",
+  "key_people": [
+    {
+      "name": "Marc Winitz",
+      "role": "Chief Marketing Officer",
+      "role_type": "marketing",
+      "source": "https://www.rapyd.net/company/about-rapyd/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "client_profile": {
+    "industry": "B2B fintech / payments",
+    "creative_needs": [
+      "sports sponsorship content",
+      "brand video",
+      "motion graphics",
+      "event content",
+      "explainer animation"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "moveo-group",
+      "note": "listed as a Moveo client (agency website)"
+    },
+    {
+      "type": "partner",
+      "target": "Maccabi Tel Aviv Basketball",
+      "note": "7-year naming sponsorship from June 2025"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Rapyd",
+    "https://www.rapyd.net/company/about-rapyd/",
+    "https://www.moveo.group/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "פלטפורמת תשלומים בשיטת Fintech-as-a-Service שנוסדה בתל אביב ב-2016 על ידי אריק שטילמן, ארקדי קרפמן ועומר פריאל; חברת הטכנולוגיה הפרטית הגדולה בישראל. נותנת החסות השמית של מכבי ראפיד תל אביב בכדורסל מאז 2025.",
+  "name_he": "ראפיד"
+}

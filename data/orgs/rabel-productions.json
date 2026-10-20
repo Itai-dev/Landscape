@@ -1,0 +1,70 @@
+{
+  "id": "rabel-productions",
+  "name": "Rabel Productions",
+  "name_he": "ראבל",
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Tel Aviv commercial production company (trading since 1995 per The Location Guide) credited on Israeli TV campaigns such as Bezeq with Adi Ashkenazi (Adler Chomsky Warshavsky) and Tapuzina (McCann), both directed by Rani Carmeli.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1995,
+  "status": "active",
+  "notable_clients": [
+    "Bezeq",
+    "Tapuzina",
+    "Partner",
+    "Mizrahi Tefahot",
+    "Maccabi"
+  ],
+  "notable_work": [
+    "Bezeq campaign with Adi Ashkenazi",
+    "Tapuzina 'Ze ma she-ba li' campaign",
+    "Partner — Direct Fiber 'Shir HaShchuna' with Static, Agam Buhbut, Stefan Legar & Shahar Saul (2025)",
+    "Mizrahi Tefahot — campaign with released hostage Sagi Dekel Chen (2026)",
+    "Maccabi — emotional-support app campaign with Dr. Maayan Boiman (2026)",
+    "Maccabi — 'Menutakot' video-call series with Shira Naor, Yael Sharoni & Yaniv Biton (2026)",
+    "Maccabi — longevity programme with Tal Mosseri (2026)",
+    "Mizrahi Tefahot — campaign for parents with Guy Beer Gurevich & Dvir Benedek (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "partner-communications",
+      "note": "Direct Fiber 'Shir HaShchuna' with Static, Agam Buhbut, Stefan Legar & Shahar Saul, 2025-09, via McCann Tel Aviv, dir. Roman Bochachki (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "mizrahi-tefahot",
+      "note": "campaign with released hostage Sagi Dekel Chen, 2026-01, via Reuveni Pridan, dir. Roman Bochachki (production); campaign for parents with Guy Beer Gurevich & Dvir Benedek, 2026-07, via Reuveni Pridan, dir. Yonatan Gurfinkel (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "maccabi-healthcare-services",
+      "note": "emotional-support app campaign with Dr. Maayan Boiman, 2026-01, via McCann Tel Aviv, dir. Assaf Harel (production); 'Menutakot' video-call series with Shira Naor, Yael Sharoni & Yaniv Biton, 2026-04, via McCann Tel Aviv, dir. Assaf Harel (production); longevity programme with Tal Mosseri, 2026-07, via McCann Tel Aviv, dir. Assaf Harel (production) (ICE credits)"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "production-services"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1014739",
+    "https://www.ice.co.il/advertising-marketing/news/article/821386",
+    "https://www.thelocationguide.com/israel/tel-aviv/global-directory/rabel-productions",
+    "https://www.ice.co.il/advertising-marketing/news/article/1082657",
+    "https://www.ice.co.il/advertising-marketing/news/article/1098306",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100116",
+    "https://www.ice.co.il/advertising-marketing/news/article/1109896",
+    "https://www.ice.co.il/advertising-marketing/news/article/1119428",
+    "https://www.ice.co.il/advertising-marketing/news/article/1122346"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "No official website found. Location Guide lists Nahalat Binyamin St., Tel Aviv.",
+  "description_he": "חברת הפקות פרסומות בתל אביב (פעילה מאז 1995 לפי The Location Guide) שמופיעה בקרדיטים של קמפייני טלוויזיה ישראליים, כמו בזק עם עדי אשכנזי (אדלר חומסקי ורשבסקי) ותפוזינה (מקאן), שניהם בבימוי רני כרמלי."
+}

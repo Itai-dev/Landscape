@@ -1,0 +1,60 @@
+{
+  "id": "elementor",
+  "name": "Elementor",
+  "kind": "startup",
+  "categories": [
+    "website-builders",
+    "design-tools"
+  ],
+  "description": "Israeli company behind the Elementor visual page/website builder for WordPress (launched 2016), plus managed hosting and AI site tools; it reports powering over 21 million websites. Founded by Yoni Luksenberg and Ariel Klikstein and headquartered in Ramat Gan.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "founded": 2016,
+  "size": "201-500",
+  "status": "active",
+  "website": "https://elementor.com",
+  "links": {
+    "linkedin": "https://linkedin.com/company/elementor"
+  },
+  "services": [
+    "WordPress website builder",
+    "Elementor Hosting",
+    "Theme & template library",
+    "AI website tools"
+  ],
+  "key_people": [
+    {
+      "name": "Yoni Luksenberg",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Ariel Klikstein",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series B",
+    "total_usd_m": 66,
+    "investors": [
+      "Lightspeed Venture Partners"
+    ],
+    "public": false
+  },
+  "tags": [
+    "WordPress",
+    "no-code",
+    "web design"
+  ],
+  "sources": [
+    "https://elementor.com",
+    "https://en.globes.co.il/en/article-wix-rival-elementor-raises-15m-1001319855",
+    "https://poststatus.com/elementor-has-raised-a-15-million-series-a-led-by-lightspeed-venture-partners/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "החברה הישראלית שמאחורי Elementor, בונה העמודים והאתרים הוויזואלי לוורדפרס (הושק ב-2016), לצד אחסון מנוהל וכלי AI לבניית אתרים; לדבריה מופעלים באמצעותה יותר מ-21 מיליון אתרים. נוסדה על ידי יוני לוקסנבורג ואריאל קליקשטיין, ומטה החברה ברמת גן.",
+  "name_he": "אלמנטור"
+}

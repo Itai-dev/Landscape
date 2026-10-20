@@ -1,0 +1,79 @@
+{
+  "id": "tel-aviv-yafo-municipality",
+  "name": "Tel Aviv-Yafo Municipality",
+  "name_he": "עיריית תל אביב-יפו",
+  "kind": "client",
+  "categories": [
+    "public-sector"
+  ],
+  "description": "Municipality of Israel's economic and cultural centre. Runs its advertising through public tenders (a NIS ~6M budget won by Adler Chomski in 2017, replacing McCann) and international tourism campaigns through its corporation 'Ir Olam ve-Tayarut' (World City & Tourism), e.g. the 2025 Pride campaign with the Ministry of Tourism.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.tel-aviv.gov.il",
+  "contact_url": "https://www.tel-aviv.gov.il/Contact/Pages/Contact.aspx",
+  "client_profile": {
+    "industry": "municipal government / city marketing",
+    "creative_needs": [
+      "public campaigns",
+      "destination films for international tourism",
+      "social video",
+      "AI video",
+      "event branding"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky (tender win, 2017)",
+      "No, No, No, No, No, Yes (Pride 2025 campaign)",
+      "McCann Tel Aviv (until 2017)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "Won the municipal advertising tender (~NIS 6M) in Feb 2017, replacing McCann"
+    },
+    {
+      "type": "agency",
+      "target": "no-no-no-no-no-yes",
+      "note": "Creative for the international 'Tel Aviv Pride 2025: Everyone's Welcome' campaign (via Ir Olam ve-Tayarut)"
+    },
+    {
+      "type": "agency",
+      "target": "mccann-tel-aviv",
+      "note": "Held the budget for about a decade until 2017"
+    },
+    {
+      "type": "agency",
+      "target": "anka-studio",
+      "note": "Listed as a client by ANKA Studio"
+    },
+    {
+      "type": "agency",
+      "target": "keren-and-golan",
+      "note": "Listed as a client by Keren & Golan"
+    },
+    {
+      "type": "partner",
+      "target": "israel-ministry-of-tourism",
+      "note": "Co-launched the 2025 international Pride campaign"
+    }
+  ],
+  "tags": [
+    "municipal-tenders",
+    "tourism-marketing"
+  ],
+  "sources": [
+    "https://www.bizportal.co.il/advertismentandmarketing/news/article/473223",
+    "https://www.ias.co.il/?p=175029",
+    "https://www.tel-aviv.gov.il/Contact/Pages/Contact.aspx",
+    "https://en.wikipedia.org/wiki/Tel_Aviv"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "Ad agency after the 2017 tender cycle not verified; tenders are published on tel-aviv.gov.il (AuctionAndCareers). Tourism campaigns run through the municipal corporation Ir Olam ve-Tayarut.",
+  "description_he": "עירייה של המרכז הכלכלי והתרבותי של ישראל. מנהלת את הפרסום שלה באמצעות מכרזים ציבוריים (תקציב של כ-6 מיליון ₪ שבו זכה אדלר חומסקי ב-2017, במקום מקאן) ואת קמפייני התיירות הבינלאומיים דרך תאגיד 'עיר עולם ותיירות', למשל קמפיין הגאווה של 2025 יחד עם משרד התיירות."
+}

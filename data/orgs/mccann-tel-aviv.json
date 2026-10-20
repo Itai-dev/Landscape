@@ -1,0 +1,258 @@
+{
+  "id": "mccann-tel-aviv",
+  "name": "McCann Tel Aviv",
+  "name_he": "מקאן תל אביב",
+  "aka": [
+    "McCann Erickson Israel",
+    "McCann Keshet Barel",
+    "Keshet Barel"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Israel's largest advertising agency by Yifat-based rankings (No.1 for about a decade). Founded 1979 as Keshet Barel; McCann-Erickson bought in from 1995 and fully owned it by 2012; renamed McCann Tel Aviv in 2014. Now under Omnicom after its IPG acquisition; the group (~500 staff) includes Universal McCann media, McCann Digital, MRM, McCann Valley and Spring Valley.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1979,
+  "size": "501-1000",
+  "status": "active",
+  "website": "https://mccann.co.il/",
+  "contact_url": "https://mccann.co.il/about/",
+  "careers_url": "https://mccann.co.il/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/mccann-erickson-israel"
+  },
+  "services": [
+    "Creative advertising",
+    "Strategy & planning",
+    "Digital",
+    "Media (via UM Digital)",
+    "Tech-sector marketing (McCann TECH)"
+  ],
+  "notable_clients": [
+    "L'Oréal Israel",
+    "Bank Leumi",
+    "El Al",
+    "IKEA",
+    "Partner",
+    "Tnuva",
+    "MAX",
+    "Maccabi",
+    "Domino's",
+    "Tambour",
+    "Tornado",
+    "Direct Insurance (Bituah Yashir)",
+    "Yad2",
+    "Rami Levy",
+    "Wolt",
+    "Unilever",
+    "Kotex"
+  ],
+  "notable_work": [
+    "Bank Leumi app service campaign (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Amit Mashiach",
+      "role": "CEO, McCann Group Israel",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Ilan Shiloach",
+      "role": "Chairman"
+    },
+    {
+      "name": "Etti Avdi",
+      "role": "CEO, McCann advertising agency",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Sigal Avodi",
+      "role": "Chief Creative Officer",
+      "role_type": "creative_lead",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Asa Keren",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    },
+    {
+      "name": "Yonatan Teitel",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    },
+    {
+      "name": "Yaron Perl",
+      "role": "VP Creative",
+      "role_type": "creative_lead",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Max Shtcherbakov",
+      "role": "SVP, Creative Factory",
+      "role_type": "creative_lead",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Natalie Amitai",
+      "role": "Production (agency producer)",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    },
+    {
+      "name": "Ben Vinik",
+      "role": "Production (agency producer)",
+      "role_type": "production",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+      "as_of": "2026-08-14"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production",
+      "motion design",
+      "digital/social content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "McCann Worldgroup / Omnicom",
+      "note": "Previously IPG; Omnicom completed IPG acquisition in 2025"
+    },
+    {
+      "type": "subsidiary",
+      "target": "universal-mccann-israel"
+    },
+    {
+      "type": "subsidiary",
+      "target": "mccann-valley"
+    },
+    {
+      "type": "subsidiary",
+      "target": "Spring Valley",
+      "note": "Digital agency at Kibbutz Maoz Haim (2017)"
+    },
+    {
+      "type": "subsidiary",
+      "target": "MRM Israel"
+    },
+    {
+      "type": "subsidiary",
+      "target": "PRIMIS",
+      "note": "Video ad-tech"
+    },
+    {
+      "type": "client",
+      "target": "partner-communications",
+      "note": "Direct Fiber 'Shir HaShchuna' with Static, Agam Buhbut, Stefan Legar & Shahar Saul, 2025-09; Partner TV & fiber with Static, 'Ma Kashur' trio & Dudu Shaul, 2026-06 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "pepper",
+      "note": "new-language launch with creator Ido Katzir, 2025-10 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Wolt",
+      "note": "search-engine holiday campaign with Adi Himelbloy & Ben Zini, 2025-11; supermarket delivery with the Gordon family, 2026-06 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "el-al",
+      "note": "fares for security, rescue & medical forces with Hanan Ben Ari, 2025-11; Matmid club / Fly Card companion-ticket offer with Deni Avdija, 2026-08 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Kotex",
+      "note": "'A new generation of girls' with Kim Or Azulay, 2026-01 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "maccabi-healthcare-services",
+      "note": "emotional-support app campaign with Dr. Maayan Boiman, 2026-01; 'Menutakot' video-call series with Shira Naor, Yael Sharoni & Yaniv Biton, 2026-04; longevity programme with Tal Mosseri, 2026-07 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "osem-nestle",
+      "note": "characters podcast with Matan Peretz (AI), 2026-02 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "bank-leumi",
+      "note": "personal investment portfolio with Omer Adam & Gal Toren, 2026-02; nationwide surprise-concerts initiative with Gal Toren, 2026-04; app in five languages with Gal Toren, 2026-09 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Pinuk",
+      "note": "bath-care campaign with Kim Or Azulay & Yiftach Ziv, 2026-08 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "unilever-israel",
+      "note": "squeeze bottles with Gary Mandelbaum ('HaPijamot'), 2026-08 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "loreal-israel",
+      "note": "hair-colour campaign with Galit Gutman, 2026-09 (ICE credits)"
+    }
+  ],
+  "tags": [
+    "network-agency",
+    "ipg",
+    "top-agency"
+  ],
+  "sources": [
+    "https://mccann.co.il/",
+    "https://mccann.co.il/about/",
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%A7%D7%90%D7%9F_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.globes.co.il/news/article.aspx?did=1001558524",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://mccann.co.il/careers/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1125358",
+    "https://www.ice.co.il/advertising-marketing/news/article/1127519",
+    "https://www.ice.co.il/advertising-marketing/news/article/1129519",
+    "https://www.linkedin.com/company/mccann-erickson-israel",
+    "https://www.ice.co.il/advertising-marketing/news/article/1082657",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089107",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089951",
+    "https://www.ice.co.il/advertising-marketing/news/article/1092161",
+    "https://www.ice.co.il/advertising-marketing/news/article/1099285",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100116",
+    "https://www.ice.co.il/advertising-marketing/news/article/1103666",
+    "https://www.ice.co.il/advertising-marketing/news/article/1104396",
+    "https://www.ice.co.il/advertising-marketing/news/article/1109896",
+    "https://www.ice.co.il/advertising-marketing/news/article/1110769",
+    "https://www.ice.co.il/advertising-marketing/news/article/1115664",
+    "https://www.ice.co.il/advertising-marketing/news/article/1117533",
+    "https://www.ice.co.il/advertising-marketing/news/article/1119428",
+    "https://www.ice.co.il/advertising-marketing/news/article/1124460",
+    "https://www.ice.co.il/advertising-marketing/news/article/1128630"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "HQ: 2A Raoul Wallenberg St., Ramat HaHayal, Tel Aviv. Retained L'Oréal Israel (~NIS 100M, Oct 2026). Top scorer at Effie Israel 2026 (9 gold). Claims 3rd globally in 2023 Global Effie Index.",
+  "description_he": "משרד הפרסום הגדול בישראל לפי דירוגים מבוססי יפעת (מקום ראשון כבר כעשור). נוסד ב-1979 בשם קשת בראל; מקאן אריקסון נכנסה כשותפה מ-1995 והחזיקה בו במלואו עד 2012; שינה את שמו למקאן תל אביב ב-2014. כיום תחת Omnicom בעקבות רכישת IPG; הקבוצה (כ-500 עובדים) כוללת את יוניברסל מקאן מדיה, מקאן דיגיטל, MRM, מקאן ואלי וספרינג ואלי."
+}

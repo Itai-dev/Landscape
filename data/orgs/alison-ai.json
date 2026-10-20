@@ -1,0 +1,63 @@
+{
+  "id": "alison-ai",
+  "name": "Alison.ai",
+  "aka": [
+    "Alison AI"
+  ],
+  "kind": "startup",
+  "categories": [
+    "adtech-creative",
+    "gen-ai-video"
+  ],
+  "description": "Tel Aviv creative-intelligence platform that analyzes the visual and audio elements of ad creatives against performance data and generates new AI video ads and creative recommendations for performance marketers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2021,
+  "status": "active",
+  "website": "https://alison.ai",
+  "services": [
+    "Creative analytics",
+    "AI video ad generation",
+    "Creative recommendations"
+  ],
+  "notable_clients": [
+    "LG",
+    "Bosch",
+    "HelloFresh",
+    "Warner Bros.",
+    "TikTok"
+  ],
+  "key_people": [
+    {
+      "name": "Asaf Yanai",
+      "role": "Co-founder & CEO"
+    }
+  ],
+  "funding": {
+    "stage": "Seed",
+    "total_usd_m": 18.4,
+    "investors": [
+      "Almaz Capital",
+      "Foresight Group",
+      "Cardumen Capital",
+      "Crescendo Venture Partners",
+      "Alumni Ventures",
+      "a16z",
+      "yellowHEAD"
+    ]
+  },
+  "tags": [
+    "creative-analytics",
+    "performance-marketing"
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctechnews/article/h1vb7ylfyx",
+    "https://techcrunch.com/2023/05/01/ai-platform-to-analyze-creative-advertising-raises-5-1m-from-investors-including-a16z"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "פלטפורמת קריאייטיב אינטליג'נס מתל אביב שמנתחת את הרכיבים הוויזואליים והקוליים של קריאייטיבים פרסומיים מול נתוני ביצועים, ומייצרת מודעות וידאו חדשות ב-AI והמלצות קריאייטיב למשווקי פרפורמנס."
+}

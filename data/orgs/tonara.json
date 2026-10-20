@@ -1,0 +1,46 @@
+{
+  "id": "tonara",
+  "name": "Tonara",
+  "kind": "startup",
+  "categories": [
+    "music-tech",
+    "education"
+  ],
+  "description": "Tel Aviv music-education company (founded 2008) that began with an interactive sheet-music app that followed playing and turned pages automatically, then built Tonara Studio for tracking student practice and Tonara Connect, a teacher-student marketplace. Backed by Baidu and Carmel Ventures ($5M, 2015); reported to have ceased operations in September 2024.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2008,
+  "status": "closed",
+  "services": [
+    "Interactive sheet music",
+    "Tonara Studio practice app",
+    "Tonara Connect marketplace"
+  ],
+  "funding": {
+    "stage": "Series B",
+    "investors": [
+      "Baidu",
+      "Carmel Ventures"
+    ],
+    "public": false
+  },
+  "tags": [
+    "music education",
+    "sheet music",
+    "practice tracking"
+  ],
+  "sources": [
+    "https://startupim.com/company/tonara",
+    "https://www.edsurge.com/news/2015-04-14-chinese-search-giant-baidu-leads-5m-series-b-in-israeli-music-education-startup"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Closure per startupim only; tonara.com domain now hosts unrelated content, consistent with shutdown.",
+  "description_he": "חברה ללימוד מוזיקה מתל אביב (נוסדה ב-2008) שהתחילה באפליקציית תווים אינטראקטיבית שעקבה אחרי הנגינה והפכה דפים אוטומטית, ובהמשך פיתחה את Tonara Studio למעקב אחר תרגול תלמידים ואת Tonara Connect, מרקטפלייס למורים ותלמידים. גייסה מ-Baidu ומקרמל ונצ'רס (5 מיליון דולר, 2015); לפי הדיווחים הפסיקה את פעילותה בספטמבר 2024."
+}

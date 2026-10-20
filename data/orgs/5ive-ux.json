@@ -1,0 +1,50 @@
+{
+  "id": "5ive-ux",
+  "name": "5IVE UX",
+  "aka": [
+    "5IVE Innovation & UX"
+  ],
+  "kind": "studio",
+  "categories": [
+    "digital-design"
+  ],
+  "description": "Israeli UX/UI design agency based in Petah Tikva focusing on complex digital products: B2B SaaS, AI tools, enterprise, medical and defense platforms; offers UX strategy, product design and user research.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://www.5ive.co.il",
+  "contact_url": "https://5ive.co.il/contact/",
+  "careers_url": "https://5ive.co.il/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/5ive.ux/",
+    "linkedin": "https://www.linkedin.com/company/5ive-innovation-&-ux"
+  },
+  "services": [
+    "UX strategy",
+    "product design",
+    "user research",
+    "UI design"
+  ],
+  "notable_clients": [
+    "Intel",
+    "Moovit",
+    "Gong",
+    "Amdocs",
+    "Tenable",
+    "Cloudinary",
+    "Clalit Health"
+  ],
+  "sources": [
+    "https://www.5ive.co.il",
+    "https://clutch.co/il/agencies/ui-ux",
+    "https://5ive.co.il/careers/",
+    "https://5ive.co.il/contact/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סוכנות עיצוב UX/UI ישראלית מפתח תקווה, המתמחה במוצרים דיגיטליים מורכבים: SaaS ל-B2B, כלי AI, אנטרפרייז, פלטפורמות רפואיות וביטחוניות; מציעה אסטרטגיית UX, עיצוב מוצר ומחקר משתמשים."
+}

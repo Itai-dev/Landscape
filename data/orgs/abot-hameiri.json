@@ -1,0 +1,65 @@
+{
+  "id": "abot-hameiri",
+  "name": "Abot Hameiri Communications",
+  "name_he": "אבוט המאירי תקשורת",
+  "aka": [
+    "Abot-Reif Hameiri"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Tel Aviv TV production company founded in 2006 by Eitan Abot and Guy Hameiri (with Moti Reif), producing scripted drama such as Shtisel and Srugim and reality formats such as Survivor Israel and X Factor Israel; wholly owned by Fremantle since 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2006,
+  "status": "acquired",
+  "website": "https://ahe.co.il/",
+  "contact_url": "https://ahe.co.il/contact/",
+  "reel_url": "https://www.youtube.com/watch?v=s0bLJDxBisk",
+  "links": {
+    "instagram": "https://www.instagram.com/abot_hameiri/"
+  },
+  "notable_work": [
+    "Shtisel",
+    "Srugim",
+    "Iron Dome",
+    "The Conductor",
+    "Survivor Israel",
+    "X Factor Israel"
+  ],
+  "key_people": [
+    {
+      "name": "Eitan Abot",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Guy Hameiri",
+      "role": "Co-founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Fremantle",
+      "note": "51% in 2016, full ownership April 2021"
+    }
+  ],
+  "tags": [
+    "tv-production",
+    "drama",
+    "reality"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%90%D7%91%D7%95%D7%98_%D7%94%D7%9E%D7%90%D7%99%D7%A8%D7%99_%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA",
+    "https://ahe.co.il/",
+    "https://ahe.co.il/about-us/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Operates as a Fremantle-owned label; still producing.",
+  "description_he": "חברת הפקות טלוויזיה מתל אביב שהוקמה ב-2006 על ידי איתן אבוט וגיא המאירי (עם מוטי רייף), ומפיקה דרמה תסריטאית כמו 'שטיסל' ו'סרוגים' ופורמטים של ריאליטי כמו 'הישרדות' ו'אקס פקטור ישראל'; בבעלות מלאה של Fremantle מאז 2021."
+}

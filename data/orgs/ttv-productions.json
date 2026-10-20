@@ -1,0 +1,55 @@
+{
+  "id": "ttv-productions",
+  "name": "TTV Productions",
+  "name_he": "טי.טי.וי הפקות",
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Tel Aviv production company creating and producing drama series, sitcoms, documentaries, doc-reality, feature films and animation for Israeli broadcasters and international networks; its live-action youth series Memory Forest won at BNFF 2022 and received an International Emmy nomination in 2023.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.ttv.co.il/",
+  "links": {
+    "instagram": "https://www.instagram.com/ttv_productions/",
+    "vimeo": "https://vimeo.com/user39711960",
+    "youtube": "https://www.youtube.com/channel/UCF5ayijWekPK6SYk-vWwvZA"
+  },
+  "notable_work": [
+    "Memory Forest (youth series)"
+  ],
+  "key_people": [
+    {
+      "name": "Zafrir Kochanovsky",
+      "role": "Founder, Producer & CEO",
+      "role_type": "founder",
+      "source": "https://www.ttv.co.il/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Miri Ezra",
+      "role": "Head of Productions",
+      "role_type": "production",
+      "source": "https://www.ttv.co.il/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "tv-production",
+    "drama",
+    "documentary",
+    "youth"
+  ],
+  "sources": [
+    "https://www.ttv.co.il/",
+    "https://www.gov.il/BlobFolder/rfp/israeli_films_service_suppliers/he/List%20of%20providers%20included%20in%20the%20Israeli%20Film%20Service%20database.pdf"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Listed as a production supplier in the Israel Film Service database (2024).",
+  "description_he": "חברת הפקות מתל אביב שיוצרת ומפיקה סדרות דרמה, סיטקומים, סרטים דוקומנטריים, דוקו-ריאליטי, סרטים עלילתיים ואנימציה לגופי שידור בישראל ולרשתות בינלאומיות; סדרת הנוער העלילתית שלה 'יער הזיכרון' זכתה ב-BNFF 2022 והייתה מועמדת לאמי הבינלאומי ב-2023."
+}

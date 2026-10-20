@@ -1,0 +1,52 @@
+{
+  "id": "omd-israel",
+  "name": "OMD Israel",
+  "kind": "agency",
+  "categories": [
+    "media-agency"
+  ],
+  "description": "Media agency representing Omnicom's OMD network in Israel, owned by Gitam BBDO and Yehoshua TBWA. Led by CEO Yaniv Sana, a former Universal McCann deputy CEO who became a partner in 2025.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "services": [
+    "Media planning",
+    "Media buying"
+  ],
+  "key_people": [
+    {
+      "name": "Yaniv Sana",
+      "role": "CEO & partner"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "gitam-bbdo"
+    },
+    {
+      "type": "parent",
+      "target": "yehoshua-tbwa"
+    },
+    {
+      "type": "parent",
+      "target": "Omnicom Media Group"
+    }
+  ],
+  "tags": [
+    "media-buying",
+    "omnicom"
+  ],
+  "sources": [
+    "https://www.globes.co.il/news/article.aspx?did=1001528646",
+    "https://www.globes.co.il/news/OMD.tag",
+    "https://www.ice.co.il/advertising-marketing/news/article/1089808"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "City assumed Tel Aviv. Official website not found.",
+  "description_he": "משרד מדיה שמייצג בישראל את רשת OMD של Omnicom, בבעלות גיתם BBDO ויהושע TBWA. בראשו עומד המנכ\"ל יניב סנה, לשעבר סמנכ\"ל ראשי ביוניברסל מקאן, שהפך לשותף ב-2025."
+}

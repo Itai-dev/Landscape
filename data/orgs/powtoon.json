@@ -1,0 +1,60 @@
+{
+  "id": "powtoon",
+  "name": "Powtoon",
+  "kind": "startup",
+  "categories": [
+    "video-tools",
+    "animation-2d",
+    "design-tools"
+  ],
+  "description": "Web-based platform for making animated explainer videos and presentations, founded in 2012 by Ilya Spitalnik with co-founders including Daniel Zaturansky. Formally headquartered in London but started and operating out of Tel Aviv; claims 50M+ users.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "London"
+    ]
+  },
+  "founded": 2012,
+  "status": "active",
+  "website": "https://www.powtoon.com",
+  "services": [
+    "Animated explainer video maker",
+    "Animated presentations",
+    "Screen & webcam recording",
+    "Templates for business/education"
+  ],
+  "key_people": [
+    {
+      "name": "Ilya Spitalnik",
+      "role": "Founder & CEO"
+    },
+    {
+      "name": "Daniel Zaturansky",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Seed/early",
+    "investors": [
+      "Startup Minds"
+    ],
+    "public": false
+  },
+  "tags": [
+    "explainer videos",
+    "animation",
+    "education",
+    "DIY"
+  ],
+  "sources": [
+    "https://www.powtoon.com/about/",
+    "https://en.wikipedia.org/wiki/Powtoon",
+    "https://blogs.timesofisrael.com/the-comeback-of-cartoons-powtoons-animation-pumps-up-presentations/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Wikipedia lists London HQ; Israeli presence (Tel Aviv office) evidenced by Times of Israel blog and startup directories, not by the official site.",
+  "description_he": "פלטפורמת רשת ליצירת סרטוני הסבר ומצגות באנימציה, שנוסדה ב-2012 על ידי איליה שפיטלניק עם שותפים מייסדים, בהם דניאל זטורנסקי. המטה הרשמי בלונדון, אך החברה הוקמה ופועלת מתל אביב; לדבריה יש לה יותר מ-50 מיליון משתמשים."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "creative-labs-israel",
+  "name": "Creative Labs",
+  "aka": [
+    "Creative Labs Israel"
+  ],
+  "kind": "studio",
+  "categories": [
+    "creative-technology",
+    "experiential"
+  ],
+  "description": "Israeli multidisciplinary studio specialising in 'phygital architecture' and creative technology: digital installations, branded environments, responsive installations and immersive LED/real-time content for retail, hospitality and cultural spaces.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 2018,
+  "size": "11-50",
+  "status": "active",
+  "website": "https://creativelabs.co.il",
+  "contact_url": "https://www.creativelabs.co.il/contact/",
+  "reel_url": "https://www.creativelabs.co.il/wp-content/uploads/2023/07/SecondShowreel4.mp4",
+  "links": {
+    "instagram": "https://www.instagram.com/creative_labs_israel",
+    "linkedin": "https://www.linkedin.com/company/19009219"
+  },
+  "services": [
+    "digital installations",
+    "branded environments",
+    "interactive media",
+    "immersive LED content"
+  ],
+  "key_people": [
+    {
+      "name": "Ziv Harel",
+      "role": "Co-founder, CEO",
+      "role_type": "founder",
+      "source": "https://www.creativelabs.co.il/about/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Itay Appel",
+      "role": "Co-founder, Head of Creative Technology",
+      "role_type": "founder",
+      "source": "https://www.creativelabs.co.il/about/",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Jonathan Shmukler",
+      "role": "Head of SpaceUX & Creative",
+      "role_type": "creative_lead",
+      "source": "https://www.creativelabs.co.il/about/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "sources": [
+    "https://creativelabs.co.il",
+    "https://prospeo.io/c/creative-labs-israel-email-format",
+    "https://www.creativelabs.co.il/about/",
+    "https://www.creativelabs.co.il/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year, city and size from a third-party company profile. Site shows logos (Intel, Adidas, El Al, Bank Hapoalim, Amdocs) without stating they are clients.",
+  "description_he": "סטודיו ישראלי רב-תחומי המתמחה ב'ארכיטקטורה פיג'יטלית' וקריאייטיב טכנולוגי: מיצבים דיגיטליים, סביבות ממותגות, מיצבים אינטראקטיביים ותוכן LED/ריל-טיים אימרסיבי לחללי קמעונאות, אירוח ותרבות."
+}

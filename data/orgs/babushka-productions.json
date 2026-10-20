@@ -1,0 +1,41 @@
+{
+  "id": "babushka-productions",
+  "name": "Babushka Productions",
+  "name_he": "בבושקה הפקות",
+  "aka": [
+    "Babushka"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "content-studio"
+  ],
+  "description": "Israeli production company with an in-house studio, credited by ICE on Britannia Israel's Aug 2025 campaign with Lior Raz and Eyal Berkovic and on McCann's Aug 2026 Hellmann's campaign that brought back Gary Mandelbaum from 'HaPijamot'.",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Britannia Israel",
+    "Hellmann's (Unilever)"
+  ],
+  "notable_work": [
+    "Britannia Israel — campaign with Lior Raz & Eyal Berkovic (2025)",
+    "Hellmann's (Unilever) — squeeze bottles with Gary Mandelbaum ('HaPijamot') (2026)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "unilever-israel",
+      "note": "squeeze bottles with Gary Mandelbaum ('HaPijamot'), 2026-08, via McCann Tel Aviv, dir. Miki Yaron (production) (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1079640",
+    "https://www.ice.co.il/advertising-marketing/news/article/1127519"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "חברת הפקה ישראלית עם סטודיו פנימי, ש-ICE מקרדט על קמפיין בריטניה ישראל (אוגוסט 2025) עם ליאור רז ואייל ברקוביץ' ועל קמפיין הלמנ'ס של מקאן (אוגוסט 2026) שהחזיר את גרי מנדלבאום מ'הפיג'מות'."
+}

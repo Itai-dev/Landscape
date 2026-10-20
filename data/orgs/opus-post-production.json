@@ -1,0 +1,77 @@
+{
+  "id": "opus-post-production",
+  "name": "Opus Post Production",
+  "aka": [
+    "Opus Productions Ltd",
+    "OPUS TLV"
+  ],
+  "kind": "studio",
+  "categories": [
+    "post-production",
+    "editing",
+    "color-grading"
+  ],
+  "description": "Founded in 1993 and describing itself as the largest post-production house in Israel, Opus provides dailies, offline and online editing, DaVinci Resolve color grading and finishing for local and international film and TV, with branches in Tel Aviv and Jerusalem. Its Digital Lab is a Dolby Vision certified facility for HDR.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "Jerusalem"
+    ]
+  },
+  "founded": 1993,
+  "status": "active",
+  "website": "https://www.opus-tv.com",
+  "contact_url": "https://www.opus-tv.com/contact",
+  "links": {
+    "facebook": "https://www.facebook.com/OPUSTLV/",
+    "linkedin": "https://www.linkedin.com/company/opus-post-production"
+  },
+  "services": [
+    "Dailies & data management",
+    "Offline editing (Avid suites)",
+    "Online editing",
+    "Color grading (DaVinci Resolve)",
+    "HDR / Dolby Vision finishing",
+    "Cinema finishing & DCP",
+    "Sound studios"
+  ],
+  "notable_clients": [
+    "Keshet",
+    "Endemol",
+    "Baron Productions",
+    "MoviePlus Productions"
+  ],
+  "key_people": [
+    {
+      "name": "Gil Mitrany",
+      "role": "CEO"
+    },
+    {
+      "name": "Dori Bashan",
+      "role": "VP Technical Development"
+    },
+    {
+      "name": "Oded Cohen",
+      "role": "VP Customer Service"
+    }
+  ],
+  "tags": [
+    "dolby-vision",
+    "tv-drama",
+    "feature-film",
+    "finishing"
+  ],
+  "sources": [
+    "https://www.opus-tv.com/",
+    "https://www.opus-tv.com/team",
+    "https://thejerusalemfilmfund.com/company/opus-productions-ltd/",
+    "https://www.avid.com/customer-stories/opus",
+    "https://www.opus-tv.com/contact"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Site cites 150+ Avid suites; Jerusalem Film Fund profile cites 80+. Jerusalem branch at Beit Canada, 22 Shivtey Israel St.",
+  "description_he": "אופוס, שנוסדה ב-1993 ומגדירה את עצמה כבית הפוסט-פרודקשן הגדול בישראל, מספקת דיילי'ז, עריכת אופליין ואונליין, תיקוני צבע ב-DaVinci Resolve ופינישינג לקולנוע ולטלוויזיה מקומיים ובינלאומיים, עם סניפים בתל אביב ובירושלים. המעבדה הדיגיטלית שלה מוסמכת Dolby Vision לעבודת HDR."
+}

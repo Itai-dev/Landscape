@@ -1,0 +1,96 @@
+{
+  "id": "mola-productions",
+  "name": "Mola Productions",
+  "name_he": "מולה הפקות",
+  "aka": [
+    "Mulla Productions",
+    "Mula"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "commercial-production"
+  ],
+  "description": "Tel Aviv commercial production house frequently credited on major Israeli TV campaigns, e.g. for Discount Bank, Cal and Alpro (Strauss) with agency Adler Chomsky Warshavsky and director Rani Carmeli, and earlier for Pelephone (ACW Grey) and Elite (Saatchi & Saatchi Tel Aviv).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "notable_clients": [
+    "Discount Bank",
+    "Cal",
+    "Strauss (Alpro)",
+    "Pelephone",
+    "Elite",
+    "yes",
+    "Mifal HaPais",
+    "FINQ"
+  ],
+  "notable_work": [
+    "Discount Bank 'Young account' campaign with Rotem Sela",
+    "Cal campaign (agency Munch)",
+    "Alpro campaign with Eden Hason",
+    "Pelephone meteor commercial (2013)",
+    "Elite 'The Wafer War'",
+    "Discount Bank — young-account campaign with Rotem Sela (2025)",
+    "Discount Bank — campaign for the self-employed with Rotem Sela (2025)",
+    "yes — campaign with Noa Kirel & Daniel Peretz (2026)",
+    "Mifal HaPais — community campaign to Idan Amedi's 'Elayich' (2026)",
+    "FINQ — AI pension & investments with Ruti Broudo (2026)",
+    "Pelephone — Pelephone MAX 5G with Yehuda Levi & Gal Adam (2026)"
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Adler Chomsky Warshavsky",
+      "note": "Frequent agency partner on credited campaigns"
+    },
+    {
+      "type": "client",
+      "target": "israel-discount-bank",
+      "note": "young-account campaign with Rotem Sela, 2025-09, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (production); campaign for the self-employed with Rotem Sela, 2025-11, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "yes",
+      "note": "campaign with Noa Kirel & Daniel Peretz, 2026-01, via Adler Chomski & Warshavsky (Grey), dir. Eli Sverdlov (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "mifal-hapais",
+      "note": "community campaign to Idan Amedi's 'Elayich', 2026-03, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "FINQ",
+      "note": "AI pension & investments with Ruti Broudo, 2026-05, via Avraham, dir. Roman Bochachki (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "pelephone",
+      "note": "Pelephone MAX 5G with Yehuda Levi & Gal Adam, 2026-05, via Adler Chomski & Warshavsky (Grey), dir. Eli Sverdlov (production) (ICE credits)"
+    }
+  ],
+  "tags": [
+    "commercials",
+    "tv-ads"
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1073960",
+    "https://www.ice.co.il/advertising-marketing/news/article/1054302",
+    "https://www.ice.co.il/advertising-marketing/news/article/1082859",
+    "https://www.thelocationguide.com/industrynews/mulla-productions-deflects-rogue-meteor-filming-on-location-in-israel-for-pelephone",
+    "https://www.thelocationguide.com/israel/tel-aviv/global-directory/mulla-productions",
+    "https://www.ice.co.il/advertising-marketing/news/article/1085110",
+    "https://www.ice.co.il/advertising-marketing/news/article/1091042",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100904",
+    "https://www.ice.co.il/advertising-marketing/news/article/1107672",
+    "https://www.ice.co.il/advertising-marketing/news/article/1113835",
+    "https://www.ice.co.il/advertising-marketing/news/article/1114705"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "No official website found. Evidence is ad credits in trade press. Location Guide lists address on HaTa'asiya St., Tel Aviv; 2013 credits list Gil Boraks as executive producer.",
+  "description_he": "בית הפקה לפרסומות בתל אביב שמופיע בקרדיטים של קמפייני טלוויזיה גדולים בישראל, למשל עבור בנק דיסקונט, כאל ואלפרו (שטראוס) עם משרד הפרסום אדלר חומסקי ורשבסקי והבמאי רני כרמלי, ובעבר עבור פלאפון (ACW Grey) ועלית (סאצ'י אנד סאצ'י תל אביב)."
+}

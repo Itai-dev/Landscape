@@ -1,0 +1,60 @@
+{
+  "id": "israir",
+  "name": "Israir",
+  "name_he": "ישראייר",
+  "kind": "client",
+  "categories": [
+    "travel-hospitality"
+  ],
+  "description": "Israeli airline (founded 1989 as Kanfei HaEmek, renamed 1996) flying scheduled and charter routes; owned by the Rami Levy group and approved for New York flights in 2026.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1989,
+  "status": "active",
+  "website": "https://www.israirairlines.com",
+  "key_people": [
+    {
+      "name": "Hila Harmolin Ronen",
+      "role": "VP Marketing & Sales",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1094598",
+      "as_of": "2025-12-08"
+    }
+  ],
+  "client_profile": {
+    "industry": "airline / tourism",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "destination content",
+      "digital display ads"
+    ],
+    "known_agencies": [
+      "BBR Saatchi & Saatchi (Baumann Ber Rivnay)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "rami-levy"
+    },
+    {
+      "type": "agency",
+      "target": "bbr-saatchi-saatchi",
+      "note": "agency on the Oct 2026 New York launch campaign (ICE)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Israir",
+    "https://www.globes.co.il/news/article.aspx?did=1001551526",
+    "https://www.ice.co.il/advertising-marketing/news/article/1132878",
+    "https://www.ice.co.il/advertising-marketing/news/article/1094598"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Agency of record not confirmed (a 2012 campaign was by Gitam BBDO). Agency as of 2026-10: BBR Saatchi & Saatchi (Baumann Ber Rivnay) credited on the Oct 2026 New York launch campaign (ICE ad of the week; AI work by Studio T, media Publicis Media).",
+  "description_he": "חברת תעופה ישראלית (נוסדה ב-1989 בשם כנפי העמק, שינתה את שמה ב-1996) המפעילה טיסות סדירות ושכר; בבעלות קבוצת רמי לוי, וקיבלה ב-2026 אישור לטיסות לניו יורק."
+}

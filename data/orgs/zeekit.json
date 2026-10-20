@@ -1,0 +1,71 @@
+{
+  "id": "zeekit",
+  "name": "Zeekit",
+  "kind": "startup",
+  "categories": [
+    "xr",
+    "photo-tools",
+    "retail-fashion",
+    "gen-ai-image"
+  ],
+  "description": "Tel Aviv fashion-tech company that used computer vision and AI to render shoppers (or diverse models) wearing garments in a virtual fitting room. Acquired by Walmart in May 2021, where its tech powers 'Be Your Own Model' virtual try-on.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2013,
+  "status": "acquired",
+  "services": [
+    "Virtual try-on / fitting room",
+    "Image-based garment visualization"
+  ],
+  "key_people": [
+    {
+      "name": "Yael Vizel",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Alon Kristal",
+      "role": "Co-founder & CTO"
+    },
+    {
+      "name": "Nir Appleboim",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Acquired",
+    "total_usd_m": 9,
+    "investors": [
+      "8200 EISP",
+      "Walmart"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Walmart",
+      "note": "May 2021, reported ~$200M"
+    }
+  ],
+  "tags": [
+    "virtual try-on",
+    "fashion tech",
+    "computer vision",
+    "virtual-try-on",
+    "fashion",
+    "exit"
+  ],
+  "sources": [
+    "https://startupim.com/company/zeekit"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Single directory source fetched; Walmart deal widely reported but not re-verified here.",
+  "description_he": "חברת פאשן-טק מתל אביב שהשתמשה בראייה ממוחשבת וב-AI כדי להציג קונים (או מגוון דוגמניות ודוגמנים) לובשים בגדים בתא מדידה וירטואלי. נרכשה על ידי וולמארט במאי 2021, שם הטכנולוגיה שלה מפעילה את המדידה הווירטואלית 'Be Your Own Model'.",
+  "name_he": "זיקיט"
+}

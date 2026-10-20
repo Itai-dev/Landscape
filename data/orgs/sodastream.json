@@ -1,0 +1,87 @@
+{
+  "id": "sodastream",
+  "name": "SodaStream",
+  "name_he": "סודהסטרים",
+  "kind": "client",
+  "categories": [
+    "consumer-goods",
+    "food-beverage"
+  ],
+  "description": "Home sparkling-water maker owned by PepsiCo (acquired 2018), HQ in Kfar Saba with production in Israel; runs global and local campaigns and heavy product and social content.",
+  "location": {
+    "country": "IL",
+    "city": "Kfar Saba"
+  },
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://sodastream.co.il",
+  "careers_url": "https://www.pepsicojobs.com/sodastream",
+  "links": {
+    "global": "https://www.sodastream.com"
+  },
+  "key_people": [
+    {
+      "name": "Hila Baron",
+      "role": "Marketing Manager, SodaStream Israel",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1051346",
+      "as_of": "2025-02-13"
+    }
+  ],
+  "client_profile": {
+    "industry": "consumer appliances / beverages",
+    "creative_needs": [
+      "TV commercials",
+      "3D product visuals",
+      "social video",
+      "VFX",
+      "sound and music"
+    ],
+    "known_agencies": [
+      "Spring Valley"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "PepsiCo"
+    },
+    {
+      "type": "agency",
+      "target": "spring-valley",
+      "note": "listed as a Spring Valley client (agency website)"
+    },
+    {
+      "type": "agency",
+      "target": "blackboard-studios",
+      "note": "listed as a client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "igloo-creative-house",
+      "note": "listed as a client (studio website)"
+    },
+    {
+      "type": "agency",
+      "target": "moveo-group",
+      "note": "listed as a client (agency website)"
+    },
+    {
+      "type": "agency",
+      "target": "tomer-biran-audio-artists",
+      "note": "music for global SodaStream spots (studio website)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/SodaStream",
+    "https://he.wikipedia.org/wiki/%D7%A1%D7%95%D7%93%D7%94%D7%A1%D7%98%D7%A8%D7%99%D7%9D",
+    "https://spring-valley.co.il/",
+    "https://blackboardvfx.com",
+    "https://igloocreative.co",
+    "https://www.ice.co.il/positions/news/article/1051346"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "יצרנית מכשירי הגזה ביתיים בבעלות פפסיקו (נרכשה ב-2018), עם מטה בכפר סבא וייצור בישראל; מריצה קמפיינים גלובליים ומקומיים ומייצרת היקף גדול של תוכן מוצר וסושיאל."
+}

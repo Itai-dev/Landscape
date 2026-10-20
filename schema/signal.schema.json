@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Signal",
+  "description": "A dated, sourced event that creates a reason to reach out (funding, agency move, new marketing head, hiring...). Signals point to orgs; they never edit org records.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "type",
+    "org_name",
+    "date",
+    "headline",
+    "why",
+    "source_url",
+    "added"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^sig-\\d{4}-\\d{2}-\\d{2}-[a-z0-9-]+-[0-9a-f]{6}$",
+      "description": "sig-<date>-<org slug>-<6 hex of sha1(source_url)>; stable across reruns"
+    },
+    "type": {
+      "enum": [
+        "funding",
+        "acquisition",
+        "agency_move",
+        "ownership",
+        "rebrand",
+        "new_exec",
+        "campaign",
+        "launch",
+        "hiring",
+        "award",
+        "closure"
+      ]
+    },
+    "org_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Org id in data/orgs, or null if the org is not in the map yet"
+    },
+    "org_name": {
+      "type": "string"
+    },
+    "related_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Other orgs in the map involved (agencies, studios...)"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "date_approx": {
+      "type": "boolean",
+      "description": "true when the source only gives a relative date"
+    },
+    "headline": {
+      "type": "string",
+      "maxLength": 300
+    },
+    "why": {
+      "type": "string",
+      "maxLength": 300,
+      "description": "Why it matters for creative work — an observation, not an instruction"
+    },
+    "credits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "agency": {
+          "type": "string"
+        },
+        "production": {
+          "type": "string"
+        },
+        "studio": {
+          "type": "string"
+        },
+        "post": {
+          "type": "string"
+        },
+        "director": {
+          "type": "string"
+        }
+      }
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source": {
+      "type": "string",
+      "description": "Publication name"
+    },
+    "added": {
+      "type": "string",
+      "format": "date"
+    },
+    "v": {
+      "const": 1
+    },
+    "headline_he": {
+      "type": "string",
+      "maxLength": 400
+    },
+    "why_he": {
+      "type": "string",
+      "maxLength": 400
+    }
+  }
+}

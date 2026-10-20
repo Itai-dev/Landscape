@@ -1,0 +1,41 @@
+{
+  "id": "infinityar",
+  "name": "InfinityAR",
+  "aka": [
+    "Infinity Augmented Reality"
+  ],
+  "kind": "startup",
+  "categories": [
+    "xr"
+  ],
+  "description": "Israeli augmented-reality startup (founded 2013) that developed a software platform and SDK for AR smart glasses, for ODMs/OEMs and 3D-engine developers. Alibaba, an investor since 2016, acquired it in March 2019 and folded its R&D team into Alibaba DAMO Academy's Israel lab.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2013,
+  "status": "acquired",
+  "services": [
+    "AR glasses software platform",
+    "SDK for 3D engines"
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Alibaba",
+      "note": "March 2019; terms undisclosed (Globes est. >$10M)"
+    }
+  ],
+  "tags": [
+    "augmented reality",
+    "smart glasses"
+  ],
+  "sources": [
+    "https://techcrunch.com/2019/03/24/alibaba-acquires-israeli-vr-startup-infinity-augmented-reality/amp/",
+    "https://israelhayom.com/2019/03/25/chinese-giant-alibaba-acquires-israeli-augmented-reality-startup",
+    "https://herzoglaw.co.il/en/news-and-insights/alibaba-buys-israeli-augmented-reality-startup-infinityar/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטארטאפ ישראלי למציאות רבודה (נוסד ב-2013) שפיתח פלטפורמת תוכנה ו-SDK למשקפי AR חכמים, עבור יצרני ODM/OEM ומפתחי מנועי תלת-ממד. עליבאבא, משקיעה בחברה מאז 2016, רכשה אותה במרץ 2019 ושילבה את צוות הפיתוח שלה במעבדה הישראלית של Alibaba DAMO Academy."
+}

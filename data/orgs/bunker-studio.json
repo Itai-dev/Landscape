@@ -1,0 +1,56 @@
+{
+  "id": "bunker-studio",
+  "name": "Bunker",
+  "name_he": "בונקר",
+  "aka": [
+    "Bunker Ltd"
+  ],
+  "kind": "studio",
+  "categories": [
+    "editing",
+    "post-production",
+    "animation-3d"
+  ],
+  "description": "Family-owned boutique editing studio on Hashmonaim St. in Tel Aviv, run by Shiran and Sheshi Bar, providing offline and online editing and 3D animation for advertising, TV and online content, including corporate, product and event films; operating for over 12 years.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://bunker.co.il",
+  "reel_url": "https://www.youtube.com/watch?v=LQ_HbKchM4g",
+  "links": {
+    "facebook": "https://www.facebook.com/bunkerProductionsIsrael/",
+    "youtube": "https://www.youtube.com/user/BunkerTubeChannel"
+  },
+  "services": [
+    "Offline editing",
+    "Online editing",
+    "3D animation",
+    "Corporate & product films"
+  ],
+  "key_people": [
+    {
+      "name": "Shiran Bar",
+      "role": "Co-owner"
+    },
+    {
+      "name": "Sheshi Bar",
+      "role": "Co-owner"
+    }
+  ],
+  "tags": [
+    "edit-suites",
+    "advertising-post"
+  ],
+  "sources": [
+    "https://bunker.co.il",
+    "https://revenuebase.ai/companies/post-production-companies/israel",
+    "https://www.youtube.com/watch?v=LQ_HbKchM4g"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו עריכה בוטיק משפחתי ברחוב החשמונאים בתל אביב, בניהול שירן וששי בר, שמספק עריכת אופליין ואונליין ואנימציית תלת-ממד לפרסום, לטלוויזיה ולתוכן אונליין, כולל סרטי תדמית, מוצר ואירועים; פועל יותר מ-12 שנה."
+}

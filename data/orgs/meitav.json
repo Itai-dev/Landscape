@@ -1,0 +1,60 @@
+{
+  "id": "meitav",
+  "name": "Meitav Investment House",
+  "name_he": "מיטב בית השקעות",
+  "aka": [
+    "Meitav Dash"
+  ],
+  "kind": "client",
+  "categories": [
+    "banking-finance"
+  ],
+  "description": "One of Israel's largest investment houses (roots in 1979, formerly Meitav Dash), managing provident, pension and mutual funds plus trading; Bnei Brak HQ, ~1,000 employees. Ran a David Schwimmer celebrity campaign in 2024.",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 1979,
+  "size": "1001-5000",
+  "status": "active",
+  "website": "https://www.meitav.co.il",
+  "careers_url": "https://www.meitav.co.il/jobs/",
+  "key_people": [
+    {
+      "name": "Amnon Golan",
+      "role": "SVP Marketing",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1011019",
+      "as_of": "2024-05-03"
+    }
+  ],
+  "client_profile": {
+    "industry": "investment and pensions",
+    "creative_needs": [
+      "TV commercials",
+      "celebrity presenter campaigns",
+      "social video",
+      "digital campaigns"
+    ],
+    "known_agencies": [
+      "KPLN"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "kpln",
+      "note": "listed as a KPLN client; Ron Kaplan consulted on the 2024 Schwimmer campaign (ICE)"
+    }
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%98%D7%91_%D7%91%D7%99%D7%AA_%D7%94%D7%A9%D7%A7%D7%A2%D7%95%D7%AA",
+    "https://www.ice.co.il/advertising-marketing/news/article/1011019",
+    "https://kpln.co.il/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "May 2024 Schwimmer campaign was self-produced (strategy, creative and production in-house with freelancers): director Rani Carmeli, DP Menno Kadosh (ICE) — open to hiring freelance crews directly.",
+  "description_he": "אחד מבתי ההשקעות הגדולים בישראל (שורשיו ב-1979, לשעבר מיטב דש), שמנהל קופות גמל, קרנות פנסיה וקרנות נאמנות לצד פעילות מסחר; מטה בבני ברק, כ-1,000 עובדים. ב-2024 הריץ קמפיין סלבריטאים עם דייוויד שווימר."
+}

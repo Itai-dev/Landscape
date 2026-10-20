@@ -1,0 +1,109 @@
+{
+  "id": "gravity-creative-space",
+  "name": "Gravity Creative Space",
+  "aka": [
+    "Gravity",
+    "Gravity Creative",
+    "Gravity VFX and Design",
+    "Gravity Creative Tech"
+  ],
+  "kind": "studio",
+  "categories": [
+    "vfx",
+    "animation-3d",
+    "motion-design",
+    "post-production"
+  ],
+  "description": "Tel Aviv creative, design, animation and visual effects group founded in 1994 as the post-production house Gravity VFX and Design. It built a North American arm (Rhino FX, later rebranded Gravity) that worked on Hollywood features and US commercials, while the Tel Aviv studio serves Israeli and international advertising.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1994,
+  "size": "51-200",
+  "status": "active",
+  "website": "https://gravity.co.il",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/gravitycreative"
+  },
+  "services": [
+    "Visual effects",
+    "3D animation",
+    "Motion design",
+    "Compositing",
+    "Creative content for advertising",
+    "VFX",
+    "Design",
+    "Post-production",
+    "Concept"
+  ],
+  "notable_clients": [
+    "Bezeq",
+    "Carolina Lemke",
+    "yes"
+  ],
+  "notable_work": [
+    "Salt (VFX via Rhino/Gravity US)",
+    "The Other Guys (VFX via Rhino/Gravity US)",
+    "The Dybbuk of the Holy Apple Field (1997, digital effects)",
+    "Bezeq — Bezeq Energy with Adi Ashkenazi (2025)",
+    "Carolina Lemke — winter campaign with Bar Refaeli & Yehuda Levi (2025)",
+    "yes — campaign with Noa Kirel & Daniel Peretz (2026)"
+  ],
+  "key_people": [
+    {
+      "name": "Effi Wizen",
+      "role": "Founder (1994)"
+    },
+    {
+      "name": "Yoram Altman",
+      "role": "Owner (per Globes, 2010)"
+    }
+  ],
+  "relations": [
+    {
+      "type": "subsidiary",
+      "target": "Rhino FX",
+      "note": "North American unit; Gravity bought the remaining stake in 2010 and consolidated it under the Gravity brand"
+    },
+    {
+      "type": "client",
+      "target": "bezeq",
+      "note": "Bezeq Energy with Adi Ashkenazi, 2025-09, via Adler Chomski & Warshavsky (Grey), dir. Rani Carmeli (post) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Carolina Lemke",
+      "note": "winter campaign with Bar Refaeli & Yehuda Levi, 2025-10, dir. Roy Kafri (VFX) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "yes",
+      "note": "campaign with Noa Kirel & Daniel Peretz, 2026-01, via Adler Chomski & Warshavsky (Grey), dir. Eli Sverdlov (post) (ICE credits)"
+    }
+  ],
+  "tags": [
+    "advertising",
+    "vfx",
+    "commercials",
+    "tel-aviv",
+    "legacy-studio"
+  ],
+  "sources": [
+    "https://il.linkedin.com/company/gravitycreative",
+    "https://gravity.co.il",
+    "https://www.cgw.com/Press-Center/News/2010/Rhino-Re-Launches-as-Gravity.aspx",
+    "https://www.linkedin.com/company/gravitycreative",
+    "https://en.wikipedia.org/wiki/Effi_Wizen",
+    "https://en.globes.co.il/en/article-1000582737",
+    "https://www.awn.com/news/rhino-re-launches-gravity",
+    "https://www.ice.co.il/advertising-marketing/news/article/1083433",
+    "https://www.ice.co.il/advertising-marketing/news/article/1087334",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100904"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Website is a Readymag page with little text; LinkedIn lists 51-200 employees (other directories say 11-50). US offices (NY) reportedly closed; Tel Aviv studio continues.",
+  "description_he": "קבוצת קריאייטיב, עיצוב, אנימציה ואפקטים חזותיים מתל אביב, שנוסדה ב-1994 כבית הפוסט Gravity VFX and Design. הקימה זרוע בצפון אמריקה (Rhino FX, שמותגה מחדש מאוחר יותר כ-Gravity) שעבדה על סרטים הוליוודיים ופרסומות אמריקאיות, בעוד הסטודיו בתל אביב משרת פרסום ישראלי ובינלאומי."
+}

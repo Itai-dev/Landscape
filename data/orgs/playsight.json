@@ -1,0 +1,79 @@
+{
+  "id": "playsight",
+  "name": "PlaySight",
+  "aka": [
+    "PlaySight Interactive"
+  ],
+  "kind": "startup",
+  "categories": [
+    "sports-media",
+    "video-tools"
+  ],
+  "description": "Israeli sports-video company (founded 2010) whose AI-powered SmartCourt camera system records, analyses and live-streams games and training across 30+ sports, used across the NBA, MLB, NHL and NCAA. Acquired by US connected-sports company Slinger in a share deal valued at $82M in October 2021.",
+  "location": {
+    "country": "IL",
+    "city": "Kfar Saba",
+    "other_offices": [
+      "New Jersey"
+    ]
+  },
+  "founded": 2010,
+  "size": "51-200",
+  "status": "acquired",
+  "website": "https://playsight.com",
+  "services": [
+    "SmartCourt AI camera systems",
+    "Sports live streaming",
+    "Video analysis for coaching"
+  ],
+  "key_people": [
+    {
+      "name": "Chen Shachar",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Evgeni Khazanov",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Yoram Ben Zur",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Eyal Schneider",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Acquired",
+    "total_usd_m": 36,
+    "investors": [
+      "SoftBank Ventures Asia",
+      "NAVER",
+      "OurCrowd"
+    ]
+  },
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "Slinger Bag",
+      "note": "October 2021, ~$82M share swap"
+    }
+  ],
+  "tags": [
+    "smart court",
+    "sports streaming",
+    "coaching video"
+  ],
+  "sources": [
+    "https://playsight.com",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3919547,00.html",
+    "https://en.globes.co.il/en/article-slinger-buys-israeli-ai-sports-tech-co-playsight-for-82m-1001387092"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "CB Insights: ~80 employees, Kfar Saba and New Jersey.",
+  "description_he": "חברת וידאו ספורט ישראלית (נוסדה ב-2010) שמערכת המצלמות SmartCourt מבוססת ה-AI שלה מקליטה, מנתחת ומשדרת בשידור חי משחקים ואימונים ביותר מ-30 ענפי ספורט, ונמצאת בשימוש ב-NBA, MLB, NHL ו-NCAA. נרכשה באוקטובר 2021 על ידי חברת הספורט המחובר האמריקאית Slinger בעסקת מניות לפי שווי של 82 מיליון דולר.",
+  "name_he": "פלייסייט"
+}

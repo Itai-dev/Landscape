@@ -1,0 +1,50 @@
+{
+  "id": "mv-productions",
+  "name": "MV Productions (Meirav Vizer)",
+  "aka": [
+    "Meirav Vizer Productions"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "commercial-production",
+    "photography"
+  ],
+  "description": "Small Israeli production-services company led by Meirav Vizer, servicing foreign commercial and stills shoots in Israel (casting through full unit management) for clients such as Optical Center, COS and Superlative; also represents TV commercial directors.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://meiravizer.com/",
+  "links": {
+    "instagram": "https://www.instagram.com/mv_films/",
+    "facebook": "https://www.facebook.com/MVProductionsIsrael"
+  },
+  "notable_clients": [
+    "Optical Center",
+    "COS",
+    "Superlative",
+    "Cream (Paris)",
+    "Film Reaktor"
+  ],
+  "key_people": [
+    {
+      "name": "Meirav Vizer",
+      "role": "Founder, Producer"
+    }
+  ],
+  "tags": [
+    "production-services",
+    "foreign-productions"
+  ],
+  "sources": [
+    "https://meiravizer.com/",
+    "https://productionparadise.com/member/tel_aviv/meirav-vizer.html",
+    "https://www.thelocationguide.com/israel/production-services"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Location Guide lists Netanya; Production Paradise lists Tel Aviv.",
+  "description_he": "חברת שירותי הפקה ישראלית קטנה בהובלת מירב ויזר, שמספקת שירותים להפקות פרסומות וסטילס זרות בישראל (מליהוק ועד ניהול הפקה מלא) עבור לקוחות כמו Optical Center, COS ו-Superlative; מייצגת גם במאי פרסומות לטלוויזיה."
+}

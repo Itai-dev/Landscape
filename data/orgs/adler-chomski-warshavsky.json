@@ -1,0 +1,151 @@
+{
+  "id": "adler-chomski-warshavsky",
+  "name": "Adler Chomski & Warshavsky (Grey)",
+  "name_he": "אדלר חומסקי & ורשבסקי",
+  "aka": [
+    "Adler Chomsky & Warshavsky",
+    "ACW Grey",
+    "Adler Chomski Grey",
+    "Adler Chomski Group"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency",
+    "media-agency",
+    "content-studio"
+  ],
+  "description": "Israeli advertising group founded in 1996 by Reuven Adler and Eyal Chomski; it bought Warshavsky Freilich Dovev in 1998 and represents Grey in Israel. Described by Calcalist (Oct 2026) as Israel's second-largest advertising group (~400 staff), with subsidiaries including a design studio, interactive agency, sector agencies (Russian, Arab, Haredi) and LEAD. Grand Effie winner 2026 (Strauss/Doritos).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1996,
+  "size": "201-500",
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/adler-chomski-warshavsky"
+  },
+  "services": [
+    "Creative advertising",
+    "Media planning & buying",
+    "Digital",
+    "Content (Grey Content)"
+  ],
+  "notable_clients": [
+    "Discount Bank",
+    "Bezeq",
+    "Colmobil",
+    "Mifal HaPais (Lotto)",
+    "The Phoenix",
+    "Clal Insurance",
+    "Electra",
+    "Strauss (Doritos)",
+    "Delta",
+    "Shufersal (via Brickman, from Dec 2025)",
+    "Israel Discount Bank (media via MediaCom)"
+  ],
+  "key_people": [
+    {
+      "name": "Eyal Chomski",
+      "role": "Co-founder, controlling shareholder"
+    },
+    {
+      "name": "Uri Eini",
+      "role": "CEO of the agency (Globes, Oct 2026)"
+    },
+    {
+      "name": "Reuven Adler",
+      "role": "Co-founder (died 2022)"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production",
+      "3D/CGI",
+      "digital content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Grey Group (WPP)",
+      "note": "Grey representative in Israel"
+    },
+    {
+      "type": "subsidiary",
+      "target": "lead-advertising"
+    },
+    {
+      "type": "subsidiary",
+      "target": "mediacom-israel",
+      "note": "MediaCom Connections, the group's international media arm"
+    },
+    {
+      "type": "client",
+      "target": "shufersal",
+      "note": "Via the group's Brickman agency (ICE, Dec 2025)"
+    },
+    {
+      "type": "client",
+      "target": "bezeq",
+      "note": "Bezeq Energy with Adi Ashkenazi, 2025-09 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "israel-discount-bank",
+      "note": "young-account campaign with Rotem Sela, 2025-09; campaign for the self-employed with Rotem Sela, 2025-11 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "yes",
+      "note": "campaign with Noa Kirel & Daniel Peretz, 2026-01 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "mifal-hapais",
+      "note": "community campaign to Idan Amedi's 'Elayich', 2026-03 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "Electra",
+      "note": "summer campaign with Amir Benayoun & Lihi Kornowski, 2026-05 (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "pelephone",
+      "note": "Pelephone MAX 5G with Yehuda Levi & Gal Adam, 2026-05 (ICE credits)"
+    }
+  ],
+  "tags": [
+    "independent-ownership",
+    "grey",
+    "top-agency",
+    "effie"
+  ],
+  "sources": [
+    "https://www.calcalistech.com/ctechnews/article/tmari75m0",
+    "https://he.wikipedia.org/wiki/%D7%90%D7%93%D7%9C%D7%A8_%D7%97%D7%95%D7%9E%D7%A1%D7%A7%D7%99_%26_%D7%95%D7%A8%D7%A9%D7%91%D7%A1%D7%A7%D7%99",
+    "https://www.globes.co.il/news/article.aspx?did=1001559112",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.linkedin.com/company/adler-chomski-warshavsky",
+    "https://www.ice.co.il/advertising-marketing/news/article/1094607",
+    "https://www.ice.co.il/advertising-marketing/news/article/1081618",
+    "https://www.ice.co.il/advertising-marketing/news/article/973940",
+    "https://www.ice.co.il/advertising-marketing/news/article/1083433",
+    "https://www.ice.co.il/advertising-marketing/news/article/1085110",
+    "https://www.ice.co.il/advertising-marketing/news/article/1091042",
+    "https://www.ice.co.il/advertising-marketing/news/article/1100904",
+    "https://www.ice.co.il/advertising-marketing/news/article/1107672",
+    "https://www.ice.co.il/advertising-marketing/news/article/1111479",
+    "https://www.ice.co.il/advertising-marketing/news/article/1114705"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Oct 2026: Leumi Partners and Discount Capital reportedly considering ~30% stake at ~NIS 500M valuation (not confirmed closed). Was publicly traded from 2007 before being taken private. Boroda-Kaplan (now KPLN) was formerly part of the group. Official website not confirmed.",
+  "description_he": "קבוצת פרסום ישראלית שהוקמה ב-1996 על ידי ראובן אדלר ואייל חומסקי; ב-1998 רכשה את ורשבסקי פריילך דובב, והיא מייצגת את Grey בישראל. כלכליסט תיאר אותה (אוקטובר 2026) כקבוצת הפרסום השנייה בגודלה בישראל (כ-400 עובדים), עם חברות בנות ובהן סטודיו לעיצוב, סוכנות אינטראקטיב, משרדים מגזריים (רוסי, ערבי, חרדי) ו-LEAD. זוכת Grand Effie 2026 (שטראוס/דוריטוס)."
+}

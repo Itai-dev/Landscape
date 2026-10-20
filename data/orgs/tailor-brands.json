@@ -1,0 +1,84 @@
+{
+  "id": "tailor-brands",
+  "name": "Tailor Brands",
+  "kind": "startup",
+  "categories": [
+    "design-tools",
+    "branding",
+    "website-builders",
+    "gen-ai-image"
+  ],
+  "description": "AI-powered branding platform that began as an automated logo maker and expanded into an all-in-one tool for small businesses to design brand identities, websites and marketing assets and to form and run their business. HQ in New York and Tel Aviv.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2015,
+  "status": "active",
+  "website": "https://www.tailorbrands.com",
+  "services": [
+    "Logo maker & brand identity",
+    "Website builder",
+    "Business formation & small-business tools",
+    "Social/ad design",
+    "AI logo maker",
+    "Brand identity kits",
+    "Business formation tools"
+  ],
+  "key_people": [
+    {
+      "name": "Yali Saar",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Nadav Shatz",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Tom Lahat",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Series C",
+    "total_usd_m": 70,
+    "investors": [
+      "GoDaddy",
+      "OurCrowd",
+      "Pitango Growth",
+      "Mangrove Capital Partners",
+      "Armat Group",
+      "Disruptive VC"
+    ],
+    "public": false
+  },
+  "relations": [
+    {
+      "type": "investor",
+      "target": "GoDaddy",
+      "note": "Led $50M Series C, 2021"
+    }
+  ],
+  "tags": [
+    "logo design",
+    "SMB",
+    "branding automation",
+    "ai-logo",
+    "smb"
+  ],
+  "sources": [
+    "https://www.tailorbrands.com/about",
+    "https://www.calcalistech.com/ctech/articles/0,7340,L-3913079,00.html",
+    "https://en.globes.co.il/en/article-1001379209",
+    "https://techcrunch.com/2021/07/22/tailor-brands-raises-50m-aims-to-be-one-stop-shop-for-small-businesses-to-launch"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Founding year cited as 2014 or 2015.",
+  "description_he": "פלטפורמת מיתוג מבוססת AI שהתחילה כמחולל לוגואים אוטומטי והתרחבה לכלי הכול-באחד לעסקים קטנים — עיצוב זהות מותג, אתרים וחומרי שיווק, וגם הקמה וניהול של העסק. מטה בניו יורק ובתל אביב.",
+  "name_he": "טיילור ברנדס"
+}

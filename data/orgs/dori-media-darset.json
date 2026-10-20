@@ -1,0 +1,60 @@
+{
+  "id": "dori-media-darset",
+  "name": "Dori Media Darset",
+  "name_he": "דורי מדיה דרסט",
+  "aka": [
+    "Darset Productions",
+    "Paran Productions"
+  ],
+  "kind": "production_company",
+  "categories": [
+    "film-production"
+  ],
+  "description": "Israeli TV development and production company led by producer Danny Paran and part of Dori Media Group, known for telenovelas, dramas and youth series such as Avoda Aravit (Arab Labor), Doctor Libby, Shababnikim and Galis.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.dorimedia.com/",
+  "contact_url": "https://dorimedia.com/contact-us/",
+  "links": {
+    "instagram": "https://www.instagram.com/dorimediagroup/",
+    "linkedin": "https://www.linkedin.com/company/dori-media-group/"
+  },
+  "notable_work": [
+    "Arab Labor (Avoda Aravit)",
+    "Shababnikim",
+    "Doctor Libby",
+    "Galis",
+    "HaAlufa"
+  ],
+  "key_people": [
+    {
+      "name": "Danny Paran",
+      "role": "Head / Producer"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Dori Media Group"
+    }
+  ],
+  "tags": [
+    "tv-production",
+    "drama",
+    "telenovela",
+    "youth"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%93%D7%95%D7%A8%D7%99_%D7%9E%D7%93%D7%99%D7%94_%D7%93%D7%A8%D7%A1%D7%98",
+    "https://thetvdb.com/companies/dori-media-darset",
+    "https://dorimedia.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Located in Ramat HaHayal (Tel Aviv) per Hebrew Wikipedia.",
+  "description_he": "חברת פיתוח והפקות טלוויזיה ישראלית בהובלת המפיק דני פרן, חלק מקבוצת דורי מדיה, המוכרת בטלנובלות, דרמות וסדרות נוער כמו 'עבודה ערבית', 'דוקטור ליבי', 'שבאבניקים' ו'גאליס'."
+}

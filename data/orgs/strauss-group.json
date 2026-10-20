@@ -1,0 +1,108 @@
+{
+  "id": "strauss-group",
+  "name": "Strauss Group",
+  "name_he": "שטראוס",
+  "aka": [
+    "Strauss-Elite"
+  ],
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israel's largest food and beverage group (Elite, Achla, Dani, Milky, Tapuchips, Doritos/Frito-Lay license, Strauss Water) with global coffee operations. Its Doritos campaign won the 2026 Grand Effie.",
+  "location": {
+    "country": "IL",
+    "city": "Petah Tikva"
+  },
+  "founded": 1939,
+  "size": "5001+",
+  "status": "active",
+  "website": "https://www.strauss-group.com",
+  "key_people": [
+    {
+      "name": "Ofra Strauss",
+      "role": "Chairwoman"
+    },
+    {
+      "name": "Maya Schneider",
+      "role": "Marketing Manager, Confectionery Division (Elite)",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/consumerism/news/article/1134016",
+      "as_of": "2026-10-18"
+    },
+    {
+      "name": "Liraz Sofrin",
+      "role": "Marketing Manager, Strauss Dairies",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/consumerism/news/article/1128404",
+      "as_of": "2026-09-02"
+    },
+    {
+      "name": "Naama Gal Shabbat",
+      "role": "Marketing Manager, Yotvata",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1132770",
+      "as_of": "2026-10-08"
+    },
+    {
+      "name": "Lilach Dolev Ben Kedar",
+      "role": "Marketing & Innovation Manager, Yad Mordechai",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1129235",
+      "as_of": "2026-09-09"
+    }
+  ],
+  "funding": {
+    "public": true,
+    "ticker": "TASE: STRS"
+  },
+  "client_profile": {
+    "industry": "food & beverage",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "influencer content",
+      "product photography / 3D packshots",
+      "packaging design",
+      "branding"
+    ],
+    "known_agencies": [
+      "Adler Chomski & Warshavsky Grey",
+      "BBR Saatchi & Saatchi (Baumann Ber Rivnay)"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "bbr-saatchi-saatchi",
+      "note": "agency (per trade press / agency client list)"
+    },
+    {
+      "type": "agency",
+      "target": "peach-content",
+      "note": "campaign with Hila Saada, 2026-09 (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Strauss_Group",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.globes.co.il/news/article.aspx?did=1001506565",
+    "https://www.globes.co.il/news/article.aspx?did=1001180659",
+    "https://www.ice.co.il/consumerism/news/article/1134016",
+    "https://www.ice.co.il/consumerism/news/article/1128404",
+    "https://www.ice.co.il/advertising-marketing/news/article/1132770",
+    "https://www.ice.co.il/advertising-marketing/news/article/1129235",
+    "https://www.globes.co.il/news/article.aspx?did=1001557557",
+    "https://www.ice.co.il/advertising-marketing/news/article/1131001"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Multi-agency: Adler Chomski handles salty snacks (since 2017) and dairy (since 2012); BBR Saatchi & Saatchi (Baumann Ber Rivnay) won Effie Gold 2026 for Elite. Strauss ice cream is a Unilever brand, not Strauss Group. Agencies as of 2026-09: Adler Chomski & Warshavsky Grey (Doritos, Grand Effie 2026); BBR Saatchi & Saatchi (Yotvata, Globes Sep 2026).",
+  "description_he": "קבוצת המזון והמשקאות הגדולה בישראל (עלית, אחלה, דני, מילקי, תפוצ'יפס, רישיון דוריטוס/פריטו-ליי, שטראוס מים) עם פעילות קפה גלובלית. קמפיין הדוריטוס שלה זכה בגרנד אפי 2026."
+}

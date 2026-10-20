@@ -1,0 +1,60 @@
+{
+  "id": "open-total-brand-experience",
+  "name": "OPEN",
+  "aka": [
+    "OPEN – Total Brand Experience"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "digital-design",
+    "graphic-design"
+  ],
+  "description": "Israeli brand and UX/UI design studio founded in 2000 by Saar Friedman and Eyal Katz. Offers branding, design and advertising, with clients across fintech, tech and banking.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2000,
+  "status": "active",
+  "website": "https://www.open.co.il",
+  "contact_url": "https://www.open.co.il/contact-us",
+  "careers_url": "https://www.open.co.il/grow-with-us",
+  "reel_url": "https://www.open.co.il/wp-content/uploads/2021/05/Main_Open_Showreel_2024_60MB.mp4",
+  "links": {
+    "facebook": "https://www.facebook.com/OPENTBE/",
+    "linkedin": "https://www.linkedin.com/company/open---total-brand-experience",
+    "instagram": "https://www.instagram.com/open_everyday/"
+  },
+  "services": [
+    "branding",
+    "UX/UI design",
+    "advertising"
+  ],
+  "notable_clients": [
+    "bit (Bank Hapoalim)",
+    "Bank Hapoalim",
+    "Kaltura",
+    "Elementor",
+    "Argus"
+  ],
+  "key_people": [
+    {
+      "name": "Saar Friedman",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Eyal Katz",
+      "role": "Co-founder"
+    }
+  ],
+  "sources": [
+    "https://www.open.co.il",
+    "https://alefalefalef.co.il/en/?p=7304",
+    "https://www.open.co.il/",
+    "https://www.open.co.il/grow-with-us"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו ישראלי לעיצוב מותג ו-UX/UI שנוסד ב-2000 על ידי סער פרידמן ואייל כץ. מציע מיתוג, עיצוב ופרסום, עם לקוחות מתחומי הפינטק, הטכנולוגיה והבנקאות."
+}

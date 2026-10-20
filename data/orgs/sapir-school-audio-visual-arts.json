@@ -1,0 +1,38 @@
+{
+  "id": "sapir-school-audio-visual-arts",
+  "name": "Sapir College – School of Audio and Visual Arts",
+  "name_he": "המכללה האקדמית ספיר – בית הספר לאמנויות הקול והמסך",
+  "kind": "community",
+  "categories": [
+    "education",
+    "film-production",
+    "festival-event"
+  ],
+  "description": "Film and TV school at Sapir Academic College near Sderot, known for socially engaged cinema from Israel's south. It founded and runs the Cinema South Festival (since 2001, with the Sderot Cinematheque), showing fiction, documentary, animation, TV pilots and web series from students and international filmmakers.",
+  "location": {
+    "country": "IL",
+    "city": "Sderot"
+  },
+  "status": "active",
+  "website": "https://www.sapir.ac.il/en",
+  "services": [
+    "Film & TV degree programs",
+    "Cinema South Festival"
+  ],
+  "tags": [
+    "school",
+    "film-school",
+    "cinema-south",
+    "periphery"
+  ],
+  "sources": [
+    "https://sapir.ac.il/en/cinema/csf",
+    "https://www.sapir.ac.il/en/news/5025",
+    "https://www.sapir.ac.il/en/film-festival/cat/1572"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "notes": "sapir.ac.il blocks automated fetches (Incapsula); details from Sapir's own festival pages via search. 24th Cinema South edition was set for Nov 2025.",
+  "description_he": "בית ספר לקולנוע ולטלוויזיה במכללה האקדמית ספיר ליד שדרות, שמוכר בזכות קולנוע מעורב חברתית מהדרום. הקים ומפעיל את פסטיבל קולנוע דרום (מאז 2001, יחד עם סינמטק שדרות), שמציג סרטים עלילתיים, דוקומנטריים, אנימציה, פיילוטים לטלוויזיה וסדרות רשת של סטודנטים ויוצרים מרחבי העולם."
+}

@@ -1,0 +1,59 @@
+{
+  "id": "debby-group",
+  "name": "Debby Group",
+  "kind": "agency",
+  "categories": [
+    "pr-social"
+  ],
+  "description": "Tel Aviv PR and strategic communications agency, presenting itself as an affiliate of Edelman. Offers media relations, thought leadership, events and corporate communications for tech, consumer and public clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "size": "11-50",
+  "status": "active",
+  "website": "https://debby.co.il/en/",
+  "contact_url": "https://debby.co.il/en/contact/",
+  "careers_url": "https://debby.co.il/en/jobs/",
+  "services": [
+    "Media relations",
+    "Thought leadership",
+    "Event production",
+    "Corporate communications",
+    "Digital/new media communications"
+  ],
+  "notable_clients": [
+    "NVIDIA",
+    "Oracle",
+    "Palo Alto Networks",
+    "PayPal",
+    "Unilever",
+    "Kimberly-Clark",
+    "TikTok",
+    "Waze",
+    "Isrotel",
+    "Egged"
+  ],
+  "relations": [
+    {
+      "type": "partner",
+      "target": "Edelman",
+      "note": "Affiliate"
+    }
+  ],
+  "tags": [
+    "pr",
+    "edelman"
+  ],
+  "sources": [
+    "https://debby.co.il/en/",
+    "https://clutch.co/il/agencies.md",
+    "https://debby.co.il/en/contact/",
+    "https://debby.co.il/en/jobs/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Address: Yitzhak Sadeh 8, Tel Aviv. Size band from Clutch (10-49).",
+  "description_he": "משרד יחסי ציבור ותקשורת אסטרטגית מתל אביב, שמציג את עצמו כשותף של Edelman. מציע קשרי מדיה, מיצוב מובילי דעה (thought leadership), אירועים ותקשורת תאגידית ללקוחות טכנולוגיה, צרכנות ומגזר ציבורי."
+}

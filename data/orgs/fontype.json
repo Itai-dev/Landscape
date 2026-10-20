@@ -1,0 +1,53 @@
+{
+  "id": "fontype",
+  "name": "Fontype",
+  "name_he": "פונטייפ",
+  "kind": "studio",
+  "categories": [
+    "typography"
+  ],
+  "description": "Israeli Hebrew font company for designing, developing and marketing fonts, founded in 2009 by type designer Eliyahu Freid and partner Shimon Bergman; catalogue includes Tamar, Atara, Netzach and many display faces.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2009,
+  "status": "active",
+  "website": "https://www.fontype.co.il",
+  "links": {
+    "myfonts": "https://www.myfonts.com/collections/Eliyahu_Fried/"
+  },
+  "services": [
+    "retail Hebrew fonts",
+    "custom fonts"
+  ],
+  "notable_work": [
+    "Tamar",
+    "Sha'arei Tzedek",
+    "Atara",
+    "Netzach"
+  ],
+  "key_people": [
+    {
+      "name": "Eliyahu Freid",
+      "role": "Co-founder / type designer"
+    },
+    {
+      "name": "Shimon Bergman",
+      "role": "Co-founder"
+    }
+  ],
+  "tags": [
+    "hebrew-type"
+  ],
+  "sources": [
+    "https://www.fontype.co.il",
+    "https://alefalefalef.co.il/מעצבי-הפונטים-הישראלים-3/?lang=en",
+    "https://luc.devroye.org/israel.html",
+    "https://www.fontype.co.il/"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "As of 2026-10-18 the site carries unrelated spam pages (binary options, pharmacy), suggesting it is unmaintained or compromised.",
+  "description_he": "חברת פונטים עבריים ישראלית לעיצוב, פיתוח ושיווק פונטים, שהוקמה ב-2009 על ידי מעצב האותיות אליהו פריד ושותפו שמעון ברגמן; הקטלוג כולל את תמר, עטרה, נצח ופונטי תצוגה רבים."
+}

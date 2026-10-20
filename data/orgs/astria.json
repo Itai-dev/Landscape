@@ -1,0 +1,53 @@
+{
+  "id": "astria",
+  "name": "Astria",
+  "aka": [
+    "Astria.ai"
+  ],
+  "kind": "startup",
+  "categories": [
+    "gen-ai-image",
+    "photo-tools"
+  ],
+  "description": "Tel Aviv generative-AI startup offering fine-tuning and an API for personalized image generation: AI product photoshoots and fashion lookbooks for e-commerce and professional AI headshots from reference images, with reusable photoshoot templates.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 2022,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.astria.ai",
+  "services": [
+    "AI product photography",
+    "AI headshots",
+    "Fine-tuning API"
+  ],
+  "key_people": [
+    {
+      "name": "Alon Burg",
+      "role": "Co-founder"
+    },
+    {
+      "name": "Itay Schiff",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Pre-funding (none disclosed)"
+  },
+  "tags": [
+    "fine-tuning",
+    "api",
+    "headshots"
+  ],
+  "sources": [
+    "https://www.astria.ai",
+    "https://www.astria.ai/terms",
+    "https://startupim.com/company/astria"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטארטאפ ג'נרטיב AI מתל אביב שמציע פיין-טיונינג ו-API ליצירת תמונות מותאמות אישית: צילומי מוצר ולוקבוקים לאופנה ב-AI לאיקומרס ותמונות פרופיל מקצועיות ב-AI מתמונות רפרנס, עם תבניות צילום לשימוש חוזר."
+}

@@ -1,0 +1,38 @@
+{
+  "id": "starcom-israel",
+  "name": "Starcom Israel",
+  "kind": "agency",
+  "categories": [
+    "media-agency"
+  ],
+  "description": "Israeli office of Publicis Media's Starcom network, listed as one of the agency brands of Publicis Groupe Israel in 2015 and 2018 releases.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "services": [
+    "Media planning",
+    "Media buying"
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Publicis Groupe Israel"
+    }
+  ],
+  "tags": [
+    "media-buying",
+    "publicis"
+  ],
+  "sources": [
+    "https://www.publicisgroupe.com/en/news/press-releases/publicis-groupe-announces-new-appointments-in-israel",
+    "https://www.publicisgroupe.com/sites/default/files/press-release/20151124_PG_GSS_241115_FR_Final.pdf"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Only Publicis corporate sources (2015, 2018); current status, leadership and website not verified.",
+  "description_he": "הסניף הישראלי של רשת Starcom של Publicis Media, שנמנה בין מותגי המשרדים של פובליסיס גרופ ישראל בהודעות מ-2015 ומ-2018.",
+  "name_he": "סטארקום ישראל"
+}

@@ -1,0 +1,88 @@
+{
+  "id": "mccann-digital",
+  "name": "McCann Digital",
+  "name_he": "מקאן דיגיטל",
+  "aka": [
+    "UM Digital",
+    "Universal McCann Digital"
+  ],
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "media-agency"
+  ],
+  "description": "Digital marketing and digital media agency in the McCann Israel group, based in Ramat HaHayal, Tel Aviv. Offers total video, content, SEM, SEO/ASO, UX/UI, programmatic and BI/data services for large advertisers.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://mdigital.co.il/",
+  "careers_url": "https://mdigital.co.il/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/universal-mccann-digital"
+  },
+  "services": [
+    "Total video",
+    "Content",
+    "SEM / PPC",
+    "SEO & ASO",
+    "UX/UI",
+    "Programmatic",
+    "BI & data dashboards",
+    "Media planning"
+  ],
+  "notable_clients": [
+    "El Al",
+    "Nespresso",
+    "Bank Leumi",
+    "Super-Pharm",
+    "IKEA",
+    "L'Oréal"
+  ],
+  "key_people": [
+    {
+      "name": "Ophir Cohen",
+      "role": "Joint CEO",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    },
+    {
+      "name": "Maor Chen",
+      "role": "Joint CEO",
+      "role_type": "executive",
+      "source": "https://mccann.co.il/about/",
+      "as_of": "2026-10-19"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "short-form video",
+      "motion design",
+      "social content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "mccann-tel-aviv"
+    }
+  ],
+  "tags": [
+    "digital",
+    "omnicom"
+  ],
+  "sources": [
+    "https://mdigital.co.il/",
+    "https://mccann.co.il/about/",
+    "https://mccann.co.il/",
+    "https://mdigital.co.il/careers/",
+    "https://www.linkedin.com/company/universal-mccann-digital"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "umdigital.co.il redirects to mdigital.co.il. Sources are all McCann-owned sites.",
+  "description_he": "סוכנות שיווק ומדיה דיגיטלית בקבוצת מקאן ישראל, שממוקמת ברמת החייל בתל אביב. מציעה שירותי טוטאל וידאו, תוכן, SEM, SEO/ASO, UX/UI, פרוגרמטיק ו-BI/דאטה למפרסמים גדולים."
+}

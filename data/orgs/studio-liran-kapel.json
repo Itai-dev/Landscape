@@ -1,0 +1,70 @@
+{
+  "id": "studio-liran-kapel",
+  "name": "Studio Liran Kapel",
+  "aka": [
+    "Kapel",
+    "Studio Kapel",
+    "Liran Kapel Animation Studio"
+  ],
+  "kind": "studio",
+  "categories": [
+    "animation-2d",
+    "motion-design",
+    "illustration"
+  ],
+  "description": "Ramat Gan animation studio led by director Liran Kapel, making handcrafted brand animation that blends stop-motion, hand-drawn animation, video and mixed media for social ads, TV commercials, sponsorships and children's films.",
+  "location": {
+    "country": "IL",
+    "city": "Ramat Gan"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://lirankapel.com",
+  "contact_url": "https://www.lirankapel.com/contact/",
+  "reel_url": "https://vimeo.com/1192022161",
+  "links": {
+    "vimeo": "https://vimeo.com/lirankapel",
+    "linkedin": "https://www.linkedin.com/company/liran-kapel-animation-studio/",
+    "instagram": "https://www.instagram.com/liran_kapel_animation/",
+    "youtube": "https://www.youtube.com/@lirankapel-creativedesigna9309"
+  },
+  "services": [
+    "Stop-motion animation",
+    "Hand-drawn animation",
+    "Animated TV commercials and sponsorships",
+    "Social media ads",
+    "Children's films"
+  ],
+  "notable_clients": [
+    "Nespresso",
+    "Barilla",
+    "Strauss",
+    "Tnuva",
+    "Samsung",
+    "Playtika",
+    "Neviot",
+    "Yoplait",
+    "Flying Tiger"
+  ],
+  "key_people": [
+    {
+      "name": "Liran Kapel",
+      "role": "Founder, Animation Director"
+    }
+  ],
+  "tags": [
+    "stop-motion",
+    "fmcg",
+    "commercials"
+  ],
+  "sources": [
+    "https://lirankapel.com",
+    "https://www.animationisrael.com/copy-of-studios",
+    "https://lirankapel.com/",
+    "https://vimeo.com/1192022161"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סטודיו אנימציה ברמת גן בהובלת הבמאי לירן קפל, שיוצר אנימציה בעבודת יד למותגים, המשלבת סטופ-מושן, אנימציה מצוירת ביד, וידאו ומדיה מעורבת — למודעות סושיאל, פרסומות טלוויזיה, חסויות וסרטי ילדים."
+}

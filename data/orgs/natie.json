@@ -1,0 +1,70 @@
+{
+  "id": "natie",
+  "name": "Natie",
+  "aka": [
+    "Natie Branding Agency"
+  ],
+  "kind": "studio",
+  "categories": [
+    "branding",
+    "graphic-design",
+    "digital-design"
+  ],
+  "description": "International branding agency headquartered in Tel Aviv with a distributed team (US, UK, Italy), building brands for over 20 years. Offers brand strategy, naming, identity, websites, animation and campaigns for tech, nonprofit and impact clients.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://www.natie.com",
+  "reel_url": "https://vimeo.com/701249349",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/natie",
+    "instagram": "https://www.instagram.com/natie_branding_agency",
+    "facebook": "https://www.facebook.com/natieagency",
+    "x": "https://twitter.com/natiebranding",
+    "youtube": "https://www.youtube.com/channel/UCeYuis_Iw7h8VaSywM7XGqQ"
+  },
+  "services": [
+    "brand strategy",
+    "naming",
+    "copywriting",
+    "visual identity",
+    "websites",
+    "animation",
+    "advertising"
+  ],
+  "notable_clients": [
+    "UBQ",
+    "IsraAID",
+    "Medisafe",
+    "Justt",
+    "Elron Ventures",
+    "The Jewish Agency",
+    "Auschwitz Jewish Center Foundation"
+  ],
+  "key_people": [
+    {
+      "name": "Eitan Chitayat",
+      "role": "Founder / Creative Director",
+      "role_type": "founder",
+      "source": "https://natie.com/team/eitan/",
+      "as_of": "2026-10-18"
+    }
+  ],
+  "tags": [
+    "startups",
+    "nonprofit",
+    "impact"
+  ],
+  "sources": [
+    "https://www.natie.com",
+    "https://www.webtonic.io/blog/best-branding-brand-identity-agencies-tel-aviv",
+    "https://natie.com/team/eitan/",
+    "https://vimeo.com/701249349"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "סוכנות מיתוג בינלאומית שמטהּ בתל אביב וצוותה מבוזר (ארה\"ב, בריטניה, איטליה), שבונה מותגים כבר יותר מ-20 שנה. מציעה אסטרטגיית מותג, נֵיימינג, זהות חזותית, אתרים, אנימציה וקמפיינים ללקוחות טכנולוגיה, עמותות וחברות אימפקט."
+}

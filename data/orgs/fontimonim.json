@@ -1,0 +1,50 @@
+{
+  "id": "fontimonim",
+  "name": "Fontimonim",
+  "name_he": "פונטימונים",
+  "kind": "studio",
+  "categories": [
+    "typography",
+    "illustration"
+  ],
+  "description": "Hebrew font label founded by Avraham Cornfeld as a sister brand of AlefAlefAlef; each typeface is paired with an illustrated character ('FontiToon'), aimed at playful display and brand use.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "website": "https://fontimonim.co.il/",
+  "contact_url": "https://fontimonim.co.il/info/contact/",
+  "links": {
+    "myfonts": "https://www.myfonts.com/collections/fontimonim/",
+    "instagram": "https://www.instagram.com/fontimonim",
+    "facebook": "https://www.facebook.com/fontimonim"
+  },
+  "key_people": [
+    {
+      "name": "Avraham Cornfeld",
+      "role": "Founder"
+    }
+  ],
+  "relations": [
+    {
+      "type": "parent",
+      "target": "alefalefalef"
+    }
+  ],
+  "tags": [
+    "hebrew-type",
+    "display-fonts"
+  ],
+  "sources": [
+    "https://alefalefalef.co.il/en/?p=19697",
+    "https://luc.devroye.org/israel.html",
+    "https://fontimonim.co.il/",
+    "https://fontimonim.co.il/info/contact/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Website URL not verified (fetch failed); founding year not found. Site resolves at https://fontimonim.co.il/ (the www host returned an error on 2026-10-18).",
+  "description_he": "לייבל פונטים עבריים שהקים אברהם קורנפלד כמותג אחות של אלף אלף אלף; כל פונט מגיע עם דמות מאוירת ('פונטיטון'), ומיועד לשימוש תצוגתי שובב ולמיתוג."
+}

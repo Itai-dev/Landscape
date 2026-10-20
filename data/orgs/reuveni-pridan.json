@@ -1,0 +1,129 @@
+{
+  "id": "reuveni-pridan",
+  "name": "Reuveni Pridan",
+  "name_he": "ראובני פרידן",
+  "aka": [
+    "Reuveni Pridan IPG"
+  ],
+  "kind": "agency",
+  "categories": [
+    "advertising",
+    "digital-agency"
+  ],
+  "description": "Tel Aviv advertising agency founded in January 1986 by Moshe Reuveni and Udi Pridan; merged into Interpublic Group in 2015 (now under Omnicom). Described by ICE (Dec 2025) as Israel's third-largest advertising group; set up independent digital agency ARLO in 2020. Effie Israel 2026 Platinum (Gad Dairies).",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "founded": 1986,
+  "status": "active",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/rp-ipg",
+    "facebook": "https://www.facebook.com/rpinspireme/"
+  },
+  "notable_clients": [
+    "Gad Dairies",
+    "Mizrahi Tefahot Bank",
+    "Isracard",
+    "Israel Hayom",
+    "Novo Nordisk",
+    "Albar (Harley-Davidson, Triumph)",
+    "Ten Bis",
+    "Madlan",
+    "Israir",
+    "Mizrahi Tefahot",
+    "Tenbis",
+    "Harley-Davidson"
+  ],
+  "key_people": [
+    {
+      "name": "Moshe Reuveni",
+      "role": "Co-founder, chairman"
+    },
+    {
+      "name": "Udi Pridan",
+      "role": "Co-founder, chairman"
+    },
+    {
+      "name": "Ziv Koren",
+      "role": "Group CEO",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1131943",
+      "as_of": "2026-10-02"
+    },
+    {
+      "name": "Niv Horesh",
+      "role": "Group owner / CEO"
+    },
+    {
+      "name": "Asaf Griss",
+      "role": "Co-CEO, advertising agency",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1093811",
+      "as_of": "2025-12-02"
+    },
+    {
+      "name": "Shiri Haiser",
+      "role": "Co-CEO, advertising agency",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1131943",
+      "as_of": "2026-10-02"
+    },
+    {
+      "name": "Lior Neufeld",
+      "role": "Deputy CEO",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1131943",
+      "as_of": "2026-10-02"
+    },
+    {
+      "name": "Tal Chen",
+      "role": "VP Strategy",
+      "role_type": "other",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1131943",
+      "as_of": "2026-10-02"
+    }
+  ],
+  "client_profile": {
+    "creative_needs": [
+      "TV/commercial production",
+      "animation",
+      "post-production",
+      "digital content"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "IPG / Omnicom",
+      "note": "Merged into IPG 2015; Omnicom acquired IPG in 2025"
+    },
+    {
+      "type": "subsidiary",
+      "target": "arlo-digital"
+    },
+    {
+      "type": "client",
+      "target": "mizrahi-tefahot"
+    }
+  ],
+  "tags": [
+    "ipg",
+    "network-agency",
+    "top-agency"
+  ],
+  "sources": [
+    "https://he.wikipedia.org/wiki/%D7%A8%D7%90%D7%95%D7%91%D7%A0%D7%99_%D7%A4%D7%A8%D7%99%D7%93%D7%9F",
+    "https://www.ice.co.il/advertising-marketing/news/article/1093811",
+    "https://www.globes.co.il/news/article.aspx?did=1001541337",
+    "https://www.ice.co.il/advertising-marketing/news/article/994550",
+    "https://www.ice.co.il/advertising-marketing/news/article/1131943",
+    "https://www.ice.co.il/advertising-marketing/news/article/1118491",
+    "https://www.linkedin.com/company/rp-ipg"
+  ],
+  "confidence": "high",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-19",
+  "notes": "Main office Arlozorov 161, Tel Aviv. Founders came from Fogel Levin (1985). Acquired Rabban Golani in 2002. Website from Hebrew Wikipedia (not fetched). Website rpipg.co.il unreachable as of 2026-10-19.",
+  "description_he": "משרד פרסום תל אביבי שנוסד בינואר 1986 על ידי משה ראובני ואודי פרידן; התמזג לתוך Interpublic Group ב-2015 (כיום תחת Omnicom). ICE תיאר אותו (דצמבר 2025) כקבוצת הפרסום השלישית בגודלה בישראל; הקים ב-2020 את סוכנות הדיגיטל העצמאית ARLO. זוכה פלטינום באפי ישראל 2026 (מחלבות גד)."
+}

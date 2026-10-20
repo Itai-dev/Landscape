@@ -1,0 +1,53 @@
+{
+  "id": "session42",
+  "name": "Session42",
+  "aka": [
+    "Session 42",
+    "HitCraft"
+  ],
+  "kind": "startup",
+  "categories": [
+    "gen-ai-audio",
+    "music-tech"
+  ],
+  "description": "Tel Aviv AI music company founded by hit-producer brothers Oudi and Roy Antebi; builds HitCraft, an AI co-production tool that helps producers and songwriters generate song structures and variations. Produced an AI-assisted duet released for Israel's 75th Independence Day.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv"
+  },
+  "status": "active",
+  "services": [
+    "HitCraft AI music production tool"
+  ],
+  "key_people": [
+    {
+      "name": "Oudi Antebi",
+      "role": "Co-founder & CEO"
+    },
+    {
+      "name": "Roy Antebi",
+      "role": "Co-founder"
+    }
+  ],
+  "funding": {
+    "stage": "Seed",
+    "total_usd_m": 4,
+    "investors": [
+      "Horizon Capital"
+    ]
+  },
+  "tags": [
+    "ai-music",
+    "songwriting"
+  ],
+  "sources": [
+    "https://musictech.com/news/music/israeli-ai-music-session42-new-production-tool",
+    "https://www.israelhayom.com/2024/08/22/amplifying-creativity-israeli-startup-promises-instant-hit-songs/",
+    "https://archive.israel21c.org/music-world-gets-startup-nation-upgrade-using-ai-of-course/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "notes": "Funding figures conflict across databases ($4M seed per PitchBook vs $8M per VCBacked). Operates a 7-studio recording complex in south Tel Aviv (2023). HitCraft site (hitcraft.ai) could not be reached from this environment.",
+  "description_he": "חברת מוזיקה מבוססת AI מתל אביב שהקימו האחים עודי ורועי אנטבי, מפיקי להיטים; מפתחת את HitCraft, כלי הפקה משותפת ב-AI שעוזר למפיקים ולכותבי שירים לייצר מבני שירים ווריאציות. הפיקה דואט בסיוע AI שיצא לכבוד יום העצמאות ה-75 של ישראל."
+}

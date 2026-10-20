@@ -1,0 +1,52 @@
+{
+  "id": "on-air-graphics",
+  "name": "On-Air Graphics",
+  "aka": [
+    "OAG",
+    "ON-AIR Graphics Ltd"
+  ],
+  "kind": "studio",
+  "categories": [
+    "creative-technology",
+    "motion-design",
+    "xr",
+    "vfx"
+  ],
+  "description": "Israeli broadcast graphics company providing real-time graphics for TV and web streaming: Unreal Engine virtual studios, in-studio and outdoor augmented reality, on-air graphics templates and interactive systems, with on-site support for broadcasters worldwide (e.g. election, news, sports and weather packages).",
+  "location": {
+    "country": "IL",
+    "city": "Omer"
+  },
+  "size": "1-10",
+  "status": "active",
+  "website": "https://on-airgraphics.com",
+  "contact_url": "https://on-airgraphics.com/contact-us/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/onairgraphics/",
+    "facebook": "https://www.facebook.com/OnAirGraphicsLtd/",
+    "x": "https://twitter.com/OnAirGraphics",
+    "instagram": "https://www.instagram.com/onairgraphics/",
+    "youtube": "https://www.youtube.com/channel/UCWSWT8qqs_QJP9iXVvvLA0A"
+  },
+  "services": [
+    "Virtual studios (Unreal Engine)",
+    "Broadcast augmented reality",
+    "On-air graphics templates",
+    "Interactive broadcast graphics",
+    "Election & sports graphics packages"
+  ],
+  "tags": [
+    "broadcast-graphics",
+    "real-time",
+    "virtual-studio"
+  ],
+  "sources": [
+    "https://on-airgraphics.com",
+    "https://revenuebase.ai/companies/vfx-studios/israel",
+    "https://on-airgraphics.com/"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-18",
+  "last_verified": "2026-10-18",
+  "description_he": "חברה ישראלית לגרפיקה לשידור שמספקת גרפיקה בזמן אמת לטלוויזיה ולסטרימינג ברשת: אולפנים וירטואליים ב-Unreal Engine, מציאות רבודה באולפן ובחוץ, תבניות גרפיקה לשידור ומערכות אינטראקטיביות, עם תמיכה בשטח לגופי שידור ברחבי העולם (למשל חבילות לבחירות, חדשות, ספורט ומזג אוויר)."
+}

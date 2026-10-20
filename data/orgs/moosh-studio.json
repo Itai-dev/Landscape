@@ -1,0 +1,82 @@
+{
+  "id": "moosh-studio",
+  "name": "Moosh Studio",
+  "kind": "studio",
+  "categories": [
+    "xr",
+    "creative-technology",
+    "experiential",
+    "game-development"
+  ],
+  "description": "Tel Aviv (and NYC) studio, founded 2018, making story-driven worlds in VR, AR, games and AI installations for cultural, educational and social projects — e.g. TAMA, an AI guide for the Tel Aviv Museum of Art (with Reichman University's Advanced Reality Lab), TAZOO location-based AR for the Tel Aviv Municipality, and the 'Finding the Tools' VR resilience-training platform.",
+  "location": {
+    "country": "IL",
+    "city": "Tel Aviv",
+    "other_offices": [
+      "New York"
+    ]
+  },
+  "founded": 2018,
+  "size": "1-10",
+  "status": "active",
+  "website": "https://www.moosh-studio.com/",
+  "contact_url": "https://www.moosh-studio.com/#contact",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/mooshstudio/",
+    "instagram": "https://www.instagram.com/_moosh_studio"
+  },
+  "services": [
+    "VR (6DOF) experiences",
+    "Location-based AR",
+    "AI museum installations",
+    "Narrative games"
+  ],
+  "notable_clients": [
+    "Tel Aviv Museum of Art",
+    "Tel Aviv Municipality",
+    "Reichman University",
+    "Geha Hospital",
+    "Shalvata Hospital"
+  ],
+  "notable_work": [
+    "TAMA – AI guide, Tel Aviv Museum of Art (2022)",
+    "TAZOO – AR for the old Tel Aviv Zoo (2021)",
+    "Finding the Tools – VR training (2024)",
+    "Eddie and I (VR)"
+  ],
+  "relations": [
+    {
+      "type": "client",
+      "target": "tel-aviv-museum-of-art",
+      "note": "TAMA AI guide (2022)"
+    },
+    {
+      "type": "client",
+      "target": "tel-aviv-yafo-municipality",
+      "note": "TAZOO AR (2021)"
+    },
+    {
+      "type": "partner",
+      "target": "reichman-university",
+      "note": "Advanced Reality Lab"
+    }
+  ],
+  "tags": [
+    "vr",
+    "ar",
+    "museum",
+    "impact",
+    "storytelling"
+  ],
+  "sources": [
+    "https://www.moosh-studio.com/",
+    "https://www.moosh-studio.com/projects/tama",
+    "https://www.moosh-studio.com/projects/tazoo",
+    "https://www.cbinsights.com/compare/moosh-studio-vs-studio-trika",
+    "https://il.linkedin.com/company/mooshstudio"
+  ],
+  "confidence": "high",
+  "added": "2026-10-19",
+  "last_verified": "2026-10-19",
+  "description_he": "סטודיו מתל אביב (ומניו יורק), שנוסד ב-2018, שבונה עולמות מבוססי סיפור ב-VR, AR, משחקים ומיצבי AI לפרויקטים תרבותיים, חינוכיים וחברתיים – למשל TAMA, מדריך AI למוזיאון תל אביב לאמנות (עם המעבדה למציאות מתקדמת באוניברסיטת רייכמן), TAZOO, חוויית AR מבוססת מיקום לעיריית תל אביב, ופלטפורמת ה-VR לאימון חוסן 'Finding the Tools'."
+}
