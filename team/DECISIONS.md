@@ -40,6 +40,8 @@ User #1 is the owner; then a small invited beta (owner + 5–10 trusted creative
 - **Ask the map** (search field → "Ask ✦", or Enter on a question): Claude answers from the map only, using page tools (search_orgs, get_org, recent_signals, my_pipeline) and lists the companies it used as tappable cards.
 - **Hebrew UI**: full English/Hebrew string table, right-to-left layout, Hebrew labels for every category and need, Hebrew names first in Hebrew mode. Record descriptions stay English (as sourced).
 
+- **AI-first home** (owner feedback: "a database feels old-fashioned"): the app now opens on a single prompt — "What are you looking for?" — with suggested questions based on your crafts and a "This week" strip of signals. Answers come back as a short summary plus result cards (why it fits · what they buy · Save · Pitch · Open) and follow-up questions; live steps show what's being checked. Browse (the old directory) is the second tab. Without Claude (e.g. GitHub Pages) it falls back to keyword matches.
+
 ## Waits (in rough order)
 v3: AI pitch draft (Why now · Who · Way in · What to show; drafts only, never sends) → Ask the map → "this is wrong" reports → credits type → Hebrew UI → onboarding → profiles & community on our own stack → world.
 

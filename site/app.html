@@ -166,10 +166,43 @@ main { padding-block: 6px 24px; }
 .examples { display: flex; flex-wrap: wrap; gap: 6px; }
 .examples button { white-space: normal; text-align: start; }
 
+/* ask home */
+.home { max-width: 760px; }
+.hero { padding-block: 22px 8px; display: grid; gap: 12px; }
+.hero h2 { margin: 0; font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 7vw, 38px); line-height: 1.08; letter-spacing: -.03em; text-wrap: balance; }
+.hero p { margin: 0; color: var(--muted); font-size: 14px; }
+.askbox { display: flex; align-items: flex-end; gap: 8px; background: var(--surface); border: 1.5px solid var(--ink); border-radius: 18px; padding: 8px 8px 8px 14px; padding-inline: 14px 8px; box-shadow: 0 6px 24px rgba(16, 30, 30, .08); }
+.askbox textarea { flex: 1; min-width: 0; border: 0; background: transparent; resize: none; outline: none; font-size: 17px; line-height: 1.4; padding-block: 8px; max-height: 160px; }
+.askgo { flex: none; width: 44px; height: 44px; border-radius: 12px; border: 0; background: var(--accent); color: var(--accent-ink); font-size: 20px; font-weight: 600; }
+.askgo[disabled] { opacity: .4; }
+.prompts { display: flex; flex-wrap: wrap; gap: 6px; }
+.prompts button { flex: 0 1 auto; max-width: 100%; white-space: normal; text-align: start; line-height: 1.3; padding-block: 7px; }
+.turn { display: grid; gap: 12px; padding-block: 18px; border-top: 1px solid var(--line); }
+.turn .q { font-weight: 600; font-size: 17px; }
+.steps { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.steps span::before { content: "· "; }
+.steps .live { color: var(--accent); }
+@media (prefers-reduced-motion: no-preference) { .steps .live { animation: pulse 1.2s ease-in-out infinite; } @keyframes pulse { 50% { opacity: .45; } } }
+.results { display: grid; gap: 10px; }
+.rcard { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; display: grid; gap: 8px; }
+.rhead { display: flex; gap: 12px; align-items: center; border: 0; background: none; padding: 0; text-align: start; width: 100%; }
+.rhead .nm { flex: 1; min-width: 0; display: grid; }
+.rhead b { font-size: 16px; font-weight: 600; }
+.rwhy { margin: 0; font-size: 14px; }
+.rwhy::before { content: "✦ "; color: var(--accent); }
+.racts { display: flex; flex-wrap: wrap; gap: 6px; }
+.racts .btn { min-height: 36px; padding-block: 4px; font-size: 13px; }
+.week { display: grid; gap: 8px; padding-block: 18px 6px; }
+.week h3 { margin: 0; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.wrow { display: flex; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; text-align: start; width: 100%; min-height: 52px; }
+.wrow .nm { flex: 1; min-width: 0; display: grid; font-size: 14px; }
+.wrow .nm span { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wrow .ty { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--now); }
+
 /* tab bar */
 nav.tabbar { position: fixed; inset: auto 0 0 0; z-index: 15; background: var(--surface); border-top: 1px solid var(--line);
   padding: 4px max(8px, env(safe-area-inset-right, 0px)) env(safe-area-inset-bottom, 0px) max(8px, env(safe-area-inset-left, 0px)); }
-nav.tabbar .in { max-width: 560px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+nav.tabbar .in { max-width: 600px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
 nav.tabbar button { border: 0; background: none; min-height: 54px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 12px; font-weight: 500; color: var(--muted); position: relative; }
 nav.tabbar button svg { width: 22px; height: 22px; }
 nav.tabbar button[aria-current="page"] { color: var(--accent); }
@@ -234,8 +267,24 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   </header>
   <div class="notice" id="storeNotice" hidden></div>
 
+  <!-- ASK (home) -->
+  <section id="v-ask" class="home" aria-label="Ask">
+    <div class="hero">
+      <h2 data-i18n="home.h">What are you looking for?</h2>
+      <p data-i18n="home.sub">Ask in plain words. Answers come from the map, with the companies behind them.</p>
+      <form class="askbox" id="askForm">
+        <textarea id="askQ" rows="2" dir="auto" data-i18n-ph="home.ph" placeholder="e.g. Brands that need 3D product visuals this quarter" aria-label="Question"></textarea>
+        <button class="askgo" id="askGo" type="submit" aria-label="Ask">↑</button>
+      </form>
+      <div class="prompts" id="prompts"></div>
+      <div class="notice" id="askNotice" hidden></div>
+    </div>
+    <div id="thread"></div>
+    <div class="week" id="week"></div>
+  </section>
+
   <!-- EXPLORE -->
-  <section id="v-explore" aria-label="Explore">
+  <section id="v-explore" aria-label="Explore" hidden>
     <div class="bar">
       <label class="search" for="q">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -296,7 +345,9 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 
 <nav class="tabbar" aria-label="Sections">
   <div class="in">
-    <button type="button" data-tab="explore" aria-current="page">
+    <button type="button" data-tab="ask" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg><span data-i18n="tab.ask">Ask</span></button>
+    <button type="button" data-tab="explore">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg><span data-i18n="tab.explore">Explore</span></button>
     <button type="button" data-tab="signals">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span data-i18n="tab.signals">Signals</span><span class="badge" id="sigBadge" hidden></span></button>
@@ -324,7 +375,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
-      "tab.explore": "Explore", "tab.signals": "Signals", "tab.pipeline": "Pipeline", "export": "Export my data",
+      "tab.ask": "Ask", "tab.explore": "Browse", "tab.signals": "Signals",
+      "home.h": "What are you looking for?", "home.sub": "Ask in plain words. Answers come from the map, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
+      "home.week": "This week", "home.offline": "AI answers work when Landscape is opened in claude.ai. Showing the closest matches from the map for now.", "home.nores": "Nothing in the map matches that yet. Try other words, or browse.",
+      "home.p.need": "Who needs {0} right now?", "home.p.agency": "Which agencies commission {0}?", "home.p.collab": "Studios I could team up with on {0}",
+      "step.search": "Searching the map{0}", "step.org": "Reading about {0}", "step.signals": "Checking recent signals", "step.pipe": "Looking at your pipeline", "step.write": "Writing the answer", "step.start": "Thinking",
+      "r.open": "Open", "r.pitch": "✎ Pitch", "r.match": "Matches: {0}", "tab.pipeline": "Pipeline", "export": "Export my data",
       "k1.studio": "Studio", "k1.production_company": "Production co.", "k1.startup": "Startup", "k1.agency": "Agency", "k1.client": "Brand", "k1.community": "Community",
       "km.studio": "Studios", "km.production_company": "Production", "km.startup": "Startups", "km.agency": "Agencies", "km.client": "Brands", "km.community": "Community",
       "status.acquired": "acquired", "status.closed": "closed", "status.merged": "merged", "status.unknown": "status unknown",
@@ -366,7 +422,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "filters": "סינון", "sort.fit": "ההתאמה הטובה", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} תוצאות", "count1": "תוצאה אחת", "more": "עוד",
       "empty.h": "אין תוצאות", "empty.p": "נסו פחות מסננים, או חפשו באנגלית (לא לכל הארגונים יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
-      "tab.explore": "גילוי", "tab.signals": "סיגנלים", "tab.pipeline": "פייפליין", "export": "ייצוא הנתונים שלי",
+      "tab.ask": "שאלו", "tab.explore": "עיון", "tab.signals": "סיגנלים",
+      "home.h": "מה אתם מחפשים?", "home.sub": "שאלו במילים פשוטות. התשובות מגיעות מהמפה, עם הארגונים שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
+      "home.week": "השבוע", "home.offline": "תשובות AI עובדות כשפותחים את Landscape ב-claude.ai. בינתיים מוצגות ההתאמות הקרובות מהמפה.", "home.nores": "עדיין אין במפה משהו שמתאים לזה. נסו מילים אחרות, או עיינו.",
+      "home.p.need": "מי צריך {0} עכשיו?", "home.p.agency": "אילו סוכנויות מזמינות {0}?", "home.p.collab": "סטודיואים לשיתוף פעולה ב{0}",
+      "step.search": "מחפש במפה{0}", "step.org": "קורא על {0}", "step.signals": "בודק סיגנלים אחרונים", "step.pipe": "בודק את הפייפליין שלך", "step.write": "כותב תשובה", "step.start": "חושב",
+      "r.open": "פתיחה", "r.pitch": "✎ פנייה", "r.match": "התאמה: {0}", "tab.pipeline": "פייפליין", "export": "ייצוא הנתונים שלי",
       "k1.studio": "סטודיו", "k1.production_company": "חברת הפקות", "k1.startup": "סטארטאפ", "k1.agency": "סוכנות", "k1.client": "מותג", "k1.community": "קהילה",
       "km.studio": "סטודיואים", "km.production_company": "הפקות", "km.startup": "סטארטאפים", "km.agency": "סוכנויות", "km.client": "מותגים", "km.community": "קהילה",
       "status.acquired": "נרכש", "status.closed": "נסגר", "status.merged": "מוזג", "status.unknown": "סטטוס לא ידוע",
@@ -558,8 +619,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   function signalsFor(o) { return signals().filter((s) => !s.hidden && (s.org_id === o.id || (s.related_ids || []).includes(o.id))); }
 
   // ---------- view state ----------
-  const state = { tab: "explore", q: "", lens: "brands", sort: "fit", kinds: [], cats: [], inds: [], needs: [], city: "", sigType: "", shown: PAGE };
-  try { Object.assign(state, JSON.parse(localStorage.getItem("landscape-view") || "{}"), { shown: PAGE }); } catch (e) {}
+  const state = { tab: "ask", q: "", lens: "brands", sort: "fit", kinds: [], cats: [], inds: [], needs: [], city: "", sigType: "", shown: PAGE };
+  try { Object.assign(state, JSON.parse(localStorage.getItem("landscape-view") || "{}"), { shown: PAGE, tab: "ask" }); } catch (e) {}
   function saveView() { try { const { shown, ...v } = state; localStorage.setItem("landscape-view", JSON.stringify(v)); } catch (e) {} }
 
   function changed() {
@@ -674,7 +735,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       mine.map((c) => `<button class="chip" type="button" data-rmcraft="${c}" aria-label="${esc(t("mine.remove", catLabel(c)))}">${esc(catLabel(c))} <span class="x">✕</span></button>`).join("") +
       `<button class="chip add" type="button" data-crafts>${mine.length ? t("mine.edit") : t("mine.pick")}</button>`;
   }
-  function renderAskBtn() { $("askBtn").hidden = !(Store.sample && Store.mode === "db"); }
+  function renderAskBtn() { $("askBtn").hidden = false; }
 
   function renderExplore() {
     document.querySelectorAll("#lens button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lens === state.lens));
@@ -841,7 +902,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   function closeAll() {
     if (aiCtl) { aiCtl.abort(); aiCtl = null; }
     $("sheet").hidden = true; $("panel").hidden = true; $("scrim").hidden = true; delete $("sheet").dataset.id;
-    try { history.replaceState(null, "", location.pathname + location.search + (state.tab !== "explore" ? "#" + state.tab : "")); } catch (e) {}
+    try { history.replaceState(null, "", location.pathname + location.search + (state.tab !== "ask" ? "#" + state.tab : "")); } catch (e) {}
   }
   const errText = (e) => (e && e.code === "cancelled" ? "" : (e && I18N.en["err." + e.code] ? t("err." + e.code) : t("p.fail")));
 
@@ -985,59 +1046,118 @@ Company: ${JSON.stringify(facts)}`;
     { name: "my_pipeline", description: "The viewer's own saved companies with stage and follow-up date.",
       execute() { return Object.values(Store.pipeline).map((e) => ({ org_id: e.org_id, stage: e.stage, next_date: e.next_date, note: e.note ? trim(e.note, 120) : undefined })); } },
   ];
-  function openAsk(question) {
-    const ex = ["ask.ex1", "ask.ex2", "ask.ex3", "ask.ex4"].map((k) => t(k));
-    $("panel").innerHTML = `${closeBtn()}
-      <h2 style="margin:4px 0 0;font-size:22px">${t("ask.title")}</h2>
-      <p class="muted" style="margin:6px 0 0;font-size:13px">${t("ask.sub")}</p>
-      <div class="filtersec"><textarea id="aQ" class="field" dir="auto" style="min-height:64px" placeholder="${esc(t("ask.ph"))}">${esc(question || "")}</textarea>
-        <div class="row"><button class="btn primary" type="button" id="aGo">${t("ask.go")}</button><span class="muted" id="aStatus" style="font-size:13px"></span></div></div>
-      <div class="filtersec" id="aEx" ${question ? "hidden" : ""}><div class="examples">${ex.map((q) => `<button class="chip" type="button" data-askex="${esc(q)}">${esc(q)}</button>`).join("")}</div></div>
-      <div class="filtersec" id="aOut" hidden><p class="answer" id="aText" dir="auto"></p><h4 id="aFoundH" hidden>${t("ask.found")}</h4><div class="asklist" id="aFound"></div></div>`;
-    showPanel();
-    $("aGo").addEventListener("click", () => runAsk($("aQ").value.trim()));
-    $("aEx").addEventListener("click", (e) => { const b = e.target.closest("[data-askex]"); if (b) { $("aQ").value = b.dataset.askex; runAsk(b.dataset.askex); } });
-    if (question) runAsk(question);
+  // ---------- ask (home) ----------
+  let thread = [];
+  try { thread = JSON.parse(localStorage.getItem("landscape-thread") || "[]").filter((x) => x && x.q && !x.running).slice(0, 6); } catch (e) {}
+  const saveThread = () => { try { localStorage.setItem("landscape-thread", JSON.stringify(thread.slice(0, 6))); } catch (e) {} };
+  let askCtl = null;
+  const aiReady = () => !!(Store.sample && Store.mode === "db");
+
+  function homePrompts() {
+    const crafts = myCrafts();
+    const out = [];
+    if (crafts.length) {
+      const c = crafts[0];
+      const need = Object.keys(NEEDS).find((n) => (NEEDS[n].crafts || []).includes(c));
+      const what = need ? needLabel(need) : catLabel(c);
+      out.push(t("home.p.need", what), t("home.p.agency", what), t("home.p.collab", catLabel(c)));
+    }
+    out.push(t("ask.ex4"), t("ask.ex1"), t("ask.ex2"), t("ask.ex3"));
+    return [...new Set(out)].slice(0, 5);
   }
-  async function runAsk(q) {
-    if (!q || !Store.sample) return;
-    $("aEx").hidden = true;
-    const prompt = `You answer questions about "Landscape", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands that buy creative work). The person asking is a creative professional looking for clients, collaborators or work.
+  function rcard(o, why) {
+    const e = Store.entry(o.id);
+    const nm = names(o);
+    const hits = new Set(needHits(o));
+    const buys = o.needs.length ? `<p class="line"><span class="k">${t("card.buys")}</span>${[...o.needs].sort((a, b) => hits.has(b) - hits.has(a)).slice(0, 3).map((n) => hits.has(n) ? `<b class="fit">${esc(needLabel(n))}</b>` : esc(needLabel(n))).join(" · ")}</p>` : "";
+    return `<article class="rcard" style="${gstyle(o)}">
+      <button class="rhead" type="button" data-id="${o.id}">${logo(o)}<span class="nm"><b><bdi>${esc(nm.main)}</bdi></b>${kindLine(o)}</span></button>
+      ${why ? `<p class="rwhy" dir="auto">${esc(why)}</p>` : ""}${buys}
+      <div class="racts">
+        ${e ? `<span class="stage">★ ${esc(stageLabel(e.stage))}</span>` : `<button class="btn" type="button" data-save-org="${o.id}" ${Store.readOnly ? "disabled" : ""}>${t("sig.save")}</button>`}
+        ${aiReady() ? `<button class="btn" type="button" data-pitch-org="${o.id}">${t("r.pitch")}</button>` : ""}
+        <button class="btn ghost" type="button" data-id="${o.id}">${t("r.open")} →</button>
+      </div></article>`;
+  }
+  function renderHome() {
+    $("prompts").innerHTML = thread.length ? "" : homePrompts().map((q) => `<button class="chip" type="button" data-ask="${esc(q)}">${esc(q)}</button>`).join("");
+    $("askNotice").hidden = aiReady() || Store.mode === "loading";
+    $("askNotice").textContent = t("home.offline");
+    $("thread").innerHTML = thread.map((x, i) => `<div class="turn">
+      <div class="q" dir="auto">${esc(x.q)}</div>
+      ${x.running ? `<div class="steps">${(x.steps || []).map((st, j, all) => `<span class="${j === all.length - 1 ? "live" : ""}">${esc(st)}</span>`).join("")}</div>` : ""}
+      ${x.summary ? `<p class="answer" dir="auto">${esc(x.summary)}</p>` : ""}
+      ${x.error ? `<p class="muted">${esc(x.error)}</p>` : ""}
+      ${(x.results || []).length ? `<div class="results">${x.results.filter((r) => BY_ID[r.id]).map((r) => rcard(BY_ID[r.id], r.why)).join("")}</div>` : (!x.running && !x.summary && !x.error ? `<p class="muted">${t("home.nores")}</p>` : "")}
+      ${(x.followups || []).length && i === 0 ? `<div class="prompts">${x.followups.map((q) => `<button class="chip" type="button" data-ask="${esc(q)}">${esc(q)}</button>`).join("")}</div>` : ""}
+    </div>`).join("");
+    const week = signals().filter((s) => !s.hidden).slice(0, 4);
+    $("week").innerHTML = week.length ? `<h3>${t("home.week")}</h3>` + week.map((s) => { const o = s.org_id && BY_ID[s.org_id];
+      return `<button class="wrow" type="button" ${o ? `data-id="${o.id}"` : `data-goto="signals"`}>${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<span class="nm"><span class="ty">${esc(sigType(s.type))} · ${ago(s.date)}</span><b><bdi>${esc(o ? orgName(o) : s.org_name)}</bdi></b><span dir="auto">${esc(s.headline)}</span></span></button>`; }).join("") : "";
+  }
+  function localAnswer(q) {
+    // keyword fallback when Claude isn't available: score orgs by word hits
+    const stop = new Set("the a an and or of for to in on at with who which what that this me my i we are is be can could need needs right now work".split(" "));
+    const words = q.toLowerCase().replace(/[?!.,]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !stop.has(w));
+    const scored = ORGS.map((o) => {
+      const hitW = words.filter((w) => o._text.includes(w));
+      return { o, s: hitW.length * 2 + (hitW.length ? score(o) * .2 : 0), hitW };
+    }).filter((x) => x.s > 0).sort((a, b) => b.s - a.s).slice(0, 10);
+    return { results: scored.map((x) => ({ id: x.o.id, why: t("r.match", x.hitW.join(", ")) })), summary: "", followups: [] };
+  }
+  function parseAnswer(text) {
+    const m = text.match(/\{[\s\S]*\}/);
+    if (m) { try { const j = JSON.parse(m[0]); return { summary: String(j.summary || ""), results: (j.results || []).filter((r) => r && BY_ID[r.id]).slice(0, 10), followups: (j.followups || []).slice(0, 3).map(String) }; } catch (e) {} }
+    const ids = [...new Set((text.match(/[a-z0-9]+(?:-[a-z0-9]+)+/g) || []).filter((id) => BY_ID[id]))];
+    return { summary: text.replace(/\{[\s\S]*$/, "").trim(), results: ids.map((id) => ({ id, why: "" })), followups: [] };
+  }
+  async function ask(q) {
+    q = (q || "").trim(); if (!q) return;
+    if (state.tab !== "ask") goTab("ask");
+    $("askQ").value = ""; autosize();
+    const turn = { q, steps: [t("step.start")], running: true };
+    thread.unshift(turn); thread = thread.slice(0, 6);
+    renderHome(); window.scrollTo({ top: 0 });
+    if (!aiReady()) { Object.assign(turn, localAnswer(q), { running: false }); saveThread(); return renderHome(); }
+    const step = (msg) => { turn.steps = [...turn.steps, msg]; renderHome(); };
+    const tools = ASK_TOOLS.map((tool) => ({ ...tool, execute: (inp, ctx) => {
+      if (tool.name === "search_orgs") step(t("step.search", [inp.need && needLabel(String(inp.need)), inp.kind && kindMany(String(inp.kind)), inp.text].filter(Boolean).map((x) => " · " + x).join("")));
+      else if (tool.name === "get_org") step(t("step.org", BY_ID[String(inp.id)] ? orgName(BY_ID[String(inp.id)]) : String(inp.id)));
+      else if (tool.name === "recent_signals") step(t("step.signals"));
+      else if (tool.name === "my_pipeline") step(t("step.pipe"));
+      return tool.execute(inp, ctx);
+    } }));
+    const history = thread.slice(1, 4).filter((x) => x.summary).map((x) => `Q: ${x.q}\nA: ${x.summary} (orgs: ${(x.results || []).map((r) => r.id).join(", ")})`).join("\n\n");
+    const prompt = `You are the search assistant of "Landscape", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands and public bodies that buy creative work). The person is a creative professional looking for clients, collaborators or work.
 ${myCrafts().length ? `They make: ${myCrafts().join(", ")}.` : ""}
 
 Rules:
-- Use ONLY the map: the index below and the tools (search_orgs, get_org, recent_signals, my_pipeline). Call get_org for details before naming people, agencies or clients. Never use outside knowledge; if the map doesn't have it, say so plainly.
-- Answer in ${LANG === "he" ? "Hebrew" : "English"} (company names may stay in their usual spelling). Be brief: at most ~120 words, plain text, short lines or a compact list. No markdown headings.
-- Name concrete companies and, when relevant, why (what they buy, their agency, a recent signal with its date).
-- Last line, exactly: IDS: <comma-separated org ids you mentioned, most relevant first, max 12>
-
+- Use ONLY the map: the index below and the tools. Call get_org before stating people, agencies, clients or campaigns. Never use outside knowledge; if the map lacks something, say so in the summary.
+- Prefer orgs with a concrete reason now (recent signal, matching need, known agency or commissioning person).
+- Write in ${LANG === "he" ? "Hebrew" : "English"}; company names may keep their usual spelling.
+- Return ONLY this JSON, nothing else:
+{"summary": "<2-3 short sentences that answer directly>", "results": [{"id": "<org id from the map>", "why": "<one specific line: why this org fits — what they buy, a dated signal, their agency or the person who commissions>"}], "followups": ["<short follow-up question>", "<another>", "<another>"]}
+- At most 8 results, best first.
+${history ? `\nEarlier in this conversation:\n${history}\n` : ""}
 Needs keys: ${Object.keys(NEEDS).join(", ")}
 Index (id|kind|city|needs|crafts):
 ${mapIndex()}
 
 Question: ${q}`;
-    aiCtl?.abort();
-    aiCtl = new AbortController();
-    $("aGo").disabled = true; $("aOut").hidden = false; $("aFound").innerHTML = ""; $("aFoundH").hidden = true;
-    $("aText").textContent = t("ask.thinking"); $("aText").classList.add("wait"); $("aStatus").textContent = "";
-    const show = (text) => {
-      const m = text.match(/\n?\s*IDS:\s*([^\n]*)\s*$/);
-      const body = m ? text.slice(0, m.index).trim() : text.replace(/\n?\s*IDS:[\s\S]*$/, "").trim();
-      if (body) { $("aText").textContent = body; $("aText").classList.remove("wait"); }
-      if (m) {
-        const ids = [...new Set(m[1].split(/[,\s]+/).map((s) => s.trim()).filter((id) => BY_ID[id]))];
-        $("aFoundH").hidden = !ids.length;
-        $("aFound").innerHTML = ids.map((id) => orgChip(BY_ID[id])).join("");
-      }
-    };
+    askCtl?.abort(); askCtl = new AbortController();
+    let wrote = false;
     try {
-      const r = await Store.sample(prompt, { modelTier: "default", signal: aiCtl.signal, tools: ASK_TOOLS, onText: ({ text }) => show(text) });
-      show(r.text || "");
+      const r = await Store.sample(prompt, { modelTier: "default", signal: askCtl.signal, tools,
+        onText: ({ text }) => { if (!wrote && text.includes("{")) { wrote = true; step(t("step.write")); } } });
+      Object.assign(turn, parseAnswer(r.text || ""));
     } catch (e) {
-      if (e && e.text) show(e.text);
-      if ($("aStatus")) { $("aStatus").textContent = errText(e); if (!e?.text) { $("aText").textContent = ""; } }
-    } finally { if ($("aGo")) $("aGo").disabled = false; }
+      Object.assign(turn, e && e.text ? parseAnswer(e.text) : {}, { error: errText(e) });
+      if (!turn.results?.length && !turn.summary) Object.assign(turn, localAnswer(q));
+    }
+    turn.running = false; delete turn.steps;
+    saveThread(); renderHome();
   }
+  function autosize() { const el = $("askQ"); el.style.height = "auto"; el.style.height = Math.min(el.scrollHeight, 160) + "px"; }
 
   // ---------- report a mistake ----------
   function openReport(o) {
@@ -1137,20 +1257,24 @@ Question: ${q}`;
     $("pipeBadge").hidden = !due; $("pipeBadge").textContent = due;
   }
   function renderView() {
-    ["explore", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = state.tab !== v));
+    ["ask", "explore", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = state.tab !== v));
     document.querySelectorAll("nav.tabbar button").forEach((b) => (b.dataset.tab === state.tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
-    if (state.tab === "explore") renderExplore();
+    if (state.tab === "ask") renderHome();
+    else if (state.tab === "explore") renderExplore();
     else if (state.tab === "signals") renderSignals();
     else renderPipeline();
   }
   function refresh() { state.shown = PAGE; saveView(); renderView(); }
-  function goTab(v) { state.tab = v; saveView(); renderView(); window.scrollTo(0, 0); try { history.replaceState(null, "", v === "explore" ? location.pathname + location.search : "#" + v); } catch (e) {} }
+  function goTab(v) { state.tab = v; saveView(); renderView(); window.scrollTo(0, 0); try { history.replaceState(null, "", v === "ask" ? location.pathname + location.search : "#" + v); } catch (e) {} }
 
   // ---------- events ----------
   let qT;
   $("q").addEventListener("input", (e) => { clearTimeout(qT); qT = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 120); });
-  $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && Store.sample && Store.mode === "db" && /\?|\s\S+\s\S+\s/.test(e.target.value)) { e.preventDefault(); openAsk(e.target.value.trim()); } });
-  $("askBtn").addEventListener("click", (e) => { e.preventDefault(); openAsk($("q").value.trim()); });
+  $("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && /\?|\s\S+\s\S+\s/.test(e.target.value)) { e.preventDefault(); ask(e.target.value.trim()); } });
+  $("askBtn").addEventListener("click", (e) => { e.preventDefault(); ask($("q").value.trim()); });
+  $("askForm").addEventListener("submit", (e) => { e.preventDefault(); ask($("askQ").value); });
+  $("askQ").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask($("askQ").value); } });
+  $("askQ").addEventListener("input", autosize);
   $("lang").addEventListener("click", () => setLang(LANG === "he" ? "en" : "he"));
   $("lens").addEventListener("click", (e) => { const b = e.target.closest("[data-lens]"); if (b) { state.lens = b.dataset.lens; state.kinds = []; refresh(); } });
   $("sort").addEventListener("change", (e) => { state.sort = e.target.value; refresh(); });
@@ -1180,6 +1304,8 @@ Question: ${q}`;
     }
     if (d.sigtype !== undefined) { state.sigType = d.sigtype; saveView(); return renderSignals(); }
     if (d.hide) { const s = signals().find((x) => x.id === d.hide); if (s) { const was = !!s.hidden; await Store.hideSignal(s, !was); toast(was ? t("t.shown") : t("t.hidden")); } return; }
+    if (d.ask) return ask(d.ask);
+    if (d.pitchOrg) return BY_ID[d.pitchOrg] && openPitch(BY_ID[d.pitchOrg]);
     if (d.saveOrg) { await Store.setEntry(d.saveOrg, { stage: "to_pitch" }); toast(t("t.saved")); return; }
     if (d.snooze) { const n = new Date(); n.setDate(n.getDate() + 7); return Store.setEntry(d.snooze, { next_date: isoDay(n) }); }
     if (d.doneFollow) { const e2 = Store.entry(d.doneFollow); return Store.setEntry(d.doneFollow, { next_date: null, stage: e2 && e2.stage === "to_pitch" ? "contacted" : e2?.stage }); }
@@ -1215,12 +1341,12 @@ Question: ${q}`;
     BASE_SIGNALS = sig.signals || [];
     applyLang();
     const h = location.hash.slice(1);
-    if (["signals", "pipeline"].includes(h)) state.tab = h;
+    if (["explore", "signals", "pipeline"].includes(h)) state.tab = h;
     renderMine(); renderBadges(); renderView();
     if (h && BY_ID[h]) openOrg(h);
     window.addEventListener("hashchange", () => {
       const k = location.hash.slice(1);
-      if (BY_ID[k]) openOrg(k); else if (["explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); }
+      if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); }
     });
     fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
     Store.init();
