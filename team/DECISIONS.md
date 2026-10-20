@@ -130,3 +130,9 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - Named "התראות על החברה" (bell) so it isn't confused with the companies app's local "מעקב" (pipeline). People who saved companies in that list are offered to turn on alerts for them.
 - A separate list from the digest, with its own consent wording and unsubscribe link. One email per day at most, bundling every new update; or a weekly summary on the digest's Sunday. Following an org only sends updates that reached the directory from the day of the follow.
 - Not done yet: removing an update from the weekly digest when the person already got it as an alert.
+## Open tenders (2026-10-20)
+- New section "מכרזים" (`/tenders`): public tenders and supplier-pool calls for creative work, soonest deadline first, with a countdown and a link to the official notice only. Also a home-page strip (top 3), in site search, and a section in the weekly digest (max 3, matched to the reader's crafts). An open tender in the reader's crafts makes an edition worth sending.
+- Records live in git like signals (`data/tenders/YYYY-MM.json`, `schema/tender.schema.json`, `landscape.py tenders`). The weekly research run collects them (step 5c, `research/tenders-sources.md`); mr.gov.il is the main source, collected politely by `scripts/tenders_mrgov.py` as candidates that a person or the agent reviews.
+- Facts only: title as published, buyer, number, dates, plus our own one-line summary. Never contact names or emails, never aggregator content, never fetch around a block. לפ"מ exemption notices are signals (who was hired), not tenders.
+- "מכרזים" joins the header nav. To keep the header one 64px row on phones, the colour-theme button moves to the footer under 480px, and under 380px the newsletter button becomes an envelope icon.
+

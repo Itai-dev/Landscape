@@ -4,7 +4,7 @@ import Providers from "@/components/Providers";
 import Header from "@/components/Header";
 import MenuCloser from "@/components/MenuCloser";
 import { supabaseConfig } from "@/lib/config";
-import { FOOTER, TAGLINE, THEME_SCRIPT } from "@/lib/chrome.mjs";
+import { FOOTER, TAGLINE, THEME_SCRIPT, THEME_BUTTON } from "@/lib/chrome.mjs";
 
 export const metadata = {
   title: { default: "Landscape · תעשיית הקריאייטיב בישראל", template: "%s · Landscape" },
@@ -38,6 +38,8 @@ export default function RootLayout({ children }) {
             <div className="wrap">
               <a className="brand" href="/" lang="en">Landscape<span>.</span></a>
               {FOOTER.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}
+              {/* On phones the colour-theme button lives here, so the header fits on one row. */}
+              <span className="foottheme" dangerouslySetInnerHTML={{ __html: THEME_BUTTON }} />
               <span className="fine">{TAGLINE}</span>
             </div>
           </footer>

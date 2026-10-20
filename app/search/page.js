@@ -9,6 +9,8 @@ import { loadMembers, hiddenSeeds } from "@/lib/members";
 import { PROFILES_ENABLED } from "@/lib/config";
 import { craftOfQuery } from "@/lib/match";
 import { supabaseConfig } from "@/lib/config";
+import { listTenders } from "@/lib/tenders";
+import "../tenders/tenders.css";
 
 export const metadata = { title: "חיפוש", robots: { index: false } };
 
@@ -30,7 +32,9 @@ export default async function Search({ searchParams }) {
   const companies = any ? searchCompanies(q, craft) : [];
   const seeds = any ? searchSeeds({ q, craft, exclude: hidden }) : [];
   const people = seeds.length + members.length;
-  const nothing = any && companies.length + people === 0;
+  // Open tenders for the same words or craft (they also count as results).
+  const tenders = any ? listTenders({ q, craft }) : [];
+  const nothing = any && companies.length + people + tenders.length === 0;
 
   return (
     <div className="wrap">
@@ -40,7 +44,7 @@ export default async function Search({ searchParams }) {
         ) : (
           <h1>{q ? <>תוצאות ל<bdi>״{q}״</bdi></> : "חיפוש בכל האתר"}</h1>
         )}
-        {any ? <p>{companies.length} חברות · {people} אנשים</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
+        {any ? <p>{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים פתוחים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
       </div>
       <form className="psearch lg searchbox" role="search" action="/search">
         <input type="search" name="q" defaultValue={q} placeholder={craft && !q ? `חיפוש בתוך ${craftLabel(craft)}` : "חברה, תחום, תפקיד או שם"} aria-label="חיפוש בכל האתר" />
@@ -58,6 +62,23 @@ export default async function Search({ searchParams }) {
           <h3>לא מצאנו כלום ל<bdi>״{q || craftLabel(craft)}״</bdi></h3>
           <p>אפשר לנסות מילה אחרת, שם באנגלית או תחום רחב יותר.</p>
         </div>
+      )}
+
+      {tenders.length > 0 && (
+        <section aria-labelledby="td-h">
+          <div className="subhead">
+            <h2 id="td-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
+            <a className="btn sm" href={`/tenders?${qs({ q, craft })}`}>למכרזים</a>
+          </div>
+          <div className="tresults">
+            {tenders.slice(0, 4).map((t) => (
+              <a key={t.id} className="trow" href={`/tenders?${qs({ q, craft })}`}>
+                <b>{t.scope_summary}</b>
+                <span>{t.buyer_name_he || t.buyer} · {t.countdown.text} · הגשה עד <bdi>{t.deadline}</bdi></span>
+              </a>
+            ))}
+          </div>
+        </section>
       )}
 
       {companies.length > 0 && (

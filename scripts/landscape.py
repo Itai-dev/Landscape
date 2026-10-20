@@ -8,6 +8,7 @@
   python3 scripts/landscape.py stats               # counts by kind / category / city
   python3 scripts/landscape.py logos [--all]       # fetch missing logos (needs Pillow)
   python3 scripts/landscape.py signals FILE...     # merge new signals into data/signals/
+  python3 scripts/landscape.py tenders FILE...     # merge tenders into data/tenders/ (new + status/deadline updates)
 """
 from __future__ import annotations
 
@@ -31,6 +32,9 @@ TAXONOMY = json.loads((ROOT / "schema" / "taxonomy.json").read_text())
 NEEDS = json.loads((ROOT / "schema" / "needs.json").read_text())["needs"]
 SIGNAL_SCHEMA = json.loads((ROOT / "schema" / "signal.schema.json").read_text())
 SIGNALS = ROOT / "data" / "signals"
+TENDER_SCHEMA = json.loads((ROOT / "schema" / "tender.schema.json").read_text())
+TENDERS = ROOT / "data" / "tenders"
+TENDER_RECENT_DAYS = 30  # closed tenders stay on the site this long after their deadline
 FIELD_ORDER = list(SCHEMA["properties"].keys())
 LIST_FIELDS = {"aka", "categories", "services", "notable_clients", "notable_work", "tags", "sources"}
 CONF_RANK = {"low": 0, "medium": 1, "high": 2}
@@ -41,8 +45,9 @@ try:
 
     _VALIDATOR = jsonschema.Draft202012Validator(SCHEMA, format_checker=jsonschema.FormatChecker())
     _SIG_VALIDATOR = jsonschema.Draft202012Validator(SIGNAL_SCHEMA, format_checker=jsonschema.FormatChecker())
+    _TENDER_VALIDATOR = jsonschema.Draft202012Validator(TENDER_SCHEMA, format_checker=jsonschema.FormatChecker())
 except ImportError:  # the tool still works, with lighter checks
-    _VALIDATOR = _SIG_VALIDATOR = None
+    _VALIDATOR = _SIG_VALIDATOR = _TENDER_VALIDATOR = None
 
 
 # ---------- helpers ----------
@@ -234,6 +239,17 @@ def cmd_validate(_args) -> int:
             bad += 1
             print(f"✗ signal {sig['id']}: " + "; ".join(errs))
     print(f"{len(sigs)} signals checked")
+    tenders = load_tenders()
+    tids = set()
+    for t in tenders:
+        errs = tender_errors(t, orgs)
+        if t["id"] in tids:
+            errs.append("duplicate id")
+        tids.add(t["id"])
+        if errs:
+            bad += 1
+            print(f"✗ tender {t['id']}: " + "; ".join(errs))
+    print(f"{len(tenders)} tenders checked")
     return 1 if bad else 0
 
 
@@ -322,6 +338,8 @@ def cmd_build(_args) -> int:
     sigs = sorted(link_signals(load_signals(), orgs), key=lambda x: x["date"], reverse=True)
     (out_dir / "signals.json").write_text(json.dumps({"generated": dataset["generated"], "signals": sigs}, **compact))
     (out_dir / "logos.json").write_text(json.dumps(logos, **compact))
+    tenders = site_tenders(load_tenders(), orgs)
+    (out_dir / "tenders.json").write_text(json.dumps({"generated": dataset["generated"], "tenders": tenders}, **compact))
     shutil_old = ROOT / "site" / "logos"
     if shutil_old.exists():
         import shutil
@@ -348,7 +366,7 @@ def cmd_build(_args) -> int:
         "<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}"
         "body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>\n"
         "</head>\n<body>\n" + app + "\n</body>\n</html>\n")
-    print(f"built {len(orgs)} orgs, {len(sigs)} signals, {len(logos)} logos → site/data/, data/exports/landscape.csv, STATS.md")
+    print(f"built {len(orgs)} orgs, {len(sigs)} signals, {len(tenders)} tenders, {len(logos)} logos → site/data/, data/exports/landscape.csv, STATS.md")
     return 0
 
 
@@ -445,6 +463,127 @@ def cmd_signals(args) -> int:
             existing.add(sig["id"])
             added += 1
     print(f"signals: added {added}, rejected {rejected}" + (" (dry run)" if args.dry_run else ""))
+    return 1 if rejected and args.strict else 0
+
+
+# ---------- tenders ----------
+
+TENDER_ORDER = list(TENDER_SCHEMA["properties"].keys())
+
+
+def load_tenders() -> list[dict]:
+    out = []
+    for p in sorted(TENDERS.glob("*.json")):
+        out += json.loads(p.read_text())
+    return out
+
+
+def tender_errors(t: dict, orgs: dict) -> list[str]:
+    errs = []
+    if _TENDER_VALIDATOR:
+        errs += [f"{'/'.join(map(str, e.path)) or '(root)'}: {e.message}" for e in _TENDER_VALIDATOR.iter_errors(t)]
+    for oid in [t.get("buyer_org_id")] + t.get("related_org_ids", []):
+        if oid and oid not in orgs:
+            errs.append(f"unknown org id '{oid}'")
+    crafts = set(TAXONOMY["facets"]["craft"])
+    errs += [f"unknown craft '{c}'" for c in t.get("crafts", []) if c not in crafts]
+    return errs
+
+
+def tender_deadline_utc(t: dict) -> dt.datetime:
+    """deadline_at is Israel local time; a date without a time means the end of that day."""
+    from zoneinfo import ZoneInfo
+    raw = t["deadline_at"]
+    local = dt.datetime.fromisoformat(raw if "T" in raw else raw + "T23:59")
+    return local.replace(tzinfo=ZoneInfo("Asia/Jerusalem")).astimezone(dt.timezone.utc)
+
+
+def tender_state(t: dict, now: dt.datetime | None = None) -> str:
+    if t.get("status") == "cancelled":
+        return "cancelled"
+    now = now or dt.datetime.now(dt.timezone.utc)
+    return "closed" if t.get("status") == "closed" or tender_deadline_utc(t) <= now else "open"
+
+
+def site_tenders(tenders: list[dict], orgs: dict, now: dt.datetime | None = None) -> list[dict]:
+    """Open tenders, plus ones closed in the last TENDER_RECENT_DAYS, soonest deadline first."""
+    now = now or dt.datetime.now(dt.timezone.utc)
+    out = []
+    for t in tenders:
+        state = tender_state(t, now)
+        due = tender_deadline_utc(t)
+        if state != "open" and (now - due).days > TENDER_RECENT_DAYS:
+            continue
+        row = {k: v for k, v in t.items() if k not in ("note", "added", "keywords_matched")}
+        row["state"] = state
+        row["deadline_utc"] = due.isoformat(timespec="minutes")
+        if row.get("buyer_org_id") and row["buyer_org_id"] in orgs:
+            o = orgs[row["buyer_org_id"]]
+            row["buyer_name_he"] = o.get("name_he") or o["name"]
+        out.append(row)
+    # open: soonest deadline first; closed: most recently closed first
+    open_ = sorted((r for r in out if r["state"] == "open"), key=lambda r: r["deadline_utc"])
+    rest = sorted((r for r in out if r["state"] != "open"), key=lambda r: r["deadline_utc"], reverse=True)
+    return open_ + rest
+
+
+def tender_file(t: dict) -> Path:
+    return TENDERS / f"{(t.get('published_at') or t['added'])[:7]}.json"
+
+
+def cmd_tenders(args) -> int:
+    """Merge a staging array into data/tenders/YYYY-MM.json (by published month).
+    New ids are added; known ids get their changed fields (deadline, status, title...) updated."""
+    orgs = load_all()
+    # Exact names only, Hebrew kept (norm_name is ASCII-only, so Hebrew names would all fold to "").
+    def key(n: str) -> str:
+        return re.sub(r"[\W_]+", "", unicodedata.normalize("NFKC", n).lower())
+    by_name = {}
+    for oid, o in orgs.items():
+        for n in [o["name"], o.get("name_he", ""), *o.get("aka", [])]:
+            if n and key(n):
+                by_name.setdefault(key(n), oid)
+    files: dict[Path, list[dict]] = {p: json.loads(p.read_text()) for p in sorted(TENDERS.glob("*.json"))}
+    where = {t["id"]: (p, i) for p, rows in files.items() for i, t in enumerate(rows)}
+    added = updated = rejected = 0
+    for path in args.files:
+        for raw in json.loads(Path(path).read_text()):
+            t = {k: v for k, v in raw.items() if v not in (None, "", [], {})}
+            t.setdefault("added", TODAY)
+            t.setdefault("last_checked_at", TODAY)
+            t.setdefault("status", "open")
+            if not t.get("buyer_org_id"):
+                t["buyer_org_id"] = by_name.get(key(t.get("buyer", ""))) if key(t.get("buyer", "")) else None
+            if t.get("buyer_org_id") is None:
+                t.pop("buyer_org_id", None)
+            if t.get("id") in where:
+                p, i = where[t["id"]]
+                cur = files[p][i]
+                merged = {**cur, **{k: v for k, v in t.items() if k != "added"}}
+                errs = tender_errors(merged, orgs)
+                if errs:
+                    rejected += 1
+                    print(f"  ✗ {t['id']}: " + "; ".join(errs))
+                    continue
+                if merged != cur:
+                    files[p][i] = {k: merged[k] for k in TENDER_ORDER if k in merged}
+                    updated += 1
+                continue
+            errs = tender_errors(t, orgs)
+            if errs:
+                rejected += 1
+                print(f"  ✗ {t.get('id', '?')}: " + "; ".join(errs))
+                continue
+            p = tender_file(t)
+            files.setdefault(p, []).append({k: t[k] for k in TENDER_ORDER if k in t})
+            where[t["id"]] = (p, len(files[p]) - 1)
+            added += 1
+    if not args.dry_run:
+        TENDERS.mkdir(parents=True, exist_ok=True)
+        for p, rows in files.items():
+            rows.sort(key=lambda r: (r.get("published_at") or r["added"], r["id"]), reverse=True)
+            p.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
+    print(f"tenders: added {added}, updated {updated}, rejected {rejected}" + (" (dry run)" if args.dry_run else ""))
     return 1 if rejected and args.strict else 0
 
 
@@ -614,6 +753,11 @@ def main() -> int:
     sg.add_argument("--dry-run", action="store_true")
     sg.add_argument("--strict", action="store_true")
     sg.set_defaults(fn=cmd_signals)
+    td = sub.add_parser("tenders")
+    td.add_argument("files", nargs="+")
+    td.add_argument("--dry-run", action="store_true")
+    td.add_argument("--strict", action="store_true")
+    td.set_defaults(fn=cmd_tenders)
     args = p.parse_args()
     return args.fn(args)
 
