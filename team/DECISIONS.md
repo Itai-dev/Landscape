@@ -49,3 +49,13 @@ v3: AI pitch draft (Why now · Who · Way in · What to show; drafts only, never
 1. Buyer side: commissioning people, contact/careers pages, agency websites, more brands (target ~120 buyer records).
 2. Signals from ~8 fixed source pages (Globes ad-agency tag, ICE ad-of-the-week, Geektime funding, CTech, LinkedIn jobs…).
 3. Reel links for the 102 studios.
+
+## Community v1 (own stack, free tiers)
+Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn / portfolio / CV with a questionnaire fallback, email sign-up that builds a mailing list, find people (not only companies), newsletter at a chosen frequency.
+- **Stack**: Next.js app at the repo root on Vercel; Supabase (Postgres, email magic-link auth) through the Vercel Marketplace integration; Claude API for the profile draft. The map app keeps living at `/map` (copied from `site/` at build).
+- **Onboarding** (`/onboard`): any of CV/LinkedIn PDF, portfolio link, or free text → AI draft → questions **only** for missing required fields (name, headline, crafts, city, open to) + visibility + newsletter → full review with AI-filled fields marked → saved only on approval. "No sources" goes straight to the questionnaire; any AI failure falls back to it too.
+- **LinkedIn**: scraping is blocked and against its terms, so we ask for the "Save to PDF" export and only store a LinkedIn URL as a link.
+- **Privacy** (Israeli Privacy Protection Amendment 13 + anti-spam law): newsletter opt-in is an unchecked box; consent time + wording are stored; visibility per profile (public / members / hidden, default members); no emails or phones on profiles (stripped from AI output too); CV kept only if the person ticks a box, in a private bucket; delete-account button removes everything. Contact between people will go through the platform later.
+- **Schema**: `profiles`, `newsletter_prefs` with RLS (owner writes; public rows to everyone; members rows to signed-in users). Migration is idempotent and runs on every Vercel build when the database URL is present.
+- **Graceful without config**: with no env vars the site builds and shows "בקרוב" notices instead of sign-up.
+- Next: people search with AI across people + companies, newsletter sending (Resend), contact requests, Hebrew-name slugs.
