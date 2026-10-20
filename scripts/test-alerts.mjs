@@ -63,14 +63,15 @@ t("email: RTL, sender identity, unsubscribe link, plain text", () => {
 
 // --- A tiny in-memory stand-in for the Supabase client (only what runAlerts uses) --------------------------
 function fakeDb({ recipients, follows }) {
-  const tables = { alert_sends: [], newsletter_prefs: recipients.map((r) => ({ user_id: r.user_id })), org_follows: follows };
+  const tables = { alert_sends: [], digest_sends: [], signal_seen: [], newsletter_prefs: recipients.map((r) => ({ user_id: r.user_id })), org_follows: follows };
   const key = (r) => `${r.user_id}|${r.signal_id}`;
   function query(table) {
     const filters = [];
-    let op = "select", payload = null, opts = {};
+    let op = "select", payload = null, opts = {}, head = false;
     const q = {
-      select() { return q; },
+      select(_cols, o = {}) { head = Boolean(o.head); return q; },
       eq(col, v) { filters.push((r) => r[col] === v); return q; },
+      gte(col, v) { filters.push((r) => String(r[col] || "") >= String(v)); return q; },
       in(col, vs) { filters.push((r) => vs.includes(r[col])); return q; },
       upsert(rows, o) { op = "upsert"; payload = rows; opts = o; return q; },
       update(p) { op = "update"; payload = p; return q; },
@@ -81,7 +82,7 @@ function fakeDb({ recipients, follows }) {
       await new Promise((r) => setTimeout(r, Math.random() * 3)); // interleave concurrent runs
       const rows = tables[table];
       const match = (r) => filters.every((f) => f(r));
-      if (op === "select") return { data: rows.filter(match), error: null };
+      if (op === "select") return head ? { count: rows.filter(match).length, error: null } : { data: rows.filter(match), error: null };
       if (op === "upsert") {
         const inserted = [];
         for (const r of payload) if (!rows.some((x) => key(x) === key(r))) { rows.push({ ...r }); inserted.push(r); }
@@ -101,9 +102,13 @@ function fakeDb({ recipients, follows }) {
 
 const sentEmails = [];
 let failNext = false;
+let timeoutNext = false;
+const keys = [];
 globalThis.fetch = async (url, init) => {
   assert.match(String(url), /api\.resend\.com/);
+  keys.push(init.headers["Idempotency-Key"]);
   if (failNext) { failNext = false; return new Response(JSON.stringify({ message: "boom" }), { status: 500 }); }
+  if (timeoutNext) { timeoutNext = false; throw new TypeError("fetch failed"); }
   const batch = JSON.parse(init.body);
   sentEmails.push(...batch);
   return new Response(JSON.stringify({ data: batch.map((_, i) => ({ id: `m${sentEmails.length}-${i}` })) }), { status: 200 });
@@ -167,6 +172,64 @@ t("nothing is sent without the full sender identity", async () => {
   const r = await runAlerts(db, { now: NOW, signals });
   assert.equal(r.skipped, "missing_env");
   assert.equal(sentEmails.length, 0);
+});
+
+t("a refused batch releases only its own claims", async () => {
+  const { db, signals } = setup();
+  // Another run holds a claim on (u1, s1).
+  db.tables.alert_sends.push({ user_id: "u1", signal_id: "s1", status: "pending", batch: "2026-10-21", claim: "other-run" });
+  failNext = true;
+  await runAlerts(db, { now: NOW, signals });
+  assert.deepEqual(db.tables.alert_sends.map((r) => r.claim), ["other-run"]);
+});
+
+t("no answer from Resend keeps the claim: never sent twice", async () => {
+  const { db, signals } = setup();
+  timeoutNext = true;
+  const r1 = await runAlerts(db, { now: NOW, signals });
+  assert.equal(r1.sent, 0);
+  assert.ok(db.tables.alert_sends.length > 0);
+  const r2 = await runAlerts(db, { now: NOW, signals });
+  assert.equal(r2.sent, 0);
+  assert.equal(sentEmails.length, 0);
+});
+
+t("the idempotency key depends on who and what, not on the day", async () => {
+  const a = setup();
+  keys.length = 0;
+  await runAlerts(a.db, { now: NOW, signals: a.signals });
+  const b = setup();
+  await runAlerts(b.db, { now: new Date("2026-10-22T05:00:00Z"), signals: b.signals });
+  assert.equal(keys.length, 2);
+  assert.equal(keys[0], keys[1]);
+  assert.match(keys[0], /^alerts-[0-9a-f]{48}$/);
+});
+
+t("an update merged late still alerts once it first appears on the site", async () => {
+  const { db, signals } = setup();
+  // History already recorded, so this isn't the first run.
+  db.tables.signal_seen.push({ signal_id: "old", first_seen_at: "2026-09-01T09:00:00Z" });
+  const late = sig("late", A, "2026-09-02", { added: "2026-09-03" }); // dated long ago, merged now
+  const r = await runAlerts(db, { now: NOW, signals: [...signals, late] });
+  assert.ok(r.sent >= 1);
+  assert.ok(sentEmails.some((m) => m.to[0] === "one@example.com" && m.text.includes("כותרת late")));
+});
+
+t("the first run records history and doesn't send old updates as new", async () => {
+  const { db } = setup();
+  const old = sig("hist", A, "2026-09-02", { added: "2026-09-03" });
+  const r = await runAlerts(db, { now: NOW, signals: [old] });
+  assert.equal(sentEmails.length, 0);
+  assert.equal(db.tables.signal_seen.length, 1);
+  assert.equal(r.note, "no_new_updates");
+});
+
+t("alerts stay inside the shared daily budget after the digest", async () => {
+  const { db, signals } = setup();
+  for (let i = 0; i < 99; i++) db.tables.digest_sends.push({ user_id: `d${i}`, status: "sent", created_at: "2026-10-21T04:00:00Z" });
+  const r = await runAlerts(db, { now: NOW, signals });
+  assert.equal(r.budget, 1);
+  assert.equal(r.sent, 1);
 });
 
 for (const [name, fn] of tests) {

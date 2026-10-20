@@ -30,7 +30,7 @@ export async function GET(request) {
       // A follow started signed out (/api/follows/start): record it, and the alerts opt-in ticked with it.
       const follow = searchParams.get("follow");
       if (user && admin && isOrgId(follow)) {
-        await addFollows(admin, user, [follow]).catch((e) => console.error("follow on confirm failed", e?.message));
+        await addFollows(admin, user.id, [follow]).catch((e) => console.error("follow on confirm failed", e?.message));
         if (searchParams.get("alerts") === "daily") {
           const cur = await alertPrefs(admin, user.id).catch(() => null);
           // Someone who switched alerts off earlier keeps them off; following again doesn't override that.

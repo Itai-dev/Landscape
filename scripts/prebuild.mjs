@@ -132,5 +132,10 @@ const stats = {
 writeFileSync("lib/generated/orgs.json", JSON.stringify({ stats, orgs }));
 console.log(`prebuild: ${orgs.length} companies indexed for search`);
 
-// 4. Database.
-await migrate();
+// 4. Database (production deploys only). A failed migration fails the build, so a broken schema never ships.
+try {
+  await migrate();
+} catch (e) {
+  console.error(e.message);
+  process.exit(1);
+}

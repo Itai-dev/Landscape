@@ -15,17 +15,15 @@ create table if not exists public.survey_responses (
 create index if not exists survey_responses_done_idx on public.survey_responses (survey_id) where completed;
 alter table public.survey_responses enable row level security;
 
--- Owner-only: each person reads and writes only their own response. Aggregates are computed on the
--- server with the service role; nobody can read another person's answers.
+-- People can read their own response; writes go only through /api/survey with the service role.
+-- Aggregates are computed on the server; nobody can read another person's answers.
 drop policy if exists survey_own_select on public.survey_responses;
 create policy survey_own_select on public.survey_responses for select to authenticated using (auth.uid() = user_id);
 drop policy if exists survey_own_insert on public.survey_responses;
-create policy survey_own_insert on public.survey_responses for insert to authenticated with check (auth.uid() = user_id);
 drop policy if exists survey_own_update on public.survey_responses;
-create policy survey_own_update on public.survey_responses for update to authenticated using (auth.uid() = user_id) with check (auth.uid() = user_id);
 drop policy if exists survey_own_delete on public.survey_responses;
-create policy survey_own_delete on public.survey_responses for delete to authenticated using (auth.uid() = user_id);
-revoke all on public.survey_responses from anon;
+revoke all on public.survey_responses from anon, authenticated;
+grant select on public.survey_responses to authenticated;
 
 -- A personal invite code per person (?ref=CODE). Created by the server.
 create table if not exists public.referral_codes (
@@ -36,7 +34,8 @@ create table if not exists public.referral_codes (
 alter table public.referral_codes enable row level security;
 drop policy if exists referral_codes_own_select on public.referral_codes;
 create policy referral_codes_own_select on public.referral_codes for select to authenticated using (auth.uid() = user_id);
-revoke all on public.referral_codes from anon;
+revoke all on public.referral_codes from anon, authenticated;
+grant select on public.referral_codes to authenticated;
 
 -- Who joined through whose link. One inviter per person; written and read only by the server.
 create table if not exists public.referrals (

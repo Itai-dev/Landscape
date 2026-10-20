@@ -78,31 +78,27 @@ create policy profiles_members_read on public.profiles
   for select to authenticated
   using (visibility = 'members');
 
+-- Newsletter preferences: people read their own row; every write goes through the server (service role).
+-- (Re-running this file never opens writes again; see 005 and 007.)
 drop policy if exists newsletter_owner_all on public.newsletter_prefs;
-create policy newsletter_owner_all on public.newsletter_prefs
-  for all to authenticated
-  using ((select auth.uid()) = user_id)
-  with check ((select auth.uid()) = user_id);
+drop policy if exists newsletter_owner_select on public.newsletter_prefs;
+create policy newsletter_owner_select on public.newsletter_prefs
+  for select to authenticated
+  using ((select auth.uid()) = user_id);
 
 grant usage on schema public to anon, authenticated;
 grant select on public.profiles to anon, authenticated;
 grant insert, update, delete on public.profiles to authenticated;
-grant select, insert, update, delete on public.newsletter_prefs to authenticated;
+revoke all on public.newsletter_prefs from anon, authenticated;
+grant select on public.newsletter_prefs to authenticated;
 
--- On sign-up, record the newsletter choice made on the sign-up form (stored in user metadata).
+-- On sign-up, create a switched-off preferences row. Consent is recorded only by the server after the
+-- address is confirmed (/auth/callback); metadata sent by the browser is never trusted.
 create or replace function public.handle_new_user() returns trigger
 language plpgsql security definer set search_path = public as $$
-declare
-  opted boolean := coalesce((new.raw_user_meta_data ->> 'newsletter_opt_in')::boolean, false);
 begin
-  insert into public.newsletter_prefs (user_id, email, frequency, consent_at, consent_text)
-  values (
-    new.id,
-    coalesce(new.email, ''),
-    case when opted then 'weekly'::public.newsletter_frequency else 'off'::public.newsletter_frequency end,
-    case when opted then now() end,
-    case when opted then new.raw_user_meta_data ->> 'consent_text' end
-  )
+  insert into public.newsletter_prefs (user_id, email, frequency)
+  values (new.id, coalesce(new.email, ''), 'off')
   on conflict (user_id) do nothing;
   return new;
 end $$;
