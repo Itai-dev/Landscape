@@ -18,3 +18,4 @@ Data layer mapping the creative industry (Israel first). See PLAN.md for the vis
 - People's profiles live in Supabase only (RLS). Never put personal data in the repo; research runs don't touch it.
 - Naming: the company directory is "חברות" (never "מפה"); market updates are "עדכונים". Hebrew UI copy is gender-neutral (plural / infinitive), no "את/ה" slashes.
 - `/api/ask` answers questions about the directory with Claude (read-only tools over `site/data/`, no per-person data, rate-limited). Hidden when `ANTHROPIC_API_KEY` is unset.
+- Rates survey: `/survey` (landing), `/survey/start` (questionnaire), `/survey/results`. Questions, bands and close date in `lib/survey/config.js`; answers in Supabase `survey_responses` (owner-only RLS, migration 004). Results are aggregated server-side only, hidden for groups under 5, free text never shown. Checks: `node scripts/test-survey.mjs`. Never ask for client or company names.

@@ -190,6 +190,9 @@ main { padding-block: 6px 24px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 16px; display: grid; gap: 10px; justify-items: center; }
 .empty h3 { margin: 0; color: var(--ink); font-size: 17px; }
 .more { display: flex; justify-content: center; padding-top: 14px; }
+.survey-banner { display: flex; align-items: center; justify-content: center; gap: 4px 12px; flex-wrap: wrap; text-align: center; background: var(--accent-soft); color: var(--ink); border-radius: 999px; padding: 4px 24px; font-size: 14px; max-width: 760px; margin: 32px auto 0; }
+.survey-banner a { font-weight: 600; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 639px) { .survey-banner { border-radius: 16px; padding: 8px 16px; } }
 
 /* signals */
 .feed { display: grid; gap: 10px; max-width: 760px; }
@@ -431,6 +434,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
         <span data-i18n="empty.p">Try fewer filters, or search in English (only some names have Hebrew).</span>
         <button class="btn" type="button" id="clearAll" data-i18n="clear">Clear filters</button>
       </div>
+      <p class="survey-banner" id="surveyBanner"><span data-i18n="survey.b">Rates & payment terms survey 2026</span> <a href="/survey" data-i18n="survey.a">Take the survey ›</a></p>
     </main>
   </section>
 
@@ -489,6 +493,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts", "mine.hint": "What fits you comes first", "t.noorg": "Company not found", "mine.remove": "Remove {0}",
       "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
+      "survey.b": "Rates & payment terms survey 2026: what the industry charges and when it gets paid. 4 minutes, anonymous.", "survey.a": "Take the survey ›",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
       "tab.ask": "Ask AI", "tab.explore": "All companies", "tab.signals": "Updates",
       "home.h": "Ask AI", "home.sub": "Ask in plain words. Answers use only the directory, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
@@ -537,6 +542,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
       "filters": "סינון", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
+      "survey.b": "סקר התעריפים ותנאי התשלום 2026: כמה גובים בתעשייה ומתי משלמים. 4 דקות, אנונימי.", "survey.a": "לענות על הסקר ‹",
       "empty.h": "אין תוצאות", "empty.p": "אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
       "tab.ask": "שאלו AI", "tab.explore": "כל החברות", "tab.signals": "עדכונים",
       "home.h": "שאלו את ה־AI", "home.sub": "שאלה במילים פשוטות. התשובות מבוססות רק על המאגר, עם החברות שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
@@ -804,6 +810,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     document.documentElement.lang = LANG;
     document.documentElement.dir = LANG === "he" ? "rtl" : "ltr";
     document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
+    // The rates survey line shows only while the survey is open (lib/survey/config.js → CLOSES_AT).
+    if ($("surveyBanner")) $("surveyBanner").hidden = Date.now() > Date.parse("2026-12-31T23:59:59+02:00");
     document.querySelectorAll("[data-i18n-ph]").forEach((el) => (el.placeholder = t(el.dataset.i18nPh)));
     ["lang", "lang2"].forEach((id) => { $(id).textContent = LANG === "he" ? "English" : "עברית"; $(id).lang = LANG === "he" ? "en" : "he"; });
     if (ORGS.length) $("meta").textContent = t("meta", ORGS.length, BASE_SIGNALS.length, new Date(GENERATED).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" }));

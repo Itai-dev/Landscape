@@ -1,6 +1,7 @@
 import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import AutoSelect from "@/components/AutoSelect";
+import SurveyBanner from "@/components/SurveyBanner";
 import { SearchIcon } from "@/components/Icons";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { ROLE_TYPES, searchSeeds } from "@/lib/people";
@@ -107,6 +108,7 @@ export default async function People({ searchParams }) {
             : null}
         {configured ? <> מופיעים כאן? אפשר לבנות פרופיל מלא בלחיצה על ״זה אני״, או לבקש הסרה מהתפריט שבכרטיס.</> : <> מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.</>}
       </p>
+      <div style={{ marginBlockStart: 32 }}><SurveyBanner /></div>
     </div>
   );
 }
