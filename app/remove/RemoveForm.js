@@ -47,7 +47,7 @@ export default function RemoveForm({ id, email = "" }) {
       </div>
       <label className="check field">
         <input type="checkbox" checked={confirm} onChange={(e) => setConfirm(e.target.checked)} />
-        <span>זה אני, או שאני פונה בשם האדם הזה.</span>
+        <span>אני האדם הזה, או פונה בשמו.</span>
       </label>
       {state.error && (
         <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>

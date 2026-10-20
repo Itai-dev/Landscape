@@ -5,6 +5,7 @@ import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
+import { PROFILES_ENABLED } from "@/lib/config";
 import { craftOfQuery } from "@/lib/match";
 import { supabaseConfig } from "@/lib/config";
 
@@ -22,9 +23,9 @@ export default async function Search({ searchParams }) {
   const craft = asked || named;
   const q = named ? "" : typed;
   const any = Boolean(q || craft);
-  const claim = Boolean(supabaseConfig());
+  const claim = PROFILES_ENABLED && Boolean(supabaseConfig());
 
-  const [{ members }, hidden] = await Promise.all([loadMembers({ q, craft, limit: 8 }), hiddenSeeds()]);
+  const [{ members }, hidden] = await Promise.all([PROFILES_ENABLED ? loadMembers({ q, craft, limit: 8 }) : { members: [] }, hiddenSeeds()]);
   const companies = any ? searchCompanies(q, craft) : [];
   const seeds = any ? searchSeeds({ q, craft, exclude: hidden }) : [];
   const people = seeds.length + members.length;

@@ -45,8 +45,10 @@
   --max: 1200px;
   --gutter: clamp(20px, 5vw, 48px);
 }
+/* On the site (html[data-site]) the page is light unless the reader picks dark or "לפי המכשיר" (header toggle).
+   Inside the Artifact host it follows the device, as before. */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-site]):not([data-theme="light"]), :root[data-site][data-theme="system"] {
     --bg: #0c0819; --soft: #18122b; --soft-2: #221a3a; --surface: #130e24; --ink: #f3efff; --muted: #a59fba; --line: #2a2342;
     --accent: #a466ff; --accent-hover: #b884ff; --accent-ink: #0c0819; --accent-soft: #2a1a4d;
     --g-maker: #a466ff; --g-tech: #a466ff; --g-buyer: #a466ff; --now: #a466ff; --now-soft: #2a1a4d; --ok: #4ade80;
@@ -60,6 +62,7 @@
   --scrim: rgba(0, 0, 0, .6); --shadow: 0 24px 60px rgba(0, 0, 0, .55); color-scheme: dark;
 }
 * { box-sizing: border-box; }
+:root:not([data-site]) .themebtn { display: none !important; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -306,10 +309,22 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
   padding: 10px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
 .sheet::before { content: ""; display: block; width: 40px; height: 4px; border-radius: 2px; background: var(--line); margin: 0 auto 8px; }
 @media (min-width: 860px) {
-  .sheet.side { inset-block: 0; inset-inline: auto 0; width: 540px; max-height: none; border-radius: 0; padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
+  /* Opens from the reading side: right in Hebrew (RTL), left in English (LTR). */
+  .sheet.side { inset-block: 0; inset-inline: 0 auto; width: 540px; max-height: none; border-radius: 0; padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
   .sheet.side::before { display: none; }
   .sheet.center { inset: 10vh auto auto 50%; transform: translateX(-50%); width: 560px; max-height: 80vh; border-radius: 24px; }
   .sheet.center::before { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sheet:not([hidden]) { animation: sheet-up .22s ease-out; }
+  @keyframes sheet-up { from { transform: translateY(24px); opacity: 0; } }
+  @media (min-width: 860px) {
+    .sheet.side:not([hidden]) { animation: sheet-in .24s ease-out; }
+    html[dir="rtl"] .sheet.side { --sheet-from: 100%; }
+    html[dir="ltr"] .sheet.side { --sheet-from: -100%; }
+    @keyframes sheet-in { from { transform: translateX(var(--sheet-from, 100%)); } }
+    .sheet.center:not([hidden]) { animation: none; }
+  }
 }
 .sheet .close { position: sticky; top: 0; float: inline-end; margin-inline-start: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 44px; height: 44px; font-size: 20px; line-height: 1; z-index: 1; }
 .sheet .ident { display: flex; gap: 14px; align-items: center; margin-top: 2px; }
@@ -1604,7 +1619,7 @@ Question: ${q}`;
       checks.push(fetch("/api/ask").then((r) => r.json()).then((j) => { SERVER_AI = !!j.ready; }).catch(() => {}));
       fetch("/api/session").then((r) => r.json()).then((j) => {
         const cta = document.querySelector("[data-cta]");
-        if (cta && j.signedIn) { cta.href = "/me"; cta.textContent = "הפרופיל שלי"; }
+        if (cta && j.signedIn && j.profiles) { cta.href = "/me"; cta.textContent = "הפרופיל שלי"; }
       }).catch(() => {});
       loadHidden().catch(() => {});
     }

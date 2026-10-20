@@ -5,10 +5,11 @@ import { CONSENT_TEXT } from "@/lib/taxonomy";
 import { callbackUrl } from "@/lib/authLink";
 import { firstSendLabel } from "@/lib/digestSchedule";
 import ComingSoon from "@/components/ComingSoon";
+import { PROFILES } from "@/lib/chrome.mjs";
 
 // Email magic link. New people get an account; returning people just sign in.
 // The digest box starts unchecked: explicit opt-in (Israeli anti-spam law), confirmed by opening the link.
-export default function SignupForm({ next = "/onboard", digest = true }) {
+export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/settings", digest = true }) {
   const { supabase, configured } = useSupabase();
   const [email, setEmail] = useState("");
   const [newsletter, setNewsletter] = useState(false);
@@ -66,7 +67,7 @@ export default function SignupForm({ next = "/onboard", digest = true }) {
         <span className="small muted">בלי סיסמה: נכנסים עם קישור במייל.</span>
       </div>
       <p className="small muted">
-        ההרשמה כפופה ל<a href="/privacy">מדיניות הפרטיות</a>. הפרופיל לא מתפרסם בלי אישור.
+        ההרשמה כפופה ל<a href="/privacy">מדיניות הפרטיות</a>.{PROFILES ? " הפרופיל לא מתפרסם בלי אישור." : ""}
       </p>
     </form>
   );

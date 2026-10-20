@@ -5,7 +5,7 @@
 // 4. applies the database migration when a Postgres URL is available (Vercel + Supabase integration).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
-import { headerHtml, footerHtml } from "../lib/chrome.mjs";
+import { headerHtml, footerHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
 import { CLOSES_AT } from "../lib/survey/config.js";
 
 // 1. Companies app. site/app.html is a page body (the Artifact host adds the document shell),
@@ -27,10 +27,11 @@ body = between(body, "<!-- chrome:header -->", "<!-- /chrome:header -->",
   headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
 body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
 const shell =
-  '<!doctype html>\n<html lang="he" dir="rtl" data-site="">\n<head>\n<meta charset="utf-8">\n' +
+  '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
   '<meta name="theme-color" content="#ffffff">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
-  "<script>window.LANDSCAPE_SITE = true;</script>\n";
+  "<script>window.LANDSCAPE_SITE = true;</script>\n" +
+  `<script>${THEME_SCRIPT}</script>\n`;
 writeFileSync("public/companies/index.html", shell + body);
 cpSync("site/data", "public/companies/data", { recursive: true });
 console.log("prebuild: copied the companies app to public/companies");

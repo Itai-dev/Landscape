@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { seedById, orgLabel } from "@/lib/people";
-import { supabaseConfig } from "@/lib/config";
+import { supabaseConfig, PROFILES_ENABLED } from "@/lib/config";
 import RemoveForm from "./RemoveForm";
 
 export const metadata = { title: "בקשת הסרה", robots: { index: false } };
@@ -9,7 +9,7 @@ export default async function Remove({ searchParams }) {
   const sp = await searchParams;
   const p = seedById(sp?.id);
   if (!p) notFound();
-  const signup = Boolean(supabaseConfig());
+  const signup = PROFILES_ENABLED && Boolean(supabaseConfig());
   return (
     <div className="wrap narrow">
       <div className="pagehead">

@@ -2,6 +2,9 @@ import { NextResponse } from "next/server";
 import { serverClient, adminClient } from "@/lib/supabase/server";
 import { savePrefs, cleanFrequency, cleanCraftList } from "@/lib/consent";
 import { recordReferral, CODE_RE } from "@/lib/survey/server";
+import { PROFILES_ENABLED } from "@/lib/config";
+
+const HOME = PROFILES_ENABLED ? "/onboard" : "/digest/settings";
 
 // Magic-link landing: exchange the code for a session, then continue to `next` (same-site paths only).
 // Opening the link confirms the address, so this is where choices made on a sign-up form take effect:
@@ -10,8 +13,8 @@ import { recordReferral, CODE_RE } from "@/lib/survey/server";
 export async function GET(request) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
-  const nextParam = searchParams.get("next") || "/onboard";
-  const next = nextParam.startsWith("/") && !nextParam.startsWith("//") ? nextParam : "/onboard";
+  const nextParam = searchParams.get("next") || HOME;
+  const next = nextParam.startsWith("/") && !nextParam.startsWith("//") ? nextParam : HOME;
   const sb = await serverClient();
   if (sb && code) {
     const { data, error } = await sb.auth.exchangeCodeForSession(code);

@@ -3,6 +3,7 @@ import { serverClient, currentUser } from "@/lib/supabase/server";
 import { craftLabel, openToLabel } from "@/lib/taxonomy";
 import { initials, coverClass } from "@/components/PersonCard";
 import { VerifiedIcon } from "@/components/Icons";
+import { PROFILES_ENABLED } from "@/lib/config";
 
 async function load(slug) {
   const sb = await serverClient();
@@ -17,6 +18,7 @@ async function load(slug) {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+  if (!PROFILES_ENABLED) return { title: "הדף לא נמצא", robots: { index: false } };
   const { p } = await load(slug);
   if (!p) return { title: "פרופיל" };
   return { title: p.name, description: p.headline || undefined, robots: p.visibility === "public" ? undefined : { index: false } };
@@ -24,6 +26,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Profile({ params }) {
   const { slug } = await params;
+  if (!PROFILES_ENABLED) notFound();
   const { sb, p } = await load(slug);
   if (!p) notFound();
   const user = await currentUser(sb);

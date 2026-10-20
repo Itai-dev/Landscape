@@ -38,8 +38,9 @@
   --gutter: clamp(20px, 5vw, 48px);
   --header: 72px;
 }
+/* Light unless the reader picks dark, or picks "לפי המכשיר" on a dark device (header toggle, lib/chrome.mjs). */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root[data-theme="system"] {
     --bg: #0c0819; --soft: #18122b; --soft-2: #221a3a; --surface: #130e24; --ink: #f3efff; --ink-2: #d4cde8;
     --muted: #a59fba; --line: #2a2342; --accent: #a466ff; --accent-hover: #b884ff; --accent-ink: #0c0819;
     --accent-soft: #2a1a4d; --ok: #4ade80; --danger: #f87171;

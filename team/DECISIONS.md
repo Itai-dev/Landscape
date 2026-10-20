@@ -116,3 +116,11 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Invites**: credited only to a confirmed, brand-new account created through the link; not your own code, not "+alias" addresses, first inviter wins.
 - **Digest relevance**: an update is "in your crafts" only if it names the craft or credits someone who does it; everything else is "עוד בתעשייה". Subjects count only real matches. Picks lead with what the buyer commissions in that craft, then the news. "נוספו למאגר" counts only companies added since the last edition (the launch directory isn't "new") and never makes an edition worth sending on its own. Email: at most 5 updates and 3 picks.
 - **Also**: unsubscribe works with GET (confirm page) and one-click POST, plus a mailto when a contact email is set; per-user rate limits and a 32KB body cap on the write APIs; survey drafts in the browser are per account and cleared on sign-out; one sign-up form on the home page with an optional digest box; share images for `/digest` and `/survey`.
+
+## 2026-10-20 · Stage 1 is information + newsletter; light theme by default
+- Owner: "זה אני" felt odd; for the first stage nobody fills a profile. Everything here is information: who commissions what, who decides, what changed this week and why now, plus the weekly digest by craft.
+- Profiles, onboarding, member cards and claiming a listed person are switched off behind one flag (`NEXT_PUBLIC_PROFILES`), not deleted. Removal requests stay (legal). Sign-in by email remains for the digest and the survey only.
+- The header call to action is now the weekly digest ("לגיליון השבועי").
+- The site was following the phone's dark mode, which looked like a sudden switch. Light is now the default everywhere, with a header toggle: בהירה / כהה / לפי המכשיר.
+- The company detail panel on desktop opens from the reading side (right in Hebrew, left in English).
+

@@ -23,7 +23,8 @@ function RoleLink({ r }) {
 }
 
 // A person listed from public sources (a company site, the trade press). Not a member: no profile page, no contact details.
-// The page explains "from public sources" once, so the card doesn't repeat it. "זה אני" shows only when sign-up is open.
+// The page explains "from public sources" once, so the card doesn't repeat it. The claim button shows only when
+// profiles are on (NEXT_PUBLIC_PROFILES) and sign-up is open.
 export default function SeedCard({ p, claim = false }) {
   const [first, ...rest] = p.roles;
   return (
