@@ -47,7 +47,7 @@ export default async function Tenders({ searchParams }) {
 
       <form className="toolbar" role="search" action="/tenders">
         <div className="psearch">
-          <input type="search" name="q" defaultValue={q} placeholder="חיפוש במכרזים: נושא או גוף מזמין" aria-label="חיפוש במכרזים" />
+          <input type="search" name="q" defaultValue={q} placeholder="נושא או גוף מזמין" aria-label="חיפוש במכרזים" />
           <button className="go" aria-label="חיפוש"><SearchIcon size={20} /></button>
         </div>
         <AutoSelect name="craft" defaultValue={craft} aria-label="תחום">
@@ -67,8 +67,8 @@ export default async function Tenders({ searchParams }) {
 
       <section aria-labelledby="open-h">
         <div className="subhead">
-          <h2 id="open-h">פתוחים להגשה <span className="count">{open.length}</span></h2>
-          <p>המידע לפי פרסום רשמי. לפני הגשה יש לבדוק את מסמכי המכרז במקור.</p>
+          <h2 id="open-h">פתוחים להגשה{open.length > 0 && <> <span className="count">{open.length}</span></>}</h2>
+          {open.length > 0 && <p>המידע לפי פרסום רשמי. לפני הגשה יש לבדוק את מסמכי המכרז במקור.</p>}
         </div>
         {open.length === 0 ? (
           <div className="soon">

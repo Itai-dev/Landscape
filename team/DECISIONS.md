@@ -136,3 +136,11 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - Facts only: title as published, buyer, number, dates, plus our own one-line summary. Never contact names or emails, never aggregator content, never fetch around a block. לפ"מ exemption notices are signals (who was hired), not tenders.
 - "מכרזים" joins the header nav. To keep the header one 64px row on phones, the colour-theme button moves to the footer under 480px, and under 380px the newsletter button becomes an envelope icon.
 
+
+
+## 2026-10-20: Pre-launch hardening
+
+- One "מעקב" button on a company: it saves to the tracking list, and alerts by email come with it when the person has agreed to them; otherwise they are offered, optionally. Two buttons that looked alike were confusing.
+- Migrations run once each, in one transaction, only on production deploys, with a ledger. A failed migration fails the deploy instead of leaving the database half-done or with permissions re-opened. Browser roles have no write access to any of our tables.
+- Magic links work only on the device and browser that asked for them, so every confirmation message says so. Signed out, /me is a sign-in form; signed in, the header button is "החשבון שלי".
+- Alerts never send twice: claims are per run, retries reuse the same key, and an unanswered request keeps its claim (at worst one alert is missed). Alerts and the digest share the 100-a-day free sending budget.

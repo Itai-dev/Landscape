@@ -5,6 +5,7 @@ import ComingSoon from "@/components/ComingSoon";
 import AccountClient from "./AccountClient";
 import { PROFILES_ENABLED } from "@/lib/config";
 import FollowsClient from "./FollowsClient";
+import SignupForm from "@/components/SignupForm";
 import index from "@/lib/generated/orgs.json";
 
 const ORG_NAMES = new Map(index.orgs.map((o) => [o.id, o.name_he || o.name]));
@@ -34,7 +35,16 @@ export default async function Me({ searchParams }) {
   const user = await currentUser(sb);
   if (!PROFILES_ENABLED) {
     // Stage 1: an account is only the email behind the digest, the alerts and the survey. No profile to edit.
-    if (!user) redirect("/digest#subscribe");
+    if (!user) {
+      // Signed out (or on another device): a sign-in link brings people back to their follows and settings.
+      return (
+        <div className="wrap narrow stack">
+          <div className="pagehead"><h1>החשבון שלי</h1><p>נכנסים עם קישור במייל: הגיליון, ההתראות על חברות והסקר.</p></div>
+          <div className="card"><SignupForm next="/me#follows" digest={false} /></div>
+          <p className="small muted center">עוד לא נרשמתם? <a href="/digest#subscribe">להרשמה לגיליון השבועי</a></p>
+        </div>
+      );
+    }
     const sp = await searchParams;
     const follows = await loadFollows(sb, user.id);
     return (

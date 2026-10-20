@@ -1,4 +1,5 @@
 "use client";
+import { prefixed } from "@/lib/bidi";
 import { useState } from "react";
 import { ALERT_MODES, ALERTS_CONSENT_TEXT } from "@/lib/taxonomy";
 import "@/components/follow.css";
@@ -31,8 +32,8 @@ export default function FollowsClient({ initial, justFollowed }) {
   return (
     <div className="card stack" id="follows">
       <h2>התראות על חברות</h2>
-      {fresh && alerts !== "off" && <p className="notice ok" role="status">מעכשיו יגיע אליכם מייל כשמשהו משתנה ב־<bdi>{fresh.name}</bdi>.</p>}
-      <p className="muted">מייל כשמשהו משתנה בחברות שאתם עוקבים אחריהן: מינוי בשיווק, החלפת משרד, קמפיין חדש. מוסיפים חברות בכפתור ״התראות על החברה״ בעמוד של כל חברה.</p>
+      {fresh && alerts !== "off" && <p className="notice ok" role="status">מעכשיו יגיע אליכם מייל כשמשהו משתנה <bdi>{prefixed("ב", fresh.name)}</bdi>.</p>}
+      <p className="muted">מייל כשמשהו משתנה בחברות שאתם עוקבים אחריהן: מינוי בשיווק, החלפת משרד, קמפיין חדש. מוסיפים חברות בכפתור ״מעקב״ בכרטיס של כל חברה.</p>
       {follows.length ? (
         <ul className="follows-list">
           {follows.map((f) => (

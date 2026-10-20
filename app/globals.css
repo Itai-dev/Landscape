@@ -59,6 +59,8 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
+/* Anchored sections (/me#follows, /digest#subscribe…) land below the sticky header, not under it. */
+[id] { scroll-margin-top: 88px; }
 body {
   margin: 0; background: var(--bg); color: var(--ink);
   font: var(--t-base)/1.6 var(--f-body);

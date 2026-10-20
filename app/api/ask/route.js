@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { aiReady } from "@/lib/config";
 import { askDirectory } from "@/lib/ask";
+import { readJson } from "@/lib/guard";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -32,7 +33,7 @@ export async function POST(request) {
   if (!aiReady()) return NextResponse.json({ error: "ai_unavailable" }, { status: 503 });
   const ip = (request.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
   if (!allowed(ip)) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
-  const body = await request.json().catch(() => ({}));
+  const body = (await readJson(request, 4 * 1024)) || {};
   const q = typeof body.q === "string" ? body.q.trim().slice(0, 400) : "";
   if (q.length < 2) return NextResponse.json({ error: "empty" }, { status: 400 });
   const crafts = Array.isArray(body.crafts) ? body.crafts.filter((c) => typeof c === "string").slice(0, 10) : [];

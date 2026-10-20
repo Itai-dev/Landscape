@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import { craftLabel, openToLabel } from "@/lib/taxonomy";
 import { initials, coverClass } from "@/components/PersonCard";
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Profile({ params }) {
   const { slug } = await params;
-  if (!PROFILES_ENABLED) notFound();
+  if (!PROFILES_ENABLED) redirect("/people"); // old profile links lead to the people directory
   const { sb, p } = await load(slug);
   if (!p) notFound();
   const user = await currentUser(sb);

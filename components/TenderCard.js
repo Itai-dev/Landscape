@@ -28,6 +28,9 @@ export default function TenderCard({ t, compact = false }) {
               <>{t.kind_he}{t.procedure_no ? <> <bdi>{t.procedure_no}</bdi></> : ""}: לפרטים במקור</>
             ) : /^(מכרז|פנייה|קול קורא|בקשה)/.test(t.title) ? (
               <>בפרסום: {t.title}</>
+            ) : /^ל/.test(t.title) ? (
+              // "להפקת אירועים…" reads as the rest of the sentence: "בפרסום: מכרז להפקת אירועים…"
+              <>בפרסום: {t.kind_he}{t.procedure_no ? <> <bdi>{t.procedure_no}</bdi></> : ""} {t.title}</>
             ) : (
               <>{t.kind_he}{t.procedure_no ? <> <bdi>{t.procedure_no}</bdi></> : ""}: {t.title}</>
             )}

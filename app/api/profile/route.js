@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sameOrigin } from "@/lib/guard";
 import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
 import { cleanProfile, cleanPrefs, missingFields, makeSlug } from "@/lib/profile";
 import { savePrefs } from "@/lib/consent";
@@ -12,6 +13,7 @@ const FIELDS = ["name", "headline", "bio", "city", "crafts", "skills", "open_to"
 // Save (create or update) the signed-in person's profile + newsletter preferences.
 // Body: multipart with `data` (JSON: {profile, visibility, ai_fields, prefs}) and optional `cv` (PDF to keep privately).
 export async function POST(request) {
+  if (!sameOrigin(request)) return NextResponse.json({ error: "forbidden" }, { status: 403 });
   const sb = await serverClient();
   if (!sb) return err(503, "not_configured");
   const user = await currentUser(sb);

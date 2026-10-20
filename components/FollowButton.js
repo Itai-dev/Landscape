@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { BellIcon, CheckIcon } from "@/components/Icons";
 import { ALERTS_CONSENT_TEXT } from "@/lib/taxonomy";
+import { prefixed } from "@/lib/bidi";
 import "./follow.css";
 
 // One request per page for the follow state, shared by every button on it.
@@ -111,16 +112,16 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
             <p className="small">החברה נשמרה, אבל ההתראות כבויות. אפשר להפעיל אותן ב<a href="/me#follows">חשבון שלי</a>.</p>
           ) : s.signedIn ? (
             <form className="stack" onSubmit={(e) => { e.preventDefault(); if (consent) toggle(true); }}>
-              <p className="small"><b>מייל כשמשהו משתנה ב־<bdi>{orgName}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש.</p>
+              <p className="small"><b>מייל כשמשהו משתנה <bdi>{prefixed("ב", orgName)}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש.</p>
               <label className="check small"><input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required /><span>{ALERTS_CONSENT_TEXT}</span></label>
               <button className="btn primary sm" disabled={!consent || phase === "busy"}>להפעלת ההתראות</button>
               {msg && <p className="small err" role="alert">{msg}</p>}
             </form>
           ) : phase === "sent" ? (
-            <p className="small" role="status"><b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b> אחרי הלחיצה עליו נתחיל לשלוח התראות על <bdi>{orgName}</bdi>. לא הגיע? כדאי לבדוק בספאם.</p>
+            <p className="small" role="status"><b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b> כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.</p>
           ) : (
             <form className="stack" onSubmit={start}>
-              <p className="small"><b>מייל כשמשהו משתנה ב־<bdi>{orgName}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה ובלי פרופיל.</p>
+              <p className="small"><b>מייל כשמשהו משתנה <bdi>{prefixed("ב", orgName)}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה.</p>
               <input type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com" aria-label="מייל" value={email} onChange={(e) => setEmail(e.target.value)} />
               <label className="check small"><input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required /><span>{ALERTS_CONSENT_TEXT}</span></label>
               <button className="btn primary sm" disabled={!consent || phase === "busy"}>שליחת קישור אישור</button>

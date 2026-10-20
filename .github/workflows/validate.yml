@@ -26,3 +26,4 @@ jobs:
       - run: node scripts/test-survey.mjs
       - run: npm run build
       - run: node scripts/test-alerts.mjs
+      - run: node scripts/test-callback.mjs

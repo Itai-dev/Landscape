@@ -22,11 +22,10 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
   if (state === "sent") {
     return (
       <div className="notice ok" role="status">
-        <b>שלחנו קישור כניסה ל־<span className="ltr">{email}</span>.</b>
+        <b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        פותחים אותו מהמייל וממשיכים
-        {newsletter ? `. הלחיצה מאשרת גם את ההרשמה ל״השבוע בתעשייה״, והגיליון הראשון יגיע ${firstSendLabel("weekly")}` : ""}.
-        {" "}לא הגיע? כדאי לבדוק בספאם, או לנסות שוב בעוד דקה.
+        {newsletter ? `הלחיצה עליו מאשרת גם את ההרשמה ל״השבוע בתעשייה״, והגיליון הראשון יגיע ${firstSendLabel("weekly")}. ` : ""}
+        כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }

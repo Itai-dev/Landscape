@@ -49,7 +49,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים על הקישור במייל כדי לאשר את ההרשמה. הגיליון הראשון יגיע {firstSendLabel(frequency)}. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים עליו כדי לאשר את ההרשמה, והגיליון הראשון יגיע {firstSendLabel(frequency)}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }
