@@ -270,7 +270,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     <h1>Landscape <span data-i18n="app.sub">· Israel’s creative industry</span></h1>
     <div class="side">
       <div class="meta" id="meta">Loading…</div>
-      <button class="langbtn" type="button" id="lang" lang="he">עברית</button>
+      <button class="langbtn" type="button" id="lang" lang="en">English</button>
     </div>
   </header>
   <div class="notice" id="storeNotice" hidden></div>
@@ -470,7 +470,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     },
   };
   let LANG = "en";
-  try { LANG = localStorage.getItem("landscape-lang") === "he" ? "he" : "en"; } catch (e) {}
+  LANG = "he"; // Hebrew-first (Israeli market); English via the toggle
+  try { LANG = localStorage.getItem("landscape-lang") === "en" ? "en" : "he"; } catch (e) {}
   const t = (k, ...a) => { let s = I18N[LANG][k] ?? I18N.en[k] ?? k; a.forEach((v, i) => (s = s.replace("{" + i + "}", v))); return s; };
   const kindOne = (k) => t("k1." + k), kindMany = (k) => t("km." + k), stageLabel = (k) => t("st." + k), sigType = (k) => t("sig." + k);
 
@@ -506,6 +507,10 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   const catLabel = (c) => (LANG === "he" && TAX.categories_he?.[c]) || TAX.categories[c] || c;
   const needLabel = (n) => (LANG === "he" && NEEDS[n]?.label_he) || NEEDS[n]?.label || n;
   const orgName = (o) => (LANG === "he" && o.name_he) || o.name;
+  const orgDesc = (o) => (LANG === "he" && o.description_he) || o.description;
+  const cityName = (c) => (LANG === "he" && TAX.cities_he?.[c]) || c;
+  const sigHead = (s) => (LANG === "he" && s.headline_he) || s.headline;
+  const sigWhy = (s) => (LANG === "he" && s.why_he) || s.why;
 
   function lookup(name) { return BY_ID[name] || BY_NAME[norm(name)]; }
   function push(map, k, v) { (map[k] = map[k] || []).push(v); }
@@ -517,7 +522,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       BY_ID[o.id] = o; BY_NAME[norm(o.name)] = o;
       (o.aka || []).forEach((a) => (BY_NAME[norm(a)] = BY_NAME[norm(a)] || o));
       o.needs = o.needs || [];
-      o._text = [o.name, o.name_he, (o.aka || []).join(" "), o.description, o.location.city, KINDS.includes(o.kind) ? I18N.en["k1." + o.kind] + " " + I18N.he["k1." + o.kind] : "",
+      o._text = [o.name, o.name_he, (o.aka || []).join(" "), o.description, o.description_he, o.location.city, TAX.cities_he?.[o.location.city], KINDS.includes(o.kind) ? I18N.en["k1." + o.kind] + " " + I18N.he["k1." + o.kind] : "",
         o.categories.map((c) => TAX.categories[c] + " " + (TAX.categories_he?.[c] || "")).join(" "), o.needs.map((n) => NEEDS[n]?.label + " " + (NEEDS[n]?.label_he || "")).join(" "),
         (o.client_profile?.creative_needs || []).join(" "), (o.client_profile?.known_agencies || []).join(" "),
         (o.services || []).join(" "), (o.notable_clients || []).join(" "), (o.notable_work || []).join(" "),
@@ -699,7 +704,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   }
   function gstyle(o) { return `--g:var(--g-${GROUP[o.kind] || "maker"})`; }
   function kindLine(o) {
-    return `<div class="kind">${kindOne(o.kind)} <span class="where">· ${esc(o.location.city || o.location.country)}${o.size ? ` · <span dir="ltr">${esc(o.size)}</span>` : ""}${o.status && o.status !== "active" ? " · " + esc(t("status." + o.status)) : ""}</span></div>`;
+    return `<div class="kind">${kindOne(o.kind)} <span class="where">· ${esc(cityName(o.location.city) || o.location.country)}${o.size ? ` · <span dir="ltr">${esc(o.size)}</span>` : ""}${o.status && o.status !== "active" ? " · " + esc(t("status." + o.status)) : ""}</span></div>`;
   }
   function names(o) {
     // primary name in the UI language, the other one beneath it
@@ -727,11 +732,11 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     } else if (o.kind === "agency" && (o.notable_clients || []).length) {
       body += `<p class="line"><span class="k">${t("card.clients")}</span><bdi>${esc(o.notable_clients.slice(0, 3).join(" · "))}</bdi></p>`;
     } else {
-      body += `<p dir="auto">${esc(o.description)}</p>`;
+      body += `<p dir="auto">${esc(orgDesc(o))}</p>`;
       const shown = o.categories.filter((c) => GROUP[o.kind] !== "maker" || CRAFTS.includes(c)).slice(0, 3);
       if (shown.length) body += `<div>${shown.map((c) => `<span class="tag${myCrafts().includes(c) ? " hit" : ""}">${esc(catLabel(c))}</span>`).join("")}</div>`;
     }
-    if (sig) body += `<div class="nowline"><span class="t">${esc(sigType(sig.type))}</span><span dir="auto">${esc(trim(sig.headline, 90))} <span class="mono muted">${ago(sig.date)}</span></span></div>`;
+    if (sig) body += `<div class="nowline"><span class="t">${esc(sigType(sig.type))}</span><span dir="auto">${esc(trim(sigHead(sig), 90))} <span class="mono muted">${ago(sig.date)}</span></span></div>`;
     return `<button class="card" type="button" data-id="${o.id}" style="${gstyle(o)}">
       <div class="top">${logo(o)}<div class="nm"><h3><bdi>${esc(nm.main)}</bdi></h3>${nm.alt ? `<bdi class="alt" dir="auto">${esc(nm.alt)}</bdi>` : ""}${kindLine(o)}</div>
       ${e ? `<span class="stage">★ ${esc(stageLabel(e.stage) || t("st.saved"))}</span>` : ""}</div>${body}</button>`;
@@ -754,7 +759,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     const act = [
       ...state.kinds.map((k) => ["kinds", k, kindMany(k)]), ...state.needs.map((k) => ["needs", k, needLabel(k)]),
       ...state.cats.map((k) => ["cats", k, catLabel(k)]), ...state.inds.map((k) => ["inds", k, catLabel(k)]),
-      ...(state.city ? [["city", state.city, state.city]] : []),
+      ...(state.city ? [["city", state.city, cityName(state.city)]] : []),
     ];
     $("active").hidden = !act.length;
     $("active").innerHTML = act.map(([f, v, l]) => `<button class="chip" type="button" data-unf="${f}" data-v="${esc(v)}">${esc(l)} <span class="x">✕</span></button>`).join("") +
@@ -789,7 +794,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       <div class="filtersec"><h4>${t("fl.craft")}</h4>${chipset("cats", used("craft"), catLabel)}</div>
       <div class="filtersec"><h4>${t("fl.industry")}</h4>${chipset("inds", used("industry"), catLabel)}</div>
       <div class="filtersec"><h4>${t("fl.product")}</h4>${chipset("cats", used("product"), catLabel)}</div>
-      <div class="filtersec"><h4>${t("fl.city")}</h4><select class="btn" id="fcity" aria-label="${t("fl.city")}"><option value="">${t("fl.anycity")}</option>${Object.entries(cities).sort((a, b) => b[1] - a[1]).map(([c, n]) => `<option value="${esc(c)}"${state.city === c ? " selected" : ""}>${esc(c)} (${n})</option>`).join("")}</select></div>
+      <div class="filtersec"><h4>${t("fl.city")}</h4><select class="btn" id="fcity" aria-label="${t("fl.city")}"><option value="">${t("fl.anycity")}</option>${Object.entries(cities).sort((a, b) => b[1] - a[1]).map(([c, n]) => `<option value="${esc(c)}"${state.city === c ? " selected" : ""}>${esc(cityName(c))} (${n})</option>`).join("")}</select></div>
       <div class="sheetfoot"><button class="btn ghost" type="button" data-unf="all">${t("clearAll")}</button><button class="btn primary" type="button" data-done>${t("fl.show")}</button></div>`;
     showPanel();
     $("fcity").addEventListener("change", (e) => { state.city = e.target.value; refresh(); });
@@ -884,12 +889,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       ${sigs.length ? `<section><h4>${t("sh.whynow")}</h4><div class="feed">${sigs.slice(0, 4).map((s) => sigCard(s, true)).join("")}</div></section>` : ""}
       ${buyer && (o.needs.length || o.client_profile?.creative_needs?.length) ? `<section><h4>${t("sh.buy")}</h4>
         <div>${o.needs.map((n) => `<span class="tag${hits.has(n) ? " hit" : ""}">${hits.has(n) ? "✓ " : ""}${esc(needLabel(n))}</span>`).join("")}</div>
-        ${o.client_profile?.creative_needs?.length ? `<p class="muted" style="font-size:13px" dir="auto">${esc(o.client_profile.creative_needs.join(" · "))}</p>` : ""}
+        ${LANG !== "he" && o.client_profile?.creative_needs?.length ? `<p class="muted" style="font-size:13px" dir="auto">${esc(o.client_profile.creative_needs.join(" · "))}</p>` : ""}
         ${!myCrafts().length ? `<p style="font-size:13px"><button class="btn ghost" type="button" data-crafts>${t("sh.pickcrafts")}</button>${t("sh.pickcrafts2")}</p>` : ""}
         ${o.client_profile?.in_house_studio ? `<p style="font-size:13px">${t("sh.inhouse")}</p>` : ""}</section>` : ""}
       ${ways.length ? `<section><h4>${t("sh.ways")}</h4><div class="ways">${ways.map(([h, x]) => `<div class="grp"><span>${h}</span><div class="items">${x}</div></div>`).join("")}</div></section>` : ""}
-      <section><h4>${t("sh.about")}</h4><p style="margin-top:0" dir="auto">${esc(o.description)}</p>
-        ${LANG === "he" ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
+      <section><h4>${t("sh.about")}</h4><p style="margin-top:0" dir="auto">${esc(orgDesc(o))}</p>
+        ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
         ${facts.length ? `<dl class="facts" style="margin-top:10px">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
         <div style="margin-top:10px">${o.categories.map((c) => `<span class="tag">${esc(catLabel(c))}</span>`).join("")}</div>
       </section>
@@ -932,7 +937,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       <h2 style="margin:4px 0 0;font-size:22px">${esc(t("p.title", orgName(o)))}</h2>
       <p class="muted" style="margin:6px 0 0;font-size:13px">${t("p.sub")}</p>
       <div class="filtersec"><h4>${t("p.why")}</h4>
-        <select class="btn" id="pWhy" aria-label="${t("p.why")}">${sigs.map((s, i) => opt("sig:" + s.id, `${sigType(s.type)} · ${trim(s.headline, 70)}`, i === 0)).join("")}${opt("other", t("p.other"), !sigs.length)}</select>
+        <select class="btn" id="pWhy" aria-label="${t("p.why")}">${sigs.map((s, i) => opt("sig:" + s.id, `${sigType(s.type)} · ${trim(sigHead(s), 70)}`, i === 0)).join("")}${opt("other", t("p.other"), !sigs.length)}</select>
         <textarea id="pWhyText" class="field" dir="auto" placeholder="${esc(t("p.whyph"))}" ${sigs.length ? "hidden" : ""} style="min-height:54px"></textarea></div>
       <div class="filtersec"><h4>${t("p.who")}</h4><select class="btn" id="pWho" aria-label="${t("p.who")}">${pitchPeople(o).map(([v, l], i) => opt(v, l, i === 0)).join("")}</select></div>
       <div class="filtersec"><h4>${t("p.me")}</h4><input id="pMe" class="btn" dir="auto" value="${esc(Store.prefs.me || "")}" placeholder="${esc(t("p.meph"))}"></div>
@@ -976,7 +981,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     const lang = $("pLang").querySelector('[aria-pressed="true"]').dataset.plang;
     const who = $("pWho").value;
     const facts = {
-      company: o.name, company_he: o.name_he, kind: I18N.en["k1." + o.kind], city: o.location.city, about: o.description,
+      company: o.name, company_he: o.name_he, kind: I18N.en["k1." + o.kind], city: o.location.city, about: o.description, about_he: o.description_he,
       buys: o.needs.map((n) => NEEDS[n]?.label), creative_needs: o.client_profile?.creative_needs, agency: agencyOf(o) || undefined,
       notable_clients: (o.notable_clients || []).slice(0, 6),
     };
@@ -1037,7 +1042,7 @@ Company: ${JSON.stringify(facts)}`;
       inputSchema: { type: "object", properties: { id: { type: "string" } }, required: ["id"] },
       execute(inp) {
         const o = BY_ID[String(inp.id)]; if (!o) throw new Error("No org with that id");
-        return { ...compactOrg(o), description: o.description, size: o.size, website: o.website, creative_needs: o.client_profile?.creative_needs, known_agencies: o.client_profile?.known_agencies,
+        return { ...compactOrg(o), description: o.description, description_he: o.description_he, size: o.size, website: o.website, creative_needs: o.client_profile?.creative_needs, known_agencies: o.client_profile?.known_agencies,
           people: (o.key_people || []).map((p) => ({ name: p.name, role: p.role, role_type: p.role_type, as_of: p.as_of })),
           notable_clients: (o.notable_clients || []).slice(0, 15), notable_work: (o.notable_work || []).slice(0, 8),
           relations: (o.relations || []).slice(0, 25).map((r) => ({ type: r.type, target: r.target_id || r.target, note: r.note })),
@@ -1101,7 +1106,7 @@ Company: ${JSON.stringify(facts)}`;
     </div>`).join("");
     const week = signals().filter((s) => !s.hidden).slice(0, 4);
     $("week").innerHTML = week.length ? `<h3>${t("home.week")}</h3>` + week.map((s) => { const o = s.org_id && BY_ID[s.org_id];
-      return `<button class="wrow" type="button" ${o ? `data-id="${o.id}"` : `data-goto="signals"`}>${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<span class="nm"><span class="ty">${esc(sigType(s.type))} · ${ago(s.date)}</span><b><bdi>${esc(o ? orgName(o) : s.org_name)}</bdi></b><span dir="auto">${esc(s.headline)}</span></span></button>`; }).join("") : "";
+      return `<button class="wrow" type="button" ${o ? `data-id="${o.id}"` : `data-goto="signals"`}>${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<span class="nm"><span class="ty">${esc(sigType(s.type))} · ${ago(s.date)}</span><b><bdi>${esc(o ? orgName(o) : s.org_name)}</bdi></b><span dir="auto">${esc(sigHead(s))}</span></span></button>`; }).join("") : "";
   }
   function localAnswer(q) {
     // keyword fallback when Claude isn't available: score orgs by word hits
@@ -1193,8 +1198,8 @@ Question: ${q}`;
       : `<div class="head">${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<div class="nm"><div class="type">${esc(sigType(s.type))}</div>
         ${o ? `<button class="org" type="button" data-id="${o.id}"><bdi>${esc(orgName(o))}</bdi></button>` : `<span class="org"><bdi>${esc(s.org_name)}</bdi></span> <span class="muted" style="font-size:12px">${t("sig.notinmap")}</span>`}</div></div>`;
     return `<article class="sig${old ? " old" : ""}${s.hidden ? " hidden" : ""}">${head}
-      <p class="h" dir="auto">${esc(s.headline)}</p>
-      <p class="why" dir="auto">${esc(s.why)}</p>
+      <p class="h" dir="auto">${esc(sigHead(s))}</p>
+      <p class="why" dir="auto">${esc(sigWhy(s))}</p>
       ${cr ? `<div class="credits" dir="auto">${esc(cr)}</div>` : ""}
       <div class="foot"><span class="mono">${s.date_approx ? "≈ " : ""}${fmtDate(s.date)}</span>
         <a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source || t("sig.source"))} ↗</a>
@@ -1227,7 +1232,7 @@ Question: ${q}`;
         <button class="btn primary" type="button" data-goto="explore">${t("pipe.find")}</button></div>`;
       return;
     }
-    const row = (e) => { const o = BY_ID[e.org_id]; return `<button class="prow" type="button" data-id="${o.id}" style="${gstyle(o)}">${logo(o, "sm")}<span class="nm"><b><bdi>${esc(orgName(o))}</bdi></b><span dir="auto">${esc(e.note ? e.note : kindOne(o.kind) + " · " + (o.location.city || ""))}</span></span>${e.next_date ? `<span class="due">${e.next_date <= today ? t("pipe.due") : ""}${fmtDate(e.next_date)}</span>` : ""}</button>`; };
+    const row = (e) => { const o = BY_ID[e.org_id]; return `<button class="prow" type="button" data-id="${o.id}" style="${gstyle(o)}">${logo(o, "sm")}<span class="nm"><b><bdi>${esc(orgName(o))}</bdi></b><span dir="auto">${esc(e.note ? e.note : kindOne(o.kind) + " · " + (cityName(o.location.city) || ""))}</span></span>${e.next_date ? `<span class="due">${e.next_date <= today ? t("pipe.due") : ""}${fmtDate(e.next_date)}</span>` : ""}</button>`; };
     let h = "";
     if (due.length) h += `<div><h2>${t("pipe.duenow")} <span class="badge">${due.length}</span></h2><div class="list">${due.map((e) => `<div class="duerow">${row(e)}<div class="acts"><button class="btn" type="button" data-snooze="${e.org_id}">${t("pipe.snooze")}</button><button class="btn" type="button" data-done-follow="${e.org_id}">${t("pipe.done")}</button></div></div>`).join("")}</div></div>`;
     STAGES.forEach((k) => {

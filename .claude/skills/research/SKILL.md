@@ -84,5 +84,8 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
 
 - Accuracy over volume: 15 verified records beat 50 guesses.
 - Israeli presence required for `IL` segments (HQ, founded there, or a real local studio/office).
-- Descriptions: 1–3 factual sentences in English; add `name_he` when known.
+- The app is Hebrew-first. Every record needs `description` (English, as sourced) AND
+  `description_he` (natural industry Hebrew: מושן, פוסט, קריאייטיב, שואוריל…; same facts).
+  Add `name_he` only when the org itself uses a Hebrew name. Every signal needs `headline_he`
+  and `why_he` next to `headline` / `why`. New cities go in `schema/taxonomy.json` → `cities_he`.
 - Use only taxonomy category slugs; anything else goes in `tags`.

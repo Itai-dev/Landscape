@@ -58,6 +58,11 @@
       "minLength": 20,
       "maxLength": 600
     },
+    "description_he": {
+      "type": "string",
+      "maxLength": 700,
+      "description": "Hebrew translation of description"
+    },
     "location": {
       "type": "object",
       "additionalProperties": false,
