@@ -42,6 +42,9 @@ export async function POST(request) {
   } catch (e) {
     console.error("ask failed", e?.status || "", e?.message);
     const code = e?.code === "refused" ? "refused" : e?.code === "timeout" ? "timeout" : e?.status === 429 ? "rate_limited" : "ai_failed";
-    return NextResponse.json({ error: code }, { status: code === "rate_limited" ? 429 : 502 });
+    // Upstream status and error type (never the message) so a failing deploy can be diagnosed from outside.
+    const upstream = typeof e?.status === "number" ? e.status : undefined;
+    const type = typeof e?.error?.error?.type === "string" ? e.error.error.type : undefined;
+    return NextResponse.json({ error: code, upstream, type }, { status: code === "rate_limited" ? 429 : 502 });
   }
 }
