@@ -2,12 +2,13 @@ import { NextResponse } from "next/server";
 import { adminClient } from "@/lib/supabase/server";
 import { seedById } from "@/lib/people";
 import { str } from "@/lib/profile";
+import { readJson } from "@/lib/guard";
 
 export const runtime = "nodejs";
 
 // A request to remove a person listed from public sources. Body: JSON {id, reason?, contact?, confirm: true}.
 export async function POST(request) {
-  const body = await request.json().catch(() => ({}));
+  const body = (await readJson(request, 4 * 1024)) || {};
   const seed = seedById(body.id);
   if (!seed) return NextResponse.json({ error: "not_found" }, { status: 404 });
   if (body.confirm !== true) return NextResponse.json({ error: "confirm" }, { status: 400 });

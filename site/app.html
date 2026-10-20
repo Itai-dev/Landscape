@@ -37,8 +37,10 @@
   --max: 1200px;
   --gutter: clamp(20px, 5vw, 48px);
 }
+/* On the site (html[data-site]) the page is light unless the reader picks dark or "לפי המכשיר" (header toggle).
+   Inside the Artifact host it follows the device, as before. */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-site]):not([data-theme="light"]), :root[data-site][data-theme="system"] {
     --bg: #0c0819; --soft: #18122b; --soft-2: #221a3a; --surface: #130e24; --ink: #f3efff; --muted: #a59fba; --line: #2a2342;
     --accent: #a466ff; --accent-hover: #b884ff; --accent-ink: #0c0819; --accent-soft: #2a1a4d;
     --g-maker: #a466ff; --g-tech: #a466ff; --g-buyer: #a466ff; --now: #a466ff; --now-soft: #2a1a4d; --ok: #4ade80;
@@ -52,6 +54,7 @@
   --scrim: rgba(0, 0, 0, .6); --shadow: 0 24px 60px rgba(0, 0, 0, .55); color-scheme: dark;
 }
 * { box-sizing: border-box; }
+:root:not([data-site]) .themebtn { display: none !important; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
 body {
@@ -190,6 +193,9 @@ main { padding-block: 6px 24px; }
 .empty { text-align: center; color: var(--muted); padding: 40px 16px; display: grid; gap: 10px; justify-items: center; }
 .empty h3 { margin: 0; color: var(--ink); font-size: 17px; }
 .more { display: flex; justify-content: center; padding-top: 14px; }
+.survey-banner { display: flex; align-items: center; justify-content: center; gap: 4px 12px; flex-wrap: wrap; text-align: center; background: var(--accent-soft); color: var(--ink); border-radius: 999px; padding: 4px 24px; font-size: 14px; max-width: 760px; margin: 0 auto 20px; }
+.survey-banner a { font-weight: 600; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; }
+@media (max-width: 639px) { .survey-banner { border-radius: 16px; padding: 8px 16px; } }
 
 /* signals */
 .feed { display: grid; gap: 10px; max-width: 760px; }
@@ -206,6 +212,10 @@ main { padding-block: 6px 24px; }
 .sig .why { margin: 0; font-size: 14px; color: var(--muted); }
 .sig .foot { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; font-size: 13px; color: var(--muted); }
 .sig .foot .acts { margin-inline-start: auto; display: flex; gap: 6px; align-items: center; }
+/* The source link is a 44px tap target, with the text unchanged. */
+.sig .foot > a { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; min-width: 44px; padding-inline: 6px; margin-inline: -6px; }
+.alertsrow { justify-content: space-between; flex-wrap: wrap; }
+[id] { scroll-margin-top: 88px; }
 .credits { font-size: 13px; color: var(--muted); }
 .ennote { font-size: 13px; color: var(--muted); }
 
@@ -295,10 +305,22 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
   padding: 10px max(18px, env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px)); }
 .sheet::before { content: ""; display: block; width: 40px; height: 4px; border-radius: 2px; background: var(--line); margin: 0 auto 8px; }
 @media (min-width: 860px) {
-  .sheet.side { inset-block: 0; inset-inline: auto 0; width: 540px; max-height: none; border-radius: 0; padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
+  /* Opens from the reading side: right in Hebrew (RTL), left in English (LTR). */
+  .sheet.side { inset-block: 0; inset-inline: 0 auto; width: 540px; max-height: none; border-radius: 0; padding-top: calc(20px + env(safe-area-inset-top, 0px)); }
   .sheet.side::before { display: none; }
   .sheet.center { inset: 10vh auto auto 50%; transform: translateX(-50%); width: 560px; max-height: 80vh; border-radius: 24px; }
   .sheet.center::before { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sheet:not([hidden]) { animation: sheet-up .22s ease-out; }
+  @keyframes sheet-up { from { transform: translateY(24px); opacity: 0; } }
+  @media (min-width: 860px) {
+    .sheet.side:not([hidden]) { animation: sheet-in .24s ease-out; }
+    html[dir="rtl"] .sheet.side { --sheet-from: 100%; }
+    html[dir="ltr"] .sheet.side { --sheet-from: -100%; }
+    @keyframes sheet-in { from { transform: translateX(var(--sheet-from, 100%)); } }
+    .sheet.center:not([hidden]) { animation: none; }
+  }
 }
 .sheet .close { position: sticky; top: 0; float: inline-end; margin-inline-start: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; width: 44px; height: 44px; font-size: 20px; line-height: 1; z-index: 1; }
 .sheet .ident { display: flex; gap: 14px; align-items: center; margin-top: 2px; }
@@ -309,6 +331,9 @@ nav.tabbar .badge { position: absolute; top: 6px; inset-inline-start: calc(50% +
 .sheet h4 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
 .sheet p { margin: 8px 0 0; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.btn.follow.on { background: var(--accent-soft); border-color: transparent; }
+.btn.follow.on .ic { color: var(--accent); }
+.notice.syncnote { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; color: var(--ink); margin: 0 0 16px; }
 .editor { display: grid; gap: 10px; margin-top: 12px; background: var(--soft); border-radius: 16px; padding: 14px; }
 .editor textarea, .field { width: 100%; min-height: 74px; resize: vertical; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; background: var(--surface); }
 .editor input[type="date"] { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; background: var(--surface); min-height: 38px; }
@@ -424,6 +449,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       <div class="scroller" id="active" hidden></div>
     </div>
     <main>
+      <p class="survey-banner" id="surveyBanner"><span data-i18n="survey.b">Rates survey 2026</span> <a href="/survey" data-i18n="survey.a">Take the survey ›</a></p>
       <div class="grid" id="grid"></div>
       <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more" data-i18n="more">Show more</button></div>
       <div class="empty" id="empty" hidden>
@@ -489,6 +515,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts", "mine.hint": "What fits you comes first", "t.noorg": "Company not found", "mine.remove": "Remove {0}",
       "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
+      "survey.b": "Rates survey 2026: 4 minutes, and you see the results.", "survey.a": "Take the survey ›",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
       "tab.ask": "Ask AI", "tab.explore": "All companies", "tab.signals": "Updates",
       "home.h": "Ask AI", "home.sub": "Ask in plain words. Answers use only the directory, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
@@ -507,7 +534,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "cr.title": "What do you make?", "cr.p": "Pick any. Brands that buy these move to the top of Best fit.", "done": "Done", "close": "Close",
       "ways.agency": "Their agency", "ways.worked": "Worked for them", "ways.users": "Brands that use them", "ways.clients": "Their clients", "ways.shares": "Shares clients with", "ways.group": "Group & deals", "ways.people": "People in public roles",
       "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
-      "sh.followup": " · follow up {0}", "sh.save": "Save to tracking", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
+      "sh.followup": " · follow up {0}", "sh.save": "Track", "sh.follow": "Email alerts", "sh.following": "with alerts", "sh.alertson": "Email alerts are on for this company.", "sh.alertsoff": "Get an email when something changes here.", "sh.alertsstop": "Stop alerts",
+      "fo.title": "Email alerts on {0}", "fo.saved": "Saved to tracking", "fo.hint": "Tracking is saved in this browser. Email alerts are optional.", "fo.later": "Not now", "fo.p": "An email when something changes at {0}: a new marketing head, an agency move, a new campaign. No password.", "fo.email": "Email",
+      "fo.consent": "I want email alerts from Landscape when something changes at the companies I chose. I can stop at any time.", "fo.send": "Send a confirmation link", "fo.on": "Turn on alerts",
+      "fo.sent": "We sent a confirmation link to {0}. Open it on the same device, in the same browser. Not there? Check spam.", "fo.err": "Something went wrong. Try again.", "fo.rate": "Too many tries. Try again in a few minutes.",
+      "fo.off": "Saved, but your alerts are off. You can turn them on in My account.", "fo.limit": "You can follow up to 100 companies.", "fo.unconfirmed": "Confirm your email address first.",
+      "t.followed": "Alerts on for {0}", "t.unfollowed": "Alerts stopped for {0}", "pipe.sync": "Get email alerts on the {0} companies you saved here?", "pipe.syncbtn": "Turn on alerts", "t.synced": "Alerts on for {0} companies", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
       "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services and products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
       "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.over": "{0}+", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
@@ -537,6 +569,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
       "filters": "סינון", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
+      "survey.b": "סקר התעריפים 2026: 4 דקות, ורואים את התוצאות.", "survey.a": "לענות על הסקר ‹",
       "empty.h": "אין תוצאות", "empty.p": "אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
       "tab.ask": "שאלו AI", "tab.explore": "כל החברות", "tab.signals": "עדכונים",
       "home.h": "שאלו את ה־AI", "home.sub": "שאלה במילים פשוטות. התשובות מבוססות רק על המאגר, עם החברות שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
@@ -555,7 +588,12 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "cr.title": "מה אתם עושים?", "cr.p": "אפשר לבחור כמה. מותגים שמזמינים את זה יעלו לראש הרשימה.", "done": "סיום", "close": "סגירה",
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים בתפקידים פומביים",
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
-      "sh.followup": " · תזכורת {0}", "sh.save": "שמירה למעקב", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
+      "sh.followup": " · תזכורת {0}", "sh.save": "מעקב", "sh.follow": "התראות במייל", "sh.following": "עם התראות", "sh.alertson": "התראות במייל על החברה הזו פועלות.", "sh.alertsoff": "אפשר לקבל מייל כשמשהו משתנה כאן.", "sh.alertsstop": "הפסקת ההתראות",
+      "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן אופציה.", "fo.later": "לא עכשיו", "fo.p": "מייל כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה.", "fo.email": "מייל",
+      "fo.consent": "אני רוצה לקבל במייל התראות מ־Landscape כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
+      "fo.sent": "שלחנו קישור אישור ל־{0}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.", "fo.err": "משהו השתבש. אפשר לנסות שוב.", "fo.rate": "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות.",
+      "fo.off": "החברה נשמרה, אבל ההתראות כבויות. אפשר להפעיל אותן בחשבון שלי.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "צריך לאשר את כתובת המייל קודם.",
+      "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "להפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
       "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים ומוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · רמת ביטחון {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
       "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.over": "יותר מ־{0}", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גיוס: {0} מיליון $", "f.offices": "משרדים", "f.industry": "תעשייה",
@@ -616,7 +654,11 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     x: svgI('<path d="M18 6 6 18M6 6l12 12"/>'),
     check: svgI('<path d="M20 6 9 17l-5-5"/>'),
     fwd: svgI('<path d="m9 18 6-6-6-6"/>', "fwd"),
+    bell: svgI('<path d="M6 9a6 6 0 1 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9Z"/><path d="M10 20a2 2 0 0 0 4 0"/>'),
   };
+  // Email alerts on followed companies (site only, /api/follows). null until loaded or when sign-up is off.
+  let FOLLOW = null;
+  const following = (id) => Boolean(FOLLOW && FOLLOW.signedIn && FOLLOW.follows.has(id));
   // "501-1000" → "501–1000 עובדים", "5001+" → "יותר מ־5,000 עובדים" (numbers isolated left-to-right).
   const sizeText = (s) => {
     if (!s) return "";
@@ -804,6 +846,9 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     document.documentElement.lang = LANG;
     document.documentElement.dir = LANG === "he" ? "rtl" : "ltr";
     document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
+    // The rates survey line shows only while the survey is open. The build fills in the close date from
+    // lib/survey/config.js (CLOSES_AT); without it (e.g. the Artifact copy) the line stays hidden.
+    if ($("surveyBanner")) { const c = Date.parse("__SURVEY_CLOSES_AT__"); $("surveyBanner").hidden = !(c > Date.now()); }
     document.querySelectorAll("[data-i18n-ph]").forEach((el) => (el.placeholder = t(el.dataset.i18nPh)));
     ["lang", "lang2"].forEach((id) => { $(id).textContent = LANG === "he" ? "English" : "עברית"; $(id).lang = LANG === "he" ? "en" : "he"; });
     if (ORGS.length) $("meta").textContent = t("meta", ORGS.length, BASE_SIGNALS.length, new Date(GENERATED).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" }));
@@ -1026,6 +1071,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
         <input type="date" id="next" value="${esc(e.next_date || "")}" aria-label="${t("ed.date")}">
         ${e.next_date ? `<button class="btn ghost" type="button" data-clear-date>${t("ed.clear")}</button>` : ""}
       </div>
+      ${FOLLOW && FOLLOW.signup ? `<div class="row alertsrow"><span class="muted" style="font-size:13px">${IC.bell} ${t(following(e.org_id) ? "sh.alertson" : "sh.alertsoff")}</span>
+        <button class="btn${following(e.org_id) ? " ghost" : ""}" type="button" data-follow>${t(following(e.org_id) ? "sh.alertsstop" : "sh.follow")}</button></div>` : ""}
       <div class="row" style="justify-content:space-between"><span class="saved">${e.updated_at ? t("ed.saved", ago(e.updated_at.slice(0, 10))) : ""}${Store.mode === "local" ? t("ed.device") : ""}</span>
         <button class="btn ghost" type="button" data-remove>${t("ed.remove")}</button></div>
     </div>`;
@@ -1051,7 +1098,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     sh.innerHTML = `${closeBtn()}
       <div class="ident" style="${gstyle(o)}">${logo(o, "lg")}<div>${kindLine(o)}<h2 id="d-name"><bdi>${esc(nm.main)}</bdi></h2>${nm.alt ? `<bdi class="alt" dir="auto">${esc(nm.alt)}</bdi>` : ""}</div></div>
       <div class="actions">
-        ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">${IC.saved} ${esc(stageLabel(e.stage))}${e.next_date ? esc(t("sh.followup", fmtDate(e.next_date))) : ""}</button>`
+        ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">${following(o.id) ? IC.bell : IC.saved} ${esc(stageLabel(e.stage))}${following(o.id) ? esc(" · " + t("sh.following")) : ""}${e.next_date ? esc(t("sh.followup", fmtDate(e.next_date))) : ""}</button>`
             : `<button class="btn primary" type="button" data-save ${Store.readOnly ? "disabled" : ""}>${IC.save} ${t("sh.save")}</button>`}
         ${Store.sample && Store.mode === "db" ? `<button class="btn" type="button" data-pitch>${IC.pen} ${t("sh.pitch")}</button>` : ""}
         ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">${t("sh.website")} ${IC.ext}</a>` : ""}
@@ -1382,6 +1429,96 @@ Question: ${q}`;
     });
   }
 
+  // ---------- email alerts on a company (site only) ----------
+  async function postFollows(path, body) {
+    try {
+      const r = await fetch(path, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+      return { ok: r.ok, ...(await r.json().catch(() => ({}))) };
+    } catch (e) { return { ok: false }; }
+  }
+  const followErr = (e) => t(e === "rate_limited" ? "fo.rate" : e === "limit" ? "fo.limit" : e === "unconfirmed" ? "fo.unconfirmed" : "fo.err");
+  async function toggleFollow(o, consent) {
+    const on = !following(o.id);
+    const res = await postFollows("/api/follows", { org_id: o.id, on, ...(consent ? { consent: true } : {}) });
+    if (!res.ok) { toast(followErr(res.error)); return false; }
+    on ? FOLLOW.follows.add(o.id) : FOLLOW.follows.delete(o.id);
+    if (res.alerts) FOLLOW.alerts = res.alerts;
+    if (consent) FOLLOW.consent = true;
+    toast(on && FOLLOW.alerts === "off" ? t("fo.off") : t(on ? "t.followed" : "t.unfollowed", orgName(o)));
+    return true;
+  }
+  // Signed out: email + consent → sign-in link (the follow is recorded once the address is confirmed).
+  // Signed in for the first time: consent once, then one tap.
+  // "ב" + name in Hebrew: the maqaf goes only before a name that doesn't start with a Hebrew letter.
+  const atName = (n) => (LANG === "he" ? `ב${/^[\u0590-\u05ff]/.test(n) ? "" : "־"}${n}` : n);
+  function openFollow(o, afterSave) {
+    const signedIn = FOLLOW.signedIn;
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${esc(afterSave ? t("fo.saved") : t("fo.title", orgName(o)))}</h2>
+      <p class="muted" style="margin:6px 0 0;font-size:14px">${esc(t("fo.p", atName(orgName(o))))}</p>
+      ${afterSave ? `<p class="muted" style="margin:6px 0 0;font-size:13px">${esc(t("fo.hint"))}</p>` : ""}
+      <form id="foForm">
+        ${signedIn ? "" : `<div class="filtersec"><h4><label for="foEmail">${t("fo.email")}</label></h4><input id="foEmail" class="btn" type="email" required autocomplete="email" dir="ltr" placeholder="name@example.com" style="width:100%;justify-content:flex-start"></div>`}
+        <label class="filtersec" style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><input id="foConsent" type="checkbox" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--accent)"><span>${t("fo.consent")}</span></label>
+        <p id="foMsg" role="status" style="font-size:14px;margin:8px 0 0" hidden></p>
+        <div class="sheetfoot"><button class="btn primary" id="foSend" disabled>${t(signedIn ? "fo.on" : "fo.send")}</button>${afterSave ? `<button class="btn ghost" type="button" id="foLater">${t("fo.later")}</button>` : ""}</div>
+      </form>`;
+    showPanel(o.id);
+    if (afterSave) $("foLater").addEventListener("click", () => { closeAll(); openOrg(o.id); });
+    $("foConsent").addEventListener("change", (e) => ($("foSend").disabled = !e.target.checked));
+    $("foForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!$("foConsent").checked) return;
+      $("foSend").disabled = true;
+      if (signedIn) {
+        if (await toggleFollow(o, true)) { closeAll(); openOrg(o.id); } else $("foSend").disabled = false;
+        return;
+      }
+      const email = $("foEmail").value.trim();
+      const res = await postFollows("/api/follows/start", { email, org_id: o.id, consent: true });
+      const m = $("foMsg"); m.hidden = false;
+      if (res.ok) { m.innerHTML = `<b>${esc(t("fo.sent", email))}</b>`; $("foSend").hidden = true; }
+      else { m.textContent = followErr(res.error); $("foSend").disabled = false; }
+    });
+  }
+  async function onFollow(o) {
+    if (!FOLLOW || !FOLLOW.signup) return;
+    if (!FOLLOW.signedIn || (!following(o.id) && !FOLLOW.consent)) return openFollow(o);
+    if (await toggleFollow(o, false)) openOrg(o.id, true);
+  }
+  // Companies saved in this browser's tracking list that don't send alerts yet.
+  const unsynced = () => (FOLLOW && FOLLOW.signedIn ? Object.keys(Store.pipeline).filter((id) => BY_ID[id] && !FOLLOW.follows.has(id)) : []);
+  async function syncFollows() {
+    const ids = unsynced().slice(0, 100);
+    if (!ids.length) return;
+    if (!FOLLOW.consent) return openFollowSync(ids);
+    const res = await postFollows("/api/follows", { add: ids });
+    if (!res.ok) return toast(followErr(res.error));
+    (res.follows || ids).forEach((id) => FOLLOW.follows.add(id));
+    toast(t("t.synced", res.added ?? ids.length));
+    renderPipeline();
+  }
+  function openFollowSync(ids) {
+    $("panel").innerHTML = `${closeBtn()}
+      <h2 style="margin:4px 0 0;font-size:22px">${esc(t("pipe.sync", ids.length))}</h2>
+      <form id="foForm">
+        <label class="filtersec" style="display:flex;gap:10px;align-items:flex-start;font-size:14px"><input id="foConsent" type="checkbox" required style="width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--accent)"><span>${t("fo.consent")}</span></label>
+        <div class="sheetfoot"><button class="btn primary" id="foSend" disabled>${t("pipe.syncbtn")}</button></div>
+      </form>`;
+    showPanel();
+    $("foConsent").addEventListener("change", (e) => ($("foSend").disabled = !e.target.checked));
+    $("foForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!$("foConsent").checked) return;
+      const res = await postFollows("/api/follows", { add: ids, consent: true });
+      if (!res.ok) return toast(followErr(res.error));
+      FOLLOW.consent = true; if (res.alerts) FOLLOW.alerts = res.alerts;
+      (res.follows || ids).forEach((id) => FOLLOW.follows.add(id));
+      toast(t("t.synced", res.added ?? ids.length));
+      closeAll(); renderPipeline();
+    });
+  }
+
   // ---------- signals view ----------
   function sigCard(s, compact) {
     const o = s.org_id && BY_ID[s.org_id];
@@ -1428,6 +1565,8 @@ Question: ${q}`;
     }
     const row = (e) => { const o = BY_ID[e.org_id]; return `<button class="prow" type="button" data-id="${o.id}" style="${gstyle(o)}">${logo(o, "sm")}<span class="nm"><b><bdi>${esc(orgName(o))}</bdi></b><span dir="auto">${esc(e.note ? e.note : kindOne(o.kind) + " · " + (cityName(o.location.city) || ""))}</span></span>${e.next_date ? `<span class="due">${e.next_date <= today ? t("pipe.due") : ""}${fmtDate(e.next_date)}</span>` : ""}</button>`; };
     let h = "";
+    const toSync = unsynced();
+    if (toSync.length) h += `<div class="notice syncnote"><span>${esc(t("pipe.sync", toSync.length))}</span><button class="btn primary" type="button" data-sync-follows>${IC.bell} ${t("pipe.syncbtn")}</button></div>`;
     if (due.length) h += `<div><h2>${t("pipe.duenow")} <span class="badge">${due.length}</span></h2><div class="list">${due.map((e) => `<div class="duerow">${row(e)}<div class="acts"><button class="btn" type="button" data-snooze="${e.org_id}">${t("pipe.snooze")}</button><button class="btn" type="button" data-done-follow="${e.org_id}">${t("pipe.done")}</button></div></div>`).join("")}</div></div>`;
     STAGES.forEach((k) => {
       const list = entries.filter((e) => e.stage === k && !due.includes(e)).sort((a, b) => String(a.next_date || "9").localeCompare(String(b.next_date || "9")) || String(b.updated_at).localeCompare(String(a.updated_at)));
@@ -1522,12 +1661,26 @@ Question: ${q}`;
     const sid = $("sheet").dataset.id;
     if (d.pitch !== undefined && sid) return openPitch(BY_ID[sid]);
     if (d.report !== undefined && sid) return openReport(BY_ID[sid]);
-    if (d.save !== undefined && sid) { await Store.setEntry(sid, { stage: "to_pitch" }); toast(t("t.saved")); return; }
+    if (d.follow !== undefined && sid) return onFollow(BY_ID[sid]);
+    if (d.syncFollows !== undefined) return syncFollows();
+    if (d.save !== undefined && sid) {
+      await Store.setEntry(sid, { stage: "to_pitch" });
+      // Signed in with alerts consent: alerts come with tracking. Otherwise offer them (optional).
+      if (FOLLOW && FOLLOW.signup && !following(sid)) {
+        if (FOLLOW.signedIn && FOLLOW.consent) { if (await toggleFollow(BY_ID[sid], false)) openOrg(sid, true); return; }
+        return openFollow(BY_ID[sid], true);
+      }
+      toast(t("t.saved")); return;
+    }
     if (d.toggleEditor !== undefined) { const ed = $("editor"); if (ed) { ed.hidden = !ed.hidden; b.setAttribute("aria-expanded", !ed.hidden); } return; }
     if (d.stage && sid) return Store.setEntry(sid, { stage: d.stage });
     if (d.quick && sid) { const n = new Date(); n.setDate(n.getDate() + Number(d.quick)); return Store.setEntry(sid, { next_date: isoDay(n) }); }
     if (d.clearDate !== undefined && sid) return Store.setEntry(sid, { next_date: null });
-    if (d.remove !== undefined && sid) { await Store.removeEntry(sid); toast(t("t.removed")); return; }
+    if (d.remove !== undefined && sid) {
+      await Store.removeEntry(sid);
+      if (following(sid)) await toggleFollow(BY_ID[sid], false); // no tracking, no alerts
+      toast(t("t.removed")); return;
+    }
     if (d.id) { e.preventDefault(); return openOrg(d.id); }
   });
   document.addEventListener("change", (e) => {
@@ -1587,9 +1740,15 @@ Question: ${q}`;
       checks.push(fetch("/api/ask").then((r) => r.json()).then((j) => { SERVER_AI = !!j.ready; }).catch(() => {}));
       fetch("/api/session").then((r) => r.json()).then((j) => {
         const cta = document.querySelector("[data-cta]");
-        if (cta && j.signedIn) { cta.href = "/me"; cta.textContent = "הפרופיל שלי"; }
+        if (cta && j.signedIn && j.me) { cta.href = j.me.href; cta.innerHTML = j.me.html; cta.setAttribute("aria-label", j.me.label); }
       }).catch(() => {});
       loadHidden().catch(() => {});
+      fetch("/api/follows", { cache: "no-store" }).then((r) => r.json()).then((j) => {
+        if (!j || !j.signup) return;
+        FOLLOW = { signup: true, signedIn: !!j.signedIn, follows: new Set(j.follows || []), alerts: j.alerts || "off", consent: !!j.consent };
+        if ($("sheet").dataset.id && !$("sheet").hidden) openOrg($("sheet").dataset.id, true);
+        if (state.tab === "pipeline") renderPipeline();
+      }).catch(() => {});
     }
     Promise.all(checks).finally(() => { askChecked = true; renderAskBtn(); changed(); });
   }

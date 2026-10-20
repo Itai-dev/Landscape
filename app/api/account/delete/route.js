@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
 import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
+import { sameOrigin } from "@/lib/guard";
 
 export const runtime = "nodejs";
 
 // Deletes the signed-in account: auth user (profile + newsletter rows cascade) and any stored CV.
-export async function POST() {
+export async function POST(request) {
+  if (!sameOrigin(request)) return NextResponse.json({ error: "forbidden" }, { status: 403 });
   const sb = await serverClient();
   const user = await currentUser(sb);
   if (!user) return NextResponse.json({ error: "sign_in" }, { status: 401 });

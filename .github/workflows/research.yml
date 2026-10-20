@@ -44,7 +44,7 @@ jobs:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           prompt: |
-            Follow .claude/skills/research/SKILL.md exactly.
+            Follow .claude/skills/research/SKILL.md exactly, including the signals (5b) and tenders (5c) steps.
             Mode: ${{ github.event.inputs.mode || 'cycle' }}
             Segment: ${{ github.event.inputs.segment || '(next unticked in research/queue.md)' }}
             Open the PR with `gh pr create`.

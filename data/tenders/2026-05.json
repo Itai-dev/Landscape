@@ -1,0 +1,49 @@
+[
+  {
+    "id": "mr-4000617439",
+    "source": "mr.gov.il",
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000617439",
+    "title": "אספקת שירותי צילום סטילס ווידיאו עבור לשכת העיתונות הממשלתית",
+    "buyer": "משרד ראש הממשלה",
+    "buyer_type": "ministry",
+    "kind": "tender",
+    "published_at": "2026-05-25",
+    "deadline_at": "2026-07-01T12:00",
+    "status": "closed",
+    "scope_summary": "צלמי סטילס ווידאו ללשכת העיתונות הממשלתית.",
+    "crafts": [
+      "photography",
+      "content-studio"
+    ],
+    "keywords_matched": [
+      "צילום",
+      "וידיאו"
+    ],
+    "last_checked_at": "2026-10-20",
+    "added": "2026-10-20"
+  },
+  {
+    "id": "mr-4000617324",
+    "source": "mr.gov.il",
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000617324",
+    "title": "מכרז 11/26 למתן שירותי ייעוץ לקמפיינים דיגיטליים ולפעילות משפיענים",
+    "buyer": "לשכת הפרסום הממשלתית (לפ\"מ)",
+    "buyer_type": "ministry",
+    "buyer_org_id": "lapam",
+    "procedure_no": "11/26",
+    "kind": "tender",
+    "published_at": "2026-05-20",
+    "deadline_at": "2026-06-25T12:00",
+    "status": "closed",
+    "scope_summary": "ייעוץ לקמפיינים דיגיטליים ולעבודה עם משפיענים בקמפיינים ממשלתיים.",
+    "crafts": [
+      "content-studio"
+    ],
+    "keywords_matched": [
+      "קמפיינים",
+      "משפיענים"
+    ],
+    "last_checked_at": "2026-10-20",
+    "added": "2026-10-20"
+  }
+]

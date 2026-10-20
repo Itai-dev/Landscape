@@ -5,7 +5,8 @@
 // 4. applies the database migration when a Postgres URL is available (Vercel + Supabase integration).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
-import { headerHtml, footerHtml } from "../lib/chrome.mjs";
+import { headerHtml, footerHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
+import { CLOSES_AT } from "../lib/survey/config.js";
 
 // 1. Companies app. site/app.html is a page body (the Artifact host adds the document shell),
 // so here it gets a real shell: doctype (standards mode), charset, phone viewport, Hebrew + RTL.
@@ -18,16 +19,19 @@ const between = (s, open, close, put) => {
   if (a < 0 || b < a) throw new Error(`prebuild: marker ${open} missing in site/app.html`);
   return s.slice(0, a) + put + s.slice(b + close.length);
 };
-let body = readFileSync("site/app.html", "utf8").replaceAll('fetch("data/', 'fetch("/companies/data/');
+let body = readFileSync("site/app.html", "utf8").replaceAll('fetch("data/', 'fetch("/companies/data/')
+  // The survey close date has one source (lib/survey/config.js).
+  .replaceAll("__SURVEY_CLOSES_AT__", CLOSES_AT);
 body = between(body, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8"));
 body = between(body, "<!-- chrome:header -->", "<!-- /chrome:header -->",
   headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
 body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
 const shell =
-  '<!doctype html>\n<html lang="he" dir="rtl" data-site="">\n<head>\n<meta charset="utf-8">\n' +
+  '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
   '<meta name="theme-color" content="#ffffff">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
-  "<script>window.LANDSCAPE_SITE = true;</script>\n";
+  "<script>window.LANDSCAPE_SITE = true;</script>\n" +
+  `<script>${THEME_SCRIPT}</script>\n`;
 writeFileSync("public/companies/index.html", shell + body);
 cpSync("site/data", "public/companies/data", { recursive: true });
 console.log("prebuild: copied the companies app to public/companies");
@@ -128,5 +132,10 @@ const stats = {
 writeFileSync("lib/generated/orgs.json", JSON.stringify({ stats, orgs }));
 console.log(`prebuild: ${orgs.length} companies indexed for search`);
 
-// 4. Database.
-await migrate();
+// 4. Database (production deploys only). A failed migration fails the build, so a broken schema never ships.
+try {
+  await migrate();
+} catch (e) {
+  console.error(e.message);
+  process.exit(1);
+}

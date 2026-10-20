@@ -1,11 +1,13 @@
 import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import AutoSelect from "@/components/AutoSelect";
+import SurveyBanner from "@/components/SurveyBanner";
 import { SearchIcon } from "@/components/Icons";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { ROLE_TYPES, searchSeeds } from "@/lib/people";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
 import { craftOfQuery } from "@/lib/match";
+import { PROFILES_ENABLED } from "@/lib/config";
 
 export const metadata = {
   title: "אנשים",
@@ -26,7 +28,7 @@ export default async function People({ searchParams }) {
   const page = Math.max(1, Math.min(50, Number.parseInt(sp?.page, 10) || 1));
 
   const [{ configured, user, members, error }, hidden] = await Promise.all([
-    role ? { configured: true, user: null, members: [], error: null } : loadMembers({ q, craft }),
+    role || !PROFILES_ENABLED ? { configured: PROFILES_ENABLED, user: null, members: [], error: null } : loadMembers({ q, craft }),
     hiddenSeeds(),
   ]);
   const seeds = searchSeeds({ q, craft, role, exclude: hidden });
@@ -37,7 +39,7 @@ export default async function People({ searchParams }) {
     const s = new URLSearchParams(p).toString();
     return s ? `/people?${s}` : "/people";
   };
-  const signup = configured && !role;
+  const signup = PROFILES_ENABLED && configured && !role;
 
   return (
     <div className="wrap">
@@ -91,7 +93,7 @@ export default async function People({ searchParams }) {
           </div>
         ) : (
           <>
-            <div className="pgrid">{shown.map((p) => <SeedCard key={p.id} p={p} claim={configured} />)}</div>
+            <div className="pgrid">{shown.map((p) => <SeedCard key={p.id} p={p} claim={PROFILES_ENABLED && configured} />)}</div>
             {shown.length < seeds.length && (
               <div className="pager"><a className="btn" href={href({ page: String(page + 1) })}>עוד אנשים</a></div>
             )}
@@ -100,13 +102,12 @@ export default async function People({ searchParams }) {
       </section>
 
       <p className="small muted center" style={{ marginBlockStart: 40 }}>
-        {signup && members.length === 0 && !error
-          ? <>עוד אין פרופילים אישיים. <a href="/onboard">לבניית הפרופיל הראשון</a></>
-          : !configured
-            ? "פרופילים אישיים נפתחים בקרוב."
-            : null}
-        {configured ? <> מופיעים כאן? אפשר לבנות פרופיל מלא בלחיצה על ״זה אני״, או לבקש הסרה מהתפריט שבכרטיס.</> : <> מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.</>}
+        {PROFILES_ENABLED && signup && members.length === 0 && !error
+          ? <>עוד אין פרופילים אישיים. <a href="/onboard">לבניית הפרופיל הראשון</a> </>
+          : null}
+        מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.
       </p>
+      <div style={{ marginBlockStart: 32 }}><SurveyBanner /></div>
     </div>
   );
 }

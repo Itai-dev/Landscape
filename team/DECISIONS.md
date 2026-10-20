@@ -94,3 +94,53 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Data copy**: no gendered slashes in job posts ("משרה פתוחה ב־Wix: מושן דיזיין"), no stale "פורסם לפני…", Hebrew quotes ״…״, maqaf (ב־ICE), gershayim (סמנכ״לית), no internal "עדיין לא במאגר" notes. In Hebrew the credits line is hidden (the Hebrew headline already names them).
 - **Companies app polish**: people as name-over-role rows; "Name (Other name)" and Hebrew names find the company (no duplicate agency pills); sizes with a unit ("יותר מ־5,000 עובדים"); default order mixes studios, clients and startups; lens "לקוחות"; "+ בחירת תחומים" with a one-line hint; the Updates badge counts what's new since the last visit; unknown `#company` shows a toast; text cut at word boundaries, never inside brackets.
 - **Everywhere**: hover styles only on devices that hover; no text under 13px; no letter-spacing on Hebrew headings; craft labels from the taxonomy everywhere ("יצירה עם AI"); "חברת הפקות"; the home page is ~2.5 phone screens (no steps section; join panel only when sign-up is open).
+
+## 2026-10-20 · Weekly digest "השבוע בתעשייה" (strategy wedge #1)
+- **Why**: the strategy round found the unmet need is knowing who commissions what and what changed this week. A weekly, craft-tailored digest is the daily proof of value and the main sign-up driver; profiles are a by-product.
+- **What**: web edition at `/digest` (general, or `?crafts=` for a personal preview), shareable, with a ready LinkedIn post (UTM-tagged). Email every Sunday morning, or every two weeks, or monthly. Email-only sign-up: no profile needed.
+- **Content rules**: only the published directory, every update with its source; "why it matters" from the signal; "who commissions X now" picks get a reason that isn't already listed; news older than the period only if it reached us during it (max two weeks late). Empty editions aren't sent.
+- **Consent**: unchecked box with the stored consent text (anti-spam law §30A). One-click unsubscribe (RFC 8058) plus a confirm page, so link scanners can't unsubscribe anyone.
+- **Sending**: Resend (free: 100/day, 3,000/month). Daily cron with a two-day catch-up keeps under the daily cap; `digest_sends` makes runs idempotent.
+## Rates and payment-terms survey 2026
+- **Why**: no public data on rates for motion, animation, VFX, post or sound in Israel (UXI covers UX only), shotef + 60/90 is normal, and AI is moving prices. A yearly survey is shareable on LinkedIn, builds the email list and gives people a reason to sign up.
+- **Scope**: 16 crafts × 5 work modes. Freelancers and studio owners answer hourly/day rates, 2–3 typical deliverable prices for their craft, payment terms, late payments and delay, client types; employees answer monthly gross salary. Everyone answers channels (max 3) and AI impact on demand and on rates. Answers are bands with an optional exact number (sanity-limited). No client, company or person names are asked; contact details typed into the optional free text are removed before saving, and the text is never published.
+- **One response per account**, editable until **31 Dec 2026**; full report in January 2027.
+- **Privacy**: answers in `survey_responses` with owner-only RLS; aggregation only on the server with the service role. Any group under **5** respondents shows no numbers; amounts are rounded (₪10/hour, ₪50/day, ₪500 salary and prices). Deleting the account deletes the response.
+- **Access**: three headline numbers are public from **30** responses. Full results (craft × mode tables, deliverable prices, terms, lateness, channels, AI) open to respondents, or to anyone whose invite link brought **3** people who answered. Each person gets an invite code (`?ref=`), recorded once per invited account (`referrals`, server-only), and a ready Hebrew LinkedIn post.
+- **Entry points**: a slim line on the home page, at the bottom of `/people` and under the company list; it disappears when the survey closes.
+
+## 2026-10-20 · Launch-pack hardening (independent review of digest + survey)
+- **Double opt-in, server-written consent**: nobody is subscribed until they open the link sent to the address. The opt-in rides on the magic link (`/auth/callback?subscribe=…`) and the server records consent with its own wording. Sending uses only confirmed addresses taken from `auth.users` (`digest_recipients()`), never a column people can edit. People can read but not write `newsletter_prefs` or `survey_responses` (migration 005).
+- **Sender identity required**: the cron and the test route refuse to send until the sender's name, address and contact email are set; every footer shows them.
+- **Survey results resist comparison**: published from a snapshot that changes at most once a day and only after 5 new answers; groups under 5 are left out entirely; exact typed numbers only from 10; shares rounded to 5%; sizes as buckets ("10+"). The invite counter moves with the snapshot. Copy says "חסוי" (confidential), not "אנונימי": answers are tied to an account.
+- **Invites**: credited only to a confirmed, brand-new account created through the link; not your own code, not "+alias" addresses, first inviter wins.
+- **Digest relevance**: an update is "in your crafts" only if it names the craft or credits someone who does it; everything else is "עוד בתעשייה". Subjects count only real matches. Picks lead with what the buyer commissions in that craft, then the news. "נוספו למאגר" counts only companies added since the last edition (the launch directory isn't "new") and never makes an edition worth sending on its own. Email: at most 5 updates and 3 picks.
+- **Also**: unsubscribe works with GET (confirm page) and one-click POST, plus a mailto when a contact email is set; per-user rate limits and a 32KB body cap on the write APIs; survey drafts in the browser are per account and cleared on sign-out; one sign-up form on the home page with an optional digest box; share images for `/digest` and `/survey`.
+
+## 2026-10-20 · Stage 1 is information + newsletter; light theme by default
+- Owner: "זה אני" felt odd; for the first stage nobody fills a profile. Everything here is information: who commissions what, who decides, what changed this week and why now, plus the weekly digest by craft.
+- Profiles, onboarding, member cards and claiming a listed person are switched off behind one flag (`NEXT_PUBLIC_PROFILES`), not deleted. Removal requests stay (legal). Sign-in by email remains for the digest and the survey only.
+- The header call to action is now the weekly digest ("לגיליון השבועי").
+- The site was following the phone's dark mode, which looked like a sudden switch. Light is now the default everywhere, with a header toggle: בהירה / כהה / לפי המכשיר.
+- The company detail panel on desktop opens from the reading side (right in Hebrew, left in English).
+
+
+## 2026-10-20 · Alerts on followed companies
+- Owner approved "מעקב והתראות": follow a company and get an email when something changes there. Email only, no profile.
+- Named "התראות על החברה" (bell) so it isn't confused with the companies app's local "מעקב" (pipeline). People who saved companies in that list are offered to turn on alerts for them.
+- A separate list from the digest, with its own consent wording and unsubscribe link. One email per day at most, bundling every new update; or a weekly summary on the digest's Sunday. Following an org only sends updates that reached the directory from the day of the follow.
+- Not done yet: removing an update from the weekly digest when the person already got it as an alert.
+## Open tenders (2026-10-20)
+- New section "מכרזים" (`/tenders`): public tenders and supplier-pool calls for creative work, soonest deadline first, with a countdown and a link to the official notice only. Also a home-page strip (top 3), in site search, and a section in the weekly digest (max 3, matched to the reader's crafts). An open tender in the reader's crafts makes an edition worth sending.
+- Records live in git like signals (`data/tenders/YYYY-MM.json`, `schema/tender.schema.json`, `landscape.py tenders`). The weekly research run collects them (step 5c, `research/tenders-sources.md`); mr.gov.il is the main source, collected politely by `scripts/tenders_mrgov.py` as candidates that a person or the agent reviews.
+- Facts only: title as published, buyer, number, dates, plus our own one-line summary. Never contact names or emails, never aggregator content, never fetch around a block. לפ"מ exemption notices are signals (who was hired), not tenders.
+- "מכרזים" joins the header nav. To keep the header one 64px row on phones, the colour-theme button moves to the footer under 480px, and under 380px the newsletter button becomes an envelope icon.
+
+
+
+## 2026-10-20: Pre-launch hardening
+
+- One "מעקב" button on a company: it saves to the tracking list, and alerts by email come with it when the person has agreed to them; otherwise they are offered, optionally. Two buttons that looked alike were confusing.
+- Migrations run once each, in one transaction, only on production deploys, with a ledger. A failed migration fails the deploy instead of leaving the database half-done or with permissions re-opened. Browser roles have no write access to any of our tables.
+- Magic links work only on the device and browser that asked for them, so every confirmation message says so. Signed out, /me is a sign-in form; signed in, the header button is "החשבון שלי".
+- Alerts never send twice: claims are per run, retries reuse the same key, and an unanswered request keeps its claim (at worst one alert is missed). Alerts and the digest share the 100-a-day free sending budget.

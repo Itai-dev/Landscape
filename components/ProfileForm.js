@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS } from "@/lib/taxonomy";
+import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS, CONSENT_TEXT } from "@/lib/taxonomy";
 
 const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהחומר שהעליתם. כדאי לבדוק.">✦ מולא אוטומטית</span> : null);
 
@@ -46,6 +46,8 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
   const [visibility, setVisibility] = useState(initial.visibility || "members");
   const [prefs, setPrefs] = useState(initial.prefs || { frequency: "off", topics: [] });
   const [keepCv, setKeepCv] = useState(false);
+  const wasOn = (initial.prefs?.frequency || "off") !== "off";
+  const [consent, setConsent] = useState(false);
   const [skillsText, setSkillsText] = useState((initial.profile?.skills || []).join(", "));
   const [state, setState] = useState({ busy: false, error: "" });
   const claimedFrom = initial.claimed_from || null;
@@ -66,7 +68,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
     setState({ busy: true, error: "" });
     const profile = { ...p, skills: skillsText.split(/[,،\n]/).map((s) => s.trim()).filter(Boolean) };
     const body = new FormData();
-    body.set("data", JSON.stringify({ profile, visibility, ai_fields: [...ai], prefs, claimed_from: claimedFrom }));
+    body.set("data", JSON.stringify({ profile, visibility, ai_fields: [...ai], prefs: { ...prefs, consent }, claimed_from: claimedFrom }));
     if (cvFile && keepCv) body.set("cv", cvFile);
     const res = await fetch("/api/profile", { method: "POST", body });
     const out = await res.json().catch(() => ({}));
@@ -75,6 +77,10 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
         out.error === "missing" ? "חסרים שדות חובה: שם, כותרת, תחום, עיר וזמינות." :
         out.error === "sign_in" ? "צריך להתחבר מחדש." : "השמירה נכשלה. נסו שוב.";
       setState({ busy: false, error: msg });
+      return;
+    }
+    if (out.prefs_error === "consent_required") {
+      setState({ busy: false, error: "הפרופיל נשמר. כדי לקבל ניוזלטר צריך לסמן את האישור שמתחת לתדירות." });
       return;
     }
     setState({ busy: false, error: "" });
@@ -166,6 +172,12 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
             {FREQUENCIES.map((f) => <option key={f.slug} value={f.slug}>{f.he}</option>)}
           </select>
         </div>
+        {prefs.frequency !== "off" && !wasOn && (
+          <label className="check">
+            <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} />
+            <span>{CONSENT_TEXT}</span>
+          </label>
+        )}
         {prefs.frequency !== "off" && (
           <div className="field">
             <label>על מה לעדכן</label>

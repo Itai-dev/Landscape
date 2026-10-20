@@ -1,0 +1,51 @@
+[
+  {
+    "id": "mr-4000616346",
+    "source": "mr.gov.il",
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000616346",
+    "title": "עיצוב, תכנון, הפקת תכנים, הקמה, הפעלה, תפעול, פירוק - ביתן ישראל תערוכת אקספו 2027 בלגרד - דיפלומטיה ציבורית",
+    "buyer": "משרד החוץ",
+    "buyer_type": "ministry",
+    "kind": "tender",
+    "published_at": "2026-04-23",
+    "deadline_at": "2026-05-31T14:00",
+    "status": "closed",
+    "scope_summary": "עיצוב, תוכן והקמה של ביתן ישראל באקספו 2027 בבלגרד.",
+    "crafts": [
+      "experiential",
+      "graphic-design",
+      "creative-technology"
+    ],
+    "keywords_matched": [
+      "עיצוב",
+      "הפקת",
+      "ביתן",
+      "תערוכה"
+    ],
+    "last_checked_at": "2026-10-20",
+    "added": "2026-10-20"
+  },
+  {
+    "id": "mr-4000616201",
+    "source": "mr.gov.il",
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000616201",
+    "title": "אספקת שירותי פרסום, ניהול ורכש מדיה דיגיטלית חברתית עבור המגזר החרדי",
+    "buyer": "משרד הבריאות - המרכז הרפואי תל אביב ע\"ש סוראסקי, איכילוב",
+    "buyer_type": "public_body",
+    "kind": "tender",
+    "published_at": "2026-04-20",
+    "deadline_at": "2026-05-11T12:00",
+    "status": "closed",
+    "scope_summary": "פרסום ורכש מדיה ברשתות החברתיות לאיכילוב, מול הציבור החרדי.",
+    "crafts": [
+      "content-studio"
+    ],
+    "keywords_matched": [
+      "פרסום",
+      "מדיה",
+      "רשתות"
+    ],
+    "last_checked_at": "2026-10-20",
+    "added": "2026-10-20"
+  }
+]

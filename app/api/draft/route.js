@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sameOrigin } from "@/lib/guard";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import { aiReady } from "@/lib/config";
 import { fetchPageText } from "@/lib/fetchPage";
@@ -12,6 +13,7 @@ const MAX_PDF = 10 * 1024 * 1024;
 const err = (status, error, extra = {}) => NextResponse.json({ error, ...extra }, { status });
 
 export async function POST(request) {
+  if (!sameOrigin(request)) return NextResponse.json({ error: "forbidden" }, { status: 403 });
   const sb = await serverClient();
   if (!sb) return err(503, "not_configured");
   const user = await currentUser(sb);

@@ -27,6 +27,22 @@ header.top .cta { background: var(--ink); color: var(--bg); min-height: 44px; di
   header.top .nav a { padding: 0 10px; }
   header.top .cta { padding: 0 14px; }
 }
+.themebtn { inline-size: 44px; block-size: 44px; display: inline-grid; place-items: center; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); padding: 0; cursor: pointer; flex: none; }
+.themebtn .ti-dark, .themebtn .ti-system { display: none; }
+:root[data-theme="dark"] .themebtn .ti-light, :root[data-theme="system"] .themebtn .ti-light { display: none; }
+:root[data-theme="dark"] .themebtn .ti-dark, :root[data-theme="system"] .themebtn .ti-system { display: contents; }
+.themebtn .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+header.top .cta .cta-s, header.top .cta .cta-i { display: none; }
+@media (hover: hover) { .themebtn:hover { background: var(--soft); } }
+@media (max-width: 420px) {
+  header.top .cta .cta-l { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  header.top .cta .cta-s { display: inline; }
+}
+@media (max-width: 380px) {
+  header.top .nav a { padding: 0 8px; }
+  header.top .cta { padding: 0 12px; }
+  header.top .end { gap: 6px; }
+}
 @media (max-width: 340px) { header.top .brand span { display: none; } header.top .nav a { padding: 0 8px; } }
 
 footer.foot { border-block-start: 1px solid var(--line); padding-block: 32px 48px; color: var(--muted); font-size: 14px; }
@@ -36,3 +52,19 @@ footer.foot a:not(.brand) { color: var(--ink); font-weight: 500; min-height: 44p
 footer.foot .fine { margin-inline-start: auto; }
 @media (hover: hover) { footer.foot a:not(.brand):hover { text-decoration: underline; text-underline-offset: 3px; } }
 @media (max-width: 560px) { footer.foot .wrap { gap: 0 18px; } footer.foot .fine { margin-inline-start: 0; flex-basis: 100%; } }
+
+/* Phones: the colour-theme button moves to the footer, so brand + three nav links + the call to action
+   fit on one 64px row (the companies app's sticky search sits right under it). */
+footer.foot .foottheme { display: none; }
+@media (max-width: 480px) {
+  header.top .themebtn { display: none; }
+  footer.foot .foottheme { display: inline-flex; }
+  header.top .nav a { padding: 0 8px; font-size: 14px; }
+  header.top .brand { font-size: 17px; }
+}
+@media (max-width: 380px) {
+  header.top .nav a { padding: 0 6px; }
+  header.top .cta { padding: 0; inline-size: 44px; justify-content: center; }
+  header.top .cta .cta-s { display: none; }
+  header.top .cta .cta-i { display: inline-flex; }
+}
