@@ -368,3 +368,37 @@ details summary { cursor: pointer; color: var(--accent); font-weight: 500; }
   .chip { min-height: 44px; }
 }
 @media (pointer: coarse), (max-width: 560px) { .pcard .meta a { min-height: 44px; } }
+
+/* Weekly digest (/digest) */
+.digest .pagehead .eyebrow { margin-block-end: var(--s-3); }
+.digest .more-crafts { display: contents; }
+.digest .more-crafts > summary { cursor: pointer; list-style: none; }
+.digest .more-crafts > summary::-webkit-details-marker { display: none; }
+.digest .more-crafts[open] > .popular { flex-basis: 100%; margin-block-start: var(--s-2); }
+.popular.start { justify-content: flex-start; margin-block-start: 0; }
+.dlayout { display: grid; gap: var(--s-6); margin-block-start: var(--s-5); }
+@media (min-width: 960px) { .dlayout { grid-template-columns: minmax(0, 1fr) 360px; gap: var(--s-7); align-items: start; } .dside { position: sticky; top: 88px; } }
+.dmain > section:first-child .subhead, .dmain > .soon:first-child { margin-block-start: var(--s-3); }
+.dlist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.ditem { background: var(--soft); border-radius: var(--r); padding: var(--s-5); }
+.dmeta { font-size: var(--t-sm); color: var(--muted); margin-block-end: var(--s-2); }
+.dtype { color: var(--accent); font-weight: 600; }
+.dhead { font-weight: 600; font-size: var(--t-md); line-height: 1.5; margin: 0 0 var(--s-2); }
+.dwhy { color: var(--muted); margin: 0 0 var(--s-3); line-height: 1.6; }
+.dfoot { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); align-items: center; font-size: var(--t-sm); }
+.dfoot a { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; font-weight: 600; }
+.dfoot a.src { color: var(--muted); font-weight: 500; }
+.dpicks { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.dpicks li { padding-block: var(--s-4); border-block-end: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); }
+.dpicks li:last-child { border: 0; }
+.dpicks .pname { font-weight: 700; font-size: var(--t-md); color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; }
+.dpicks p { flex-basis: 100%; margin: 0; color: var(--muted); line-height: 1.6; }
+.dside { display: grid; gap: var(--s-4); }
+.dside h2 { font-size: var(--t-lg); margin: 0; }
+.dside h3 { margin: 0; }
+.digest-form .label { display: block; font-weight: 600; font-size: 15px; margin-block-end: var(--s-2); }
+.digest-form .chips .chip { padding: 8px 14px; min-height: 40px; }
+@media (max-width: 600px) { .digest-form .chips .chip { min-height: 44px; } }
+.digest-band { display: grid; gap: var(--s-5); align-items: center; }
+@media (min-width: 900px) { .digest-band { grid-template-columns: 1fr 1fr; gap: var(--s-7); } }
+.digest-band h2 { margin: 0 0 var(--s-2); }

@@ -1,4 +1,5 @@
 import SignupForm from "@/components/SignupForm";
+import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
 import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon, SparkIcon } from "@/components/Icons";
 import { craftLabel } from "@/lib/taxonomy";
@@ -71,6 +72,17 @@ export default function Home() {
               <p className="muted">מי גייס, מי החליף משרד פרסום ומי מינה מנהל שיווק חדש.</p>
             </div>
           </a>
+        </div>
+      </section>
+
+      <section className="wrap section" aria-labelledby="digest-h">
+        <div className="panel digest-band">
+          <div>
+            <h2 id="digest-h">השבוע בתעשייה, במייל</h2>
+            <p className="muted">כל יום ראשון: מי מינה מנהל שיווק, מי החליף משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם סיבה לפנות.</p>
+            <a href="/digest">לגיליון של השבוע</a>
+          </div>
+          <div className="form"><DigestSubscribe compact id="home-digest" /></div>
         </div>
       </section>
 
