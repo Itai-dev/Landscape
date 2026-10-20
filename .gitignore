@@ -3,3 +3,9 @@ __pycache__/
 .DS_Store
 research/staging/*.json
 site/logos/
+node_modules/
+.next/
+public/map/
+.env*.local
+*.tsbuildinfo
+next-env.d.ts

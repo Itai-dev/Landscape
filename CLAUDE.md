@@ -12,3 +12,5 @@ Data layer mapping the creative industry (Israel first). See PLAN.md for the vis
 - Per-person data (pipeline, notes, crafts) lives only in the Artifact database under `data/users/<id>/` — private to each person. Never read or write it from research runs.
 - Ids never change; merges go in `data/redirects.json`.
 - Product decisions: `team/DECISIONS.md`.
+- Community app: Next.js at the repo root (`app/`, `components/`, `lib/`), deployed on Vercel. `npm run build` copies the map to `public/map/` and runs `supabase/migrations/*.sql` (idempotent) when `POSTGRES_URL_NON_POOLING` is set. Must build with no env vars.
+- People's profiles live in Supabase only (RLS). Never put personal data in the repo; research runs don't touch it.
