@@ -1,14 +1,18 @@
 import "./globals.css";
+import "./chrome.css";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
+import MenuCloser from "@/components/MenuCloser";
 import { supabaseConfig } from "@/lib/config";
+import { FOOTER, TAGLINE } from "@/lib/chrome.mjs";
 
 export const metadata = {
-  title: { default: "Landscape — מפת תעשיית הקריאייטיב", template: "%s · Landscape" },
-  description: "המפה והקהילה של תעשיית הקריאייטיב בישראל: סטודיואים, חברות, לקוחות ואנשים. פרופיל שנבנה לבד מקורות החיים או מהפורטפוליו.",
+  title: { default: "Landscape · תעשיית הקריאייטיב בישראל", template: "%s · Landscape" },
+  description: "אנשים, סטודיואים, חברות הפקות, מותגים וסוכנויות בתעשיית הקריאייטיב בישראל. פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.",
+  icons: { icon: "/favicon.svg" },
 };
 
-export const viewport = { width: "device-width", initialScale: 1, themeColor: "#1f4fd6" };
+export const viewport = { width: "device-width", initialScale: 1, themeColor: "#ffffff" };
 
 export default function RootLayout({ children }) {
   // Public Supabase settings go to the browser through context, so any env naming works.
@@ -20,19 +24,19 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400..800&family=Heebo:wght@400..800&display=swap"
         />
       </head>
       <body>
         <Providers supabase={cfg}>
           <Header />
+          <MenuCloser />
           <main>{children}</main>
-          <footer>
+          <footer className="foot">
             <div className="wrap">
-              <span>Landscape · מפת תעשיית הקריאייטיב</span>
-              <a href="/map/app.html">המפה</a>
-              <a href="/people">אנשים</a>
-              <a href="/privacy">פרטיות</a>
+              <a className="brand" href="/" lang="en">Landscape<span>.</span></a>
+              {FOOTER.map((l) => <a key={l.href} href={l.href}>{l.label}</a>)}
+              <span className="fine">{TAGLINE}</span>
             </div>
           </footer>
         </Providers>

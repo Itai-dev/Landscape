@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS } from "@/lib/taxonomy";
 
-const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהמקורות שנתת. כדאי לבדוק.">✦ מולא אוטומטית</span> : null);
+const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהחומר שהעליתם. כדאי לבדוק.">✦ מולא אוטומטית</span> : null);
 
 export function Chips({ options, value, onChange, name }) {
   const toggle = (slug) => onChange(value.includes(slug) ? value.filter((v) => v !== slug) : [...value, slug]);
@@ -48,6 +48,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
   const [keepCv, setKeepCv] = useState(false);
   const [skillsText, setSkillsText] = useState((initial.profile?.skills || []).join(", "));
   const [state, setState] = useState({ busy: false, error: "" });
+  const claimedFrom = initial.claimed_from || null;
 
   const untag = (k) =>
     setAi((cur) => {
@@ -65,13 +66,13 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
     setState({ busy: true, error: "" });
     const profile = { ...p, skills: skillsText.split(/[,،\n]/).map((s) => s.trim()).filter(Boolean) };
     const body = new FormData();
-    body.set("data", JSON.stringify({ profile, visibility, ai_fields: [...ai], prefs }));
+    body.set("data", JSON.stringify({ profile, visibility, ai_fields: [...ai], prefs, claimed_from: claimedFrom }));
     if (cvFile && keepCv) body.set("cv", cvFile);
     const res = await fetch("/api/profile", { method: "POST", body });
     const out = await res.json().catch(() => ({}));
     if (!res.ok) {
       const msg =
-        out.error === "missing" ? "חסרים שדות חובה: שם, כותרת, תחום, עיר, ולמה את/ה פתוח/ה." :
+        out.error === "missing" ? "חסרים שדות חובה: שם, כותרת, תחום, עיר וזמינות." :
         out.error === "sign_in" ? "צריך להתחבר מחדש." : "השמירה נכשלה. נסו שוב.";
       setState({ busy: false, error: msg });
       return;
@@ -92,7 +93,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
         </div>
         <div className="field">
           <label htmlFor="pf-headline">כותרת <AiTag on={ai.has("headline")} /></label>
-          <p className="hint">שורה אחת: מה את/ה עושה. למשל: מעצבת מושן ואנימטורית 3D</p>
+          <p className="hint">שורה אחת על מה שעושים. למשל: מושן דיזיין ואנימציית תלת־ממד</p>
           <input id="pf-headline" type="text" required value={p.headline || ""} onChange={(e) => set("headline", e.target.value)} />
         </div>
         <div className="field">
@@ -105,11 +106,11 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
           <datalist id="cities">{CITIES.map((c) => <option key={c} value={c} />)}</datalist>
         </div>
         <div className="field">
-          <label>פתוח/ה ל־ <AiTag on={ai.has("open_to")} /></label>
-          <Chips name="פתוח/ה ל" options={OPEN_TO} value={p.open_to} onChange={(v) => set("open_to", v)} />
+          <label>זמינות <AiTag on={ai.has("open_to")} /></label>
+          <Chips name="זמינות" options={OPEN_TO} value={p.open_to} onChange={(v) => set("open_to", v)} />
         </div>
         <div className="field">
-          <label htmlFor="pf-bio">כמה מילים <AiTag on={ai.has("bio")} /></label>
+          <label htmlFor="pf-bio">כמה מילים עליכם <AiTag on={ai.has("bio")} /></label>
           <textarea id="pf-bio" value={p.bio || ""} onChange={(e) => set("bio", e.target.value)} />
         </div>
         <div className="field">
@@ -156,7 +157,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
 
       <div className="card" style={{ marginBlockStart: 16 }}>
         <div className="field">
-          <label>מי יכול לראות את הפרופיל</label>
+          <label>מי רואה את הפרופיל</label>
           <Radios name="visibility" options={VISIBILITY} value={visibility} onChange={setVisibility} />
         </div>
         <div className="field">
@@ -174,7 +175,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
         {cvFile && (
           <label className="check">
             <input type="checkbox" checked={keepCv} onChange={(e) => setKeepCv(e.target.checked)} />
-            <span>לשמור את קובץ קורות החיים בחשבון שלי (פרטי, רק לי). אם לא מסמנים, הקובץ לא נשמר.</span>
+            <span>לשמור את קובץ קורות החיים בחשבון (פרטי, רק לבעלי החשבון). בלי סימון, הקובץ לא נשמר.</span>
           </label>
         )}
       </div>

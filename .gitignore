@@ -6,6 +6,8 @@ site/logos/
 node_modules/
 .next/
 public/map/
+public/companies/
+lib/generated/
 .env*.local
 *.tsbuildinfo
 next-env.d.ts

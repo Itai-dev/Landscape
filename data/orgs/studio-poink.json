@@ -44,17 +44,19 @@
   "key_people": [
     {
       "name": "Lynn Polyak",
-      "role": "Partner; producer (leads production and client relationships)",
+      "role": "Partner & Producer",
       "role_type": "production",
       "source": "https://studiopoink.com/about-us/",
-      "as_of": "2026-10-18"
+      "as_of": "2026-10-18",
+      "note": "leads production and client relationships"
     },
     {
       "name": "Assaf Benharroch",
-      "role": "Partner; Art Director, illustrator & motion designer",
+      "role": "Partner & Art Director",
       "role_type": "creative_lead",
       "source": "https://studiopoink.com/about-us/",
-      "as_of": "2026-10-18"
+      "as_of": "2026-10-18",
+      "note": "illustrator & motion designer"
     }
   ],
   "tags": [

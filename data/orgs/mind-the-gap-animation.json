@@ -31,10 +31,11 @@
   "key_people": [
     {
       "name": "Yael Ozsinay",
-      "role": "Founder; animator, animation director and producer",
+      "role": "Founder",
       "role_type": "founder",
       "source": "https://www.mindthegapanimation.com/about",
-      "as_of": "2026-10-18"
+      "as_of": "2026-10-18",
+      "note": "animator, animation director and producer"
     }
   ],
   "tags": [

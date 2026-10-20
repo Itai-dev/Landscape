@@ -44,7 +44,8 @@
     },
     {
       "name": "Eddo Har-Tov",
-      "role": "Partner & Group CEO (Globes, 2025-26)"
+      "role": "Partner & Group CEO",
+      "note": "Globes, 2025-26"
     },
     {
       "name": "Lior Tanner",
@@ -62,21 +63,22 @@
     },
     {
       "name": "Adam Feder",
-      "role": "VP Creative (joined from Reuveni Pridan, May 2026)",
+      "role": "VP Creative",
       "role_type": "creative_lead",
       "source": "https://www.ice.co.il/advertising-marketing/news/article/1113422",
-      "as_of": "2026-05-18"
+      "as_of": "2026-05-18",
+      "note": "joined from Reuveni Pridan, May 2026"
     },
     {
       "name": "Roi Turgeman",
-      "role": "Production (agency producer)",
+      "role": "Agency producer",
       "role_type": "production",
       "source": "https://www.ice.co.il/advertising-marketing/news/article/1126468",
       "as_of": "2026-08-21"
     },
     {
       "name": "Udi Lazar",
-      "role": "Production (agency producer)",
+      "role": "Agency producer",
       "role_type": "production",
       "source": "https://www.ice.co.il/advertising-marketing/news/article/1126468",
       "as_of": "2026-08-21"

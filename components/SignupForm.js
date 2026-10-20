@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
+import ComingSoon from "@/components/ComingSoon";
 
 // Email magic link. New people get an account; returning people just sign in.
 // The newsletter box starts unchecked: explicit opt-in (Israeli anti-spam law).
@@ -13,14 +14,14 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
   const [error, setError] = useState("");
 
   if (!configured) {
-    return <div className="notice">ההרשמה נפתחת בקרוב. בינתיים אפשר לשוטט ב<a href="/map/app.html">מפה</a>.</div>;
+    return <ComingSoon />;
   }
   if (state === "sent") {
     return (
       <div className="notice ok" role="status">
         <b>שלחנו קישור כניסה ל־<span className="ltr">{email}</span>.</b>
         <br />
-        פתחו אותו באותו דפדפן כדי להמשיך. לא הגיע? בדקו בספאם או נסו שוב בעוד דקה.
+        פותחים אותו באותו דפדפן וממשיכים. לא הגיע? כדאי לבדוק בספאם, או לנסות שוב בעוד דקה.
       </div>
     );
   }
@@ -38,14 +39,14 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
     });
     if (error) {
       setState("error");
-      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב.");
+      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
     } else setState("sent");
   }
 
   return (
     <form onSubmit={submit} className="stack" noValidate={false}>
       <div>
-        <label htmlFor="email">{compact ? "אימייל" : "האימייל שלך"}</label>
+        <label htmlFor="email">מייל</label>
         <input id="email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com"
           value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
@@ -59,10 +60,10 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
           שלחו לי קישור כניסה
         </button>
-        <span className="small muted">בלי סיסמה. נרשמים ונכנסים עם קישור במייל.</span>
+        <span className="small muted">בלי סיסמה: נכנסים עם קישור במייל.</span>
       </div>
       <p className="small muted">
-        בהרשמה את/ה מסכים/ה ל<a href="/privacy">מדיניות הפרטיות</a>. הפרופיל לא מתפרסם בלי אישור שלך.
+        ההרשמה כפופה ל<a href="/privacy">מדיניות הפרטיות</a>. הפרופיל לא מתפרסם בלי אישור.
       </p>
     </form>
   );

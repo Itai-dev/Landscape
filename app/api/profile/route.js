@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
 import { cleanProfile, cleanPrefs, missingFields, makeSlug } from "@/lib/profile";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
+import { seedById } from "@/lib/people";
 
 export const runtime = "nodejs";
 
@@ -32,6 +33,8 @@ export async function POST(request) {
 
   const { data: existing } = await sb.from("profiles").select("slug, cv_path").eq("user_id", user.id).maybeSingle();
   const row = { user_id: user.id, ...profile, visibility, ai_fields, slug: existing?.slug || makeSlug(profile.name) };
+  // "This is me" on a person listed from public sources: that listing is then replaced by this profile.
+  if (seedById(data.claimed_from)) row.claimed_from = data.claimed_from;
 
   // Optional: keep the CV privately (service role; private bucket `cvs`, path <user id>/cv.pdf).
   const cv = form.get("cv");

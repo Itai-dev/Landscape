@@ -59,3 +59,38 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Schema**: `profiles`, `newsletter_prefs` with RLS (owner writes; public rows to everyone; members rows to signed-in users). Migration is idempotent and runs on every Vercel build when the database URL is present.
 - **Graceful without config**: with no env vars the site builds and shows "בקרוב" notices instead of sign-up.
 - Next: people search with AI across people + companies, newsletter sending (Resend), contact requests, Hebrew-name slugs.
+
+## Visual design v2 (owner: "Dribbble's look, with Simply's purple")
+- **Look**: white canvas, deep-purple ink, dark pill primary buttons, soft grey pill search with a round accent button, outlined pill tags, image-first people cards (cover tile, headline on hover, avatar + name below). Inspiration only: no Dribbble name, logo, copy or assets.
+- **Colour**: one accent, Simply's `--color-primary-purple-haze` `#8217ff` (from hellosimply.com's CSS); ink is Simply's deep purple `#110034`. Both pass WCAG AA on white. Org-group colours (makers / tech / buyers) stay for the map; buyer moved from magenta to raspberry so it doesn't read as the accent.
+- **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
+- **One product**: the same tokens in `app/globals.css` and `site/app.html`.
+
+## Design round 1: layout, naming, people seed (owner feedback on v2)
+- **Layout**: search moved out of the header. Header = logo, People, Companies, one call to action (same bar in the companies app). Centered hero and section intros; one container (max 1200px, side gutter 20–48px); spacing, type and radius scales as tokens.
+- **Naming**: the directory was called "the map", but it isn't one. It's now **חברות** (Companies) at `/companies`, everywhere: nav, buttons, numbers, footer, titles. `/map` and `/map/app.html` redirect there (an `#org-id` still opens the company). Its tabs: שאלו / כל החברות / סיגנלים / מעקב.
+- **Hero**: craft tiles are icons (Lucide style, one stroke weight, soft purple halo) with short names and a company count; they link to a craft search.
+- **One search**: the home search box goes to `/search`, which returns companies and people together, with links to the full lists (`/companies?q=…&craft=…` opens the companies app filtered).
+- **People seed**: `/people` starts with the 546 people already published in company records (`key_people`: public business roles with a source). Shown as compact cards marked "ממקורות פומביים", with role, company link, source and date; no contact details, photos or anything inferred. Registered members rank first with a "מאומת" badge. Each listed card has "זה אני" (onboarding prefilled with name, role and company; the profile stores `claimed_from` and replaces the card) and "בקשת הסרה" (no account needed; the card is hidden as soon as the request arrives; the research run then removes the name from the company record). Explained on `/privacy#public`.
+- **Copy**: Hebrew rewritten to gender-neutral plural / infinitive, one word per concept (חברות, מאגר, סיגנלים, מעקב).
+
+
+## Design round 2: QA fixes (independent review of round 1)
+- **Companies on phones**: the build wraps `site/app.html` in a real document shell (doctype, charset, viewport, `lang="he" dir="rtl"`), so `/companies` renders at phone width instead of desktop width in quirks mode.
+- **Companies lands on the list** ("כל החברות", lens "הכול"). Sections: כל החברות · עדכונים · מעקב · שאלו AI, as a pill row under the header on desktop and the tab bar on phones. Only the search stays sticky.
+- **Ask AI on the site**: when the page isn't inside claude.ai, questions go to `/api/ask` (Claude with read-only tools over the published dataset: search_orgs, get_org, recent_signals; no per-person data; per-IP and global rate limits, low effort, 4k max tokens, ~50s budget). The tab is hidden when `ANTHROPIC_API_KEY` isn't set.
+- **People from public sources**: former and deceased role-holders, and people whose only source is LinkedIn, are left out. Research notes in brackets move out of the title. Dates read "נכון ל<month>" and come only from the role's own `as_of` (never the company's last check). "ממקורות פומביים" is explained once in the section header ("מפרסומים פומביים"); removal moved into a ⋯ menu on each card. Standard titles shown in neutral Hebrew where one exists (ראש ההפקה, קריאייטיב דיירקטור), the published title on hover.
+- **Badges**: members are "חבר קהילה", not "מאומת" (nothing is verified yet). A domain-verified badge is pending the owner's decision.
+- **Vocabulary**: "סיגנלים" → "עדכונים" everywhere in the UI. Craft labels without slashes (`schema/taxonomy.json`). One "תחום" filter: a craft matches a company's categories or what it commissions, the same rule in `/search`, `/people` counts and `/companies`.
+- **Type and colour**: Heebo for all Hebrew, no uppercase or letter tracking, no monospace face (tabular figures instead). One accent: org types are told apart by label, not colour. SVG icons instead of text glyphs.
+- **Phones**: every tap target ≥44px. The site is Hebrew-only (the English toggle stays for the claude.ai app).
+- **Privacy contact**: `NEXT_PUBLIC_PRIVACY_EMAIL`, shown on `/privacy` and in removal errors when set. Until then, removal is the form on each card.
+
+## Design round 3: QA fixes (independent review of round 2)
+- **One header and footer**: `lib/chrome.mjs` + `app/chrome.css` are the only source; the build writes them into `/companies`. Same metrics on every page at 360/390/768/1440, 20px gutter at 360. `/companies` has the site footer. Its header button follows sign-in (`/api/session`).
+- **Removal is honest and complete**: a removed person also leaves the company pages and the AI answers right away (`/api/hidden` sends short hashes, not names). The wording says exactly that: off the site within a minute, out of the company record at the next research update. Without a database the form says it can't be sent; a mailto only appears when `NEXT_PUBLIC_PRIVACY_EMAIL` is set (no invented address).
+- **One search rule**: a query that is a craft's name or alias ("מושן", "VFX") is that craft on `/search`, `/people` and `/companies`, so the counts match (165 for motion). Hebrew title words find published titles (מנכ״ל → CEO, מפיק → producer, במאי → director); ״ and " are ignored.
+- **People cards**: titles as published, Hebrew only for neutral loanwords (קריאייטיב דיירקטור, ארט דיירקטור, ראש ההפקות); research notes moved to `key_people[].note` (schema). "זה אני" shows only when sign-up is open. `/people` lists people first; the members section appears only when there are members. Company and title are one link (44px).
+- **Data copy**: no gendered slashes in job posts ("משרה פתוחה ב־Wix: מושן דיזיין"), no stale "פורסם לפני…", Hebrew quotes ״…״, maqaf (ב־ICE), gershayim (סמנכ״לית), no internal "עדיין לא במאגר" notes. In Hebrew the credits line is hidden (the Hebrew headline already names them).
+- **Companies app polish**: people as name-over-role rows; "Name (Other name)" and Hebrew names find the company (no duplicate agency pills); sizes with a unit ("יותר מ־5,000 עובדים"); default order mixes studios, clients and startups; lens "לקוחות"; "+ בחירת תחומים" with a one-line hint; the Updates badge counts what's new since the last visit; unknown `#company` shows a toast; text cut at word boundaries, never inside brackets.
+- **Everywhere**: hover styles only on devices that hover; no text under 13px; no letter-spacing on Hebrew headings; craft labels from the taxonomy everywhere ("יצירה עם AI"); "חברת הפקות"; the home page is ~2.5 phone screens (no steps section; join panel only when sign-up is open).

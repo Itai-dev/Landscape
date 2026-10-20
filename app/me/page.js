@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import MeClient from "./MeClient";
+import ComingSoon from "@/components/ComingSoon";
 
 export const metadata = { title: "הפרופיל שלי", robots: { index: false } };
 
@@ -9,8 +10,8 @@ export default async function Me() {
   if (!sb) {
     return (
       <div className="wrap narrow stack">
-        <h1>הפרופיל שלי</h1>
-        <div className="notice">הפרופילים נפתחים בקרוב.</div>
+        <div className="pagehead"><h1>הפרופיל שלי</h1></div>
+        <ComingSoon title="הפרופילים נפתחים בקרוב" />
       </div>
     );
   }
@@ -24,11 +25,11 @@ export default async function Me() {
   const { visibility, ai_fields, slug, ...rest } = profile;
   return (
     <div className="wrap narrow stack">
-      <div className="row">
-        <h1 style={{ margin: 0 }}>הפרופיל שלי</h1>
-        <a className="btn" href={`/p/${slug}`} style={{ marginInlineStart: "auto" }}>צפייה בפרופיל</a>
+      <div className="pagehead">
+        <h1>הפרופיל שלי</h1>
+        <p><bdi className="small">{user.email}</bdi></p>
+        <div className="row center" style={{ marginBlockStart: 16 }}><a className="btn" href={`/p/${slug}`}>צפייה בפרופיל</a></div>
       </div>
-      <p className="small muted ltr" style={{ textAlign: "end" }}>{user.email}</p>
       <MeClient
         initial={{ profile: rest, visibility, ai_fields, prefs: prefs || { frequency: "off", topics: [] } }}
       />

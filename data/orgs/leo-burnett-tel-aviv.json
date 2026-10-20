@@ -26,14 +26,16 @@
   "key_people": [
     {
       "name": "Adam Polachek",
-      "role": "CEO (credited 2018)"
+      "role": "CEO",
+      "note": "credited 2018"
     },
     {
       "name": "Shani Shaul Vingosh",
-      "role": "CEO, Leo Burnett Israel; since Jan 2026 also CEO of Baumann Ber Rivnai",
+      "role": "CEO, Leo Burnett Israel",
       "role_type": "executive",
       "source": "https://www.ice.co.il/advertising-marketing/news/article/1099727",
-      "as_of": "2026-01-13"
+      "as_of": "2026-01-13",
+      "note": "since Jan 2026 also CEO of Baumann Ber Rivnai"
     }
   ],
   "client_profile": {
