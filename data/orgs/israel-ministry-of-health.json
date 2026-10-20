@@ -61,5 +61,6 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Ministry campaigns are bought through LAPAM tenders rather than directly. Website kept under links (gov.il) because ingest dedupes by domain and gov.il is shared with other ministries."
+  "notes": "Ministry campaigns are bought through LAPAM tenders rather than directly. Website kept under links (gov.il) because ingest dedupes by domain and gov.il is shared with other ministries.",
+  "description_he": "המשרד הממשלתי האחראי על בריאות הציבור. קמפייני בריאות הציבור שלו (למשל מניעת HIV ותוכניות סקר) מופקים דרך לפ\"ם, הלשכה הממשלתית לפרסום; סרט רשת נגד איידס מ-2014 בוים על ידי דורון ויואב פז עם תפארת הפקות."
 }

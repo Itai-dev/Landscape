@@ -10,7 +10,7 @@
     "advertising",
     "digital-agency"
   ],
-  "description": "Tel Aviv advertising agency founded in 1979 by Moshe Theumim and Yochanan Goldberg; BBDO (Omnicom) acquired a 49% stake in 1994, the first international ownership of an Israeli agency. The group includes strategic consulting arm BBDO IM and agency Pitch, and co-owns media agency OMD Israel with Yehoshua TBWA. Won the Winner lottery account in 2026.",
+  "description": "Tel Aviv advertising agency founded in 1979 by Moshe Theumim and Yochanan Goldberg; BBDO (Omnicom) acquired a 49% stake in 1994, the first international ownership of an Israeli agency. The group includes strategic consulting arm BBDO IM and agency Pitch, and co-owns media agency OMD Israel with Yehoshua TBWA. Won the Winner sports-betting account in 2026.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -149,5 +149,6 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "gitam.co.il showed an under-construction page on 2026-10-18. Theumim received an Effie Israel lifetime achievement award in 2026."
+  "notes": "gitam.co.il showed an under-construction page on 2026-10-18. Theumim received an Effie Israel lifetime achievement award in 2026.",
+  "description_he": "משרד פרסום תל אביבי שנוסד ב-1979 על ידי משה תאומים ויוחנן גולדברג; ב-1994 רכשה BBDO (אומניקום) 49% ממניותיו, הבעלות הבינלאומית הראשונה במשרד פרסום ישראלי. הקבוצה כוללת את זרוע הייעוץ האסטרטגי BBDO IM ואת משרד הפרסום Pitch, ומחזיקה יחד עם יהושע TBWA במשרד המדיה OMD ישראל. המשרד זכה בתקציב ווינר ב-2026."
 }
