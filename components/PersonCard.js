@@ -1,5 +1,5 @@
 import { craftLabel, openToLabel } from "@/lib/taxonomy";
-import { VerifiedIcon } from "@/components/Icons";
+import { PeopleIcon } from "@/components/Icons";
 
 export const initials = (name = "") =>
   name.trim().split(/\s+/).slice(0, 2).map((w) => w[0]).join("").toUpperCase() || "?";
@@ -11,7 +11,7 @@ export const coverClass = (seed = "") => {
   return `cover-${h % 6}`;
 };
 
-// A registered member: image-first card, verified badge, headline on hover.
+// A registered member: image-first card, community badge, headline on hover.
 export default function PersonCard({ p }) {
   const craft = (p.crafts || [])[0];
   const open = (p.open_to || [])[0];
@@ -19,7 +19,7 @@ export default function PersonCard({ p }) {
     <a className="shot" href={`/p/${p.slug}`}>
       <div className={`thumb ${coverClass(p.slug)}`}>
         <span className="big" aria-hidden>{initials(p.name)}</span>
-        <span className="badge verified vbadge"><VerifiedIcon size={14} /> מאומת</span>
+        <span className="badge verified vbadge"><PeopleIcon size={14} /> חבר קהילה</span>
         {(p.headline || p.city) && (
           <div className="over">{[p.headline, p.city].filter(Boolean).join(" · ")}</div>
         )}

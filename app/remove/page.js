@@ -13,14 +13,14 @@ export default async function Remove({ searchParams }) {
       <div className="pagehead">
         <h1>בקשת הסרה</h1>
         <p>
-          השם <bdi>{p.name}</bdi> מופיע במאגר לפי תפקיד שפורסם ב
-          {p.roles.map((r, i) => <span key={i}>{i > 0 ? ", " : ""}<bdi>{orgLabel(r)}</bdi></span>)}.
-          אחרי השליחה הכרטיס יורד מהאתר, ואנחנו מסירים את השם גם מרשומת החברה.
+          הכרטיס של <bdi>{p.name}</bdi> מבוסס על תפקיד שפורסם בפומבי (
+          {p.roles.map((r, i) => <span key={i}>{i > 0 ? ", " : ""}<bdi>{orgLabel(r)}</bdi></span>)}).
+          אחרי השליחה הוא יורד מהאתר מיד, והשם יימחק גם מרשומת החברה.
         </p>
       </div>
-      <div className="card"><RemoveForm id={p.id} /></div>
+      <div className="card"><RemoveForm id={p.id} email={process.env.NEXT_PUBLIC_PRIVACY_EMAIL || ""} /></div>
       <p className="small muted center" style={{ marginBlockStart: 24 }}>
-        מעדיפים פרופיל מלא ומעודכן במקום? <a href={`/onboard?claim=${encodeURIComponent(p.id)}`}>זה אני, אני רוצה פרופיל</a>
+        רוצים פרופיל מלא במקום? <a href={`/onboard?claim=${encodeURIComponent(p.id)}`}>לבניית פרופיל</a>
       </p>
     </div>
   );

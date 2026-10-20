@@ -1,6 +1,5 @@
-import { initials } from "@/components/PersonCard";
-import { LinkIcon } from "@/components/Icons";
-import { orgLabel, roleTypeLabel } from "@/lib/people";
+import { LinkIcon, MoreIcon, PersonIcon } from "@/components/Icons";
+import { orgLabel, roleHe, roleTypeLabel } from "@/lib/people";
 import { companyHref } from "@/lib/companies";
 
 const host = (u) => {
@@ -10,37 +9,49 @@ const host = (u) => {
     return "מקור";
   }
 };
-const month = (d) => (d ? new Date(d).toLocaleDateString("he-IL", { month: "short", year: "numeric" }) : "");
+const month = (d) => (d ? new Date(d).toLocaleDateString("he-IL", { month: "long", year: "numeric" }) : "");
+
+function Role({ r }) {
+  if (!r.role) return null;
+  const he = roleHe(r.role);
+  return <p className="role" title={he ? r.role : undefined}><bdi>{he || r.role}</bdi></p>;
+}
 
 // A person listed from public sources (a company site, the trade press). Not a member: no profile page, no contact details.
+// The page explains "from public sources" once, so the card doesn't repeat it.
 export default function SeedCard({ p }) {
   const [first, ...rest] = p.roles;
   return (
     <article className="pcard">
       <div className="head">
-        <span className="avatar md soft" aria-hidden>{initials(p.name)}</span>
+        <span className="avatar md soft" aria-hidden><PersonIcon size={22} /></span>
         <div>
           <h3><bdi>{p.name}</bdi></h3>
-          <span className="badge public">ממקורות פומביים</span>
+          {roleTypeLabel(first.role_type) && <span className="kindlabel">{roleTypeLabel(first.role_type)}</span>}
         </div>
+        <details className="menu">
+          <summary aria-label={`עוד אפשרויות: ${p.name}`}><MoreIcon size={20} /></summary>
+          <div className="pop">
+            <a href={`/remove?id=${encodeURIComponent(p.id)}`}>בקשת הסרה</a>
+            <a href="/privacy#public">מאיפה המידע</a>
+          </div>
+        </details>
       </div>
       <div>
         {[first, ...rest.slice(0, 1)].map((r, i) => (
           <div key={i} style={i ? { marginBlockStart: 8 } : undefined}>
             <p className="org"><a href={companyHref(r.org_id)}><bdi>{orgLabel(r)}</bdi></a></p>
-            {r.role && <p className="role"><bdi>{r.role}</bdi></p>}
+            <Role r={r} />
           </div>
         ))}
         {rest.length > 1 && <p className="role muted">ועוד {rest.length - 1} תפקידים</p>}
       </div>
       <div className="meta">
-        {roleTypeLabel(first.role_type) && <span>{roleTypeLabel(first.role_type)}</span>}
-        <a href={first.source} rel="nofollow noopener" target="_blank"><LinkIcon size={12} /> {host(first.source)}</a>
-        {first.as_of && <span>נבדק {month(first.as_of)}</span>}
+        <a href={first.source} rel="nofollow noopener" target="_blank"><LinkIcon size={13} /> <bdi>{host(first.source)}</bdi></a>
+        {first.as_of && <span>נכון ל{month(first.as_of)}</span>}
       </div>
       <div className="acts">
         <a className="btn sm soft" href={`/onboard?claim=${encodeURIComponent(p.id)}`}>זה אני</a>
-        <a className="quiet" href={`/remove?id=${encodeURIComponent(p.id)}`}>בקשת הסרה</a>
       </div>
     </article>
   );

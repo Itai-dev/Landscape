@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
+import ComingSoon from "@/components/ComingSoon";
 
 // Email magic link. New people get an account; returning people just sign in.
 // The newsletter box starts unchecked: explicit opt-in (Israeli anti-spam law).
@@ -13,14 +14,14 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
   const [error, setError] = useState("");
 
   if (!configured) {
-    return <div className="notice">ההרשמה נפתחת בקרוב. בינתיים אפשר לעבור על <a href="/companies">החברות</a> ועל <a href="/people">האנשים</a> במאגר.</div>;
+    return <ComingSoon />;
   }
   if (state === "sent") {
     return (
       <div className="notice ok" role="status">
         <b>שלחנו קישור כניסה ל־<span className="ltr">{email}</span>.</b>
         <br />
-        פתחו אותו באותו דפדפן כדי להמשיך. לא הגיע? בדקו בספאם או נסו שוב בעוד דקה.
+        פותחים אותו באותו דפדפן וממשיכים. לא הגיע? כדאי לבדוק בספאם, או לנסות שוב בעוד דקה.
       </div>
     );
   }
@@ -38,7 +39,7 @@ export default function SignupForm({ next = "/onboard", compact = false }) {
     });
     if (error) {
       setState("error");
-      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב.");
+      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
     } else setState("sent");
   }
 

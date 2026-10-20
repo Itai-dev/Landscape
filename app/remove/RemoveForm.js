@@ -2,12 +2,13 @@
 import { useState } from "react";
 
 const ERR = {
-  not_configured: "השליחה עוד לא זמינה באתר. נסו שוב בקרוב.",
-  confirm: "צריך לאשר את התיבה.",
+  not_configured: "השליחה לא זמינה כרגע. מה שמילאתם נשאר כאן, אפשר לנסות שוב בעוד כמה דקות.",
+  save_failed: "השמירה נכשלה. מה שמילאתם נשאר כאן, אפשר לנסות שוב.",
+  confirm: "צריך לסמן את התיבה.",
   not_found: "לא מצאנו את האדם הזה במאגר. אולי כבר הוסר.",
 };
 
-export default function RemoveForm({ id }) {
+export default function RemoveForm({ id, email = "" }) {
   const [reason, setReason] = useState("");
   const [contact, setContact] = useState("");
   const [confirm, setConfirm] = useState(false);
@@ -23,7 +24,7 @@ export default function RemoveForm({ id }) {
     }).catch(() => null);
     const out = res ? await res.json().catch(() => ({})) : {};
     if (res?.ok) setState({ busy: false, done: true, error: "" });
-    else setState({ busy: false, done: false, error: ERR[out.error] || "השליחה נכשלה. נסו שוב." });
+    else setState({ busy: false, done: false, error: ERR[out.error] || "השליחה נכשלה. מה שמילאתם נשאר כאן, אפשר לנסות שוב." });
   }
 
   if (state.done) {
@@ -48,7 +49,12 @@ export default function RemoveForm({ id }) {
         <input type="checkbox" checked={confirm} onChange={(e) => setConfirm(e.target.checked)} />
         <span>זה אני, או שאני פונה בשם האדם הזה.</span>
       </label>
-      {state.error && <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>{state.error}</div>}
+      {state.error && (
+        <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>
+          {state.error}
+          {email && <> אפשר גם לכתוב ל־<a href={`mailto:${email}`} className="ltr">{email}</a>.</>}
+        </div>
+      )}
       <button className="btn primary" disabled={!confirm || state.busy}>
         {state.busy ? <span className="spinner" aria-hidden /> : null}
         שליחת בקשה

@@ -14,4 +14,5 @@ Data layer mapping the creative industry (Israel first). See PLAN.md for the vis
 - Product decisions: `team/DECISIONS.md`.
 - Community app: Next.js at the repo root (`app/`, `components/`, `lib/`), deployed on Vercel. `npm run build` copies the companies app (`site/app.html`) to `public/companies/` (served at `/companies`; `/map` redirects there), builds `lib/generated/people.json` (people already in `key_people`, with a source) and `orgs.json` for search, and runs `supabase/migrations/*.sql` (idempotent) when `POSTGRES_URL_NON_POOLING` is set. Must build with no env vars.
 - People's profiles live in Supabase only (RLS). Never put personal data in the repo; research runs don't touch it.
-- Naming: the company directory is "חברות" (never "מפה"). Hebrew UI copy is gender-neutral (plural / infinitive), no "את/ה" slashes.
+- Naming: the company directory is "חברות" (never "מפה"); market updates are "עדכונים". Hebrew UI copy is gender-neutral (plural / infinitive), no "את/ה" slashes.
+- `/api/ask` answers questions about the directory with Claude (read-only tools over `site/data/`, no per-person data, rate-limited). Hidden when `ANTHROPIC_API_KEY` is unset.

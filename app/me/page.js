@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import MeClient from "./MeClient";
+import ComingSoon from "@/components/ComingSoon";
 
 export const metadata = { title: "הפרופיל שלי", robots: { index: false } };
 
@@ -10,7 +11,7 @@ export default async function Me() {
     return (
       <div className="wrap narrow stack">
         <h1>הפרופיל שלי</h1>
-        <div className="notice">הפרופילים נפתחים בקרוב.</div>
+        <ComingSoon title="הפרופילים נפתחים בקרוב" />
       </div>
     );
   }

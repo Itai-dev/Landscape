@@ -5,6 +5,7 @@ import { useUser } from "@/components/useUser";
 import SignupForm from "@/components/SignupForm";
 import ProfileForm, { Chips, Radios, emptyProfile } from "@/components/ProfileForm";
 import { UploadIcon } from "@/components/Icons";
+import ComingSoon from "@/components/ComingSoon";
 import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS } from "@/lib/taxonomy";
 import { REQUIRED } from "@/lib/profile";
 
@@ -31,8 +32,8 @@ const QUESTIONS = {
   name: { title: "מה השם?", kind: "text", placeholder: "שם מלא" },
   headline: { title: "מה אתם עושים, בשורה אחת?", kind: "text", placeholder: "למשל: מושן דיזיין ואנימציית תלת־ממד", hint: "זו הכותרת שמופיעה ליד השם." },
   crafts: { title: "באילו תחומים?", kind: "chips", options: CRAFTS, hint: "אפשר לבחור כמה." },
-  city: { title: "איפה העבודה?", kind: "city", hint: "העיר שממנה עובדים, או ״מרחוק״." },
-  open_to: { title: "למה יש זמינות עכשיו?", kind: "chips", options: OPEN_TO },
+  city: { title: "מאיפה אתם עובדים?", kind: "city", hint: "העיר שממנה עובדים, או ״מרחוק״." },
+  open_to: { title: "מה מעניין אתכם עכשיו?", kind: "chips", options: OPEN_TO },
   visibility: { title: "מי יכול לראות את הפרופיל?", kind: "radio", options: VISIBILITY, hint: "אפשר לשנות בכל רגע." },
   newsletter: { title: "ניוזלטר: כל כמה זמן ועל מה?", kind: "newsletter" },
 };
@@ -81,15 +82,16 @@ export default function Onboard({ claim = null }) {
       <div className="notice">
         בונים את הפרופיל של <b><bdi>{claim.name}</bdi></b>, לפי מה שפורסם:{" "}
         {claim.roles.map((r, i) => <span key={i}>{i > 0 ? " · " : ""}<bdi>{r.role}</bdi>, <bdi>{r.org}</bdi></span>)}.
-        הכרטיס מהמאגר יוחלף בפרופיל המלא.
+        הכרטיס מפרסומים פומביים יוחלף בפרופיל המלא.
       </div>
     ) : null;
 
   if (!configured) {
     return (
       <div className="stack">
-        <div className="pagehead"><h1>פרופיל שנבנה לבד</h1><p>ההרשמה והפרופילים נפתחים בקרוב.</p></div>
+        <div className="pagehead"><h1>פרופיל מקצועי בדקה</h1><p>מעלים קורות חיים או קישור לפורטפוליו, וה־AI מכין טיוטה.</p></div>
         <Claim />
+        <ComingSoon title="ההרשמה והפרופילים נפתחים בקרוב" />
         <HowTo />
       </div>
     );
@@ -99,7 +101,7 @@ export default function Onboard({ claim = null }) {
     return (
       <div className="stack">
         <div className="pagehead">
-          <h1>{claim ? "זה אתם? בואו נבנה פרופיל" : "פרופיל שנבנה לבד"}</h1>
+          <h1>{claim ? "זה אתם? בונים פרופיל" : "פרופיל מקצועי בדקה"}</h1>
           <p>קודם נכנסים עם המייל. הקישור מחזיר ישר לכאן.</p>
         </div>
         <Claim />
@@ -239,7 +241,7 @@ export default function Onboard({ claim = null }) {
     <div className="stack">
       <Progress value={loading ? 30 : 10} />
       <div className="pagehead">
-        <h1>פרופיל שנבנה לבד</h1>
+        <h1>פרופיל מקצועי בדקה</h1>
         <p>נותנים נקודת פתיחה אחת או יותר. ה־AI מכין טיוטה, ושואלים רק על מה שחסר.</p>
       </div>
       <Claim />
@@ -253,7 +255,7 @@ export default function Onboard({ claim = null }) {
         <label className={`drop${file ? " has" : ""}`}>
           <input type="file" accept="application/pdf" onChange={(e) => setFile(e.target.files?.[0] || null)} />
           <span className="ico"><UploadIcon size={28} /></span>
-          {file ? <b dir="auto">{file.name}</b> : <><b>העלאת קורות חיים או PDF של לינקדאין</b><span className="small muted">PDF עד 10MB</span></>}
+          {file ? <b dir="auto">{file.name}</b> : <><b>העלאת קורות חיים או PDF מלינקדאין</b><span className="small muted">PDF עד 10MB</span></>}
         </label>
         <details style={{ marginBlockStart: 12 }}>
           <summary className="small">איך מורידים PDF מלינקדאין?</summary>
@@ -262,14 +264,14 @@ export default function Onboard({ claim = null }) {
             <b> Resources</b> (או <b>More</b>) ואז <b>Save to PDF</b>, ומעלים את הקובץ כאן.
           </p>
         </details>
-        <div className="or">ובנוסף, או במקום</div>
+        <div className="or">ואפשר גם</div>
         <div className="field">
           <label htmlFor="ob-link">קישור לפורטפוליו או לשואוריל</label>
           <p className="hint">Behance, Vimeo, ArtStation או אתר אישי</p>
           <input id="ob-link" type="url" dir="ltr" placeholder="https://" value={link} onChange={(e) => setLink(e.target.value)} />
         </div>
         <div className="field">
-          <label htmlFor="ob-text">כמה מילים</label>
+          <label htmlFor="ob-text">כמה מילים עליכם</label>
           <textarea id="ob-text" placeholder="מה עושים, איפה עבדתם, באילו כלים…" value={text} onChange={(e) => setText(e.target.value)} />
         </div>
         <div className="row">
@@ -302,7 +304,7 @@ function HowTo() {
     <div className="card">
       <h3>איך זה עובד</h3>
       <ol className="muted" style={{ paddingInlineStart: 20, margin: 0 }}>
-        <li>מעלים קורות חיים או PDF של לינקדאין, ו/או קישור לפורטפוליו.</li>
+        <li>מעלים קורות חיים, PDF מלינקדאין או קישור לפורטפוליו.</li>
         <li>ה־AI מכין טיוטה: תחומים, כלים, ניסיון וקישורים.</li>
         <li>שאלון קצר רק על מה שחסר.</li>
         <li>בודקים, מתקנים ומחליטים מי רואה.</li>
