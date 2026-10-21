@@ -46,7 +46,7 @@ export default function DigestPreview({ editions }) {
             <span className="hl"><b>{ed.pick.name}</b>{ed.pick.reason ? `: ${ed.pick.reason}` : ""}</span>
           </div>
         )}
-        <a className="tap small" href={`/digest?crafts=${ed.slug}`} data-track="digest_preview_open" data-track-label={ed.slug}>לגיליון המלא של {ed.label} ‹</a>
+        <a className="tap small" href={`/digest?crafts=${ed.slug}`} data-track="digest_preview_open" data-track-label={ed.slug}>לכל העדכונים של {ed.label} ‹</a>
       </div>
     </div>
   );

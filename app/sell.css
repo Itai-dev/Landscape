@@ -1,51 +1,40 @@
-/* Home page: sell the digest (hook, live proof, before/after, examples, preview, FAQ). */
-.hero.sell { padding-block-end: var(--s-5); }
-.hero.sell h1 { font-size: clamp(32px, 5.4vw, 58px); }
-.herobox { max-width: 560px; margin: 0 auto; text-align: start; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: clamp(16px, 3vw, 24px); box-shadow: var(--shadow); }
+/* Home page: sell the weekly digest (hook, this week, before/after, preview, FAQ). Awwwards look: grey blocks, ink, no shadows. */
+.hero.sell h1 { font-size: var(--t-2xl); line-height: 1.04; max-width: 26ch; }
+.herobox { width: 100%; max-width: 560px; margin: 0 auto; text-align: start; background: var(--surface); border-radius: var(--r-lg); padding: clamp(16px, 3vw, 24px); }
 .herobox .row { justify-content: flex-start; margin-block-start: 0; }
-.proof { max-width: 880px; margin: var(--s-6) auto 0; }
-.proof .ptitle { font-size: var(--t-sm); font-weight: 700; color: var(--muted); text-align: center; margin-block-end: var(--s-3); }
-.plist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
-@media (min-width: 900px) { .plist { grid-template-columns: repeat(2, 1fr); } }
-.plist a { display: grid; gap: 2px; min-height: 44px; padding: var(--s-3) var(--s-4); border-radius: var(--r); background: var(--soft); color: var(--ink); text-decoration: none; }
-@media (hover: hover) { .plist a:hover { box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 35%, var(--line)); } }
-.plist .lbl, .ex .lbl, .dcard .lbl { font-size: var(--t-xs); font-weight: 700; color: var(--accent); }
-.plist .hl { font-size: var(--t-sm); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.plist .ptender a { background: var(--accent-soft); }
-.proof .psrc { text-align: center; margin: var(--s-3) 0 0; }
-.searchbox.narrow { max-width: 640px; margin: 0 auto var(--s-5); }
 
-.ba { display: grid; gap: var(--s-4); max-width: 960px; margin: 0 auto; }
+.ba { display: grid; gap: var(--s-2); }
 @media (min-width: 760px) { .ba { grid-template-columns: 1fr 1fr; } }
-.ba .col { border-radius: var(--r-lg); padding: var(--s-5); }
-.ba .before { background: var(--soft); }
-.ba .after { background: var(--accent-soft); }
-.ba h3 { font-size: var(--t-md); }
-.ba ul { margin: 0; padding-inline-start: 1.2em; display: grid; gap: var(--s-2); }
-.ba .before li { color: var(--ink-2); }
-
-.examples .ex { text-align: start; display: grid; gap: var(--s-2); align-content: start; }
-.examples .ex .hl { font-weight: 600; margin: 0; line-height: 1.45; }
-.examples .ex p.small { margin: 0; }
+.ba .col { border-radius: var(--r-lg); padding: clamp(20px, 3vw, 40px); }
+.ba .before { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
+.ba .after { background: var(--surface); }
+.ba h3 { font-size: var(--t-lg); font-weight: 400; margin: 0 0 var(--s-4); }
+.ba .after h3::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-inline-end: var(--s-2); vertical-align: middle; }
+.ba ul { margin: 0; padding-inline-start: 1.2em; display: grid; gap: var(--s-3); }
+.ba .before li { color: var(--muted); }
 
 .join.preview { align-items: start; }
-.join.preview .form h3 { font-size: var(--t-lg); margin-block-end: var(--s-4); }
+.join.preview .form h3 { font-size: var(--t-lg); font-weight: 400; margin-block-end: var(--s-4); }
 .dpreview { display: grid; gap: var(--s-3); }
-.dcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: var(--s-4); display: grid; gap: var(--s-3); box-shadow: var(--shadow-sm); }
-.dcard .dtop { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; border-block-end: 1px solid var(--line); padding-block-end: var(--s-2); }
+.dcard { background: var(--paper); border-radius: var(--r); padding: var(--s-5); display: grid; gap: var(--s-4); }
+.dcard .dtop { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; border-block-end: 1px solid var(--line); padding-block-end: var(--s-3); }
 .dcard .dtop b span { color: var(--accent); }
-.ditems { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.dcard .lbl { font-size: var(--t-xs); font-weight: 600; color: var(--ink); }
+.ditems { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); }
 .ditems li, .dtender, .dpick { display: grid; gap: 2px; }
-.dcard .hl { font-size: var(--t-sm); line-height: 1.45; }
-.dtender { background: var(--accent-soft); border-radius: 10px; padding: var(--s-2) var(--s-3); }
+.dcard .hl { font-size: var(--t-sm); line-height: 1.5; color: var(--ink-2); }
+.dtender { background: var(--surface); border-radius: var(--r-sm); padding: var(--s-3); }
 
-.faq { max-width: 760px; margin: 0 auto; display: grid; gap: var(--s-2); }
-.faq details { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
-.faq summary { cursor: pointer; font-weight: 600; min-height: 48px; display: flex; align-items: center; padding: var(--s-3) var(--s-4); list-style: none; }
+.faq { max-width: 880px; display: grid; border-block-start: 1px solid var(--line); }
+.faq details { border-block-end: 1px solid var(--line); }
+.faq summary { cursor: pointer; text-decoration: none; font-weight: 400; font-size: var(--t-md); min-height: 56px; display: flex; align-items: center; padding: var(--s-3) 0; list-style: none; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; margin-inline-start: auto; color: var(--accent); font-weight: 700; }
+.faq summary::after { content: "+"; margin-inline-start: auto; font-size: var(--t-lg); font-weight: 300; }
 .faq details[open] summary::after { content: "–"; }
-.faq details p { margin: 0; padding: 0 var(--s-4) var(--s-4); color: var(--ink-2); }
+.faq details p { margin: 0; padding: 0 0 var(--s-5); color: var(--ink-2); max-width: 680px; }
 
-/* Phones: keep the page to the hook, proof, before/after, tenders, preview and FAQ. */
-@media (max-width: 759px) { .examples-sec, .search-sec { display: none; } }
+/* Phones: keep the page short (hook, this week, before/after, tenders, preview, FAQ). */
+@media (max-width: 759px) { .crafts-sec { display: none; } }
+.join.preview .form { background: var(--paper); }
+.join.preview .chip { background: var(--paper); }
+.join.preview .chip.on { background: var(--ink); color: var(--bg); }

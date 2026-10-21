@@ -60,11 +60,41 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Graceful without config**: with no env vars the site builds and shows "בקרוב" notices instead of sign-up.
 - Next: people search with AI across people + companies, newsletter sending (Resend), contact requests, Hebrew-name slugs.
 
-## Visual design v2 (owner: "Dribbble's look, with Simply's purple")
-- **Look**: white canvas, deep-purple ink, dark pill primary buttons, soft grey pill search with a round accent button, outlined pill tags, image-first people cards (cover tile, headline on hover, avatar + name below). Inspiration only: no Dribbble name, logo, copy or assets.
+## Visual design v2 (owner: "Dribbble's look, with Simply's purple") (look superseded by v3)
+- **Look** (replaced by v3 below): white canvas, deep-purple ink, dark pill primary buttons, soft grey pill search with a round accent button, outlined pill tags, image-first people cards. The accent colour and type below still hold.
 - **Colour**: one accent, Simply's `--color-primary-purple-haze` `#8217ff` (from hellosimply.com's CSS); ink is Simply's deep purple `#110034`. Both pass WCAG AA on white. Org-group colours (makers / tech / buyers) stay for the map; buyer moved from magenta to raspberry so it doesn't read as the accent.
 - **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
 - **One product**: the same tokens in `app/globals.css` and `site/app.html`.
+
+## Design round: founder + UX + copy + QA pass on v5 (owner: "the product got lost chasing Awwwards")
+- **Product first**: the home page now shows this week's three updates (the digest's lead items) right under the hero, and the primary button is the digest sign-up (stage 1). Company cards carry what they commission (and through which agency), or their clients, or what they do, plus the latest update with its date; the generic "עדכון" tag and the hover-only caption are gone, so phones see it too. Thumbnails show the logo once (no repeated name); the company page orders description → why now → what they buy → ways in → crafts.
+- **Copy**: shorter everywhere ("מי מזמין מה. ומה השתנה השבוע.", one-line list intros, short search placeholders). Filter labels say what they do ("לקוחות או ספקים", "סוג חברה").
+- **QA**: section titles inside a page sit under the page title (20–24px, 600); tags start-aligned with the page; home tender cards fill the row; logos sit on the grey (multiply) so white logos no longer vanish into a white square; footer links two per row on phones. RTL arrows checked: "‹" and "←" point forward in Hebrew, "→" only in English.
+
+## Visual design v5 (owner: "copy Awwwards' filtering, thumbnails and inner pages as close to 1:1 as possible; we can change later")
+- Measured from the owner's screenshots: page `#f8f8f8`, grey blocks `#ededed`, page-coloured buttons in a grey filter tray (details in `team/DESIGN.md`).
+- **Header**: a promo strip above it (digest + survey ticker, replacing the survey banner). A search field in the bar in both apps (site search on the Next pages, the list's own search in the companies app). On phones: hamburger, wordmark, search, icon.
+- **Companies list**: a small title with a count box; a tray of six filter dropdowns with radio rings (Show, Type, Craft, Industry, City, Sort) replacing the lens switch, the filter sheet and the sort select. Cards are thumbnail-first with an Awwwards-style byline; the details moved into the hover caption and the company page.
+- **Company page**: full screen on phones, a square ink close button, dotted section labels, description first, pill tags.
+- **Next listing pages** (people, tenders, search): the same small title + count box; the search and filters sit in a grey tray. The home hero loses its search (the header has it) and gets two buttons.
+- Thumbnails use our 64px logos, not screenshots of company sites. Screenshots would need a capture service and storage; that's a later decision.
+
+## Visual design v4 (owner: "even more like Awwwards: same margins, UI, menu, hamburger on phones, their buttons; mostly monochrome greys, purple less dominant")
+- **Spec**: `team/DESIGN.md` (analysis of awwwards.com + our tokens and components). Supersedes v3's look below.
+- **Look**: grey canvas `#e9e9e9`, white cards, `#222` ink, no shadows or gradients; 4/8/14px radii only; wide layout (max 1760px, 16–32px side margins).
+- **Buttons**: Awwwards' pair, filled ink or outlined ink, same size, 8px corners, 500 weight. No purple buttons.
+- **Purple**: a marker only (wordmark dot, metadata dot, current menu item, focus ring, new-update count, tender closing soon).
+- **Type**: Inter Tight (Latin) replaces Mona Sans; Heebo stays for Hebrew. Display 300, headings 400, no 700+.
+- **Menu**: one header for both apps; under 861px a hamburger opens a full-height menu (big light words on hairlines, full-width call to action, theme button). The companies app's section switcher is a floating ink bar.
+- **Footer**: one source (`footerHtml()` in `lib/chrome.mjs`) for both apps.
+
+## Visual design v3 (owner: "Awwwards-like UI and UX instead of Dribbble") (look superseded by v4)
+- **Reference**: the editorial sites featured on Awwwards (Site of the Day style). Inspiration only: no Awwwards name, badge, copy or assets, and nothing copied from a specific winner.
+- **Look**: warm paper canvas (`#f5f4f0`), near-black ink (`#0f0d14`), hairline rules instead of shadows, squarer cards (8/12/20px radii; buttons and tags stay pills). Dark theme is the same idea inverted (`#0b0a0f` / `#f2f0ea`). Accent stays Simply's purple; all text pairs pass WCAG AA.
+- **Type**: oversized display headings (hero up to 120px, page heads up to 72px, weight 800, tight leading), start-aligned, calm 16px body. Still Mona Sans + Heebo, no tracking or uppercase on Hebrew.
+- **Layout**: start-aligned page heads with a hairline under them; home sections open with a numbered label on an ink rule ("01 חיפוש לפי תחום"); crafts are an index grid of hairline cells; "what you get" is numbered rows with an arrow; the digest sign-up sits in an inverse (ink) block.
+- **Motion**: hover states fill with ink or draw a line (nav underline, arrows sliding in); the hero settles in on load; sections rise into view where `animation-timeline: view()` is supported; a decorative craft ticker (aria-hidden; its links are in the grid). Everything stops under `prefers-reduced-motion`. No custom cursor, no scroll-jacking, no preloader: speed and tap targets (≥44px) come first.
+- **One product**: same tokens in `app/globals.css` and `site/app.html`; header and footer in `app/chrome.css`.
 
 ## Design round 1: layout, naming, people seed (owner feedback on v2)
 - **Layout**: search moved out of the header. Header = logo, People, Companies, one call to action (same bar in the companies app). Centered hero and section intros; one container (max 1200px, side gutter 20–48px); spacing, type and radius scales as tokens.

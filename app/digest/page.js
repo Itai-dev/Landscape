@@ -82,7 +82,7 @@ export default async function Digest({ searchParams }) {
           </div>
           <div className="card stack share">
             <h3>לשתף</h3>
-            <p className="muted small">פוסט מוכן עם העדכונים הבולטים וקישור לגיליון.</p>
+            <p className="muted small">פוסט מוכן עם העדכונים הבולטים וקישור ל״השבוע בתעשייה״ באתר.</p>
             <CopyPost text={linkedinPost(d, base)} />
           </div>
           {surveyOpen() && (
@@ -97,10 +97,10 @@ export default async function Digest({ searchParams }) {
         <div className="dmain">
           <details className="craft-filter">
             <summary>
-              <span>{who ? <>התחומים שלכם: <b>{who}</b></> : "הגיליון הכללי"}</span> <span className="change">שינוי תחומים</span>
+              <span>{who ? <>התחומים שלכם: <b>{who}</b></> : "כל התחומים"}</span> <span className="change">שינוי תחומים</span>
             </summary>
             <nav className="popular" aria-label="התאמה לתחומים">
-              <a className={`tag${chosen.length ? "" : " on"}`} href="/digest" aria-current={chosen.length ? undefined : "true"}>הגיליון הכללי</a>
+              <a className={`tag${chosen.length ? "" : " on"}`} href="/digest" aria-current={chosen.length ? undefined : "true"}>כל התחומים</a>
               {CRAFTS.filter((c) => TOP.includes(c.slug) || chosen.includes(c.slug)).map((c) => (
                 <a key={c.slug} className={`tag${chosen.includes(c.slug) ? " on" : ""}`} href={toggle(c.slug)} aria-current={chosen.includes(c.slug) ? "true" : undefined}>{c.he}</a>
               ))}

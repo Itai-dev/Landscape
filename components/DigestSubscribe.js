@@ -43,21 +43,21 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
   const [error, setError] = useState("");
 
   if (!configured) {
-    return <p className="muted small">ההרשמה במייל נפתחת בקרוב. בינתיים הגיליון מתעדכן כאן כל שבוע.</p>;
+    return <p className="muted small">ההרשמה במייל נפתחת בקרוב. בינתיים ״השבוע בתעשייה״ מתעדכן כאן כל שבוע.</p>;
   }
   if (state === "sent") {
     return (
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים עליו כדי לאשר, והגיליון הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, מכרזים פתוחים ומי מזמין עכשיו. אחרי האישור אפשר לבחור תחומים. כדאי לפתוח את הקישור באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, מכרזים פתוחים ומי מזמין עכשיו. אחרי האישור אפשר לבחור תחומים. כדאי לפתוח את הקישור באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }
   if (state === "saved") {
     return (
       <div className="notice ok" role="status">
-        <b>נרשמתם. הגיליון הראשון יגיע {firstSendLabel(frequency)}.</b> אפשר לשנות תחומים ותדירות בכל רגע <a href="/digest/settings">כאן</a>.
+        <b>נרשמתם. המייל הראשון יגיע {firstSendLabel(frequency)}.</b> אפשר לשנות תחומים ותדירות בכל רגע <a href="/digest/settings">כאן</a>.
       </div>
     );
   }
@@ -98,7 +98,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
           <details className="craft-pick">
             <summary>
               <span className="label">התחומים שלכם</span>{" "}
-              <span className="muted small">{crafts.length ? label(crafts) : "הגיליון הכללי"}</span>{" "}
+              <span className="muted small">{crafts.length ? label(crafts) : "כל התחומים"}</span>{" "}
               <span className="change">שינוי תחומים</span>
             </summary>
             <Chips name="תחומים" options={CRAFTS} value={crafts} onChange={setCrafts} />
@@ -124,7 +124,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !consent || (!user && !email.includes("@"))}>
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
-          {cta || (user ? "להירשם לגיליון" : "שלחו לי את הגיליון של יום ראשון")}
+          {cta || (user ? "להירשם למייל השבועי" : "שלחו לי את המייל של יום ראשון")}
         </button>
         <span className="small muted">{note || "עד מייל אחד בשבוע. הסרה בלחיצה. בלי סיסמה."}</span>
       </div>

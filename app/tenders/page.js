@@ -40,9 +40,9 @@ export default async function Tenders({ searchParams }) {
 
   return (
     <div className="wrap">
-      <div className="pagehead">
-        <h1>מכרזים פתוחים</h1>
-        <p>עבודה שאפשר להגיש עליה הצעה עכשיו: הפקה, וידאו, עיצוב, אירועים וקמפיינים, ממשרדי ממשלה, עיריות וגופים ציבוריים. לפי מועד ההגשה.</p>
+      <div className="pagehead list">
+        <h1>מכרזים פתוחים <span className="cbox">{open.length}</span></h1>
+        <p>עבודה שאפשר להגיש עליה הצעה עכשיו: <b>הפקה, וידאו, עיצוב, אירועים וקמפיינים</b>, ממשרדי ממשלה, עיריות וגופים ציבוריים. לפי מועד ההגשה, עם קישור למקור.</p>
         <p><a className="btn soft" href="/digest#subscribe" data-track="tender_digest_cta">מכרזים חדשים במייל, כל יום ראשון ‹</a></p>
       </div>
 

@@ -34,12 +34,12 @@ export default function DigestSettings() {
     })();
   }, [user]);
 
-  if (!configured) return <div className="soon"><h3>ההרשמה במייל נפתחת בקרוב</h3><p>בינתיים הגיליון מתעדכן באתר כל שבוע.</p><a className="btn" href="/digest">לגיליון</a></div>;
+  if (!configured) return <div className="soon"><h3>ההרשמה במייל נפתחת בקרוב</h3><p>בינתיים ״השבוע בתעשייה״ מתעדכן באתר כל שבוע.</p><a className="btn" href="/digest">לעדכוני השבוע</a></div>;
   if (user === undefined) return <p className="center muted"><span className="spinner" aria-hidden /> טוען…</p>;
   if (!user) {
     return (
       <div className="panel stack">
-        <h2>להירשם לגיליון</h2>
+        <h2>להירשם למייל השבועי</h2>
         <p className="muted">משאירים מייל ומאשרים בקישור. מי שכבר רשום יקבל קישור כניסה לשינוי ההגדרות.</p>
         <DigestSubscribe />
       </div>
@@ -65,7 +65,7 @@ export default function DigestSettings() {
       setState("saved");
     } else {
       const j = await res.json().catch(() => ({}));
-      setSaveError(j.error === "consent_required" ? "כדי לקבל את הגיליון צריך לסמן את האישור." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setSaveError(j.error === "consent_required" ? "כדי לקבל את המייל השבועי צריך לסמן את האישור." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
       setState("error");
     }
   }
@@ -74,7 +74,7 @@ export default function DigestSettings() {
   return (
     <form className="stack digest-form" onSubmit={save}>
       {welcome && on && state === "idle" && (
-        <div className="notice ok" role="status"><b>נרשמתם לגיליון.</b> הגיליון הראשון יגיע {firstSendLabel(prefs.frequency)} ל־<span className="ltr">{user.email}</span>.</div>
+        <div className="notice ok" role="status"><b>נרשמתם.</b> המייל הראשון יגיע {firstSendLabel(prefs.frequency)} ל־<span className="ltr">{user.email}</span>.</div>
       )}
       {welcome && !on && state === "idle" && (
         <div className="notice" role="status">ההרשמה לא הושלמה. בוחרים תדירות ושומרים.</div>
@@ -92,7 +92,7 @@ export default function DigestSettings() {
           </div>
         </div>
         <div>
-          <span className="label">תחומים <span className="muted small">(בלי בחירה מקבלים את הגיליון הכללי)</span></span>
+          <span className="label">תחומים <span className="muted small">(בלי בחירה מקבלים את כל התחומים)</span></span>
           <div className="chips" role="group" aria-label="תחומים">
             {CRAFTS.map((c) => (
               <label key={c.slug} className={`chip${prefs.crafts.includes(c.slug) ? " on" : ""}`}>
@@ -116,7 +116,7 @@ export default function DigestSettings() {
           {state === "saving" ? <span className="spinner" aria-hidden /> : null}
           שמירה
         </button>
-        <a className="btn" href={preview}>לראות את הגיליון שלי</a>
+        <a className="btn" href={preview}>לראות את המייל שלי</a>
       </div>
     </form>
   );
