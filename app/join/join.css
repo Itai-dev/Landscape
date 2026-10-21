@@ -15,7 +15,7 @@ body:has(.joinflow) { padding-bottom: 0 !important; }
 .jdots li.on { background: var(--accent); }
 
 .jstep { flex: 1; display: flex; flex-direction: column; gap: var(--s-4); }
-.jstep h1 { font-size: var(--t-2xl); font-weight: 300; line-height: 1.05; margin: 0; outline: none; }
+.jstep h1 { margin: 0; outline: none; }
 .jstep > p { margin: 0; }
 
 .jcrafts { display: grid; gap: var(--s-2); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-block-start: var(--s-2); }

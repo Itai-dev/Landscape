@@ -1,5 +1,5 @@
 /* Home page: sell the weekly digest (hook, crafts, this week, tenders, FAQ, closing band). Awwwards look: grey blocks, ink, no shadows. */
-.hero.sell h1 { font-size: var(--t-2xl); line-height: 1.04; max-width: 26ch; }
+.hero.sell h1 { max-width: 26ch; }
 .hero.sell .herohint { margin: var(--s-3) 0 0; }
 
 .faq { max-width: 880px; display: grid; border-block-start: 1px solid var(--line); }
@@ -12,7 +12,7 @@
 
 /* Closing band: one line and one button */
 .closer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-5); }
-.panel.inverse.closer h2 { margin: 0; font-size: var(--t-xl); font-weight: 300; line-height: 1.15; max-width: 22ch; }
+.panel.inverse.closer h2 { margin: 0; max-width: 22ch; }
 .closer .btn { flex: none; }
 
 @media (max-width: 639px) {
@@ -21,7 +21,6 @@
   /* Crafts: a compact swipe row right under the hero (like an app's categories) */
   .crafts-sec { padding-block-start: 0; }
   .crafts-sec .sechead { margin-block-end: var(--s-3); }
-  .crafts-sec .sechead h2 { font-size: var(--t-lg); }
   .crafts.scroll .craft { flex: 0 0 116px; min-height: 104px; padding: var(--s-3); gap: var(--s-3); font-size: var(--t-sm); }
   .crafts.scroll .craft .ico { width: 26px; height: 26px; }
   .crafts.scroll .craft .n { display: none; }
@@ -42,24 +41,25 @@
 .hero.sell.split .htext { display: grid; justify-items: start; gap: 0; }
 /* Hero headline: big and heavy; "מה קורה" on one line, the rolling craft on the next. Sized so the longest
    craft ("באנימציה תלת־ממדית?") fits its column without wrapping. */
-.hero.sell.split h1 { font-size: 8.4vw; font-weight: 700; letter-spacing: -.01em; line-height: 1.02; max-width: none; margin-block-end: var(--s-5); }
+.hero.sell.split h1 { max-width: none; margin-block-end: var(--s-5); }
 .hero.sell.split h1 .rot { display: grid; }
-@media (min-width: 960px) { .hero.sell.split h1 { font-size: clamp(48px, 5.2vw, 88px); } }
 .hero.sell.split .lead { margin: 0 0 var(--s-5); max-width: 520px; text-align: start; }
 .hero.sell.split .row { justify-content: flex-start; }
 
-/* The rotating word (components/RotatingWord.js): letters roll like Apple's clock digits. Every word sits invisible in
+/* The rotating word (components/RotatingWord.js): rolls like Apple's clock digits, the old word up and out while the new one comes up from below, as one strip. Every word sits invisible in
    one grid cell (.rsize) so the box keeps the longest word's size; the live layers roll inside a clipped line. */
-.rot { display: grid; justify-items: start; color: var(--accent); white-space: nowrap; overflow: hidden; padding-block: .06em; margin-block: -.06em; }
+.rot { display: grid; justify-items: start; color: var(--accent); white-space: nowrap; overflow: hidden; padding-block: .04em .08em; margin-block-start: .06em; }
 .rot > span { grid-area: 1 / 1; }
 .rot .rsize { visibility: hidden; }
 .rot .rl { display: inline-flex; }
 .rot .rc { display: inline-block; white-space: pre; }
-.rot .rl.in .rc { animation: roll-in .62s cubic-bezier(.2, .9, .25, 1.12) both; animation-delay: calc(var(--k) * 28ms); }
-.rot .rl.out .rc { animation: roll-out .5s cubic-bezier(.55, 0, .7, .2) both; animation-delay: calc(var(--k) * 22ms); }
-@keyframes roll-in { from { transform: translateY(150%); } to { transform: none; } }
-@keyframes roll-out { from { transform: none; } 99% { opacity: 1; } to { transform: translateY(-150%); opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .rot .rc { animation: none !important; } .rot .rl.out { display: none; } }
+/* One word at a time: the old one rolls up and out, then the new one rolls up into place, so the two never share
+   the line (no overlap, no fade). */
+.rot .rl.out { animation: roll-out .3s cubic-bezier(.55, 0, .75, .2) both; }
+.rot .rl.in { animation: roll-in .45s cubic-bezier(.2, .8, .25, 1) .28s both; }
+@keyframes roll-out { from { transform: none; } to { transform: translateY(-115%); visibility: hidden; } }
+@keyframes roll-in { from { transform: translateY(115%); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .rot .rl { animation: none !important; } .rot .rl.out { display: none; } }
 
 .checks { list-style: none; margin: 0 0 var(--s-6); padding: 0; display: grid; gap: var(--s-3); }
 .checks li { display: flex; align-items: flex-start; gap: var(--s-3); color: var(--ink-2); font-size: var(--t-base); line-height: 1.5; }
@@ -116,7 +116,6 @@
 
 /* Survey band: hero-sized question on an ink panel. */
 .surveyband { display: grid; gap: var(--s-4); justify-items: start; }
-.panel.inverse.surveyband h2 { font-size: 8.4vw; font-weight: 700; line-height: 1.02; letter-spacing: -.01em; margin: 0; color: var(--bg); }
-@media (min-width: 960px) { .panel.inverse.surveyband h2 { font-size: clamp(48px, 5.2vw, 88px); } }
+.panel.inverse.surveyband h2 { margin: 0; color: var(--bg); }
 .surveyband .muted { max-width: 620px; margin: 0; }
 .surveyband .eyebrow.inv { color: var(--bg); margin: 0; }

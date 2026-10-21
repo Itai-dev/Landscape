@@ -9,7 +9,7 @@
 .tcard .due.closed { background: var(--soft-2); color: var(--muted); box-shadow: none; }
 .tcard .due.upcoming { background: transparent; color: var(--ink-2); box-shadow: none; outline: 1px dashed var(--line-2); outline-offset: -1px; }
 .tcard .when { font-size: var(--t-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
-.tcard h3 { margin: 0; font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
+.tcard h3 { margin: 0; overflow-wrap: anywhere; }
 .tcard .buyer { margin: 0; font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
 .tcard .buyer a { color: var(--ink); display: inline-flex; align-items: center; min-height: 44px; }
 .tcard .buyer { display: flex; flex-wrap: wrap; align-items: center; gap: 0 4px; }
@@ -20,10 +20,9 @@
 @media (pointer: coarse), (max-width: 720px) { .tcard .crafts .tag { min-height: 44px; padding-inline: 16px; } }
 .tcard .go { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-weight: 500; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); justify-self: start; margin-block-start: var(--s-1); }
 .tcard.closed .go { color: var(--ink-2); }
-.tcard.compact h3 { font-size: 16px; }
 .tcard.compact { padding: var(--s-4) var(--s-5); }
 .tnote { margin-block-start: var(--s-8); display: grid; gap: var(--s-3); justify-items: start; }
-.tnote h2 { margin: 0; font-size: var(--t-lg); }
+.tnote h2 { margin: 0; }
 .tnote p { margin: 0; max-width: 720px; }
 
 /* Home: "מכרזים פתוחים עכשיו" */
