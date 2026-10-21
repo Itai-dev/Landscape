@@ -11,6 +11,7 @@ import { PROFILES_ENABLED } from "@/lib/config";
 import { parseQuery } from "@/lib/match";
 import { supabaseConfig } from "@/lib/config";
 import { listTenders } from "@/lib/tenders";
+import { searchTools } from "@/lib/tools";
 import "../tenders/tenders.css";
 
 export const metadata = { title: "חיפוש", robots: { index: false } };
@@ -37,7 +38,9 @@ export default async function Search({ searchParams }) {
   const people = seeds.length + members.length;
   // Live tenders (open, then upcoming) for the same words or craft; each row says which.
   const tenders = any ? listTenders({ q, craft }) : [];
-  const nothing = any && companies.length + people + tenders.length === 0;
+  // Tools by name or maker (only with the TOOLS flag on; empty otherwise).
+  const tools = q ? searchTools(q) : [];
+  const nothing = any && companies.length + people + tenders.length + tools.length === 0;
 
   return (
     <div className="wrap">
@@ -78,6 +81,23 @@ export default async function Search({ searchParams }) {
               <a key={t.id} className="trow" href={`/tenders?${qs({ q, craft })}`}>
                 <b>{t.scope_summary}</b>
                 <span>{t.buyer_name_he || t.buyer} · {t.state === "open" ? `${t.countdown.text} · ` : ""}<bdi>{t.when}</bdi></span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {tools.length > 0 && (
+        <section aria-labelledby="tl-h">
+          <div className="subhead">
+            <h2 id="tl-h">כלים <span className="count">{tools.length}</span></h2>
+            <a className="btn sm" href="/tools">לכל הכלים</a>
+          </div>
+          <div className="tresults">
+            {tools.map((t) => (
+              <a key={t.id} className="trow" href={`/tools#${t.id}`}>
+                <b lang="en" dir="ltr" style={{ textAlign: "start" }}>{t.name}</b>
+                <span>{t.one_line_he}</span>
               </a>
             ))}
           </div>

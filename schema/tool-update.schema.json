@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tool update",
+  "description": "A dated change to a tool, from the maker's own changelog, blog or press release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "tool_id", "date", "headline_he", "why_he", "crafts", "source_url", "added"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^tu-\\d{4}-\\d{2}-\\d{2}-[a-z0-9-]+$" },
+    "tool_id": { "type": "string" },
+    "date": { "type": "string", "format": "date", "description": "The date the maker published it." },
+    "headline_he": { "type": "string", "minLength": 6, "maxLength": 200 },
+    "why_he": { "type": "string", "minLength": 6, "maxLength": 240, "description": "Who it is relevant to, factually: 'לאנשי עריכה: …'" },
+    "crafts": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true },
+    "source_url": { "type": "string", "format": "uri", "pattern": "^https://" },
+    "added": { "type": "string", "format": "date" }
+  }
+}

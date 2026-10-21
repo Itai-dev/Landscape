@@ -138,6 +138,29 @@ export default async function Digest({ searchParams }) {
             </section>
           )}
 
+          {d.tools?.length > 0 && (
+            <section aria-labelledby="d-tools">
+              <div className="subhead">
+                <h2 id="d-tools">כלים ו־AI השבוע <span className="count">{d.tools.length}</span></h2>
+                <a className="tap" href="/tools">לכל הכלים ‹</a>
+              </div>
+              <ol className="dlist">
+                {d.tools.map((u) => (
+                  <li key={u.id} className="ditem">
+                    <div className="dmeta"><span className="dtype">עדכון · <bdi lang="en">{u.tool}</bdi></span> · <span>{u.day}</span></div>
+                    <p className="dhead"><Bidi>{u.headline}</Bidi></p>
+                    <p className="dwhy"><span className="muted">למה זה רלוונטי: </span><Bidi>{u.why}</Bidi></p>
+                    <div className="dfoot">
+                      <a className="src tap" href={u.source_url} target="_blank" rel="noopener noreferrer" data-track="tool_source_click" data-track-category={u.category}>
+                        מקור רשמי <LinkIcon size={14} />
+                      </a>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
           {d.more.length > 0 && (
             <section aria-labelledby="d-more">
               <div className="subhead"><h2 id="d-more">עוד בתעשייה</h2></div>

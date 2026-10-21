@@ -9,6 +9,7 @@
   python3 scripts/landscape.py logos [--all]       # fetch missing logos (needs Pillow)
   python3 scripts/landscape.py signals FILE...     # merge new signals into data/signals/
   python3 scripts/landscape.py tenders FILE...     # merge tenders into data/tenders/ (new + status/deadline updates)
+  python3 scripts/landscape.py tools FILE...       # merge tool updates into data/tools/updates/ (catalog: data/tools/catalog.json)
 """
 from __future__ import annotations
 
@@ -35,6 +36,10 @@ SIGNALS = ROOT / "data" / "signals"
 TENDER_SCHEMA = json.loads((ROOT / "schema" / "tender.schema.json").read_text())
 TENDERS = ROOT / "data" / "tenders"
 TENDER_RECENT_DAYS = 30  # closed tenders stay on the site this long after their deadline
+TOOLS = ROOT / "data" / "tools"
+TOOL_SCHEMA = json.loads((ROOT / "schema" / "tool.schema.json").read_text())
+TOOL_UPDATE_SCHEMA = json.loads((ROOT / "schema" / "tool-update.schema.json").read_text())
+TOOL_RECENT_DAYS = 60  # tool updates stay on the site this long
 FIELD_ORDER = list(SCHEMA["properties"].keys())
 LIST_FIELDS = {"aka", "categories", "services", "notable_clients", "notable_work", "tags", "sources"}
 CONF_RANK = {"low": 0, "medium": 1, "high": 2}
@@ -46,8 +51,10 @@ try:
     _VALIDATOR = jsonschema.Draft202012Validator(SCHEMA, format_checker=jsonschema.FormatChecker())
     _SIG_VALIDATOR = jsonschema.Draft202012Validator(SIGNAL_SCHEMA, format_checker=jsonschema.FormatChecker())
     _TENDER_VALIDATOR = jsonschema.Draft202012Validator(TENDER_SCHEMA, format_checker=jsonschema.FormatChecker())
+    _TOOL_VALIDATOR = jsonschema.Draft202012Validator(TOOL_SCHEMA, format_checker=jsonschema.FormatChecker())
+    _TOOL_UPDATE_VALIDATOR = jsonschema.Draft202012Validator(TOOL_UPDATE_SCHEMA, format_checker=jsonschema.FormatChecker())
 except ImportError:  # the tool still works, with lighter checks
-    _VALIDATOR = _SIG_VALIDATOR = _TENDER_VALIDATOR = None
+    _VALIDATOR = _SIG_VALIDATOR = _TENDER_VALIDATOR = _TOOL_VALIDATOR = _TOOL_UPDATE_VALIDATOR = None
 
 
 # ---------- helpers ----------
@@ -250,6 +257,7 @@ def cmd_validate(_args) -> int:
             bad += 1
             print(f"✗ tender {t['id']}: " + "; ".join(errs))
     print(f"{len(tenders)} tenders checked")
+    bad += validate_tools()
     return 1 if bad else 0
 
 
@@ -381,6 +389,8 @@ def cmd_build(_args) -> int:
     (out_dir / "logos.json").write_text(json.dumps(logos, **compact))
     tenders = site_tenders(load_tenders(), orgs)
     (out_dir / "tenders.json").write_text(json.dumps({"generated": dataset["generated"], "tenders": tenders}, **compact))
+    tools = site_tools()
+    (out_dir / "tools.json").write_text(json.dumps({"generated": dataset["generated"], **tools}, **compact))
     shutil_old = ROOT / "site" / "logos"
     if shutil_old.exists():
         import shutil
@@ -641,6 +651,114 @@ def cmd_tenders(args) -> int:
             rows.sort(key=lambda r: (r.get("published_at") or r["added"], r["id"]), reverse=True)
             p.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
     print(f"tenders: added {added}, updated {updated}, rejected {rejected}" + (" (dry run)" if args.dry_run else ""))
+    return 1 if rejected and args.strict else 0
+
+
+# ---------- tools ("כלים ו־AI") ----------
+
+def load_tool_catalog() -> list[dict]:
+    p = TOOLS / "catalog.json"
+    return json.loads(p.read_text()) if p.exists() else []
+
+
+def load_tool_updates() -> list[dict]:
+    out = []
+    for p in sorted((TOOLS / "updates").glob("*.json")):
+        out += json.loads(p.read_text())
+    return out
+
+
+def _schema_errors(validator, rec: dict) -> list[str]:
+    if not validator:
+        return []
+    return [f"{'/'.join(map(str, e.path)) or '(root)'}: {e.message}" for e in validator.iter_errors(rec)]
+
+
+def tool_errors(t: dict) -> list[str]:
+    errs = _schema_errors(_TOOL_VALIDATOR, t)
+    crafts = set(TAXONOMY["facets"]["craft"])
+    errs += [f"unknown craft '{c}'" for c in t.get("crafts", []) if c not in crafts]
+    return errs
+
+
+def tool_update_errors(u: dict, tool_ids: set[str]) -> list[str]:
+    errs = _schema_errors(_TOOL_UPDATE_VALIDATOR, u)
+    if u.get("tool_id") not in tool_ids:
+        errs.append(f"unknown tool_id '{u.get('tool_id')}'")
+    crafts = set(TAXONOMY["facets"]["craft"])
+    errs += [f"unknown craft '{c}'" for c in u.get("crafts", []) if c not in crafts]
+    if u.get("date", "") > TODAY:
+        errs.append("date is in the future")
+    return errs
+
+
+def validate_tools() -> int:
+    bad = 0
+    tools = load_tool_catalog()
+    ids = set()
+    for t in tools:
+        errs = tool_errors(t)
+        if t.get("id") in ids:
+            errs.append("duplicate id")
+        ids.add(t.get("id"))
+        if errs:
+            bad += 1
+            print(f"✗ tool {t.get('id')}: " + "; ".join(errs))
+    seen = set()
+    ups = load_tool_updates()
+    for u in ups:
+        errs = tool_update_errors(u, ids)
+        if u.get("id") in seen:
+            errs.append("duplicate id")
+        seen.add(u.get("id"))
+        if errs:
+            bad += 1
+            print(f"✗ tool update {u.get('id')}: " + "; ".join(errs))
+    print(f"{len(tools)} tools, {len(ups)} tool updates checked")
+    return bad
+
+
+def site_tools() -> dict:
+    """Catalog plus the last TOOL_RECENT_DAYS of updates, newest first."""
+    tools = load_tool_catalog()
+    names = {t["id"]: t["name"] for t in tools}
+    cutoff = (dt.date.today() - dt.timedelta(days=TOOL_RECENT_DAYS)).isoformat()
+    ups = [dict(u, tool_name=names.get(u["tool_id"], u["tool_id"])) for u in load_tool_updates() if u["date"] >= cutoff]
+    ups.sort(key=lambda u: (u["date"], u["id"]), reverse=True)
+    return {"tools": sorted(tools, key=lambda t: (t["category"], t["name"].lower())), "updates": ups}
+
+
+def cmd_tools(args) -> int:
+    """Merge a staging array of tool updates into data/tools/updates/YYYY-MM.json (by date). Known ids are replaced."""
+    ids = {t["id"] for t in load_tool_catalog()}
+    files: dict[Path, list[dict]] = {p: json.loads(p.read_text()) for p in sorted((TOOLS / "updates").glob("*.json"))}
+    where = {u["id"]: (p, i) for p, rows in files.items() for i, u in enumerate(rows)}
+    added = updated = rejected = 0
+    for path in args.files:
+        for raw in json.loads(Path(path).read_text()):
+            u = {k: v for k, v in raw.items() if v not in (None, "", [], {})}
+            u.setdefault("added", TODAY)
+            errs = tool_update_errors(u, ids)
+            if errs:
+                rejected += 1
+                print(f"  ✗ {u.get('id', '?')}: " + "; ".join(errs))
+                continue
+            if u["id"] in where:
+                p, i = where[u["id"]]
+                if files[p][i] != u:
+                    files[p][i] = u
+                    updated += 1
+                continue
+            p = TOOLS / "updates" / f"{u['date'][:7]}.json"
+            files.setdefault(p, []).append(u)
+            where[u["id"]] = (p, len(files[p]) - 1)
+            added += 1
+    if not args.dry_run:
+        (TOOLS / "updates").mkdir(parents=True, exist_ok=True)
+        for p, rows in files.items():
+            rows.sort(key=lambda r: (r["date"], r["id"]), reverse=True)
+            p.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n")
+    print(f"tool updates: added {added}, updated {updated}, rejected {rejected}" + (" (dry run)" if args.dry_run else ""))
     return 1 if rejected and args.strict else 0
 
 
@@ -1030,6 +1148,11 @@ def main() -> int:
     td.add_argument("--dry-run", action="store_true")
     td.add_argument("--strict", action="store_true")
     td.set_defaults(fn=cmd_tenders)
+    tl = sub.add_parser("tools")
+    tl.add_argument("files", nargs="+")
+    tl.add_argument("--dry-run", action="store_true")
+    tl.add_argument("--strict", action="store_true")
+    tl.set_defaults(fn=cmd_tools)
     args = p.parse_args()
     return args.fn(args)
 
