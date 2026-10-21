@@ -40,7 +40,7 @@ export default function TenderCard({ t, compact = false }) {
           )}
         </>
       )}
-      <a className="go" href={t.source_url} target="_blank" rel="noopener noreferrer">
+      <a className="go" href={t.source_url} target="_blank" rel="noopener noreferrer" data-track="tender_source_open">
         למכרז במקור הרשמי <LinkIcon size={16} />
       </a>
     </article>

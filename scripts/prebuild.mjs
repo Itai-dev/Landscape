@@ -29,9 +29,12 @@ body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footer
 const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
-  '<meta name="theme-color" content="#ffffff">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+  '<meta name="theme-color" content="#f8f8f8">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
   "<script>window.LANDSCAPE_SITE = true;</script>\n" +
-  `<script>${THEME_SCRIPT}</script>\n`;
+  `<script>${THEME_SCRIPT}</script>\n` +
+  // Vercel Web Analytics (counts nothing until enabled for the project in the Vercel dashboard).
+  '<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>\n' +
+  '<script defer src="/_vercel/insights/script.js"></script>\n';
 writeFileSync("public/companies/index.html", shell + body);
 cpSync("site/data", "public/companies/data", { recursive: true });
 console.log("prebuild: copied the companies app to public/companies");

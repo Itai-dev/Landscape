@@ -5,11 +5,11 @@ export default function NotFound() {
     <div className="wrap narrow">
       <div className="pagehead">
         <h1>הדף לא נמצא</h1>
-        <p>הקישור לא עובד. אולי הוא השתנה, או שהדף הוסר.</p>
+        <p>הקישור לא עובד. אולי הוא השתנה, או שהדף הוסר. אבל כבר הגעתם, אז כדאי להציץ במה שהשתנה השבוע.</p>
       </div>
       <div className="row center">
-        <a className="btn primary" href="/">לדף הבית</a>
-        <a className="btn" href="/people">לאנשים</a>
+        <a className="btn primary" href="/digest">לעדכוני השבוע</a>
+        <a className="btn" href="/tenders">למכרזים הפתוחים</a>
         <a className="btn" href="/companies">לחברות</a>
       </div>
     </div>

@@ -6,7 +6,7 @@ import SignOutButton, { clearLocalData } from "@/components/SignOutButton";
 export default function AccountClient() {
   const [deleting, setDeleting] = useState(false);
   async function remove() {
-    if (!window.confirm("למחוק את החשבון, העדפות הגיליון ותשובות הסקר? אי אפשר לבטל.")) return;
+    if (!window.confirm("למחוק את החשבון, העדפות המייל השבועי ותשובות הסקר? אי אפשר לבטל.")) return;
     setDeleting(true);
     const res = await fetch("/api/account/delete", { method: "POST" });
     if (res.ok) { clearLocalData(); window.location.href = "/?deleted=1"; }
@@ -15,9 +15,9 @@ export default function AccountClient() {
   return (
     <div className="stack">
       <div className="card stack">
-        <h2>הגיליון השבועי</h2>
+        <h2>המייל השבועי</h2>
         <p className="muted">תחומים, תדירות או הסרה מהרשימה.</p>
-        <div className="row"><a className="btn" href="/digest/settings">להגדרות הגיליון</a></div>
+        <div className="row"><a className="btn" href="/digest/settings">להגדרות המייל השבועי</a></div>
       </div>
       <div className="card stack">
         <h2>סקר התעריפים</h2>

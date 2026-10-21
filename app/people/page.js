@@ -1,7 +1,6 @@
 import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import AutoSelect from "@/components/AutoSelect";
-import SurveyBanner from "@/components/SurveyBanner";
 import { SearchIcon } from "@/components/Icons";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { ROLE_TYPES, searchSeeds } from "@/lib/people";
@@ -11,7 +10,7 @@ import { PROFILES_ENABLED } from "@/lib/config";
 
 export const metadata = {
   title: "אנשים",
-  description: "אנשי מקצוע בתעשיית הקריאייטיב בישראל: מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק.",
+  description: "מי מחליט בתעשיית הקריאייטיב בישראל: מנהלי שיווק, הפקה וקריאייטיב במותגים, במשרדים ובסטודיואים. לפי מה שפורסם בפומבי, עם המקור.",
 };
 
 const PAGE = 24;
@@ -43,9 +42,9 @@ export default async function People({ searchParams }) {
 
   return (
     <div className="wrap">
-      <div className="pagehead">
-        <h1>אנשים בתעשייה</h1>
-        <p>מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק. לפי שם, תפקיד, חברה או תחום.</p>
+      <div className="pagehead list">
+        <h1>מי מחליט בתעשייה <span className="cbox">{seeds.length.toLocaleString("he-IL")}</span></h1>
+        <p><b>מנהלי שיווק, הפקה וקריאייטיב</b> במותגים, במשרדים ובסטודיואים. לפני שפונים לחברה, יודעים מי עומד מולכם. מפרסומים פומביים, עם מקור.</p>
       </div>
 
       <form className="toolbar" role="search" action="/people">
@@ -107,7 +106,6 @@ export default async function People({ searchParams }) {
           : null}
         מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.
       </p>
-      <div style={{ marginBlockStart: 32 }}><SurveyBanner /></div>
     </div>
   );
 }

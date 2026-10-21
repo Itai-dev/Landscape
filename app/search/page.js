@@ -38,7 +38,7 @@ export default async function Search({ searchParams }) {
 
   return (
     <div className="wrap">
-      <div className="pagehead">
+      <div className="pagehead list">
         {craft && !q ? (
           <h1 className="withicon"><span className="ico"><CraftIcon craft={craft} size={26} /></span>{craftLabel(craft)}</h1>
         ) : (

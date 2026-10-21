@@ -57,7 +57,7 @@ export default function SurveyCta({ open = true }) {
     <div className="soon">
       <h3>{draft ? "התחלתם לענות" : "מוכנים? זה לוקח בערך 4 דקות"}</h3>
       <p>{draft ? "התשובות נשמרו. ממשיכים מאיפה שעצרתם." : "כמה שאלות קצרות בכל מסך, ואפשר לעצור ולהמשיך אחר כך."}</p>
-      <a className="btn primary lg" href="/survey/start">{draft ? "להמשיך בסקר" : "להתחיל את הסקר"}</a>
+      <a className="btn primary lg" href="/survey/start" data-track="survey_start" data-track-label="survey-landing">{draft ? "להמשיך בסקר" : "להתחיל את הסקר"}</a>
     </div>
   );
 }

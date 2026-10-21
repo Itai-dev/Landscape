@@ -24,7 +24,7 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
       <div className="notice ok" role="status">
         <b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        {newsletter ? `הלחיצה עליו מאשרת גם את ההרשמה ל״השבוע בתעשייה״, והגיליון הראשון יגיע ${firstSendLabel("weekly")}. ` : ""}
+        {newsletter ? `הלחיצה עליו מאשרת גם את ההרשמה ל״השבוע בתעשייה״, והמייל הראשון יגיע ${firstSendLabel("weekly")}. ` : ""}
         כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );

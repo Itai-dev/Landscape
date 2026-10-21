@@ -13,7 +13,7 @@ export default async function AlertsUnsubscribe({ searchParams }) {
       <div className="wrap narrow">
         <div className="soon">
           <h1>ההתראות הופסקו</h1>
-          <p>לא יישלחו יותר התראות על חברות לכתובת הזו. הגיליון השבועי, אם נרשמתם אליו, ממשיך כרגיל.</p>
+          <p>לא יישלחו יותר התראות על חברות לכתובת הזו. המייל השבועי, אם נרשמתם אליו, ממשיך כרגיל.</p>
           <a className="btn" href="/me#follows">לחשבון שלי</a>
         </div>
       </div>
@@ -36,7 +36,7 @@ export default async function AlertsUnsubscribe({ searchParams }) {
           </>
         ) : (
           <>
-            <p>אחרי האישור לא יישלחו יותר התראות על החברות שבחרתם. רשימת החברות נשמרת, והגיליון השבועי לא מושפע.</p>
+            <p>אחרי האישור לא יישלחו יותר התראות על החברות שבחרתם. רשימת החברות נשמרת, והמייל השבועי לא מושפע.</p>
             <form method="post" action="/api/alerts/unsubscribe?form=1">
               <input type="hidden" name="u" value={u} />
               <input type="hidden" name="t" value={t} />
