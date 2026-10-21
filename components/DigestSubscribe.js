@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { useUser } from "@/components/useUser";
 import { CRAFTS, CONSENT_TEXT } from "@/lib/taxonomy";
-import { callbackUrl } from "@/lib/authLink";
+import { callbackUrl, normalEmail, validEmail } from "@/lib/authLink";
 import { firstSendLabel } from "@/lib/digestSchedule";
 import { track } from "@vercel/analytics";
 
@@ -51,7 +51,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, משרות ומכרזים, ומי מזמין את מה שאתם עושים. אחרי האישור אפשר לבחור תחומים. הקישור עובד רק במכשיר ובדפדפן האלה. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, משרות ומכרזים, ומה עוד השתנה בתעשייה. {crafts.length ? "התחומים שבחרתם נשמרים עם האישור." : "אחרי האישור אפשר לבחור תחומים."} הקישור עובד רק במכשיר ובדפדפן האלה. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }
@@ -69,22 +69,35 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
     try { track("digest_subscribe_submit", { where: where || id }); if (event) track(event, { crafts: crafts.length, frequency }); } catch {}
     setState("sending");
     setError("");
+    const fail = (msg) => { setState("error"); setError(msg); };
+    const OFFLINE = "אין חיבור כרגע. אפשר לנסות שוב בעוד רגע.";
     if (user) {
-      const res = await fetch("/api/digest/prefs", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ frequency, crafts, consent: true }) });
+      let res;
+      try {
+        res = await fetch("/api/digest/prefs", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ frequency, crafts, consent: true }) });
+      } catch {
+        return fail(OFFLINE);
+      }
       if (res.ok) setState("saved");
-      else { setState("error"); setError("לא הצלחנו לשמור. אפשר לנסות שוב."); }
+      else fail(res.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
       return;
     }
-    const { error } = await supabase.auth.signInWithOtp({
-      email: email.trim(),
-      options: { emailRedirectTo: callbackUrl({ next: "/digest/settings?welcome=1", subscribe: frequency, crafts }) },
-    });
+    const address = normalEmail(email);
+    if (!validEmail(address)) return fail("הכתובת לא נראית תקינה. כדאי לבדוק אותה.");
+    let error;
+    try {
+      ({ error } = await supabase.auth.signInWithOtp({
+        email: address,
+        options: { emailRedirectTo: callbackUrl({ next: "/digest/settings?welcome=1", subscribe: frequency, crafts }) },
+      }));
+    } catch {
+      return fail(OFFLINE);
+    }
     if (error) {
-      setState("error");
-      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+      fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
     } else if (onSent) {
       setState("idle");
-      onSent(email.trim());
+      onSent(address);
     } else setState("sent");
   }
 

@@ -17,7 +17,7 @@ export default async function Remove({ searchParams }) {
         <p>
           הכרטיס של <bdi>{p.name}</bdi> מבוסס על תפקיד שפורסם בפומבי (
           {p.roles.map((r, i) => <span key={i}>{i > 0 ? ", " : ""}<bdi>{orgLabel(r)}</bdi></span>)}).
-          אחרי השליחה השם יורד מיד מעמוד האנשים ומדפי החברות, ונמחק מרשומת החברה במאגר בעדכון הקרוב.
+          אחרי השליחה השם יורד מעמוד האנשים ומדפי החברות בתוך דקה, ונמחק מרשומת החברה במאגר בעדכון הקרוב.
         </p>
       </div>
       <div className="card"><RemoveForm id={p.id} email={process.env.NEXT_PUBLIC_PRIVACY_EMAIL || ""} /></div>
