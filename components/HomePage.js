@@ -37,8 +37,8 @@ const FAQ = [
   ["כמה מיילים, ואיך מסירים?", "עד מייל אחד בשבוע, ביום ראשון בבוקר (אפשר גם כל שבועיים או פעם בחודש). בכל מייל יש קישור להסרה בלחיצה אחת. את הכתובת לא מוכרים ולא משתפים."],
 ];
 
-// The home page. `split` shows the earlier hero (text and checks beside the update carousel) instead of the
-// centered search block; /test renders it that way for comparison.
+// The home page. `split` (the live home) is the hero with text and checks beside the update carousel; search is
+// in the header. Without it: the search-first page (a centered question and search), kept at /test.
 export default function HomePage({ split = false }) {
   if (PROFILES_ENABLED) return <ClassicHome />;
   const tenders = listTenders();
@@ -75,7 +75,6 @@ export default function HomePage({ split = false }) {
             </div>
             <HeroMedia items={media} />
           </div>
-          <HeroSearch popular={POPULAR.map((slug) => ({ slug, label: craftLabel(slug) }))} />
         </section>
       ) : (
         <section className="wrap">

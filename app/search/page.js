@@ -7,7 +7,7 @@ import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
-import { PROFILES_ENABLED, aiReady } from "@/lib/config";
+import { PROFILES_ENABLED, aiSearchOn } from "@/lib/config";
 import AskAnswer from "@/components/AskAnswer";
 import { askable } from "@/lib/askable";
 import { parseQuery } from "@/lib/match";
@@ -70,7 +70,7 @@ export default async function Search({ searchParams }) {
         </div>
       )}
 
-      {aiReady() && askable(typed) && <AskAnswer key={typed} q={typed} />}
+      {aiSearchOn() && askable(typed) && <AskAnswer key={typed} q={typed} />}
 
       {nothing && (
         <div className="soon" style={{ marginBlockStart: 48 }}>
