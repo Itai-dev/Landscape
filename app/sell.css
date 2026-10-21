@@ -35,3 +35,70 @@
   .panel.inverse.closer { padding: var(--s-6) var(--s-5); }
   .closer .btn { width: 100%; }
 }
+
+/* Dribbble-style split hero: text on the right (start), the update card on the left; search block under it. */
+.hero.sell.split { text-align: start; justify-items: stretch; max-width: none; padding-block: clamp(32px, 6vw, 96px) var(--s-6); display: grid; gap: var(--s-7); align-items: center; }
+@media (min-width: 960px) { .hero.sell.split { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } }
+.hero.sell.split .htext { display: grid; justify-items: start; gap: 0; }
+.hero.sell.split h1 { font-size: clamp(38px, 4.6vw, 72px); line-height: 1.02; max-width: none; margin-block-end: var(--s-5); }
+.hero.sell.split .lead { margin: 0 0 var(--s-5); max-width: 520px; text-align: start; }
+.hero.sell.split .row { justify-content: flex-start; }
+
+/* The rotating word: every word in one grid cell, so the cell keeps the longest word's size and the line never moves. */
+.rot { display: grid; justify-items: start; color: var(--accent); }
+.rot > span { grid-area: 1 / 1; opacity: 0; transform: translateY(.3em); transition: opacity .45s var(--ease), transform .45s var(--ease); }
+.rot > span.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rot > span { transition: none; transform: none; } }
+
+.checks { list-style: none; margin: 0 0 var(--s-6); padding: 0; display: grid; gap: var(--s-3); }
+.checks li { display: flex; align-items: flex-start; gap: var(--s-3); color: var(--ink-2); font-size: var(--t-base); line-height: 1.5; }
+.checks svg { flex: none; color: var(--accent); margin-block-start: 3px; }
+
+/* Desktop card: this week's updates, one at a time, with the company as a chip in the corner. */
+.hmedia { display: none; }
+@media (min-width: 960px) {
+  .hmedia { display: grid; position: relative; background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); min-height: 440px; }
+  .hcard { grid-area: 1 / 1; display: grid; align-content: end; gap: var(--s-4); background: var(--paper); border-radius: var(--r); padding: var(--s-7) var(--s-6) var(--s-8);
+    color: var(--ink); text-decoration: none; opacity: 0; pointer-events: none; transition: opacity .6s var(--ease); }
+  .hcard.on { opacity: 1; pointer-events: auto; }
+  @media (hover: hover) { a.hcard.on:hover .hhead { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; } }
+  .hlabel { font-size: var(--t-sm); color: var(--muted); }
+  .hhead { font-size: var(--t-xl); font-weight: 300; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .hchip { position: absolute; inset-block-end: var(--s-5); inset-inline-end: var(--s-5); display: inline-flex; align-items: center; gap: var(--s-2);
+    background: var(--bg); border-radius: var(--r-pill); padding: 6px 14px 6px 6px; font-size: var(--t-sm); font-weight: 500; max-width: 70%; }
+  .hchip bdi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hchip img, .hmono { width: 28px; height: 28px; border-radius: 50%; flex: none; object-fit: cover; background: var(--surface); }
+  .hmono { display: grid; place-items: center; font-size: 13px; color: var(--ink); }
+  .hdots { position: absolute; inset-block-start: var(--s-6); inset-inline-start: var(--s-6); display: flex; gap: 6px; }
+  .hdots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line-2); transition: background .3s ease; }
+  .hdots i.on { background: var(--accent); }
+}
+@media (prefers-reduced-motion: reduce) { .hcard { transition: none; } }
+
+/* "התעשייה, מסודרת": one tile per company type, with its tag, the real count and a short line. 3 columns, 2 on phones. */
+.catalog { display: grid; gap: var(--s-2); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 759px) { .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ctile { display: grid; align-content: start; justify-items: start; gap: var(--s-3); background: var(--surface); border-radius: var(--r); padding: var(--s-5); color: var(--ink); text-decoration: none; min-height: 168px; transition: background .2s ease; }
+@media (hover: hover) { .ctile:hover { background: var(--soft); text-decoration: none; } }
+.ctile .cn { font-size: var(--t-xl); font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; margin-block-start: var(--s-2); }
+.ctile .cl { font-size: var(--t-sm); color: var(--muted); line-height: 1.5; }
+@media (max-width: 639px) { .ctile { padding: var(--s-4); min-height: 140px; gap: var(--s-2); } }
+
+/* Search block: tabs, one wide rounded field with a round accent button, popular crafts. */
+.hsearchblock { display: grid; gap: var(--s-3); padding-block-end: var(--s-6); }
+.htabs { display: flex; gap: var(--s-1); flex-wrap: wrap; }
+.htabs button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: var(--t-sm); font-weight: 500; padding: 0 16px; min-height: 40px; border-radius: var(--r); cursor: pointer; }
+.htabs button.on { background: var(--surface); color: var(--ink); }
+@media (hover: hover) { .htabs button:not(.on):hover { color: var(--ink); } }
+.hfield input[type="search"] { border-radius: var(--r-pill); padding-inline-start: var(--s-6); }
+.hfield .go { border-radius: 50%; background: var(--accent); color: var(--accent-ink); }
+.hpop { margin-block-start: var(--s-1); }
+.hpop .tag { border-radius: var(--r-pill); padding: 6px 14px; font-size: var(--t-sm); }
+@media (max-width: 639px) {
+  .hero.sell.split { gap: var(--s-5); padding-block: var(--s-6) var(--s-5); }
+  .checks { margin-block-end: var(--s-5); }
+  .checks li { font-size: var(--t-sm); }
+  .hpop { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
+  .hpop::-webkit-scrollbar { display: none; }
+  .hpop > * { flex: none; }
+}

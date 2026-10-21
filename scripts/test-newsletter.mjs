@@ -160,8 +160,9 @@ await t("8. the edition is built for the chosen crafts, with brand, sender ident
   const m = message({ userId: U1, email: "maya@example.com", prefs: { frequency: "weekly", topics: [] }, crafts: ["motion-design"], now: SUNDAY, base: "https://x.test" });
   assert.deepEqual(m.digest.crafts.map((c) => c.slug), ["motion-design"]);
   assert.match(m.email.html, /dir="rtl"/);
-  assert.match(m.email.html, />creativein<span/);
-  assert.doesNotMatch(m.email.html + m.email.text, /Landscape|CreativeIn|גיליון/);
+  assert.match(m.email.html, /\/brand\/creativein-wordmark\.png" width="132" height="36" alt="CreativeIn"/);
+  // Old names never show: "Landscape", a lowercase "creativein" wordmark, or the word "גיליון".
+  assert.doesNotMatch(m.email.html + m.email.text, /Landscape|>creativein<|גיליון/);
   assert.match(m.email.html, /Test Sender · 1 Test St/);
   const unsub = `https://x.test/digest/unsubscribe?u=${U1}&t=${unsubscribeToken(U1)}`;
   assert.ok(m.email.html.includes(unsub.replace(/&/g, "&amp;")));
@@ -172,11 +173,11 @@ await t("8. the edition is built for the chosen crafts, with brand, sender ident
 });
 
 await t("8b. sender display name: a bare DIGEST_FROM gets DIGEST_SENDER_NAME", async () => {
-  process.env.DIGEST_SENDER_NAME = "creativein.";
+  process.env.DIGEST_SENDER_NAME = "CreativeIn";
   process.env.DIGEST_FROM = "hello@creativein.co.il";
-  assert.equal(fromAddress(), '"creativein." <hello@creativein.co.il>');
-  process.env.DIGEST_FROM = "creativein. <hello@creativein.co.il>";
-  assert.equal(fromAddress(), "creativein. <hello@creativein.co.il>");
+  assert.equal(fromAddress(), '"CreativeIn" <hello@creativein.co.il>');
+  process.env.DIGEST_FROM = "CreativeIn <hello@creativein.co.il>";
+  assert.equal(fromAddress(), "CreativeIn <hello@creativein.co.il>");
 });
 
 // --- 9. Schedule, Israel time ---------------------------------------------------------------------------------
@@ -240,7 +241,7 @@ globalThis.fetch = async (url, init) => {
   sent.push(...batch);
   return new Response(JSON.stringify({ data: batch.map((_, i) => ({ id: `m${sent.length}-${i}` })) }), { status: 200 });
 };
-const SEND_ENV = { RESEND_API_KEY: "k", DIGEST_FROM: "creativein. <hello@example.com>", DIGEST_SENDER_NAME: "S", DIGEST_SENDER_ADDRESS: "Addr", NEXT_PUBLIC_PRIVACY_EMAIL: "p@example.com" };
+const SEND_ENV = { RESEND_API_KEY: "k", DIGEST_FROM: "CreativeIn <hello@example.com>", DIGEST_SENDER_NAME: "S", DIGEST_SENDER_ADDRESS: "Addr", NEXT_PUBLIC_PRIVACY_EMAIL: "p@example.com" };
 const readers = () => [
   { user_id: "w", email: "w@example.com", frequency: "weekly", crafts: [], topics: [], last_sent_at: null },
   { user_id: "b", email: "b@example.com", frequency: "biweekly", crafts: [], topics: [], last_sent_at: null },

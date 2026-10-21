@@ -2,6 +2,7 @@ import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import { SearchIcon, CraftIcon, XIcon } from "@/components/Icons";
 import FollowButton from "@/components/FollowButton";
+import KindTag from "@/components/KindTag";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
@@ -96,7 +97,7 @@ export default async function Search({ searchParams }) {
                   <span className="logo">{o.logo ? <img src={o.logo} alt="" /> : (o.name_he || o.name).slice(0, 1)}</span>
                   <span className="nm">
                     <b><bdi>{o.name_he || o.name}</bdi></b>
-                    <span>{[kindLabel(o.kind), ["client", "agency"].includes(o.kind) && o.buys.length ? `מזמינים ${o.buys.slice(0, 2).join(", ")}` : o.categories.slice(0, 2).map(craftLabel).join(", ")].filter(Boolean).join(" · ")}</span>
+                    <span className="kline"><KindTag kind={o.kind} /><span>{["client", "agency"].includes(o.kind) && o.buys.length ? `מזמינים ${o.buys.slice(0, 2).join(", ")}` : o.categories.slice(0, 2).map(craftLabel).join(", ")}</span></span>
                   </span>
                 </a>
                 <FollowButton orgId={o.id} orgName={o.name_he || o.name} compact />

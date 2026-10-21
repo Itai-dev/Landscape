@@ -13,7 +13,7 @@ export const metadata = {
   title: "מכרזים פתוחים",
   description: "מכרזים לעבודות קריאייטיב: הפקה, וידאו, עיצוב, אירועים וקמפיינים. משרדי ממשלה, עיריות וגופים ציבוריים, עם מועד ההגשה וקישור למקור הרשמי.",
   alternates: { canonical: "/tenders" },
-  openGraph: { title: "מכרזים לעבודות קריאייטיב · creativein.", description: "מכרזים ממשלתיים וציבוריים לעבודות קריאייטיב, לפי מועד ההגשה, עם קישור למקור הרשמי.", siteName: "creativein.", locale: "he_IL", type: "website", images: [{ url: "/og/site.png", width: 1200, height: 630 }] },
+  openGraph: { title: "מכרזים לעבודות קריאייטיב · CreativeIn", description: "מכרזים ממשלתיים וציבוריים לעבודות קריאייטיב, לפי מועד ההגשה, עם קישור למקור הרשמי.", siteName: "CreativeIn", locale: "he_IL", type: "website", images: [{ url: "/og/site.png", width: 1200, height: 630 }] },
 };
 
 export default async function Tenders({ searchParams }) {

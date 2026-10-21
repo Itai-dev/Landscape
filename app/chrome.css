@@ -18,7 +18,17 @@
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
 header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Heebo", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
-header.top .brand span, footer.foot .brand span { color: var(--accent); }
+/* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a lime badge tilted -3deg with a hard
+   purple shadow. Hover (desktop, motion allowed): the badge tilts to +1deg, lifts, and the shadow grows and turns pink. */
+.wordmark { display: block; height: 24px; width: auto; overflow: visible; }
+.wordmark .lgb { transform-box: fill-box; transform-origin: center; transform: rotate(-3deg); transition: transform 260ms cubic-bezier(.2, .8, .2, 1); }
+.wordmark .lgs { transform: translate(90px, 90px); transition: transform 260ms cubic-bezier(.2, .8, .2, 1), fill 260ms cubic-bezier(.2, .8, .2, 1); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  a.brand:hover .wordmark .lgb, a.brand:focus-visible .wordmark .lgb { transform: rotate(1deg) translateY(-40px); }
+  a.brand:hover .wordmark .lgs, a.brand:focus-visible .wordmark .lgs { transform: translate(130px, 130px); fill: #ff5ca8; }
+}
+:root[data-theme="dark"] .brand { color: #f4f1ea; }
+@media (prefers-color-scheme: dark) { :root[data-theme="system"] .brand, :root:not([data-site]):not([data-theme="light"]) .brand { color: #f4f1ea; } }
 header.top .nav { display: flex; gap: 2px; align-items: center; }
 header.top .nav a { color: var(--ink); min-height: 40px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 8px; font-size: 14px; font-weight: 500; line-height: 1; text-decoration: none; transition: background .2s ease; }
 header.top .nav a[aria-current="page"] { background: var(--surface); }
@@ -92,6 +102,7 @@ header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1f
 @media (max-width: 560px) {
   header.top .wrap { min-height: 64px; }
   header.top .brand { font-size: 19px; }
+  header.top .brand .wordmark { height: 21px; }
 }
 @media (max-width: 360px) { header.top .brand span { display: none; } header.top .hsearch { padding-inline: 10px 4px; } }
 
@@ -99,7 +110,8 @@ header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1f
 footer.foot { padding: 0 var(--gutter) 16px; color: var(--muted); font-size: 14px; margin-block-start: 48px; }
 footer.foot .wrap { display: grid; gap: 32px; width: 100%; max-width: var(--max); margin-inline: auto; padding: clamp(24px, 4vw, 48px); background: var(--surface); border-radius: 14px; }
 footer.foot .foot-top { display: grid; gap: 8px; }
-footer.foot .brand { font-size: clamp(32px, 5vw, 56px); margin: 0; min-height: 0; }
+footer.foot .brand { font-size: clamp(32px, 5vw, 56px); margin: 0; min-height: 0; justify-self: start; }
+footer.foot .brand .wordmark { height: clamp(36px, 5vw, 60px); }
 footer.foot .fine { margin: 0; color: var(--muted); }
 footer.foot .foot-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(130px, 40%), 1fr)); gap: 0 24px; border-block-start: 1px solid var(--line); padding-block-start: 16px; }
 footer.foot .foot-links a { color: var(--ink); font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
@@ -126,3 +138,55 @@ nav.sitebar { display: none; }
   :root.menu-open nav.sitebar { display: none; }
 }
 @media (hover: hover) and (max-width: 860px) { nav.sitebar a:not([aria-current]):hover { color: var(--bg); } }
+
+/* Home page: the hero has the search, so the header field is hidden there (Next site only; .home is set by Header.js). */
+header.top.home .hsearch { display: none; }
+header.top.home .end { margin-inline-start: auto; }
+
+/* Typing placeholder (lib/typing.mjs): an overlay over the search input, with a blinking caret after the text. */
+header.top form.hsearch { position: relative; }
+.typeph { position: absolute; display: flex; align-items: center; box-sizing: border-box; pointer-events: none; color: var(--muted); white-space: nowrap; overflow: hidden; text-align: start; }
+.typeph[hidden] { display: none; }
+.typeph > span { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.typeph::after { content: ""; flex: none; inline-size: 1.5px; block-size: 1.15em; background: currentColor; margin-inline-start: 2px; animation: typeph-caret 1s steps(1) infinite; }
+@keyframes typeph-caret { 50% { opacity: 0; } }
+
+/* Company-type tags (lib/kinds.mjs): an icon square joined to a label, one hue per type. Tinted fills with dark
+   ink in light mode, deep fills with light ink in dark mode (AA either way). Purple stays for accents only. */
+:root {
+  --kind-client-bg: #e6f5bd; --kind-client-bg2: #d3ec8f; --kind-client-ink: #2c4300;
+  --kind-agency-bg: #ffe4d1; --kind-agency-bg2: #ffcda8; --kind-agency-ink: #6e2c00;
+  --kind-studio-bg: #fbdcee; --kind-studio-bg2: #f6bfdf; --kind-studio-ink: #6d1048;
+  --kind-production_company-bg: #d9ecfd; --kind-production_company-bg2: #b9dcfb; --kind-production_company-ink: #0b3f6b;
+  --kind-startup-bg: #d4f3e7; --kind-startup-bg2: #aee8d2; --kind-startup-ink: #0a4f38;
+  --kind-community-bg: #fdf0bd; --kind-community-bg2: #f8e18a; --kind-community-ink: #5c4400;
+}
+:root[data-theme="dark"] {
+  --kind-client-bg: #2a3a0f; --kind-client-bg2: #3a5212; --kind-client-ink: #d8f29a;
+  --kind-agency-bg: #43230f; --kind-agency-bg2: #5c3014; --kind-agency-ink: #ffcfa6;
+  --kind-studio-bg: #431431; --kind-studio-bg2: #5c1c44; --kind-studio-ink: #ffc1e4;
+  --kind-production_company-bg: #112e47; --kind-production_company-bg2: #183f60; --kind-production_company-ink: #b2dbff;
+  --kind-startup-bg: #0f3a2c; --kind-startup-bg2: #15503c; --kind-startup-ink: #a6ecd0;
+  --kind-community-bg: #3b3010; --kind-community-bg2: #524316; --kind-community-ink: #f6dc85;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"], :root:not([data-site]):not([data-theme="light"]) {
+    --kind-client-bg: #2a3a0f; --kind-client-bg2: #3a5212; --kind-client-ink: #d8f29a;
+    --kind-agency-bg: #43230f; --kind-agency-bg2: #5c3014; --kind-agency-ink: #ffcfa6;
+    --kind-studio-bg: #431431; --kind-studio-bg2: #5c1c44; --kind-studio-ink: #ffc1e4;
+    --kind-production_company-bg: #112e47; --kind-production_company-bg2: #183f60; --kind-production_company-ink: #b2dbff;
+    --kind-startup-bg: #0f3a2c; --kind-startup-bg2: #15503c; --kind-startup-ink: #a6ecd0;
+    --kind-community-bg: #3b3010; --kind-community-bg2: #524316; --kind-community-ink: #f6dc85;
+  }
+}
+.ktag { display: inline-flex; align-items: stretch; gap: 2px; vertical-align: middle; font-size: 12px; font-weight: 600; line-height: 1; white-space: nowrap; color: var(--kink); flex: none; }
+.ktag .ki { display: grid; place-items: center; inline-size: 22px; min-block-size: 22px; border-radius: 6px; background: var(--kbg2); }
+.ktag .kl { display: inline-flex; align-items: center; padding-inline: 8px; border-radius: 6px; background: var(--kbg); }
+.ktag svg { display: block; }
+.ktag.lg { font-size: 14px; } .ktag.lg .ki { inline-size: 28px; min-block-size: 28px; } .ktag.lg .kl { padding-inline: 10px; }
+.k-client { --kbg: var(--kind-client-bg); --kbg2: var(--kind-client-bg2); --kink: var(--kind-client-ink); }
+.k-agency { --kbg: var(--kind-agency-bg); --kbg2: var(--kind-agency-bg2); --kink: var(--kind-agency-ink); }
+.k-studio { --kbg: var(--kind-studio-bg); --kbg2: var(--kind-studio-bg2); --kink: var(--kind-studio-ink); }
+.k-production_company { --kbg: var(--kind-production_company-bg); --kbg2: var(--kind-production_company-bg2); --kink: var(--kind-production_company-ink); }
+.k-startup { --kbg: var(--kind-startup-bg); --kbg2: var(--kind-startup-bg2); --kink: var(--kind-startup-ink); }
+.k-community { --kbg: var(--kind-community-bg); --kbg2: var(--kind-community-bg2); --kink: var(--kind-community-ink); }

@@ -14,7 +14,7 @@ export const metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: "/survey" },
-  openGraph: { title: TITLE, description: DESC, type: "website", locale: "he_IL", siteName: "creativein.", images: [{ url: "/og/survey.png", width: 1200, height: 630, alt: TITLE }] },
+  openGraph: { title: TITLE, description: DESC, type: "website", locale: "he_IL", siteName: "CreativeIn", images: [{ url: "/og/survey.png", width: 1200, height: 630, alt: TITLE }] },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/og/survey.png"] },
 };
 
@@ -81,7 +81,7 @@ export default async function SurveyPage() {
           <div className="card stack" id="anon">
             <h2>מה קורה עם התשובות</h2>
             <ul className="ticks">
-              <li>התשובות חסויות: לא מוצגות לאף אחד. צוות <bdi>creativein</bdi> ניגש לנתונים רק לצורך תפעול.</li>
+              <li>התשובות חסויות: לא מוצגות לאף אחד. צוות <bdi>CreativeIn</bdi> ניגש לנתונים רק לצורך תפעול.</li>
               <li>מתפרסמים רק חציון וטווח של קבוצות עם {K_MIN} משיבים לפחות, אחוזים מעוגלים, ופעם ביום לכל היותר.</li>
               <li>טקסט חופשי לא מתפרסם אף פעם.</li>
               <li>מחיקת החשבון מוחקת גם את התשובות.</li>

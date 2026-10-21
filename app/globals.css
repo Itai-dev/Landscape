@@ -414,6 +414,8 @@ a.feature { color: var(--ink); transition: border-color .15s, box-shadow .15s; }
 .orow .nm { min-width: 0; display: grid; }
 .orow .nm b { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .orow .nm span { color: var(--muted); font-size: var(--t-xs); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.orow .nm .kline { display: flex; align-items: center; gap: 6px; margin-block-start: 4px; }
+.orow .nm .kline .ktag span { overflow: visible; color: inherit; font-size: inherit; }
 
 /* Profile */
 .phead { display: grid; justify-items: center; text-align: center; gap: 6px; padding-block: var(--s-4) var(--s-2); }

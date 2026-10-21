@@ -22,13 +22,13 @@ export async function generateMetadata({ searchParams }) {
   const top = [...d.items, ...d.more].slice(0, 2).map((i) => i.headline).join(" · ");
   const description = top || "מי מונה לשיווק, מי החליף משרד ואילו מכרזים נפתחו השבוע בתעשיית הקריאייטיב בישראל. ולמה זה רלוונטי לכם.";
   const url = `${siteUrl()}/digest${d.crafts.length ? `?crafts=${d.crafts.map((c) => c.slug).join(",")}` : ""}`;
-  const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · creativein." };
+  const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · CreativeIn" };
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title: `${title} · creativein.`, description, url, type: "article", locale: "he_IL", siteName: "creativein.", images: [image] },
-    twitter: { card: "summary_large_image", title: `${title} · creativein.`, description, images: [image.url] },
+    openGraph: { title: `${title} · CreativeIn`, description, url, type: "article", locale: "he_IL", siteName: "CreativeIn", images: [image] },
+    twitter: { card: "summary_large_image", title: `${title} · CreativeIn`, description, images: [image.url] },
   };
 }
 

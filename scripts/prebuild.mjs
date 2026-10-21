@@ -6,6 +6,7 @@
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
 import { headerHtml, footerHtml, tabbarHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
+import { KIND_ICONS, KIND_HE as KIND_LABELS } from "../lib/kinds.mjs";
 import { CLOSES_AT } from "../lib/survey/config.js";
 
 // 1. Companies app. site/app.html is a page body (the Artifact host adds the document shell),
@@ -28,13 +29,15 @@ synced = fill(synced, "<!-- chrome:header -->", "<!-- /chrome:header -->",
   headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
 synced = fill(synced, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
 synced = fill(synced, "<!-- chrome:tabbar -->", "<!-- /chrome:tabbar -->", tabbarHtml("companies"));
+// Company-type icons have one source (lib/kinds.mjs); the app builds its tags from them (kindTag in site/app.html).
+synced = fill(synced, "/* kinds:js", "/* /kinds:js */", `  const KIND_ICONS = ${JSON.stringify(KIND_ICONS)};`);
 // The Artifact publishes site/app.html as it is, so the blocks are written back there too.
 if (synced !== source) { writeFileSync("site/app.html", synced); console.log("prebuild: synced the header, footer and tab bar into site/app.html"); }
 // The company list as plain Hebrew HTML, so the page has real content before (or without) the script:
 // search engines, slow networks, a failed data fetch. The app replaces it once the data loads.
 // Written only into public/companies, not back into site/app.html (the Artifact keeps its small source).
 const ds = JSON.parse(readFileSync("site/data/dataset.json", "utf8"));
-const KIND_HE = { studio: "סטודיו", production_company: "חברת הפקות", startup: "סטארטאפ", agency: "סוכנות", client: "מותג", community: "קהילה" };
+const KIND_HE = Object.fromEntries(Object.entries(KIND_LABELS).map(([k, v]) => [k, v.one]));
 const escH = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const clip = (s, n) => { s = String(s || "").replace(/\s+/g, " ").trim(); return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, "") + "…" : s; };
 const staticList =
@@ -59,11 +62,11 @@ const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
   `<meta name="description" content="${escH(DESC)}">\n` +
-  '<meta property="og:type" content="website">\n<meta property="og:locale" content="he_IL">\n<meta property="og:site_name" content="creativein.">\n' +
-  '<meta property="og:title" content="חברות בתעשיית הקריאייטיב · creativein.">\n' +
+  '<meta property="og:type" content="website">\n<meta property="og:locale" content="he_IL">\n<meta property="og:site_name" content="CreativeIn">\n' +
+  '<meta property="og:title" content="חברות בתעשיית הקריאייטיב · CreativeIn">\n' +
   `<meta property="og:description" content="${escH(DESC)}">\n` +
   (siteBase ? `<link rel="canonical" href="${siteBase}/companies">\n<meta property="og:url" content="${siteBase}/companies">\n` : "") +
-  '<meta name="theme-color" content="#f8f8f8">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+  '<meta name="theme-color" content="#f8f8f8">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' +
   "<script>window.LANDSCAPE_SITE = true;</script>\n" +
   `<script>${THEME_SCRIPT}</script>\n` +
   // Vercel Web Analytics (counts nothing until enabled for the project in the Vercel dashboard).
@@ -165,6 +168,8 @@ const stats = {
   startups: count("startup"),
   signals: signals.length,
   people: list.length,
+  // Per company type, for the home catalog (lib/kinds.mjs).
+  byKind: Object.fromEntries(Object.keys(KIND_LABELS).map((k) => [k, count(k)])),
 };
 writeFileSync("lib/generated/orgs.json", JSON.stringify({ stats, orgs }));
 console.log(`prebuild: ${orgs.length} companies indexed for search`);

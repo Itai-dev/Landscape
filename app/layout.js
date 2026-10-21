@@ -10,7 +10,7 @@ import { THEME_SCRIPT, footerHtml, BRAND, TAGLINE } from "@/lib/chrome.mjs";
 import { siteUrl } from "@/lib/digest";
 
 const DESCRIPTION = "תעשיית הקריאייטיב בישראל. האנשים, החברות וההזדמנויות: מינויים, החלפות משרד, משרות ומכרזים, עם מקור לכל פרט. כל יום ראשון במייל, לפי התחום שלכם. חינם.";
-const NAME = `${BRAND}.`;
+const NAME = BRAND;
 
 // The base URL comes from the environment (NEXT_PUBLIC_SITE_URL), so canonical and share links follow
 // whichever domain is connected. Each page sets its own canonical path.
@@ -28,14 +28,14 @@ export const metadata = {
     images: [{ url: "/og/site.png", width: 1200, height: 630, alt: `${NAME} · תעשיית הקריאייטיב בישראל` }],
   },
   twitter: { card: "summary_large_image", images: ["/og/site.png"] },
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/favicon.svg", apple: "/apple-touch-icon.png" },
 };
 
 // Structured data: who publishes the site, and the site search.
 function jsonLd() {
   const url = siteUrl();
   return JSON.stringify([
-    { "@context": "https://schema.org", "@type": "Organization", name: NAME, url, logo: `${url}/favicon.svg`, description: TAGLINE },
+    { "@context": "https://schema.org", "@type": "Organization", name: NAME, url, logo: `${url}/apple-touch-icon.png`, description: TAGLINE },
     {
       "@context": "https://schema.org", "@type": "WebSite", name: NAME, url, inLanguage: "he-IL",
       potentialAction: { "@type": "SearchAction", target: `${url}/search?q={search_term_string}`, "query-input": "required name=search_term_string" },
