@@ -6,6 +6,7 @@ import RotatingWord from "@/components/RotatingWord";
 import HeroMedia from "@/components/HeroMedia";
 import HeroSearch from "@/components/HeroSearch";
 import KindTag from "@/components/KindTag";
+import CountUp from "@/components/CountUp";
 import { KINDS } from "@/lib/kinds.mjs";
 import { craftLabel } from "@/lib/taxonomy";
 import { STATS, companiesWithCraft } from "@/lib/companies";
@@ -87,19 +88,12 @@ export default function HomePage({ split = false }) {
         </section>
       )}
 
-      <section className="wrap section tight reveal" aria-labelledby="cat-h">
-        <div className="sechead">
-          <div>
-            <h2 id="cat-h">התעשייה, מסודרת</h2>
-            <p>{STATS.orgs} חברות לפי סוג, תחום ועיר. כל אחת עם מה שהיא עושה או מזמינה, ומקור לכל פרט.</p>
-          </div>
-          <a className="btn" href="/companies" data-track="catalog_all">לכל החברות</a>
-        </div>
+      <section className="wrap section tight reveal" aria-label="החברות בתעשייה לפי סוג">
         <div className="catalog">
           {KINDS.filter((k) => STATS.byKind?.[k.kind]).map((k) => (
             <a key={k.kind} className="ctile" href={`/companies?kind=${k.kind}`} data-track="catalog_open" data-track-label={k.kind}>
               <KindTag kind={k.kind} many />
-              <span className="cn">{STATS.byKind[k.kind].toLocaleString("he-IL")}</span>
+              <CountUp className="cn" to={STATS.byKind[k.kind]} />
               <span className="cl">{k.line_he}</span>
             </a>
           ))}
