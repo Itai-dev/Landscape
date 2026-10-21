@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tool",
+  "description": "A creative tool in the 'כלים ו־AI' catalog. Official links only: no affiliate links, no paid placement.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "maker", "url", "category", "crafts", "one_line_he", "sources", "last_checked_at"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "maker": { "type": "string", "minLength": 1 },
+    "url": { "type": "string", "format": "uri", "pattern": "^https://", "description": "The tool's official site. Never an affiliate or tracking link." },
+    "category": { "enum": ["video-ai", "image-ai", "design", "3d", "motion", "sound-ai", "editing", "workflow"] },
+    "crafts": { "type": "array", "items": { "type": "string" }, "minItems": 1, "uniqueItems": true, "description": "Craft slugs from schema/taxonomy.json" },
+    "pricing": { "enum": ["free", "freemium", "paid"], "description": "Left out when it couldn't be checked." },
+    "made_in_israel": { "type": "boolean", "description": "Only when a source confirms it." },
+    "one_line_he": { "type": "string", "minLength": 4, "maxLength": 160 },
+    "sources": { "type": "array", "items": { "type": "string", "format": "uri" }, "minItems": 1 },
+    "last_checked_at": { "type": "string", "format": "date" }
+  }
+}
