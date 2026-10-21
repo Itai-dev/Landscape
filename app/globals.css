@@ -236,7 +236,7 @@ a.tag.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 /* Home: a centered display title (light, huge, tight), a small metadata row above it, the search under it */
 .hero { max-width: 1320px; margin-inline: auto; text-align: center; padding-block: clamp(40px, 8vw, 128px) var(--s-7); display: grid; justify-items: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: var(--s-3); font-size: var(--t-xs); font-weight: 500; color: var(--ink); margin-block-end: var(--s-5); }
-.eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex: none; }
+.eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 1.5px; background: var(--accent); flex: none; }
 .eyebrow svg { display: none; }
 .hero h1 { margin-block-end: var(--s-6); max-width: 15ch; }
 .hero h1 em { font-style: normal; color: var(--ink); display: block; }
@@ -574,3 +574,6 @@ details summary { cursor: pointer; color: var(--ink); font-weight: 500; text-dec
   .range { white-space: normal; }
 }
 @media (min-width: 960px) { .dlayout > .dside { grid-column: 2; grid-row: 1; } .dlayout > .dmain { grid-column: 1; grid-row: 1; } }
+
+/* List bullets are small squares, like every other marker on the site. */
+ul { list-style-type: square; }

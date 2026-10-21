@@ -72,7 +72,7 @@ header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1f
 .menusheet-nav { display: grid; border-block-start: 1px solid var(--line); }
 .menusheet-nav a { display: flex; align-items: center; min-height: 64px; border-block-end: 1px solid var(--line); color: var(--ink); font-size: 30px; font-weight: 300; line-height: 1.1; text-decoration: none; }
 .menusheet-nav a[aria-current="page"] { font-weight: 500; }
-.menusheet-nav a[aria-current="page"]::after { content: ""; inline-size: 8px; block-size: 8px; border-radius: 50%; background: var(--accent); margin-inline-start: 12px; }
+.menusheet-nav a[aria-current="page"]::after { content: ""; inline-size: 8px; block-size: 8px; border-radius: 2px; background: var(--accent); margin-inline-start: 12px; }
 .menusheet-end { display: flex; gap: 8px; align-items: center; }
 .menusheet-end .btn-ink { flex: 1; min-height: 52px; font-size: 16px; }
 .menusheet-end .themebtn { inline-size: 52px; block-size: 52px; }

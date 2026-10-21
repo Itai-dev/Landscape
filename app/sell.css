@@ -81,7 +81,7 @@
   .hchip img, .hmono { width: 28px; height: 28px; border-radius: 50%; flex: none; object-fit: cover; background: var(--surface); }
   .hmono { display: grid; place-items: center; font-size: 13px; color: var(--ink); }
   .hdots { position: absolute; inset-block-start: var(--s-6); inset-inline-start: var(--s-6); display: flex; gap: 6px; }
-  .hdots i { width: 6px; height: 6px; border-radius: 50%; background: var(--line-2); transition: background .3s ease; }
+  .hdots i { width: 6px; height: 6px; border-radius: 1.5px; background: var(--line-2); transition: background .3s ease; }
   .hdots i.on { background: var(--accent); }
 }
 @media (prefers-reduced-motion: reduce) { .hcard { transition: none; } }
@@ -95,16 +95,16 @@
 .ctile .cl { font-size: var(--t-sm); color: var(--muted); line-height: 1.5; }
 @media (max-width: 639px) { .ctile { padding: var(--s-4); min-height: 140px; gap: var(--s-2); } }
 
-/* Search block: tabs, one wide rounded field with a round accent button, popular crafts. */
-.hsearchblock { display: grid; gap: var(--s-3); padding-block-end: var(--s-6); }
+/* Search block: tabs, one field (not full width) with a square accent button, popular crafts. */
+.hsearchblock { display: grid; gap: var(--s-3); padding-block-end: var(--s-6); max-width: 720px; }
 .htabs { display: flex; gap: var(--s-1); flex-wrap: wrap; }
 .htabs button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: var(--t-sm); font-weight: 500; padding: 0 16px; min-height: 40px; border-radius: var(--r); cursor: pointer; }
 .htabs button.on { background: var(--surface); color: var(--ink); }
 @media (hover: hover) { .htabs button:not(.on):hover { color: var(--ink); } }
-.hfield input[type="search"] { border-radius: var(--r-pill); padding-inline-start: var(--s-6); }
-.hfield .go { border-radius: 50%; background: var(--accent); color: var(--accent-ink); }
+.hfield input[type="search"] { border-radius: var(--r-lg); padding-inline-start: var(--s-5); }
+.hfield .go { inset-inline-end: 6px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); }
 .hpop { margin-block-start: var(--s-1); }
-.hpop .tag { border-radius: var(--r-pill); padding: 6px 14px; font-size: var(--t-sm); }
+.hpop .tag { border-radius: var(--r); padding: 6px 14px; font-size: var(--t-sm); }
 @media (max-width: 639px) {
   .hero.sell.split { gap: var(--s-5); padding-block: var(--s-6) var(--s-5); }
   .checks { margin-block-end: var(--s-5); }
