@@ -102,27 +102,37 @@ export default async function CompanyPage({ params }) {
         <a href="/companies">חברות</a> <span aria-hidden="true">‹</span> <bdi>{orgName(o)}</bdi>
       </nav>
 
-      <header className="ohead">
-        <Logo o={o} size={96} big />
-        <div className="oid">
-          <div className="okind"><KindTag kind={o.kind} />{where && <span className="where">{where}</span>}</div>
-          <h1><bdi>{orgName(o)}</bdi></h1>
-          {latin && <p className="alt"><bdi dir="auto">{latin}</bdi></p>}
-          <div className="oactions">
-            <TrackButton orgId={o.id} />
-            <FollowButton orgId={o.id} orgName={orgName(o)} />
-            {o.website && (
-              <a className="btn" href={o.website} target="_blank" rel="noopener" data-link-type="website" data-track="company_link_click" data-track-category="website">
-                אתר <LinkIcon size={16} />
-              </a>
-            )}
-          </div>
+      <header className="ohero">
+        <p className="ometa"><KindTag kind={o.kind} />{where && <span className="where">{where}</span>}</p>
+        <h1><bdi>{orgName(o)}</bdi></h1>
+        {latin && <p className="alt"><bdi dir="auto">{latin}</bdi></p>}
+        <div className="oactions">
+          <TrackButton orgId={o.id} />
+          <FollowButton orgId={o.id} orgName={orgName(o)} />
+          {o.website && (
+            <a className="btn" href={o.website} target="_blank" rel="noopener" data-link-type="website" data-track="company_link_click" data-track-category="website">
+              אתר <LinkIcon size={16} />
+            </a>
+          )}
         </div>
       </header>
 
+      {/* Cover: the company's type colour, its name as a large texture and the logo in the middle. Drawn, never a scraped image. */}
+      <div className="ocover" style={{ "--cv-bg": `var(--kind-${o.kind}-bg)`, "--cv-bg2": `var(--kind-${o.kind}-bg2)` }}>
+        <span className="ocover-word" dir="auto" aria-hidden="true">{orgName(o)}</span>
+        <Logo o={o} size={96} big />
+      </div>
+
+      {desc.text && (
+        <section className="olead" aria-label="תיאור">
+          <p dir="auto"><Bidi>{desc.text}</Bidi></p>
+          {desc.english && <p className="small muted">התיאור באנגלית, כפי שנאסף מהמקורות.</p>}
+        </section>
+      )}
+
       {reach.length > 0 && (
-        <section className="osec reach" aria-labelledby="reach-h">
-          <h2 id="reach-h">יצירת קשר וערוצים רשמיים</h2>
+        <section className="osec center reach" aria-labelledby="reach-h">
+          <p className="olabel" id="reach-h">יצירת קשר וערוצים רשמיים</p>
           <div className="olinks">
             {reach.map((l) => (
               <a key={l.type + l.href} className="chiplink" href={l.href} target="_blank" rel="noopener" data-track="company_link_click" data-track-category={l.type}>
@@ -133,18 +143,10 @@ export default async function CompanyPage({ params }) {
         </section>
       )}
 
-      <div className="ogrid">
-        <div className="omain">
-          {desc.text && (
-            <section className="osec" aria-labelledby="desc-h">
-              <h2 id="desc-h">תיאור</h2>
-              <p className="desc" dir="auto"><Bidi>{desc.text}</Bidi></p>
-              {desc.english && <p className="small muted">התיאור באנגלית, כפי שנאסף מהמקורות.</p>}
-            </section>
-          )}
-
+      <div className="ocol">
           {updates.length > 0 && (
             <section className="osec" aria-labelledby="upd-h">
+              <p className="olabel">עדכונים</p>
               <h2 id="upd-h">מה השתנה לאחרונה</h2>
               <ol className="oupd">
                 {updates.map((u) => (
@@ -164,9 +166,9 @@ export default async function CompanyPage({ params }) {
               </ol>
             </section>
           )}
-
           {tenders.length > 0 && (
             <section className="osec" aria-labelledby="ten-h">
+              <p className="olabel">מכרזים</p>
               <h2 id="ten-h">מכרזים שפרסמו</h2>
               <ul className="otenders">
                 {tenders.map((t) => (
@@ -180,17 +182,17 @@ export default async function CompanyPage({ params }) {
               </ul>
             </section>
           )}
-
           {buyer && ((o.needs || []).length > 0 || o.client_profile?.in_house_studio) && (
             <section className="osec" aria-labelledby="buy-h">
+              <p className="olabel">מה מזמינים</p>
               <h2 id="buy-h">מה הם מזמינים</h2>
               {(o.needs || []).length > 0 && <div className="opills">{o.needs.map((n) => <span key={n} className="tag">{needLabel(n)}</span>)}</div>}
               {o.client_profile?.in_house_studio && <p className="small">יש להם צוות קריאייטיב פנימי.</p>}
             </section>
           )}
-
           {ways.length > 0 && (
             <section className="osec" aria-labelledby="ways-h">
+              <p className="olabel">דרכים פנימה</p>
               <h2 id="ways-h">איך להגיע אליהם</h2>
               <div className="oways">
                 {ways.map((g) => (
@@ -224,17 +226,9 @@ export default async function CompanyPage({ params }) {
               </div>
             </section>
           )}
-        </div>
-
-        <aside className="oside">
-          {fs.length > 0 && (
-            <section className="osec" aria-labelledby="facts-h">
-              <h2 id="facts-h">פרטים</h2>
-              <dl className="ofacts">{fs.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
-            </section>
-          )}
           {crafts.length > 0 && (
-            <section className="osec" aria-labelledby="crafts-h">
+            <section className="osec center" aria-labelledby="crafts-h">
+              <p className="olabel">תחומים</p>
               <h2 id="crafts-h">תחומים</h2>
               <div className="opills">
                 {crafts.map((c) => (
@@ -245,14 +239,23 @@ export default async function CompanyPage({ params }) {
           )}
           {((o.services || []).length > 0 || (o.notable_work || []).length > 0 || (o.funding?.investors || []).length > 0) && (
             <section className="osec" aria-labelledby="work-h">
+              <p className="olabel">עבודות</p>
               <h2 id="work-h">עבודות, שירותים ומשקיעים</h2>
               {(o.services || []).length > 0 && (<><h3>שירותים ומוצרים</h3><ul className="plain" dir="auto">{o.services.map((s) => <li key={s}><Bidi>{s}</Bidi></li>)}</ul></>)}
               {(o.notable_work || []).length > 0 && (<><h3>עבודות בולטות</h3><ul className="plain" dir="auto">{o.notable_work.map((s) => <li key={s}><Bidi>{s}</Bidi></li>)}</ul></>)}
               {(o.funding?.investors || []).length > 0 && (<><h3>משקיעים</h3><p className="small"><bdi>{o.funding.investors.join(", ")}</bdi></p></>)}
             </section>
           )}
+          {fs.length > 0 && (
+            <section className="osec" aria-labelledby="facts-h">
+              <p className="olabel">פרטים</p>
+              <h2 id="facts-h">פרטים</h2>
+              <dl className="ofacts">{fs.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+            </section>
+          )}
           <section className="osec sources" aria-labelledby="src-h">
-            <h2 id="src-h">מקורות</h2>
+            <p className="olabel">שקיפות</p>
+              <h2 id="src-h">מקורות</h2>
             <p className="small muted">רמת ביטחון {confidenceHe(o.confidence)}{o.last_verified ? ` · נבדק ${fmtDay(o.last_verified)}` : ""}</p>
             <ul className="plain small">
               {(o.sources || []).map((s) => {
@@ -263,7 +266,6 @@ export default async function CompanyPage({ params }) {
             </ul>
             <p className="small"><a href="/feedback" data-track="feedback_open" data-track-where="company_page">משהו לא מדויק? בקשת תיקון או הסרה</a></p>
           </section>
-        </aside>
       </div>
 
       {similar.length > 0 && (

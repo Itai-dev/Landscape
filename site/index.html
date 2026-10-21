@@ -344,7 +344,7 @@ select.btn { padding-inline: 10px; }
 
 /* cards */
 main { padding-block: 6px 24px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 8px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 16px; }
 .card { text-align: start; width: 100%; background: var(--surface); border: 1px solid transparent; border-radius: 8px; padding: 16px 18px; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color .3s var(--ease), transform .3s var(--ease); }
 @media (hover: hover) { .card:hover { border-color: var(--ink); } }
 
@@ -600,7 +600,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 @media (prefers-reduced-motion: no-preference) { .dd:not([hidden]) { animation: dd-in .18s ease-out; } @keyframes dd-in { from { opacity: 0; transform: translateY(-6px); } } }
 
 /* ---------- Thumbnail cards: tile first, byline under it ---------- */
-#grid.grid { gap: 40px 16px; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); margin-top: 16px; }
+#grid.grid { gap: 56px 24px; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); margin-top: 24px; }
 .card.shot { background: none; border: 0; padding: 0; gap: 0; border-radius: 0; transform: none; color: var(--ink); }
 a.card.shot { display: grid; text-decoration: none; }
 .card.shot:hover { border: 0; }

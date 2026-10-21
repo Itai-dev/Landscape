@@ -1,6 +1,6 @@
 /* Company page (/companies/<id>): the companies app's sheet as a full page, in the Awwwards look. */
 .orgpage { padding-block: var(--s-5) var(--s-8); }
-.orgpage .crumb { font-size: var(--t-sm); color: var(--muted); display: flex; gap: var(--s-2); align-items: center; margin-block-end: var(--s-5); }
+.orgpage .crumb { font-size: var(--t-sm); color: var(--muted); display: flex; gap: var(--s-2); align-items: center; margin-block-end: var(--s-4); }
 .orgpage .crumb a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
 
 /* Logo tile: the logo at no more than its native size on a grey tile; without a logo, the name as a wordmark. */
@@ -11,20 +11,31 @@
 .otile.wide { aspect-ratio: auto; width: auto; min-width: 168px; height: clamp(112px, 16vw, 168px); padding: var(--s-4); }
 .otile.word span { font-weight: 300; font-size: clamp(16px, 2vw, 22px); line-height: 1.1; padding: var(--s-3); text-align: center; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
-.ohead { display: flex; gap: var(--s-5); align-items: center; margin-block-end: var(--s-6); }
-.oid { display: grid; gap: var(--s-2); min-width: 0; }
-.okind { display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; font-size: var(--t-sm); color: var(--muted); }
-.ohead h1 { margin: 0; overflow-wrap: anywhere; }
-.ohead .alt { margin: 0; color: var(--muted); font-size: var(--t-md); }
-.oactions { display: flex; gap: var(--s-2); flex-wrap: wrap; align-items: center; margin-block-start: var(--s-3); }
-@media (max-width: 640px) { .ohead { flex-direction: column; align-items: flex-start; gap: var(--s-4); } .otile.big { width: 96px; } .otile.wide { height: 96px; min-width: 132px; } }
-
-.osec { margin-block-end: var(--s-7); }
-.osec > h2 { margin: 0 0 var(--s-4); padding-block-end: var(--s-2); border-block-end: 1px dotted var(--line-2); }
+/* Awwwards "site of the day" rhythm: a centred title with a small meta line, a big cover, a large light lead,
+   then sections in a narrow column, each with a small label above its heading, and a lot of air between them. */
+.ohero { display: grid; justify-items: center; text-align: center; gap: var(--s-4); padding-block: clamp(24px, 5vw, 72px) clamp(32px, 4vw, 56px); }
+.ohero h1 { margin: 0; max-width: 20ch; overflow-wrap: anywhere; }
+.ohero .alt { margin: 0; color: var(--muted); font-size: var(--t-md); }
+.ometa { margin: 0; display: flex; align-items: center; justify-content: center; gap: var(--s-3); flex-wrap: wrap; font-size: var(--t-sm); color: var(--muted); }
+.ohero .oactions { justify-content: center; margin-block-start: var(--s-3); }
+.ocover { position: relative; max-width: 1080px; margin-inline: auto; height: clamp(220px, 42vw, 540px); border-radius: var(--r-lg); overflow: hidden;
+  display: grid; place-items: center; background: radial-gradient(var(--cv-bg2) 1.3px, transparent 1.6px) 0 0 / 18px 18px, var(--cv-bg); }
+.ocover-word { position: absolute; inset-inline-start: 4%; bottom: -.22em; font-size: clamp(72px, 15vw, 240px); font-weight: 700; line-height: 1; letter-spacing: -.03em;
+  white-space: nowrap; color: var(--cv-bg2); user-select: none; pointer-events: none; }
+.ocover .otile { position: relative; background: var(--bg); box-shadow: 0 24px 60px rgba(0, 0, 0, .10); }
+.olead { max-width: 780px; margin: clamp(40px, 6vw, 88px) auto 0; text-align: center; }
+.olead > p:first-child { margin: 0; font-size: clamp(19px, 2vw, 26px); font-weight: 300; line-height: 1.55; color: var(--ink); }
+.osec.center { text-align: center; }
+.osec.center .olinks, .osec.center .opills { justify-content: center; }
+.reach { margin-block-start: clamp(40px, 5vw, 72px); }
+.ocol { max-width: 880px; margin: clamp(72px, 9vw, 144px) auto 0; }
+.olabel { margin: 0 0 var(--s-2); font-size: var(--t-xs); font-weight: 500; color: var(--muted); }
+.osec { margin-block-end: clamp(72px, 9vw, 128px); }
+.osec > h2 { margin: 0 0 var(--s-6); }
 .osec h3 { margin: var(--s-4) 0 var(--s-2); }
 .osec .desc { font-size: var(--t-md); line-height: 1.7; margin: 0 0 var(--s-2); max-width: 70ch; }
 
-.olinks, .opills, .ochips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.olinks, .opills, .ochips { display: flex; flex-wrap: wrap; gap: var(--s-3); }
 .chiplink { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 var(--s-4); border: 1px solid var(--line-2); border-radius: var(--r); color: var(--ink); font-size: var(--t-sm); }
 @media (hover: hover) { .chiplink:hover { border-color: var(--ink); } }
 .opills .tag { font-size: var(--t-sm); padding: 6px 10px; }
@@ -32,26 +43,22 @@ a.tag { text-decoration: none; }
 
 .ogrid { display: grid; gap: var(--s-6); }
 @media (min-width: 960px) { .ogrid { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--s-8); } }
-.oupd { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
-.otenders { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.oupd { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); }
+.otenders { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); }
 .otenders a { display: grid; gap: 2px; padding: var(--s-4); background: var(--surface); border-radius: var(--r); color: var(--ink); }
 
-.oways { display: grid; gap: var(--s-4); }
+.oways { display: grid; gap: var(--s-6); }
 .oways .grp h3 { margin-block-start: 0; }
 .ochip { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 12px 4px 6px; background: var(--surface); border-radius: var(--r); color: var(--ink); font-size: var(--t-sm); }
 .ochip img { width: 24px; height: 24px; object-fit: contain; border-radius: 4px; background: var(--paper); }
 .ochip .mono { width: 24px; height: 24px; border-radius: 4px; display: grid; place-items: center; background: var(--paper); font-size: 11px; font-weight: 600; }
 .ochip.plain { background: transparent; border: 1px solid var(--line); padding-inline: 12px; }
 @media (hover: hover) { a.ochip:hover { background: var(--soft); } }
-.opeople { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
-@media (min-width: 640px) { .opeople { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.opeople a.pl { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--s-3); align-items: center; padding: var(--s-3); background: var(--surface); border-radius: var(--r); color: var(--ink); }
-.opeople .avatar { grid-row: span 2; width: 40px; height: 40px; font-size: 14px; }
-.opeople .pn { font-weight: 600; font-size: var(--t-sm); }
-.opeople .pr { font-size: var(--t-xs); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.opeople .avatar { width: 44px; height: 44px; font-size: 14px; }
+.opeople .pn { font-weight: 600; }
 
-.ofacts { margin: 0; display: grid; gap: var(--s-2); }
-.ofacts div { display: flex; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-2); border-block-end: 1px solid var(--line); font-size: var(--t-sm); }
+.ofacts { margin: 0; display: grid; }
+.ofacts div { display: flex; justify-content: space-between; gap: var(--s-4); font-size: var(--t-sm); }
 .ofacts dt { color: var(--muted); }
 .ofacts dd { margin: 0; text-align: end; }
 .oside ul.plain { margin: 0; padding-inline-start: 1.1em; display: grid; gap: 4px; font-size: var(--t-sm); }
@@ -69,3 +76,10 @@ a.tag { text-decoration: none; }
 .simcard .k { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
 .simcard .info { font-size: var(--t-sm); color: var(--ink-2); margin-top: var(--s-2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 @media (hover: hover) { .simcard:hover .n { text-decoration: underline; text-underline-offset: 3px; } }
+
+/* People in public roles as dotted rows (like Awwwards' votes table). */
+.opeople { list-style: none; margin: 0; padding: 0; display: grid; }
+.opeople li { border-block-end: 1px dotted var(--line-2); }
+.opeople .pl { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: var(--s-4); padding: var(--s-4) 0; color: var(--ink); text-decoration: none; }
+.opeople .pr { color: var(--muted); font-size: var(--t-sm); text-align: end; }
+.ofacts > div { border-block-end: 1px dotted var(--line-2); padding-block: var(--s-3); }

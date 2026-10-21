@@ -1,5 +1,5 @@
 /* Tenders: the /tenders page, the home-page strip and /search. Uses the shared tokens in app/globals.css. */
-.tgrid { display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); }
+.tgrid { display: grid; gap: var(--s-5); grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); }
 .tcard { display: grid; gap: var(--s-3); align-content: start; background: var(--surface); border: 0; border-radius: var(--r); padding: var(--s-5); min-width: 0; }
 .tcard.closed { background: var(--soft); color: var(--muted); }
 .tcard .thead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-2) var(--s-3); }

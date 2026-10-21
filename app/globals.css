@@ -100,8 +100,8 @@ p { margin: 0 0 var(--s-4); }
 .wrap { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
 .wrap.narrow { max-width: calc(800px + 2 * var(--gutter)); }
 main { flex: 1; padding-block: var(--s-6) var(--s-8); }
-.section { padding-block: var(--s-7); }
-.section.tight { padding-block: var(--s-5); }
+.section { padding-block: clamp(56px, 7vw, 112px); }
+.section.tight { padding-block: clamp(32px, 4vw, 56px); }
 .intro { max-width: 760px; margin: 0 0 var(--s-6); }
 .intro p { color: var(--muted); margin: 0; }
 /* Page heads: start-aligned, big, a hairline under them (editorial) */
@@ -117,7 +117,7 @@ main { flex: 1; padding-block: var(--s-6) var(--s-8); }
 .pagehead.list p b { font-weight: 600; }
 .cbox { display: inline-block; vertical-align: 2px; margin-inline-start: 6px; padding: 1px 6px; border: 1px solid var(--ink); border-radius: var(--r-sm); font-size: .62em; font-weight: 400; line-height: 1.5; font-variant-numeric: tabular-nums; }
 /* Section heads (Awwwards): a big light title at the start, an outlined "view all" button at the end */
-.sechead { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap; margin-block-end: var(--s-5); }
+.sechead { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap; margin-block-end: var(--s-6); }
 .sechead h2 { margin: 0; display: inline-flex; align-items: baseline; gap: var(--s-3); }
 .sechead h2 .count { font-size: var(--t-sm); font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
 .sechead p { margin: var(--s-2) 0 0; color: var(--muted); max-width: 560px; }
@@ -245,8 +245,8 @@ a.tag.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .hero .searchbox { width: 100%; margin-inline: auto; }
 
 /* This week's updates on the home page */
-.ugrid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
-.ucard { background: var(--surface); border-radius: var(--r); padding: var(--s-5); display: grid; align-content: start; gap: var(--s-2); }
+.ugrid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+.ucard { background: var(--surface); border-radius: var(--r); padding: clamp(20px, 2.2vw, 32px); display: grid; align-content: start; gap: var(--s-3); }
 .ucard p { margin: 0; }
 .umeta { font-size: var(--t-xs); color: var(--muted); }
 .umeta b { color: var(--ink); font-weight: 600; }
@@ -316,7 +316,7 @@ a.tag.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
   .features .feature p { font-size: var(--t-sm); }
   .hero .lead .wide { display: none; }
   /* Phones: the home page stays around two and a half screens */
-  .section { padding-block: var(--s-6); }
+  .section { padding-block: var(--s-8); }
   .hero { padding-block: var(--s-5) var(--s-5); }
   .hero h1 { margin-block-end: var(--s-4); }
   .hero .lead { margin-block-end: var(--s-5); }
