@@ -31,7 +31,10 @@ const shell =
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
   '<meta name="theme-color" content="#ffffff">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
   "<script>window.LANDSCAPE_SITE = true;</script>\n" +
-  `<script>${THEME_SCRIPT}</script>\n`;
+  `<script>${THEME_SCRIPT}</script>\n` +
+  // Vercel Web Analytics (counts nothing until enabled for the project in the Vercel dashboard).
+  '<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>\n' +
+  '<script defer src="/_vercel/insights/script.js"></script>\n';
 writeFileSync("public/companies/index.html", shell + body);
 cpSync("site/data", "public/companies/data", { recursive: true });
 console.log("prebuild: copied the companies app to public/companies");

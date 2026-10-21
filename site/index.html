@@ -572,7 +572,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     he: {
       "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
       "meta": "{0} חברות · {1} עדכונים · עודכן {2}",
-      "search.ph": "חיפוש בחברות: שם, תחום או עיר", "ex.h": "חברות בתעשייה", "ex.sub": "{0} סטודיואים, מותגים וסוכנויות. לפי תחום, עיר או שם.",
+      "search.ph": "חיפוש בחברות: שם, תחום או עיר", "ex.h": "חברות בתעשייה", "ex.sub": "{0} סטודיואים, מותגים וסוכנויות, ומה כל אחד מזמין. לפי תחום, עיר או שם.",
       "lens.brands": "לקוחות", "lens.collab": "סטודיואים", "lens.all": "הכול",
       "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
       "filters": "סינון", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
@@ -597,7 +597,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים בתפקידים פומביים",
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
       "sh.followup": " · תזכורת {0}", "sh.save": "מעקב", "sh.follow": "התראות במייל", "sh.following": "עם התראות", "sh.alertson": "התראות במייל על החברה הזו פועלות.", "sh.alertsoff": "אפשר לקבל מייל כשמשהו משתנה כאן.", "sh.alertsstop": "הפסקת ההתראות",
-      "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן אופציה.", "fo.later": "לא עכשיו", "fo.p": "מייל כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה.", "fo.email": "מייל",
+      "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן אופציה.", "fo.later": "לא עכשיו", "fo.p": "תדעו ראשונים כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. לכל היותר מייל אחד ביום, בלי סיסמה.", "fo.email": "מייל",
       "fo.consent": "אני רוצה לקבל במייל התראות מ־Landscape כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
       "fo.sent": "שלחנו קישור אישור ל־{0}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.", "fo.err": "משהו השתבש. אפשר לנסות שוב.", "fo.rate": "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות.",
       "fo.off": "החברה נשמרה, אבל ההתראות כבויות. אפשר להפעיל אותן בחשבון שלי.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "צריך לאשר את כתובת המייל קודם.",
@@ -1445,8 +1445,11 @@ Question: ${q}`;
     } catch (e) { return { ok: false }; }
   }
   const followErr = (e) => t(e === "rate_limited" ? "fo.rate" : e === "limit" ? "fo.limit" : e === "unconfirmed" ? "fo.unconfirmed" : "fo.err");
+  // Vercel Web Analytics custom events on the site (no-op when analytics is off or inside the Artifact host).
+  const vaEvent = (name) => { try { if (window.va) window.va("event", { name }); } catch (e) {} };
   async function toggleFollow(o, consent) {
     const on = !following(o.id);
+    vaEvent("follow_click");
     const res = await postFollows("/api/follows", { org_id: o.id, on, ...(consent ? { consent: true } : {}) });
     if (!res.ok) { toast(followErr(res.error)); return false; }
     on ? FOLLOW.follows.add(o.id) : FOLLOW.follows.delete(o.id);
@@ -1483,6 +1486,7 @@ Question: ${q}`;
         return;
       }
       const email = $("foEmail").value.trim();
+      vaEvent("follow_start_submit");
       const res = await postFollows("/api/follows/start", { email, org_id: o.id, consent: true });
       const m = $("foMsg"); m.hidden = false;
       if (res.ok) { m.innerHTML = `<b>${esc(t("fo.sent", email))}</b>`; $("foSend").hidden = true; }

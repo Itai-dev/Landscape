@@ -3,12 +3,22 @@ import "./chrome.css";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
 import MenuCloser from "@/components/MenuCloser";
+import TrackClicks from "@/components/TrackClicks";
+import { Analytics } from "@vercel/analytics/next";
 import { supabaseConfig } from "@/lib/config";
 import { FOOTER, TAGLINE, THEME_SCRIPT, THEME_BUTTON } from "@/lib/chrome.mjs";
 
+const DESCRIPTION = "מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין את מה שאתם עושים. כל יום ראשון במייל, לפי התחום שלכם, עם הסיבה לפנות עכשיו. חינם.";
+
 export const metadata = {
-  title: { default: "Landscape · תעשיית הקריאייטיב בישראל", template: "%s · Landscape" },
-  description: "מי מזמין מה בתעשיית הקריאייטיב בישראל, מה השתנה השבוע ולמה עכשיו. סטודיואים, מותגים, משרדי פרסום ואנשים, וגיליון שבועי חינם לפי התחום שלכם.",
+  title: { default: "Landscape · מי מזמין מה בתעשיית הקריאייטיב", template: "%s · Landscape" },
+  description: DESCRIPTION,
+  openGraph: {
+    title: "לא צריך להכיר את כולם. צריך לדעת מי מזמין, ומתי לפנות.",
+    description: DESCRIPTION,
+    locale: "he_IL",
+    type: "website",
+  },
   icons: { icon: "/favicon.svg" },
 };
 
@@ -33,6 +43,7 @@ export default function RootLayout({ children }) {
         <Providers supabase={cfg}>
           <Header />
           <MenuCloser />
+          <TrackClicks />
           <main>{children}</main>
           <footer className="foot">
             <div className="wrap">
@@ -44,6 +55,8 @@ export default function RootLayout({ children }) {
             </div>
           </footer>
         </Providers>
+        {/* Vercel Web Analytics: counts nothing until it is enabled for the project in the Vercel dashboard. */}
+        <Analytics />
       </body>
     </html>
   );

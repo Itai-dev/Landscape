@@ -5,6 +5,7 @@ import { useUser } from "@/components/useUser";
 import { CRAFTS, CONSENT_TEXT } from "@/lib/taxonomy";
 import { callbackUrl } from "@/lib/authLink";
 import { firstSendLabel } from "@/lib/digestSchedule";
+import { track } from "@vercel/analytics";
 
 const FREQS = [
   { slug: "weekly", he: "כל שבוע" },
@@ -31,7 +32,7 @@ const label = (slugs) => slugs.map((s) => CRAFTS.find((c) => c.slug === s)?.he |
 // Email-only sign-up for the digest. The consent box starts unchecked (anti-spam law §30A): nothing is sent
 // without it, and nothing is sent until the address is confirmed by opening the link in the email.
 // Signed-in readers (already confirmed) save straight away.
-export default function DigestSubscribe({ crafts: initialCrafts = [], compact = false, id = "subscribe" }) {
+export default function DigestSubscribe({ crafts: initialCrafts = [], compact = false, id = "subscribe", cta = "", note = "", where = "" }) {
   const { supabase, configured } = useSupabase();
   const user = useUser();
   const [email, setEmail] = useState("");
@@ -49,7 +50,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים עליו כדי לאשר את ההרשמה, והגיליון הראשון יגיע {firstSendLabel(frequency)}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים עליו כדי לאשר, והגיליון הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, מכרזים פתוחים ומי מזמין עכשיו. אחרי האישור אפשר לבחור תחומים. כדאי לפתוח את הקישור באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }
@@ -64,6 +65,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
   async function submit(e) {
     e.preventDefault();
     if (!consent) return;
+    try { track("digest_subscribe_submit", { where: where || id }); } catch {}
     setState("sending");
     setError("");
     if (user) {
@@ -122,9 +124,9 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !consent || (!user && !email.includes("@"))}>
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
-          {user ? "להירשם לגיליון" : "לקבל את הגיליון במייל"}
+          {cta || (user ? "להירשם לגיליון" : "שלחו לי את הגיליון של יום ראשון")}
         </button>
-        <span className="small muted">חינם. בלי סיסמה. אפשר להסיר בכל רגע.</span>
+        <span className="small muted">{note || "עד מייל אחד בשבוע. הסרה בלחיצה. בלי סיסמה."}</span>
       </div>
     </form>
   );

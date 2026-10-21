@@ -11,8 +11,8 @@ export const revalidate = 3600;
 
 export const metadata = {
   title: "מכרזים פתוחים",
-  description: "מכרזים וקולות קוראים לעבודות קריאייטיב בישראל: הפקה, וידאו, עיצוב, אירועים וקמפיינים. לפי פרסום רשמי, עם קישור למקור.",
-  openGraph: { title: "מכרזים פתוחים · Landscape", description: "מכרזים לעבודות קריאייטיב בישראל, לפי תאריך ההגשה." },
+  description: "עבודות קריאייטיב שאפשר להגיש עליהן הצעה עכשיו: הפקה, וידאו, עיצוב, אירועים וקמפיינים. משרדי ממשלה, עיריות וגופים ציבוריים, עם תאריך ההגשה וקישור למקור הרשמי.",
+  openGraph: { title: "מכרזים פתוחים לעבודות קריאייטיב · Landscape", description: "עבודה שאפשר להגיש עליה הצעה כבר השבוע. לפי תאריך ההגשה, עם קישור למקור הרשמי." },
 };
 
 export default async function Tenders({ searchParams }) {
@@ -42,7 +42,8 @@ export default async function Tenders({ searchParams }) {
     <div className="wrap">
       <div className="pagehead">
         <h1>מכרזים פתוחים</h1>
-        <p>מכרזים וקולות קוראים לעבודות קריאייטיב: הפקה, וידאו, עיצוב, אירועים וקמפיינים. לפי מועד ההגשה.</p>
+        <p>עבודה שאפשר להגיש עליה הצעה עכשיו: הפקה, וידאו, עיצוב, אירועים וקמפיינים, ממשרדי ממשלה, עיריות וגופים ציבוריים. לפי מועד ההגשה.</p>
+        <p><a className="btn soft" href="/digest#subscribe" data-track="tender_digest_cta">מכרזים חדשים במייל, כל יום ראשון ‹</a></p>
       </div>
 
       <form className="toolbar" role="search" action="/tenders">

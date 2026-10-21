@@ -11,7 +11,7 @@ import { PROFILES_ENABLED } from "@/lib/config";
 
 export const metadata = {
   title: "אנשים",
-  description: "אנשי מקצוע בתעשיית הקריאייטיב בישראל: מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק.",
+  description: "מי מחליט בתעשיית הקריאייטיב בישראל: מנהלי שיווק, הפקה וקריאייטיב במותגים, במשרדים ובסטודיואים. לפי מה שפורסם בפומבי, עם המקור.",
 };
 
 const PAGE = 24;
@@ -44,8 +44,8 @@ export default async function People({ searchParams }) {
   return (
     <div className="wrap">
       <div className="pagehead">
-        <h1>אנשים בתעשייה</h1>
-        <p>מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק. לפי שם, תפקיד, חברה או תחום.</p>
+        <h1>מי מחליט בתעשייה</h1>
+        <p>מנהלי שיווק, הפקה וקריאייטיב במותגים, במשרדים ובסטודיואים. לפני שפונים לחברה, יודעים מי עומד מולכם.</p>
       </div>
 
       <form className="toolbar" role="search" action="/people">

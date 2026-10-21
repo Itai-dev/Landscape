@@ -100,6 +100,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
         aria-expanded={open}
         aria-label={compact ? `${label}: ${orgName}` : undefined}
         title={compact ? label : undefined}
+        data-track="follow_click"
         onClick={onClick}
         disabled={phase === "busy"}
       >

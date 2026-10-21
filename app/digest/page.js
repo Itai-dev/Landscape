@@ -20,7 +20,7 @@ export async function generateMetadata({ searchParams }) {
   const who = craftsTitle(d);
   const title = who ? `השבוע בתעשייה: ${who}` : "השבוע בתעשייה";
   const top = [...d.items, ...d.more].slice(0, 2).map((i) => i.headline).join(" · ");
-  const description = top || "מה השתנה השבוע בתעשיית הקריאייטיב בישראל: מינויים, החלפות משרד, קמפיינים ומי מזמין מה.";
+  const description = top || "מי מונה לשיווק, מי החליף משרד ואילו מכרזים נפתחו השבוע בתעשיית הקריאייטיב בישראל. ולמה זה הזמן לפנות.";
   const url = `${siteUrl()}/digest${d.crafts.length ? `?crafts=${d.crafts.map((c) => c.slug).join(",")}` : ""}`;
   const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · Landscape" };
   return {
@@ -69,16 +69,16 @@ export default async function Digest({ searchParams }) {
         <span className="eyebrow">{d.range}</span>
         <h1>השבוע בתעשייה</h1>
         <p>
-          {who ? <>מה השתנה אצל מי שמזמין <b>{who}</b>, ולמה זה רלוונטי עכשיו.</> : "מינויים, החלפות משרד, קמפיינים ומי מזמין מה. כל עדכון עם הסיבה לפנות ועם מקור."}
+          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה הזמן לפנות.</> : "מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין עכשיו. כל עדכון עם הסיבה לפנות ועם מקור."}
         </p>
       </div>
 
       <div className="dlayout">
         <aside className="dside" aria-label="הרשמה ושיתוף">
           <div className="panel stack" id="subscribe-panel">
-            <h2>לקבל את זה במייל</h2>
-            <p className="muted">ביום ראשון בבוקר, בתדירות שבוחרים ולפי התחומים שלכם. בלי ספאם, ואפשר להסיר בלחיצה.</p>
-            <DigestSubscribe crafts={chosen} />
+            <h2>לקבל את זה כל יום ראשון</h2>
+            <p className="muted">בבוקר, לפני כולם, רק מה ששייך לתחומים שלכם. חינם, ואפשר להסיר בלחיצה.</p>
+            <DigestSubscribe crafts={chosen} where="digest-page" />
           </div>
           <div className="card stack share">
             <h3>לשתף</h3>
@@ -88,8 +88,8 @@ export default async function Digest({ searchParams }) {
           {surveyOpen() && (
             <div className="card stack">
               <h3>סקר התעריפים 2026</h3>
-              <p className="muted small">כמה גובים בתעשייה ומתי משלמים. 4 דקות, ורואים את התוצאות.</p>
-              <a className="btn soft" href="/survey">לענות על הסקר ‹</a>
+              <p className="muted small">4 דקות, ותראו כמה גובים אחרים בתחום שלכם ותוך כמה זמן משלמים להם.</p>
+              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">לענות על הסקר ‹</a>
             </div>
           )}
         </aside>
