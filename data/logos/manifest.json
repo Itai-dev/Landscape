@@ -12,17 +12,18 @@
   "format": "png"
  },
  "94-films": {
-  "source_url": "https://94-films.com/wp-content/uploads/2024/12/cropped-94-192x192.png",
+  "source_url": "https://94-films.com/wp-content/uploads/2024/12/cropped-94.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
-  "format": "png"
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "abot-hameiri": {
-  "source_url": "https://ahe.co.il/wp-content/uploads/2019/02/cropped-logo_all-192x192.png",
+  "source_url": "https://ahe.co.il/wp-content/uploads/2019/02/cropped-logo_all.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "act3": {
   "fetched_at": "2026-10-19",
@@ -45,11 +46,11 @@
   "format": "png"
  },
  "alison-ai": {
-  "source_url": "https://alison.ai/wp-content/uploads/cropped-icon-logo-192x192.png",
+  "source_url": "https://alison.ai/wp-content/uploads/cropped-icon-logo.png",
   "fetched_at": "2026-10-21",
-  "src_px": 166,
+  "src_px": 438,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "altshuler-shaham": {
   "source_url": "https://www.as-invest.co.il/img/favicon.ico",
@@ -77,11 +78,11 @@
   "kind": "svg-icon"
  },
  "anka-studio": {
-  "source_url": "https://www.ankanimation.com/wp-content/uploads/Untitled-3-300x300.png",
+  "source_url": "https://www.ankanimation.com/wp-content/uploads/Untitled-3.png",
   "fetched_at": "2026-10-21",
-  "src_px": 294,
+  "src_px": 486,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "anyword": {
   "source_url": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65d85069221f999621761943_Group%201261159146.png",
@@ -122,18 +123,18 @@
   "kind": "apple"
  },
  "aviv-advertising": {
-  "source_url": "https://avivadv.co.il/wp-content/uploads/2023/12/cropped-aviv-favicon-192x192.png",
+  "source_url": "https://avivadv.co.il/wp-content/uploads/2023/12/cropped-aviv-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "aviv-melisron": {
-  "source_url": "https://avivmelisron.co.il/wp-content/uploads/2024/03/cropped-aAsset-2-192x192.png",
+  "source_url": "https://avivmelisron.co.il/wp-content/uploads/2024/03/cropped-aAsset-2.png",
   "fetched_at": "2026-10-21",
-  "src_px": 188,
+  "src_px": 497,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "avraham-advertising": {
   "fetched_at": "2026-10-18",
@@ -181,11 +182,11 @@
   "src_px": 0
  },
  "bazaart": {
-  "source_url": "https://www.bazaart.com/wp-content/uploads/2025/07/cropped-icon_rounded_512x512_P3-192x192.png",
+  "source_url": "https://www.bazaart.com/wp-content/uploads/2025/07/cropped-icon_rounded_512x512_P3.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "bbr-saatchi-saatchi": {
   "fetched_at": "2026-10-18",
@@ -222,11 +223,11 @@
   "kind": "svg-icon"
  },
  "bilderish": {
-  "source_url": "https://bilderish.com/wp-content/uploads/2022/06/cropped-512-192x192.png",
+  "source_url": "https://bilderish.com/wp-content/uploads/2022/06/cropped-512.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 507,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "black-sheep-film-productions": {
   "fetched_at": "2026-10-18",
@@ -295,11 +296,11 @@
   "kind": "icon"
  },
  "burger-king-israel": {
-  "source_url": "https://www.burgerking.co.il/wp-content/uploads/sites/106/2024/12/cropped-logos-02-192x192.png",
+  "source_url": "https://www.burgerking.co.il/wp-content/uploads/sites/106/2024/12/cropped-logos-02.png",
   "fetched_at": "2026-10-21",
-  "src_px": 184,
+  "src_px": 486,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "butcher-studio": {
   "source_url": "https://cdn.prod.website-files.com/68d28630dc033fd1054bdfe5/68d287889e342834f051bef9_ezgif-44fa43547bc5b8.webp",
@@ -327,11 +328,11 @@
   "src_px": 0
  },
  "cameri-theatre": {
-  "source_url": "https://s-cameri-pull-zone.b-cdn.net/wp-content/uploads/2026/02/Frame-1984079796-300x300.png",
+  "source_url": "https://s-cameri-pull-zone.b-cdn.net/wp-content/uploads/2026/02/Frame-1984079796.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "carmi-and-cohen": {
   "fetched_at": "2026-10-19",
@@ -419,18 +420,18 @@
   "skip_header": true
  },
  "connect-digital": {
-  "source_url": "https://connect.co.il/wp-content/uploads/2026/10/connect-favicon-300x300.png",
+  "source_url": "https://connect.co.il/wp-content/uploads/2026/10/connect-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "cowboy-productions": {
-  "source_url": "https://thecowboy.co.il/wp-content/uploads/2026/10/cropped-OMNITICON-1-192x192.png",
+  "source_url": "https://thecowboy.co.il/wp-content/uploads/2026/10/cropped-OMNITICON-1.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "creative-labs-israel": {
   "source_url": "https://www.creativelabs.co.il/wp-content/uploads/2023/03/fav.png",
@@ -455,11 +456,11 @@
   "kind": "svg-icon"
  },
  "d-id": {
-  "source_url": "https://www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1-300x300.png",
+  "source_url": "https://www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1.png",
   "fetched_at": "2026-10-21",
-  "src_px": 244,
+  "src_px": 282,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "debby-group": {
   "source_url": "https://debby.co.il/wp-content/themes/debby/assets/img/debby-logo.png",
@@ -503,11 +504,11 @@
   "kind": "icon"
  },
  "design-museum-holon": {
-  "source_url": "https://www.dmh.org.il/wp-content/uploads/2021/11/cropped-LOGO-DMH-01-copy-192x192.png",
+  "source_url": "https://www.dmh.org.il/wp-content/uploads/2021/11/cropped-LOGO-DMH-01-copy.png",
   "fetched_at": "2026-10-21",
-  "src_px": 178,
+  "src_px": 470,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "diboor": {
   "source_url": "https://diboor.co.il/wp-content/uploads/2025/04/LOGO_DIBOOR-cropped-2.svg",
@@ -523,18 +524,18 @@
   "format": "png"
  },
  "docaviv": {
-  "source_url": "https://www.docaviv.co.il/wp-content/uploads/2026/07/Wordpress-Logo-DOCAVIV-300x300.png",
+  "source_url": "https://www.docaviv.co.il/wp-content/uploads/2026/07/Wordpress-Logo-DOCAVIV.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "dori-media-darset": {
-  "source_url": "https://dorimedia.com/wp-content/uploads/2016/09/cropped-favicon-dorimedia-192x192.png",
+  "source_url": "https://dorimedia.com/wp-content/uploads/2016/09/cropped-favicon-dorimedia.png",
   "fetched_at": "2026-10-21",
-  "src_px": 190,
+  "src_px": 505,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "dov-abramson-studio": {
   "source_url": "https://www.studiodov.com/wp-content/themes/dov-abramson/images/favicon/android-chrome-512x512.png",
@@ -557,11 +558,11 @@
   "kind": "icon"
  },
  "dubidub-studios": {
-  "source_url": "https://dubidubstudios.com/wp-content/uploads/2021/01/cropped-logo-for-icon-512_512-192x192.png",
+  "source_url": "https://dubidubstudios.com/wp-content/uploads/2021/01/cropped-logo-for-icon-512_512.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 494,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "duda": {
   "source_url": "https://irp.cdn-website.com/a8ff2f1c/site_favicon_16_1753604947224.ico",
@@ -730,18 +731,18 @@
   "kind": "icon"
  },
  "gad-dairies": {
-  "source_url": "https://gad-dairy.co.il/wp-content/uploads/2016/05/cropped-GADfavicon_512-512-192x192.jpg",
+  "source_url": "https://gad-dairy.co.il/wp-content/uploads/2016/05/cropped-GADfavicon_512-512.jpg",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "gameis": {
-  "source_url": "https://www.gameis.org.il/wp-content/uploads/2025/07/cropped-favic-192x192.png",
+  "source_url": "https://www.gameis.org.il/wp-content/uploads/2025/07/cropped-favic.png",
   "fetched_at": "2026-10-21",
-  "src_px": 188,
+  "src_px": 499,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "geller-productions": {
   "fetched_at": "2026-10-18",
@@ -787,11 +788,11 @@
   "kind": "svg-icon"
  },
  "graphic-designers-association-israel": {
-  "source_url": "https://gdai.co.il/wp-content/uploads/2019/07/cropped-fav-192x192.png",
+  "source_url": "https://gdai.co.il/wp-content/uploads/2019/07/cropped-fav.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "gravity-creative-space": {
   "source_url": "https://c-p.rmcdn.net/61da8a8e6051e9001a2318fc/Favicon-59790915-bd5e-4896-ba7a-940c3eaba958_144.png",
@@ -834,11 +835,11 @@
   "kind": "header-logo"
  },
  "habima": {
-  "source_url": "https://www.habima.co.il/wp-content/uploads/2022/01/cropped-WhatsApp-Image-2022-01-24-at-19.10.24-192x192.jpeg",
+  "source_url": "https://www.habima.co.il/wp-content/uploads/2022/01/cropped-WhatsApp-Image-2022-01-24-at-19.10.24.jpeg",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "hafontia": {
   "source_url": "https://hafontia.com/wp-content/plugins/hafontia-new-font-page/assets/icons/favicon.svg",
@@ -906,11 +907,11 @@
   "src_px": 0
  },
  "hibob": {
-  "source_url": "https://new.hibob.com/app/uploads/2026/05/cropped-HiBob-Logo-Icon-192x192.png",
+  "source_url": "https://new.hibob.com/app/uploads/2026/05/cropped-HiBob-Logo-Icon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 160,
+  "src_px": 424,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "highlight-films": {
   "fetched_at": "2026-10-18",
@@ -945,11 +946,11 @@
   "src_px": 0
  },
  "humanz": {
-  "source_url": "https://www.humanz.com/wp-content/uploads/2026/07/cropped-Humanz-logomark-scaled-1-192x192.png",
+  "source_url": "https://www.humanz.com/wp-content/uploads/2026/07/cropped-Humanz-logomark-scaled-1.png",
   "fetched_at": "2026-10-21",
-  "src_px": 169,
+  "src_px": 446,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "hybrid-partners": {
   "source_url": "https://hybrid.co.il/android-chrome-512x512.png",
@@ -1076,11 +1077,11 @@
   "format": "png"
  },
  "israel-philharmonic-orchestra": {
-  "source_url": "https://www.ipo.co.il/wp-content/uploads/2023/01/cropped-favicon-192x192.png",
+  "source_url": "https://www.ipo.co.il/wp-content/uploads/2023/01/cropped-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 168,
+  "src_px": 445,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "israel-police": {
   "fetched_at": "2026-10-19",
@@ -1132,11 +1133,11 @@
   "kind": "header-logo"
  },
  "july-august-productions": {
-  "source_url": "https://july-august.com/wp-content/uploads/2025/08/cropped-favicon-192x192.png",
+  "source_url": "https://july-august.com/wp-content/uploads/2025/08/cropped-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "jungle-sound": {
   "fetched_at": "2026-10-19",
@@ -1190,11 +1191,11 @@
   "kind": "svg-icon"
  },
  "koda-communications": {
-  "source_url": "https://www.koda.co.il/wp-content/uploads/2018/05/cropped-ico1-192x192.png",
+  "source_url": "https://www.koda.co.il/wp-content/uploads/2018/05/cropped-ico1.png",
   "fetched_at": "2026-10-21",
-  "src_px": 189,
+  "src_px": 500,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "kpln": {
   "source_url": "https://kpln.co.il/wp-content/uploads/2026/02/cropped-KPLN-Logo-192x192.png",
@@ -1314,11 +1315,11 @@
   "format": "png"
  },
  "market-master": {
-  "source_url": "https://www.marketmaster.co.il/wp-content/uploads/2017/05/cropped-favicon-192x192.png",
+  "source_url": "https://www.marketmaster.co.il/wp-content/uploads/2017/05/cropped-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "masterfont": {
   "fetched_at": "2026-10-18",
@@ -1371,11 +1372,11 @@
   "kind": "header-logo"
  },
  "melio": {
-  "source_url": "https://melio.com/wp-content/uploads/2023/05/cropped-Melio_favicon_01-300x300.png",
+  "source_url": "https://melio.com/wp-content/uploads/2023/05/cropped-Melio_favicon_01.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "menora-mivtachim": {
   "source_url": "https://www.menoramivt.co.il/customers-homepage/static/pwa/icon_512x512.png",
@@ -1391,11 +1392,11 @@
   "format": "png"
  },
  "mialma": {
-  "source_url": "https://www.mialma.co.il/wp-content/uploads/2021/06/cropped-mialma-facebook-192x192.png",
+  "source_url": "https://www.mialma.co.il/wp-content/uploads/2021/06/cropped-mialma-facebook.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "michael-goorevich-sound": {
   "fetched_at": "2026-10-19",
@@ -1462,11 +1463,11 @@
   "kind": "apple"
  },
  "moon-active": {
-  "source_url": "https://www.moonactive.com/wp-content/uploads/2024/08/cropped-MA-Icon3-192x192.png",
+  "source_url": "https://www.moonactive.com/wp-content/uploads/2024/08/cropped-MA-Icon3.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "moosh-studio": {
   "source_url": "https://moosh-studio.com/favicon.ico?favicon.2vob68tjqpejf.ico",
@@ -1490,11 +1491,11 @@
   "kind": "svg-icon"
  },
  "munch": {
-  "source_url": "https://mench-adv.co.il/wp-content/uploads/2019/07/cropped-tm-192x192.jpg",
+  "source_url": "https://mench-adv.co.il/wp-content/uploads/2019/07/cropped-tm.jpg",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "mustache-studio": {
   "source_url": "https://files.cdn-files-a.com/uploads/11018325/800_687dfe78ba64a.png?aspect_ratio=1:1&width=180&format=png",
@@ -1535,22 +1536,22 @@
   "format": "png"
  },
  "ndg-studios": {
-  "source_url": "https://www.ndg-studios.com/wp-content/uploads/2018/12/ndgstudios-grey-300x300.png",
+  "source_url": "https://www.ndg-studios.com/wp-content/uploads/2018/12/ndgstudios-grey.png",
   "fetched_at": "2026-10-21",
-  "src_px": 292,
+  "src_px": 485,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "no-no-no-no-no-yes": {
   "fetched_at": "2026-10-18",
   "src_px": 0
  },
  "notfromhere": {
-  "source_url": "https://notfromhere.net/wp-content/uploads/cropped-site-logo-192x192.png",
+  "source_url": "https://notfromhere.net/wp-content/uploads/cropped-site-logo.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "nua-motion": {
   "source_url": "https://static.wixstatic.com/media/22b198_b6b5ab69f7b24942ace18154d2e7c4d6%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/22b198_b6b5ab69f7b24942ace18154d2e7c4d6%7Emv2.png",
@@ -1575,11 +1576,11 @@
   "src_px": 0
  },
  "on-air-graphics": {
-  "source_url": "https://on-airgraphics.com/wp-content/uploads/2018/02/cropped-SiteID-192x192.png",
+  "source_url": "https://on-airgraphics.com/wp-content/uploads/2018/02/cropped-SiteID.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 509,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "one-zero-bank": {
   "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://onezerobank.com&size=128",
@@ -1631,11 +1632,11 @@
   "format": "png"
  },
  "papaya-global": {
-  "source_url": "https://www.papayaglobal.com/wp-content/uploads/2024/03/cropped-favicon-for-papayaglobal-192x192.png",
+  "source_url": "https://www.papayaglobal.com/wp-content/uploads/2024/03/cropped-favicon-for-papayaglobal.png",
   "fetched_at": "2026-10-21",
-  "src_px": 179,
+  "src_px": 478,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "parallax-virtual-production-studio": {
   "source_url": "https://static.wixstatic.com/media/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png",
@@ -1669,11 +1670,11 @@
   "kind": "manifest"
  },
  "peach-content": {
-  "source_url": "https://www.peachcontent.com/wp-content/uploads/2021/04/cropped-peach-davicon-1-192x192.jpg",
+  "source_url": "https://www.peachcontent.com/wp-content/uploads/2021/04/cropped-peach-davicon-1.jpg",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "peanuts-productions": {
   "fetched_at": "2026-10-19",
@@ -1710,11 +1711,11 @@
   "kind": "manifest"
  },
  "phygital-factory": {
-  "source_url": "https://phygital.co.il/wp-content/uploads/cropped-PhygitalBranding-01-192x192.png",
+  "source_url": "https://phygital.co.il/wp-content/uploads/cropped-PhygitalBranding-01.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "pil-animation": {
   "source_url": "https://pilanimation.com/wp-content/uploads/2014/03/logo.png",
@@ -1731,11 +1732,11 @@
   "kind": "icon"
  },
  "pixellot": {
-  "source_url": "https://www.pixellot.tv/wp-content/uploads/2020/07/cropped-pixellot_favicon-192x192.png",
+  "source_url": "https://www.pixellot.tv/wp-content/uploads/2020/07/cropped-pixellot_favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 186,
+  "src_px": 494,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "plarium": {
   "source_url": "https://company.plarium.com/favicon/favicon-32x32.png",
@@ -1748,11 +1749,11 @@
   "src_px": 0
  },
  "playsight": {
-  "source_url": "https://playsight.com/wp-content/uploads/2020/09/cropped-PS-favicon-192x192.png",
+  "source_url": "https://playsight.com/wp-content/uploads/2020/09/cropped-PS-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "playstudios-tel-aviv": {
   "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://playstudios.com&size=128",
@@ -1809,11 +1810,11 @@
   "kind": "manifest"
  },
  "promotheus": {
-  "source_url": "https://www.promots.tv/wp-content/uploads/2017/05/favicon432-300x300.png",
+  "source_url": "https://www.promots.tv/wp-content/uploads/2017/05/favicon432.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 432,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "publicis-tel-aviv": {
   "fetched_at": "2026-10-18",
@@ -1927,10 +1928,11 @@
   "format": "png"
  },
  "scpg-shortcut-playground": {
-  "source_url": "https://scpg.tv/wp-content/uploads/2022/11/cropped-oie_transparent-4-1-192x192.png",
+  "source_url": "https://scpg.tv/",
   "fetched_at": "2026-10-21",
-  "src_px": 176,
-  "format": "png"
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-svg"
  },
  "screen-post-productions": {
   "fetched_at": "2026-10-18",
@@ -1967,11 +1969,11 @@
   "src_px": 0
  },
  "shuffll": {
-  "source_url": "https://shuffll.com/wp-content/uploads/2024/09/shuffll_symbol_light_250px-1-Vectorized-300x300.png",
+  "source_url": "https://shuffll.com/wp-content/uploads/2024/09/shuffll_symbol_light_250px-1-Vectorized.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "similarweb": {
   "source_url": "https://static-us-east-1.similarcdn.com/build/20261021.master.1c24f44/dist/scripts/lite-app/assets/bf0781432ef84ce62b85.png",
@@ -2020,18 +2022,18 @@
   "kind": "icon"
  },
  "sporta-digital": {
-  "source_url": "https://sporta.digital/wp-content/uploads/2023/11/cropped-Icon-192x192.png",
+  "source_url": "https://sporta.digital/wp-content/uploads/2023/11/cropped-Icon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 190,
+  "src_px": 504,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "spring-valley": {
-  "source_url": "https://spring-valley.co.il/wp-content/uploads/favicon-300x300.png",
+  "source_url": "https://spring-valley.co.il/wp-content/uploads/favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 300,
+  "src_px": 343,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "starcom-israel": {
   "fetched_at": "2026-10-18",
@@ -2065,11 +2067,11 @@
   "kind": "apple"
  },
  "studio-animade": {
-  "source_url": "https://animade.me/wp-content/uploads/2025/10/cropped-Site-Icon-192x192.jpg",
+  "source_url": "https://animade.me/wp-content/uploads/2025/10/cropped-Site-Icon.jpg",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "studio-animedia": {
   "source_url": "https://www.studioanimedia.com/wp-content/uploads/2021/05/Icon_Positive.png",
@@ -2095,11 +2097,11 @@
   "kind": "icon"
  },
  "studio-pixel": {
-  "source_url": "https://studiopixel.co.il/wp-content/uploads/2023/03/cropped-logo-192x192.png",
+  "source_url": "https://studiopixel.co.il/wp-content/uploads/2023/03/cropped-logo.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "studio-poink": {
   "source_url": "https://studiopoink.com/media/cropped-brand-logo-ea29e8247b67.webp",
@@ -2133,11 +2135,11 @@
   "format": "png"
  },
  "superplay": {
-  "source_url": "https://www.superplay.co/wp-content/uploads/2025/01/cropped-superplay-favicon-16x16-1-192x192.png",
+  "source_url": "https://www.superplay.co/wp-content/uploads/2025/01/cropped-superplay-favicon-16x16-1.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "sweet-sound-studios": {
   "source_url": "https://static.wixstatic.com/media/892975_6c099e1f84ef459c8a160b84047e835b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/892975_6c099e1f84ef459c8a160b84047e835b%7Emv2.png",
@@ -2222,11 +2224,11 @@
   "kind": "header-logo"
  },
  "tempo-beverages": {
-  "source_url": "https://www.tempo.co.il/wp-content/uploads/2020/07/cropped-tempofav-e1594112929439-192x192.png",
+  "source_url": "https://www.tempo.co.il/wp-content/uploads/2020/07/cropped-tempofav-e1594112929439.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "terminal-x": {
   "fetched_at": "2026-10-19",
@@ -2253,11 +2255,11 @@
   "kind": "apple"
  },
  "the-hive-studio": {
-  "source_url": "https://thehivepro.com/wp-content/uploads/2023/03/cropped-favicon-192x192.png",
+  "source_url": "https://thehivepro.com/wp-content/uploads/2023/03/cropped-favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "the-moving-company-tmc": {
   "fetched_at": "2026-10-18",
@@ -2363,11 +2365,11 @@
   "src_px": 0
  },
  "university-of-haifa": {
-  "source_url": "https://www.haifa.ac.il/wp-content/uploads/2024/02/cropped-Haifa_logo_rgb_symbol_dark-1-192x192.png",
+  "source_url": "https://www.haifa.ac.il/wp-content/uploads/2024/02/cropped-Haifa_logo_rgb_symbol_dark-1.png",
   "fetched_at": "2026-10-21",
-  "src_px": 183,
+  "src_px": 483,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "uri-amitai-productions": {
   "fetched_at": "2026-10-18",
@@ -2388,11 +2390,11 @@
   "kind": "header-logo"
  },
  "victory-supermarkets": {
-  "source_url": "https://victory.co.il/wp-content/uploads/2018/06/cropped-site-logo-192x192.png",
+  "source_url": "https://victory.co.il/wp-content/uploads/2018/06/cropped-site-logo.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 511,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "videofilm-international": {
   "fetched_at": "2026-10-18",
@@ -2500,11 +2502,11 @@
   "kind": "icon"
  },
  "wsc-sports": {
-  "source_url": "https://wsc-sports.com/wp-content/uploads/2024/04/cropped-Favicon-192x192.png",
+  "source_url": "https://wsc-sports.com/wp-content/uploads/2024/04/cropped-Favicon.png",
   "fetched_at": "2026-10-21",
-  "src_px": 192,
+  "src_px": 512,
   "format": "png",
-  "kind": "icon"
+  "kind": "icon-original"
  },
  "yad2": {
   "source_url": "https://visuals.yad2.co.il/mango/yad2-main-logo-v2.svg",

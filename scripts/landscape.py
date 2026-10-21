@@ -799,7 +799,7 @@ def org_needs(o: dict) -> list[str]:
 
 UA ="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 LOGO_MAX = 512   # stored master, longest edge
-LOGO_WEB = 192   # shipped hi-res file: 2x the largest display size (96 css px)
+LOGO_WEB = 384   # shipped hi-res file: 3x the largest display size (128 css px), sharp on phone screens
 LOGO_MIN = 48    # below this the app shows the name tile instead
 
 
@@ -1070,6 +1070,15 @@ def fetch_logo(rec: dict) -> dict:
             best = {"png": png, "svg": svg, "src_px": px, "source_url": url, "kind": kind}
         if px >= 128:
             break
+    # WordPress serves resized copies ("…-192x192.png") of a larger original at the same path without the size
+    # suffix; when the best pick is one of those, try the original once.
+    m = best and re.search(r"-\d{2,4}x\d{2,4}(\.(?:png|jpe?g|webp))$", best["source_url"])
+    if m:
+        url = best["source_url"][: m.start()] + m.group(1)
+        got = f.get(url, timeout=8)
+        dec = got and _decode(got[0], url)
+        if dec and dec[1] > best["src_px"]:
+            best = {"png": dec[0], "svg": dec[2], "src_px": dec[1], "source_url": url, "kind": best["kind"] + "-original"}
     if best:
         res.update(best)
     return res

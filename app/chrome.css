@@ -194,3 +194,16 @@ header.top form.hsearch { position: relative; }
 .k-production_company { --kbg: var(--kind-production_company-bg); --kbg2: var(--kind-production_company-bg2); --kink: var(--kind-production_company-ink); }
 .k-startup { --kbg: var(--kind-startup-bg); --kbg2: var(--kind-startup-bg2); --kink: var(--kind-startup-ink); }
 .k-community { --kbg: var(--kind-community-bg); --kbg2: var(--kind-community-bg2); --kink: var(--kind-community-ink); }
+
+/* Back to top: a small ink square, bottom corner (inline end), after one screen of scrolling. */
+.totop { position: fixed; z-index: 14; inset-inline-end: clamp(16px, 2.4vw, 32px); bottom: clamp(16px, 2.4vw, 32px); width: 52px; height: 52px; display: grid; place-items: center; padding: 0; border: 0; border-radius: 14px; background: var(--ink); color: var(--bg); cursor: pointer; box-shadow: 0 0 0 1px color-mix(in srgb, var(--bg) 30%, transparent), 0 4px 14px color-mix(in srgb, var(--ink) 14%, transparent); opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s; }
+.totop.show { opacity: 1; visibility: visible; transform: none; transition: opacity .25s ease, transform .25s ease, visibility 0s; }
+.totop svg { transition: transform .2s ease; }
+@media (hover: hover) { .totop:hover svg { transform: translateY(-3px); } }
+.totop:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 860px) {
+  .totop { width: 46px; height: 46px; border-radius: 12px; inset-inline-end: 12px; bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+  :root.menu-open .totop { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .totop, .totop svg { transition: none; } }
+@media print { .totop { display: none; } }

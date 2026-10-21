@@ -51,7 +51,8 @@ const initials = (name) => {
 function Logo({ o, size = 96, big = false }) {
   const l = logoOf(o);
   if (!l) return <span className={`otile word${big ? " big" : ""}`}><span dir="auto">{orgName(o)}</span></span>;
-  const w = Math.min(size, l.px);
+  // Show at most half the file's pixels (sharp on 2x screens), never larger than the file itself.
+  const w = Math.round(Math.min(size, Math.max(l.px / 2, Math.min(l.px, 56))));
   return (
     <span className={`otile${big ? " big" : ""}${l.wide ? " wide" : ""}`}>
       <img src={l.src} alt="" width={w} height={w} style={{ width: l.wide ? "auto" : w, maxWidth: l.wide ? Math.min(size * 1.8, l.px) : w, height: "auto" }} decoding="async" />
@@ -117,10 +118,12 @@ export default async function CompanyPage({ params }) {
         </div>
       </header>
 
-      {/* Cover: the company's type colour, its name as a large texture and the logo in the middle. Drawn, never a scraped image. */}
-      <div className="ocover" style={{ "--cv-bg": `var(--kind-${o.kind}-bg)`, "--cv-bg2": `var(--kind-${o.kind}-bg2)` }}>
-        <span className="ocover-word" dir="auto" aria-hidden="true">{orgName(o)}</span>
-        <Logo o={o} size={96} big />
+      {/* Cover: grey, the company's name running slowly behind the logo. Drawn, never a scraped image. */}
+      <div className="ocover">
+        <span className="ocover-run" aria-hidden="true">
+          {[0, 1].map((k) => <span key={k} className="ocover-word" dir="auto">{`${orgName(o)} · `.repeat(Math.max(3, Math.ceil(36 / (orgName(o).length + 3))))}</span>)}
+        </span>
+        <Logo o={o} size={128} big />
       </div>
 
       {desc.text && (
