@@ -45,7 +45,7 @@ export default async function People({ searchParams }) {
     <div className="wrap">
       <div className="pagehead list">
         <h1>מי מחליט בתעשייה <span className="cbox">{seeds.length.toLocaleString("he-IL")}</span></h1>
-        <p><b>מנהלי שיווק, הפקה וקריאייטיב</b> במותגים, במשרדים ובסטודיואים. לפני שפונים לחברה, יודעים מי עומד מולכם. מפרסומים פומביים, עם מקור.</p>
+        <p><b>מנהלי שיווק, הפקה וקריאייטיב</b> במותגים, במשרדים ובסטודיואים. לפני שפונים לחברה, יודעים מי עומד מולכם. מפרסומים פומביים, עם מקור. <span className="muted small">האיורים להמחשה בלבד.</span></p>
       </div>
 
       <form className="toolbar" role="search" action="/people">

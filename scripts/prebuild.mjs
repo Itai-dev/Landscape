@@ -5,6 +5,7 @@
 // 4. applies the database migration when a Postgres URL is available (Vercel + Supabase integration).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
+import { writeAvatars, avatarFile } from "./avatars.mjs";
 import { headerHtml, footerHtml, tabbarHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
 import { KIND_ICONS, KIND_HE as KIND_LABELS } from "../lib/kinds.mjs";
 import { CLOSES_AT } from "../lib/survey/config.js";
@@ -129,8 +130,12 @@ mkdirSync("lib/generated", { recursive: true });
 const latest = (p) => p.roles.map((r) => r.as_of || "").sort().pop().slice(0, 7);
 const mix = (s) => { let h = 2166136261; for (const ch of s) h = Math.imul(h ^ ch.codePointAt(0), 16777619) >>> 0; return h; };
 const list = [...people.values()].sort((a, b) => latest(b).localeCompare(latest(a)) || mix(a.id) - mix(b.id));
+// An illustrated avatar per person (scripts/avatars.mjs): from the id only, never a photo.
+const av = writeAvatars(list);
+for (const p of list) p.avatar = `/avatars/${avatarFile(p.id)}`;
 writeFileSync("lib/generated/people.json", JSON.stringify({ generated: dataset.generated, people: list }));
 console.log(`prebuild: ${list.length} people from public sources (${dropped} former, deceased or LinkedIn-only roles left out)`);
+console.log(`prebuild: ${av.count} avatars, ${Math.round(av.bytes / 1024)} KB (about ${Math.round(av.bytes / av.count / 1024)} KB each)`);
 
 // 3. Company index. `text` is built exactly like the companies app's search text (site/app.html, index()),
 // and `crafts` adds the crafts implied by what a company buys, so /search and /companies count the same.
