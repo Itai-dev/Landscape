@@ -7,7 +7,6 @@ node_modules/
 .next/
 public/map/
 public/companies/
-public/avatars/
 lib/generated/
 .env*.local
 *.tsbuildinfo

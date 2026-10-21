@@ -354,11 +354,6 @@ a.feature { color: var(--ink); transition: border-color .15s, box-shadow .15s; }
 .avatar.md { width: 48px; height: 48px; font-size: 16px; }
 .avatar.lg { color: #fff; width: 96px; height: 96px; font-size: 36px; }
 .avatar.soft { background: var(--bg); color: var(--ink); }
-/* Illustrated avatar (black line art, white face): a light circle in both themes so the lines always show. */
-.avatar.drawn { background: #f8f8f8; overflow: hidden; }
-.avatar.drawn img { width: 100%; height: 100%; display: block; transform: translateY(6%) scale(1.12); }
-:root[data-theme="dark"] .avatar.drawn { background: #d9d9d9; }
-@media (prefers-color-scheme: dark) { :root[data-theme="system"] .avatar.drawn { background: #d9d9d9; } }
 .cover-0 { background: radial-gradient(130% 130% at 15% 10%, #b98cff, #8217ff 50%, #3b0a8f); }
 .cover-1 { background: radial-gradient(130% 130% at 85% 15%, #ffd44f, #ff8a5c 50%, #d7346f); }
 .cover-2 { background: radial-gradient(130% 130% at 20% 90%, #59e3c6, #0bb6ff 55%, #3b2cc4); }
