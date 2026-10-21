@@ -30,12 +30,39 @@ synced = fill(synced, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", foote
 synced = fill(synced, "<!-- chrome:tabbar -->", "<!-- /chrome:tabbar -->", tabbarHtml("companies"));
 // The Artifact publishes site/app.html as it is, so the blocks are written back there too.
 if (synced !== source) { writeFileSync("site/app.html", synced); console.log("prebuild: synced the header, footer and tab bar into site/app.html"); }
-const body = synced.replaceAll('fetch("data/', 'fetch("/companies/data/')
+// The company list as plain Hebrew HTML, so the page has real content before (or without) the script:
+// search engines, slow networks, a failed data fetch. The app replaces it once the data loads.
+// Written only into public/companies, not back into site/app.html (the Artifact keeps its small source).
+const ds = JSON.parse(readFileSync("site/data/dataset.json", "utf8"));
+const KIND_HE = { studio: "סטודיו", production_company: "חברת הפקות", startup: "סטארטאפ", agency: "סוכנות", client: "מותג", community: "קהילה" };
+const escH = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const clip = (s, n) => { s = String(s || "").replace(/\s+/g, " ").trim(); return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, "") + "…" : s; };
+const staticList =
+  `<p class="bootnote">${ds.orgs.length.toLocaleString("he-IL")} חברות: מותגים, משרדי פרסום, סטודיואים וחברות הפקה, ומה כל אחת מזמינה. כל פרט עם מקור.</p>\n` +
+  '<ul class="ssrlist">' + ds.orgs.map((o) => {
+    const name = o.name_he || o.name, city = ds.taxonomy.cities_he?.[o.location?.city] || o.location?.city || "";
+    const meta = [KIND_HE[o.kind], city].filter(Boolean).join(" · ");
+    const desc = clip(o.description_he || "", 110);
+    return `<li><a href="#${encodeURIComponent(o.id)}"><b><bdi>${escH(name)}</bdi></b>${meta ? ` <span>${escH(meta)}</span>` : ""}</a>${desc ? `<p>${escH(desc)}</p>` : ""}</li>`;
+  }).join("") + "</ul>";
+const body = fill(synced, "<!-- static:companies -->", "<!-- /static:companies -->", staticList)
+  .replaceAll('fetch("data/', 'fetch("/companies/data/')
   // The survey close date has one source (lib/survey/config.js).
   .replaceAll("__SURVEY_CLOSES_AT__", CLOSES_AT);
+// Canonical URL only when the production address is known (the same sources as lib/digest.js siteUrl()).
+const siteBase = (() => {
+  const u = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_PROJECT_PRODUCTION_URL || "";
+  return u ? (u.startsWith("http") ? u : `https://${u}`).replace(/\/$/, "") : "";
+})();
+const DESC = "מותגים, משרדי פרסום, סטודיואים וחברות הפקה בתעשיית הקריאייטיב בישראל: מה כל אחת מזמינה, דרך איזה משרד, ומה השתנה לאחרונה. כל פרט עם מקור.";
 const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
+  `<meta name="description" content="${escH(DESC)}">\n` +
+  '<meta property="og:type" content="website">\n<meta property="og:locale" content="he_IL">\n<meta property="og:site_name" content="creativein.">\n' +
+  '<meta property="og:title" content="חברות בתעשיית הקריאייטיב · creativein.">\n' +
+  `<meta property="og:description" content="${escH(DESC)}">\n` +
+  (siteBase ? `<link rel="canonical" href="${siteBase}/companies">\n<meta property="og:url" content="${siteBase}/companies">\n` : "") +
   '<meta name="theme-color" content="#f8f8f8">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
   "<script>window.LANDSCAPE_SITE = true;</script>\n" +
   `<script>${THEME_SCRIPT}</script>\n` +
