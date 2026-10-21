@@ -141,7 +141,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !consent || (!user && !email.includes("@"))}>
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
-          {cta || (user ? "להירשם למייל השבועי" : "שלחו לי את המייל של יום ראשון")}
+          {cta || (user ? "להירשם לניוזלטר" : "שלחו לי את המייל של יום ראשון")}
         </button>
         <span className="small muted">{note || "עד מייל אחד בשבוע. הסרה בלחיצה. בלי סיסמה."}</span>
       </div>

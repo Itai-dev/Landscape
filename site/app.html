@@ -462,7 +462,16 @@ main { padding-block: 6px 24px; }
 .wrow .nm span { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .wrow .ty { font-size: 13px; font-weight: 600; color: var(--now); }
 
-/* sections: a floating ink bar (Awwwards' tab bar): centered under the header on desktop, at the bottom on phones */
+/* sections: a floating ink bar (Awwwards' tab bar): centered under the header on desktop, at the bottom on phones.
+   On the site the main menu already holds חברות and עדכונים, so this bar is hidden there and "המעקב שלי" is a button. */
+html[data-site] .subnav { display: none !important; }
+.trackpill { display: none; }
+html[data-site] .trackpill { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); color: var(--ink); font: inherit; font-size: 14px; font-weight: 500; cursor: pointer; vertical-align: middle; }
+html[data-site] .trackpill svg { width: 16px; height: 16px; }
+html[data-site] .trackpill .n { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 6px; background: var(--ink); color: var(--bg); font-size: 12px; display: inline-grid; place-items: center; }
+html[data-site] .trackpill .n[hidden] { display: none; }
+@media (hover: hover) { html[data-site] .trackpill:hover { border-color: var(--ink); } }
+.listhead { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
 .subnav { display: none; }
 @media (min-width: 861px) {
   .subnav { display: flex; justify-content: center; padding-block: 8px 0; }
@@ -478,7 +487,7 @@ main { padding-block: 6px 24px; }
 /* On the site, phones get the site's tab bar (lib/chrome.mjs); the app's sections become a row under the header */
 @media (max-width: 860px) {
   html[data-site] nav.tabbar { display: none; }
-  html[data-site] .subnav { display: flex; padding-block: 8px 0; }
+  html[data-site] .subnav { display: none; }
   html[data-site] .subnav .in { display: flex; gap: 2px; width: 100%; background: var(--surface); border-radius: 10px; padding: 4px; }
   html[data-site] .subnav button { position: relative; flex: 1; border: 0; background: none; min-height: 40px; padding: 0 8px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
   html[data-site] .subnav button[hidden] { display: none; }
@@ -755,7 +764,7 @@ html:not([data-site]) .promo { display: none; }
 
   <!-- EXPLORE -->
   <section id="v-explore" class="booting" aria-labelledby="ex-h">
-    <div class="listhead"><h1 id="ex-h"><span data-i18n="ex.h">חברות בתעשייה</span> <span class="cbox" id="count"></span></h1></div>
+    <div class="listhead"><h1 id="ex-h"><span data-i18n="ex.h">חברות בתעשייה</span> <span class="cbox" id="count"></span></h1><button type="button" class="trackpill" data-tab="pipeline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg><span>המעקב שלי</span><span class="n" data-track-n hidden></span></button></div>
     <!-- Filters: a grey tray of six buttons; each opens a dropdown list (#dd) -->
     <div class="ftray" id="ftray" role="group" aria-label="סינון">
       <label class="fsearch" for="q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" data-i18n-ph="search.ph" placeholder="חיפוש בחברות" autocomplete="off" aria-label="חיפוש חברות לפי שם, תחום או עיר"></label>
@@ -2097,6 +2106,8 @@ Question: ${q}`;
     const today = isoDay(new Date());
     const due = Object.values(Store.pipeline).filter((e) => e.next_date && e.next_date <= today && e.stage !== "passed").length;
     ["pipeBadge", "spipeBadge"].forEach((id) => { $(id).hidden = !due; $(id).textContent = due; });
+    const kept = Object.keys(Store.pipeline).length;
+    document.querySelectorAll("[data-track-n]").forEach((n) => { n.hidden = !kept; n.textContent = kept; });
   }
   function renderView() {
     if (state.tab === "ask" && askChecked && !askReady()) state.tab = "explore";
@@ -2136,6 +2147,7 @@ Question: ${q}`;
   $("clearAll").addEventListener("click", () => { Object.assign(state, { q: "", kinds: [], cats: [], inds: [], needs: [], city: "" }); $("q").value = ""; refresh(); });
   $("export").addEventListener("click", exportData);
   document.querySelectorAll("nav.tabbar, nav.subnav").forEach((n) => n.addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { closeAll(); goTab(b.dataset.tab); } }));
+  document.querySelectorAll(".trackpill[data-tab]").forEach((b) => b.addEventListener("click", () => { closeAll(); goTab(b.dataset.tab); }));
   // The site's tab bar: "חברות" and "עדכונים" are this app's own sections, so switch in place.
   document.addEventListener("click", (e) => { const a = e.target.closest && e.target.closest("nav.sitebar [data-apptab], header.top .nav [data-apptab]"); if (a) { e.preventDefault(); closeAll(); goTab(a.dataset.apptab); } });
   const dismiss = () => { const wasPanel = !$("panel").hidden; const back = wasPanel && $("panel").dataset.back; closeAll(); if (back) return openOrg(back); if (wasPanel) refresh(); };

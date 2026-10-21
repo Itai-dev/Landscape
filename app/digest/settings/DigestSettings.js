@@ -43,7 +43,7 @@ export default function DigestSettings() {
   if (!user) {
     return (
       <div className="panel stack">
-        <h2>להירשם למייל השבועי</h2>
+        <h2>להירשם לניוזלטר</h2>
         <p className="muted">משאירים מייל ומאשרים בקישור. מי שכבר רשום יקבל קישור כניסה לשינוי ההגדרות.</p>
         <DigestSubscribe />
       </div>
@@ -78,7 +78,7 @@ export default function DigestSettings() {
       setState("saved");
     } else {
       const j = await res.json().catch(() => ({}));
-      setSaveError(j.error === "consent_required" ? "כדי לקבל את המייל השבועי צריך לסמן את האישור." : res.status === 429 ? "יותר מדי שמירות ברצף. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setSaveError(j.error === "consent_required" ? "כדי לקבל את הניוזלטר צריך לסמן את האישור." : res.status === 429 ? "יותר מדי שמירות ברצף. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
       setState("error");
     }
   }

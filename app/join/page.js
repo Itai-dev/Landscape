@@ -6,7 +6,7 @@ import JoinFlow from "./JoinFlow";
 import "./join.css";
 
 export const metadata = {
-  title: "הרשמה למייל השבועי",
+  title: "הרשמה לניוזלטר",
   description: "בוחרים תחום, רואים איך ייראה המייל של יום ראשון, ומשאירים כתובת. חינם, הסרה בלחיצה.",
   alternates: { canonical: "/join" },
 };

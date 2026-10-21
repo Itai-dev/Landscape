@@ -39,9 +39,9 @@ export default async function Me({ searchParams }) {
       // Signed out (or on another device): a sign-in link brings people back to their follows and settings.
       return (
         <div className="wrap narrow stack">
-          <div className="pagehead"><h1>החשבון שלי</h1><p>נכנסים עם קישור במייל: המייל השבועי, ההתראות על חברות והסקר.</p></div>
+          <div className="pagehead"><h1>החשבון שלי</h1><p>נכנסים עם קישור במייל: הניוזלטר, ההתראות על חברות והסקר.</p></div>
           <div className="card"><SignupForm next="/me#follows" digest={false} /></div>
-          <p className="small muted center">עוד לא נרשמתם? <a href="/digest#subscribe">להרשמה למייל השבועי</a></p>
+          <p className="small muted center">עוד לא נרשמתם? <a href="/digest#subscribe">להרשמה לניוזלטר</a></p>
         </div>
       );
     }
