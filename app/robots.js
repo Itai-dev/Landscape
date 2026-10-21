@@ -4,7 +4,7 @@ import { siteUrl } from "@/lib/digest";
 export default function robots() {
   const base = siteUrl();
   return {
-    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/auth/", "/me", "/digest/settings", "/digest/unsubscribe", "/alerts/", "/survey/start", "/remove"] }],
+    rules: [{ userAgent: "*", allow: "/", disallow: ["/api/", "/auth/", "/me", "/digest/settings", "/digest/unsubscribe", "/alerts/", "/survey/start", "/remove", "/test"] }],
     sitemap: `${base}/sitemap.xml`,
   };
 }
