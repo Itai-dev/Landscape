@@ -7,6 +7,7 @@
     "gen-ai-audio"
   ],
   "description": "Tel Aviv AI dubbing and voice company offering emotional text-to-speech, voice cloning and a virtual dubbing studio in 130+ languages for film/TV studios, streamers and enterprises; its work includes the Netflix film 'Every Time I Die' and a multi-series deal with Topic.",
+  "description_he": "חברת דיבוב וקול מבוססת AI מתל אביב שמציעה הקראה רגשית (text-to-speech), שיבוט קול ואולפן דיבוב וירטואלי ביותר מ-130 שפות לאולפני קולנוע וטלוויזיה, לסטרימרים ולארגונים; בין עבודותיה סרט הנטפליקס 'Every Time I Die' ועסקה רב-סדרתית עם Topic.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -14,6 +15,10 @@
   "founded": 2019,
   "status": "active",
   "website": "https://deepdub.ai",
+  "careers_url": "https://deepdub.ai/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/deepdub-ai/"
+  },
   "services": [
     "AI dubbing & localization",
     "Emotional TTS (eTTS)",
@@ -56,6 +61,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "חברת דיבוב וקול מבוססת AI מתל אביב שמציעה הקראה רגשית (text-to-speech), שיבוט קול ואולפן דיבוב וירטואלי ביותר מ-130 שפות לאולפני קולנוע וטלוויזיה, לסטרימרים ולארגונים; בין עבודותיה סרט הנטפליקס 'Every Time I Die' ועסקה רב-סדרתית עם Topic."
+  "last_verified": "2026-10-18"
 }

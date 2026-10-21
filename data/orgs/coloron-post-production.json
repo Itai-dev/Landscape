@@ -8,6 +8,7 @@
     "editing"
   ],
   "description": "Family-run boutique post-production studio in the Tel Aviv industrial area, founded by senior colorist Ron Ben Meir (15+ years grading features — fiction and documentary — TV series and commercials). Offers offline and online editing suites, color grading, digital mastering and delivery, dailies, backup and archive.",
+  "description_he": "סטודיו פוסט בוטיק משפחתי באזור התעשייה של תל אביב, שנוסד על ידי הקולוריסט הבכיר רון בן מאיר (יותר מ-15 שנות ניסיון בצביעת סרטים עלילתיים ותיעודיים, סדרות טלוויזיה ופרסומות). מציע חדרי עריכת אופליין ואונליין, קולור גריידינג, מאסטרינג ומסירה דיגיטליים, דיילי'ז, גיבוי וארכוב.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -15,6 +16,7 @@
   "size": "1-10",
   "status": "active",
   "website": "https://www.coloronstudio.com/",
+  "contact_url": "https://www.coloronstudio.com/contact",
   "links": {
     "linkedin": "https://www.linkedin.com/company/coloron-post-production",
     "instagram": "https://www.instagram.com/coloron_studio/",
@@ -55,6 +57,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "סטודיו פוסט בוטיק משפחתי באזור התעשייה של תל אביב, שנוסד על ידי הקולוריסט הבכיר רון בן מאיר (יותר מ-15 שנות ניסיון בצביעת סרטים עלילתיים ותיעודיים, סדרות טלוויזיה ופרסומות). מציע חדרי עריכת אופליין ואונליין, קולור גריידינג, מאסטרינג ומסירה דיגיטליים, דיילי'ז, גיבוי וארכוב."
+  "last_verified": "2026-10-19"
 }

@@ -11,6 +11,7 @@
     "content-studio"
   ],
   "description": "Israeli social media agency specialising in social campaigns and interactive content, founded by Sagi Chemetz. Havas Group acquired a majority stake in August 2017, when it had 35 employees and clients such as Osem and Shufersal; it operates independently alongside Havas Inbar Merhav G.",
+  "description_he": "סוכנות סושיאל ישראלית המתמחה בקמפייני סושיאל ובתוכן אינטראקטיבי, שנוסדה על ידי שגיא חמץ. קבוצת Havas רכשה בה שליטה באוגוסט 2017, כשהעסיקה 35 עובדים ובין לקוחותיה אסם ושופרסל; פועלת באופן עצמאי לצד Havas ענבר מרחב G.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -25,7 +26,8 @@
     "linkedin": "https://www.linkedin.com/company/blink-digital-marketing",
     "instagram": "https://www.instagram.com/blinkit/",
     "facebook": "https://www.facebook.com/blinkit/",
-    "tiktok": "https://www.tiktok.com/@blink_havas"
+    "tiktok": "https://www.tiktok.com/@blink_havas",
+    "youtube": "https://www.youtube.com/channel/UCdASTl6Ls1C9LCdJbghxadA"
   },
   "services": [
     "Social media campaigns",
@@ -133,6 +135,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Latest confirmation of activity is the Feb 2021 Havas release. Website not found (blink.agency / blink.digital are unrelated). City assumed Tel Aviv.",
-  "description_he": "סוכנות סושיאל ישראלית המתמחה בקמפייני סושיאל ובתוכן אינטראקטיבי, שנוסדה על ידי שגיא חמץ. קבוצת Havas רכשה בה שליטה באוגוסט 2017, כשהעסיקה 35 עובדים ובין לקוחותיה אסם ושופרסל; פועלת באופן עצמאי לצד Havas ענבר מרחב G."
+  "notes": "Latest confirmation of activity is the Feb 2021 Havas release. Website not found (blink.agency / blink.digital are unrelated). City assumed Tel Aviv."
 }

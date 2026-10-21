@@ -10,6 +10,7 @@
     "creative-technology"
   ],
   "description": "Digital experience studio based in Tel Aviv with London and New York offices, designing and building websites with UX/UI, strategy and 'technomagics' for brands and companies.",
+  "description_he": "סטודיו לחוויות דיגיטליות שממוקם בתל אביב עם משרדים בלונדון ובניו יורק, שמעצב ובונה אתרים עם UX/UI, אסטרטגיה ו\"טכנו-קסמים\" (technomagics) למותגים ולחברות.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -24,7 +25,8 @@
   "contact_url": "https://www.richkid-tlv.com/en/company/contact/main/",
   "links": {
     "instagram": "https://www.instagram.com/richkid_tlv/",
-    "linkedin": "https://www.linkedin.com/company/3076569"
+    "linkedin": "https://www.linkedin.com/company/3076569",
+    "facebook": "https://www.facebook.com/richkid.co.il"
   },
   "services": [
     "websites",
@@ -48,6 +50,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו לחוויות דיגיטליות שממוקם בתל אביב עם משרדים בלונדון ובניו יורק, שמעצב ובונה אתרים עם UX/UI, אסטרטגיה ו\"טכנו-קסמים\" (technomagics) למותגים ולחברות."
+  "last_verified": "2026-10-18"
 }

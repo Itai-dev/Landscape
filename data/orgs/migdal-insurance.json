@@ -10,6 +10,7 @@
     "banking-finance"
   ],
   "description": "Major Israeli insurance and pension group (roots in 1934) listed on the TASE, active in life, health, general insurance and long-term savings.",
+  "description_he": "קבוצת ביטוח ופנסיה ישראלית מובילה (שורשיה ב-1934) הנסחרת בבורסת תל אביב, ופעילה בביטוח חיים, ביטוח בריאות, ביטוח כללי וחיסכון ארוך טווח.",
   "location": {
     "country": "IL",
     "city": "Petah Tikva"
@@ -19,6 +20,12 @@
   "website": "https://www.migdal.co.il",
   "contact_url": "https://www.migdal.co.il/support/contact-us",
   "careers_url": "https://career.adamtotal.co.il?token=6C91E014-E0F6-4DE7-8270-E235245BD569",
+  "links": {
+    "instagram": "https://www.instagram.com/migdal.online",
+    "youtube": "https://www.youtube.com/@migdaltube",
+    "linkedin": "https://www.linkedin.com/company/migdal-group/",
+    "facebook": "https://www.facebook.com/migdalnet"
+  },
   "key_people": [
     {
       "name": "Dalit Vichselbaum",
@@ -72,6 +79,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Jan 2024 (Globes): Migdal's ~NIS 30M/yr budget (online and offline) moved to Gitam BBDO. Holding-company site: migdalholdings.co.il. Agency as of 2025-02: Gitam BBDO credited on the Noa Tishby \"Seeing far\" campaign (ICE ad of the week).",
-  "description_he": "קבוצת ביטוח ופנסיה ישראלית מובילה (שורשיה ב-1934) הנסחרת בבורסת תל אביב, ופעילה בביטוח חיים, ביטוח בריאות, ביטוח כללי וחיסכון ארוך טווח."
+  "notes": "Jan 2024 (Globes): Migdal's ~NIS 30M/yr budget (online and offline) moved to Gitam BBDO. Holding-company site: migdalholdings.co.il. Agency as of 2025-02: Gitam BBDO credited on the Noa Tishby \"Seeing far\" campaign (ICE ad of the week)."
 }

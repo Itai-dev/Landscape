@@ -9,6 +9,7 @@
     "xr"
   ],
   "description": "Tel Aviv studio with 15+ years in immersive video: 2D/3D motion graphics and explainers, plus building projection-mapping shows, stage visuals, museum installations, 360 VR and AR for corporate events and brands.",
+  "description_he": "סטודיו בתל אביב עם 15+ שנות ניסיון בווידאו אימרסיבי: מושן גרפיקס ב-2D/3D וסרטוני הסבר, לצד הקמת מופעי מיפוי וידאו (projection mapping), ויזואלים לבמה, מיצבים למוזיאונים, VR ב-360 ו-AR לאירועי חברה ולמותגים.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -20,7 +21,8 @@
   "links": {
     "vimeo": "https://vimeo.com/pixelstudioz",
     "instagram": "https://www.instagram.com/studiopixel_creativehouse/",
-    "youtube": "https://www.youtube.com/@studiopixel317"
+    "youtube": "https://www.youtube.com/@studiopixel317",
+    "facebook": "https://www.facebook.com/PixelStudioLtd"
   },
   "services": [
     "Motion graphics",
@@ -76,6 +78,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Size estimated, not verified.",
-  "description_he": "סטודיו בתל אביב עם 15+ שנות ניסיון בווידאו אימרסיבי: מושן גרפיקס ב-2D/3D וסרטוני הסבר, לצד הקמת מופעי מיפוי וידאו (projection mapping), ויזואלים לבמה, מיצבים למוזיאונים, VR ב-360 ו-AR לאירועי חברה ולמותגים."
+  "notes": "Size estimated, not verified."
 }

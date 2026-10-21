@@ -1,12 +1,14 @@
 {
   "id": "pixellot",
   "name": "Pixellot",
+  "name_he": "פיקסלוט",
   "kind": "startup",
   "categories": [
     "sports-media",
     "video-tools"
   ],
   "description": "Petah Tikva-based provider of AI-automated sports video: unmanned multi-camera systems that capture, auto-produce, stream and generate highlights and analytics for pro, college, youth and school sports (soccer, basketball, hockey and more). Partners include Stats Perform, Red Bull Media and the Israel Football Association.",
+  "description_he": "חברה מפתח תקווה לווידאו ספורט אוטומטי מבוסס AI: מערכות רב-מצלמתיות ללא צלם שמצלמות, מפיקות אוטומטית, משדרות ומייצרות היילייטס וניתוחים לספורט מקצועני, מכללות, נוער ובתי ספר (כדורגל, כדורסל, הוקי ועוד). בין השותפות: Stats Perform, Red Bull Media וההתאחדות לכדורגל בישראל.",
   "location": {
     "country": "IL",
     "city": "Petah Tikva"
@@ -15,6 +17,13 @@
   "size": "201-500",
   "status": "active",
   "website": "https://www.pixellot.tv",
+  "careers_url": "https://www.pixellot.tv/career",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/pixellotltd/",
+    "facebook": "https://www.facebook.com/pixellotltd",
+    "instagram": "https://www.instagram.com/pixellotofficial",
+    "vimeo": "https://vimeo.com/user105679847"
+  },
   "services": [
     "Automated sports production cameras",
     "Live streaming & OTT for sports",
@@ -68,7 +77,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$161M Series D (June 2022) led by PSG; $20M debt (Dec 2025). Overlaps sports-media segment.",
-  "description_he": "חברה מפתח תקווה לווידאו ספורט אוטומטי מבוסס AI: מערכות רב-מצלמתיות ללא צלם שמצלמות, מפיקות אוטומטית, משדרות ומייצרות היילייטס וניתוחים לספורט מקצועני, מכללות, נוער ובתי ספר (כדורגל, כדורסל, הוקי ועוד). בין השותפות: Stats Perform, Red Bull Media וההתאחדות לכדורגל בישראל.",
-  "name_he": "פיקסלוט"
+  "notes": "$161M Series D (June 2022) led by PSG; $20M debt (Dec 2025). Overlaps sports-media segment."
 }

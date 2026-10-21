@@ -9,6 +9,7 @@
     "motion-design"
   ],
   "description": "Western Negev animation and illustration studio founded by artist-animator Ronit Zeroni (20+ years in Israeli animation studios), producing marketing and explainer animation, brand animation, character illustration, concept art and storyboards, plus independent festival films and books.",
+  "description_he": "סטודיו לאנימציה ואיור במערב הנגב שהקימה האמנית והאנימטורית רונית זרוני (20+ שנה בסטודיו אנימציה בישראל), ומפיק אנימציה שיווקית וסרטוני הסבר, אנימציה למותגים, איור דמויות, קונספט ארט וסטוריבורדים, לצד סרטים עצמאיים לפסטיבלים וספרים.",
   "location": {
     "country": "IL",
     "city": "Western Negev"
@@ -20,7 +21,8 @@
   "contact_url": "https://www.studiochrivi.com/%D7%A6%D7%A8%D7%95-%D7%A7%D7%A9%D7%A8/",
   "reel_url": "https://www.youtube.com/watch?v=56L0UgPut-g",
   "links": {
-    "youtube": "https://www.youtube.com/channel/UCDty8GmbcOxdRiCnLEh_VYQ"
+    "youtube": "https://www.youtube.com/channel/UCDty8GmbcOxdRiCnLEh_VYQ",
+    "facebook": "https://www.facebook.com/chrivianimation"
   },
   "services": [
     "Promo and explainer animation",
@@ -48,6 +50,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "The Manifest lists Rishon LeZion and 2017 launch; site says Western Negev.",
-  "description_he": "סטודיו לאנימציה ואיור במערב הנגב שהקימה האמנית והאנימטורית רונית זרוני (20+ שנה בסטודיו אנימציה בישראל), ומפיק אנימציה שיווקית וסרטוני הסבר, אנימציה למותגים, איור דמויות, קונספט ארט וסטוריבורדים, לצד סרטים עצמאיים לפסטיבלים וספרים."
+  "notes": "The Manifest lists Rishon LeZion and 2017 launch; site says Western Negev."
 }

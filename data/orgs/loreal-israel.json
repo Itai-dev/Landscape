@@ -8,6 +8,7 @@
     "retail-fashion"
   ],
   "description": "Israeli arm of L'Oréal Group (~300 employees) marketing 22 beauty brands; HQ in Netanya with a logistics center in Caesarea. Its ~NIS 100M ad and media budget was re-tendered in 2026.",
+  "description_he": "הזרוע הישראלית של קבוצת לוריאל (כ-300 עובדים), המשווקת 22 מותגי יופי; המטה בנתניה ומרכז לוגיסטי בקיסריה. תקציב הפרסום והמדיה שלה, בהיקף של כ-100 מיליון ₪, יצא למכרז מחודש ב-2026.",
   "location": {
     "country": "IL",
     "city": "Netanya"
@@ -16,6 +17,10 @@
   "status": "active",
   "website": "https://www.loreal.com/he-il/israel/",
   "careers_url": "https://www.loreal.com/he-il/israel/pages/careers/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/lorealgroupe",
+    "instagram": "https://www.instagram.com/lorealgroupe"
+  },
   "key_people": [
     {
       "name": "Gali Lev",
@@ -71,6 +76,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Oct 2026: McCann Tel Aviv kept the budget; Universal McCann leads media; Gitam BBDO expands on L'Oréal Paris.",
-  "description_he": "הזרוע הישראלית של קבוצת לוריאל (כ-300 עובדים), המשווקת 22 מותגי יופי; המטה בנתניה ומרכז לוגיסטי בקיסריה. תקציב הפרסום והמדיה שלה, בהיקף של כ-100 מיליון ₪, יצא למכרז מחודש ב-2026."
+  "notes": "Oct 2026: McCann Tel Aviv kept the budget; Universal McCann leads media; Gitam BBDO expands on L'Oréal Paris."
 }

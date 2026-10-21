@@ -10,6 +10,7 @@
     "consumer-goods"
   ],
   "description": "Israeli maker of cleaning, household, paper, cosmetics and soap products (est. 1965), HQ in Hod HaSharon's Neve Ne'eman industrial zone; ~1,800 employees. A long-running TV advertiser (e.g. Sano Jet).",
+  "description_he": "יצרנית ישראלית של מוצרי ניקוי, מוצרים לבית, מוצרי נייר, קוסמטיקה וסבון (נוסדה ב-1965), שמטהּ באזור התעשייה נווה נאמן בהוד השרון; כ-1,800 עובדים. מפרסמת ותיקה בטלוויזיה (למשל סנו ג'ט).",
   "location": {
     "country": "IL",
     "city": "Hod HaSharon"
@@ -18,6 +19,12 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.sano.co.il",
+  "careers_url": "https://www.sano.co.il/company/%d7%93%d7%a8%d7%95%d7%a9%d7%99%d7%9d-2",
+  "links": {
+    "facebook": "https://www.facebook.com/sano.co.il",
+    "youtube": "https://www.youtube.com/channel/UCqnyyvT6ZzU-un7mrjnNZkA",
+    "instagram": "https://www.instagram.com/sano.il"
+  },
   "client_profile": {
     "industry": "household consumer goods",
     "creative_needs": [
@@ -35,6 +42,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Agency not confirmed in trade press.",
-  "description_he": "יצרנית ישראלית של מוצרי ניקוי, מוצרים לבית, מוצרי נייר, קוסמטיקה וסבון (נוסדה ב-1965), שמטהּ באזור התעשייה נווה נאמן בהוד השרון; כ-1,800 עובדים. מפרסמת ותיקה בטלוויזיה (למשל סנו ג'ט)."
+  "notes": "Agency not confirmed in trade press."
 }

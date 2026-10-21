@@ -7,6 +7,7 @@
     "health-pharma"
   ],
   "description": "Israeli health fund (est. 1933, Tel Aviv HQ, ~4,500 employees) serving members nationwide; runs humorous TV and social campaigns plus sector-targeted communications.",
+  "description_he": "קופת חולים ישראלית (נוסדה ב-1933, המטה בתל אביב, כ-4,500 עובדים) המשרתת מבוטחים בכל הארץ; מריצה קמפיינים הומוריסטיים בטלוויזיה ובסושיאל וכן תקשורת ממוקדת למגזרים.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -17,6 +18,10 @@
   "website": "https://www.leumit.co.il",
   "contact_url": "https://www.leumit.co.il/contact-us/",
   "careers_url": "https://www.leumit.co.il/jobs/work-in-leumit/",
+  "links": {
+    "facebook": "https://www.facebook.com/leumit",
+    "instagram": "https://www.instagram.com/leumit_healthcare"
+  },
   "key_people": [
     {
       "name": "Karin Zeevi Herzka",
@@ -58,6 +63,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "קופת חולים ישראלית (נוסדה ב-1933, המטה בתל אביב, כ-4,500 עובדים) המשרתת מבוטחים בכל הארץ; מריצה קמפיינים הומוריסטיים בטלוויזיה ובסושיאל וכן תקשורת ממוקדת למגזרים."
+  "last_verified": "2026-10-19"
 }

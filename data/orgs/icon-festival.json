@@ -13,6 +13,7 @@
     "game-development"
   ],
   "description": "Annual national festival of science fiction, fantasy and role-playing games, held in central Tel Aviv (Tel Aviv Cinematheque and the adjacent Eshkol HaPais complex) since 1998, during Sukkot. Hundreds of talks, panels, workshops, a cosplay competition, an Israeli indie-games area and a vendors' fair; the 2026 edition 'Wonders' ran 29 Sep – 1 Oct.",
+  "description_he": "הפסטיבל הארצי השנתי למדע בדיוני, פנטזיה ומשחקי תפקידים, המתקיים במרכז תל אביב (סינמטק תל אביב ומתחם אשכול הפיס הסמוך) מאז 1998, בחג הסוכות. מאות הרצאות, פאנלים וסדנאות, תחרות קוספליי, מתחם משחקי אינדי ישראליים ויריד דוכנים; מהדורת 2026, 'פלאות', התקיימה בין 29 בספטמבר ל-1 באוקטובר.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -20,6 +21,7 @@
   "founded": 1998,
   "status": "active",
   "website": "https://www.icon.org.il/",
+  "contact_url": "https://iconfestival.org.il/contact",
   "links": {
     "facebook": "http://www.facebook.com/Festival.Icon",
     "instagram": "http://www.instagram.com/iconfestival",
@@ -52,6 +54,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "הפסטיבל הארצי השנתי למדע בדיוני, פנטזיה ומשחקי תפקידים, המתקיים במרכז תל אביב (סינמטק תל אביב ומתחם אשכול הפיס הסמוך) מאז 1998, בחג הסוכות. מאות הרצאות, פאנלים וסדנאות, תחרות קוספליי, מתחם משחקי אינדי ישראליים ויריד דוכנים; מהדורת 2026, 'פלאות', התקיימה בין 29 בספטמבר ל-1 באוקטובר."
+  "last_verified": "2026-10-19"
 }

@@ -8,6 +8,7 @@
     "content-studio"
   ],
   "description": "Israeli one-stop production company for TV commercials, corporate films, digital campaign video and animated films, handling creative and script through shoot and post; credited as production company on the government 'You Are Not Alone' campaign directed by Hagai Lapid.",
+  "description_he": "חברת הפקות ישראלית שמספקת הכול תחת קורת גג אחת – פרסומות לטלוויזיה, סרטי תדמית, וידאו לקמפיינים דיגיטליים וסרטי אנימציה – מהקריאייטיב והתסריט ועד הצילום והפוסט; חברת ההפקה של הקמפיין הממשלתי \"אתם לא לבד\" בבימוי חגי לפיד.",
   "location": {
     "country": "IL"
   },
@@ -17,7 +18,8 @@
   "reel_url": "https://www.youtube.com/watch?v=6JGfBtqqp9o",
   "links": {
     "vimeo": "https://vimeo.com/marketmastervideo",
-    "youtube": "https://www.youtube.com/user/marketmastervideo"
+    "youtube": "https://www.youtube.com/user/marketmastervideo",
+    "facebook": "https://he-il.facebook.com/marketmastervideo"
   },
   "services": [
     "TV commercials",
@@ -64,6 +66,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "חברת הפקות ישראלית שמספקת הכול תחת קורת גג אחת – פרסומות לטלוויזיה, סרטי תדמית, וידאו לקמפיינים דיגיטליים וסרטי אנימציה – מהקריאייטיב והתסריט ועד הצילום והפוסט; חברת ההפקה של הקמפיין הממשלתי \"אתם לא לבד\" בבימוי חגי לפיד."
+  "last_verified": "2026-10-18"
 }

@@ -9,6 +9,7 @@
     "dubbing-localization"
   ],
   "description": "Tel Aviv sound studio (Gershon Shats St.) for commercials sound design, game sound design (non-linear music, SFX, VO — clients include 888 and Playtika), game trailers, music scoring and production, radio jingles, localization and voice-over recording for TV ads and toys (Fisher-Price, Mattel).",
+  "description_he": "סטודיו סאונד בתל אביב (רחוב גרשון שץ) לעיצוב סאונד לפרסומות, עיצוב סאונד למשחקים (מוזיקה לא-לינארית, SFX, VO — בין הלקוחות 888 ופלייטיקה), טריילרים למשחקים, הלחנה והפקה מוזיקלית, ג'ינגלים לרדיו, לוקליזציה והקלטות קריינות לפרסומות טלוויזיה ולצעצועים (Fisher-Price, Mattel).",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -16,6 +17,7 @@
   "size": "1-10",
   "status": "active",
   "website": "https://www.sweetsound.co.il/",
+  "contact_url": "https://www.sweetsound.co.il/contact",
   "links": {
     "linkedin": "https://www.linkedin.com/company/sweet-sound-music",
     "instagram": "https://www.instagram.com/sweetsoundstudio/",
@@ -53,6 +55,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "סטודיו סאונד בתל אביב (רחוב גרשון שץ) לעיצוב סאונד לפרסומות, עיצוב סאונד למשחקים (מוזיקה לא-לינארית, SFX, VO — בין הלקוחות 888 ופלייטיקה), טריילרים למשחקים, הלחנה והפקה מוזיקלית, ג'ינגלים לרדיו, לוקליזציה והקלטות קריינות לפרסומות טלוויזיה ולצעצועים (Fisher-Price, Mattel)."
+  "last_verified": "2026-10-19"
 }

@@ -10,6 +10,7 @@
     "gen-ai-video"
   ],
   "description": "Tel Aviv creative-intelligence platform that analyzes the visual and audio elements of ad creatives against performance data and generates new AI video ads and creative recommendations for performance marketers.",
+  "description_he": "פלטפורמת קריאייטיב אינטליג'נס מתל אביב שמנתחת את הרכיבים הוויזואליים והקוליים של קריאייטיבים פרסומיים מול נתוני ביצועים, ומייצרת מודעות וידאו חדשות ב-AI והמלצות קריאייטיב למשווקי פרפורמנס.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -17,6 +18,13 @@
   "founded": 2021,
   "status": "active",
   "website": "https://alison.ai",
+  "contact_url": "https://alison.ai/company/contact",
+  "careers_url": "https://alison.ai/company/were-hiring",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/alison-ai/",
+    "facebook": "https://www.facebook.com/OfficialAlisonAi",
+    "instagram": "https://www.instagram.com/alisonai_"
+  },
   "services": [
     "Creative analytics",
     "AI video ad generation",
@@ -58,6 +66,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "פלטפורמת קריאייטיב אינטליג'נס מתל אביב שמנתחת את הרכיבים הוויזואליים והקוליים של קריאייטיבים פרסומיים מול נתוני ביצועים, ומייצרת מודעות וידאו חדשות ב-AI והמלצות קריאייטיב למשווקי פרפורמנס."
+  "last_verified": "2026-10-18"
 }

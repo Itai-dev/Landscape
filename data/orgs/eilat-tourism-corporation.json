@@ -8,6 +8,7 @@
     "travel-hospitality"
   ],
   "description": "Eilat's municipal tourism corporation, which markets the Red Sea resort city to domestic and international visitors and runs the official Eilat+ tourism site with the municipality. Ran the 'Eilat love back' winter campaign (Feb 2024) and publishes tenders for website and social-media management.",
+  "description_he": "תאגיד התיירות העירוני של אילת, שמשווק את עיר הנופש שעל חוף ים סוף למבקרים מהארץ ומחו\"ל ומפעיל יחד עם העירייה את אתר התיירות הרשמי Eilat+. הוביל את קמפיין החורף 'Eilat love back' (פברואר 2024) ומפרסם מכרזים לניהול אתרים ורשתות חברתיות.",
   "location": {
     "country": "IL",
     "city": "Eilat"
@@ -15,6 +16,10 @@
   "status": "active",
   "website": "https://www.eilat.city",
   "contact_url": "https://www.eilat.city/contact",
+  "links": {
+    "facebook": "https://www.facebook.com/EilatTourismCorporation",
+    "instagram": "https://www.instagram.com/travel_to_eilat"
+  },
   "key_people": [
     {
       "name": "Yossi Chen",
@@ -53,6 +58,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Tender archive on eilat.city lists website, social-activity and media-coordinator tenders. Agency for 'Eilat love back' not reported.",
-  "description_he": "תאגיד התיירות העירוני של אילת, שמשווק את עיר הנופש שעל חוף ים סוף למבקרים מהארץ ומחו\"ל ומפעיל יחד עם העירייה את אתר התיירות הרשמי Eilat+. הוביל את קמפיין החורף 'Eilat love back' (פברואר 2024) ומפרסם מכרזים לניהול אתרים ורשתות חברתיות."
+  "notes": "Tender archive on eilat.city lists website, social-activity and media-coordinator tenders. Agency for 'Eilat love back' not reported."
 }

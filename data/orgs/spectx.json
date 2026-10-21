@@ -7,6 +7,7 @@
     "animation-3d"
   ],
   "description": "Hadera-based 3D product studio founded in 2017 by Barak Vinner, producing photorealistic product animations, exploded views, retail/POSM visualizations, VFX particles and real-time low-poly models for brands and hardware companies.",
+  "description_he": "סטודיו מוצר בתלת-ממד מחדרה שנוסד ב-2017 על ידי ברק וינר, ומפיק אנימציות מוצר פוטוריאליסטיות, מבטי פיצוץ (exploded views), הדמיות לנקודות מכירה ו-POSM, חלקיקי VFX ומודלים low-poly בזמן אמת למותגים ולחברות חומרה.",
   "location": {
     "country": "IL",
     "city": "Hadera"
@@ -18,7 +19,8 @@
   "links": {
     "linkedin": "https://www.linkedin.com/company/spectx.design/",
     "behance": "https://www.behance.net/spectx",
-    "instagram": "https://www.instagram.com/spectx3d/"
+    "instagram": "https://www.instagram.com/spectx3d/",
+    "facebook": "https://www.facebook.com/spectx.design"
   },
   "services": [
     "3D product animation",
@@ -46,6 +48,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו מוצר בתלת-ממד מחדרה שנוסד ב-2017 על ידי ברק וינר, ומפיק אנימציות מוצר פוטוריאליסטיות, מבטי פיצוץ (exploded views), הדמיות לנקודות מכירה ו-POSM, חלקיקי VFX ומודלים low-poly בזמן אמת למותגים ולחברות חומרה."
+  "last_verified": "2026-10-18"
 }

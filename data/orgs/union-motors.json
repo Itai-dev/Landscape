@@ -21,6 +21,11 @@
   "website": "https://www.toyota.co.il",
   "contact_url": "https://www.toyota.co.il/owners/maintenance/contact-us",
   "careers_url": "https://unioncareer.co.il/departments/%D7%99%D7%95%D7%A0%D7%99%D7%95%D7%9F-%D7%9E%D7%95%D7%98%D7%95%D7%A8%D7%A1/",
+  "links": {
+    "facebook": "https://www.facebook.com/ToyotaIsrael",
+    "instagram": "https://www.instagram.com/toyota_israel",
+    "linkedin": "https://www.linkedin.com/company/toyota-israel---union-motors/"
+  },
   "key_people": [
     {
       "name": "Hila Ariel",

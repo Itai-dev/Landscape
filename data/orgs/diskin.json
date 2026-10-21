@@ -8,6 +8,7 @@
     "xr"
   ],
   "description": "Experience-design company in Glil Yam (Herzliya area), active for three decades, creating visitor centers, museums, pavilions and immersive physical-digital environments with in-house design, architecture, technology and production. Work includes the Rafael and Technion visitor centers, Israel Pavilions at Expo 2010 Shanghai and Expo 2012 Yeosu, SodaStream, Strauss and Tnuva visitor centers, the Israel Police Museum and the Peres Peace library.",
+  "description_he": "חברת עיצוב חוויה בגליל ים (אזור הרצליה), הפועלת כבר שלושה עשורים ויוצרת מרכזי מבקרים, מוזיאונים, ביתנים וסביבות אימרסיביות פיזיות-דיגיטליות, עם עיצוב, אדריכלות, טכנולוגיה והפקה בבית. בין העבודות: מרכזי המבקרים של רפאל והטכניון, ביתני ישראל באקספו 2010 בשנגחאי ובאקספו 2012 ביאוסו, מרכזי המבקרים של סודהסטרים, שטראוס ותנובה, מוזיאון משטרת ישראל וספריית פרס לשלום.",
   "location": {
     "country": "IL",
     "city": "Glil Yam"
@@ -15,6 +16,11 @@
   "status": "active",
   "website": "https://www.diskin.com/",
   "contact_url": "https://www.diskin.com/contact",
+  "links": {
+    "instagram": "https://www.instagram.com/diskin_pro",
+    "facebook": "https://www.facebook.com/Diskin-107059818220726",
+    "vimeo": "https://vimeo.com/diskinpro"
+  },
   "services": [
     "Visitor centers",
     "Museums & exhibitions",
@@ -106,6 +112,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "חברת עיצוב חוויה בגליל ים (אזור הרצליה), הפועלת כבר שלושה עשורים ויוצרת מרכזי מבקרים, מוזיאונים, ביתנים וסביבות אימרסיביות פיזיות-דיגיטליות, עם עיצוב, אדריכלות, טכנולוגיה והפקה בבית. בין העבודות: מרכזי המבקרים של רפאל והטכניון, ביתני ישראל באקספו 2010 בשנגחאי ובאקספו 2012 ביאוסו, מרכזי המבקרים של סודהסטרים, שטראוס ותנובה, מוזיאון משטרת ישראל וספריית פרס לשלום."
+  "last_verified": "2026-10-19"
 }

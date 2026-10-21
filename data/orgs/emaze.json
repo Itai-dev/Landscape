@@ -7,12 +7,20 @@
     "website-builders"
   ],
   "description": "Tel Aviv-based cloud presentation and visual-content platform (by Visual Software Systems Ltd.) offering templated presentations, websites, photo albums, e-cards, blogs and 3D templates, with AI features; it claims 50M+ users.",
+  "description_he": "פלטפורמת ענן תל אביבית למצגות ותוכן ויזואלי (של Visual Software Systems בע\"מ), שמציעה תבניות למצגות, אתרים, אלבומי תמונות, כרטיסי ברכה דיגיטליים, בלוגים ותבניות תלת-ממד, עם יכולות AI; לטענתה יש לה יותר מ-50 מיליון משתמשים.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
   },
   "status": "active",
   "website": "https://www.emaze.com",
+  "contact_url": "https://www.emaze.com/contact-us",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/emaze-com/",
+    "facebook": "https://www.facebook.com/emazepresentations",
+    "youtube": "https://www.youtube.com/user/emazecom",
+    "instagram": "https://www.instagram.com/emaze_com"
+  },
   "services": [
     "Online presentation maker",
     "Website & blog builder",
@@ -47,6 +55,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Motti Nisani was CEO in 2014 (Globes); current leadership not confirmed. Founding year conflicts (2009/2012/2013).",
-  "description_he": "פלטפורמת ענן תל אביבית למצגות ותוכן ויזואלי (של Visual Software Systems בע\"מ), שמציעה תבניות למצגות, אתרים, אלבומי תמונות, כרטיסי ברכה דיגיטליים, בלוגים ותבניות תלת-ממד, עם יכולות AI; לטענתה יש לה יותר מ-50 מיליון משתמשים."
+  "notes": "Motti Nisani was CEO in 2014 (Globes); current leadership not confirmed. Founding year conflicts (2009/2012/2013)."
 }

@@ -9,6 +9,7 @@
     "motion-design"
   ],
   "description": "Israeli corporate animation studio operating since 2009, producing 2D and 3D brand, explainer, product, training and investor-pitch videos end to end for tech companies, public bodies and consumer brands.",
+  "description_he": "סטודיו ישראלי לאנימציה עסקית הפועל מאז 2009, ומפיק מקצה לקצה סרטוני מותג, הסבר, מוצר, הדרכה ופיץ' למשקיעים בדו-ממד ובתלת-ממד לחברות טכנולוגיה, לגופים ציבוריים ולמותגי צריכה.",
   "location": {
     "country": "IL",
     "city": "Hod HaSharon"
@@ -21,7 +22,8 @@
   "links": {
     "youtube": "https://www.youtube.com/@the_cowboy",
     "instagram": "https://www.instagram.com/anicowboy/",
-    "linkedin": "https://www.linkedin.com/company/thecowboy"
+    "linkedin": "https://www.linkedin.com/company/thecowboy",
+    "facebook": "https://www.facebook.com/Anicowboy"
   },
   "services": [
     "2D/3D explainer videos",
@@ -64,6 +66,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "City from revenuebase directory, not on site.",
-  "description_he": "סטודיו ישראלי לאנימציה עסקית הפועל מאז 2009, ומפיק מקצה לקצה סרטוני מותג, הסבר, מוצר, הדרכה ופיץ' למשקיעים בדו-ממד ובתלת-ממד לחברות טכנולוגיה, לגופים ציבוריים ולמותגי צריכה."
+  "notes": "City from revenuebase directory, not on site."
 }

@@ -7,6 +7,7 @@
     "health-pharma"
   ],
   "description": "Israel's second-largest health maintenance organization (est. 1940/41), serving roughly a quarter of the population through clinics, pharmacies and diagnostic centers.",
+  "description_he": "קופת החולים השנייה בגודלה בישראל (נוסדה ב-1940/41), המשרתת כרבע מהאוכלוסייה באמצעות מרפאות, בתי מרקחת ומכוני אבחון.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -16,6 +17,11 @@
   "website": "https://www.maccabi4u.co.il",
   "contact_url": "https://www.maccabi4u.co.il/contact-us/46116/",
   "careers_url": "https://www.maccabi4u.co.il/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/MaccabiHealth",
+    "youtube": "https://www.youtube.com/channel/UCsZ9VcSuwhTJWnNAsxfmC8A",
+    "instagram": "https://www.instagram.com/maccabi_healthcare"
+  },
   "key_people": [
     {
       "name": "Anat Lichtig Achiez",
@@ -54,6 +60,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Jun 2026: McCann Tel Aviv retained the ~NIS 30M budget after a contested tender (BBR Saatchi & Saatchi (Baumann Ber Rivnay)'s petition rejected by the Supreme Court). Agency as of 2026-06: McCann Tel Aviv retained in the new tender (ICE, Jun 2026).",
-  "description_he": "קופת החולים השנייה בגודלה בישראל (נוסדה ב-1940/41), המשרתת כרבע מהאוכלוסייה באמצעות מרפאות, בתי מרקחת ומכוני אבחון."
+  "notes": "Jun 2026: McCann Tel Aviv retained the ~NIS 30M budget after a contested tender (BBR Saatchi & Saatchi (Baumann Ber Rivnay)'s petition rejected by the Supreme Court). Agency as of 2026-06: McCann Tel Aviv retained in the new tender (ICE, Jun 2026)."
 }

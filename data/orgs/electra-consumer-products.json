@@ -18,6 +18,8 @@
   },
   "status": "active",
   "website": "https://www.ecp.co.il",
+  "contact_url": "https://www.ecp.co.il/pages/contact",
+  "careers_url": "https://www.ecp.co.il/pages/carrer",
   "key_people": [
     {
       "name": "Zvika Schwimmer",

@@ -10,6 +10,7 @@
     "commercial-production"
   ],
   "description": "Tel Aviv commercial production house credited on 2026 TV campaigns including Bank Hapoalim's 90s-themed spot with Irena and Hila Korach (Gitam BBDO, director Assaf Harel) and Israir's tribute to Yigal Bashan (Baumann Ber Rivnai, AI work by studio T).",
+  "description_he": "בית הפקה לפרסומות בתל אביב שקרדיטים שלו מופיעים בקמפייני טלוויזיה של 2026, בהם פרסומת בסגנון שנות ה-90 של בנק הפועלים עם אירנה והילה קורח (גיתם BBDO, בימוי אסף הראל) והמחווה של ישראייר ליגאל בשן (באומן בר ריבנאי, עבודת AI של סטודיו T).",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -19,7 +20,8 @@
   "contact_url": "https://www.mialma.co.il/elements/pages/contact/",
   "links": {
     "instagram": "https://instagram.com/mialmaprod",
-    "linkedin": "https://www.linkedin.com/company/mialma"
+    "linkedin": "https://www.linkedin.com/company/mialma",
+    "facebook": "https://m.facebook.com/Mialma-Production-House-105544209534405"
   },
   "notable_clients": [
     "Bank Hapoalim",
@@ -60,6 +62,5 @@
   ],
   "confidence": "medium",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "בית הפקה לפרסומות בתל אביב שקרדיטים שלו מופיעים בקמפייני טלוויזיה של 2026, בהם פרסומת בסגנון שנות ה-90 של בנק הפועלים עם אירנה והילה קורח (גיתם BBDO, בימוי אסף הראל) והמחווה של ישראייר ליגאל בשן (באומן בר ריבנאי, עבודת AI של סטודיו T)."
+  "last_verified": "2026-10-19"
 }

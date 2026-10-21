@@ -1,6 +1,7 @@
 {
   "id": "idomoo",
   "name": "Idomoo",
+  "name_he": "אידומו",
   "kind": "startup",
   "categories": [
     "video-tools",
@@ -8,6 +9,7 @@
     "gen-ai-video"
   ],
   "description": "Ra'anana-based personalized-video company whose AI video agent 'Lucas' and proprietary Strata model generate data-driven, personalized and interactive videos at scale for customer communications, onboarding and video ads. Traded on the Tel Aviv Stock Exchange since 2021.",
+  "description_he": "חברת וידאו מותאם אישית מרעננה, שסוכן הווידאו מבוסס ה-AI שלה 'Lucas' ומודל Strata הקנייני שלה מייצרים בהיקפים גדולים סרטונים מבוססי דאטה, מותאמים אישית ואינטראקטיביים לתקשורת עם לקוחות, אונבורדינג ופרסומות וידאו. נסחרת בבורסת תל אביב מאז 2021.",
   "location": {
     "country": "IL",
     "city": "Ra'anana",
@@ -20,6 +22,13 @@
   "size": "51-200",
   "status": "active",
   "website": "https://www.idomoo.com",
+  "contact_url": "https://www.idomoo.com/contact-us",
+  "careers_url": "https://www.idomoo.com/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/idomoo/",
+    "facebook": "https://www.facebook.com/IdomooVideos",
+    "youtube": "https://www.youtube.com/channel/UC0DCT1-jrFpQegwxuudRKRg"
+  },
   "services": [
     "Personalized video at scale",
     "Interactive video",
@@ -79,7 +88,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Client names are logos shown on the company site.",
-  "description_he": "חברת וידאו מותאם אישית מרעננה, שסוכן הווידאו מבוסס ה-AI שלה 'Lucas' ומודל Strata הקנייני שלה מייצרים בהיקפים גדולים סרטונים מבוססי דאטה, מותאמים אישית ואינטראקטיביים לתקשורת עם לקוחות, אונבורדינג ופרסומות וידאו. נסחרת בבורסת תל אביב מאז 2021.",
-  "name_he": "אידומו"
+  "notes": "Client names are logos shown on the company site."
 }

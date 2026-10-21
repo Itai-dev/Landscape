@@ -7,6 +7,7 @@
     "retail-fashion"
   ],
   "description": "Israeli online fashion and lifestyle retailer launched by Fox-Wizel in November 2017, selling Fox-group and international brands; TASE-listed, and in 2025 it agreed to buy 51% of Israeli jewellery and fashion brand AINKER.",
+  "description_he": "קמעונאית אופנה ולייפסטייל אונליין ישראלית שהשיקה פוקס-ויזל בנובמבר 2017, ומוכרת מותגים של קבוצת פוקס ומותגים בינלאומיים; נסחרת בבורסת תל אביב, וב-2025 הסכימה לרכוש 51% ממותג התכשיטים והאופנה הישראלי AINKER.",
   "location": {
     "country": "IL"
   },
@@ -14,6 +15,11 @@
   "status": "active",
   "website": "https://www.terminalx.com",
   "contact_url": "https://www.terminalx.com/help-contactus",
+  "links": {
+    "instagram": "https://www.instagram.com/terminalx",
+    "facebook": "https://www.facebook.com/WEARETERMINALX",
+    "youtube": "https://www.youtube.com/channel/UCUTXP6iS-VyE1Vxllg_3W5g"
+  },
   "key_people": [
     {
       "name": "Adi Orel",
@@ -58,6 +64,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "2021 ICE credits named Dana Polak Olsher as marketing VP — too old to list as current. Nov 2025: marketing VP Adi Orel said Terminal X runs an in-house community of 300+ influencers rather than via outside agencies (Globes).",
-  "description_he": "קמעונאית אופנה ולייפסטייל אונליין ישראלית שהשיקה פוקס-ויזל בנובמבר 2017, ומוכרת מותגים של קבוצת פוקס ומותגים בינלאומיים; נסחרת בבורסת תל אביב, וב-2025 הסכימה לרכוש 51% ממותג התכשיטים והאופנה הישראלי AINKER."
+  "notes": "2021 ICE credits named Dana Polak Olsher as marketing VP — too old to list as current. Nov 2025: marketing VP Adi Orel said Terminal X runs an in-house community of 300+ influencers rather than via outside agencies (Globes)."
 }

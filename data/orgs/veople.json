@@ -7,11 +7,17 @@
     "content-studio"
   ],
   "description": "Israeli video-marketing production office founded by director-producer Gali Harel, a former executive TV producer at Channel 10 and Keshet 12, producing branded and marketing videos; ICE credits it on Gindi Global's Feb 2026 campaign with Ron Shahar (agency Fresh Nadlan).",
+  "description_he": "משרד הפקות לשיווק בווידאו שהקימה הבמאית והמפיקה גלי הראל, לשעבר מפיקה בפועל בטלוויזיה בערוץ 10 ובקשת 12, ומפיק סרטוני תוכן שיווקי וסרטונים שיווקיים; ICE מייחס לו את קמפיין גינדי גלובל מפברואר 2026 עם רון שחר (משרד הפרסום Fresh Nadlan).",
   "location": {
     "country": "IL"
   },
   "status": "active",
   "website": "https://www.veople.co.il/",
+  "links": {
+    "facebook": "https://www.facebook.com/veoplegali",
+    "youtube": "https://www.youtube.com/channel/UCy9Qr8qp2YoE7eXZpDmTIbw",
+    "instagram": "https://www.instagram.com/veople_gali"
+  },
   "notable_clients": [
     "Gindi Global"
   ],
@@ -41,6 +47,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "משרד הפקות לשיווק בווידאו שהקימה הבמאית והמפיקה גלי הראל, לשעבר מפיקה בפועל בטלוויזיה בערוץ 10 ובקשת 12, ומפיק סרטוני תוכן שיווקי וסרטונים שיווקיים; ICE מייחס לו את קמפיין גינדי גלובל מפברואר 2026 עם רון שחר (משרד הפרסום Fresh Nadlan)."
+  "last_verified": "2026-10-19"
 }

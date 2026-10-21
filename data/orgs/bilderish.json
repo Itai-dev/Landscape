@@ -12,6 +12,7 @@
     "post-production"
   ],
   "description": "Tel Aviv animation, video and post-production studio with 13+ years of experience making explainers, training videos, social ads, commercials and animated series for high-tech, visitor centers and gaming clients.",
+  "description_he": "סטודיו לאנימציה, וידאו ופוסט מתל אביב עם יותר מ-13 שנות ניסיון, שמפיק סרטוני הסבר, סרטוני הדרכה, מודעות לסושיאל, פרסומות וסדרות אנימציה ללקוחות הייטק, מרכזי מבקרים וגיימינג.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -25,7 +26,8 @@
     "vimeo": "https://vimeo.com/bilderish",
     "instagram": "https://www.instagram.com/bilderish/",
     "linkedin": "https://www.linkedin.com/company/bilderish-studio/",
-    "youtube": "https://www.youtube.com/user/Bilderish"
+    "youtube": "https://www.youtube.com/user/Bilderish",
+    "facebook": "https://www.facebook.com/Bilderish"
   },
   "services": [
     "Explainer videos",
@@ -74,6 +76,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו לאנימציה, וידאו ופוסט מתל אביב עם יותר מ-13 שנות ניסיון, שמפיק סרטוני הסבר, סרטוני הדרכה, מודעות לסושיאל, פרסומות וסדרות אנימציה ללקוחות הייטק, מרכזי מבקרים וגיימינג."
+  "last_verified": "2026-10-18"
 }

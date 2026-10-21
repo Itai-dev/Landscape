@@ -10,6 +10,7 @@
     "gen-ai-image"
   ],
   "description": "Tel Aviv-based AI lab building real-time generative video and world models (Lucy live video-to-video editing, Oasis interactive world model) and a GPU optimization stack that cuts the cost of running diffusion models. Licenses its tech to platforms, advertisers and cloud providers.",
+  "description_he": "מעבדת AI מתל אביב שמפתחת מודלים ג'נרטיביים לווידאו בזמן אמת ומודלי עולם (Lucy לעריכת וידאו-לווידאו בלייב, Oasis – מודל עולם אינטראקטיבי) וסטאק אופטימיזציה ל-GPU שמוזיל את הרצת מודלי דיפוזיה. מעניקה רישיון לטכנולוגיה שלה לפלטפורמות, למפרסמים ולספקי ענן.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -20,6 +21,10 @@
   "founded": 2023,
   "status": "active",
   "website": "https://decart.ai",
+  "contact_url": "https://decart.ai/contact-us",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/decart-ai/"
+  },
   "services": [
     "Lucy real-time video model",
     "Oasis world model",
@@ -63,6 +68,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$100M Series B (Aug 2025) at $3.1B valuation; $300M round (May 2026) led by Radical Ventures at $4B valuation; total reported as 'more than $450M'. Round stage label for 2026 round not confirmed. San Francisco office not independently verified.",
-  "description_he": "מעבדת AI מתל אביב שמפתחת מודלים ג'נרטיביים לווידאו בזמן אמת ומודלי עולם (Lucy לעריכת וידאו-לווידאו בלייב, Oasis – מודל עולם אינטראקטיבי) וסטאק אופטימיזציה ל-GPU שמוזיל את הרצת מודלי דיפוזיה. מעניקה רישיון לטכנולוגיה שלה לפלטפורמות, למפרסמים ולספקי ענן."
+  "notes": "$100M Series B (Aug 2025) at $3.1B valuation; $300M round (May 2026) led by Radical Ventures at $4B valuation; total reported as 'more than $450M'. Round stage label for 2026 round not confirmed. San Francisco office not independently verified."
 }

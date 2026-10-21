@@ -1,6 +1,7 @@
 {
   "id": "wix",
   "name": "Wix",
+  "name_he": "וויקס",
   "aka": [
     "Wix.com"
   ],
@@ -11,6 +12,7 @@
     "digital-design"
   ],
   "description": "Cloud website-building platform founded in Tel Aviv in 2006, offering drag-and-drop and AI-assisted site creation, e-commerce, and the Wix Studio product for agencies and designers. Publicly traded on Nasdaq; owns the DeviantArt art community. One of Israel's largest tech employers.",
+  "description_he": "פלטפורמת ענן לבניית אתרים שנוסדה בתל אביב ב-2006, ומציעה בניית אתרים בגרירה ושחרור ובסיוע AI, איקומרס ואת Wix Studio לסוכנויות ומעצבים. נסחרת בנאסד\"ק; בבעלותה קהילת האמנות DeviantArt. מהמעסיקות הגדולות בהייטק הישראלי.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -19,6 +21,11 @@
   "size": "5001+",
   "status": "active",
   "website": "https://www.wix.com",
+  "contact_url": "https://www.wix.com/about/contact-us",
+  "links": {
+    "youtube": "https://www.youtube.com/user/Wix",
+    "linkedin": "https://www.linkedin.com/company/wix-com/"
+  },
   "services": [
     "Website builder",
     "Wix Studio (agency/designer platform)",
@@ -70,7 +77,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Headcount ~5,300 in 2025 (third-party). Wikipedia lists offices in Brazil, Canada, Germany, India, Ireland, Japan, Lithuania, Poland, Netherlands, US, Ukraine and Singapore.",
-  "description_he": "פלטפורמת ענן לבניית אתרים שנוסדה בתל אביב ב-2006, ומציעה בניית אתרים בגרירה ושחרור ובסיוע AI, איקומרס ואת Wix Studio לסוכנויות ומעצבים. נסחרת בנאסד\"ק; בבעלותה קהילת האמנות DeviantArt. מהמעסיקות הגדולות בהייטק הישראלי.",
-  "name_he": "וויקס"
+  "notes": "Headcount ~5,300 in 2025 (third-party). Wikipedia lists offices in Brazil, Canada, Germany, India, Ireland, Japan, Lithuania, Poland, Netherlands, US, Ukraine and Singapore."
 }

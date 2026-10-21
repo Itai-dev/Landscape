@@ -1,12 +1,14 @@
 {
   "id": "photomyne",
   "name": "Photomyne",
+  "name_he": "פוטומיין",
   "kind": "startup",
   "categories": [
     "photo-tools",
     "photography"
   ],
   "description": "Israeli company (founded 2014) making AI-powered apps to scan and digitize old photo prints, slides and film negatives (Photo Scan by Photomyne, SlideScan, FilmBox); it reports 500M+ photos scanned. Listed on the Tel Aviv Stock Exchange since 2021.",
+  "description_he": "חברה ישראלית (נוסדה ב-2014) שמפתחת אפליקציות מבוססות AI לסריקה ודיגיטציה של תמונות מודפסות ישנות, שקופיות ונגטיבים (Photo Scan by Photomyne, SlideScan, FilmBox); לדבריה נסרקו באפליקציות שלה יותר מ-500 מיליון תמונות. נסחרת בבורסת תל אביב מאז 2021.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -15,6 +17,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://photomyne.com",
+  "links": {
+    "facebook": "https://www.facebook.com/Photomyne",
+    "instagram": "https://www.instagram.com/photomyne",
+    "linkedin": "https://www.linkedin.com/company/photomyne-ltd/"
+  },
   "services": [
     "Photo Scan app",
     "SlideScan",
@@ -59,7 +66,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "TASE ticker not confirmed (possibly PHTM). Some directories give Bnei Brak address. Size estimate based on ~25 staff in 2018.",
-  "description_he": "חברה ישראלית (נוסדה ב-2014) שמפתחת אפליקציות מבוססות AI לסריקה ודיגיטציה של תמונות מודפסות ישנות, שקופיות ונגטיבים (Photo Scan by Photomyne, SlideScan, FilmBox); לדבריה נסרקו באפליקציות שלה יותר מ-500 מיליון תמונות. נסחרת בבורסת תל אביב מאז 2021.",
-  "name_he": "פוטומיין"
+  "notes": "TASE ticker not confirmed (possibly PHTM). Some directories give Bnei Brak address. Size estimate based on ~25 staff in 2018."
 }

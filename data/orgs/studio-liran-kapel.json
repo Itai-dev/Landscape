@@ -13,6 +13,7 @@
     "illustration"
   ],
   "description": "Ramat Gan animation studio led by director Liran Kapel, making handcrafted brand animation that blends stop-motion, hand-drawn animation, video and mixed media for social ads, TV commercials, sponsorships and children's films.",
+  "description_he": "סטודיו אנימציה ברמת גן בהובלת הבמאי לירן קפל, שיוצר אנימציה בעבודת יד למותגים, המשלבת סטופ-מושן, אנימציה מצוירת ביד, וידאו ומדיה מעורבת — למודעות סושיאל, פרסומות טלוויזיה, חסויות וסרטי ילדים.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -26,7 +27,8 @@
     "vimeo": "https://vimeo.com/lirankapel",
     "linkedin": "https://www.linkedin.com/company/liran-kapel-animation-studio/",
     "instagram": "https://www.instagram.com/liran_kapel_animation/",
-    "youtube": "https://www.youtube.com/@lirankapel-creativedesigna9309"
+    "youtube": "https://www.youtube.com/@lirankapel-creativedesigna9309",
+    "facebook": "https://www.facebook.com/LiranKapel"
   },
   "services": [
     "Stop-motion animation",
@@ -65,6 +67,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו אנימציה ברמת גן בהובלת הבמאי לירן קפל, שיוצר אנימציה בעבודת יד למותגים, המשלבת סטופ-מושן, אנימציה מצוירת ביד, וידאו ומדיה מעורבת — למודעות סושיאל, פרסומות טלוויזיה, חסויות וסרטי ילדים."
+  "last_verified": "2026-10-18"
 }

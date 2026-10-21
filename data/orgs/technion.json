@@ -11,6 +11,7 @@
     "education"
   ],
   "description": "Israel's oldest university, a public technical research university in Haifa (established 1912, classes from 1924), with marketing, external-relations and resource-development units.",
+  "description_he": "האוניברסיטה הוותיקה בישראל, אוניברסיטת מחקר טכנולוגית ציבורית בחיפה (נוסדה ב-1912, הלימודים החלו ב-1924), עם יחידות שיווק, קשרי חוץ ופיתוח משאבים.",
   "location": {
     "country": "IL",
     "city": "Haifa"
@@ -21,7 +22,9 @@
   "careers_url": "https://hr.technion.ac.il/positions/",
   "links": {
     "linkedin": "https://il.linkedin.com/school/technion/",
-    "youtube": "https://www.youtube.com/user/Technion"
+    "youtube": "https://www.youtube.com/user/Technion",
+    "facebook": "https://www.facebook.com/Technion.Israel",
+    "instagram": "https://www.instagram.com/technion.israel"
   },
   "client_profile": {
     "industry": "higher education",
@@ -42,6 +45,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Ad agency and tender route not verified.",
-  "description_he": "האוניברסיטה הוותיקה בישראל, אוניברסיטת מחקר טכנולוגית ציבורית בחיפה (נוסדה ב-1912, הלימודים החלו ב-1924), עם יחידות שיווק, קשרי חוץ ופיתוח משאבים."
+  "notes": "Ad agency and tender route not verified."
 }

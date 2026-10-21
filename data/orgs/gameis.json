@@ -11,12 +11,14 @@
     "game-development"
   ],
   "description": "Non-profit umbrella association of Israel's digital games industry (community started 2008, association formed 2011) with 7,000+ members; runs the annual GameIS conference, a grants program, community meetups, Global Game Jam Israel and a directory of Israeli games on Steam.",
+  "description_he": "עמותת הגג של תעשיית המשחקים הדיגיטליים בישראל (הקהילה החלה ב-2008, העמותה הוקמה ב-2011) עם יותר מ-7,000 חברים; מפיקה את כנס GameIS השנתי, תוכנית מענקים, מפגשי קהילה, את Global Game Jam Israel ואינדקס של משחקים ישראליים ב-Steam.",
   "location": {
     "country": "IL"
   },
   "founded": 2011,
   "status": "active",
   "website": "https://www.gameis.org.il/",
+  "contact_url": "https://www.gameis.org.il/contact",
   "links": {
     "facebook": "https://www.facebook.com/GameISorg/",
     "instagram": "https://www.instagram.com/gameisofficial/",
@@ -43,6 +45,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Good source for indie studio discovery (steam-games page renders via JS).",
-  "description_he": "עמותת הגג של תעשיית המשחקים הדיגיטליים בישראל (הקהילה החלה ב-2008, העמותה הוקמה ב-2011) עם יותר מ-7,000 חברים; מפיקה את כנס GameIS השנתי, תוכנית מענקים, מפגשי קהילה, את Global Game Jam Israel ואינדקס של משחקים ישראליים ב-Steam."
+  "notes": "Good source for indie studio discovery (steam-games page renders via JS)."
 }

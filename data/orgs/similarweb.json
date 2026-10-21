@@ -7,6 +7,7 @@
     "tech"
   ],
   "description": "Digital-intelligence/web-analytics company founded in 2007 by Or Offer; HQ in New York and Givatayim, Israel; NYSE: SMWB.",
+  "description_he": "חברת מודיעין דיגיטלי ואנליטיקת אתרים שנוסדה ב-2007 על ידי אור עופר; מטה בניו יורק ובגבעתיים; NYSE: SMWB.",
   "location": {
     "country": "IL",
     "city": "Givatayim",
@@ -20,6 +21,12 @@
   "website": "https://www.similarweb.com",
   "contact_url": "https://www.similarweb.com/corp/contact-us/",
   "careers_url": "https://www.similarweb.com/corp/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/Similarweb",
+    "linkedin": "https://www.linkedin.com/company/similarweb/",
+    "youtube": "https://www.youtube.com/channel/UCVCI01HR6iB4AA4ChW08cvQ",
+    "instagram": "https://www.instagram.com/similarwebinsights"
+  },
   "key_people": [
     {
       "name": "Or Offer",
@@ -56,6 +63,5 @@
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "description_he": "חברת מודיעין דיגיטלי ואנליטיקת אתרים שנוסדה ב-2007 על ידי אור עופר; מטה בניו יורק ובגבעתיים; NYSE: SMWB."
+  "last_verified": "2026-10-19"
 }

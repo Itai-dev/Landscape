@@ -8,11 +8,17 @@
     "health-pharma"
   ],
   "description": "Israeli non-profit fighting HIV/AIDS and HIV stigma. In January 2022 it ran an anti-stigma video campaign with GSK and the Living with HIV organisation, created by the Dibur agency and directed by Rachel Bar Or.",
+  "description_he": "עמותה ישראלית הפועלת נגד HIV/איידס ונגד הסטיגמה סביב HIV. בינואר 2022 הריצה קמפיין וידאו נגד הסטיגמה יחד עם GSK וארגון 'לחיות עם HIV', בקריאייטיב של משרד דיבור ובבימוי רחל בר אור.",
   "location": {
     "country": "IL"
   },
   "status": "active",
   "website": "https://www.aidsisrael.org.il",
+  "links": {
+    "facebook": "https://www.facebook.com/IsraelAIDStaskforce",
+    "instagram": "https://www.instagram.com/israelaids",
+    "youtube": "https://www.youtube.com/user/IsraelAidsTaskForce"
+  },
   "client_profile": {
     "industry": "NGO / health",
     "creative_needs": [
@@ -45,6 +51,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "English name as commonly used; not confirmed on the Hebrew-only homepage.",
-  "description_he": "עמותה ישראלית הפועלת נגד HIV/איידס ונגד הסטיגמה סביב HIV. בינואר 2022 הריצה קמפיין וידאו נגד הסטיגמה יחד עם GSK וארגון 'לחיות עם HIV', בקריאייטיב של משרד דיבור ובבימוי רחל בר אור."
+  "notes": "English name as commonly used; not confirmed on the Hebrew-only homepage."
 }

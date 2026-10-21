@@ -8,11 +8,13 @@
     "post-production"
   ],
   "description": "Israeli boutique production company and creative collective for TV commercials, digital, music videos, film and TV (One Day in October; feature Matchmaking 2), also offering production services for filming in Israel. Commercial clients include Volkswagen ID.4, FIBI, BYD and Touch; ICE credits it with production and post of Aviv Melisron's 2026 PARK51 campaign with Gwyneth Paltrow, shot in New York.",
+  "description_he": "חברת הפקות בוטיק וקולקטיב קריאייטיב ישראלי לפרסומות טלוויזיה, דיגיטל, קליפים, קולנוע וטלוויזיה ('יום אחד באוקטובר'; הסרט העלילתי 'שידוכים 2'), שמציעה גם שירותי הפקה לצילומים בישראל. בין הלקוחות המסחריים: פולקסווגן ID.4, הבינלאומי (FIBI), BYD ו-Touch; ICE מייחס לה את ההפקה והפוסט של קמפיין PARK51 של אביב מליסרון מ-2026 עם גווינת' פאלטרו, שצולם בניו יורק.",
   "location": {
     "country": "IL"
   },
   "status": "active",
   "website": "https://www.zoafilms.com/",
+  "contact_url": "https://www.zoafilms.com/pages/contact",
   "links": {
     "linkedin": "https://www.linkedin.com/company/zoa-films-ltd",
     "instagram": "https://www.instagram.com/zoafilms/",
@@ -53,6 +55,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "חברת הפקות בוטיק וקולקטיב קריאייטיב ישראלי לפרסומות טלוויזיה, דיגיטל, קליפים, קולנוע וטלוויזיה ('יום אחד באוקטובר'; הסרט העלילתי 'שידוכים 2'), שמציעה גם שירותי הפקה לצילומים בישראל. בין הלקוחות המסחריים: פולקסווגן ID.4, הבינלאומי (FIBI), BYD ו-Touch; ICE מייחס לה את ההפקה והפוסט של קמפיין PARK51 של אביב מליסרון מ-2026 עם גווינת' פאלטרו, שצולם בניו יורק."
+  "last_verified": "2026-10-19"
 }

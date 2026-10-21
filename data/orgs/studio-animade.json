@@ -12,6 +12,7 @@
     "motion-design"
   ],
   "description": "Boutique animation studio founded in 2010 and based in rural northern Israel (Kibbutz HaZorea area). Produces animated business videos, 3D product visualizations, training videos and e-learning for Israeli and international clients.",
+  "description_he": "סטודיו אנימציה בוטיק שנוסד ב-2010 ופועל בצפון הכפרי (אזור קיבוץ הזורע). מפיק סרטוני אנימציה לעסקים, הדמיות מוצר בתלת-ממד, סרטוני הדרכה ולומדות ללקוחות בישראל ובעולם.",
   "location": {
     "country": "IL",
     "city": "Kibbutz HaZorea"
@@ -24,7 +25,8 @@
   "links": {
     "youtube": "https://www.youtube.com/channel/UCsL0ps8rUEvq5mqSXkuvHCA",
     "linkedin": "https://www.linkedin.com/company/animade-animation-studio/",
-    "instagram": "https://www.instagram.com/animadestudio/"
+    "instagram": "https://www.instagram.com/animadestudio/",
+    "facebook": "https://www.facebook.com/Studio.Animade"
   },
   "services": [
     "Animated explainer and marketing videos",
@@ -60,6 +62,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Animation Israel directory lists location as Ein HaShofet; site says Kibbutz HaZorea (neighbouring kibbutzim).",
-  "description_he": "סטודיו אנימציה בוטיק שנוסד ב-2010 ופועל בצפון הכפרי (אזור קיבוץ הזורע). מפיק סרטוני אנימציה לעסקים, הדמיות מוצר בתלת-ממד, סרטוני הדרכה ולומדות ללקוחות בישראל ובעולם."
+  "notes": "Animation Israel directory lists location as Ein HaShofet; site says Kibbutz HaZorea (neighbouring kibbutzim)."
 }

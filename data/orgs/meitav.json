@@ -10,6 +10,7 @@
     "banking-finance"
   ],
   "description": "One of Israel's largest investment houses (roots in 1979, formerly Meitav Dash), managing provident, pension and mutual funds plus trading; Bnei Brak HQ, ~1,000 employees. Ran a David Schwimmer celebrity campaign in 2024.",
+  "description_he": "אחד מבתי ההשקעות הגדולים בישראל (שורשיו ב-1979, לשעבר מיטב דש), שמנהל קופות גמל, קרנות פנסיה וקרנות נאמנות לצד פעילות מסחר; מטה בבני ברק, כ-1,000 עובדים. ב-2024 הריץ קמפיין סלבריטאים עם דייוויד שווימר.",
   "location": {
     "country": "IL",
     "city": "Bnei Brak"
@@ -19,6 +20,12 @@
   "status": "active",
   "website": "https://www.meitav.co.il",
   "careers_url": "https://www.meitav.co.il/jobs/",
+  "links": {
+    "youtube": "https://www.youtube.com/@meitav_investments",
+    "facebook": "https://www.facebook.com/meitav.invest",
+    "instagram": "https://instagram.com/meitav",
+    "linkedin": "https://www.linkedin.com/company/meitav/"
+  },
   "key_people": [
     {
       "name": "Amnon Golan",
@@ -55,6 +62,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "May 2024 Schwimmer campaign was self-produced (strategy, creative and production in-house with freelancers): director Rani Carmeli, DP Menno Kadosh (ICE) — open to hiring freelance crews directly.",
-  "description_he": "אחד מבתי ההשקעות הגדולים בישראל (שורשיו ב-1979, לשעבר מיטב דש), שמנהל קופות גמל, קרנות פנסיה וקרנות נאמנות לצד פעילות מסחר; מטה בבני ברק, כ-1,000 עובדים. ב-2024 הריץ קמפיין סלבריטאים עם דייוויד שווימר."
+  "notes": "May 2024 Schwimmer campaign was self-produced (strategy, creative and production in-house with freelancers): director Rani Carmeli, DP Menno Kadosh (ICE) — open to hiring freelance crews directly."
 }

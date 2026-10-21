@@ -12,6 +12,7 @@
     "motion-design"
   ],
   "description": "Family-run video studio for tech and B2B brands, operating from Israel and Portugal, offering end-to-end production with live action, 2D/3D and AI-assisted animation, motion graphics and post for SaaS, cyber, fintech and gaming companies.",
+  "description_he": "סטודיו וידאו משפחתי למותגי טכנולוגיה ו-B2B, הפועל מישראל ומפורטוגל, ומציע הפקה מקצה לקצה עם לייב אקשן, אנימציה דו-ממדית ותלת-ממדית ואנימציה בסיוע AI, מושן גרפיקס ופוסט לחברות SaaS, סייבר, פינטק וגיימינג.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -25,7 +26,8 @@
   "links": {
     "linkedin": "https://www.linkedin.com/company/blue-monkeys-productions",
     "instagram": "https://www.instagram.com/bluemonkeys_productions",
-    "youtube": "https://www.youtube.com/@BlueMonkeysPro"
+    "youtube": "https://www.youtube.com/@BlueMonkeysPro",
+    "facebook": "https://www.facebook.com/BlueMonkeysProductions"
   },
   "services": [
     "Brand and product videos",
@@ -57,6 +59,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו וידאו משפחתי למותגי טכנולוגיה ו-B2B, הפועל מישראל ומפורטוגל, ומציע הפקה מקצה לקצה עם לייב אקשן, אנימציה דו-ממדית ותלת-ממדית ואנימציה בסיוע AI, מושן גרפיקס ופוסט לחברות SaaS, סייבר, פינטק וגיימינג."
+  "last_verified": "2026-10-18"
 }

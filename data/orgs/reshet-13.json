@@ -11,6 +11,7 @@
     "media-broadcast"
   ],
   "description": "Israeli commercial TV channel (launched 2017; merged with Channel 10 in 2019). In 2026 a sale from Len Blavatnik to an investor group led by Assaf Rappaport was signed and approved by the Second Authority.",
+  "description_he": "ערוץ טלוויזיה מסחרי ישראלי (עלה לאוויר ב-2017; התמזג עם ערוץ 10 ב-2019). ב-2026 נחתמה מכירתו מלן בלווטניק לקבוצת משקיעים בהובלת אסף רפפורט, והעסקה אושרה על ידי הרשות השנייה.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -18,6 +19,12 @@
   "founded": 2017,
   "status": "active",
   "website": "https://13tv.co.il",
+  "contact_url": "https://13tv.co.il/contact-us",
+  "careers_url": "https://13tv.co.il/item/general/jobs-13529",
+  "links": {
+    "instagram": "https://www.instagram.com/reshettv",
+    "youtube": "https://www.youtube.com/user/reshettv"
+  },
   "client_profile": {
     "industry": "commercial TV",
     "creative_needs": [
@@ -36,6 +43,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Ownership in flux (2025-26); closing of the Rappaport-group deal not confirmed, so leadership is omitted (he.wikipedia lists Emiliano Calemzuk as CEO).",
-  "description_he": "ערוץ טלוויזיה מסחרי ישראלי (עלה לאוויר ב-2017; התמזג עם ערוץ 10 ב-2019). ב-2026 נחתמה מכירתו מלן בלווטניק לקבוצת משקיעים בהובלת אסף רפפורט, והעסקה אושרה על ידי הרשות השנייה."
+  "notes": "Ownership in flux (2025-26); closing of the Rappaport-group deal not confirmed, so leadership is omitted (he.wikipedia lists Emiliano Calemzuk as CEO)."
 }

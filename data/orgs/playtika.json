@@ -1,11 +1,13 @@
 {
   "id": "playtika",
   "name": "Playtika",
+  "name_he": "פלייטיקה",
   "kind": "startup",
   "categories": [
     "game-development"
   ],
   "description": "Herzliya-headquartered, Nasdaq-listed (PLTK) mobile games company founded in 2010 by Robert Antokol and Uri Shahak; portfolio includes Slotomania, Bingo Blitz, Caesars Slots, Solitaire Grand Harvest, Pirate Kings, Best Fiends, WSOP and Dice Dreams. Acquired studios include Jelly Button, Wooga, Seriously and Innplay Labs.",
+  "description_he": "חברת משחקי מובייל שמטהּ בהרצליה, נסחרת בנאסד\"ק (PLTK), ונוסדה ב-2010 על ידי רוברט אנטוקול ואורי שחק; בפורטפוליו: Slotomania, Bingo Blitz, Caesars Slots, Solitaire Grand Harvest, Pirate Kings, Best Fiends, WSOP ו-Dice Dreams. בין הסטודיו שרכשה: Jelly Button, Wooga, Seriously ו-Innplay Labs.",
   "location": {
     "country": "IL",
     "city": "Herzliya",
@@ -20,9 +22,11 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.playtika.com/",
+  "careers_url": "https://www.playtika.com/careers",
   "links": {
     "instagram": "https://www.instagram.com/playtika",
-    "facebook": "https://www.facebook.com/Playtika/"
+    "facebook": "https://www.facebook.com/Playtika/",
+    "linkedin": "https://www.linkedin.com/company/playtika/"
   },
   "notable_work": [
     "Slotomania",
@@ -98,7 +102,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "~3,500 employees end of 2024; ~20% workforce cut announced Nov 2025 (Wikipedia). 'The Legend' WSOP film was created in-house by Playtika.",
-  "description_he": "חברת משחקי מובייל שמטהּ בהרצליה, נסחרת בנאסד\"ק (PLTK), ונוסדה ב-2010 על ידי רוברט אנטוקול ואורי שחק; בפורטפוליו: Slotomania, Bingo Blitz, Caesars Slots, Solitaire Grand Harvest, Pirate Kings, Best Fiends, WSOP ו-Dice Dreams. בין הסטודיו שרכשה: Jelly Button, Wooga, Seriously ו-Innplay Labs.",
-  "name_he": "פלייטיקה"
+  "notes": "~3,500 employees end of 2024; ~20% workforce cut announced Nov 2025 (Wikipedia). 'The Legend' WSOP film was created in-house by Playtika."
 }

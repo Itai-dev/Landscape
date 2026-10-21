@@ -11,6 +11,7 @@
     "film-production"
   ],
   "description": "Israeli animation studio founded in Tel Aviv in 2010 by producer Amit Gicelter, with branches in Tel Aviv, Jerusalem, Sderot and Athens. Develops and produces shorts, series and commercial content and original IP; produced the Oscar-nominated short 'Letter to a Pig' and the Oscar-shortlisted 'Black Slide'.",
+  "description_he": "סטודיו אנימציה ישראלי שנוסד בתל אביב ב-2010 על ידי המפיק עמית גיצלטר, עם סניפים בתל אביב, בירושלים, בשדרות ובאתונה. מפתח ומפיק סרטים קצרים, סדרות, תוכן מסחרי ו-IP מקורי; הפיק את הסרט הקצר 'מכתב לחזיר' שהיה מועמד לאוסקר ואת 'Black Slide' שנכנס לרשימה המקוצרת לאוסקר.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -28,7 +29,8 @@
   "links": {
     "vimeo": "https://vimeo.com/thehivepro",
     "instagram": "https://www.instagram.com/thehivepro/",
-    "linkedin": "https://www.linkedin.com/company/thehivestudio/"
+    "linkedin": "https://www.linkedin.com/company/thehivestudio/",
+    "facebook": "https://www.facebook.com/hive.pro"
   },
   "services": [
     "Content development",
@@ -85,6 +87,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "About page cites a team of ~40 artists.",
-  "description_he": "סטודיו אנימציה ישראלי שנוסד בתל אביב ב-2010 על ידי המפיק עמית גיצלטר, עם סניפים בתל אביב, בירושלים, בשדרות ובאתונה. מפתח ומפיק סרטים קצרים, סדרות, תוכן מסחרי ו-IP מקורי; הפיק את הסרט הקצר 'מכתב לחזיר' שהיה מועמד לאוסקר ואת 'Black Slide' שנכנס לרשימה המקוצרת לאוסקר."
+  "notes": "About page cites a team of ~40 artists."
 }

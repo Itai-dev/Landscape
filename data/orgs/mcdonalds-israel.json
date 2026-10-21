@@ -11,6 +11,7 @@
     "retail-fashion"
   ],
   "description": "McDonald's restaurant operation in Israel (first branch 1993, ~300 restaurants), long run by franchisee Aloniel; McDonald's Corp. acquired the Israeli restaurants in 2024.",
+  "description_he": "פעילות רשת המסעדות מקדונלד'ס בישראל (הסניף הראשון ב-1993, כ-300 מסעדות), שהופעלה שנים רבות על ידי הזכיין אלוניאל; McDonald's Corp. רכשה את המסעדות בישראל ב-2024.",
   "location": {
     "country": "IL"
   },
@@ -19,6 +20,11 @@
   "website": "https://www.mcdonalds.co.il",
   "contact_url": "https://www.mcdonalds.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
   "careers_url": "https://www.mcdonalds.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+  "links": {
+    "instagram": "https://www.instagram.com/mcdonalds_israel",
+    "facebook": "https://www.facebook.com/mcdonaldsil",
+    "youtube": "https://www.youtube.com/channel/UCnSlYxuKLfCFfb9h9Lpw_PQ"
+  },
   "key_people": [
     {
       "name": "Corinne Ketner",
@@ -63,6 +69,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Listed among Yehoshua TBWA's clients (Globes, Nov 2025). Agency as of 2026-06: Yehoshua TBWA lists McDonald's among its clients (ICE, Jun 2026).",
-  "description_he": "פעילות רשת המסעדות מקדונלד'ס בישראל (הסניף הראשון ב-1993, כ-300 מסעדות), שהופעלה שנים רבות על ידי הזכיין אלוניאל; McDonald's Corp. רכשה את המסעדות בישראל ב-2024."
+  "notes": "Listed among Yehoshua TBWA's clients (Globes, Nov 2025). Agency as of 2026-06: Yehoshua TBWA lists McDonald's among its clients (ICE, Jun 2026)."
 }

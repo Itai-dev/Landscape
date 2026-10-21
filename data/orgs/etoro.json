@@ -11,6 +11,7 @@
     "banking-finance"
   ],
   "description": "Social investing platform founded in Tel Aviv in 2007, HQ Bnei Brak; IPO on Nasdaq (ETOR) in May 2025. Prolific advertiser: Super Bowl spot (2022), AI-generated Olympics ad (2024), European football and F1 sponsorships.",
+  "description_he": "פלטפורמת השקעות חברתית שנוסדה בתל אביב ב-2007, מטה בבני ברק; הנפקה בנאסד\"ק (ETOR) במאי 2025. מפרסמת פורייה: פרסומת בסופרבול (2022), פרסומת אולימפית שנוצרה ב-AI (2024), וחסויות בכדורגל האירופי וב-F1.",
   "location": {
     "country": "IL",
     "city": "Bnei Brak"
@@ -21,6 +22,11 @@
   "website": "https://www.etoro.com",
   "contact_url": "https://www.etoro.com/customer-service/",
   "careers_url": "https://www.etoro.com/about/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/eToro",
+    "instagram": "https://www.instagram.com/etoro_official",
+    "linkedin": "https://www.linkedin.com/company/etoro/"
+  },
   "key_people": [
     {
       "name": "Yoni Assia",
@@ -68,6 +74,5 @@
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "description_he": "פלטפורמת השקעות חברתית שנוסדה בתל אביב ב-2007, מטה בבני ברק; הנפקה בנאסד\"ק (ETOR) במאי 2025. מפרסמת פורייה: פרסומת בסופרבול (2022), פרסומת אולימפית שנוצרה ב-AI (2024), וחסויות בכדורגל האירופי וב-F1."
+  "last_verified": "2026-10-19"
 }

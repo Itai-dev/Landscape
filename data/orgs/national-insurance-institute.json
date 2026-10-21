@@ -12,6 +12,7 @@
     "public-sector"
   ],
   "description": "Israel's national social-security agency. Runs rights-awareness campaigns via its spokesperson's office and LAPAM, and tenders its own social-media services: Poniya Ltd. won the social-media tender and in Feb 2026 got a NIS 1.5M extension for a rehabilitation campaign for victims of hostilities.",
+  "description_he": "המוסד הממלכתי לביטחון סוציאלי בישראל. מריץ קמפיינים למיצוי זכויות דרך דוברות המוסד ולפ\"מ, ומוציא מכרזים משלו לשירותי סושיאל: פוניה בע\"מ זכתה במכרז הסושיאל ובפברואר 2026 קיבלה הארכה של 1.5 מיליון ₪ לקמפיין שיקום לנפגעי פעולות איבה.",
   "location": {
     "country": "IL",
     "city": "Jerusalem"
@@ -19,6 +20,12 @@
   "status": "active",
   "website": "https://www.btl.gov.il",
   "contact_url": "https://www.btl.gov.il/About/contact_us/Pages/default.aspx",
+  "careers_url": "https://www.btl.gov.il/About/jobs/Pages/default.aspx",
+  "links": {
+    "youtube": "https://www.youtube.com/user/bituahleumi",
+    "facebook": "https://www.facebook.com/mybtl",
+    "instagram": "https://www.instagram.com/bituah_leumi_official"
+  },
   "key_people": [
     {
       "name": "Michaela Cohen",
@@ -66,6 +73,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Publishes tenders and single-supplier exemptions at btl.gov.il/About/tenders. Supplier's English name not verified (transliterated from פוניה).",
-  "description_he": "המוסד הממלכתי לביטחון סוציאלי בישראל. מריץ קמפיינים למיצוי זכויות דרך דוברות המוסד ולפ\"מ, ומוציא מכרזים משלו לשירותי סושיאל: פוניה בע\"מ זכתה במכרז הסושיאל ובפברואר 2026 קיבלה הארכה של 1.5 מיליון ₪ לקמפיין שיקום לנפגעי פעולות איבה."
+  "notes": "Publishes tenders and single-supplier exemptions at btl.gov.il/About/tenders. Supplier's English name not verified (transliterated from פוניה)."
 }

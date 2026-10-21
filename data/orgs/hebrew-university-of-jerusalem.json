@@ -11,6 +11,7 @@
     "education"
   ],
   "description": "Public research university in Jerusalem co-founded in 1918 by Albert Einstein and Chaim Weizmann. Known for out-of-home registration stunts such as a 34-metre climbing-wall billboard ('Hard, but the best', 2014) by Gefen TEAM; publishes tenders at tenders.huji.ac.il.",
+  "description_he": "אוניברסיטת מחקר ציבורית בירושלים שנוסדה ב-1918, בין היתר על ידי אלברט איינשטיין וחיים ויצמן. ידועה בפעלולי חוצות לקראת ההרשמה, כמו שלט חוצות בגובה 34 מטר בצורת קיר טיפוס ('קשה, אבל הכי טוב', 2014) של גפן TEAM; מפרסמת מכרזים ב-tenders.huji.ac.il.",
   "location": {
     "country": "IL",
     "city": "Jerusalem"
@@ -20,6 +21,10 @@
   "website": "https://new.huji.ac.il",
   "contact_url": "https://new.huji.ac.il/node/117259",
   "careers_url": "https://hr.huji.ac.il/mihrazim",
+  "links": {
+    "facebook": "https://www.facebook.com/thehebrewuniversity",
+    "instagram": "https://www.instagram.com/hebrewuniversity"
+  },
   "client_profile": {
     "industry": "higher education",
     "creative_needs": [
@@ -59,6 +64,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "אוניברסיטת מחקר ציבורית בירושלים שנוסדה ב-1918, בין היתר על ידי אלברט איינשטיין וחיים ויצמן. ידועה בפעלולי חוצות לקראת ההרשמה, כמו שלט חוצות בגובה 34 מטר בצורת קיר טיפוס ('קשה, אבל הכי טוב', 2014) של גפן TEAM; מפרסמת מכרזים ב-tenders.huji.ac.il."
+  "last_verified": "2026-10-19"
 }
