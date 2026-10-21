@@ -94,7 +94,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       return fail(OFFLINE);
     }
     if (error) {
-      fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+      fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : (/sending|email/i.test(error?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב."));
     } else if (onSent) {
       setState("idle");
       onSent(address);

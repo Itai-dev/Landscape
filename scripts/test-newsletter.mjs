@@ -203,7 +203,7 @@ await t("9. editions: the Sunday in Israel; weekly every Sunday, biweekly every 
 // A stand-in for what runDigest uses: digest_recipients(), digest_sends with unique (user_id, edition),
 // profiles and newsletter_prefs updates. Calls interleave like concurrent cron runs would.
 function fakeDb(recipients) {
-  const tables = { digest_sends: [], profiles: [], newsletter_prefs: recipients.map((r) => ({ user_id: r.user_id })) };
+  const tables = { digest_sends: [], profiles: [], org_follows: [], newsletter_prefs: recipients.map((r) => ({ user_id: r.user_id })) };
   const key = (r) => `${r.user_id}|${r.edition}`;
   function query(table) {
     const filters = [];

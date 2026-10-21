@@ -58,7 +58,7 @@ export default function JoinFlow({ crafts: all }) {
     }
     if (err) {
       setPhase("error");
-      setError(/rate|limit/i.test(err.message) || err.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+      setError(/rate|limit/i.test(err.message) || err.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : (/sending|email/i.test(err?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב."));
       return;
     }
     setPhase("idle");
