@@ -85,8 +85,8 @@ export default function Home() {
       ) : (
         <section className="wrap">
           <div className="hero ask">
-            <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
-            <p className="lead">חיפוש אחד בכל תעשיית הקריאייטיב בישראל: {STATS.orgs} חברות, אנשים ומכרזים, עם מקור לכל פרט.</p>
+            <h1>מה קורה בתעשיית הקריאייטיב בישראל?</h1>
+            <p className="lead">כל ההזדמנויות הנכונות, בזמן הנכון.</p>
             <HeroSearch popular={POPULAR.map((slug) => ({ slug, label: craftLabel(slug) }))} />
             <p className="askmail">מה השתנה השבוע בתחום שלכם, כל יום ראשון במייל. <a href="/join" data-track="hero_join">להרשמה, בחינם</a></p>
           </div>
