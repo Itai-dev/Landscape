@@ -5,13 +5,14 @@ body:has(.joinflow) { padding-bottom: 0 !important; }
 
 .joinflow { min-height: calc(100svh - 104px); display: flex; }
 .jwrap { width: 100%; max-width: 640px; display: flex; flex-direction: column; padding-block: var(--s-4) var(--s-6); }
-.jtop { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 44px; margin-block-end: var(--s-5); }
+/* Back/cancel on its own row; the progress track runs full width under it, from the start (right in Hebrew) */
+.jtop { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); min-height: 44px; margin-block-end: var(--s-5); }
 .jback { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 var(--s-2); margin-inline-start: calc(-1 * var(--s-2)); border: 0; background: none; color: var(--ink); font: inherit; font-size: var(--t-sm); font-weight: 500; cursor: pointer; text-decoration: none; border-radius: var(--r); }
 [dir="ltr"] .jback svg { transform: scaleX(-1); }
-.jdots { display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.jdots li { width: 24px; height: 4px; border-radius: 2px; background: var(--soft-2); transition: background .3s var(--ease), width .3s var(--ease); }
+.jdots { display: flex; flex: 1 0 100%; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.jdots li { flex: 1; height: 4px; border-radius: 2px; background: var(--soft-2); transition: background .3s var(--ease); }
 .jdots li.done { background: var(--ink); }
-.jdots li.on { width: 40px; background: var(--accent); }
+.jdots li.on { background: var(--accent); }
 
 .jstep { flex: 1; display: flex; flex-direction: column; gap: var(--s-4); }
 .jstep h1 { font-size: var(--t-2xl); font-weight: 300; line-height: 1.05; margin: 0; outline: none; }
