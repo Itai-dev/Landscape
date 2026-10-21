@@ -22,8 +22,8 @@ export default function Header() {
   return (
     <>
       <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: promoHtml() }} />
-      {/* On the home page (and its /test copy) the hero has its own search, so the header one steps aside (like Dribbble). */}
-      <header className={path === "/" || path === "/test" ? "top home" : "top"}>
+      {/* Pages with their own big search (home, its /test copy, /search results) hide the header one (like Dribbble). */}
+      <header className={["/", "/test", "/search"].includes(path) ? "top home" : "top"}>
         <div className="wrap">
           <span style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: BURGER }} />
           <a className="brand" href="/" lang="en" aria-label={`${BRAND}, לדף הבית`} dangerouslySetInnerHTML={{ __html: WORDMARK }} />
