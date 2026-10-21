@@ -96,20 +96,20 @@
 @media (max-width: 639px) { .ctile { padding: var(--s-4); min-height: 140px; gap: var(--s-2); } }
 
 /* Search block: tabs, one field (not full width) with a square accent button, popular crafts. */
-.hsearchblock { display: grid; gap: var(--s-3); padding-block-end: var(--s-6); max-width: 720px; }
-.htabs { display: flex; gap: var(--s-1); flex-wrap: wrap; }
+.hsearchblock { display: grid; gap: var(--s-3); margin-block-start: clamp(var(--s-7), 6vw, var(--s-9)); padding-block-end: var(--s-6); width: 100%; max-width: 720px; margin-inline: auto; }
+.htabs { display: flex; gap: var(--s-1); flex-wrap: wrap; justify-content: center; }
 .htabs button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: var(--t-sm); font-weight: 500; padding: 0 16px; min-height: 40px; border-radius: var(--r); cursor: pointer; }
 .htabs button.on { background: var(--surface); color: var(--ink); }
 @media (hover: hover) { .htabs button:not(.on):hover { color: var(--ink); } }
 .hfield input[type="search"] { border-radius: var(--r-lg); padding-inline-start: var(--s-5); }
 .hfield .go { inset-inline-end: 6px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); }
-.hpop { margin-block-start: var(--s-1); }
+.hpop { margin-block-start: var(--s-1); justify-content: center; }
 .hpop .tag { border-radius: var(--r); padding: 6px 14px; font-size: var(--t-sm); }
 @media (max-width: 639px) {
   .hero.sell.split { gap: var(--s-5); padding-block: var(--s-6) var(--s-5); }
   .checks { margin-block-end: var(--s-5); }
   .checks li { font-size: var(--t-sm); }
-  .hpop { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
+  .hpop { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
   .hpop::-webkit-scrollbar { display: none; }
   .hpop > * { flex: none; }
 }
