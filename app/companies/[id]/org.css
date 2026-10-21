@@ -14,14 +14,14 @@
 .ohead { display: flex; gap: var(--s-5); align-items: center; margin-block-end: var(--s-6); }
 .oid { display: grid; gap: var(--s-2); min-width: 0; }
 .okind { display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; font-size: var(--t-sm); color: var(--muted); }
-.ohead h1 { margin: 0; font-size: clamp(30px, 4.4vw, 64px); font-weight: 600; line-height: 1.04; overflow-wrap: anywhere; }
+.ohead h1 { margin: 0; overflow-wrap: anywhere; }
 .ohead .alt { margin: 0; color: var(--muted); font-size: var(--t-md); }
 .oactions { display: flex; gap: var(--s-2); flex-wrap: wrap; align-items: center; margin-block-start: var(--s-3); }
 @media (max-width: 640px) { .ohead { flex-direction: column; align-items: flex-start; gap: var(--s-4); } .otile.big { width: 96px; } .otile.wide { height: 96px; min-width: 132px; } }
 
 .osec { margin-block-end: var(--s-7); }
-.osec > h2 { font-size: var(--t-sm); font-weight: 600; margin: 0 0 var(--s-4); padding-block-end: var(--s-2); border-block-end: 1px dotted var(--line-2); }
-.osec h3 { font-size: var(--t-sm); font-weight: 600; margin: var(--s-4) 0 var(--s-2); color: var(--muted); }
+.osec > h2 { margin: 0 0 var(--s-4); padding-block-end: var(--s-2); border-block-end: 1px dotted var(--line-2); }
+.osec h3 { margin: var(--s-4) 0 var(--s-2); }
 .osec .desc { font-size: var(--t-md); line-height: 1.7; margin: 0 0 var(--s-2); max-width: 70ch; }
 
 .olinks, .opills, .ochips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
