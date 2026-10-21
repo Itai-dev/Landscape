@@ -7,10 +7,11 @@ import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
-import { PROFILES_ENABLED, aiReady } from "@/lib/config";
+import { PROFILES_ENABLED, aiSearchOn } from "@/lib/config";
 import AskAnswer from "@/components/AskAnswer";
 import { askable } from "@/lib/askable";
 import { parseQuery } from "@/lib/match";
+import { kindLabelHe } from "@/lib/kinds.mjs";
 import { supabaseConfig } from "@/lib/config";
 import { listTenders } from "@/lib/tenders";
 import { searchTools } from "@/lib/tools";
@@ -27,36 +28,40 @@ export default async function Search({ searchParams }) {
   const asked = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
   // A query that is a craft's name ("מושן", "VFX") is that craft: the same results and counts as the craft page.
   // A question ("מי מזמין מושן בתל אביב") becomes the craft plus the remaining words ("תל אביב").
-  const parsed = asked ? { craft: "", q: typed } : parseQuery(typed);
+  // Company types in words ("משרד הפרסום", "סטודיואים") become a type filter for the companies list.
+  const parsed = asked ? { craft: "", kind: "", q: typed } : parseQuery(typed);
   const named = parsed.craft;
   const craft = asked || named;
   const q = parsed.q;
+  const kind = parsed.kind || "";
   const any = Boolean(q || craft);
   const claim = PROFILES_ENABLED && Boolean(supabaseConfig());
 
   const [{ members }, hidden] = await Promise.all([PROFILES_ENABLED ? loadMembers({ q, craft, limit: 8 }) : { members: [] }, hiddenSeeds()]);
-  const companies = any ? searchCompanies(q, craft) : [];
+  const companies = any || kind ? searchCompanies(q, craft, kind) : [];
   const seeds = any ? searchSeeds({ q, craft, exclude: hidden }) : [];
   const people = seeds.length + members.length;
   // Live tenders (open, then upcoming) for the same words or craft; each row says which.
   const tenders = any ? listTenders({ q, craft }) : [];
   // Tools by name or maker (only with the TOOLS flag on; empty otherwise).
   const tools = q ? searchTools(q) : [];
-  const nothing = any && companies.length + people + tenders.length + tools.length === 0;
+  const nothing = (any || kind) && companies.length + people + tenders.length + tools.length === 0;
 
   return (
     <div className="wrap">
       <div className="pagehead list">
-        {craft && !q ? (
+        {typed && !(craft && !q && !kind) ? (
+          <h1>תוצאות ל<bdi>״{typed}״</bdi></h1>
+        ) : craft && !q ? (
           <h1 className="withicon"><span className="ico"><CraftIcon craft={craft} size={26} /></span>{craftLabel(craft)}</h1>
         ) : (
           <h1>{q ? <>תוצאות ל<bdi>״{q}״</bdi></> : "חיפוש בכל האתר"}</h1>
         )}
-        {any ? <p>{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
+        {any || kind ? <p>{kind ? `${kindLabelHe(kind, true)} · ` : ""}{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
       </div>
       <form className="psearch lg searchbox" role="search" action="/search">
-        <input type="search" name="q" defaultValue={q} placeholder={craft && !q ? `חיפוש בתוך ${craftLabel(craft)}` : "חברה, תחום, תפקיד או שם"} aria-label="חיפוש בכל האתר" />
-        {craft && <input type="hidden" name="craft" value={craft} />}
+        <input type="search" name="q" defaultValue={asked ? q : typed} placeholder={craft && !q ? `חיפוש בתוך ${craftLabel(craft)}` : "חברה, תחום, תפקיד או שם"} aria-label="חיפוש בכל האתר" />
+        {asked && <input type="hidden" name="craft" value={asked} />}
         <button className="go" aria-label="חיפוש"><SearchIcon size={20} /></button>
       </form>
       {craft && q && (
@@ -65,11 +70,11 @@ export default async function Search({ searchParams }) {
         </div>
       )}
 
-      {aiReady() && askable(typed) && <AskAnswer key={typed} q={typed} />}
+      {aiSearchOn() && askable(typed) && <AskAnswer key={typed} q={typed} />}
 
       {nothing && (
         <div className="soon" style={{ marginBlockStart: 48 }}>
-          <h3>לא מצאנו כלום ל<bdi>״{q || craftLabel(craft)}״</bdi></h3>
+          <h3>לא מצאנו כלום ל<bdi>״{typed || craftLabel(craft)}״</bdi></h3>
           <p>אפשר לנסות מילה אחרת, שם באנגלית או תחום רחב יותר.</p>
         </div>
       )}
@@ -112,8 +117,9 @@ export default async function Search({ searchParams }) {
         <section aria-labelledby="co-h">
           <div className="subhead">
             <h2 id="co-h">חברות <span className="count">{companies.length}</span></h2>
-            <a className="btn sm" href={`/companies?${qs({ q, craft })}`}>{companies.length > 9 ? "לכל החברות ברשימה" : "לרשימת החברות"}</a>
+            <a className="btn sm" href={`/companies?${qs({ q: companies.loose ? "" : q, craft, kind })}`}>{companies.length > 9 ? "לכל החברות ברשימה" : "לרשימת החברות"}</a>
           </div>
+          {companies.loose && <p className="fine loosenote">אין חברה שמתאימה לכל המילים. אלה הקרובות ביותר, לפי כמה מילים מתאימות.</p>}
           <div className="olist">
             {companies.slice(0, 9).map((o) => (
               <div key={o.id} className="orow-wrap">

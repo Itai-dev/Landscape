@@ -5,6 +5,8 @@ import { SearchIcon } from "@/components/Icons";
 import { craftLabel } from "@/lib/taxonomy";
 import { craftOfQuery } from "@/lib/match";
 import { listTenders, craftsInTenders, buyerTypesInTenders, BUYER_TYPE_HE } from "@/lib/tenders";
+import { composeDigest, siteUrl } from "@/lib/digest";
+import Bidi from "@/components/Bidi";
 
 // Deadlines count down, so the page is rebuilt every hour rather than once per deploy.
 export const revalidate = 3600;
@@ -29,6 +31,9 @@ export default async function Tenders({ searchParams }) {
   const now = new Date();
 
   const all = listTenders({ craft, buyerType, q, closed: true, now });
+  // Published job posts (hiring updates with a source) from the last 45 days, newest first.
+  const jobs = composeDigest({ topics: ["jobs"], days: 45, maxItems: 30, now }).items.sort((x, y) => String(y.date).localeCompare(String(x.date)));
+  const rel = (u) => String(u || "").replace(siteUrl(), "");
   const open = all.filter((t) => t.state === "open");
   const upcoming = all.filter((t) => t.state === "upcoming");
   const closed = all.filter((t) => t.state === "closed" || t.state === "cancelled");
@@ -94,6 +99,27 @@ export default async function Tenders({ searchParams }) {
             <p>המכרז כבר פורסם ואפשר לקרוא את המסמכים ולהתכונן. הגשת הצעות נפתחת בתאריך שמופיע בכרטיס.</p>
           </div>
           <div className="tgrid">{upcoming.map((t) => <TenderCard key={t.id} t={t} />)}</div>
+        </section>
+      )}
+
+      {jobs.length > 0 && (
+        <section id="jobs" aria-labelledby="jobs-h">
+          <div className="subhead">
+            <h2 id="jobs-h">משרות שפורסמו <span className="count">{jobs.length}</span></h2>
+            <p>משרות קריאייטיב מ־45 הימים האחרונים, מלינקדאין ומאתרי החברות. כדאי לבדוק במקור שהמשרה עדיין פתוחה.</p>
+          </div>
+          <ol className="jobs">
+            {jobs.map((j) => (
+              <li key={j.id}>
+                <p className="jhead"><Bidi>{j.headline}</Bidi></p>
+                <p className="jmeta">
+                  {j.org?.name && (j.org.href ? <a href={rel(j.org.href)} data-track="company_open" data-track-where="jobs"><bdi>{j.org.name}</bdi></a> : <bdi>{j.org.name}</bdi>)}
+                  {j.org?.name ? " · " : ""}{j.day}
+                  {j.source_url && <> · <a href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs"><bdi>{j.source || "מקור"}</bdi></a></>}
+                </p>
+              </li>
+            ))}
+          </ol>
         </section>
       )}
 

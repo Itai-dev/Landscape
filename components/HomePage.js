@@ -37,8 +37,8 @@ const FAQ = [
   ["כמה מיילים, ואיך מסירים?", "עד מייל אחד בשבוע, ביום ראשון בבוקר (אפשר גם כל שבועיים או פעם בחודש). בכל מייל יש קישור להסרה בלחיצה אחת. את הכתובת לא מוכרים ולא משתפים."],
 ];
 
-// The home page. `split` shows the earlier hero (text and checks beside the update carousel) instead of the
-// centered search block; /test renders it that way for comparison.
+// The home page. `split` (the live home) is the hero with text and checks beside the update carousel; search is
+// in the header. Without it: the search-first page (a centered question and search), kept at /test.
 export default function HomePage({ split = false }) {
   if (PROFILES_ENABLED) return <ClassicHome />;
   const tenders = listTenders();
@@ -66,7 +66,7 @@ export default function HomePage({ split = false }) {
               <p className="lead">מי מונה, מי החליף משרד, אילו מכרזים ומשרות פורסמו. לפי התחום שלכם, כל יום ראשון במייל.</p>
               <ul className="checks">
                 <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
-                <li><CheckIcon size={18} /><span>מכרזים ומשרות שפורסמו, עם מועד הגשה אמיתי</span></li>
+                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי</span></li>
                 <li><CheckIcon size={18} /><span>מייל אחד ביום ראשון, רק מה ששייך לתחום שלכם. חינם</span></li>
               </ul>
               <div className="row">
@@ -75,7 +75,6 @@ export default function HomePage({ split = false }) {
             </div>
             <HeroMedia items={media} />
           </div>
-          <HeroSearch popular={POPULAR.map((slug) => ({ slug, label: craftLabel(slug) }))} />
         </section>
       ) : (
         <section className="wrap">

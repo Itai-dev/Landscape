@@ -591,3 +591,4 @@ ul { list-style-type: square; }
 .asklist a { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
 .askmore { margin-block-start: var(--s-1); }
 .askfine { margin: 0; font-size: var(--t-xs); color: var(--muted); }
+.loosenote { margin: 0 0 var(--s-4); color: var(--muted); }

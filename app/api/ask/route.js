@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { aiReady } from "@/lib/config";
+import { aiSearchOn } from "@/lib/config";
 import { askDirectory } from "@/lib/ask";
 import { readJson } from "@/lib/guard";
 
@@ -25,12 +25,12 @@ function allowed(ip) {
 
 // GET tells the companies app whether to show the "Ask AI" tab at all.
 export async function GET() {
-  return NextResponse.json({ ready: aiReady() }, { headers: { "cache-control": "no-store" } });
+  return NextResponse.json({ ready: aiSearchOn() }, { headers: { "cache-control": "no-store" } });
 }
 
 // POST {q, lang?, crafts?} → {summary, results: [{id, why}], followups}
 export async function POST(request) {
-  if (!aiReady()) return NextResponse.json({ error: "ai_unavailable" }, { status: 503 });
+  if (!aiSearchOn()) return NextResponse.json({ error: "ai_unavailable" }, { status: 503 });
   const ip = (request.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
   if (!allowed(ip)) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   const body = (await readJson(request, 4 * 1024)) || {};
