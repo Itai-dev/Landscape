@@ -7,7 +7,9 @@ import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
-import { PROFILES_ENABLED } from "@/lib/config";
+import { PROFILES_ENABLED, aiReady } from "@/lib/config";
+import AskAnswer from "@/components/AskAnswer";
+import { askable } from "@/lib/askable";
 import { parseQuery } from "@/lib/match";
 import { supabaseConfig } from "@/lib/config";
 import { listTenders } from "@/lib/tenders";
@@ -62,6 +64,8 @@ export default async function Search({ searchParams }) {
           <a className="tag on" href={`/search?${qs({ q })}`} aria-label={`הסרת הסינון ${craftLabel(craft)}`}>{craftLabel(craft)} <XIcon size={14} /></a>
         </div>
       )}
+
+      {aiReady() && askable(typed) && <AskAnswer key={typed} q={typed} />}
 
       {nothing && (
         <div className="soon" style={{ marginBlockStart: 48 }}>

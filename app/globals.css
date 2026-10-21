@@ -577,3 +577,17 @@ details summary { cursor: pointer; color: var(--ink); font-weight: 500; text-dec
 
 /* List bullets are small squares, like every other marker on the site. */
 ul { list-style-type: square; }
+
+/* /search: the AI answer above the regular results (components/AskAnswer.js). */
+.askbox { margin-block: var(--s-6) var(--s-7); padding: clamp(20px, 3vw, 32px); background: var(--surface); border-radius: var(--r-lg); display: grid; gap: var(--s-3); }
+.asklabel { margin: 0; display: inline-flex; align-items: center; gap: var(--s-2); font-size: var(--t-xs); font-weight: 600; color: var(--ink); }
+.askdot { width: 6px; height: 6px; border-radius: 1.5px; background: var(--accent); }
+.askbox[aria-busy="true"] .askdot { animation: askpulse 1s ease-in-out infinite alternate; }
+@keyframes askpulse { to { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .askbox[aria-busy="true"] .askdot { animation: none; } }
+.askwait { margin: 0; color: var(--muted); }
+.asksum { margin: 0; font-size: var(--t-md); line-height: 1.6; color: var(--ink); max-width: 72ch; }
+.asklist { margin: 0; padding-inline-start: 1.2em; display: grid; gap: var(--s-2); color: var(--ink-2); }
+.asklist a { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+.askmore { margin-block-start: var(--s-1); }
+.askfine { margin: 0; font-size: var(--t-xs); color: var(--muted); }
