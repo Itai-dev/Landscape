@@ -4,27 +4,31 @@
    (8px radius); a hamburger with a full-height sheet under 861px. Edit here, not in site/app.html. */
 /* Promo strip: grey line above the header, a slow ticker; scrolls away with the page */
 .promo { background: var(--surface); color: var(--ink); overflow: hidden; font-size: 13px; line-height: 1; user-select: none; }
-.promo .track { display: flex; width: max-content; animation: promo 40s linear infinite; }
-.promo .run { display: flex; flex: none; gap: 48px; padding-inline-end: 48px; }
+.promo .track { display: flex; width: max-content; animation: promo calc(var(--copies, 1) * 16s) linear infinite; }
+.promo .run, .promo .run .more { display: flex; flex: none; gap: 48px; }
+.promo .run { padding-inline-end: 48px; }
 .promo a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; white-space: nowrap; font-weight: 400; }
 .promo a b { font-weight: 600; }
-.promo a::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+.promo a::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--ink); flex: none; }
 @keyframes promo { to { transform: translateX(50%); } }
 [dir="ltr"] .promo .track { animation-name: promo-ltr; }
 @keyframes promo-ltr { to { transform: translateX(-50%); } }
 @media (hover: hover) { .promo:hover .track { animation-play-state: paused; } .promo a:hover { text-decoration: underline; text-underline-offset: 3px; } }
-@media (prefers-reduced-motion: reduce) { .promo { overflow-x: auto; scrollbar-width: none; } .promo .track { animation: none; } .promo .run[aria-hidden] { display: none; } .promo .run { padding-inline: var(--gutter); } }
+@media (prefers-reduced-motion: reduce) { .promo { overflow-x: auto; scrollbar-width: none; } .promo .track { animation: none; } .promo .run[aria-hidden], .promo .more { display: none; } .promo .run { padding-inline: var(--gutter); } }
 
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
 header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Heebo", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
-/* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a lime badge tilted -3deg with a hard
+/* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a square black badge with a hard
    purple shadow. Hover (desktop, motion allowed): the badge tilts to +1deg, lifts, and the shadow grows and turns pink. */
-.wordmark { display: block; height: 24px; width: auto; overflow: visible; }
-.wordmark .lgb { transform-box: fill-box; transform-origin: center; transform: rotate(-3deg); transition: transform 260ms cubic-bezier(.2, .8, .2, 1); }
+.wordmark { display: block; height: 30px; width: auto; overflow: visible; }
+.wordmark .lgb { transform-box: fill-box; transform-origin: center; transition: transform 260ms cubic-bezier(.2, .8, .2, 1); }
+/* Dark mode: the badge turns light with dark letters, so it never disappears into the page. */
+:root[data-theme="dark"] .wordmark .lgr { fill: var(--ink); } :root[data-theme="dark"] .wordmark .lgt { fill: var(--bg); }
+@media (prefers-color-scheme: dark) { :root[data-theme="system"] .wordmark .lgr { fill: var(--ink); } :root[data-theme="system"] .wordmark .lgt { fill: var(--bg); } }
 .wordmark .lgs { transform: translate(90px, 90px); transition: transform 260ms cubic-bezier(.2, .8, .2, 1), fill 260ms cubic-bezier(.2, .8, .2, 1); }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  a.brand:hover .wordmark .lgb, a.brand:focus-visible .wordmark .lgb { transform: rotate(1deg) translateY(-40px); }
+  a.brand:hover .wordmark .lgb, a.brand:focus-visible .wordmark .lgb { transform: translateY(-40px); }
   a.brand:hover .wordmark .lgs, a.brand:focus-visible .wordmark .lgs { transform: translate(130px, 130px); fill: #ff5ca8; }
 }
 :root[data-theme="dark"] .brand { color: #f4f1ea; }
@@ -102,7 +106,7 @@ header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1f
 @media (max-width: 560px) {
   header.top .wrap { min-height: 64px; }
   header.top .brand { font-size: 19px; }
-  header.top .brand .wordmark { height: 21px; }
+  header.top .brand .wordmark { height: 26px; }
 }
 @media (max-width: 360px) { header.top .brand span { display: none; } header.top .hsearch { padding-inline: 10px 4px; } }
 

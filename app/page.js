@@ -49,8 +49,10 @@ export default function Home() {
   const updates = [...week.items, ...week.more].slice(0, 3);
   const rel = (u) => String(u || "").replace(siteUrl(), "");
   // Hero card: up to 4 recent updates (this week's first), each linking to its company.
-  const media = [...week.items, ...week.more, ...composeDigest({ maxItems: 4, days: 30, now }).items]
-    .filter((x, n, a) => a.findIndex((y) => y.id === x.id) === n).slice(0, 4)
+  // Hero card: 6 recent updates, this week's first. If the week is quiet it falls back to the latest ones
+  // (30 days, then a year), so the card never runs empty; HeroMedia loops through them without end.
+  const pool = [...week.items, ...week.more, ...composeDigest({ maxItems: 6, days: 30, now }).items, ...composeDigest({ maxItems: 6, days: 365, now }).items];
+  const media = pool.filter((x, n, a) => x.headline && a.findIndex((y) => y.id === x.id) === n).slice(0, 6)
     .map((i) => ({ id: i.id, label: i.class_label, day: i.day, headline: i.headline, org: i.org?.name || "", logo: i.org?.logo || null, href: i.org?.href ? rel(i.org.href) : null }));
   return (
     <>
