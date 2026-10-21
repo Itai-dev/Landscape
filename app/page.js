@@ -9,7 +9,6 @@ import TenderCard from "@/components/TenderCard";
 import { listTenders } from "@/lib/tenders";
 import { composeDigest, siteUrl } from "@/lib/digest";
 import Bidi from "@/components/Bidi";
-import DigestPreview from "@/components/DigestPreview";
 import { liveProof } from "@/lib/proof";
 import "./tenders/tenders.css";
 import "./sell.css";
@@ -20,33 +19,11 @@ export const revalidate = 3600;
 // Eight crafts on the home page, named exactly as everywhere else on the site (schema/taxonomy.json).
 const CRAFTS = ["motion-design", "animation-3d", "vfx", "branding", "sound-design", "editing", "illustration", "ai-creative"];
 
-// Crafts the home-page digest preview can switch between.
-const PREVIEW_CRAFTS = ["motion-design", "animation-3d", "branding", "sound-design", "editing"];
-
-function previewEditions(now) {
-  return PREVIEW_CRAFTS.map((slug) => {
-    const d = composeDigest({ crafts: [slug], now, base: "", maxItems: 3, maxPicks: 1, maxTenders: 1 });
-    const items = [...d.items, ...d.more].slice(0, 3).map((i) => ({ id: i.id, label: i.label, day: i.day, headline: i.headline }));
-    const t = d.tenders[0];
-    const p = d.picks[0];
-    return {
-      slug,
-      label: craftLabel(slug),
-      range: d.range,
-      items,
-      tender: t ? { summary: t.summary, countdown: t.countdown } : null,
-      pick: p?.org ? { name: p.org.name, reason: p.reason } : null,
-    };
-  });
-}
-
+// Three questions people ask before signing up. The rest is answered on /join.
 const FAQ = [
   ["זה באמת בחינם?", "כן. המייל השבועי, החיפוש, המכרזים וההתראות בחינם. אין כרטיס אשראי ואין תקופת ניסיון."],
   ["מאיפה המידע?", "מפרסומים פומביים: אתרי החברות, ICE, גלובס, CTech, Geektime, משרות בלינקדאין ואתר מנהל הרכש הממשלתי. ליד כל פרט מופיע המקור שלו."],
-  ["כמה מיילים אקבל?", "עד מייל אחד בשבוע, ביום ראשון בבוקר. אפשר לבחור כל שבועיים או פעם בחודש. התראות על חברות הן בחירה נפרדת."],
-  ["מה עושים עם המייל שלי?", "שולחים אליו רק את מה שביקשתם. לא מוכרים ולא משתפים אותו, ואפשר להסיר את ההרשמה בלחיצה אחת מכל מייל."],
-  ["למה לא פשוט לינקדאין או ICE?", "אפשר, אם יש שעה ביום. כאן זה מסונן לפי התחום שלכם, מרוכז במייל אחד, ולכל עדכון כתוב למה הוא רלוונטי ומי מזמין."],
-  ["מופיעים במאגר ורוצים להסיר?", "בכל כרטיס יש בתפריט ⋯ ״בקשת הסרה״. הכרטיס יורד מהאתר מיד אחרי השליחה."],
+  ["כמה מיילים, ואיך מסירים?", "עד מייל אחד בשבוע, ביום ראשון בבוקר (אפשר גם כל שבועיים או פעם בחודש). בכל מייל יש קישור להסרה בלחיצה אחת. את הכתובת לא מוכרים ולא משתפים."],
 ];
 
 export default function Home() {
@@ -54,7 +31,6 @@ export default function Home() {
   const tenders = listTenders();
   const now = new Date();
   const proof = liveProof(now);
-  const editions = previewEditions(now);
   // This week's updates: the same items the digest leads with.
   const week = composeDigest({ maxItems: 3, now });
   const updates = [...week.items, ...week.more].slice(0, 3);
@@ -70,73 +46,16 @@ export default function Home() {
           </span>
           <h1>לא צריך להכיר את כולם. <em>צריך לדעת מי מזמין, ומתי לפנות.</em></h1>
           <p className="lead">
-            כל יום ראשון במייל: מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין את מה שאתם עושים. לפי התחום שלכם, עם הסיבה לפנות עכשיו. חינם.
+            כל יום ראשון במייל: מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין את מה שאתם עושים. לפי התחום שלכם. חינם.
           </p>
-          <div className="herobox">
-            <DigestSubscribe id="hero-subscribe" compact where="home-hero" />
+          <div className="row">
+            <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
           </div>
+          <p className="small muted herohint">חצי דקה. עד מייל אחד בשבוע, הסרה בלחיצה.</p>
         </div>
       </section>
 
-      {updates.length > 0 && (
-        <section className="wrap section reveal" aria-labelledby="week-h">
-          <div className="sechead">
-            <div>
-              <h2 id="week-h">השבוע בתעשייה</h2>
-              <p>מה נכנס למייל של יום ראשון. כל פרט עם מקור: {proof.sources.join(", ")}.</p>
-            </div>
-            <a className="btn" href="/digest" data-track="digest_full_open">לכל העדכונים</a>
-          </div>
-          <ol className="ugrid">
-            {updates.map((i) => (
-              <li key={i.id} className="ucard">
-                <p className="umeta"><b>{i.label}</b> · {i.day}</p>
-                <p className="uhead"><Bidi>{i.headline}</Bidi></p>
-                {i.why && <p className="uwhy"><Bidi>{i.why}</Bidi></p>}
-                {i.org?.name && (
-                  <p className="uorg">{i.org.href ? <a className="tap" href={rel(i.org.href)} data-track="proof_item_open"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}</p>
-                )}
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
-
-      <section className="wrap section reveal" aria-labelledby="ba-h">
-        <div className="sechead"><h2 id="ba-h">ככה זה היום, וככה זה עם המייל השבועי</h2></div>
-        <div className="ba">
-          <div className="col before">
-            <h3>בלי</h3>
-            <ul>
-              <li>שולחים פורטפוליו לכתובת כללית, ומחכים.</li>
-              <li>שומעים על מנהלת השיווק החדשה אחרי שכבר בחרה ספקים.</li>
-              <li>שעה ביום בלינקדאין וב־ICE, כדי למצוא עדכון אחד שרלוונטי.</li>
-              <li>מנחשים כמה לגבות, ומקבלים שוטף+90.</li>
-            </ul>
-          </div>
-          <div className="col after">
-            <h3>עם Landscape</h3>
-            <ul>
-              <li>יודעים מי מחליט אצל המותג, ומה הוא מזמין, לפני שפונים.</li>
-              <li>שומעים על מינוי או החלפת משרד באותו שבוע.</li>
-              <li>מייל אחד ביום ראשון, חמש דקות קריאה, רק מה ששייך לתחום שלכם.</li>
-              <li>רואים כמה גובים אחרים בתחום, בסקר התעריפים.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {tenders.length > 0 && (
-        <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
-          <div className="sechead">
-            <h2 id="tenders-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
-            <a className="btn" href="/tenders" data-track="tender_open">לכל המכרזים</a>
-          </div>
-          <div className="tgrid">{tenders.slice(0, 3).map((t) => <TenderCard key={t.id} t={t} compact />)}</div>
-        </section>
-      )}
-
-      <section className="wrap section reveal crafts-sec" aria-labelledby="crafts-h">
+      <section className="wrap section tight crafts-sec" aria-labelledby="crafts-h">
         <div className="sechead">
           <h2 id="crafts-h">לפי תחום</h2>
           <a className="btn" href="/search">לכל התחומים</a>
@@ -155,22 +74,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wrap section reveal" id="join" aria-labelledby="join-h">
-        <div className="panel join preview">
-          <div className="stack">
-            <h2 id="join-h">ככה נראה המייל של יום ראשון</h2>
-            <p className="muted">מהדורה אמיתית של השבוע. בוחרים תחום ורואים מה היה מגיע אליכם.</p>
-            <DigestPreview editions={editions} />
+      {updates.length > 0 && (
+        <section className="wrap section reveal" aria-labelledby="week-h">
+          <div className="sechead">
+            <div>
+              <h2 id="week-h">השבוע בתעשייה</h2>
+              <p>מה נכנס למייל של יום ראשון. כל פרט עם מקור.</p>
+            </div>
+            <a className="btn" href="/digest" data-track="digest_full_open">לכל העדכונים</a>
           </div>
-          <div className="form">
-            <h3>לקבל אותו כל יום ראשון</h3>
-            <DigestSubscribe id="home-subscribe" where="home-preview" />
+          <ol className="ugrid swipe">
+            {updates.map((i) => (
+              <li key={i.id} className="ucard">
+                <p className="umeta"><b>{i.label}</b> · {i.day}</p>
+                <p className="uhead"><Bidi>{i.headline}</Bidi></p>
+                {i.why && <p className="uwhy"><Bidi>{i.why}</Bidi></p>}
+                {i.org?.name && (
+                  <p className="uorg">{i.org.href ? <a className="tap" href={rel(i.org.href)} data-track="proof_item_open"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}</p>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {tenders.length > 0 && (
+        <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
+          <div className="sechead">
+            <h2 id="tenders-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
+            <a className="btn" href="/tenders" data-track="tender_open">לכל המכרזים</a>
           </div>
-        </div>
-      </section>
+          <div className="tgrid swipe">{tenders.slice(0, 3).map((t) => <TenderCard key={t.id} t={t} compact />)}</div>
+        </section>
+      )}
 
       <section className="wrap section reveal" aria-labelledby="faq-h">
-        <div className="sechead"><h2 id="faq-h">שאלות שכדאי לשאול לפני שנרשמים</h2></div>
+        <div className="sechead"><h2 id="faq-h">לפני שנרשמים</h2></div>
         <div className="faq">
           {FAQ.map(([q, a]) => (
             <details key={q}>
@@ -178,6 +117,13 @@ export default function Home() {
               <p>{a}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      <section className="wrap section reveal" aria-labelledby="close-h">
+        <div className="panel inverse closer">
+          <h2 id="close-h">מה שהשתנה השבוע בתחום שלכם, ביום ראשון במייל.</h2>
+          <a className="btn inv lg" href="/join" data-track="closer_join">להרשמה למייל השבועי</a>
         </div>
       </section>
     </>

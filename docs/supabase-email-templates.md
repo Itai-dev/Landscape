@@ -16,15 +16,15 @@ Also check: Authentication → URL Configuration → Site URL is the live site
 Subject:
 
 ```
-הקישור שלכם ל־Landscape
+הקישור שלכם ל־CreativeIn
 ```
 
 Message body:
 
 ```html
 <div dir="rtl" lang="he" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#110034;max-width:560px">
-  <p><strong>Landscape</strong> · תעשיית הקריאייטיב בישראל</p>
-  <p>ביקשתם להיכנס ל־Landscape. לחיצה על הכפתור מכניסה אתכם לחשבון, ומאשרת את מה שבחרתם באתר:
+  <p><strong>CreativeIn</strong> · תעשיית הקריאייטיב בישראל</p>
+  <p>ביקשתם להיכנס ל־CreativeIn. לחיצה על הכפתור מכניסה אתכם לחשבון, ומאשרת את מה שבחרתם באתר:
      ההרשמה ל״השבוע בתעשייה״ או התראות במייל על חברות.</p>
   <p style="margin:24px 0">
     <a href="{{ .ConfirmationURL }}" style="background:#110034;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:999px;display:inline-block">כניסה ואישור</a>
@@ -39,14 +39,14 @@ Message body:
 Subject:
 
 ```
-אישור הכתובת ל־Landscape
+אישור הכתובת ל־CreativeIn
 ```
 
 Message body:
 
 ```html
 <div dir="rtl" lang="he" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#110034;max-width:560px">
-  <p><strong>Landscape</strong> · תעשיית הקריאייטיב בישראל</p>
+  <p><strong>CreativeIn</strong> · תעשיית הקריאייטיב בישראל</p>
   <p>כמעט סיימנו. לחיצה על הכפתור מאשרת את כתובת המייל, ואיתה את ההרשמה ל״השבוע בתעשייה״ או להתראות על חברות,
      אם בחרתם בהן באתר.</p>
   <p style="margin:24px 0">

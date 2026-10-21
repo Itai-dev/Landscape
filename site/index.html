@@ -6,7 +6,7 @@
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 </head>
 <body>
-<title>חברות · Landscape</title>
+<title>חברות · CreativeIn</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,46 +89,137 @@ button { cursor: pointer; }
 
 /* chrome:css — header and footer; the site build replaces this block with app/chrome.css (edit it there) */
 /* Header and footer, shared by the Next.js pages and the companies app (scripts/prebuild.mjs copies this file
-   into /companies). Uses only tokens both apps define: --bg --ink --soft --accent --accent-ink --line --muted --max --gutter.
-   Edit here, not in site/app.html. */
-header.top { position: sticky; top: 0; z-index: 12; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: saturate(1.4) blur(12px); }
-header.top .wrap { display: flex; align-items: center; gap: 24px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-header.top .brand, footer.foot .brand { font-family: "Mona Sans", "Heebo", system-ui, sans-serif; font-weight: 800; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.035em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
-header.top .brand span, footer.foot .brand span { color: var(--accent); }
-header.top .nav { display: flex; gap: 4px; align-items: center; }
-header.top .nav a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 999px; font-size: 15px; font-weight: 600; line-height: 1; text-decoration: none; }
-header.top .nav a[aria-current="page"] { background: var(--soft); }
-header.top .end { margin-inline-start: auto; display: flex; align-items: center; gap: 8px; }
-header.top .cta { background: var(--ink); color: var(--bg); min-height: 44px; display: inline-flex; align-items: center; padding: 0 22px; border-radius: 999px; font-weight: 600; font-size: 15px; line-height: 1; text-decoration: none; white-space: nowrap; }
-@media (hover: hover) {
-  header.top .nav a:hover { background: var(--soft); text-decoration: none; }
-  header.top .cta:hover { background: var(--accent); color: var(--accent-ink); text-decoration: none; }
-}
-@media (max-width: 560px) {
-  header.top .wrap { gap: 8px; min-height: 64px; }
-  header.top .brand { font-size: 19px; }
-  header.top .nav { gap: 2px; }
-  header.top .nav a { padding: 0 12px; }
-  header.top .cta { padding: 0 16px; font-size: 14px; }
-}
-@media (max-width: 400px) {
-  header.top .wrap { gap: 4px; }
-  header.top .brand { font-size: 18px; }
-  header.top .nav a { padding: 0 10px; }
-  header.top .cta { padding: 0 14px; }
-}
-@media (max-width: 340px) { header.top .brand span { display: none; } header.top .nav a { padding: 0 8px; } }
+   into /companies). Uses only tokens both apps define: --bg --ink --soft --surface --accent --accent-ink --line --muted --max --gutter.
+   Look (team/DESIGN.md): flat canvas bar, no border or shadow; 14px/500 words for links; one filled ink button
+   (8px radius); a hamburger with a full-height sheet under 861px. Edit here, not in site/app.html. */
+/* Promo strip: grey line above the header, a slow ticker; scrolls away with the page */
+.promo { background: var(--surface); color: var(--ink); overflow: hidden; font-size: 13px; line-height: 1; user-select: none; }
+.promo .track { display: flex; width: max-content; animation: promo 40s linear infinite; }
+.promo .run { display: flex; flex: none; gap: 48px; padding-inline-end: 48px; }
+.promo a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; white-space: nowrap; font-weight: 400; }
+.promo a b { font-weight: 600; }
+.promo a::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+@keyframes promo { to { transform: translateX(50%); } }
+[dir="ltr"] .promo .track { animation-name: promo-ltr; }
+@keyframes promo-ltr { to { transform: translateX(-50%); } }
+@media (hover: hover) { .promo:hover .track { animation-play-state: paused; } .promo a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+@media (prefers-reduced-motion: reduce) { .promo { overflow-x: auto; scrollbar-width: none; } .promo .track { animation: none; } .promo .run[aria-hidden] { display: none; } .promo .run { padding-inline: var(--gutter); } }
 
-footer.foot { border-block-start: 1px solid var(--line); padding-block: 32px 48px; color: var(--muted); font-size: 14px; }
-footer.foot .wrap { display: flex; gap: 0 24px; flex-wrap: wrap; align-items: center; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-footer.foot .brand { font-size: 19px; margin-inline-end: 8px; }
-footer.foot a:not(.brand) { color: var(--ink); font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
-footer.foot .fine { margin-inline-start: auto; }
-@media (hover: hover) { footer.foot a:not(.brand):hover { text-decoration: underline; text-underline-offset: 3px; } }
-@media (max-width: 560px) { footer.foot .wrap { gap: 0 18px; } footer.foot .fine { margin-inline-start: 0; flex-basis: 100%; } }
+header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
+header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Heebo", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
+header.top .brand span, footer.foot .brand span { color: var(--accent); }
+header.top .nav { display: flex; gap: 2px; align-items: center; }
+header.top .nav a { color: var(--ink); min-height: 40px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 8px; font-size: 14px; font-weight: 500; line-height: 1; text-decoration: none; transition: background .2s ease; }
+header.top .nav a[aria-current="page"] { background: var(--surface); }
+header.top .end { display: flex; align-items: center; gap: 8px; flex: none; }
+/* Search field in the bar: a grey 8px field, like Awwwards' */
+header.top .hsearch { margin-inline-start: auto; flex: 0 1 380px; min-width: 0; display: flex; align-items: center; gap: 8px; background: var(--surface); border-radius: 8px; padding-inline: 14px 6px; min-height: 44px; color: var(--muted); cursor: text; transition: box-shadow .2s ease; }
+header.top .hsearch:focus-within { box-shadow: inset 0 0 0 1px var(--ink); }
+header.top .hsearch svg { flex: none; }
+header.top .hsearch input { flex: 1; min-width: 0; width: auto; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 15px; padding: 0; min-height: 44px; border-radius: 0; box-shadow: none; outline: none; }
+header.top .hsearch input::placeholder { color: var(--muted); }
+/* The one filled button: ink, white words, 8px corners (also used in the sheet) */
+header.top .cta, .btn-ink { background: var(--ink); color: var(--bg); min-height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 16px; border-radius: 8px; font-weight: 500; font-size: 14px; line-height: 1; text-decoration: none; white-space: nowrap; transition: opacity .2s ease; }
+@media (hover: hover) {
+  header.top .nav a:hover { background: var(--surface); text-decoration: none; }
+  header.top .cta:hover, .btn-ink:hover { opacity: .82; text-decoration: none; }
+}
+.themebtn { inline-size: 40px; block-size: 40px; display: inline-grid; place-items: center; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--ink); padding: 0; cursor: pointer; flex: none; transition: background .2s ease; }
+.themebtn .ti-dark, .themebtn .ti-system { display: none; }
+:root[data-theme="dark"] .themebtn .ti-light, :root[data-theme="system"] .themebtn .ti-light { display: none; }
+:root[data-theme="dark"] .themebtn .ti-dark, :root[data-theme="system"] .themebtn .ti-system { display: contents; }
+.themebtn .sr-only, .burger .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (hover: hover) { .themebtn:hover { background: var(--surface); } }
+header.top .cta .cta-s, header.top .cta .cta-i { display: none; }
+
+/* Hamburger: two lines that turn into an X */
+.burger { display: none; position: relative; inline-size: 44px; block-size: 44px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--ink); padding: 0; cursor: pointer; flex: none; }
+.burger .bars, .burger .bars::before { position: absolute; inset-inline: 13px; height: 1.5px; background: currentColor; border-radius: 1px; transition: transform .3s cubic-bezier(.22, 1, .36, 1), top .3s cubic-bezier(.22, 1, .36, 1); }
+.burger .bars { top: 17px; }
+.burger .bars::before { content: ""; inset-inline: 0; top: 8px; }
+.burger[aria-expanded="true"] .bars { top: 21px; transform: rotate(45deg); }
+.burger[aria-expanded="true"] .bars::before { top: 0; transform: rotate(-90deg); }
+
+/* The sheet: full height under the bar, big words on hairlines */
+.menusheet { position: fixed; inset: 64px 0 0; z-index: 16; background: var(--bg); overflow-y: auto; overscroll-behavior: contain; }
+@media (min-width: 561px) { .menusheet { inset-block-start: 72px; } }
+header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1fr); flex-direction: column; gap: 32px; align-content: start; min-height: 100%; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding: 8px var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px)); }
+.menusheet-nav { display: grid; border-block-start: 1px solid var(--line); }
+.menusheet-nav a { display: flex; align-items: center; min-height: 64px; border-block-end: 1px solid var(--line); color: var(--ink); font-size: 30px; font-weight: 300; line-height: 1.1; text-decoration: none; }
+.menusheet-nav a[aria-current="page"] { font-weight: 500; }
+.menusheet-nav a[aria-current="page"]::after { content: ""; inline-size: 8px; block-size: 8px; border-radius: 50%; background: var(--accent); margin-inline-start: 12px; }
+.menusheet-end { display: flex; gap: 8px; align-items: center; }
+.menusheet-end .btn-ink { flex: 1; min-height: 52px; font-size: 16px; }
+.menusheet-end .themebtn { inline-size: 52px; block-size: 52px; }
+:root.menu-open { overflow: hidden; }
+/* Above the companies app's tab bar while the menu is open */
+:root.menu-open header.top { z-index: 19; }
+@media (prefers-reduced-motion: no-preference) {
+  .menusheet:not([hidden]) .menusheet-nav a { animation: menu-in .5s cubic-bezier(.22, 1, .36, 1) both; }
+  .menusheet:not([hidden]) .menusheet-nav a:nth-child(2) { animation-delay: .04s; }
+  .menusheet:not([hidden]) .menusheet-nav a:nth-child(3) { animation-delay: .08s; }
+  .menusheet:not([hidden]) .menusheet-nav a:nth-child(4) { animation-delay: .12s; }
+  .menusheet:not([hidden]) .menusheet-nav a:nth-child(5) { animation-delay: .16s; }
+  .menusheet:not([hidden]) .menusheet-nav a:nth-child(6) { animation-delay: .2s; }
+}
+@keyframes menu-in { from { opacity: 0; transform: translateY(12px); } }
+
+@media (max-width: 860px) {
+  header.top .nav, header.top .end .themebtn { display: none; }
+  .burger { display: inline-block; border-color: transparent; margin-inline-start: -8px; }
+  header.top .wrap { gap: 6px; }
+  header.top .brand { margin-inline-end: 4px; }
+  header.top .hsearch { flex: 1 1 auto; margin-inline-start: 4px; }
+  /* The call to action becomes a plain icon (the label stays for screen readers) */
+  header.top .cta { background: transparent; color: var(--ink); padding: 0; inline-size: 44px; min-height: 44px; margin-inline-end: -8px; }
+  header.top .cta .cta-l { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  header.top .cta .cta-s { display: none !important; }
+  header.top .cta .cta-i { display: inline-flex; }
+  header.top .cta .cta-i svg { width: 24px; height: 24px; }
+}
+@media (min-width: 861px) { .menusheet { display: none !important; } }
+@media (max-width: 560px) {
+  header.top .wrap { min-height: 64px; }
+  header.top .brand { font-size: 19px; }
+}
+@media (max-width: 360px) { header.top .brand span { display: none; } header.top .hsearch { padding-inline: 10px 4px; } }
+
+/* Footer: a paper block, wordmark + line, link grid, small print */
+footer.foot { padding: 0 var(--gutter) 16px; color: var(--muted); font-size: 14px; margin-block-start: 48px; }
+footer.foot .wrap { display: grid; gap: 32px; width: 100%; max-width: var(--max); margin-inline: auto; padding: clamp(24px, 4vw, 48px); background: var(--surface); border-radius: 14px; }
+footer.foot .foot-top { display: grid; gap: 8px; }
+footer.foot .brand { font-size: clamp(32px, 5vw, 56px); margin: 0; min-height: 0; }
+footer.foot .fine { margin: 0; color: var(--muted); }
+footer.foot .foot-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(130px, 40%), 1fr)); gap: 0 24px; border-block-start: 1px solid var(--line); padding-block-start: 16px; }
+footer.foot .foot-links a { color: var(--ink); font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
+footer.foot .foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; }
+@media (hover: hover) { footer.foot .foot-links a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+@media (prefers-reduced-motion: reduce) { header.top .nav a, .burger .bars, .burger .bars::before { transition: none; } }
+
+/* Phone tab bar (both apps, under 861px): a floating ink bar, like the companies app's section bar */
+nav.sitebar { display: none; }
+@media (max-width: 860px) {
+  nav.sitebar { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; position: fixed; z-index: 15; inset: auto 12px calc(8px + env(safe-area-inset-bottom, 0px)) 12px; max-width: 600px; margin-inline: auto; background: var(--ink); border-radius: 14px; padding: 4px; }
+  nav.sitebar a { min-height: 52px; border-radius: 10px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 11.5px; font-weight: 500; line-height: 1.2; color: color-mix(in srgb, var(--bg) 70%, var(--ink)); text-decoration: none; white-space: nowrap; }
+  nav.sitebar a .ti { width: 20px; height: 20px; }
+  nav.sitebar a[aria-current="page"] { color: var(--ink); background: var(--bg); }
+  nav.sitebar a.tcta:not([aria-current]) { color: var(--bg); }
+  nav.sitebar a.tcta:not([aria-current]) span { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+  /* Room for the bar under the last block of the page */
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+  /* The call to action lives in the bar on phones */
+  header.top .end .cta { display: none; }
+  header.top .hsearch { margin-inline-end: 0; }
+  /* The bar stays under the open menu and the companies app's sheets */
+  :root.menu-open nav.sitebar { display: none; }
+}
+@media (hover: hover) and (max-width: 860px) { nav.sitebar a:not([aria-current]):hover { color: var(--bg); } }
 /* /chrome:css */
-html:not([data-site]) header.top .nav, html:not([data-site]) header.top .cta, html:not([data-site]) .burger, html:not([data-site]) .menusheet { display: none !important; }
+html:not([data-site]) header.top .nav, html:not([data-site]) header.top .cta, html:not([data-site]) .burger, html:not([data-site]) .menusheet, html:not([data-site]) nav.sitebar { display: none !important; }
 html:not([data-site]) header.top .brand { pointer-events: none; }
+/* In the Artifact host the app keeps its own bottom bar: keep room for it (the site's bar padding is in chrome:css) */
+@media (max-width: 860px) { html:not([data-site]) body { padding-bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 16px) !important; } }
 @media (max-width: 560px) { .langbtn { padding-inline: 10px; } }
 .langbtn { border: 1px solid var(--line); background: transparent; border-radius: 8px; min-height: 40px; padding: 2px 12px; font-size: 13px; font-weight: 500; }
 .meta { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
@@ -306,6 +397,16 @@ main { padding-block: 6px 24px; }
   nav.tabbar { display: none; }
   body { padding-bottom: 32px; }
   .toast { bottom: 24px !important; }
+}
+/* On the site, phones get the site's tab bar (lib/chrome.mjs); the app's sections become a row under the header */
+@media (max-width: 860px) {
+  html[data-site] nav.tabbar { display: none; }
+  html[data-site] .subnav { display: flex; padding-block: 8px 0; }
+  html[data-site] .subnav .in { display: flex; gap: 2px; width: 100%; background: var(--surface); border-radius: 10px; padding: 4px; }
+  html[data-site] .subnav button { position: relative; flex: 1; border: 0; background: none; min-height: 40px; padding: 0 8px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+  html[data-site] .subnav button[hidden] { display: none; }
+  html[data-site] .subnav button svg { width: 16px; height: 16px; }
+  html[data-site] .subnav button[aria-current="page"] { color: var(--bg); background: var(--ink); }
 }
 /* tab bar (phones): floats above the bottom edge */
 nav.tabbar { position: fixed; inset: auto 12px calc(8px + env(safe-area-inset-bottom, 0px)) 12px; z-index: 15; background: var(--ink); border-radius: 14px; padding: 4px; }
@@ -503,16 +604,16 @@ html:not([data-site]) .promo { display: none; }
 
 <script>if (window.LANDSCAPE_SITE) document.documentElement.setAttribute("data-site", "");</script>
 <!-- chrome:header -->
-<div class="promo"><div class="track"><div class="run"><a href="/digest#subscribe"><b>השבוע בתעשייה</b> כל יום ראשון במייל, חינם</a><a href="/survey" data-promo-survey="2026-12-31T23:59:59+02:00"><b>סקר התעריפים 2026</b> 4 דקות, ורואים את התוצאות</a></div><div class="run" aria-hidden="true"><a tabindex="-1" href="/digest#subscribe"><b>השבוע בתעשייה</b> כל יום ראשון במייל, חינם</a><a tabindex="-1" href="/survey" data-promo-survey="2026-12-31T23:59:59+02:00"><b>סקר התעריפים 2026</b> 4 דקות, ורואים את התוצאות</a></div></div></div>
+<div class="promo"><div class="track"><div class="run"><a href="/join"><b>השבוע בתעשייה</b> כל יום ראשון במייל, חינם</a><a href="/survey" data-promo-survey="2026-12-31T23:59:59+02:00"><b>סקר התעריפים 2026</b> 4 דקות, ורואים את התוצאות</a></div><div class="run" aria-hidden="true"><a tabindex="-1" href="/join"><b>השבוע בתעשייה</b> כל יום ראשון במייל, חינם</a><a tabindex="-1" href="/survey" data-promo-survey="2026-12-31T23:59:59+02:00"><b>סקר התעריפים 2026</b> 4 דקות, ורואים את התוצאות</a></div></div></div>
 <header class="top">
   <div class="wrap">
     <button type="button" class="burger" data-menu-toggle aria-expanded="false" aria-controls="sitemenu"><span class="bars" aria-hidden="true"></span><span class="sr-only">תפריט</span></button>
-    <a class="brand" href="/" lang="en" aria-label="Landscape, לדף הבית">Landscape<span>.</span></a>
+    <a class="brand" href="/" lang="en" aria-label="CreativeIn, לדף הבית">CreativeIn<span>.</span></a>
     <nav class="nav sitenav" aria-label="ניווט ראשי"><a href="/people">אנשים</a><a href="/companies" aria-current="page">חברות</a><a href="/tenders">מכרזים</a></nav>
     <label class="hsearch" for="q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" data-i18n-ph="search.ph" placeholder="חיפוש בחברות" autocomplete="off" aria-label="חיפוש חברות לפי שם, תחום או עיר"></label>
-    <div class="end"><button class="langbtn" type="button" id="lang" lang="en">English</button><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button><a class="cta" href="/digest#subscribe" data-cta><span class="cta-l">לגיליון השבועי</span><span class="cta-s" aria-hidden="true">לגיליון</span><span class="cta-i" aria-hidden="true"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span></a></div>
+    <div class="end"><button class="langbtn" type="button" id="lang" lang="en">English</button><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button><a class="cta" href="/join" data-cta><span class="cta-l">המייל השבועי</span><span class="cta-s" aria-hidden="true">הרשמה</span><span class="cta-i" aria-hidden="true"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span></a></div>
   </div>
-  <div class="menusheet" id="sitemenu" hidden><div class="wrap"><nav class="menusheet-nav" aria-label="תפריט"><a href="/people">אנשים</a><a href="/companies" aria-current="page">חברות</a><a href="/tenders">מכרזים</a><a href="/companies#signals">עדכונים</a><a href="/digest">השבוע בתעשייה</a><a href="/survey">סקר התעריפים</a></nav><div class="menusheet-end"><a class="btn-ink" href="/digest#subscribe" data-cta-sheet>לגיליון השבועי</a><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button></div></div></div>
+  <div class="menusheet" id="sitemenu" hidden><div class="wrap"><nav class="menusheet-nav" aria-label="תפריט"><a href="/people">אנשים</a><a href="/digest">השבוע בתעשייה</a><a href="/survey">סקר התעריפים</a><a href="/privacy">פרטיות</a></nav><div class="menusheet-end"><a class="btn-ink" href="/join" data-cta-sheet>המייל השבועי</a><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button></div></div></div>
 </header>
 <!-- /chrome:header -->
 <nav class="subnav wrap" aria-label="Sections"><div class="in">
@@ -593,7 +694,18 @@ html:not([data-site]) .promo { display: none; }
   </section>
 </div>
 
-<!-- chrome:footer --><!-- /chrome:footer -->
+<!-- chrome:footer -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top"><a class="brand" href="/" lang="en">CreativeIn<span>.</span></a><p class="fine">תעשיית הקריאייטיב בישראל, במקום אחד</p></div>
+    <nav class="foot-links" aria-label="קישורים"><a href="/people">אנשים</a><a href="/companies">חברות</a><a href="/companies#signals">עדכונים</a><a href="/tenders">מכרזים</a><a href="/digest">השבוע בתעשייה</a><a href="/survey">סקר התעריפים</a><a href="/privacy">פרטיות</a></nav>
+    <div class="foot-bottom"><span>מידע עסקי ציבורי, עם מקור לכל פרט</span><span class="foottheme"><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button></span></div>
+  </div>
+</footer>
+<!-- /chrome:footer -->
+<!-- chrome:tabbar -->
+<nav class="sitebar" aria-label="ניווט"><a href="/" data-sitetab="home"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg><span>בית</span></a><a href="/companies" data-sitetab="companies" data-apptab="explore" aria-current="page"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span>חברות</span></a><a href="/companies#signals" data-sitetab="signals" data-apptab="signals"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span>עדכונים</span></a><a href="/tenders" data-sitetab="tenders"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>מכרזים</span></a><a href="/join" class="tcta" data-cta-bar><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>הרשמה</span></a></nav>
+<!-- /chrome:tabbar -->
 
 <nav class="tabbar" aria-label="Sections">
   <div class="in">
@@ -649,7 +761,7 @@ html:not([data-site]) .promo { display: none; }
       "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
       "sh.followup": " · follow up {0}", "sh.save": "Track", "sh.follow": "Email alerts", "sh.following": "with alerts", "sh.alertson": "Email alerts are on for this company.", "sh.alertsoff": "Get an email when something changes here.", "sh.alertsstop": "Stop alerts",
       "fo.title": "Email alerts on {0}", "fo.saved": "Saved to tracking", "fo.hint": "Tracking is saved in this browser. Email alerts are optional.", "fo.later": "Not now", "fo.p": "An email when something changes at {0}: a new marketing head, an agency move, a new campaign. No password.", "fo.email": "Email",
-      "fo.consent": "I want email alerts from Landscape when something changes at the companies I chose. I can stop at any time.", "fo.send": "Send a confirmation link", "fo.on": "Turn on alerts",
+      "fo.consent": "I want email alerts from CreativeIn when something changes at the companies I chose. I can stop at any time.", "fo.send": "Send a confirmation link", "fo.on": "Turn on alerts",
       "fo.sent": "We sent a confirmation link to {0}. Open it on the same device, in the same browser. Not there? Check spam.", "fo.err": "Something went wrong. Try again.", "fo.rate": "Too many tries. Try again in a few minutes.",
       "fo.off": "Saved, but your alerts are off. You can turn them on in My account.", "fo.limit": "You can follow up to 100 companies.", "fo.unconfirmed": "Confirm your email address first.",
       "t.followed": "Alerts on for {0}", "t.unfollowed": "Alerts stopped for {0}", "pipe.sync": "Get email alerts on the {0} companies you saved here?", "pipe.syncbtn": "Turn on alerts", "t.synced": "Alerts on for {0} companies", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
@@ -665,7 +777,7 @@ html:not([data-site]) .promo { display: none; }
       "export.title": "Your data", "export.p": "Copy and keep this JSON. It holds your pipeline, notes and crafts.", "copy": "Copy", "copied": "Copied", "selected": "Selected. Copy it from here.", "exported": "Exported",
       "notice.ro": "You can browse everything here. Saving to a pipeline needs Contributor access from the owner.", "notice.local": "For now the list is saved only in this browser.",
       "t.saveerr": "Couldn’t save. Try again.", "t.ro": "You can browse, but saving needs Contributor access.", "t.saved": "Saved to tracking · To pitch", "t.removed": "Removed from tracking", "t.hidden": "Update hidden for everyone", "t.shown": "Update shown again", "t.reportok": "Thanks. Sent to the research queue.", "t.reporterr": "Couldn’t send the report. Try again.", "t.draftsaved": "Draft saved · follow-up in a week",
-      "p.title": "Pitch {0}", "p.sub": "One short, specific message. You edit it and send it yourself — Landscape never sends anything.", "p.why": "Why now", "p.other": "Something else (write it)", "p.whyph": "e.g. Saw your new summer campaign on ICE", "p.who": "Who", "p.viaag": "Via their agency · {0}", "p.general": "No name (general)",
+      "p.title": "Pitch {0}", "p.sub": "One short, specific message. You edit it and send it yourself — CreativeIn never sends anything.", "p.why": "Why now", "p.other": "Something else (write it)", "p.whyph": "e.g. Saw your new summer campaign on ICE", "p.who": "Who", "p.viaag": "Via their agency · {0}", "p.general": "No name (general)",
       "p.me": "About you (one line)", "p.meph": "e.g. Noa, motion designer in Tel Aviv, 8 years in brand work", "p.show": "What to show", "p.addsample": "+ Add a work sample", "p.titleph": "Title, e.g. Bezeq launch, 3D product spots", "p.urlph": "Link (Vimeo, Behance…)", "p.lang": "Language",
       "p.go": "Write the draft", "p.draft": "Draft", "p.save": "Save draft · follow up in 1 week", "p.writing": "Writing…", "p.done": "Edit it, then copy and send it yourself.", "p.needwhy": "Add a reason to reach out now.", "p.needsample": "Pick or add one work sample to show.", "p.fail": "Couldn’t finish. Try again.",
       "err.not_granted": "Allow Claude for this page first.", "err.rate_limited": "Too many requests right now. Try again in a minute.", "err.sampling_disabled": "Claude isn’t available on this account.", "err.prompt_too_large": "Too much text. Shorten it.", "err.refused": "Claude declined this one. Try rewording.", "err.tools_unavailable": "This view can’t search the directory. Try the claude.ai app.",
@@ -703,7 +815,7 @@ html:not([data-site]) .promo { display: none; }
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
       "sh.followup": " · תזכורת {0}", "sh.save": "מעקב", "sh.follow": "התראות במייל", "sh.following": "עם התראות", "sh.alertson": "התראות במייל על החברה הזו פועלות.", "sh.alertsoff": "אפשר לקבל מייל כשמשהו משתנה כאן.", "sh.alertsstop": "הפסקת ההתראות",
       "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן אופציה.", "fo.later": "לא עכשיו", "fo.p": "תדעו ראשונים כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. לכל היותר מייל אחד ביום, בלי סיסמה.", "fo.email": "מייל",
-      "fo.consent": "אני רוצה לקבל במייל התראות מ־Landscape כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
+      "fo.consent": "אני רוצה לקבל במייל התראות מ־CreativeIn כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
       "fo.sent": "שלחנו קישור אישור ל־{0}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.", "fo.err": "משהו השתבש. אפשר לנסות שוב.", "fo.rate": "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות.",
       "fo.off": "החברה נשמרה, אבל ההתראות כבויות. אפשר להפעיל אותן בחשבון שלי.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "צריך לאשר את כתובת המייל קודם.",
       "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "להפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
@@ -719,7 +831,7 @@ html:not([data-site]) .promo { display: none; }
       "export.title": "הנתונים שלכם", "export.p": "העתיקו ושמרו את ה־JSON הזה. הוא כולל את רשימת המעקב, ההערות והתחומים שלכם.", "copy": "העתקה", "copied": "הועתק", "selected": "מסומן. העתיקו מכאן.", "exported": "יוצא",
       "notice.ro": "אפשר לעיין בהכול. כדי לשמור למעקב צריך הרשאת Contributor מהבעלים.", "notice.local": "הרשימה נשמרת כרגע רק בדפדפן הזה.",
       "t.saveerr": "השמירה נכשלה. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר למעקב · לפנות", "t.removed": "הוסר מהמעקב", "t.hidden": "העדכון הוסתר לכולם", "t.shown": "העדכון מוצג שוב", "t.reportok": "תודה. נבדוק ונתקן בסבב העדכון הבא.", "t.reporterr": "השליחה נכשלה. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
-      "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם. Landscape לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
+      "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם. CreativeIn לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
       "p.me": "עליכם (שורה אחת)", "p.meph": "למשל: נועה, מעצבת מושן מתל אביב, 8 שנים בעבודה עם מותגים", "p.show": "מה להראות", "p.addsample": "+ הוספת עבודה", "p.titleph": "שם העבודה, למשל: השקת בזק, סרטוני מוצר בתלת־ממד", "p.urlph": "קישור (Vimeo, Behance…)", "p.lang": "שפה",
       "p.go": "כתיבת טיוטה", "p.draft": "טיוטה", "p.save": "שמירת טיוטה · תזכורת בעוד שבוע", "p.writing": "כותבים…", "p.done": "ערכו, העתיקו ושלחו בעצמכם.", "p.needwhy": "הוסיפו סיבה לפנות עכשיו.", "p.needsample": "בחרו או הוסיפו עבודה אחת להראות.", "p.fail": "לא הצלחנו לסיים. נסו שוב.",
       "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "יותר מדי טקסט. קצרו.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במאגר. נסו שוב מאוחר יותר.",
@@ -1570,7 +1682,7 @@ Company: ${JSON.stringify(facts)}`;
       return tool.execute(inp, ctx);
     } }));
     const history = thread.slice(1, 4).filter((x) => x.summary).map((x) => `Q: ${x.q}\nA: ${x.summary} (orgs: ${(x.results || []).map((r) => r.id).join(", ")})`).join("\n\n");
-    const prompt = `You are the search assistant of "Landscape", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands and public bodies that buy creative work). The person is a creative professional looking for clients, collaborators or work.
+    const prompt = `You are the search assistant of "CreativeIn", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands and public bodies that buy creative work). The person is a creative professional looking for clients, collaborators or work.
 ${myCrafts().length ? `They make: ${myCrafts().join(", ")}.` : ""}
 
 Rules:
@@ -1802,6 +1914,7 @@ Question: ${q}`;
     ["ask", "explore", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = state.tab !== v));
     renderNotice();
     document.querySelectorAll("nav.tabbar button, nav.subnav button").forEach((b) => (b.dataset.tab === state.tab ? b.setAttribute("aria-current", "page") : b.removeAttribute("aria-current")));
+    document.querySelectorAll("nav.sitebar [data-apptab]").forEach((a) => (a.dataset.apptab === state.tab ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current")));
     if (state.tab === "ask") renderHome();
     else if (state.tab === "explore") renderExplore();
     else if (state.tab === "signals") { renderSignals(); try { localStorage.setItem("landscape-updates-seen", isoDay(new Date()) + "T99"); } catch (e) {} renderBadges(); }
@@ -1830,6 +1943,8 @@ Question: ${q}`;
   $("clearAll").addEventListener("click", () => { Object.assign(state, { q: "", kinds: [], cats: [], inds: [], needs: [], city: "" }); $("q").value = ""; refresh(); });
   $("export").addEventListener("click", exportData);
   document.querySelectorAll("nav.tabbar, nav.subnav").forEach((n) => n.addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { closeAll(); goTab(b.dataset.tab); } }));
+  // The site's tab bar: "חברות" and "עדכונים" are this app's own sections, so switch in place.
+  document.addEventListener("click", (e) => { const a = e.target.closest && e.target.closest("nav.sitebar [data-apptab]"); if (a) { e.preventDefault(); closeAll(); goTab(a.dataset.apptab); } });
   const dismiss = () => { const wasPanel = !$("panel").hidden; const back = wasPanel && $("panel").dataset.back; closeAll(); if (back) return openOrg(back); if (wasPanel) refresh(); };
   $("scrim").addEventListener("click", dismiss);
   document.addEventListener("keydown", (e) => {
@@ -1944,6 +2059,8 @@ Question: ${q}`;
         if (cta && j.signedIn && j.me) { cta.href = j.me.href; cta.innerHTML = j.me.html; cta.setAttribute("aria-label", j.me.label); }
         const cs = document.querySelector("[data-cta-sheet]");
         if (cs && j.signedIn && j.me) { cs.href = j.me.href; cs.textContent = j.me.label; }
+        const cb = document.querySelector("[data-cta-bar]");
+        if (cb && j.signedIn && j.me && j.me.bar) { cb.href = j.me.href; cb.innerHTML = j.me.bar; }
       }).catch(() => {});
       loadHidden().catch(() => {});
       fetch("/api/follows", { cache: "no-store" }).then((r) => r.json()).then((j) => {

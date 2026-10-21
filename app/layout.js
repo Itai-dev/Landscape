@@ -11,7 +11,7 @@ import { THEME_SCRIPT, footerHtml } from "@/lib/chrome.mjs";
 const DESCRIPTION = "מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין את מה שאתם עושים. כל יום ראשון במייל, לפי התחום שלכם, עם הסיבה לפנות עכשיו. חינם.";
 
 export const metadata = {
-  title: { default: "Landscape · מי מזמין מה בתעשיית הקריאייטיב", template: "%s · Landscape" },
+  title: { default: "CreativeIn · מי מזמין מה בתעשיית הקריאייטיב", template: "%s · CreativeIn" },
   description: DESCRIPTION,
   openGraph: {
     title: "לא צריך להכיר את כולם. צריך לדעת מי מזמין, ומתי לפנות.",

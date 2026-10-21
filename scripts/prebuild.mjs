@@ -5,7 +5,7 @@
 // 4. applies the database migration when a Postgres URL is available (Vercel + Supabase integration).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
-import { headerHtml, footerHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
+import { headerHtml, footerHtml, tabbarHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
 import { CLOSES_AT } from "../lib/survey/config.js";
 
 // 1. Companies app. site/app.html is a page body (the Artifact host adds the document shell),
@@ -14,18 +14,25 @@ rmSync("public/map", { recursive: true, force: true });
 rmSync("public/companies", { recursive: true, force: true });
 mkdirSync("public/companies/data", { recursive: true });
 // The header and footer come from the same source as the Next.js pages (lib/chrome.mjs, app/chrome.css).
-const between = (s, open, close, put) => {
+// Each block is filled between its markers, which stay in place.
+const fill = (s, open, close, put) => {
   const a = s.indexOf(open), b = s.indexOf(close);
   if (a < 0 || b < a) throw new Error(`prebuild: marker ${open} missing in site/app.html`);
-  return s.slice(0, a) + put + s.slice(b + close.length);
+  // The CSS marker is a whole comment ("/* chrome:css … */"): keep it.
+  const end = open.startsWith("/*") ? s.indexOf("*/", a) + 2 : a + open.length;
+  return s.slice(0, end) + "\n" + put + "\n" + s.slice(b);
 };
-let body = readFileSync("site/app.html", "utf8").replaceAll('fetch("data/', 'fetch("/companies/data/')
+const source = readFileSync("site/app.html", "utf8");
+let synced = fill(source, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8").trim());
+synced = fill(synced, "<!-- chrome:header -->", "<!-- /chrome:header -->",
+  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
+synced = fill(synced, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
+synced = fill(synced, "<!-- chrome:tabbar -->", "<!-- /chrome:tabbar -->", tabbarHtml("companies"));
+// The Artifact publishes site/app.html as it is, so the blocks are written back there too.
+if (synced !== source) { writeFileSync("site/app.html", synced); console.log("prebuild: synced the header, footer and tab bar into site/app.html"); }
+const body = synced.replaceAll('fetch("data/', 'fetch("/companies/data/')
   // The survey close date has one source (lib/survey/config.js).
   .replaceAll("__SURVEY_CLOSES_AT__", CLOSES_AT);
-body = between(body, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8"));
-body = between(body, "<!-- chrome:header -->", "<!-- /chrome:header -->",
-  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
-body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
 const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +

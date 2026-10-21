@@ -2,6 +2,8 @@
 
 Data layer mapping the creative industry (Israel first). See PLAN.md for the vision.
 
+- Brand: the public name is "CreativeIn" (always capital C and I; wordmark "CreativeIn." with the purple dot; `BRAND` / `WORDMARK` in `lib/chrome.mjs`; future domain creativein.co.il, not bought yet, so the site URL stays env-driven); "Landscape" is the internal project name (repo, package, ids, env vars, storage keys like `landscape-theme`). Never rename keys.
+
 - Records: `data/orgs/<id>.json`, schema `schema/org.schema.json`, categories `schema/taxonomy.json`.
 - Never hand-edit `site/data/`, `site/index.html`, `data/exports/` or `STATS.md` — they're built by `python3 scripts/landscape.py build`.
 - To add or update data: write a JSON array to `research/staging/`, then `ingest` → `validate` → `build`.
@@ -13,7 +15,9 @@ Data layer mapping the creative industry (Israel first). See PLAN.md for the vis
 - Ids never change; merges go in `data/redirects.json`.
 - Product decisions: `team/DECISIONS.md`.
 - Community app: Next.js at the repo root (`app/`, `components/`, `lib/`), deployed on Vercel. `npm run build` copies the companies app (`site/app.html`) to `public/companies/` (served at `/companies`; `/map` redirects there), builds `lib/generated/people.json` (people already in `key_people`, with a source) and `orgs.json` for search, and, on production deploys only (`VERCEL_ENV=production`, or `MIGRATE=1` locally), applies pending `supabase/migrations/*.sql` (`scripts/migrate.mjs`): a ledger (`public._migrations`) runs each file once, all pending files in one transaction, and a failure fails the build. Preview builds never touch the database. Add a new numbered file for every schema change; never edit one that already ran, and never re-grant writes to `anon`/`authenticated` (007 revokes them). Must build with no env vars.
-- Promo strip, header (with its search field), phone menu (hamburger) and footer have one source for both apps: `lib/chrome.mjs` (markup, links, menu script) and `app/chrome.css` (styles). The build writes them into `/companies` between the `chrome:` markers in `site/app.html`; edit them there, not in `site/app.html`.
+- Promo strip, header (with its search field), phone menu (hamburger) and footer have one source for both apps: `lib/chrome.mjs` (markup, links, menu script) and `app/chrome.css` (styles). The build writes them into `/companies` between the `chrome:` markers in `site/app.html` (and syncs those blocks back into `site/app.html`, which the Artifact publishes); edit them there, not in `site/app.html`.
+- Phone tab bar (under 861px, both apps): `TABS` + `tabbarHtml` in `lib/chrome.mjs` — בית, חברות, עדכונים, מכרזים, then the call to action (the weekly email → `/join`, or "החשבון" when signed in). In the companies app "חברות" and "עדכונים" switch the app's own sections in place (`data-apptab`), and its own section bar is a row under the header; in the Artifact host the app keeps its own bottom bar. The hamburger holds the rest (אנשים, השבוע בתעשייה, סקר, פרטיות).
+- Sign-up: `/join` is the weekly-email onboarding (crafts → a live preview from `/api/digest/preview` with frequency → address + the consent box → "sent", which says the link works only on this device and browser). It goes through `DigestSubscribe`, so crafts and frequency ride the magic link and nothing is saved before confirmation. Signed in, it redirects to `/digest/settings`. The header call to action, the hero and the promo strip link to it.
 - Look: `team/DESIGN.md` (reference: Awwwards). Monochrome greys, ink buttons (filled or outlined, 8px), white cards on a grey canvas, no shadows; purple only as a small marker.
 - Search rules live in `lib/match.js` (craft names and aliases from `schema/taxonomy.json` → `craft_aliases`, Hebrew title words); `site/app.html` mirrors the craft rule.
 - People's profiles live in Supabase only (RLS). Never put personal data in the repo; research runs don't touch it.

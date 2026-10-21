@@ -32,12 +32,13 @@ const label = (slugs) => slugs.map((s) => CRAFTS.find((c) => c.slug === s)?.he |
 // Email-only sign-up for the digest. The consent box starts unchecked (anti-spam law §30A): nothing is sent
 // without it, and nothing is sent until the address is confirmed by opening the link in the email.
 // Signed-in readers (already confirmed) save straight away.
-export default function DigestSubscribe({ crafts: initialCrafts = [], compact = false, id = "subscribe", cta = "", note = "", where = "" }) {
+// `onSent(email)` lets a flow (/join) show its own "sent" screen; `event` is an extra analytics event on submit.
+export default function DigestSubscribe({ crafts: initialCrafts = [], frequency: initialFrequency = "weekly", compact = false, id = "subscribe", cta = "", note = "", where = "", onSent = null, event = "" }) {
   const { supabase, configured } = useSupabase();
   const user = useUser();
   const [email, setEmail] = useState("");
   const [crafts, setCrafts] = useState(initialCrafts);
-  const [frequency, setFrequency] = useState("weekly");
+  const [frequency, setFrequency] = useState(initialFrequency);
   const [consent, setConsent] = useState(false);
   const [state, setState] = useState("idle"); // idle | sending | sent | saved | error
   const [error, setError] = useState("");
@@ -65,7 +66,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
   async function submit(e) {
     e.preventDefault();
     if (!consent) return;
-    try { track("digest_subscribe_submit", { where: where || id }); } catch {}
+    try { track("digest_subscribe_submit", { where: where || id }); if (event) track(event, { crafts: crafts.length, frequency }); } catch {}
     setState("sending");
     setError("");
     if (user) {
@@ -81,6 +82,9 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
     if (error) {
       setState("error");
       setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+    } else if (onSent) {
+      setState("idle");
+      onSent(email.trim());
     } else setState("sent");
   }
 

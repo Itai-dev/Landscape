@@ -1,0 +1,56 @@
+/* /join: sign-up in three short screens. Mobile first, full height; Awwwards look (grey blocks, ink, no shadows). */
+/* A focused flow: no footer or tab bar while it's open. */
+body:has(.joinflow) footer.foot, body:has(.joinflow) nav.sitebar { display: none !important; }
+body:has(.joinflow) { padding-bottom: 0 !important; }
+
+.joinflow { min-height: calc(100svh - 104px); display: flex; }
+.jwrap { width: 100%; max-width: 640px; display: flex; flex-direction: column; padding-block: var(--s-4) var(--s-6); }
+.jtop { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 44px; margin-block-end: var(--s-5); }
+.jback { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 var(--s-2); margin-inline-start: calc(-1 * var(--s-2)); border: 0; background: none; color: var(--ink); font: inherit; font-size: var(--t-sm); font-weight: 500; cursor: pointer; text-decoration: none; border-radius: var(--r); }
+[dir="ltr"] .jback svg { transform: scaleX(-1); }
+.jdots { display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.jdots li { width: 24px; height: 4px; border-radius: 2px; background: var(--soft-2); transition: background .3s var(--ease), width .3s var(--ease); }
+.jdots li.done { background: var(--ink); }
+.jdots li.on { width: 40px; background: var(--accent); }
+
+.jstep { flex: 1; display: flex; flex-direction: column; gap: var(--s-4); }
+.jstep h1 { font-size: var(--t-2xl); font-weight: 300; line-height: 1.05; margin: 0; outline: none; }
+.jstep > p { margin: 0; }
+
+.jcrafts { display: grid; gap: var(--s-2); grid-template-columns: repeat(2, minmax(0, 1fr)); margin-block-start: var(--s-2); }
+@media (min-width: 560px) { .jcrafts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.jcraft { display: flex; align-items: center; gap: var(--s-3); min-height: 60px; padding: var(--s-3) var(--s-4); border: 0; border-radius: var(--r); background: var(--surface); color: var(--ink); font: inherit; font-size: var(--t-sm); font-weight: 500; text-align: start; cursor: pointer; transition: background .2s, color .2s; }
+.jcraft svg { flex: none; }
+.jcraft[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+@media (hover: hover) { .jcraft[aria-pressed="false"]:hover { background: var(--soft); } }
+.jcraft:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.jmore { align-self: flex-start; min-height: 44px; border: 0; background: none; font: inherit; font-weight: 500; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); cursor: pointer; padding: 0; }
+
+.jfreq { display: grid; gap: var(--s-2); }
+
+/* The action sits at the bottom of the screen on phones, always in reach */
+.jfoot { margin-block-start: auto; position: sticky; bottom: 0; display: grid; gap: var(--s-2); justify-items: center; padding-block: var(--s-4) calc(var(--s-2) + env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, var(--bg) 70%, color-mix(in srgb, var(--bg) 0%, transparent)); }
+.jfoot .btn { width: 100%; }
+.jskip { min-height: 44px; border: 0; background: none; font: inherit; font-size: var(--t-sm); color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+@media (min-width: 640px) { .jfoot { position: static; justify-items: start; background: none; } .jfoot .btn { width: auto; min-width: 240px; } }
+
+.jstep .digest-form { margin-block-start: var(--s-2); }
+.jstep .digest-form .row { flex-direction: column; align-items: stretch; }
+.jstep .digest-form .row .btn { width: 100%; min-height: 52px; }
+
+.jsent { text-align: start; }
+.jicon { width: 64px; height: 64px; border-radius: var(--r-lg); background: var(--surface); display: grid; place-items: center; color: var(--ink); }
+.jsent .notice { margin: 0; background: var(--surface); border: 0; border-radius: var(--r); padding: var(--s-3) var(--s-4); font-weight: 500; }
+
+/* The edition preview (EditionCard) */
+.dcard { background: var(--surface); border-radius: var(--r); padding: var(--s-5); display: grid; gap: var(--s-4); transition: opacity .2s; }
+.dcard.busy { opacity: .55; }
+.dcard.loading { min-height: 220px; place-items: center; }
+.dcard .dtop { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; border-block-end: 1px solid var(--line); padding-block-end: var(--s-3); }
+.dcard .dtop b span { color: var(--accent); }
+.dcard .lbl { font-size: var(--t-xs); font-weight: 600; color: var(--ink); }
+.ditems { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); }
+.ditems li, .dtender, .dpick { display: grid; gap: 2px; }
+.dcard .hl { font-size: var(--t-sm); line-height: 1.5; color: var(--ink-2); }
+.dtender { background: var(--paper); border-radius: var(--r-sm); padding: var(--s-3); }
+@media (prefers-reduced-motion: reduce) { .jdots li, .jcraft, .dcard { transition: none; } }

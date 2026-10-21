@@ -10,6 +10,7 @@ export default function sitemap() {
     page("/companies", "weekly", 0.9),
     page("/tenders", "daily", 0.9),
     page("/digest", "weekly", 0.8),
+    page("/join", "monthly", 0.7),
     page("/people", "weekly", 0.7),
     page("/survey", "monthly", 0.6),
     page("/survey/results", "weekly", 0.5),

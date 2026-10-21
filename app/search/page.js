@@ -7,7 +7,7 @@ import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
 import { PROFILES_ENABLED } from "@/lib/config";
-import { craftOfQuery } from "@/lib/match";
+import { parseQuery } from "@/lib/match";
 import { supabaseConfig } from "@/lib/config";
 import { listTenders } from "@/lib/tenders";
 import "../tenders/tenders.css";
@@ -22,9 +22,11 @@ export default async function Search({ searchParams }) {
   const typed = String(sp?.q || "").slice(0, 80).trim();
   const asked = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
   // A query that is a craft's name ("מושן", "VFX") is that craft: the same results and counts as the craft page.
-  const named = asked ? "" : craftOfQuery(typed);
+  // A question ("מי מזמין מושן בתל אביב") becomes the craft plus the remaining words ("תל אביב").
+  const parsed = asked ? { craft: "", q: typed } : parseQuery(typed);
+  const named = parsed.craft;
   const craft = asked || named;
-  const q = named ? "" : typed;
+  const q = parsed.q;
   const any = Boolean(q || craft);
   const claim = PROFILES_ENABLED && Boolean(supabaseConfig());
 

@@ -106,3 +106,22 @@ footer.foot .foot-links a { color: var(--ink); font-weight: 500; min-height: 44p
 footer.foot .foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; }
 @media (hover: hover) { footer.foot .foot-links a:hover { text-decoration: underline; text-underline-offset: 3px; } }
 @media (prefers-reduced-motion: reduce) { header.top .nav a, .burger .bars, .burger .bars::before { transition: none; } }
+
+/* Phone tab bar (both apps, under 861px): a floating ink bar, like the companies app's section bar */
+nav.sitebar { display: none; }
+@media (max-width: 860px) {
+  nav.sitebar { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; position: fixed; z-index: 15; inset: auto 12px calc(8px + env(safe-area-inset-bottom, 0px)) 12px; max-width: 600px; margin-inline: auto; background: var(--ink); border-radius: 14px; padding: 4px; }
+  nav.sitebar a { min-height: 52px; border-radius: 10px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 11.5px; font-weight: 500; line-height: 1.2; color: color-mix(in srgb, var(--bg) 70%, var(--ink)); text-decoration: none; white-space: nowrap; }
+  nav.sitebar a .ti { width: 20px; height: 20px; }
+  nav.sitebar a[aria-current="page"] { color: var(--ink); background: var(--bg); }
+  nav.sitebar a.tcta:not([aria-current]) { color: var(--bg); }
+  nav.sitebar a.tcta:not([aria-current]) span { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+  /* Room for the bar under the last block of the page */
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+  /* The call to action lives in the bar on phones */
+  header.top .end .cta { display: none; }
+  header.top .hsearch { margin-inline-end: 0; }
+  /* The bar stays under the open menu and the companies app's sheets */
+  :root.menu-open nav.sitebar { display: none; }
+}
+@media (hover: hover) and (max-width: 860px) { nav.sitebar a:not([aria-current]):hover { color: var(--bg); } }

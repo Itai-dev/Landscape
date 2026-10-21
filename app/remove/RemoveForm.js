@@ -52,7 +52,7 @@ export default function RemoveForm({ id, email = "" }) {
       {state.error && (
         <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>
           {state.error}
-          {email && <> אפשר לכתוב ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־Landscape")}`} className="ltr">{email}</a> ולציין את השם.</>}
+          {email && <> אפשר לכתוב ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־CreativeIn")}`} className="ltr">{email}</a> ולציין את השם.</>}
         </div>
       )}
       <button className="btn primary" disabled={!confirm || state.busy}>
