@@ -40,15 +40,26 @@
 .hero.sell.split { text-align: start; justify-items: stretch; max-width: none; padding-block: clamp(32px, 6vw, 96px) var(--s-6); display: grid; gap: var(--s-7); align-items: center; }
 @media (min-width: 960px) { .hero.sell.split { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } }
 .hero.sell.split .htext { display: grid; justify-items: start; gap: 0; }
-.hero.sell.split h1 { font-size: clamp(38px, 4.6vw, 72px); line-height: 1.02; max-width: none; margin-block-end: var(--s-5); }
+/* Hero headline: big and heavy; "מה קורה" on one line, the rolling craft on the next. Sized so the longest
+   craft ("באנימציה תלת־ממדית?") fits its column without wrapping. */
+.hero.sell.split h1 { font-size: 8.4vw; font-weight: 700; letter-spacing: -.01em; line-height: 1.02; max-width: none; margin-block-end: var(--s-5); }
+.hero.sell.split h1 .rot { display: grid; }
+@media (min-width: 960px) { .hero.sell.split h1 { font-size: clamp(48px, 5.2vw, 88px); } }
 .hero.sell.split .lead { margin: 0 0 var(--s-5); max-width: 520px; text-align: start; }
 .hero.sell.split .row { justify-content: flex-start; }
 
-/* The rotating word: every word in one grid cell, so the cell keeps the longest word's size and the line never moves. */
-.rot { display: grid; justify-items: start; color: var(--accent); }
-.rot > span { grid-area: 1 / 1; opacity: 0; transform: translateY(.3em); transition: opacity .45s var(--ease), transform .45s var(--ease); }
-.rot > span.on { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .rot > span { transition: none; transform: none; } }
+/* The rotating word (components/RotatingWord.js): letters roll like Apple's clock digits. Every word sits invisible in
+   one grid cell (.rsize) so the box keeps the longest word's size; the live layers roll inside a clipped line. */
+.rot { display: grid; justify-items: start; color: var(--accent); white-space: nowrap; overflow: hidden; padding-block: .06em; margin-block: -.06em; }
+.rot > span { grid-area: 1 / 1; }
+.rot .rsize { visibility: hidden; }
+.rot .rl { display: inline-flex; }
+.rot .rc { display: inline-block; white-space: pre; }
+.rot .rl.in .rc { animation: roll-in .62s cubic-bezier(.2, .9, .25, 1.12) both; animation-delay: calc(var(--k) * 28ms); }
+.rot .rl.out .rc { animation: roll-out .5s cubic-bezier(.55, 0, .7, .2) both; animation-delay: calc(var(--k) * 22ms); }
+@keyframes roll-in { from { transform: translateY(150%); } to { transform: none; } }
+@keyframes roll-out { from { transform: none; } 99% { opacity: 1; } to { transform: translateY(-150%); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .rot .rc { animation: none !important; } .rot .rl.out { display: none; } }
 
 .checks { list-style: none; margin: 0 0 var(--s-6); padding: 0; display: grid; gap: var(--s-3); }
 .checks li { display: flex; align-items: flex-start; gap: var(--s-3); color: var(--ink-2); font-size: var(--t-base); line-height: 1.5; }
