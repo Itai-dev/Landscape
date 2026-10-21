@@ -7,7 +7,7 @@ import { fold, parseQuery } from "@/lib/match";
 // Meaningful actions for Vercel Web Analytics (custom events need a plan that has them; otherwise track()
 // is a no-op). Visitors and return visits come from Vercel Analytics itself: no cookies, no ids of ours.
 //  - Any element with data-track="event" reports a click; data-track-label / -category / -where ride along.
-//  - Links to a company (/companies#id) report company_open.
+//  - Links to a company page (/companies/<id>) report company_open.
 //  - Search forms report search_submit with two flags only (a craft, a city). The query text is never sent.
 //  - A tender's official link reports tender_source_click and opportunity_source_click {category: tender}.
 const CITY_WORDS = new Set(Object.entries(taxonomy.cities_he || {}).flatMap(([en, he]) => [fold(en).split(" ")[0], fold(he).split(" ")[0]]));
@@ -40,7 +40,7 @@ export default function TrackClicks() {
         return;
       }
       const href = el.getAttribute("href") || "";
-      if (/^\/companies\/?#(?!signals$)[^/]+$/.test(href)) send("company_open", { where: location.pathname });
+      if (/^\/companies\/[^/#?]+$/.test(href) && !/^\/companies\/(data|index\.html)/.test(href)) send("company_open", { where: location.pathname });
     };
     const onSubmit = (e) => {
       const form = e.target;

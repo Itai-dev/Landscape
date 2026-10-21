@@ -599,6 +599,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 /* ---------- Thumbnail cards: tile first, byline under it ---------- */
 #grid.grid { gap: 40px 16px; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); margin-top: 16px; }
 .card.shot { background: none; border: 0; padding: 0; gap: 0; border-radius: 0; transform: none; color: var(--ink); }
+a.card.shot { display: grid; text-decoration: none; }
 .card.shot:hover { border: 0; }
 .card.shot:focus-visible { outline: none; }
 .card.shot:focus-visible .frame { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -1264,6 +1265,22 @@ html:not([data-site]) .promo { display: none; }
   // On the site the hi-res file (/companies/data/logo/<id>.webp|svg, up to 192px); in the Artifact copy the 64px data URI.
   // A logo is never drawn larger than its native size (--lpx).
   const HI_LOGOS = document.documentElement.hasAttribute("data-site");
+  // On the site every company has its own page (/companies/<id>); the sheet is only for the Artifact copy.
+  const SITE_PAGES = Boolean(window.LANDSCAPE_SITE);
+  const orgUrl = (id) => "/companies/" + encodeURIComponent(id);
+  // Coming back from a company page restores the list as it was: filters (kept in localStorage anyway),
+  // how far it was expanded, the tab and the scroll position.
+  const LIST_KEY = "companies-list-state";
+  function saveListState() {
+    saveView();
+    try { sessionStorage.setItem(LIST_KEY, JSON.stringify({ shown: state.shown, tab: state.tab, y: window.scrollY, at: Date.now() })); } catch (e) {}
+  }
+  function goOrg(id, e) {
+    const url = orgUrl(id);
+    if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1)) { if (!e.target.closest("a[href]")) { e.preventDefault(); window.open(url, "_blank", "noopener"); } return; }
+    if (e) e.preventDefault();
+    saveListState(); location.href = url;
+  }
   function logoSrc(o) { return HI_LOGOS ? (o.logo_ext ? `/companies/data/logo/${encodeURIComponent(o.id)}.${o.logo_ext}` : "") : LOGOS[o.id] || ""; }
   function logoImg(o, px) {
     const src = logoSrc(o);
@@ -1314,12 +1331,15 @@ html:not([data-site]) .promo { display: none; }
       e ? `<span class="t ink">${esc(stageLabel(e.stage) || t("st.saved"))}</span>` : "",
       hits.size ? `<span class="t">${t("card.fit")}</span>` : "",
     ].join("");
-    return `<button class="card shot" type="button" data-id="${o.id}" style="${gstyle(o)}">
+    // On the site a card is a real link to the company's page (new tab, copy link, share all work);
+    // in the Artifact copy it opens the sheet.
+    const open = SITE_PAGES ? `<a class="card shot" href="${orgUrl(o.id)}" data-id="${o.id}" style="${gstyle(o)}">` : `<button class="card shot" type="button" data-id="${o.id}" style="${gstyle(o)}">`;
+    return `${open}
       <span class="frame">${thumb(o)}</span>
       <span class="by">${logo(o, "av")}<span class="nm"><bdi class="n">${esc(nm.main)}</bdi><span class="k">${kindTag(o.kind)}${where ? `<span class="kw">${esc(where)}</span>` : ""}</span></span>${tags ? `<span class="tags">${tags}</span>` : ""}</span>
       <span class="info">${info}</span>
       ${sig ? `<span class="upd"><b>${esc(sigType(sig.type))}</b> ${bidi(trim(sigHead(sig), 80))} <span class="ago">${ago(sig.date)}</span></span>` : ""}
-    </button>`;
+    ${SITE_PAGES ? "</a>" : "</button>"}`;
   }
 
   function renderMine() {
@@ -2153,6 +2173,7 @@ Question: ${q}`;
       if (following(sid)) await toggleFollow(BY_ID[sid], false); // no tracking, no alerts
       toast(t("t.removed")); return;
     }
+    if (d.id && SITE_PAGES) return goOrg(d.id, e);
     if (d.id) { e.preventDefault(); return openOrg(d.id); }
   });
   document.addEventListener("change", (e) => {
@@ -2212,12 +2233,20 @@ Question: ${q}`;
         cats: TAX.categories[qp.get("craft")] ? [qp.get("craft")] : [] });
       $("q").value = state.q;
     }
+    if (SITE_PAGES && h && BY_ID[h]) { location.replace(orgUrl(h)); return; }
+    let back = null;
+    if (SITE_PAGES) { try { back = JSON.parse(sessionStorage.getItem(LIST_KEY) || "null"); sessionStorage.removeItem(LIST_KEY); } catch (e) {} }
+    if (back && Date.now() - back.at < 3 * 3600e3) {
+      state.shown = Math.max(PAGE, Math.min(back.shown || PAGE, 2000));
+      if (["explore", "signals", "pipeline"].includes(back.tab) && !h) state.tab = back.tab;
+    } else back = null;
     renderMine(); renderBadges(); renderView();
+    if (back) requestAnimationFrame(() => window.scrollTo(0, back.y || 0));
     if (h && BY_ID[h]) openOrg(h);
     else if (h && !["explore", "signals", "pipeline", "ask"].includes(h)) toast(t("t.noorg"));
     window.addEventListener("hashchange", () => {
       const k = location.hash.slice(1);
-      if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); } else if (k) toast(t("t.noorg"));
+      if (BY_ID[k] && SITE_PAGES) location.replace(orgUrl(k)); else if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); } else if (k) toast(t("t.noorg"));
     });
     if (!HI_LOGOS) fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
     const checks = [Store.init()];
