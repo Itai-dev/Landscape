@@ -106,8 +106,14 @@ await t("6. the magic link returns to /auth/callback with frequency and crafts",
   assert.equal(url.searchParams.get("subscribe"), "monthly");
   assert.equal(url.searchParams.get("crafts"), "motion-design,animation-2d");
   assert.equal(url.searchParams.get("next"), "/digest/settings?welcome=1");
-  // No frequency, no crafts in the link (a plain sign-in).
-  assert.equal(new URL(callbackUrl({ crafts: ["vfx"] })).searchParams.get("crafts"), null);
+  // A plain sign-in carries neither.
+  const plain = new URL(callbackUrl({}));
+  assert.equal(plain.searchParams.get("subscribe"), null);
+  assert.equal(plain.searchParams.get("crafts"), null);
+  // An account without the newsletter (/join, "לא עכשיו"): the crafts ride along, no frequency, so nothing is sent.
+  const noNews = new URL(callbackUrl({ crafts: ["vfx"] }));
+  assert.equal(noNews.searchParams.get("crafts"), "vfx");
+  assert.equal(noNews.searchParams.get("subscribe"), null);
 });
 
 // --- 7. Consent is recorded only when the link is opened ----------------------------------------------------

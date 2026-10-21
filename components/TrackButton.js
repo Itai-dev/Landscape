@@ -1,33 +1,35 @@
 "use client";
 import { useEffect, useState } from "react";
 import { CheckIcon } from "@/components/Icons";
+import { useUser } from "@/components/useUser";
+import { TRACK_KEY, readTrack, setTracked } from "@/lib/trackSync";
 
 // "מעקב" on a company page: the same tracking list as the companies app (site/app.html, Store, local mode),
-// kept in this browser under "landscape-v2". Saving here shows up in /companies → מעקב, and the other way round.
-const KEY = "landscape-v2";
-const read = () => { try { return JSON.parse(localStorage.getItem(KEY) || "{}"); } catch { return {}; } };
-const write = (s) => { try { localStorage.setItem(KEY, JSON.stringify(s)); return true; } catch { return false; } };
-const today = () => { const d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 6e4).toISOString().slice(0, 10); };
-
+// kept in this browser under "landscape-v2". Signed in, it is kept in the account too (lib/trackSync.js),
+// so it works on every device. Alerts by email stay a separate choice (FollowButton).
 export default function TrackButton({ orgId }) {
+  const user = useUser();
   const [on, setOn] = useState(null); // null until read (no flash of the wrong state)
   const [msg, setMsg] = useState("");
   useEffect(() => {
-    const sync = () => setOn(Boolean(read().pipeline?.[orgId]));
+    const sync = () => setOn(Boolean(readTrack().pipeline?.[orgId]));
     sync();
-    const onStorage = (e) => e.key === KEY && sync();
+    const onStorage = (e) => e.key === TRACK_KEY && sync();
     window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
+    window.addEventListener("creativein-track", sync);
+    window.addEventListener("creativein-track-local", sync);
+    return () => { window.removeEventListener("storage", onStorage); window.removeEventListener("creativein-track", sync); window.removeEventListener("creativein-track-local", sync); };
   }, [orgId]);
 
-  function toggle() {
-    const s = read();
-    const pipeline = { ...(s.pipeline || {}) };
-    if (pipeline[orgId]) delete pipeline[orgId];
-    else pipeline[orgId] = { org_id: orgId, stage: "to_pitch", added: today(), updated_at: new Date().toISOString(), v: 1 };
-    if (!write({ ...s, pipeline, prefs: s.prefs || { crafts: [] } })) return setMsg("הדפדפן לא מאפשר לשמור כאן.");
-    setOn(Boolean(pipeline[orgId]));
-    setMsg(pipeline[orgId] ? "נשמר לרשימת המעקב בדפדפן הזה." : "הוסר מהמעקב.");
+  async function toggle() {
+    const next = !on;
+    if (!setTracked(orgId, next)) return setMsg("הדפדפן לא מאפשר לשמור כאן.");
+    setOn(next);
+    if (user) {
+      await fetch("/api/follows", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ org_id: orgId, on: next }) }).catch(() => null);
+      window.dispatchEvent(new Event("creativein-track")); // the alerts button reads the follows again
+    }
+    setMsg(next ? (user ? "נשמר במעקב שלכם." : "נשמר לרשימת המעקב בדפדפן הזה.") : "הוסר מהמעקב.");
   }
 
   return (
@@ -37,7 +39,7 @@ export default function TrackButton({ orgId }) {
         <span>{on ? "במעקב" : "מעקב"}</span>
       </button>
       <span className="sr-only" role="status">{msg}</span>
-      {on && <a className="btn ghost sm" href="/companies#pipeline">לרשימת המעקב</a>}
+      {on && <a className="btn ghost sm" href={user ? "/me#follows" : "/companies#pipeline"}>{user ? "למעקב שלי" : "לרשימת המעקב"}</a>}
     </>
   );
 }
