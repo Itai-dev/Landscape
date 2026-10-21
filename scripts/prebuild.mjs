@@ -156,6 +156,9 @@ const orgs = dataset.orgs.map((o) => ({
   buys: (o.needs || []).map((n) => NEEDS[n]?.label_he || NEEDS[n]?.label).filter(Boolean),
   text: searchText(o),
   logo: logos[o.id] || null,
+  // Hi-res file served with the companies app (site/data/logo/), never drawn above its native size.
+  logo_hi: o.logo_ext ? `/companies/data/logo/${encodeURIComponent(o.id)}.${o.logo_ext}` : null,
+  logo_px: o.logo_px || null,
 }));
 const count = (...kinds) => dataset.orgs.filter((o) => kinds.includes(o.kind)).length;
 const stats = {

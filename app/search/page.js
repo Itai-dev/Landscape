@@ -93,7 +93,7 @@ export default async function Search({ searchParams }) {
             {companies.slice(0, 9).map((o) => (
               <div key={o.id} className="orow-wrap">
                 <a className="orow" href={companyHref(o.id)}>
-                  <span className="logo">{o.logo ? <img src={o.logo} alt="" /> : (o.name_he || o.name).slice(0, 1)}</span>
+                  <span className="logo">{o.logo_hi ? <img src={o.logo_hi} alt="" width={48} height={48} loading="lazy" decoding="async" style={o.logo_px ? { maxWidth: o.logo_px, maxHeight: o.logo_px } : undefined} /> : (o.name_he || o.name).slice(0, 1)}</span>
                   <span className="nm">
                     <b><bdi>{o.name_he || o.name}</bdi></b>
                     <span>{[kindLabel(o.kind), ["client", "agency"].includes(o.kind) && o.buys.length ? `מזמינים ${o.buys.slice(0, 2).join(", ")}` : o.categories.slice(0, 2).map(craftLabel).join(", ")].filter(Boolean).join(" · ")}</span>

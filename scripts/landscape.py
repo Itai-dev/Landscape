@@ -314,17 +314,58 @@ def logo_data_uri(path: Path) -> str:
         return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
 
 
+def build_logos(orgs: dict, out_dir: Path) -> dict:
+    """site/data/logos.json (64px data URIs, for the Artifact copy) and site/data/logo/<id>.webp|svg (hi-res, for the
+    site). Each org with a usable logo gets logo_ext, logo_px (native px of the shipped file) and logo_ar (width/height).
+    Logos under LOGO_MIN px get none: the app shows the name tile instead. Never upscaled."""
+    import io
+    import shutil
+    manifest = json.loads(LOGO_MANIFEST.read_text()) if LOGO_MANIFEST.exists() else {}
+    hi = out_dir / "logo"
+    hi.mkdir(parents=True, exist_ok=True)
+    logos, keep = {}, set()
+    try:
+        from PIL import Image
+    except ImportError:
+        Image = None
+    for oid, o in orgs.items():
+        png = LOGOS / f"{oid}.png"
+        if not png.exists():
+            continue
+        src_px = manifest.get(oid, {}).get("src_px") or 96
+        if src_px < LOGO_MIN:
+            continue
+        logos[oid] = logo_data_uri(png)
+        if not Image:
+            continue
+        im = Image.open(png).convert("RGBA")
+        o["logo_ar"] = round(im.width / im.height, 2)
+        svg = LOGOS / f"{oid}.svg"
+        if svg.exists() and svg.stat().st_size <= 40_000:  # a heavy SVG ships as WebP instead
+            shutil.copyfile(svg, hi / f"{oid}.svg")
+            o["logo_ext"], o["logo_px"] = "svg", LOGO_MAX
+            keep.add(f"{oid}.svg")
+            continue
+        im.thumbnail((LOGO_WEB, LOGO_WEB), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "WEBP", quality=86, method=6)
+        (hi / f"{oid}.webp").write_bytes(buf.getvalue())
+        o["logo_ext"], o["logo_px"] = "webp", max(im.size)
+        keep.add(f"{oid}.webp")
+    for f in hi.iterdir():
+        if f.name not in keep:
+            f.unlink()
+    return logos
+
+
 def cmd_build(_args) -> int:
     orgs = load_all()
     resolve_relations(orgs)
-    import base64
-    logos = {}
-    for oid, o in orgs.items():
+    for o in orgs.values():
         o["needs"] = org_needs(o)
-        if (LOGOS / f"{oid}.png").exists():
-            logos[oid] = logo_data_uri(LOGOS / f"{oid}.png")
     out_dir = ROOT / "site" / "data"
     out_dir.mkdir(parents=True, exist_ok=True)
+    logos = build_logos(orgs, out_dir)
     dataset = {
         "schema_version": TAXONOMY.get("schema_version", 1),
         "generated": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
@@ -638,89 +679,282 @@ def org_needs(o: dict) -> list[str]:
 
 # ---------- logos ----------
 
-UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-LOGO_PX = 96
+UA ="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+LOGO_MAX = 512   # stored master, longest edge
+LOGO_WEB = 192   # shipped hi-res file: 2x the largest display size (96 css px)
+LOGO_MIN = 48    # below this the app shows the name tile instead
 
 
-def _get(url: str, timeout: int = 10) -> tuple[bytes, str]:
-    import urllib.request
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read(3_000_000), r.geturl()
+class _Polite:
+    """One fetcher per site: honours robots.txt for every host it touches and waits 1s between requests."""
+
+    def __init__(self):
+        self.robots: dict[str, object] = {}
+        self.last = 0.0
+
+    def allowed(self, url: str) -> bool:
+        import urllib.robotparser
+        p = urlparse(url)
+        host = f"{p.scheme}://{p.netloc}"
+        if host not in self.robots:
+            rp = urllib.robotparser.RobotFileParser()
+            try:
+                body, _ = self._raw(host + "/robots.txt", timeout=6)
+                rp.parse(body.decode("utf-8", "ignore").splitlines())
+            except Exception:
+                rp = None  # no robots.txt, or unreachable: allowed
+            self.robots[host] = rp
+        rp = self.robots[host]
+        return rp is None or rp.can_fetch(UA, url)
+
+    def _raw(self, url: str, timeout: int = 10) -> tuple[bytes, str]:
+        import time
+        import urllib.request
+        wait = 1.0 - (time.monotonic() - self.last)
+        if wait > 0:
+            time.sleep(wait)
+        self.last = time.monotonic()
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.read(3_000_000), r.geturl()
+
+    def get(self, url: str, timeout: int = 10) -> tuple[bytes, str] | None:
+        """None when robots.txt says no or the site refuses (403/429/503 bot walls are not retried)."""
+        if not self.allowed(url):
+            return None
+        try:
+            return self._raw(url, timeout)
+        except Exception:
+            return None
 
 
-def _icon_candidates(site: str) -> list[str]:
-    """Icon URLs declared in the homepage <head>, best first."""
+def _sizes_px(sizes: str) -> int:
+    m = re.findall(r"(\d+)x(\d+)", sizes or "")
+    return max((int(a) for a, b in m), default=0)
+
+
+def _logo_candidates(f: _Polite, site: str) -> list[tuple[float, str, str]]:
+    """(score, url, kind) from the homepage, best first; one candidate per kind.
+    Square icons of 180px+ come first (they read well at every size), then a header logo, then smaller icons."""
     from html.parser import HTMLParser
     from urllib.parse import urljoin
-    try:
-        html, final = _get(site)
-    except Exception:
+    got = f.get(site)
+    if not got:
         return []
-    found = []
+    html, final = got
+    links, imgs, manifests = [], [], []
 
     class P(HTMLParser):
+        depth_header = 0
+
         def handle_starttag(self, tag, attrs):
-            a = dict(attrs)
-            rel = (a.get("rel") or "").lower()
-            href = a.get("href")
-            if tag != "link" or not href or "icon" not in rel or "mask" in rel:
-                return
-            sizes = a.get("sizes") or ""
-            m = re.findall(r"(\d+)x\d+", sizes)
-            px = max(map(int, m)) if m else (180 if "apple" in rel else 32)
-            if href.lower().split("?")[0].endswith(".svg"):
-                px = -1  # can't rasterise SVG without extra deps; keep as last resort
-            found.append((px, urljoin(final, href)))
+            a = {k: (v or "") for k, v in attrs}
+            if tag == "header":
+                self.depth_header += 1
+            if tag == "link":
+                rel = a.get("rel", "").lower()
+                href = a.get("href")
+                if not href:
+                    return
+                if "manifest" in rel:
+                    manifests.append(urljoin(final, href))
+                elif "icon" in rel and "mask" not in rel:
+                    links.append((rel, a.get("type", "").lower(), _sizes_px(a.get("sizes", "")), urljoin(final, href)))
+            elif tag == "img":
+                src = a.get("src") or a.get("data-src") or ""
+                if not src or src.startswith("data:"):
+                    return
+                # Only an image that says it is the logo (in its file name, alt, class or id), never social icons,
+                # badges or photos; a bare <img> inside <header> is too often something else.
+                hint = " ".join([src, a.get("alt", ""), a.get("class", ""), a.get("id", "")]).lower()
+                if "logo" in hint and len(imgs) < 2 and not re.search(
+                        r"client|partner|award|sponsor|facebook|instagram|linkedin|twitter|whatsapp|youtube|tiktok|"
+                        r"social|badge|iso|cert|banner|hero|slide|footer|white|negative|icon-", hint):
+                    imgs.append(urljoin(final, src))
+
+        def handle_endtag(self, tag):
+            if tag == "header" and self.depth_header:
+                self.depth_header -= 1
 
     try:
-        P().feed(html.decode("utf-8", "ignore")[:400_000])
+        P().feed(html.decode("utf-8", "ignore")[:600_000])
     except Exception:
         pass
-    found.sort(key=lambda t: -t[0])
-    return [u for px, u in found if px >= 0] + [urljoin(final, "/apple-touch-icon.png")]
+
+    out: dict[str, tuple[float, str]] = {}
+
+    def offer(kind: str, score: float, url: str):
+        if kind not in out or score > out[kind][0]:
+            out[kind] = (score, url)
+
+    for rel, typ, px, url in links:
+        if typ == "image/svg+xml" or url.lower().split("?")[0].endswith(".svg"):
+            offer("svg-icon", 10_000, url)
+        elif "apple" in rel:
+            offer("apple", px or 180, url)
+        else:
+            offer("icon", px or 32, url)
+    if manifests:
+        got = f.get(manifests[0], timeout=8)
+        if got:
+            try:
+                icons = json.loads(got[0].decode("utf-8", "ignore")).get("icons", [])
+                for ic in icons:
+                    px = _sizes_px(ic.get("sizes", ""))
+                    if ic.get("src") and px:
+                        offer("manifest", px - (1 if "maskable" in (ic.get("purpose") or "") else 0), urljoin(got[1], ic["src"]))
+            except Exception:
+                pass
+    if imgs:
+        offer("header-logo", 179.5, imgs[0])
+    offer("apple-default", 1, urljoin(final, "/apple-touch-icon.png"))
+    return sorted(((s, u, k) for k, (s, u) in out.items()), key=lambda t: -t[0])
 
 
-def _to_png(data: bytes) -> bytes | None:
+def _sanitize_svg(data: bytes) -> bytes | None:
+    """Drop scripts, event handlers, foreign content and external references; None if it isn't a clean SVG."""
+    import xml.etree.ElementTree as ET
+    if len(data) > 400_000:
+        return None
+    text = data.decode("utf-8", "ignore")
+    if re.search(r"<!DOCTYPE|<!ENTITY", text, re.I):
+        return None
+    SVG, XL = "http://www.w3.org/2000/svg", "http://www.w3.org/1999/xlink"
+    ET.register_namespace("", SVG)
+    ET.register_namespace("xlink", XL)
+    try:
+        root = ET.fromstring(text)
+    except ET.ParseError:
+        return None
+    if not root.tag.endswith("svg"):
+        return None
+    bad = {"script", "foreignObject", "iframe", "object", "embed", "audio", "video", "animate", "set", "handler"}
+
+    def clean(el):
+        for child in list(el):
+            name = child.tag.split("}")[-1]
+            if name in bad:
+                el.remove(child)
+                continue
+            clean(child)
+        for k in list(el.attrib):
+            name, v = k.split("}")[-1], el.attrib[k]
+            if name.lower().startswith("on") or "javascript:" in v.lower():
+                del el.attrib[k]
+            elif name == "href" and not (v.startswith("#") or re.match(r"data:image/(png|jpe?g|gif|webp);", v)):
+                del el.attrib[k]
+            elif name == "style" and "url(" in v and not re.search(r"url\(\s*['\"]?#", v):
+                el.attrib[k] = re.sub(r"url\([^)]*\)", "none", v)
+        if el.tag.split("}")[-1] == "style" and el.text:
+            el.text = re.sub(r"@import[^;]*;|url\((?!\s*['\"]?#)[^)]*\)", "", el.text)
+
+    clean(root)
+    if "viewBox" not in root.attrib:
+        w, h = (re.sub(r"[^\d.]", "", root.attrib.get(x, "")) for x in ("width", "height"))
+        if w and h:
+            root.attrib["viewBox"] = f"0 0 {w} {h}"
+        else:
+            return None
+    return ET.tostring(root, encoding="utf-8")
+
+
+def _master(im, strict: bool = False) -> tuple[bytes, int] | None:
+    """Trim transparent edges, refuse empty or white-on-transparent logos (they vanish on the grey tile),
+    cap the longest edge at LOGO_MAX. Returns (PNG bytes, native px)."""
     import io
     from PIL import Image
+    im = im.convert("RGBA")
+    box = im.getchannel("A").getbbox()
+    if not box:
+        return None
+    im = im.crop(box)
+    if min(im.size) < 16:
+        return None
+    small = im.copy()
+    small.thumbnail((64, 64))
+    raw = small.tobytes()
+    px = [raw[i:i + 4] for i in range(0, len(raw), 4) if raw[i + 3] > 128]
+    if not px or len(px) < 0.03 * small.width * small.height:
+        return None
+    lum = sum(0.299 * r + 0.587 * g + 0.114 * b for r, g, b, _ in px) / len(px)
+    if lum > (215 if strict else 235):
+        return None  # a white logo for a dark header
+    if strict:
+        # A header image must look like a logo: not a photo or a solid block, not a thin strip.
+        ar = im.width / im.height
+        if not 0.6 <= ar <= 8:
+            return None
+        cover = len(px) / (small.width * small.height)
+        colours = len({(r >> 5, g >> 5, b >> 5) for r, g, b, _ in px})
+        if cover > 0.92 and (colours < 2 or colours > 40):
+            return None  # a flat box, or a photo
+    native = max(im.size)
+    if native > LOGO_MAX:
+        im.thumbnail((LOGO_MAX, LOGO_MAX), Image.LANCZOS)
+    out = io.BytesIO()
+    im.save(out, "PNG", optimize=True)
+    return out.getvalue(), min(native, LOGO_MAX)
+
+
+def _decode(data: bytes, url: str, strict: bool = False) -> tuple[bytes, int, bytes | None] | None:
+    """(master PNG, native px, sanitized SVG or None)."""
+    import io
+    from PIL import Image
+    head = data[:600].lstrip().lower()
+    if head.startswith(b"<?xml") or head.startswith(b"<svg") or b"<svg" in head:
+        svg = _sanitize_svg(data)
+        if not svg:
+            return None
+        try:
+            import cairosvg
+            png = cairosvg.svg2png(bytestring=svg, output_width=LOGO_MAX)
+        except Exception:
+            return None  # without a renderer we can't check or derive the raster, so skip SVGs
+        im = Image.open(io.BytesIO(png))
+        m = _master(im, strict)
+        if not m:
+            return None
+        corners = [im.convert("RGBA").getpixel(p)[3] for p in ((0, 0), (im.width - 1, 0), (0, im.height - 1), (im.width - 1, im.height - 1))]
+        return m[0], LOGO_MAX, (svg if max(corners) == 0 else None)
     try:
         im = Image.open(io.BytesIO(data))
         if getattr(im, "format", "") == "ICO":
-            im.size = max(im.ico.sizes())  # largest frame
-        im = im.convert("RGBA")
+            im.size = max(im.ico.sizes())
+        im.load()
     except Exception:
         return None
-    if min(im.size) < 32:
-        return None
-    bbox = im.getbbox()
-    if not bbox:
-        return None
-    im = im.crop(bbox)
-    im.thumbnail((LOGO_PX, LOGO_PX), Image.LANCZOS)
-    canvas = Image.new("RGBA", (LOGO_PX, LOGO_PX), (0, 0, 0, 0))
-    canvas.paste(im, ((LOGO_PX - im.width) // 2, (LOGO_PX - im.height) // 2), im)
-    out = io.BytesIO()
-    canvas.save(out, "PNG", optimize=True)
-    return out.getvalue()
+    m = _master(im, strict)
+    return (m[0], m[1], None) if m else None
 
 
-def fetch_logo(rec: dict) -> tuple[str, str | None, bytes | None]:
+def fetch_logo(rec: dict) -> dict:
+    """Best logo for one org: tries one candidate per kind, keeps the largest good one, stops at 128px+."""
     site = rec.get("website")
+    res = {"id": rec["id"]}
     if not site:
-        return rec["id"], None, None
+        return res
+    f = _Polite()
+    tries = _logo_candidates(f, site)
     d = domain(site)
-    tries = _icon_candidates(site) + [
-        f"https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://{d}&size=128"]
-    for url in tries:
-        try:
-            data, _ = _get(url, timeout=8)
-        except Exception:
+    tries.append((0, f"https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://{d}&size=256", "gstatic"))
+    if rec.get("_skip_header"):
+        tries = [t for t in tries if t[2] != "header-logo"]
+    best = None
+    for _, url, kind in tries[:6]:
+        got = f.get(url, timeout=8)
+        if not got:
             continue
-        png = _to_png(data)
-        if png:
-            return rec["id"], url, png
-    return rec["id"], None, None
+        dec = _decode(got[0], url, strict=kind == "header-logo")
+        if not dec:
+            continue
+        png, px, svg = dec
+        if not best or px > best["src_px"]:
+            best = {"png": png, "svg": svg, "src_px": px, "source_url": url, "kind": kind}
+        if px >= 128:
+            break
+    if best:
+        res.update(best)
+    return res
 
 
 def cmd_logos(args) -> int:
@@ -731,17 +965,39 @@ def cmd_logos(args) -> int:
     todo = [o for oid, o in orgs.items() if args.all or (oid not in manifest and not (LOGOS / f"{oid}.png").exists())]
     if args.ids:
         todo = [orgs[i] for i in args.ids if i in orgs]
-    got = 0
-    with ThreadPoolExecutor(16) as pool:
-        for oid, url, png in pool.map(fetch_logo, todo):
-            if png:
-                (LOGOS / f"{oid}.png").write_bytes(png)
-                manifest[oid] = {"source": url, "fetched": TODAY}
-                got += 1
+    # "skip_header": true in the manifest marks a site whose header image was checked and is not its own logo.
+    todo = [dict(o, _skip_header=True) if manifest.get(o["id"], {}).get("skip_header") else o for o in todo]
+    better = kept = new = 0
+    # Sites differ, so up to 8 run at once; each site gets its own 1s spacing and robots check.
+    with ThreadPoolExecutor(8) as pool:
+        for r in pool.map(fetch_logo, todo):
+            oid = r["id"]
+            old = manifest.get(oid, {})
+            had = (LOGOS / f"{oid}.png").exists()
+            old_px = old.get("src_px") or (96 if had else 0)
+            if r.get("png") and r["src_px"] > old_px:
+                (LOGOS / f"{oid}.png").write_bytes(r["png"])
+                svg_path = LOGOS / f"{oid}.svg"
+                if r.get("svg"):
+                    svg_path.write_bytes(r["svg"])
+                elif svg_path.exists():
+                    svg_path.unlink()
+                manifest[oid] = {"source_url": r["source_url"], "fetched_at": TODAY, "src_px": r["src_px"],
+                                 "format": "svg" if r.get("svg") else "png", "kind": r["kind"],
+                                 **({"skip_header": True} if old.get("skip_header") else {})}
+                better += bool(had)
+                new += not had
             else:
-                manifest.setdefault(oid, {"source": None, "fetched": TODAY})
+                kept += bool(had)
+                entry = {"source_url": old.get("source_url") or old.get("source"), "fetched_at": old.get("fetched_at") or old.get("fetched") or TODAY,
+                         "src_px": old_px if had else 0, "format": old.get("format", "png") if had else None,
+                         "kind": old.get("kind"), "skip_header": old.get("skip_header")}
+                manifest[oid] = {k: v for k, v in entry.items() if v is not None}
     LOGO_MANIFEST.write_text(json.dumps(dict(sorted(manifest.items())), indent=1) + "\n")
-    print(f"logos: fetched {got}/{len(todo)}; total with logo: {len(list(LOGOS.glob('*.png')))}/{len(orgs)}")
+    have = [oid for oid in orgs if (LOGOS / f"{oid}.png").exists()]
+    small = sum(1 for oid in have if (manifest.get(oid, {}).get("src_px") or 96) < 128)
+    print(f"logos: {len(todo)} checked; improved {better}, new {new}, kept {kept}; "
+          f"with logo {len(have)}/{len(orgs)}, under 128px {small}, missing {len(orgs) - len(have)}")
     return 0
 
 

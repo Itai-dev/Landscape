@@ -84,7 +84,7 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
      (adds new ids, updates known ones). Tenders past their deadline close by themselves at build time.
 6. **Merge**: `python3 scripts/landscape.py ingest research/staging/<file>.json` then
    `python3 scripts/landscape.py validate` (must pass), `python3 scripts/landscape.py logos` (fetches logos
-   for new orgs; needs `pip install pillow`) and `python3 scripts/landscape.py build`.
+   for new orgs: polite, robots-respecting, up to 512px; needs `pip install pillow`, plus `cairosvg` to use SVG logos) and `python3 scripts/landscape.py build`.
    Fix any rejected records and re-ingest.
 7. **Log**: append a line to `research/LOG.md`:
    `- YYYY-MM-DD · <mode> · <segment> · +N new, ~M updated · notes`. Tick the segment in
