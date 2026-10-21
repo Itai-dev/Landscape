@@ -1,4 +1,4 @@
-<title>חברות · CreativeIn</title>
+<title>חברות בתעשיית הקריאייטיב · creativein.</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -592,6 +592,22 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 #sheet .person { background: var(--surface); }
 #sheet .sig { background: var(--surface); }
 html:not([data-site]) .promo { display: none; }
+/* Before the data loads (or if it fails): a status line and a plain list of companies, built at deploy time. */
+.cbox:empty { display: none; }
+#v-explore.booting #ftray, #v-explore.booting #mine, #v-explore.booting #active, #v-explore.booting main { display: none; }
+.boot { margin-block: 8px 32px; }
+.bootstate { color: var(--muted); font-size: 14px; }
+.bootfail { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; background: var(--surface); border-radius: 8px; padding: 16px; margin-block-end: 16px; }
+.bootfail[hidden] { display: none; }
+.bootnote { color: var(--muted); font-size: 14px; }
+.ssrlist { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+.ssrlist li { background: var(--surface); border-radius: 8px; padding: 12px 16px; }
+.ssrlist a { color: var(--ink); text-decoration: none; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.ssrlist a span { color: var(--muted); font-size: 13px; }
+.ssrlist p { margin: 4px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.sig .cls { display: inline-block; font-size: 12px; font-weight: 600; border-radius: 4px; padding: 1px 6px; margin-block-end: 4px; background: var(--surface); color: var(--ink); }
+.sig .cls.opp { background: var(--ink); color: var(--bg); }
+.sig .why .wl { color: var(--muted); }
 </style>
 
 <script>if (window.LANDSCAPE_SITE) document.documentElement.setAttribute("data-site", "");</script>
@@ -608,28 +624,28 @@ html:not([data-site]) .promo { display: none; }
   <div class="menusheet" id="sitemenu" hidden><div class="wrap"><nav class="menusheet-nav" aria-label="תפריט"><a href="/people">אנשים</a><a href="/digest">השבוע בתעשייה</a><a href="/survey">סקר התעריפים</a><a href="/privacy">פרטיות</a></nav><div class="menusheet-end"><a class="btn-ink" href="/join" data-cta-sheet>המייל השבועי</a><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button></div></div></div>
 </header>
 <!-- /chrome:header -->
-<nav class="subnav wrap" aria-label="Sections"><div class="in">
+<nav class="subnav wrap" aria-label="אזורים"><div class="in">
     <button type="button" data-tab="explore" aria-current="page">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span data-i18n="tab.explore">All companies</span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span data-i18n="tab.explore">כל החברות</span></button>
     <button type="button" data-tab="signals">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span data-i18n="tab.signals">Updates</span><span class="badge" id="ssigBadge" hidden></span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span data-i18n="tab.signals">עדכונים</span><span class="badge" id="ssigBadge" hidden></span></button>
     <button type="button" data-tab="pipeline">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg><span data-i18n="tab.pipeline">Tracking</span><span class="badge" id="spipeBadge" hidden></span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg><span data-i18n="tab.pipeline">מעקב</span><span class="badge" id="spipeBadge" hidden></span></button>
     <button type="button" data-tab="ask" hidden data-asktab>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg><span data-i18n="tab.ask">Ask AI</span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg><span data-i18n="tab.ask">שאלו AI</span></button>
 </div></nav>
 <div class="wrap">
   <div class="notice" id="storeNotice" hidden></div>
 
   <!-- ASK (home) -->
-  <section id="v-ask" class="home" aria-label="Ask">
+  <section id="v-ask" class="home" aria-label="שאלו את ה־AI" hidden>
     <div class="hero">
-      <h1 class="vh1" data-i18n="home.h">Ask AI</h1>
-      <p data-i18n="home.sub">Ask in plain words. Answers come from the directory, with the companies behind them.</p>
-      <div class="metarow"><span class="meta" id="meta">Loading…</span><button class="langbtn" type="button" id="lang2" lang="en">English</button></div>
+      <h1 class="vh1" data-i18n="home.h">שאלו את ה־AI</h1>
+      <p data-i18n="home.sub">שאלה במילים פשוטות. התשובות מבוססות רק על המאגר, עם החברות שמאחוריהן.</p>
+      <div class="metarow"><span class="meta" id="meta">טוען…</span><button class="langbtn" type="button" id="lang2" lang="en">English</button></div>
       <form class="askbox" id="askForm">
-        <textarea id="askQ" rows="2" dir="auto" data-i18n-ph="home.ph" placeholder="e.g. Brands that need 3D product visuals this quarter" aria-label="Question"></textarea>
-        <button class="askgo" id="askGo" type="submit" aria-label="Ask"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+        <textarea id="askQ" rows="2" dir="auto" data-i18n-ph="home.ph" placeholder="למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה" aria-label="שאלה"></textarea>
+        <button class="askgo" id="askGo" type="submit" aria-label="שליחת השאלה"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
       </form>
       <div class="prompts" id="prompts"></div>
       <div class="notice" id="askNotice" hidden></div>
@@ -639,47 +655,54 @@ html:not([data-site]) .promo { display: none; }
   </section>
 
   <!-- EXPLORE -->
-  <section id="v-explore" aria-labelledby="ex-h" hidden>
-    <div class="listhead"><h1 id="ex-h"><span data-i18n="ex.h">Companies</span> <span class="cbox" id="count"></span></h1></div>
+  <section id="v-explore" class="booting" aria-labelledby="ex-h">
+    <div class="listhead"><h1 id="ex-h"><span data-i18n="ex.h">חברות בתעשייה</span> <span class="cbox" id="count"></span></h1></div>
     <!-- Filters: a grey tray of six buttons; each opens a dropdown list (#dd) -->
-    <div class="ftray" id="ftray" role="group" aria-label="Filters">
-      <button class="fbtn" type="button" data-dd="lens" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="dd.lens">Show</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-      <button class="fbtn" type="button" data-dd="kinds" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.type">Type</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-      <button class="fbtn" type="button" data-dd="cats" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.craft">Craft</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-      <button class="fbtn" type="button" data-dd="inds" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.industry">Industry</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-      <button class="fbtn" type="button" data-dd="city" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.city">City</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
-      <button class="fbtn" type="button" data-dd="sort" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="dd.sort">Sort</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div class="ftray" id="ftray" role="group" aria-label="סינון">
+      <button class="fbtn" type="button" data-dd="lens" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="dd.lens">לקוחות או ספקים</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="kinds" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.type">סוג חברה</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="cats" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.craft">תחום</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="inds" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.industry">תעשייה</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="city" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.city">עיר</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="sort" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="dd.sort">מיון</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
     </div>
     <p class="listdesc"><span id="exSub"></span></p>
-    <div class="scroller" id="mine" aria-label="What I make"></div>
+    <div class="boot" id="boot">
+      <p class="bootstate" id="bootState" role="status"><span data-i18n="boot.loading">טוענים את החברות…</span></p>
+      <div class="bootfail" id="bootFail" role="alert" hidden><b data-i18n="boot.fail">לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.</b> <button class="btn" type="button" id="bootRetry" data-i18n="boot.retry">לנסות שוב</button></div>
+      <noscript><style>#bootState{display:none}</style></noscript>
+      <!-- static:companies -->
+      <!-- /static:companies -->
+    </div>
+    <div class="scroller" id="mine" aria-label="התחומים שלי"></div>
     <div class="scroller" id="active" hidden></div>
     <main>
       <div class="grid" id="grid"></div>
-      <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more" data-i18n="more">Show more</button></div>
+      <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more" data-i18n="more">עוד חברות</button></div>
       <div class="empty" id="empty" hidden>
-        <h3 data-i18n="empty.h">Nothing matches</h3>
-        <span data-i18n="empty.p">Try fewer filters, or search in English (only some names have Hebrew).</span>
-        <button class="btn" type="button" id="clearAll" data-i18n="clear">Clear filters</button>
+        <h3 data-i18n="empty.h">אין תוצאות</h3>
+        <span data-i18n="empty.p">אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).</span>
+        <button class="btn" type="button" id="clearAll" data-i18n="clear">ניקוי מסננים</button>
       </div>
     </main>
   </section>
 
   <!-- SIGNALS -->
   <section id="v-signals" aria-labelledby="sig-h" hidden>
-    <div class="vhead"><h1 id="sig-h" data-i18n="sig.h">Updates</h1><p data-i18n="sig.sub">Funding, appointments, agency moves and new campaigns. Each one with its source.</p></div>
+    <div class="vhead"><h1 id="sig-h" data-i18n="sig.h">עדכונים מהשוק</h1><p data-i18n="sig.sub">גיוסים, מינויים, החלפות משרד וקמפיינים חדשים. כל עדכון עם מקור.</p></div>
     <div class="bar">
-      <div class="scroller" id="sigTypes" role="group" aria-label="Signal type"></div>
+      <div class="scroller" id="sigTypes" role="group" aria-label="סוג עדכון"></div>
     </div>
     <main><div class="feed" id="feed"></div></main>
   </section>
 
   <!-- PIPELINE -->
   <section id="v-pipeline" aria-labelledby="pipe-h" hidden>
-    <div class="vhead"><h1 id="pipe-h" data-i18n="pipe.h">Tracking</h1><p data-i18n="pipe.sub">The brands and studios you saved, with private notes and reminders.</p></div>
+    <div class="vhead"><h1 id="pipe-h" data-i18n="pipe.h">מעקב</h1><p data-i18n="pipe.sub">המותגים והסטודיואים ששמרתם, עם הערות ותזכורות פרטיות.</p></div>
     <div class="bar">
       <div class="tools">
         <span class="muted" id="pipeSummary"></span>
-        <button class="btn" type="button" id="export" style="margin-inline-start:auto" hidden data-i18n="export">Export my data</button>
+        <button class="btn" type="button" id="export" style="margin-inline-start:auto" hidden data-i18n="export">ייצוא הנתונים שלי</button>
       </div>
     </div>
     <main><div class="pipe" id="pipe"></div></main>
@@ -699,22 +722,22 @@ html:not([data-site]) .promo { display: none; }
 <nav class="sitebar" aria-label="ניווט"><a href="/" data-sitetab="home"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg><span>בית</span></a><a href="/companies" data-sitetab="companies" data-apptab="explore" aria-current="page"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span>חברות</span></a><a href="/companies#signals" data-sitetab="signals" data-apptab="signals"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span>עדכונים</span></a><a href="/tenders" data-sitetab="tenders"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg><span>מכרזים</span></a><a href="/join" class="tcta" data-cta-bar><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>הרשמה</span></a></nav>
 <!-- /chrome:tabbar -->
 
-<nav class="tabbar" aria-label="Sections">
+<nav class="tabbar" aria-label="אזורים">
   <div class="in">
     <button type="button" data-tab="explore" aria-current="page">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span data-i18n="tab.explore">All companies</span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg><span data-i18n="tab.explore">כל החברות</span></button>
     <button type="button" data-tab="signals">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span data-i18n="tab.signals">Updates</span><span class="badge" id="sigBadge" hidden></span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg><span data-i18n="tab.signals">עדכונים</span><span class="badge" id="sigBadge" hidden></span></button>
     <button type="button" data-tab="pipeline">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg><span data-i18n="tab.pipeline">Tracking</span><span class="badge" id="pipeBadge" hidden></span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></svg><span data-i18n="tab.pipeline">מעקב</span><span class="badge" id="pipeBadge" hidden></span></button>
     <button type="button" data-tab="ask" hidden data-asktab>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg><span data-i18n="tab.ask">Ask AI</span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg><span data-i18n="tab.ask">שאלו AI</span></button>
   </div>
 </nav>
 
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet side" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-name"></aside>
-<aside class="sheet center" id="panel" hidden role="dialog" aria-modal="true" aria-label="Options"></aside>
+<aside class="sheet center" id="panel" hidden role="dialog" aria-modal="true" aria-label="אפשרויות"></aside>
 <div class="ddscrim" id="ddscrim" hidden></div>
 <div class="dd" id="dd" hidden role="dialog" aria-modal="true" aria-labelledby="dd-h"></div>
 <div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
@@ -737,7 +760,7 @@ html:not([data-site]) .promo { display: none; }
       "tab.ask": "Ask AI", "tab.explore": "All companies", "tab.signals": "Updates",
       "home.h": "Ask AI", "home.sub": "Ask in plain words. Answers use only the directory, with the companies behind them.", "home.ph": "e.g. Brands that need 3D product visuals this quarter",
       "home.week": "This week", "home.aifail": "Smart search didn’t work this time. These companies best match your words:", "home.offline": "Smart answers aren’t open yet. Here are the companies that best match your words:", "home.nores": "Nothing in the directory matches that yet. Try other words, or browse.",
-      "home.p.need": "Who needs {0} right now?", "home.p.agency": "Which agencies commission {0}?", "home.p.collab": "Studios I could team up with on {0}",
+      "home.p.need": "Who commissions {0}?", "home.p.agency": "Which agencies commission {0}?", "home.p.collab": "Studios I could team up with on {0}",
       "step.search": "Searching the directory{0}", "step.org": "Reading about {0}", "step.signals": "Checking recent updates", "step.server": "Looking through the directory… this can take up to half a minute.", "step.pipe": "Looking at your pipeline", "step.write": "Writing the answer", "step.start": "Thinking",
       "r.open": "Open", "r.pitch": "Pitch", "r.match": "Matches: {0}", "tab.pipeline": "Tracking", "export": "Export my data",
       "k1.studio": "Studio", "k1.production_company": "Production co.", "k1.startup": "Startup", "k1.agency": "Agency", "k1.client": "Brand", "k1.community": "Community",
@@ -753,23 +776,23 @@ html:not([data-site]) .promo { display: none; }
       "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
       "sh.followup": " · follow up {0}", "sh.save": "Track", "sh.follow": "Email alerts", "sh.following": "with alerts", "sh.alertson": "Email alerts are on for this company.", "sh.alertsoff": "Get an email when something changes here.", "sh.alertsstop": "Stop alerts",
       "fo.title": "Email alerts on {0}", "fo.saved": "Saved to tracking", "fo.hint": "Tracking is saved in this browser. Email alerts are optional.", "fo.later": "Not now", "fo.p": "An email when something changes at {0}: a new marketing head, an agency move, a new campaign. No password.", "fo.email": "Email",
-      "fo.consent": "I want email alerts from CreativeIn when something changes at the companies I chose. I can stop at any time.", "fo.send": "Send a confirmation link", "fo.on": "Turn on alerts",
+      "fo.consent": "I want email alerts from creativein when something changes at the companies I chose. I can stop at any time.", "fo.send": "Send a confirmation link", "fo.on": "Turn on alerts",
       "fo.sent": "We sent a confirmation link to {0}. Open it on the same device, in the same browser. Not there? Check spam.", "fo.err": "Something went wrong. Try again.", "fo.rate": "Too many tries. Try again in a few minutes.",
       "fo.off": "Saved, but your alerts are off. You can turn them on in My account.", "fo.limit": "You can follow up to 100 companies.", "fo.unconfirmed": "Confirm your email address first.",
-      "t.followed": "Alerts on for {0}", "t.unfollowed": "Alerts stopped for {0}", "pipe.sync": "Get email alerts on the {0} companies you saved here?", "pipe.syncbtn": "Turn on alerts", "t.synced": "Alerts on for {0} companies", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Why now", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
+      "t.followed": "Alerts on for {0}", "t.unfollowed": "Alerts stopped for {0}", "pipe.sync": "Get email alerts on the {0} companies you saved here?", "pipe.syncbtn": "Turn on alerts", "t.synced": "Alerts on for {0} companies", "sh.pitch": "Draft a pitch", "sh.website": "Website", "sh.whynow": "Recent changes", "sh.buy": "What they buy", "sh.pickcrafts": "Pick your crafts", "sh.pickcrafts2": " to see what fits you.", "sh.inhouse": "Has an in-house creative team.",
       "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services and products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
       "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.over": "{0}+", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
       "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page",
       "sig.notinmap": "· not in the directory yet", "sig.save": "Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
       "sig.footer": "New updates arrive every Sunday. Each one links to its source.", "sig.empty.h": "No updates yet", "sig.empty.p": "New ones arrive every Sunday.",
-      "sig.h": "Market updates", "sig.sub": "Funding, appointments, agency moves and new campaigns. Each one with its source.", "pipe.h": "Tracking", "pipe.sub": "The brands and studios you saved, with private notes and reminders.",
+      "sig.h": "Market updates", "sig.sub": "Funding, appointments, agency moves, campaigns and job posts, each with its source and date. An update is a sign of change, not proof that someone is looking for suppliers.", "cls.opp": "Opportunity · published job post", "cls.sig": "Update", "sig.whylbl": "Why it may be relevant:", "boot.loading": "Loading the companies…", "boot.fail": "We couldn’t load the company data. This is a loading problem, not an empty list.", "boot.retry": "Try again", "pipe.h": "Tracking", "pipe.sub": "The brands and studios you saved, with private notes and reminders.",
       "credit.agency": "Agency", "credit.production": "Production", "credit.studio": "Studio", "credit.post": "Post", "credit.director": "Director",
       "pipe.summary": "{0} saved", "pipe.duecount": " · {0} due", "pipe.empty.h": "Your pipeline is empty", "pipe.empty.p": "Save a brand or studio and track it here: when to reach out and what you sent. Notes and reminders are visible only to you.", "pipe.find": "Find brands to pitch", "pipe.duenow": "Due now", "pipe.due": "due ", "pipe.snooze": "+1 week", "pipe.done": "Done",
       "export.title": "Your data", "export.p": "Copy and keep this JSON. It holds your pipeline, notes and crafts.", "copy": "Copy", "copied": "Copied", "selected": "Selected. Copy it from here.", "exported": "Exported",
       "notice.ro": "You can browse everything here. Saving to a pipeline needs Contributor access from the owner.", "notice.local": "For now the list is saved only in this browser.",
       "t.saveerr": "Couldn’t save. Try again.", "t.ro": "You can browse, but saving needs Contributor access.", "t.saved": "Saved to tracking · To pitch", "t.removed": "Removed from tracking", "t.hidden": "Update hidden for everyone", "t.shown": "Update shown again", "t.reportok": "Thanks. Sent to the research queue.", "t.reporterr": "Couldn’t send the report. Try again.", "t.draftsaved": "Draft saved · follow-up in a week",
-      "p.title": "Pitch {0}", "p.sub": "One short, specific message. You edit it and send it yourself — CreativeIn never sends anything.", "p.why": "Why now", "p.other": "Something else (write it)", "p.whyph": "e.g. Saw your new summer campaign on ICE", "p.who": "Who", "p.viaag": "Via their agency · {0}", "p.general": "No name (general)",
+      "p.title": "Pitch {0}", "p.sub": "One short, specific message. You edit it and send it yourself — creativein never sends anything.", "p.why": "Why now", "p.other": "Something else (write it)", "p.whyph": "e.g. Saw your new summer campaign on ICE", "p.who": "Who", "p.viaag": "Via their agency · {0}", "p.general": "No name (general)",
       "p.me": "About you (one line)", "p.meph": "e.g. Noa, motion designer in Tel Aviv, 8 years in brand work", "p.show": "What to show", "p.addsample": "+ Add a work sample", "p.titleph": "Title, e.g. Bezeq launch, 3D product spots", "p.urlph": "Link (Vimeo, Behance…)", "p.lang": "Language",
       "p.go": "Write the draft", "p.draft": "Draft", "p.save": "Save draft · follow up in 1 week", "p.writing": "Writing…", "p.done": "Edit it, then copy and send it yourself.", "p.needwhy": "Add a reason to reach out now.", "p.needsample": "Pick or add one work sample to show.", "p.fail": "Couldn’t finish. Try again.",
       "err.not_granted": "Allow Claude for this page first.", "err.rate_limited": "Too many requests right now. Try again in a minute.", "err.sampling_disabled": "Claude isn’t available on this account.", "err.prompt_too_large": "Too much text. Shorten it.", "err.refused": "Claude declined this one. Try rewording.", "err.tools_unavailable": "This view can’t search the directory. Try the claude.ai app.",
@@ -791,7 +814,7 @@ html:not([data-site]) .promo { display: none; }
       "tab.ask": "שאלו AI", "tab.explore": "כל החברות", "tab.signals": "עדכונים",
       "home.h": "שאלו את ה־AI", "home.sub": "שאלה במילים פשוטות. התשובות מבוססות רק על המאגר, עם החברות שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
       "home.week": "השבוע", "home.aifail": "החיפוש החכם לא הצליח הפעם. אלה החברות שהכי מתאימות למילים שכתבתם:", "home.offline": "החיפוש החכם עוד לא פתוח. הנה החברות שהכי מתאימות למילים שכתבתם:", "home.nores": "עדיין אין במאגר משהו שמתאים לזה. אפשר לנסות מילים אחרות, או לעבור לכל החברות.",
-      "home.p.need": "מי צריך {0} עכשיו?", "home.p.agency": "אילו סוכנויות מזמינות {0}?", "home.p.collab": "סטודיואים לשיתוף פעולה ב{0}",
+      "home.p.need": "מי מזמין {0}?", "home.p.agency": "אילו סוכנויות מזמינות {0}?", "home.p.collab": "סטודיואים לשיתוף פעולה ב{0}",
       "step.search": "מחפשים במאגר{0}", "step.org": "קוראים על {0}", "step.signals": "בודקים עדכונים אחרונים", "step.server": "מחפשים במאגר… זה יכול לקחת עד חצי דקה.", "step.pipe": "בודקים את רשימת המעקב", "step.write": "כותבים תשובה", "step.start": "חושבים",
       "r.open": "פתיחה", "r.pitch": "פנייה", "r.match": "התאמה: {0}", "tab.pipeline": "מעקב", "export": "ייצוא הנתונים שלי",
       "k1.studio": "סטודיו", "k1.production_company": "חברת הפקות", "k1.startup": "סטארטאפ", "k1.agency": "סוכנות", "k1.client": "מותג", "k1.community": "קהילה",
@@ -807,23 +830,23 @@ html:not([data-site]) .promo { display: none; }
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
       "sh.followup": " · תזכורת {0}", "sh.save": "מעקב", "sh.follow": "התראות במייל", "sh.following": "עם התראות", "sh.alertson": "התראות במייל על החברה הזו פועלות.", "sh.alertsoff": "אפשר לקבל מייל כשמשהו משתנה כאן.", "sh.alertsstop": "הפסקת ההתראות",
       "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן אופציה.", "fo.later": "לא עכשיו", "fo.p": "תדעו ראשונים כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. לכל היותר מייל אחד ביום, בלי סיסמה.", "fo.email": "מייל",
-      "fo.consent": "אני רוצה לקבל במייל התראות מ־CreativeIn כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
+      "fo.consent": "אני רוצה לקבל במייל התראות מ־creativein כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
       "fo.sent": "שלחנו קישור אישור ל־{0}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.", "fo.err": "משהו השתבש. אפשר לנסות שוב.", "fo.rate": "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות.",
       "fo.off": "החברה נשמרה, אבל ההתראות כבויות. אפשר להפעיל אותן בחשבון שלי.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "צריך לאשר את כתובת המייל קודם.",
-      "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "להפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "למה עכשיו", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
+      "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "להפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "מה השתנה לאחרונה", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
       "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים ומוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · רמת ביטחון {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
       "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.over": "יותר מ־{0}", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גיוס: {0} מיליון $", "f.offices": "משרדים", "f.industry": "תעשייה",
       "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר",
       "sig.notinmap": "· עדיין לא במאגר", "sig.save": "שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
       "sig.footer": "עדכונים חדשים נוספים בכל יום ראשון. כל עדכון מקושר למקור שלו.", "sig.empty.h": "עדיין אין עדכונים", "sig.empty.p": "עדכונים חדשים נוספים בכל יום ראשון.",
-      "sig.h": "עדכונים מהשוק", "sig.sub": "גיוסים, מינויים, החלפות משרד וקמפיינים חדשים. כל עדכון עם מקור.", "pipe.h": "מעקב", "pipe.sub": "המותגים והסטודיואים ששמרתם, עם הערות ותזכורות פרטיות.",
+      "sig.h": "עדכונים מהשוק", "sig.sub": "גיוסים, מינויים, החלפות משרד, קמפיינים ומשרות, כל אחד עם מקור ותאריך. עדכון הוא סימן לשינוי, לא הוכחה שמחפשים ספקים.", "cls.opp": "הזדמנות · משרה שפורסמה", "cls.sig": "עדכון", "sig.whylbl": "למה זה יכול להיות רלוונטי:", "boot.loading": "טוענים את החברות…", "boot.fail": "לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.", "boot.retry": "לנסות שוב", "pipe.h": "מעקב", "pipe.sub": "המותגים והסטודיואים ששמרתם, עם הערות ותזכורות פרטיות.",
       "credit.agency": "משרד", "credit.production": "הפקה", "credit.studio": "סטודיו", "credit.post": "פוסט", "credit.director": "בימוי",
       "pipe.summary": "{0} במעקב", "pipe.duecount": " · {0} לטיפול", "pipe.empty.h": "רשימת המעקב ריקה", "pipe.empty.p": "שומרים מותג או סטודיו, ועוקבים כאן: מתי לפנות ומה נשלח. ההערות והתזכורות גלויות רק לכם.", "pipe.find": "מצאו מותגים לפנות אליהם", "pipe.duenow": "לטיפול עכשיו", "pipe.due": "עד ", "pipe.snooze": "+שבוע", "pipe.done": "בוצע",
       "export.title": "הנתונים שלכם", "export.p": "העתיקו ושמרו את ה־JSON הזה. הוא כולל את רשימת המעקב, ההערות והתחומים שלכם.", "copy": "העתקה", "copied": "הועתק", "selected": "מסומן. העתיקו מכאן.", "exported": "יוצא",
       "notice.ro": "אפשר לעיין בהכול. כדי לשמור למעקב צריך הרשאת Contributor מהבעלים.", "notice.local": "הרשימה נשמרת כרגע רק בדפדפן הזה.",
       "t.saveerr": "השמירה נכשלה. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר למעקב · לפנות", "t.removed": "הוסר מהמעקב", "t.hidden": "העדכון הוסתר לכולם", "t.shown": "העדכון מוצג שוב", "t.reportok": "תודה. נבדוק ונתקן בסבב העדכון הבא.", "t.reporterr": "השליחה נכשלה. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
-      "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם. CreativeIn לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
+      "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם. creativein לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
       "p.me": "עליכם (שורה אחת)", "p.meph": "למשל: נועה, מעצבת מושן מתל אביב, 8 שנים בעבודה עם מותגים", "p.show": "מה להראות", "p.addsample": "+ הוספת עבודה", "p.titleph": "שם העבודה, למשל: השקת בזק, סרטוני מוצר בתלת־ממד", "p.urlph": "קישור (Vimeo, Behance…)", "p.lang": "שפה",
       "p.go": "כתיבת טיוטה", "p.draft": "טיוטה", "p.save": "שמירת טיוטה · תזכורת בעוד שבוע", "p.writing": "כותבים…", "p.done": "ערכו, העתיקו ושלחו בעצמכם.", "p.needwhy": "הוסיפו סיבה לפנות עכשיו.", "p.needsample": "בחרו או הוסיפו עבודה אחת להראות.", "p.fail": "לא הצלחנו לסיים. נסו שוב.",
       "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "יותר מדי טקסט. קצרו.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במאגר. נסו שוב מאוחר יותר.",
@@ -836,7 +859,7 @@ html:not([data-site]) .promo { display: none; }
   let LANG = "en";
   LANG = "he"; // Hebrew-first (Israeli market); English via the toggle
   try { LANG = localStorage.getItem("landscape-lang") === "en" ? "en" : "he"; } catch (e) {}
-  if (window.LANDSCAPE_SITE) LANG = "he"; // the site is Hebrew; the English toggle is for the claude.ai app
+  // Hebrew unless the person switched to English themselves (stored). The browser language is never used.
   const t = (k, ...a) => { let s = I18N[LANG][k] ?? I18N.en[k] ?? k; a.forEach((v, i) => (s = s.replace("{" + i + "}", v))); return s; };
   const kindOne = (k) => t("k1." + k), kindMany = (k) => t("km." + k), stageLabel = (k) => t("st." + k), sigType = (k) => t("sig." + k);
 
@@ -1372,6 +1395,7 @@ html:not([data-site]) .promo { display: none; }
 
   function openOrg(id, keepScroll) {
     const o = BY_ID[id]; if (!o) return;
+    if (!keepScroll && $("sheet").dataset.id !== id) vaEvent("company_open", { kind: o.kind });
     const sh = $("sheet"); const scroll = sh.scrollTop;
     const noteEl = $("note");
     if (keepScroll && noteEl && document.activeElement === noteEl) return; // don't re-render under the cursor
@@ -1674,7 +1698,7 @@ Company: ${JSON.stringify(facts)}`;
       return tool.execute(inp, ctx);
     } }));
     const history = thread.slice(1, 4).filter((x) => x.summary).map((x) => `Q: ${x.q}\nA: ${x.summary} (orgs: ${(x.results || []).map((r) => r.id).join(", ")})`).join("\n\n");
-    const prompt = `You are the search assistant of "CreativeIn", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands and public bodies that buy creative work). The person is a creative professional looking for clients, collaborators or work.
+    const prompt = `You are the search assistant of "creativein.", a source-backed map of Israel's creative industry (studios, production companies, creative-tech startups, ad agencies and the brands and public bodies that buy creative work). The person is a creative professional looking for clients, collaborators or work.
 ${myCrafts().length ? `They make: ${myCrafts().join(", ")}.` : ""}
 
 Rules:
@@ -1730,7 +1754,7 @@ Question: ${q}`;
   }
   const followErr = (e) => t(e === "rate_limited" ? "fo.rate" : e === "limit" ? "fo.limit" : e === "unconfirmed" ? "fo.unconfirmed" : "fo.err");
   // Vercel Web Analytics custom events on the site (no-op when analytics is off or inside the Artifact host).
-  const vaEvent = (name) => { try { if (window.va) window.va("event", { name }); } catch (e) {} };
+  const vaEvent = (name, data) => { try { if (window.va) window.va("event", data ? { name, data } : { name }); } catch (e) {} };
   async function toggleFollow(o, consent) {
     const on = !following(o.id);
     vaEvent("follow_click");
@@ -1824,12 +1848,16 @@ Question: ${q}`;
     const head = compact ? `<div class="type">${esc(sigType(s.type))}</div>`
       : `<div class="head">${o ? `<span style="${gstyle(o)}">${logo(o, "sm")}</span>` : ""}<div class="nm"><div class="type">${esc(sigType(s.type))}</div>
         ${o ? `<button class="org" type="button" data-id="${o.id}"><bdi>${esc(orgName(o))}</bdi></button>` : `<span class="org"><bdi>${esc(s.org_name)}</bdi></span> <span class="muted" style="font-size:13px">${t("sig.notinmap")}</span>`}</div></div>`;
+    // Only a published job post (with its source) counts as an opportunity; everything else is an update.
+    const opp = s.type === "hiring" && s.source_url;
+    const why = sigWhy(s);
     return `<article class="sig${old ? " old" : ""}${s.hidden ? " hidden" : ""}">${head}
+      <span class="cls${opp ? " opp" : ""}">${t(opp ? "cls.opp" : "cls.sig")}</span>
       <p class="h" dir="auto">${bidi(sigHead(s))}</p>
-      <p class="why" dir="auto">${bidi(sigWhy(s))}</p>
+      ${why ? `<p class="why" dir="auto"><span class="wl">${t("sig.whylbl")}</span> ${bidi(why)}</p>` : ""}
       ${cr ? `<div class="credits" dir="auto">${esc(cr)}</div>` : ""}
       <div class="foot"><span class="mono">${s.date_approx ? "≈ " : ""}${fmtDate(s.date)}</span>
-        <a href="${esc(s.source_url)}" target="_blank" rel="noopener">${esc(s.source || t("sig.source"))} ${IC.ext}</a>
+        <a href="${esc(s.source_url)}" target="_blank" rel="noopener" data-src-cat="${esc(s.type)}" data-src-opp="${opp ? 1 : 0}">${esc(s.source || t("sig.source"))} ${IC.ext}</a>
         <span class="acts">
           ${!compact && o ? (inPipe ? `<span class="stage">${IC.saved} ${esc(stageLabel(inPipe.stage))}</span>` : `<button class="btn" type="button" data-save-org="${o.id}" ${Store.readOnly ? "disabled" : ""}>${IC.save} ${t("sig.save")}</button>`) : ""}
           ${Store.isOwner && Store.mode === "db" ? `<button class="btn ghost" type="button" data-hide="${esc(s.id)}">${s.hidden ? t("sig.unhide") : t("sig.hide")}</button>` : ""}
@@ -1873,7 +1901,7 @@ Question: ${q}`;
   async function exportData() {
     const payload = JSON.stringify({ exported: new Date().toISOString(), app: "landscape", v: 1, prefs: Store.prefs, pipeline: Object.values(Store.pipeline) }, null, 2);
     if (Store.downloads) {
-      try { await Store.downloads.save({ filename: `landscape-pipeline-${isoDay(new Date())}.json`, data: payload }); toast(t("exported")); return; }
+      try { await Store.downloads.save({ filename: `creativein-tracking-${isoDay(new Date())}.json`, data: payload }); toast(t("exported")); return; }
       catch (e) { if (e && e.code === "declined") return; }
     }
     $("panel").innerHTML = `${closeBtn()}<h2 style="margin:4px 0 8px;font-size:22px">${t("export.title")}</h2>
@@ -1917,7 +1945,11 @@ Question: ${q}`;
 
   // ---------- events ----------
   let qT;
-  $("q").addEventListener("input", (e) => { clearTimeout(qT); qT = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 120); });
+  let qTrack;
+  $("q").addEventListener("input", (e) => {
+    clearTimeout(qT); qT = setTimeout(() => { state.q = e.target.value.trim(); refresh(); }, 120);
+    clearTimeout(qTrack); qTrack = setTimeout(() => { if (e.target.value.trim().length >= 2) vaEvent("search_submit", { where: "companies" }); }, 1500);
+  });
   $("askForm").addEventListener("submit", (e) => { e.preventDefault(); ask($("askQ").value); });
   $("askQ").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask($("askQ").value); } });
   $("askQ").addEventListener("input", autosize);
@@ -2013,16 +2045,28 @@ Question: ${q}`;
   }
 
   // ---------- boot ----------
+  // Keep the literal fetch("data/…") calls: the site build rewrites them to /companies/data/.
+  const okJson = (p) => p.then((r) => { if (!r.ok) throw new Error(r.url + " " + r.status); return r.json(); });
   async function boot() {
     applyLang();
     $("meta").textContent = t("loading");
+    $("bootFail").hidden = true; $("bootState").hidden = false;
     let data, sig;
     try {
       [data, sig] = await Promise.all([
-        fetch("data/dataset.json").then((r) => r.json()),
-        fetch("data/signals.json").then((r) => r.json()).catch(() => ({ signals: [] })),
+        okJson(fetch("data/dataset.json")),
+        okJson(fetch("data/signals.json")).catch(() => ({ signals: [] })),
       ]);
-    } catch (e) { $("meta").textContent = t("loadfail"); return; }
+      if (!data || !Array.isArray(data.orgs)) throw new Error("dataset: bad shape");
+    } catch (e) {
+      // A real error, not an empty list: say so, offer a retry, keep the prebuilt list (if any) under it.
+      $("meta").textContent = t("loadfail");
+      $("bootState").hidden = true; $("bootFail").hidden = false;
+      $("v-explore").hidden = false; ["ask", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = true));
+      try { console.warn("companies: data failed to load", e); } catch (_) {}
+      return;
+    }
+    $("boot").remove(); $("v-explore").classList.remove("booting");
     index(data);
     BASE_SIGNALS = sig.signals || [];
     applyLang();
@@ -2064,6 +2108,12 @@ Question: ${q}`;
     }
     Promise.all(checks).finally(() => { askChecked = true; renderAskBtn(); changed(); });
   }
+  $("bootRetry").addEventListener("click", () => boot());
+  // Source links on updates: which kinds of updates people act on (category only, nothing personal).
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-src-cat]"); if (!a) return;
+    vaEvent("opportunity_source_click", { category: a.dataset.srcCat, verified: a.dataset.srcOpp === "1" ? "yes" : "no" });
+  });
   boot();
 })();
 </script>
