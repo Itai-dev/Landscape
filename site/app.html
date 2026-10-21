@@ -854,7 +854,7 @@ html:not([data-site]) .promo { display: none; }
       "sh.ways": "Ways in", "sh.about": "About", "sh.work": "Work, services & investors", "sh.services": "Services and products", "sh.notable": "Notable work", "sh.investors": "Investors", "sh.links": "Links", "sh.sources": "Sources · {0} confidence · checked {1}", "sh.report": "Report a mistake", "sh.draft": "Saved draft", "sh.ennote": "",
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
       "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.over": "{0}+", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
-      "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page",
+      "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page", "sh.reach": "Contact & channels",
       "sig.notinmap": "· not in the directory yet", "sig.save": "Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
       "sig.footer": "New updates arrive every Sunday. Each one links to its source.", "sig.empty.h": "No updates yet", "sig.empty.p": "New ones arrive every Sunday.",
       "sig.h": "Market updates", "sig.sub": "Funding, appointments, agency moves, campaigns and job posts, each with its source and date. An update is a sign of change, not proof that someone is looking for suppliers.", "cls.opp": "Opportunity · published job post", "cls.sig": "Update", "sig.whylbl": "Why it may be relevant:", "boot.loading": "Loading the companies…", "boot.fail": "We couldn’t load the company data. This is a loading problem, not an empty list.", "boot.retry": "Try again", "pipe.h": "Tracking", "pipe.sub": "The brands and studios you saved, with private notes and reminders.",
@@ -908,7 +908,7 @@ html:not([data-site]) .promo { display: none; }
       "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים ומוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · רמת ביטחון {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
       "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.over": "יותר מ־{0}", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גיוס: {0} מיליון $", "f.offices": "משרדים", "f.industry": "תעשייה",
-      "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר",
+      "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר", "sh.reach": "יצירת קשר וערוצים רשמיים",
       "sig.notinmap": "· עדיין לא במאגר", "sig.save": "שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
       "sig.footer": "עדכונים חדשים נוספים בכל יום ראשון. כל עדכון מקושר למקור שלו.", "sig.empty.h": "עדיין אין עדכונים", "sig.empty.p": "עדכונים חדשים נוספים בכל יום ראשון.",
       "sig.h": "עדכונים מהשוק", "sig.sub": "גיוסים, מינויים, החלפות משרד, קמפיינים ומשרות, כל אחד עם מקור ותאריך. עדכון הוא סימן לשינוי, לא הוכחה שמחפשים ספקים.", "cls.opp": "הזדמנות · משרה שפורסמה", "cls.sig": "עדכון", "sig.whylbl": "למה זה יכול להיות רלוונטי:", "boot.loading": "טוענים את החברות…", "boot.fail": "לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.", "boot.retry": "לנסות שוב", "pipe.h": "מעקב", "pipe.sub": "המותגים והסטודיואים ששמרתם, עם הערות ותזכורות פרטיות.",
@@ -1525,8 +1525,10 @@ html:not([data-site]) .promo { display: none; }
     const facts = [[t("f.founded"), o.founded], [t("f.size"), sizeText(o.size)], [t("f.status"), o.status !== "active" ? t("status." + o.status) : ""],
       [t("f.funding"), o.funding && [o.funding.public ? `${t("f.public")}${o.funding.ticker ? " (" + o.funding.ticker + ")" : ""}` : o.funding.stage, o.funding.total_usd_m ? t("f.raised", o.funding.total_usd_m) : ""].filter(Boolean).join(" · ")],
       [t("f.offices"), (o.location.other_offices || []).join(", ")], [t("f.industry"), LANG === "he" ? "" : o.client_profile?.industry]].filter(([, v]) => v);
-    const links = [o.reel_url && [t("l.reel"), o.reel_url], o.careers_url && [t("l.careers"), o.careers_url], o.contact_url && [t("l.contact"), o.contact_url],
-      ...Object.entries(o.links || {}).map(([k, v]) => [LINK_LABEL[k] || k, v])].filter(Boolean);
+    // Official channels only (the company's own pages): contact first. No emails or phone numbers.
+    const links = [o.contact_url && [t("l.contact"), o.contact_url, "contact"], o.careers_url && [t("l.careers"), o.careers_url, "careers"],
+      o.reel_url && [t("l.reel"), o.reel_url, "reel"],
+      ...Object.entries(o.links || {}).map(([k, v]) => [LINK_LABEL[k] || k, v, k])].filter(Boolean);
     const ways = waysIn(o);
     sh.dataset.id = o.id;
     sh.innerHTML = `${closeBtn()}
@@ -1538,6 +1540,7 @@ html:not([data-site]) .promo { display: none; }
         ${Store.sample && Store.mode === "db" ? `<button class="btn" type="button" data-pitch>${IC.pen} ${t("sh.pitch")}</button>` : ""}
         ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">${t("sh.website")} ${IC.ext}</a>` : ""}
       </div>
+      ${links.length ? `<section class="reach"><h4>${t("sh.reach")}</h4><div class="chipset pills">${links.map(([l, u, k]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener" data-link-type="${esc(k)}">${esc(l)} ${IC.ext}</a>`).join("")}</div></section>` : ""}
       ${e ? editor(e) : ""}
       <section class="about"><h4>${t("sh.desc")}</h4><p class="desc" dir="auto">${bidi(orgDesc(o))}</p>
         ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
@@ -1556,7 +1559,6 @@ html:not([data-site]) .promo { display: none; }
         ${o.notable_work?.length ? `<h4 style="margin-top:10px">${t("sh.notable")}</h4><ul class="plain" dir="auto">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
         ${o.funding?.investors?.length ? `<h4 style="margin-top:10px">${t("sh.investors")}</h4><p style="margin:0;font-size:14px">${esc(o.funding.investors.join(", "))}</p>` : ""}
       </details></section>` : ""}
-      ${links.length ? `<section><h4>${t("sh.links")}</h4><div class="chipset pills">${links.map(([l, u]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ${IC.ext}</a>`).join("")}</div></section>` : ""}
       <section><details><summary>${esc(t("sh.sources", t("conf." + o.confidence), fmtDate(o.last_verified)))}</summary>
         <div class="sources" dir="ltr">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></details>
         ${Store.mode === "db" && !Store.readOnly ? `<button class="btn ghost" type="button" data-report style="margin-top:6px">${t("sh.report")}</button>` : ""}</section>`;
@@ -2228,6 +2230,10 @@ Question: ${q}`;
     Promise.all(checks).finally(() => { askChecked = true; renderAskBtn(); changed(); });
   }
   $("bootRetry").addEventListener("click", () => boot());
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[data-link-type]"); if (!a) return;
+    vaEvent("company_link_click", { type: a.dataset.linkType });
+  });
   // Source links on updates: which kinds of updates people act on (category only, nothing personal).
   document.addEventListener("click", (e) => {
     const a = e.target.closest && e.target.closest("a[data-src-cat]"); if (!a) return;

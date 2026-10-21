@@ -14,6 +14,7 @@ import TenderCard from "@/components/TenderCard";
 import { listTenders } from "@/lib/tenders";
 import { composeDigest, siteUrl, WHY_HE } from "@/lib/digest";
 import Bidi from "@/components/Bidi";
+import ToolsStrip from "@/components/ToolsStrip";
 import { liveProof } from "@/lib/proof";
 import "./tenders/tenders.css";
 import "./sell.css";
@@ -118,6 +119,8 @@ export default function Home() {
           </ol>
         </section>
       )}
+
+      <ToolsStrip />
 
       {tenders.length > 0 && (
         <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
