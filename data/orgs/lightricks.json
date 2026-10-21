@@ -1,6 +1,7 @@
 {
   "id": "lightricks",
   "name": "Lightricks",
+  "name_he": "לייטריקס",
   "kind": "startup",
   "categories": [
     "gen-ai-video",
@@ -9,6 +10,7 @@
     "video-tools"
   ],
   "description": "Jerusalem-based maker of creator apps Facetune, Photoleap and Videoleap and of the LTX generative-video stack: LTX Studio (AI storyboard-to-video platform) and the open-weights LTX Video / LTX-2 model (4K video with synchronized audio, open-sourced January 2026). In 2026 the company announced a split into a Facetune business and an LTX AI-video business.",
+  "description_he": "חברה ירושלמית שמפתחת את אפליקציות היוצרים Facetune, Photoleap ו-Videoleap ואת סטאק הווידאו הגנרטיבי LTX: LTX Studio (פלטפורמת AI מסטוריבורד לווידאו) ומודל הקוד הפתוח LTX Video / LTX-2 (וידאו 4K עם אודיו מסונכרן, שוחרר כקוד פתוח בינואר 2026). ב-2026 הודיעה החברה על פיצול לעסק של Facetune ולעסק וידאו AI של LTX.",
   "location": {
     "country": "IL",
     "city": "Jerusalem",
@@ -23,9 +25,12 @@
   "size": "201-500",
   "status": "active",
   "website": "https://www.lightricks.com",
+  "contact_url": "https://www.lightricks.com/contact-us",
   "links": {
     "ltx_studio": "https://ltx.io/studio",
-    "wikipedia": "https://en.wikipedia.org/wiki/Lightricks"
+    "wikipedia": "https://en.wikipedia.org/wiki/Lightricks",
+    "linkedin": "https://www.linkedin.com/company/lightricks/",
+    "instagram": "https://www.instagram.com/lightricks"
   },
   "services": [
     "LTX Studio",
@@ -93,7 +98,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Series D (2021) valued company at $1.8B. 2026 restructuring: ~75 layoffs, Facetune (~100 staff) to be separated from LTX (~250 staff); Farbman said ~$150M invested in AI business.",
-  "description_he": "חברה ירושלמית שמפתחת את אפליקציות היוצרים Facetune, Photoleap ו-Videoleap ואת סטאק הווידאו הגנרטיבי LTX: LTX Studio (פלטפורמת AI מסטוריבורד לווידאו) ומודל הקוד הפתוח LTX Video / LTX-2 (וידאו 4K עם אודיו מסונכרן, שוחרר כקוד פתוח בינואר 2026). ב-2026 הודיעה החברה על פיצול לעסק של Facetune ולעסק וידאו AI של LTX.",
-  "name_he": "לייטריקס"
+  "notes": "Series D (2021) valued company at $1.8B. 2026 restructuring: ~75 layoffs, Facetune (~100 staff) to be separated from LTX (~250 staff); Farbman said ~$150M invested in AI business."
 }

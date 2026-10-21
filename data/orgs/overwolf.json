@@ -1,6 +1,7 @@
 {
   "id": "overwolf",
   "name": "Overwolf",
+  "name_he": "אוברוולף",
   "kind": "startup",
   "categories": [
     "creator-economy",
@@ -8,6 +9,7 @@
     "game-development"
   ],
   "description": "Ramat Gan-based platform founded in 2009 that lets creators build, distribute and monetize in-game apps, overlays, mods and game servers; owns CurseForge, Tebex and Nitro, and has raised about $149M.",
+  "description_he": "פלטפורמה מרמת גן, שנוסדה ב-2009, שמאפשרת ליוצרים לבנות, להפיץ ולייצר הכנסות מאפליקציות בתוך משחקים, אוברליים, מודים ושרתי משחק; בבעלותה CurseForge, Tebex ו-Nitro, וגייסה כ-149 מיליון דולר.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -16,6 +18,7 @@
   "size": "201-500",
   "status": "active",
   "website": "https://www.overwolf.com/",
+  "contact_url": "https://www.overwolf.com/contact",
   "links": {
     "linkedin": "https://www.linkedin.com/company/overwolf.com/",
     "x": "https://twitter.com/TheOverwolf",
@@ -92,7 +95,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Size from third-party band.",
-  "description_he": "פלטפורמה מרמת גן, שנוסדה ב-2009, שמאפשרת ליוצרים לבנות, להפיץ ולייצר הכנסות מאפליקציות בתוך משחקים, אוברליים, מודים ושרתי משחק; בבעלותה CurseForge, Tebex ו-Nitro, וגייסה כ-149 מיליון דולר.",
-  "name_he": "אוברוולף"
+  "notes": "Size from third-party band."
 }

@@ -13,6 +13,11 @@
   },
   "status": "active",
   "website": "https://carolinalemke.com",
+  "contact_url": "https://carolinalemke.com/pages/contact",
+  "links": {
+    "instagram": "https://www.instagram.com/carolinalemkeberlin",
+    "linkedin": "https://www.linkedin.com/company/carolina-lemke-berlin-new/"
+  },
   "key_people": [
     {
       "name": "Oren Bargil",

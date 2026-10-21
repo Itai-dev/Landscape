@@ -14,6 +14,13 @@
   },
   "status": "active",
   "website": "https://www.samsung.com/il/",
+  "contact_url": "https://www.samsung.com/il/support/contact",
+  "careers_url": "https://www.samsung.com/il/about-us/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/Samsung.Israel",
+    "youtube": "https://www.youtube.com/user/SamsungIsrael",
+    "instagram": "https://instagram.com/samsungisrael"
+  },
   "key_people": [
     {
       "name": "Orit Bauer",

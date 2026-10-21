@@ -7,6 +7,7 @@
     "banking-finance"
   ],
   "description": "TASE-listed Israeli investment house (est. 2006, Ramat Gan) managing provident and study funds, pensions, portfolios and mutual funds; ~180 employees. Actress Keren Mor is its long-running presenter.",
+  "description_he": "בית השקעות ישראלי הנסחר בבורסת תל אביב (נוסד ב-2006, רמת גן) שמנהל קופות גמל וקרנות השתלמות, פנסיה, תיקי השקעות וקרנות נאמנות; כ-180 עובדים. השחקנית קרן מור היא הפרזנטורית הוותיקה שלו.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -15,7 +16,14 @@
   "size": "51-200",
   "status": "active",
   "website": "https://www.moreinvest.co.il",
+  "contact_url": "https://www.moreinvest.co.il/פעולות-נפוצות/שירות-לקוחות-מור-בית-השקעות",
   "careers_url": "https://www.moreinvest.co.il/%D7%A2%D7%9C%D7%99%D7%A0%D7%95/%D7%A7%D7%A8%D7%99%D7%99%D7%A8%D7%94/",
+  "links": {
+    "facebook": "https://www.facebook.com/moreinvest.co.il",
+    "youtube": "https://www.youtube.com/channel/UCnpV3O5vH4mcCSJY8Bb0OFQ",
+    "linkedin": "https://www.linkedin.com/company/more-investment-house/",
+    "instagram": "https://www.instagram.com/more_invest"
+  },
   "key_people": [
     {
       "name": "Hadar Raz",
@@ -51,6 +59,5 @@
   ],
   "confidence": "medium",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "בית השקעות ישראלי הנסחר בבורסת תל אביב (נוסד ב-2006, רמת גן) שמנהל קופות גמל וקרנות השתלמות, פנסיה, תיקי השקעות וקרנות נאמנות; כ-180 עובדים. השחקנית קרן מור היא הפרזנטורית הוותיקה שלו."
+  "last_verified": "2026-10-19"
 }

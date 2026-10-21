@@ -14,6 +14,14 @@
   },
   "status": "active",
   "website": "https://avivmelisron.co.il",
+  "contact_url": "https://avivmelisron.co.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%a7%d7%a9%d7%a8",
+  "careers_url": "https://avivmelisron.co.il/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94",
+  "links": {
+    "facebook": "https://www.facebook.com/avivbymelisron",
+    "instagram": "https://www.instagram.com/aviv_by_melisron",
+    "linkedin": "https://www.linkedin.com/company/avivbymelisron/",
+    "youtube": "https://www.youtube.com/@AvivbyMelisron"
+  },
   "key_people": [
     {
       "name": "Tzachi Didi",

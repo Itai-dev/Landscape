@@ -1,6 +1,7 @@
 {
   "id": "tailor-brands",
   "name": "Tailor Brands",
+  "name_he": "טיילור ברנדס",
   "kind": "startup",
   "categories": [
     "design-tools",
@@ -9,6 +10,7 @@
     "gen-ai-image"
   ],
   "description": "AI-powered branding platform that began as an automated logo maker and expanded into an all-in-one tool for small businesses to design brand identities, websites and marketing assets and to form and run their business. HQ in New York and Tel Aviv.",
+  "description_he": "פלטפורמת מיתוג מבוססת AI שהתחילה כמחולל לוגואים אוטומטי והתרחבה לכלי הכול-באחד לעסקים קטנים — עיצוב זהות מותג, אתרים וחומרי שיווק, וגם הקמה וניהול של העסק. מטה בניו יורק ובתל אביב.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -19,6 +21,11 @@
   "founded": 2015,
   "status": "active",
   "website": "https://www.tailorbrands.com",
+  "careers_url": "https://www.tailorbrands.com/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/tailorbrands",
+    "instagram": "https://www.instagram.com/tailor"
+  },
   "services": [
     "Logo maker & brand identity",
     "Website builder",
@@ -78,7 +85,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Founding year cited as 2014 or 2015.",
-  "description_he": "פלטפורמת מיתוג מבוססת AI שהתחילה כמחולל לוגואים אוטומטי והתרחבה לכלי הכול-באחד לעסקים קטנים — עיצוב זהות מותג, אתרים וחומרי שיווק, וגם הקמה וניהול של העסק. מטה בניו יורק ובתל אביב.",
-  "name_he": "טיילור ברנדס"
+  "notes": "Founding year cited as 2014 or 2015."
 }

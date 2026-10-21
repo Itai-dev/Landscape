@@ -13,6 +13,7 @@
     "commercial-production"
   ],
   "description": "Israeli creative-technology and production company (active since at least 2006) producing commercials, corporate and technical videos, animation, virtual production, and immersive VR/AR experiences for hi-tech, defence, gaming and consumer brands.",
+  "description_he": "חברת קריאייטיב טכנולוגי והפקה ישראלית (פעילה לפחות מאז 2006) שמפיקה פרסומות, סרטי תדמית וסרטונים טכניים, אנימציה, הפקה וירטואלית וחוויות VR/AR אימרסיביות למותגי הייטק, ביטחון, גיימינג וצרכנות.",
   "location": {
     "country": "IL",
     "city": "Givatayim"
@@ -26,7 +27,8 @@
     "vimeo": "https://vimeo.com/studio3dm",
     "instagram": "https://www.instagram.com/studio3dm/",
     "linkedin": "https://www.linkedin.com/company/studio3dm/",
-    "youtube": "https://www.youtube.com/channel/UCAlAyCm-Rixb98Yr88yeD6Q"
+    "youtube": "https://www.youtube.com/channel/UCAlAyCm-Rixb98Yr88yeD6Q",
+    "facebook": "https://www.facebook.com/Dreams.and.Magic.Ltd"
   },
   "services": [
     "Animation",
@@ -75,6 +77,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Client list from logo wall.",
-  "description_he": "חברת קריאייטיב טכנולוגי והפקה ישראלית (פעילה לפחות מאז 2006) שמפיקה פרסומות, סרטי תדמית וסרטונים טכניים, אנימציה, הפקה וירטואלית וחוויות VR/AR אימרסיביות למותגי הייטק, ביטחון, גיימינג וצרכנות."
+  "notes": "Client list from logo wall."
 }

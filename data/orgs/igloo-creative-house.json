@@ -12,6 +12,7 @@
     "game-art"
   ],
   "description": "Tel Aviv creative agency and animation studio, part of the Magic Media group, producing animated brand videos, commercials, product videos and performance-marketing creative, with a separate gaming creative arm.",
+  "description_he": "משרד קריאייטיב וסטודיו אנימציה תל אביבי, חלק מקבוצת Magic Media, המפיק סרטוני מותג מונפשים, פרסומות, סרטוני מוצר וקריאייטיב לפרפורמנס, עם זרוע קריאייטיב נפרדת לגיימינג.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -24,7 +25,8 @@
   "links": {
     "vimeo": "https://vimeo.com/user103006430",
     "linkedin": "https://www.linkedin.com/company/igloo---creative-house",
-    "instagram": "https://www.instagram.com/igloocreative/"
+    "instagram": "https://www.instagram.com/igloocreative/",
+    "facebook": "https://www.facebook.com/Igloocreativehouse"
   },
   "services": [
     "Brand videos",
@@ -63,6 +65,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "משרד קריאייטיב וסטודיו אנימציה תל אביבי, חלק מקבוצת Magic Media, המפיק סרטוני מותג מונפשים, פרסומות, סרטוני מוצר וקריאייטיב לפרפורמנס, עם זרוע קריאייטיב נפרדת לגיימינג."
+  "last_verified": "2026-10-18"
 }

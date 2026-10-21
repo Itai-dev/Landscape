@@ -12,6 +12,7 @@
     "ai-creative"
   ],
   "description": "Tel Aviv-area (Givatayim) marketing-driven video studio founded in 2017, producing product, explainer and promo videos for technology brands with 2D/3D animation, live action and AI production.",
+  "description_he": "סטודיו וידאו שיווקי באזור תל אביב (גבעתיים) שנוסד ב-2017, ומפיק סרטוני מוצר, סרטוני הסבר וסרטוני פרומו למותגי טכנולוגיה באנימציית 2D/3D, צילום לייב אקשן והפקת AI.",
   "location": {
     "country": "IL",
     "city": "Givatayim"
@@ -21,6 +22,9 @@
   "status": "active",
   "website": "https://www.shoofvideo.co.il",
   "reel_url": "https://www.youtube.com/watch?v=3pKKMU_InFw",
+  "links": {
+    "facebook": "https://www.facebook.com/Shoof-Creative-Video-150305452296396"
+  },
   "services": [
     "Scriptwriting",
     "2D/3D animation",
@@ -48,6 +52,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו וידאו שיווקי באזור תל אביב (גבעתיים) שנוסד ב-2017, ומפיק סרטוני מוצר, סרטוני הסבר וסרטוני פרומו למותגי טכנולוגיה באנימציית 2D/3D, צילום לייב אקשן והפקת AI."
+  "last_verified": "2026-10-18"
 }

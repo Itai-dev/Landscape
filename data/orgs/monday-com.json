@@ -10,6 +10,7 @@
     "tech"
   ],
   "description": "Tel Aviv-based work-management software company (founded 2012 as DaPulse, Nasdaq: MNDY) known for heavy video-led performance and brand marketing worldwide.",
+  "description_he": "חברת תוכנה לניהול עבודה מתל אביב (נוסדה ב-2012 בשם DaPulse, נאסד\"ק: MNDY), שידועה בשיווק פרפורמנס ומותג מבוסס וידאו בהיקף נרחב ברחבי העולם.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -20,6 +21,10 @@
   "website": "https://monday.com",
   "contact_url": "https://monday.com/sales/contact-us",
   "careers_url": "https://monday.com/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/mondaydotcom",
+    "instagram": "https://www.instagram.com/mondaydotcom"
+  },
   "key_people": [
     {
       "name": "Roy Mann",
@@ -73,6 +78,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Globes (Mar 2025) lists monday.com among K Agency's clients.",
-  "description_he": "חברת תוכנה לניהול עבודה מתל אביב (נוסדה ב-2012 בשם DaPulse, נאסד\"ק: MNDY), שידועה בשיווק פרפורמנס ומותג מבוסס וידאו בהיקף נרחב ברחבי העולם."
+  "notes": "Globes (Mar 2025) lists monday.com among K Agency's clients."
 }

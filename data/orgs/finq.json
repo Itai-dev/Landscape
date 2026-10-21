@@ -15,6 +15,13 @@
   "founded": 2019,
   "status": "active",
   "website": "https://finqai.co.il",
+  "contact_url": "https://finqai.co.il/contact",
+  "links": {
+    "youtube": "https://www.youtube.com/channel/UCmtuNwfh-yV4D5YHH9VuyuA",
+    "linkedin": "https://www.linkedin.com/company/finq-israel/",
+    "instagram": "https://www.instagram.com/finq_israel",
+    "facebook": "https://www.facebook.com/finqisrael"
+  },
   "key_people": [
     {
       "name": "Eldad Tamir",

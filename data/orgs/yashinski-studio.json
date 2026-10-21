@@ -11,6 +11,7 @@
     "motion-design"
   ],
   "description": "Visual effects, coding and design boutique with headquarters in Tel Aviv and Los Angeles, creating visuals for feature films, advertising and interactive experiences. It delivered 400+ VFX shots for the Israeli feature 'Image of Victory' (streaming on Netflix) and lists clients such as Coldplay, Beyoncé, Warner Bros. and HP.",
+  "description_he": "בוטיק לאפקטים חזותיים, קוד ועיצוב עם מטה בתל אביב ובלוס אנג'לס, שיוצר ויזואלים לסרטים עלילתיים, פרסום וחוויות אינטראקטיביות. סיפק 400+ שוטים של VFX לסרט הישראלי 'תמונת הניצחון' (בנטפליקס), ובין לקוחותיו Coldplay, ביונסה, Warner Bros. ו-HP.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -24,7 +25,8 @@
   "links": {
     "instagram": "https://www.instagram.com/yaronyashinski/",
     "youtube": "https://www.youtube.com/user/YashinskiStudio/videos",
-    "x": "https://twitter.com/yashinski"
+    "x": "https://twitter.com/yashinski",
+    "facebook": "https://www.facebook.com/y.studio"
   },
   "services": [
     "Feature film VFX",
@@ -61,6 +63,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "בוטיק לאפקטים חזותיים, קוד ועיצוב עם מטה בתל אביב ובלוס אנג'לס, שיוצר ויזואלים לסרטים עלילתיים, פרסום וחוויות אינטראקטיביות. סיפק 400+ שוטים של VFX לסרט הישראלי 'תמונת הניצחון' (בנטפליקס), ובין לקוחותיו Coldplay, ביונסה, Warner Bros. ו-HP."
+  "last_verified": "2026-10-18"
 }

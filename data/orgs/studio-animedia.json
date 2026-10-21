@@ -11,6 +11,7 @@
     "sound-design"
   ],
   "description": "Ramat HaSharon visual-storytelling studio producing animation of all types alongside video/green-screen production, scriptwriting, voice acting, sound design and music for brands, health organizations and startups.",
+  "description_he": "סטודיו לסיפור חזותי ברמת השרון שמפיק אנימציה מכל הסוגים, לצד הפקות וידאו ומסך ירוק, כתיבת תסריטים, דיבוב, עיצוב סאונד ומוזיקה למותגים, לארגוני בריאות ולסטארטאפים.",
   "location": {
     "country": "IL",
     "city": "Ramat HaSharon"
@@ -22,7 +23,8 @@
   "reel_url": "https://vimeo.com/1219149861",
   "links": {
     "vimeo": "https://vimeo.com/user59374793",
-    "instagram": "https://www.instagram.com/studio_animedia/"
+    "instagram": "https://www.instagram.com/studio_animedia/",
+    "facebook": "https://www.facebook.com/studioanimedia"
   },
   "services": [
     "Animation",
@@ -62,6 +64,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו לסיפור חזותי ברמת השרון שמפיק אנימציה מכל הסוגים, לצד הפקות וידאו ומסך ירוק, כתיבת תסריטים, דיבוב, עיצוב סאונד ומוזיקה למותגים, לארגוני בריאות ולסטארטאפים."
+  "last_verified": "2026-10-18"
 }

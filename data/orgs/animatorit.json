@@ -7,6 +7,7 @@
     "animation-2d"
   ],
   "description": "Herzliya boutique 2D animation studio offering design and animation for videos for any occasion and animated music clips.",
+  "description_he": "סטודיו בוטיק לאנימציה דו-ממדית מהרצליה, שמציע עיצוב ואנימציה לסרטונים לכל אירוע ולקליפים מוזיקליים מונפשים.",
   "location": {
     "country": "IL",
     "city": "Herzliya"
@@ -14,8 +15,10 @@
   "size": "1-10",
   "status": "active",
   "website": "https://animatorit.com",
+  "contact_url": "https://www.animatorit.com/copy-of-3",
   "links": {
-    "youtube": "https://www.youtube.com/channel/UCVOxFoSt0zIzNnEd5kPk64A"
+    "youtube": "https://www.youtube.com/channel/UCVOxFoSt0zIzNnEd5kPk64A",
+    "facebook": "https://www.facebook.com/animatorit"
   },
   "services": [
     "2D animated videos",
@@ -30,6 +33,5 @@
   "confidence": "low",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Thin site; no named people or clients.",
-  "description_he": "סטודיו בוטיק לאנימציה דו-ממדית מהרצליה, שמציע עיצוב ואנימציה לסרטונים לכל אירוע ולקליפים מוזיקליים מונפשים."
+  "notes": "Thin site; no named people or clients."
 }

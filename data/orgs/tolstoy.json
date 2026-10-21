@@ -9,6 +9,7 @@
     "adtech-creative"
   ],
   "description": "Tel Aviv e-commerce AI platform used by thousands of Shopify brands: AI Studio turns product photos and brand guidelines into on-brand product images and videos, while its AI Player publishes shoppable video/UGC and its AI shopping agents guide buyers. Began as an interactive-video startup.",
+  "description_he": "פלטפורמת AI לאיקומרס מתל אביב שמשמשת אלפי מותגי Shopify: AI Studio הופך תמונות מוצר והנחיות מותג לתמונות וסרטוני מוצר בשפת המותג, ה-AI Player מפרסם וידאו ו-UGC שאפשר לקנות מתוכם, וסוכני קנייה מבוססי AI מלווים את הקונים. התחילה כסטארטאפ לווידאו אינטראקטיבי.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -17,6 +18,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://www.gotolstoy.com",
+  "contact_url": "https://www.gotolstoy.com/contact-sales",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/gotolstoy/",
+    "instagram": "https://www.instagram.com/gotolstoy"
+  },
   "services": [
     "AI Studio (product images & video)",
     "Shoppable video player",
@@ -44,6 +50,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Funding undisclosed (seed 2020, round Dec 2021 per SNC Finder).",
-  "description_he": "פלטפורמת AI לאיקומרס מתל אביב שמשמשת אלפי מותגי Shopify: AI Studio הופך תמונות מוצר והנחיות מותג לתמונות וסרטוני מוצר בשפת המותג, ה-AI Player מפרסם וידאו ו-UGC שאפשר לקנות מתוכם, וסוכני קנייה מבוססי AI מלווים את הקונים. התחילה כסטארטאפ לווידאו אינטראקטיבי."
+  "notes": "Funding undisclosed (seed 2020, round Dec 2021 per SNC Finder)."
 }

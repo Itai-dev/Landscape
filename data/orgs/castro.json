@@ -7,6 +7,7 @@
     "retail-fashion"
   ],
   "description": "Israeli fashion retailer (est. 1973) selling women's, men's and kids' apparel and home goods; now part of the Hodis-Castro group alongside Hodis, Top Ten and Urbanica.",
+  "description_he": "רשת אופנה ישראלית (נוסדה ב-1973) שמוכרת ביגוד לנשים, לגברים ולילדים ומוצרי בית; כיום חלק מקבוצת הודיס-קסטרו לצד הודיס, טופ טן ואורבניקה.",
   "location": {
     "country": "IL",
     "city": "Bat Yam"
@@ -16,6 +17,11 @@
   "website": "https://www.castro.com",
   "contact_url": "https://www.castro.com/customer-care/contact-us",
   "careers_url": "https://www.castro.com/jobs",
+  "links": {
+    "instagram": "https://www.instagram.com/castrofashion",
+    "youtube": "https://www.youtube.com/user/TheCastrovideo",
+    "facebook": "https://www.facebook.com/castro.il"
+  },
   "key_people": [
     {
       "name": "Shiran Winter Sivoni",
@@ -53,6 +59,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Ownership per castro.com footer (Hodis-Castro group); HQ city per Wikipedia may predate the merger.",
-  "description_he": "רשת אופנה ישראלית (נוסדה ב-1973) שמוכרת ביגוד לנשים, לגברים ולילדים ומוצרי בית; כיום חלק מקבוצת הודיס-קסטרו לצד הודיס, טופ טן ואורבניקה."
+  "notes": "Ownership per castro.com footer (Hodis-Castro group); HQ city per Wikipedia may predate the merger."
 }

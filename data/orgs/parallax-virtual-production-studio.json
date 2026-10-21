@@ -12,6 +12,7 @@
     "creative-technology"
   ],
   "description": "Tel Aviv virtual production studio using Unreal Engine environments on a high-end LED wall with OptiTrack camera tracking for TV commercials, music videos, film and television. Located in the former Israeli Television main studios in Ramat Aviv and partnered with film rental house Movie Mobile.",
+  "description_he": "סטודיו להפקה וירטואלית בתל אביב שעובד עם סביבות Unreal Engine על קיר LED מתקדם ומעקב מצלמה של OptiTrack, לפרסומות טלוויזיה, קליפים, קולנוע וטלוויזיה. ממוקם באולפנים הראשיים לשעבר של הטלוויזיה הישראלית ברמת אביב ופועל בשותפות עם חברת השכרת הציוד Movie Mobile.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -22,7 +23,8 @@
   "links": {
     "linkedin": "https://il.linkedin.com/company/parallax-virtual-production-studio",
     "instagram": "https://www.instagram.com/parallaxvp/",
-    "youtube": "https://www.youtube.com/channel/UCkwf5NvACF4KV6yAEu558dA/videos"
+    "youtube": "https://www.youtube.com/channel/UCkwf5NvACF4KV6yAEu558dA/videos",
+    "facebook": "https://www.facebook.com/Parallax-Virtual-Production-Studio-100298022654199"
   },
   "services": [
     "LED volume virtual production",
@@ -65,6 +67,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו להפקה וירטואלית בתל אביב שעובד עם סביבות Unreal Engine על קיר LED מתקדם ומעקב מצלמה של OptiTrack, לפרסומות טלוויזיה, קליפים, קולנוע וטלוויזיה. ממוקם באולפנים הראשיים לשעבר של הטלוויזיה הישראלית ברמת אביב ופועל בשותפות עם חברת השכרת הציוד Movie Mobile."
+  "last_verified": "2026-10-18"
 }

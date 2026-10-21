@@ -9,6 +9,7 @@
     "animation-2d"
   ],
   "description": "Small international 2D animation studio ('Animation That Matters') producing story-driven educational and explainer content for NGOs, universities and companies.",
+  "description_he": "סטודיו אנימציית 2D בינלאומי קטן ('Animation That Matters') שמפיק תוכן חינוכי וסרטוני הסבר מבוססי סיפור לעמותות, אוניברסיטאות וחברות.",
   "location": {
     "country": "IL"
   },
@@ -20,7 +21,9 @@
   "links": {
     "vimeo": "https://vimeo.com/user108546517",
     "instagram": "https://www.instagram.com/tmc_animation/",
-    "youtube": "https://www.youtube.com/channel/UCoIHe7Wnfk6wCr62QDBvk0Q"
+    "youtube": "https://www.youtube.com/channel/UCoIHe7Wnfk6wCr62QDBvk0Q",
+    "facebook": "https://www.facebook.com/TMCAnimation",
+    "linkedin": "https://www.linkedin.com/company/33260798/"
   },
   "services": [
     "2D animation",
@@ -46,6 +49,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "City not stated; Israeli phone number and Animation Israel listing.",
-  "description_he": "סטודיו אנימציית 2D בינלאומי קטן ('Animation That Matters') שמפיק תוכן חינוכי וסרטוני הסבר מבוססי סיפור לעמותות, אוניברסיטאות וחברות."
+  "notes": "City not stated; Israeli phone number and Animation Israel listing."
 }

@@ -10,6 +10,7 @@
     "pr-social"
   ],
   "description": "Tel Aviv creator-marketing platform (founded 2017) that connects brands with influencers and creators for partnership ads, UGC, affiliate commerce and advocacy programs, with audience verification and attribution. Raised $15M in Dec 2025 (total $32M) and acquired Ubiquitous and Bambassadors to expand in the US.",
+  "description_he": "פלטפורמת שיווק יוצרים תל אביבית (נוסדה ב-2017) המחברת מותגים עם משפיענים ויוצרי תוכן לפרסומות שיתופי פעולה, UGC, מסחר אפיליאייט ותוכניות שגרירים, עם אימות קהלים ומדידת ייחוס. גייסה 15 מיליון דולר בדצמבר 2025 (32 מיליון דולר בסך הכול) ורכשה את Ubiquitous ואת Bambassadors כדי להתרחב בארה\"ב.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -17,6 +18,12 @@
   "founded": 2017,
   "status": "active",
   "website": "https://www.humanz.com",
+  "careers_url": "https://apply.workable.com/humanz/?lng=en",
+  "links": {
+    "instagram": "https://www.instagram.com/humanz",
+    "linkedin": "https://www.linkedin.com/company/humanz/",
+    "youtube": "https://www.youtube.com/@HumanzTV"
+  },
   "services": [
     "Influencer/creator marketing platform",
     "Partnership ads & UGC",
@@ -63,6 +70,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Site suggests operations in South Africa and Turkey as well.",
-  "description_he": "פלטפורמת שיווק יוצרים תל אביבית (נוסדה ב-2017) המחברת מותגים עם משפיענים ויוצרי תוכן לפרסומות שיתופי פעולה, UGC, מסחר אפיליאייט ותוכניות שגרירים, עם אימות קהלים ומדידת ייחוס. גייסה 15 מיליון דולר בדצמבר 2025 (32 מיליון דולר בסך הכול) ורכשה את Ubiquitous ואת Bambassadors כדי להתרחב בארה\"ב."
+  "notes": "Site suggests operations in South Africa and Turkey as well."
 }

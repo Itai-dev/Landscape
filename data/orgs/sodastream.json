@@ -8,6 +8,7 @@
     "food-beverage"
   ],
   "description": "Home sparkling-water maker owned by PepsiCo (acquired 2018), HQ in Kfar Saba with production in Israel; runs global and local campaigns and heavy product and social content.",
+  "description_he": "יצרנית מכשירי הגזה ביתיים בבעלות פפסיקו (נרכשה ב-2018), עם מטה בכפר סבא וייצור בישראל; מריצה קמפיינים גלובליים ומקומיים ומייצרת היקף גדול של תוכן מוצר וסושיאל.",
   "location": {
     "country": "IL",
     "city": "Kfar Saba"
@@ -17,7 +18,10 @@
   "website": "https://sodastream.co.il",
   "careers_url": "https://www.pepsicojobs.com/sodastream",
   "links": {
-    "global": "https://www.sodastream.com"
+    "global": "https://www.sodastream.com",
+    "facebook": "https://www.facebook.com/SodaStreamIL",
+    "instagram": "https://www.instagram.com/sodastreamil",
+    "youtube": "https://www.youtube.com/channel/UC-rkP-Vkk6inXXzOiW2g4fQ"
   },
   "key_people": [
     {
@@ -82,6 +86,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "יצרנית מכשירי הגזה ביתיים בבעלות פפסיקו (נרכשה ב-2018), עם מטה בכפר סבא וייצור בישראל; מריצה קמפיינים גלובליים ומקומיים ומייצרת היקף גדול של תוכן מוצר וסושיאל."
+  "last_verified": "2026-10-19"
 }

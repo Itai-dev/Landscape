@@ -7,6 +7,7 @@
     "tech"
   ],
   "description": "Israeli cybersecurity pioneer (founded 1993 by Gil Shwed, Marius Nacht and Shlomo Kramer), Nasdaq-listed, ~6,800 employees; produces global brand, product and event (CPX) content.",
+  "description_he": "חלוצת הסייבר הישראלית (נוסדה ב-1993 על ידי גיל שויד, מריוס נחט ושלמה קרמר), נסחרת בנאסד\"ק, כ-6,800 עובדים; מפיקה תוכן מותג, מוצר ואירועים (CPX) גלובלי.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -17,6 +18,12 @@
   "website": "https://www.checkpoint.com",
   "contact_url": "https://www.checkpoint.com/about-us/contact-us/",
   "careers_url": "https://careers.checkpoint.com/",
+  "links": {
+    "instagram": "https://www.instagram.com/checkpointsoftware",
+    "facebook": "https://www.facebook.com/checkpointsoftware",
+    "linkedin": "https://www.linkedin.com/company/check-point-software-technologies/",
+    "youtube": "https://www.youtube.com/user/CPGlobal"
+  },
   "key_people": [
     {
       "name": "Gil Shwed",
@@ -58,6 +65,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "description_he": "חלוצת הסייבר הישראלית (נוסדה ב-1993 על ידי גיל שויד, מריוס נחט ושלמה קרמר), נסחרת בנאסד\"ק, כ-6,800 עובדים; מפיקה תוכן מותג, מוצר ואירועים (CPX) גלובלי."
+  "last_verified": "2026-10-19"
 }

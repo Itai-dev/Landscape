@@ -10,6 +10,7 @@
     "telecom"
   ],
   "description": "Israel's largest telecommunications group (fixed-line, fiber internet, B2B), parent of Pelephone, yes and Bezeq International. Listed on the TASE and controlled via B Communications (Searchlight).",
+  "description_he": "קבוצת התקשורת הגדולה בישראל (טלפוניה נייחת, אינטרנט סיבים, B2B), חברת האם של פלאפון, yes ובזק בינלאומי. נסחרת בבורסת תל אביב ונשלטת באמצעות בי קומיוניקיישנס (Searchlight).",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -20,6 +21,12 @@
   "website": "https://www.bezeq.co.il",
   "contact_url": "https://www.bezeq.co.il/serviceandsupport/contactus/",
   "careers_url": "https://www.bezeq.co.il/career/",
+  "links": {
+    "instagram": "https://www.instagram.com/bezeq",
+    "facebook": "https://www.facebook.com/Bezeq",
+    "linkedin": "https://www.linkedin.com/company/bezeq/",
+    "youtube": "https://www.youtube.com/user/BezeqNGN"
+  },
   "key_people": [
     {
       "name": "Tali Poleg",
@@ -71,6 +78,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Globes' 2025 ad review lists Bezeq (with Discount) as Adler Chomski's main TV accounts. Employee figure is group-wide.",
-  "description_he": "קבוצת התקשורת הגדולה בישראל (טלפוניה נייחת, אינטרנט סיבים, B2B), חברת האם של פלאפון, yes ובזק בינלאומי. נסחרת בבורסת תל אביב ונשלטת באמצעות בי קומיוניקיישנס (Searchlight)."
+  "notes": "Globes' 2025 ad review lists Bezeq (with Discount) as Adler Chomski's main TV accounts. Employee figure is group-wide."
 }

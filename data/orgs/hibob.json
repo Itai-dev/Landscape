@@ -9,6 +9,7 @@
     "tech"
   ],
   "description": "HR platform 'bob' for mid-sized companies, founded in Tel Aviv in 2015 by Ronni Zehavi and Israel David; HQ in London with a large Tel Aviv office.",
+  "description_he": "פלטפורמת משאבי האנוש 'bob' לחברות בינוניות, שנוסדה בתל אביב ב-2015 על ידי רוני זהבי וישראל דוד; המטה בלונדון ומשרד גדול בתל אביב.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -18,6 +19,12 @@
   "website": "https://www.hibob.com",
   "contact_url": "https://www.hibob.com/contact-us/",
   "careers_url": "https://www.hibob.com/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/HiBobHR",
+    "linkedin": "https://www.linkedin.com/company/7586104/",
+    "instagram": "https://www.instagram.com/hibobHR",
+    "youtube": "https://www.youtube.com/channel/UCq7QDrOUMw6rcbOUfKawn1A"
+  },
   "key_people": [
     {
       "name": "Sophie Chesters",
@@ -43,6 +50,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "פלטפורמת משאבי האנוש 'bob' לחברות בינוניות, שנוסדה בתל אביב ב-2015 על ידי רוני זהבי וישראל דוד; המטה בלונדון ומשרד גדול בתל אביב."
+  "last_verified": "2026-10-19"
 }

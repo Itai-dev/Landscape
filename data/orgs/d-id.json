@@ -8,6 +8,7 @@
     "dubbing-localization"
   ],
   "description": "Tel Aviv-founded digital-human company whose Creative Reality Studio and API turn photos and text into talking-avatar videos, real-time interactive 'visual AI agents' and translated videos. Originally a face de-identification company; it powered MyHeritage's Deep Nostalgia. Acquired German explainer-video company simpleshow in September 2025.",
+  "description_he": "חברת דיגיטל יומנז שנוסדה בתל אביב, שה-Creative Reality Studio וה-API שלה הופכים תמונות וטקסט לסרטוני אווטאר מדברים, ל'סוכני AI ויזואליים' אינטראקטיביים בזמן אמת ולסרטונים מתורגמים. במקור חברה לטשטוש זהות בפנים; הטכנולוגיה שלה עמדה מאחורי Deep Nostalgia של MyHeritage. רכשה בספטמבר 2025 את חברת סרטוני ההסבר הגרמנית simpleshow.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -15,6 +16,14 @@
   "founded": 2017,
   "status": "active",
   "website": "https://www.d-id.com",
+  "contact_url": "https://www.d-id.com/contact-us",
+  "careers_url": "https://www.d-id.com/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/deidentification",
+    "instagram": "https://www.instagram.com/d_id.ai",
+    "linkedin": "https://www.linkedin.com/company/deidentification/",
+    "youtube": "https://www.youtube.com/@d-id"
+  },
   "services": [
     "AI avatar video generator",
     "Visual AI agents",
@@ -62,6 +71,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$25M Series B (2022) led by Macquarie Capital brought total to ~$48M; aggregators list a later undisclosed 2024 round (NTT Finance reported as investor).",
-  "description_he": "חברת דיגיטל יומנז שנוסדה בתל אביב, שה-Creative Reality Studio וה-API שלה הופכים תמונות וטקסט לסרטוני אווטאר מדברים, ל'סוכני AI ויזואליים' אינטראקטיביים בזמן אמת ולסרטונים מתורגמים. במקור חברה לטשטוש זהות בפנים; הטכנולוגיה שלה עמדה מאחורי Deep Nostalgia של MyHeritage. רכשה בספטמבר 2025 את חברת סרטוני ההסבר הגרמנית simpleshow."
+  "notes": "$25M Series B (2022) led by Macquarie Capital brought total to ~$48M; aggregators list a later undisclosed 2024 round (NTT Finance reported as investor)."
 }

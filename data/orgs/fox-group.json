@@ -10,6 +10,7 @@
     "retail-fashion"
   ],
   "description": "Israeli fashion and lifestyle retail group (est. 1942 as Trico Fox) operating the Fox brand family and international franchises; traded on the TASE.",
+  "description_he": "קבוצת אופנה ולייף-סטייל קמעונאית ישראלית (נוסדה ב-1942 כטריקו פוקס), המפעילה את משפחת המותגים של פוקס וזכיונות בינלאומיים; נסחרת בבורסת תל אביב.",
   "location": {
     "country": "IL",
     "city": "Airport City"
@@ -20,6 +21,10 @@
   "website": "https://www.fox.co.il",
   "contact_url": "https://fox.co.il/pages/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8",
   "careers_url": "https://dreamjobs.co.il/brand/FOX",
+  "links": {
+    "facebook": "https://www.facebook.com/FoxIsrael",
+    "instagram": "https://www.instagram.com/fox_israel"
+  },
   "key_people": [
     {
       "name": "Harel Wizel",
@@ -58,6 +63,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "description_he": "קבוצת אופנה ולייף-סטייל קמעונאית ישראלית (נוסדה ב-1942 כטריקו פוקס), המפעילה את משפחת המותגים של פוקס וזכיונות בינלאומיים; נסחרת בבורסת תל אביב."
+  "last_verified": "2026-10-19"
 }

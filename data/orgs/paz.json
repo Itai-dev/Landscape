@@ -11,6 +11,7 @@
     "energy"
   ],
   "description": "TASE-listed Israeli fuel and retail group (est. 1958, Yakum HQ) with ~270 filling stations, the Yellow convenience chain, Super Yuda and Freshmarket supermarkets, plus EV charging and gas (Pazgaz).",
+  "description_he": "קבוצת דלק וקמעונאות ישראלית הנסחרת בבורסת תל אביב (נוסדה ב-1958, מטה ביקום) עם כ-270 תחנות דלק, רשת הנוחות Yellow, רשתות הסופרמרקטים סופר יודה ופרשמרקט, וכן טעינת רכבים חשמליים וגז (פזגז).",
   "location": {
     "country": "IL",
     "city": "Yakum"
@@ -20,6 +21,10 @@
   "website": "https://www.paz.co.il",
   "contact_url": "https://www.paz.co.il/contact",
   "careers_url": "https://www.paz.co.il/jobs",
+  "links": {
+    "youtube": "https://youtube.com/@paz-9691",
+    "facebook": "https://www.facebook.com/YellowPaz"
+  },
   "key_people": [
     {
       "name": "Ofir Inbar",
@@ -66,6 +71,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "McCann link dates from 2022 (ICE profile of then-marketer Adi Negbi); current marketing head not confirmed.",
-  "description_he": "קבוצת דלק וקמעונאות ישראלית הנסחרת בבורסת תל אביב (נוסדה ב-1958, מטה ביקום) עם כ-270 תחנות דלק, רשת הנוחות Yellow, רשתות הסופרמרקטים סופר יודה ופרשמרקט, וכן טעינת רכבים חשמליים וגז (פזגז)."
+  "notes": "McCann link dates from 2022 (ICE profile of then-marketer Adi Negbi); current marketing head not confirmed."
 }

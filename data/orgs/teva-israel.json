@@ -7,6 +7,7 @@
     "health-pharma"
   ],
   "description": "Israeli arm of Teva Pharmaceutical Industries (est. 1935, Tel Aviv HQ, TASE/NYSE: TEVA), selling generics, specialty and OTC medicines locally; Teva employs ~37,000 people worldwide.",
+  "description_he": "הזרוע הישראלית של טבע תעשיות פרמצבטיות (נוסדה ב-1935, מטה בתל אביב, בורסת תל אביב/NYSE: TEVA), שמשווקת בארץ תרופות גנריות, תרופות מקור ותרופות ללא מרשם; בטבע מועסקים כ-37,000 עובדים ברחבי העולם.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -18,7 +19,10 @@
   "contact_url": "https://www.teva.co.il/contact-us/",
   "careers_url": "https://www.teva.co.il/career/",
   "links": {
-    "global": "https://www.tevapharm.com"
+    "global": "https://www.tevapharm.com",
+    "linkedin": "https://www.linkedin.com/company/teva-pharmaceuticals/",
+    "instagram": "https://www.instagram.com/teva_israel_",
+    "youtube": "https://www.youtube.com/@teva_israel"
   },
   "client_profile": {
     "industry": "pharmaceuticals",
@@ -64,6 +68,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "הזרוע הישראלית של טבע תעשיות פרמצבטיות (נוסדה ב-1935, מטה בתל אביב, בורסת תל אביב/NYSE: TEVA), שמשווקת בארץ תרופות גנריות, תרופות מקור ותרופות ללא מרשם; בטבע מועסקים כ-37,000 עובדים ברחבי העולם."
+  "last_verified": "2026-10-19"
 }

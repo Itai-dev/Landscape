@@ -8,6 +8,7 @@
     "film-production"
   ],
   "description": "Givatayim-based production company founded in 2009 by Gal Greenspan and Roi Kurland, producing feature films, TV series and large-scale TV/digital commercials for leading Israeli ad agencies and brands, with an office in Australia. Feature credits include Scaffolding, Cinema Sabaya and Let Shuli Go.",
+  "description_he": "חברת הפקות מגבעתיים שנוסדה ב-2009 על ידי גל גרינשפן ורועי קורלנד, ומפיקה סרטים עלילתיים, סדרות טלוויזיה ופרסומות טלוויזיה ודיגיטל בהיקף גדול עבור משרדי הפרסום והמותגים המובילים בישראל, עם משרד באוסטרליה. בין הסרטים: פיגומים, סינמה סבאיא ו-Let Shuli Go.",
   "location": {
     "country": "IL",
     "city": "Givatayim",
@@ -21,7 +22,8 @@
   "contact_url": "https://www.greenproductions.co.il/contact",
   "links": {
     "instagram": "https://www.instagram.com/green_productions_il",
-    "vimeo": "https://vimeo.com/user23010303"
+    "vimeo": "https://vimeo.com/user23010303",
+    "facebook": "https://www.facebook.com/GREENproductions-113754182028398"
   },
   "services": [
     "TV commercials (live action)",
@@ -127,6 +129,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Trade press reported ~15 employees and 300+ freelancers per month (ice.co.il/Bizportal). Founder name sometimes spelled Roy Kurland/Korland.",
-  "description_he": "חברת הפקות מגבעתיים שנוסדה ב-2009 על ידי גל גרינשפן ורועי קורלנד, ומפיקה סרטים עלילתיים, סדרות טלוויזיה ופרסומות טלוויזיה ודיגיטל בהיקף גדול עבור משרדי הפרסום והמותגים המובילים בישראל, עם משרד באוסטרליה. בין הסרטים: פיגומים, סינמה סבאיא ו-Let Shuli Go."
+  "notes": "Trade press reported ~15 employees and 300+ freelancers per month (ice.co.il/Bizportal). Founder name sometimes spelled Roy Kurland/Korland."
 }

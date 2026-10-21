@@ -7,6 +7,7 @@
     "gen-ai-video"
   ],
   "description": "Tel Aviv startup behind BodyTalk, an AI video-dubbing platform that translates speakers into ~29 languages while preserving their voice and re-syncing lip and facial movements; TED and JFrog are reported customers.",
+  "description_he": "סטארטאפ מתל אביב שמאחורי BodyTalk, פלטפורמת דיבוב וידאו מבוססת AI שמתרגמת דוברים לכ-29 שפות תוך שמירה על הקול שלהם וסנכרון מחדש של תנועות השפתיים והפנים; לפי דיווחים, TED ו-JFrog בין הלקוחות.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -14,6 +15,11 @@
   "founded": 2021,
   "status": "active",
   "website": "https://www.panjaya.ai",
+  "contact_url": "https://www.panjaya.ai/contact-sales",
+  "links": {
+    "instagram": "https://www.instagram.com/panjaya.ai",
+    "linkedin": "https://www.linkedin.com/company/panjaya-ai/"
+  },
   "services": [
     "BodyTalk AI dubbing with lip-sync",
     "Dubbing Studio"
@@ -56,6 +62,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Founding year given as 2021 or 2022 by different sources.",
-  "description_he": "סטארטאפ מתל אביב שמאחורי BodyTalk, פלטפורמת דיבוב וידאו מבוססת AI שמתרגמת דוברים לכ-29 שפות תוך שמירה על הקול שלהם וסנכרון מחדש של תנועות השפתיים והפנים; לפי דיווחים, TED ו-JFrog בין הלקוחות."
+  "notes": "Founding year given as 2021 or 2022 by different sources."
 }

@@ -12,14 +12,19 @@
     "festival-event"
   ],
   "description": "Tel Aviv University's film and TV school (Faculty of the Arts), raised to school status by Steve Tisch's $10M gift in 2015. Runs undergraduate and graduate programs incl. an English MFA in Documentary Cinema, and the TLV International Student Film Festival, founded by its students in 1986. Alumni include Oscar-shortlisted short 'Butcher's Stain'.",
+  "description_he": "בית הספר לקולנוע וטלוויזיה של אוניברסיטת תל אביב (הפקולטה לאמנויות), שהפך לבית ספר בזכות תרומה של 10 מיליון דולר מסטיב טיש ב-2015. מפעיל תוכניות לתואר ראשון ולתארים מתקדמים, כולל MFA בקולנוע דוקומנטרי באנגלית, ואת פסטיבל סרטי הסטודנטים הבינלאומי TLV, שייסדו הסטודנטים שלו ב-1986. בין הבוגרים: הסרט הקצר 'Butcher's Stain' שנכנס לרשימה המקוצרת לאוסקר.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
   },
   "status": "active",
   "website": "https://en-arts.tau.ac.il/filmTV",
+  "contact_url": "https://en-arts.tau.ac.il/film-tv/contactus",
   "links": {
-    "instagram": "https://www.instagram.com/tau.stevetisch.filmtv.school"
+    "instagram": "https://www.instagram.com/tau.stevetisch.filmtv.school",
+    "linkedin": "https://www.linkedin.com/school/tel-aviv-university/",
+    "youtube": "https://www.youtube.com/user/TAUVOD",
+    "facebook": "https://www.facebook.com/globaltau"
   },
   "services": [
     "B.A./M.A. film & TV",
@@ -46,6 +51,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Last publicly named head found: Prof. Yaron Bloch (2023 faculty call) — not confirmed for 2026, so omitted from key_people.",
-  "description_he": "בית הספר לקולנוע וטלוויזיה של אוניברסיטת תל אביב (הפקולטה לאמנויות), שהפך לבית ספר בזכות תרומה של 10 מיליון דולר מסטיב טיש ב-2015. מפעיל תוכניות לתואר ראשון ולתארים מתקדמים, כולל MFA בקולנוע דוקומנטרי באנגלית, ואת פסטיבל סרטי הסטודנטים הבינלאומי TLV, שייסדו הסטודנטים שלו ב-1986. בין הבוגרים: הסרט הקצר 'Butcher's Stain' שנכנס לרשימה המקוצרת לאוסקר."
+  "notes": "Last publicly named head found: Prof. Yaron Bloch (2023 faculty call) — not confirmed for 2026, so omitted from key_people."
 }

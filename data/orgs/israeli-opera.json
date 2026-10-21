@@ -10,6 +10,7 @@
     "public-sector"
   ],
   "description": "Israel's principal opera company, founded in 1985 and based at the Tel Aviv Performing Arts Center since 1994; also stages large outdoor productions (Israeli Opera Festival, Masada).",
+  "description_he": "להקת האופרה המרכזית של ישראל, שנוסדה ב-1985 ושוכנת במשכן לאמנויות הבמה בתל אביב מאז 1994; מעלה גם הפקות חוצות גדולות (פסטיבל האופרה הישראלית, מצדה).",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -18,6 +19,7 @@
   "status": "active",
   "website": "https://www.israel-opera.co.il",
   "contact_url": "https://www.israel-opera.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
+  "careers_url": "https://www.israel-opera.co.il/category/%d7%a7%d7%a8%d7%99%d7%99%d7%a8%d7%94",
   "links": {
     "instagram": "https://www.instagram.com/israelopera/",
     "facebook": "https://www.facebook.com/israeliopera",
@@ -48,6 +50,5 @@
   ],
   "confidence": "medium",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "להקת האופרה המרכזית של ישראל, שנוסדה ב-1985 ושוכנת במשכן לאמנויות הבמה בתל אביב מאז 1994; מעלה גם הפקות חוצות גדולות (פסטיבל האופרה הישראלית, מצדה)."
+  "last_verified": "2026-10-19"
 }

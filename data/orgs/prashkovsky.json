@@ -17,6 +17,12 @@
   },
   "status": "active",
   "website": "https://www.prashkovsky.co.il",
+  "contact_url": "https://www.prashkovsky.co.il/%d7%99%d7%a6%d7%99%d7%a8%d7%aa-%d7%a7%d7%a9%d7%a8",
+  "careers_url": "https://www.prashkovsky.co.il/jobs",
+  "links": {
+    "instagram": "https://www.instagram.com/prashkovsky.ltd",
+    "facebook": "https://www.facebook.com/prashkovsky.ashi"
+  },
   "key_people": [
     {
       "name": "Efi Arnfeld",

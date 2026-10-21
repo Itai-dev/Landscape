@@ -8,6 +8,7 @@
     "avatars"
   ],
   "description": "Be'er Sheva-founded AI video studio for creators, realtors, coaches and marketers: teleprompter recording, AI captions and editing, AI script writing, voice cloning and 'AI twin' avatars, plus a done-for-you 'SuperAgent' video service.",
+  "description_he": "סטודיו וידאו מבוסס AI שנוסד בבאר שבע, ליוצרים, מתווכי נדל\"ן, מאמנים ומשווקים: הקלטה עם טלפרומפטר, כתוביות ועריכה ב-AI, כתיבת תסריטים ב-AI, שיבוט קול ואווטארים של 'תאום AI', לצד שירות וידאו מלא 'SuperAgent'.",
   "location": {
     "country": "IL",
     "city": "Be'er Sheva",
@@ -19,6 +20,11 @@
   "size": "11-50",
   "status": "active",
   "website": "https://bigvu.tv",
+  "links": {
+    "instagram": "https://www.instagram.com/bigvu.maker",
+    "linkedin": "https://www.linkedin.com/company/10500794/",
+    "youtube": "https://www.youtube.com/c/bigvu"
+  },
   "services": [
     "Teleprompter app",
     "Auto-captions & video editing",
@@ -60,6 +66,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Official site lists BIGVU Inc. in New York; Israeli HQ (Be'er Sheva) per startupim/registry. Israeli entity flagged for unfiled annual reports since 2022 — current Israeli operations unclear.",
-  "description_he": "סטודיו וידאו מבוסס AI שנוסד בבאר שבע, ליוצרים, מתווכי נדל\"ן, מאמנים ומשווקים: הקלטה עם טלפרומפטר, כתוביות ועריכה ב-AI, כתיבת תסריטים ב-AI, שיבוט קול ואווטארים של 'תאום AI', לצד שירות וידאו מלא 'SuperAgent'."
+  "notes": "Official site lists BIGVU Inc. in New York; Israeli HQ (Be'er Sheva) per startupim/registry. Israeli entity flagged for unfiled annual reports since 2022 — current Israeli operations unclear."
 }

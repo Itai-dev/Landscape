@@ -8,6 +8,7 @@
     "adtech-creative"
   ],
   "description": "Content-recommendation and performance-advertising company founded in Israel in 2007 by Adam Singolda; HQ New York with major R&D in Tel Aviv; Nasdaq: TBLA (Realize platform).",
+  "description_he": "חברת המלצות תוכן ופרסום פרפורמנס שנוסדה בישראל ב-2007 על ידי אדם סינגולדה; מטה בניו יורק ומרכז פיתוח גדול בתל אביב; נאסד\"ק: TBLA (פלטפורמת Realize).",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -21,6 +22,12 @@
   "website": "https://www.taboola.com",
   "contact_url": "https://www.taboola.com/contact",
   "careers_url": "https://www.taboola.com/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/Taboola",
+    "instagram": "https://www.instagram.com/taboola",
+    "linkedin": "https://www.linkedin.com/company/taboola/",
+    "youtube": "https://www.youtube.com/@Taboola1"
+  },
   "key_people": [
     {
       "name": "Adam Singolda",
@@ -50,6 +57,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Tel Aviv office from general knowledge (Wikipedia does not describe the Israeli office). May overlap with an ad-tech startup segment.",
-  "description_he": "חברת המלצות תוכן ופרסום פרפורמנס שנוסדה בישראל ב-2007 על ידי אדם סינגולדה; מטה בניו יורק ומרכז פיתוח גדול בתל אביב; נאסד\"ק: TBLA (פלטפורמת Realize)."
+  "notes": "Tel Aviv office from general knowledge (Wikipedia does not describe the Israeli office). May overlap with an ad-tech startup segment."
 }

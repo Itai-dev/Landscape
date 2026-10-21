@@ -13,6 +13,7 @@
     "gen-ai-video"
   ],
   "description": "Tel Aviv company (started 2012 as slideshow app Slidely) offering an online video maker for businesses with licensed footage, templates for social and video ads, the PromoAI social media manager and 'ActiveCast' AI video generation with commercial rights.",
+  "description_he": "חברה מתל אביב (החלה ב-2012 כאפליקציית המצגות Slidely) שמציעה לעסקים כלי אונליין ליצירת וידאו עם צילומי סטוק ברישיון, תבניות לפרסומות בסושיאל ובווידאו, מנהל הסושיאל PromoAI ויצירת וידאו ב-AI בשם 'ActiveCast' עם זכויות שימוש מסחרי.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -25,6 +26,13 @@
   "size": "51-200",
   "status": "active",
   "website": "https://promo.com",
+  "careers_url": "https://promo.com/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/promodotcom",
+    "instagram": "https://www.instagram.com/promodotcom",
+    "linkedin": "https://www.linkedin.com/company/promodotcom/",
+    "vimeo": "https://vimeo.com/promobyslidely"
+  },
   "services": [
     "Template-based marketing video maker",
     "Stock footage & music library",
@@ -79,6 +87,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Tel Aviv address (Alon Towers, Yigal Alon St.) from privacy policy. Founders/funding not verified in this pass.",
-  "description_he": "חברה מתל אביב (החלה ב-2012 כאפליקציית המצגות Slidely) שמציעה לעסקים כלי אונליין ליצירת וידאו עם צילומי סטוק ברישיון, תבניות לפרסומות בסושיאל ובווידאו, מנהל הסושיאל PromoAI ויצירת וידאו ב-AI בשם 'ActiveCast' עם זכויות שימוש מסחרי."
+  "notes": "Tel Aviv address (Alon Towers, Yigal Alon St.) from privacy policy. Founders/funding not verified in this pass."
 }

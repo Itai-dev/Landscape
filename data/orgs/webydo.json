@@ -7,6 +7,7 @@
     "design-tools"
   ],
   "description": "Israeli-founded cloud website-building platform for designers and web agencies (code-free editor, CMS, hosting, white-label client billing), co-founded by Shmulik Grizim and Zvika Steinmetz. The current site (Webydo Inc., Wilmington, Delaware) markets an all-in-one AI builder, store, CRM and agency platform.",
+  "description_he": "פלטפורמת ענן לבניית אתרים למעצבים ולסוכנויות ווב (עורך ללא קוד, CMS, אחסון, חיוב לקוחות ב-white-label) שנוסדה בישראל, בהקמת שמוליק גריזים וצביקה שטיינמץ. האתר הנוכחי (Webydo Inc., וילמינגטון, דלאוור) משווק בונה AI הכול-באחד, חנות, CRM ופלטפורמה לסוכנויות.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -17,6 +18,14 @@
   "founded": 2010,
   "status": "active",
   "website": "https://www.webydo.com",
+  "contact_url": "https://www.webydo.com/contact",
+  "careers_url": "https://www.webydo.com/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/Webydo",
+    "linkedin": "https://www.linkedin.com/company/webydo/",
+    "instagram": "https://www.instagram.com/webydo",
+    "youtube": "https://www.youtube.com/c/Webydo"
+  },
   "services": [
     "Website builder for designers & agencies",
     "White-label hosting & CMS",
@@ -45,6 +54,5 @@
   "confidence": "low",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Product live (2026), but Israeli registry data shows no annual report since 2016 and the site lists a US entity; current Israeli presence uncertain.",
-  "description_he": "פלטפורמת ענן לבניית אתרים למעצבים ולסוכנויות ווב (עורך ללא קוד, CMS, אחסון, חיוב לקוחות ב-white-label) שנוסדה בישראל, בהקמת שמוליק גריזים וצביקה שטיינמץ. האתר הנוכחי (Webydo Inc., וילמינגטון, דלאוור) משווק בונה AI הכול-באחד, חנות, CRM ופלטפורמה לסוכנויות."
+  "notes": "Product live (2026), but Israeli registry data shows no annual report since 2016 and the site lists a US entity; current Israeli presence uncertain."
 }

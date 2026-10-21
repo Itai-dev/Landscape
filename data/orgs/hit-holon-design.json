@@ -13,12 +13,18 @@
     "xr"
   ],
   "description": "Faculty of Design at the Holon Institute of Technology: B.Des. in Visual Communication, Industrial and Interior Design plus an M.Des. in Design for Technological Environment. Visual Communication has taught interactive design since 2010 and added immersive (AR/VR) design and AI across the curriculum.",
+  "description_he": "הפקולטה לעיצוב במכון הטכנולוגי חולון: תואר B.Des. בתקשורת חזותית, עיצוב תעשייתי ועיצוב פנים, וכן תואר M.Des. בעיצוב לסביבה טכנולוגית. המחלקה לתקשורת חזותית מלמדת עיצוב אינטראקטיבי מאז 2010 והוסיפה עיצוב אימרסיבי (AR/VR) ו-AI לאורך כל תוכנית הלימודים.",
   "location": {
     "country": "IL",
     "city": "Holon"
   },
   "status": "active",
   "website": "https://www.hit.ac.il/en/academic/design/",
+  "links": {
+    "instagram": "https://www.instagram.com/hit_il",
+    "linkedin": "https://www.linkedin.com/school/hit---holon-institute-of-technlogy/",
+    "facebook": "https://www.facebook.com/HIT.IL"
+  },
   "services": [
     "B.Des. Visual Communication Design",
     "B.Des. Industrial Design",
@@ -46,6 +52,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "הפקולטה לעיצוב במכון הטכנולוגי חולון: תואר B.Des. בתקשורת חזותית, עיצוב תעשייתי ועיצוב פנים, וכן תואר M.Des. בעיצוב לסביבה טכנולוגית. המחלקה לתקשורת חזותית מלמדת עיצוב אינטראקטיבי מאז 2010 והוסיפה עיצוב אימרסיבי (AR/VR) ו-AI לאורך כל תוכנית הלימודים."
+  "last_verified": "2026-10-19"
 }

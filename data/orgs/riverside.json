@@ -11,6 +11,7 @@
     "creator-economy"
   ],
   "description": "Tel Aviv-founded recording and AI editing studio for podcasts and video: browser-based 4K local recording, text-based editor, Magic Clips short-form repurposing, AI voice/translation, captions, live streaming, webinars and podcast hosting. Founded by the Keyson brothers.",
+  "description_he": "סטודיו להקלטה ועריכה מבוססת AI לפודקאסטים ולווידאו שנוסד בתל אביב: הקלטה מקומית ב-4K מהדפדפן, עורך מבוסס טקסט, Magic Clips להמרת תוכן לפורמט קצר, קול ותרגום ב-AI, כתוביות, שידורים חיים, וובינרים ואחסון פודקאסטים. הוקם על ידי האחים קייסון.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -19,6 +20,12 @@
   "size": "201-500",
   "status": "active",
   "website": "https://riverside.fm",
+  "careers_url": "https://www.comeet.com/jobs/riverside-fm/66.009",
+  "links": {
+    "facebook": "https://www.facebook.com/riversidedotfm",
+    "linkedin": "https://www.linkedin.com/company/riverside-fm/",
+    "instagram": "https://www.instagram.com/riverside.fm"
+  },
   "services": [
     "Remote podcast/video recording",
     "AI text-based editing",
@@ -61,6 +68,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$35M Series B (2022) and $30M Series C (Dec 2024), both led by Oren Zeev. A directory mentions a May 2026 Pipio-related acquisition (direction unclear) - unverified.",
-  "description_he": "סטודיו להקלטה ועריכה מבוססת AI לפודקאסטים ולווידאו שנוסד בתל אביב: הקלטה מקומית ב-4K מהדפדפן, עורך מבוסס טקסט, Magic Clips להמרת תוכן לפורמט קצר, קול ותרגום ב-AI, כתוביות, שידורים חיים, וובינרים ואחסון פודקאסטים. הוקם על ידי האחים קייסון."
+  "notes": "$35M Series B (2022) and $30M Series C (Dec 2024), both led by Oren Zeev. A directory mentions a May 2026 Pipio-related acquisition (direction unclear) - unverified."
 }

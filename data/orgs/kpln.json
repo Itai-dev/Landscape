@@ -12,6 +12,7 @@
     "digital-agency"
   ],
   "description": "Israeli creative and strategy agency founded in 2002 by Guy Boroda, with Ron Kaplan joining a year later; formerly part of the Adler Chomski group. Renamed KPLN in 2026 after Boroda's exit, led by CEO Ron Kaplan; ~35 employees, with an in-house studio & adaptation unit and performance media.",
+  "description_he": "משרד קריאייטיב ואסטרטגיה ישראלי שנוסד ב-2002 על ידי גיא בורודה, כשרון קפלן הצטרף שנה לאחר מכן; היה בעבר חלק מקבוצת אדלר חומסקי. שמו שונה ל-KPLN ב-2026 לאחר פרישתו של בורודה, ובראשו המנכ\"ל רון קפלן; כ-35 עובדים, עם יחידת סטודיו ואדפטציות פנימית ומדיה לפרפורמנס.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -22,7 +23,9 @@
   "website": "https://kpln.co.il/",
   "contact_url": "https://kpln.co.il/contact/",
   "links": {
-    "linkedin": "https://www.linkedin.com/company/kpln"
+    "linkedin": "https://www.linkedin.com/company/kpln",
+    "instagram": "https://www.instagram.com/kpln__advertising",
+    "facebook": "https://www.facebook.com/KPLNadvertising"
   },
   "services": [
     "Strategy",
@@ -89,6 +92,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Ownership after the 2026 change is not fully clear (Globes says Eyal Chomski bought Boroda's shares). City assumed Tel Aviv.",
-  "description_he": "משרד קריאייטיב ואסטרטגיה ישראלי שנוסד ב-2002 על ידי גיא בורודה, כשרון קפלן הצטרף שנה לאחר מכן; היה בעבר חלק מקבוצת אדלר חומסקי. שמו שונה ל-KPLN ב-2026 לאחר פרישתו של בורודה, ובראשו המנכ\"ל רון קפלן; כ-35 עובדים, עם יחידת סטודיו ואדפטציות פנימית ומדיה לפרפורמנס."
+  "notes": "Ownership after the 2026 change is not fully clear (Globes says Eyal Chomski bought Boroda's shares). City assumed Tel Aviv."
 }

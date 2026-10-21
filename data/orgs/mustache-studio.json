@@ -12,6 +12,7 @@
     "animation-3d"
   ],
   "description": "Netanya studio producing promotional videos, motion graphics and 2D/3D animation with voiceover and sound design, mainly for Israeli tech companies.",
+  "description_he": "סטודיו בנתניה שמפיק סרטוני תדמית, מושן גרפיקס ואנימציה דו-ממדית ותלת-ממדית עם קריינות ועיצוב סאונד, בעיקר לחברות טכנולוגיה ישראליות.",
   "location": {
     "country": "IL",
     "city": "Netanya"
@@ -23,7 +24,9 @@
   "links": {
     "linkedin": "https://www.linkedin.com/company/mustache-creative-studio/",
     "behance": "https://www.behance.net/mustache",
-    "instagram": "https://www.instagram.com/studio.mustache/"
+    "instagram": "https://www.instagram.com/studio.mustache/",
+    "facebook": "https://www.facebook.com/Mustachecreativestudio",
+    "youtube": "https://www.youtube.com/@studiomustache"
   },
   "services": [
     "Promo videos",
@@ -51,6 +54,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Portfolio brand names not explicitly labelled as clients.",
-  "description_he": "סטודיו בנתניה שמפיק סרטוני תדמית, מושן גרפיקס ואנימציה דו-ממדית ותלת-ממדית עם קריינות ועיצוב סאונד, בעיקר לחברות טכנולוגיה ישראליות."
+  "notes": "Portfolio brand names not explicitly labelled as clients."
 }
