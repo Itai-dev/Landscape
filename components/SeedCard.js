@@ -30,7 +30,14 @@ export default function SeedCard({ p, claim = false }) {
   return (
     <article className="pcard">
       <div className="head">
-        <span className="avatar md soft" aria-hidden><PersonIcon size={22} /></span>
+        {p.avatar ? (
+          // An illustration made from the listing id, not a photo of the person (the name follows as text).
+          <span className="avatar md drawn" title="איור, לא תמונה של האדם">
+            <img src={p.avatar} width={48} height={48} loading="lazy" decoding="async" alt="" />
+          </span>
+        ) : (
+          <span className="avatar md soft" aria-hidden><PersonIcon size={22} /></span>
+        )}
         <div>
           <h3><bdi>{p.name}</bdi></h3>
           {roleTypeLabel(first.role_type) && <span className="kindlabel">{roleTypeLabel(first.role_type)}</span>}
