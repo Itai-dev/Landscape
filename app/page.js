@@ -14,6 +14,8 @@ import "./tenders/tenders.css";
 import "./sell.css";
 
 // Tender deadlines count down: rebuild the page hourly.
+export const metadata = { alternates: { canonical: "/" } };
+
 export const revalidate = 3600;
 
 // Eight crafts on the home page, named exactly as everywhere else on the site (schema/taxonomy.json).
@@ -90,7 +92,7 @@ export default function Home() {
                 <p className="uhead"><Bidi>{i.headline}</Bidi></p>
                 {i.why && <p className="uwhy"><Bidi>{i.why}</Bidi></p>}
                 {i.org?.name && (
-                  <p className="uorg">{i.org.href ? <a className="tap" href={rel(i.org.href)} data-track="proof_item_open"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}</p>
+                  <p className="uorg">{i.org.href ? <a className="tap" href={rel(i.org.href)} data-track="company_open" data-track-where="home_update"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}</p>
                 )}
               </li>
             ))}

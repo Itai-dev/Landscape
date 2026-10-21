@@ -149,6 +149,7 @@ export default function JoinFlow({ crafts: all }) {
             <p>שלחנו קישור אישור ל־<b className="ltr">{email}</b>. לוחצים עליו, והמייל הראשון יגיע {firstSendLabel(frequency)}.</p>
             <p className="notice">הקישור עובד רק במכשיר ובדפדפן האלה. כדאי לפתוח את המייל כאן.</p>
             <p className="muted small">לא הגיע תוך כמה דקות? כדאי לבדוק בספאם או בקידומי מכירות.</p>
+            <p className="small"><a className="tap" href="/feedback?from=join" data-track="feedback_open" data-track-where="join_sent">משהו חסר? יש רעיון לשיפור?</a></p>
             <div className="jfoot">
               <a className="btn primary lg" href="/digest">בינתיים, לעדכוני השבוע</a>
               <button type="button" className="tap jskip" onClick={() => go(2)}>כתובת אחרת? לשלוח שוב</button>

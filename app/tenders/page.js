@@ -11,8 +11,9 @@ export const revalidate = 3600;
 
 export const metadata = {
   title: "מכרזים פתוחים",
-  description: "עבודות קריאייטיב שאפשר להגיש עליהן הצעה עכשיו: הפקה, וידאו, עיצוב, אירועים וקמפיינים. משרדי ממשלה, עיריות וגופים ציבוריים, עם תאריך ההגשה וקישור למקור הרשמי.",
-  openGraph: { title: "מכרזים פתוחים לעבודות קריאייטיב · CreativeIn", description: "עבודה שאפשר להגיש עליה הצעה כבר השבוע. לפי תאריך ההגשה, עם קישור למקור הרשמי." },
+  description: "מכרזים לעבודות קריאייטיב: הפקה, וידאו, עיצוב, אירועים וקמפיינים. משרדי ממשלה, עיריות וגופים ציבוריים, עם מועד ההגשה וקישור למקור הרשמי.",
+  alternates: { canonical: "/tenders" },
+  openGraph: { title: "מכרזים לעבודות קריאייטיב · creativein.", description: "מכרזים ממשלתיים וציבוריים לעבודות קריאייטיב, לפי מועד ההגשה, עם קישור למקור הרשמי.", siteName: "creativein.", locale: "he_IL", type: "website", images: [{ url: "/og/site.png", width: 1200, height: 630 }] },
 };
 
 export default async function Tenders({ searchParams }) {

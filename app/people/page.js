@@ -11,6 +11,7 @@ import { PROFILES_ENABLED } from "@/lib/config";
 export const metadata = {
   title: "אנשים",
   description: "מי מחליט בתעשיית הקריאייטיב בישראל: מנהלי שיווק, הפקה וקריאייטיב במותגים, במשרדים ובסטודיואים. לפי מה שפורסם בפומבי, עם המקור.",
+  alternates: { canonical: "/people" },
 };
 
 const PAGE = 24;

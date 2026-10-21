@@ -8,6 +8,7 @@ import "./join.css";
 export const metadata = {
   title: "הרשמה למייל השבועי",
   description: "בוחרים תחום, רואים איך ייראה המייל של יום ראשון, ומשאירים כתובת. חינם, הסרה בלחיצה.",
+  alternates: { canonical: "/join" },
 };
 
 // Sign-up for the weekly email in three short steps (crafts → preview → address). Signed in, the account

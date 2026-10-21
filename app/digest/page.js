@@ -20,15 +20,15 @@ export async function generateMetadata({ searchParams }) {
   const who = craftsTitle(d);
   const title = who ? `השבוע בתעשייה: ${who}` : "השבוע בתעשייה";
   const top = [...d.items, ...d.more].slice(0, 2).map((i) => i.headline).join(" · ");
-  const description = top || "מי מונה לשיווק, מי החליף משרד ואילו מכרזים נפתחו השבוע בתעשיית הקריאייטיב בישראל. ולמה זה הזמן לפנות.";
+  const description = top || "מי מונה לשיווק, מי החליף משרד ואילו מכרזים נפתחו השבוע בתעשיית הקריאייטיב בישראל. ולמה זה רלוונטי לכם.";
   const url = `${siteUrl()}/digest${d.crafts.length ? `?crafts=${d.crafts.map((c) => c.slug).join(",")}` : ""}`;
-  const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · CreativeIn" };
+  const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · creativein." };
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title: `${title} · CreativeIn`, description, url, type: "article", locale: "he_IL", siteName: "CreativeIn", images: [image] },
-    twitter: { card: "summary_large_image", title: `${title} · CreativeIn`, description, images: [image.url] },
+    openGraph: { title: `${title} · creativein.`, description, url, type: "article", locale: "he_IL", siteName: "creativein.", images: [image] },
+    twitter: { card: "summary_large_image", title: `${title} · creativein.`, description, images: [image.url] },
   };
 }
 
@@ -41,7 +41,7 @@ function Item({ i, span }) {
       <div className="dfoot">
         {i.org?.href ? <a className="tap" href={i.org.href.replace(siteUrl(), "")}><bdi>{i.org.name}</bdi></a> : i.org?.name ? <bdi>{i.org.name}</bdi> : null}
         {i.source_url && (
-          <a className="src tap" href={i.source_url} target="_blank" rel="noopener noreferrer">
+          <a className="src tap" href={i.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category={i.type || "signal"}>
             <bdi>{i.source || "מקור"}</bdi> <LinkIcon size={14} />
           </a>
         )}
@@ -69,7 +69,7 @@ export default async function Digest({ searchParams }) {
         <span className="eyebrow">{d.range}</span>
         <h1>השבוע בתעשייה</h1>
         <p>
-          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה הזמן לפנות.</> : "מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין עכשיו. כל עדכון עם הסיבה לפנות ועם מקור."}
+          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה רלוונטי לכם.</> : "מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין עכשיו. כל עדכון עם הסיבה לפנות ועם מקור."}
         </p>
       </div>
 
@@ -128,7 +128,7 @@ export default async function Digest({ searchParams }) {
               </div>
               <div className="tresults">
                 {d.tenders.map((t) => (
-                  <a key={t.id} className="trow" href={t.url} target="_blank" rel="noopener noreferrer">
+                  <a key={t.id} className="trow" href={t.url} target="_blank" rel="noopener noreferrer" data-track="tender_source_click">
                     <b>{t.summary}</b>
                     <span>{t.buyer} · {t.countdown} · הגשה עד <bdi>{t.deadline}</bdi> · למכרז במקור הרשמי</span>
                   </a>
