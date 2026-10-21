@@ -6,8 +6,10 @@
     "title": "הפקה ותפעול של הביתן והדוכן הישראלי בפסטיבל הקולנוע בקאן 2027",
     "buyer": "משרד המדע התרבות והספורט",
     "buyer_type": "ministry",
+    "procedure_no": "11/2026",
     "kind": "tender",
     "published_at": "2026-09-08",
+    "submission_opens": "2026-10-19T08:00",
     "deadline_at": "2026-10-25T12:00",
     "status": "open",
     "scope_summary": "הפקה ותפעול של הביתן הישראלי בפסטיבל קאן 2027: עיצוב, הקמה והפעלה של הביתן והדוכן.",
@@ -20,7 +22,7 @@
       "ביתן"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   }
 ]

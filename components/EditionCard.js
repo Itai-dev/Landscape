@@ -25,13 +25,13 @@ export default function EditionCard({ ed, busy = false }) {
       )}
       {ed.tender && (
         <div className="dtender">
-          <span className="lbl">מכרז פתוח · {ed.tender.countdown}</span>
+          <span className="lbl">מכרז · {ed.tender.countdown}</span>
           <span className="hl">{ed.tender.summary}</span>
         </div>
       )}
       {ed.pick && (
         <div className="dpick">
-          <span className="lbl">{label ? `מי מזמין ${label} עכשיו` : "מי מזמין עכשיו"}</span>
+          <span className="lbl">{label ? `מי מזמין ${label}` : "מי מזמין עבודות קריאייטיב"}</span>
           <span className="hl"><b>{ed.pick.name}</b>{ed.pick.reason ? `: ${ed.pick.reason}` : ""}</span>
         </div>
       )}

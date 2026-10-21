@@ -6,8 +6,10 @@
     "title": "אספקת שירותי צילום סטילס ווידיאו עבור לשכת העיתונות הממשלתית",
     "buyer": "משרד ראש הממשלה",
     "buyer_type": "ministry",
+    "procedure_no": "1-2026",
     "kind": "tender",
     "published_at": "2026-05-25",
+    "submission_opens": "2026-06-23T12:00",
     "deadline_at": "2026-07-01T12:00",
     "status": "closed",
     "scope_summary": "צלמי סטילס ווידאו ללשכת העיתונות הממשלתית.",
@@ -19,7 +21,7 @@
       "צילום",
       "וידיאו"
     ],
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   },
   {
@@ -33,6 +35,7 @@
     "procedure_no": "11/26",
     "kind": "tender",
     "published_at": "2026-05-20",
+    "submission_opens": "2026-06-01T12:00",
     "deadline_at": "2026-06-25T12:00",
     "status": "closed",
     "scope_summary": "ייעוץ לקמפיינים דיגיטליים ולעבודה עם משפיענים בקמפיינים ממשלתיים.",
@@ -43,7 +46,7 @@
       "קמפיינים",
       "משפיענים"
     ],
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   }
 ]
