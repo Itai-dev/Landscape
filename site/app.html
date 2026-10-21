@@ -351,7 +351,7 @@ main { padding-block: 6px 24px; }
 .nowline .t { color: var(--now); font-weight: 600; font-size: 13px; flex: none; }
 .stage { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--bg); background: var(--ink); border-radius: 4px; padding: 2px 6px; flex: none; }
 .logo { flex: none; width: 44px; height: 44px; border-radius: 8px; background: var(--logo-bg); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
-.logo img { width: 78%; height: 78%; object-fit: contain; }
+.logo img { width: 78%; height: 78%; max-width: var(--lpx, 100%); max-height: var(--lpx, 100%); object-fit: contain; }
 .logo.mono { background: color-mix(in srgb, var(--g) 14%, var(--surface)); border-color: color-mix(in srgb, var(--g) 30%, var(--line)); color: var(--g); font-weight: 700; font-size: 15px; font-family: var(--f-body); }
 .logo.lg { width: 64px; height: 64px; border-radius: 14px; font-size: 20px; }
 .logo.sm { width: 32px; height: 32px; border-radius: 8px; font-size: 12px; }
@@ -594,7 +594,10 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 .thumb { aspect-ratio: 16 / 10; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 24px; background: var(--thumb); color: #222; text-align: center; transition: transform .6s var(--ease); }
 .thumb .tl { width: 76px; height: 76px; display: grid; place-items: center; }
 /* Logos sit on the grey; multiply drops their white backgrounds, light logos stay visible */
-.thumb .tl img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.thumb .tl img { width: 100%; height: 100%; max-width: var(--lpx, 100%); max-height: var(--lpx, 100%); object-fit: contain; mix-blend-mode: multiply; }
+/* A wide wordmark gets a wide box instead of a square one */
+.thumb .tl.wide { width: min(62%, 220px); height: 64px; }
+.thumb.big .tl.wide { width: min(50%, 280px); height: 84px; }
 .thumb .tn { font-family: var(--f-display); font-weight: 300; font-size: clamp(20px, 2vw, 26px); line-height: 1.15; max-width: 16ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
 .thumb.word .tn { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; }
 .thumb.big { aspect-ratio: 21 / 9; max-height: 260px; width: 100%; }
@@ -1246,9 +1249,18 @@ html:not([data-site]) .promo { display: none; }
     const w = name.replace(/[^\p{L}\p{N} &]/gu, " ").split(/\s+/).filter((x) => x && !/^(the|&|and|of)$/i.test(x));
     return ((w[0] || "?")[0] + (w[1] ? w[1][0] : (w[0] || "")[1] || "")).toUpperCase();
   }
+  // On the site the hi-res file (/companies/data/logo/<id>.webp|svg, up to 192px); in the Artifact copy the 64px data URI.
+  // A logo is never drawn larger than its native size (--lpx).
+  const HI_LOGOS = document.documentElement.hasAttribute("data-site");
+  function logoSrc(o) { return HI_LOGOS ? (o.logo_ext ? `/companies/data/logo/${encodeURIComponent(o.id)}.${o.logo_ext}` : "") : LOGOS[o.id] || ""; }
+  function logoImg(o, px) {
+    const src = logoSrc(o);
+    const lpx = HI_LOGOS ? o.logo_px : Math.min(o.logo_px || 64, 64); // the data URIs are 64px
+    return src ? `<img src="${esc(src)}" alt="" width="${px}" height="${px}" loading="lazy" decoding="async"${lpx ? ` style="--lpx:${lpx}px"` : ""}>` : "";
+  }
   function logo(o, size = "") {
-    const src = LOGOS[o.id];
-    return src ? `<span class="logo ${size}"><img src="${esc(src)}" alt="" loading="lazy"></span>`
+    const img = logoImg(o, size === "lg" ? 64 : size === "sm" || size === "av" ? 32 : 44);
+    return img ? `<span class="logo ${size}">${img}</span>`
       : `<span class="logo mono ${size}" aria-hidden="true">${esc(initials(o.name))}</span>`;
   }
   function gstyle(o) { return `--g:var(--g-${GROUP[o.kind] || "maker"})`; }
@@ -1268,8 +1280,8 @@ html:not([data-site]) .promo { display: none; }
   }
   // The thumbnail: the logo (64px source, so it stays small) on a grey tile; without a logo, the name as a wordmark.
   function thumb(o, big) {
-    const src = LOGOS[o.id], nm = names(o).main;
-    return `<span class="thumb${src ? "" : " word"}${big ? " big" : ""}">${src ? `<span class="tl"><img src="${esc(src)}" alt="" loading="lazy"></span>` : `<span class="tn" dir="auto">${esc(nm)}</span>`}</span>`;
+    const img = logoImg(o, big ? 96 : 76), nm = names(o).main;
+    return `<span class="thumb${img ? "" : " word"}${big ? " big" : ""}">${img ? `<span class="tl${(o.logo_ar || 1) >= 1.8 ? " wide" : ""}">${img}</span>` : `<span class="tn" dir="auto">${esc(nm)}</span>`}</span>`;
   }
   function card(o) {
     const buyer = GROUP[o.kind] === "buyer" || (o.kind === "startup" && o.needs.length);
@@ -2193,7 +2205,7 @@ Question: ${q}`;
       const k = location.hash.slice(1);
       if (BY_ID[k]) openOrg(k); else if (["ask", "explore", "signals", "pipeline"].includes(k)) { closeAll(); goTab(k); } else if (k) toast(t("t.noorg"));
     });
-    fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
+    if (!HI_LOGOS) fetch("data/logos.json").then((r) => r.json()).then((l) => { LOGOS = l; renderView(); if ($("sheet").dataset.id) openOrg($("sheet").dataset.id, true); }).catch(() => {});
     const checks = [Store.init()];
     if (window.LANDSCAPE_SITE) {
       checks.push(fetch("/api/ask").then((r) => r.json()).then((j) => { SERVER_AI = !!j.ready; }).catch(() => {}));
