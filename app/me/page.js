@@ -18,7 +18,7 @@ async function loadFollows(sb, userId) {
     sb.from("org_follows").select("org_id, created_at").eq("user_id", userId).order("created_at", { ascending: false }),
     sb.from("newsletter_prefs").select("alerts, alerts_consent_at").eq("user_id", userId).maybeSingle(),
   ]);
-  const follows = (rows || []).filter((r) => ORG_NAMES.has(r.org_id)).map((r) => ({ id: r.org_id, name: ORG_NAMES.get(r.org_id), href: `/companies#${r.org_id}` }));
+  const follows = (rows || []).filter((r) => ORG_NAMES.has(r.org_id)).map((r) => ({ id: r.org_id, name: ORG_NAMES.get(r.org_id), href: `/companies/${encodeURIComponent(r.org_id)}` }));
   return { follows, alerts: prefs?.alerts || "off", consent: Boolean(prefs?.alerts_consent_at) };
 }
 

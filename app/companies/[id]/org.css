@@ -1,0 +1,71 @@
+/* Company page (/companies/<id>): the companies app's sheet as a full page, in the Awwwards look. */
+.orgpage { padding-block: var(--s-5) var(--s-8); }
+.orgpage .crumb { font-size: var(--t-sm); color: var(--muted); display: flex; gap: var(--s-2); align-items: center; margin-block-end: var(--s-5); }
+.orgpage .crumb a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+
+/* Logo tile: the logo at no more than its native size on a grey tile; without a logo, the name as a wordmark. */
+.otile { display: grid; place-items: center; background: var(--surface); border-radius: var(--r-lg); aspect-ratio: 1; width: 120px; flex: none; overflow: hidden; }
+.otile img { object-fit: contain; height: auto; mix-blend-mode: multiply; }
+:root[data-theme="dark"] .otile img { mix-blend-mode: normal; }
+.otile.big { width: clamp(112px, 16vw, 168px); }
+.otile.wide { aspect-ratio: auto; width: auto; min-width: 168px; height: clamp(112px, 16vw, 168px); padding: var(--s-4); }
+.otile.word span { font-weight: 300; font-size: clamp(16px, 2vw, 22px); line-height: 1.1; padding: var(--s-3); text-align: center; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+.ohead { display: flex; gap: var(--s-5); align-items: center; margin-block-end: var(--s-6); }
+.oid { display: grid; gap: var(--s-2); min-width: 0; }
+.okind { display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; font-size: var(--t-sm); color: var(--muted); }
+.ohead h1 { margin: 0; font-size: clamp(30px, 4.4vw, 64px); font-weight: 600; line-height: 1.04; overflow-wrap: anywhere; }
+.ohead .alt { margin: 0; color: var(--muted); font-size: var(--t-md); }
+.oactions { display: flex; gap: var(--s-2); flex-wrap: wrap; align-items: center; margin-block-start: var(--s-3); }
+@media (max-width: 640px) { .ohead { flex-direction: column; align-items: flex-start; gap: var(--s-4); } .otile.big { width: 96px; } .otile.wide { height: 96px; min-width: 132px; } }
+
+.osec { margin-block-end: var(--s-7); }
+.osec > h2 { font-size: var(--t-sm); font-weight: 600; margin: 0 0 var(--s-4); padding-block-end: var(--s-2); border-block-end: 1px dotted var(--line-2); }
+.osec h3 { font-size: var(--t-sm); font-weight: 600; margin: var(--s-4) 0 var(--s-2); color: var(--muted); }
+.osec .desc { font-size: var(--t-md); line-height: 1.7; margin: 0 0 var(--s-2); max-width: 70ch; }
+
+.olinks, .opills, .ochips { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.chiplink { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 var(--s-4); border: 1px solid var(--line-2); border-radius: var(--r); color: var(--ink); font-size: var(--t-sm); }
+@media (hover: hover) { .chiplink:hover { border-color: var(--ink); } }
+.opills .tag { font-size: var(--t-sm); padding: 6px 10px; }
+a.tag { text-decoration: none; }
+
+.ogrid { display: grid; gap: var(--s-6); }
+@media (min-width: 960px) { .ogrid { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--s-8); } }
+.oupd { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.otenders { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.otenders a { display: grid; gap: 2px; padding: var(--s-4); background: var(--surface); border-radius: var(--r); color: var(--ink); }
+
+.oways { display: grid; gap: var(--s-4); }
+.oways .grp h3 { margin-block-start: 0; }
+.ochip { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 12px 4px 6px; background: var(--surface); border-radius: var(--r); color: var(--ink); font-size: var(--t-sm); }
+.ochip img { width: 24px; height: 24px; object-fit: contain; border-radius: 4px; background: var(--paper); }
+.ochip .mono { width: 24px; height: 24px; border-radius: 4px; display: grid; place-items: center; background: var(--paper); font-size: 11px; font-weight: 600; }
+.ochip.plain { background: transparent; border: 1px solid var(--line); padding-inline: 12px; }
+@media (hover: hover) { a.ochip:hover { background: var(--soft); } }
+.opeople { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+@media (min-width: 640px) { .opeople { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.opeople a.pl { display: grid; grid-template-columns: auto minmax(0, 1fr); grid-template-rows: auto auto; column-gap: var(--s-3); align-items: center; padding: var(--s-3); background: var(--surface); border-radius: var(--r); color: var(--ink); }
+.opeople .avatar { grid-row: span 2; width: 40px; height: 40px; font-size: 14px; }
+.opeople .pn { font-weight: 600; font-size: var(--t-sm); }
+.opeople .pr { font-size: var(--t-xs); color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.ofacts { margin: 0; display: grid; gap: var(--s-2); }
+.ofacts div { display: flex; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-2); border-block-end: 1px solid var(--line); font-size: var(--t-sm); }
+.ofacts dt { color: var(--muted); }
+.ofacts dd { margin: 0; text-align: end; }
+.oside ul.plain { margin: 0; padding-inline-start: 1.1em; display: grid; gap: 4px; font-size: var(--t-sm); }
+.sources ul.plain a.src { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+
+/* Similar companies: the list's thumbnail cards. */
+.osim { display: grid; gap: var(--s-5) var(--s-4); grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 960px) { .osim { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.simcard { display: grid; color: var(--ink); min-width: 0; }
+.simcard .frame { display: block; border-radius: var(--r); overflow: hidden; }
+.simcard .otile { width: 100%; aspect-ratio: 16 / 10; border-radius: var(--r); }
+.simcard .otile.word span { font-size: clamp(22px, 2.6vw, 30px); }
+.simcard .by { display: grid; gap: 4px; margin-top: var(--s-3); min-width: 0; }
+.simcard .n { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.simcard .k { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); }
+.simcard .info { font-size: var(--t-sm); color: var(--ink-2); margin-top: var(--s-2); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+@media (hover: hover) { .simcard:hover .n { text-decoration: underline; text-underline-offset: 3px; } }

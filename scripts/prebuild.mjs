@@ -46,7 +46,7 @@ const staticList =
     const name = o.name_he || o.name, city = ds.taxonomy.cities_he?.[o.location?.city] || o.location?.city || "";
     const meta = [KIND_HE[o.kind], city].filter(Boolean).join(" · ");
     const desc = clip(o.description_he || "", 110);
-    return `<li><a href="#${encodeURIComponent(o.id)}"><b><bdi>${escH(name)}</bdi></b>${meta ? ` <span>${escH(meta)}</span>` : ""}</a>${desc ? `<p>${escH(desc)}</p>` : ""}</li>`;
+    return `<li><a href="/companies/${encodeURIComponent(o.id)}"><b><bdi>${escH(name)}</bdi></b>${meta ? ` <span>${escH(meta)}</span>` : ""}</a>${desc ? `<p>${escH(desc)}</p>` : ""}</li>`;
   }).join("") + "</ul>";
 const body = fill(synced, "<!-- static:companies -->", "<!-- /static:companies -->", staticList)
   .replaceAll('fetch("data/', 'fetch("/companies/data/')
