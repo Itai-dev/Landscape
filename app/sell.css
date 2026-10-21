@@ -36,7 +36,7 @@
 }
 
 /* Dribbble-style split hero: text on the right (start), the update card on the left; search block under it. */
-.hero.sell.split { text-align: start; justify-items: stretch; max-width: none; padding-block: clamp(32px, 6vw, 96px) var(--s-6); display: grid; gap: var(--s-7); align-items: center; }
+.hero.sell.split { text-align: start; justify-items: stretch; max-width: none; padding-block: clamp(32px, 6vw, 96px) clamp(var(--s-8), 8vw, var(--s-10)); display: grid; gap: var(--s-7); align-items: center; }
 @media (min-width: 960px) { .hero.sell.split { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } }
 .hero.sell.split .htext { display: grid; justify-items: start; gap: 0; }
 /* Hero headline: big and heavy; "מה קורה" on one line, the rolling craft on the next. Sized so the longest
@@ -106,7 +106,7 @@
 .hpop { margin-block-start: var(--s-1); justify-content: center; }
 .hpop .tag { border-radius: var(--r); padding: 6px 14px; font-size: var(--t-sm); }
 @media (max-width: 639px) {
-  .hero.sell.split { gap: var(--s-5); padding-block: var(--s-6) var(--s-5); }
+  .hero.sell.split { gap: var(--s-5); padding-block: var(--s-6) var(--s-8); }
   .checks { margin-block-end: var(--s-5); }
   .checks li { font-size: var(--t-sm); }
   .hpop { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
@@ -132,3 +132,4 @@
   .hero.ask { min-height: 0; padding-block: var(--s-7) var(--s-6); }
   .hero.ask .htabs { justify-content: center; }
 }
+.checks a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }

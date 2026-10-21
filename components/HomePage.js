@@ -66,7 +66,7 @@ export default function HomePage({ split = false }) {
               <p className="lead">מי מונה, מי החליף משרד, אילו מכרזים ומשרות פורסמו. לפי התחום שלכם, כל יום ראשון במייל.</p>
               <ul className="checks">
                 <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
-                <li><CheckIcon size={18} /><span>מכרזים ומשרות שפורסמו, עם מועד הגשה אמיתי</span></li>
+                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי</span></li>
                 <li><CheckIcon size={18} /><span>מייל אחד ביום ראשון, רק מה ששייך לתחום שלכם. חינם</span></li>
               </ul>
               <div className="row">

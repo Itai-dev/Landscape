@@ -26,7 +26,7 @@ const fill = (s, open, close, put) => {
 const source = readFileSync("site/app.html", "utf8");
 let synced = fill(source, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8").trim());
 synced = fill(synced, "<!-- chrome:header -->", "<!-- /chrome:header -->",
-  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
+  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>', ""));
 synced = fill(synced, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
 synced = fill(synced, "<!-- chrome:tabbar -->", "<!-- /chrome:tabbar -->", tabbarHtml("companies"));
 // Company-type icons have one source (lib/kinds.mjs); the app builds its tags from them (kindTag in site/app.html).
