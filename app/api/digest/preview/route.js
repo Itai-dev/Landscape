@@ -17,7 +17,7 @@ export async function GET(request) {
     {
       crafts: d.crafts,
       range: d.range,
-      items: [...d.items, ...d.more].slice(0, 3).map((i) => ({ id: i.id, label: i.label, day: i.day, headline: i.headline })),
+      items: [...d.items, ...d.more].slice(0, 3).map((i) => ({ id: i.id, label: i.class_label || i.label, day: i.day, headline: i.headline })),
       tender: t ? { summary: t.summary, countdown: t.countdown } : null,
       pick: p?.org ? { name: p.org.name, reason: p.reason } : null,
     },
