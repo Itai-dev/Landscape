@@ -40,9 +40,9 @@ export default async function Tenders({ searchParams }) {
 
   return (
     <div className="wrap">
-      <div className="pagehead">
-        <h1>מכרזים פתוחים</h1>
-        <p>מכרזים וקולות קוראים לעבודות קריאייטיב: הפקה, וידאו, עיצוב, אירועים וקמפיינים. לפי מועד ההגשה.</p>
+      <div className="pagehead list">
+        <h1>מכרזים פתוחים <span className="cbox">{open.length}</span></h1>
+        <p>מכרזים וקולות קוראים לעבודות קריאייטיב: <b>הפקה, וידאו, עיצוב, אירועים וקמפיינים</b>. לפי מועד ההגשה, עם קישור למקור הרשמי.</p>
       </div>
 
       <form className="toolbar" role="search" action="/tenders">

@@ -2,6 +2,19 @@
    into /companies). Uses only tokens both apps define: --bg --ink --soft --surface --accent --accent-ink --line --muted --max --gutter.
    Look (team/DESIGN.md): flat canvas bar, no border or shadow; 14px/500 words for links; one filled ink button
    (8px radius); a hamburger with a full-height sheet under 861px. Edit here, not in site/app.html. */
+/* Promo strip: grey line above the header, a slow ticker; scrolls away with the page */
+.promo { background: var(--surface); color: var(--ink); overflow: hidden; font-size: 13px; line-height: 1; user-select: none; }
+.promo .track { display: flex; width: max-content; animation: promo 40s linear infinite; }
+.promo .run { display: flex; flex: none; gap: 48px; padding-inline-end: 48px; }
+.promo a { color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; white-space: nowrap; font-weight: 400; }
+.promo a b { font-weight: 600; }
+.promo a::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+@keyframes promo { to { transform: translateX(50%); } }
+[dir="ltr"] .promo .track { animation-name: promo-ltr; }
+@keyframes promo-ltr { to { transform: translateX(-50%); } }
+@media (hover: hover) { .promo:hover .track { animation-play-state: paused; } .promo a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+@media (prefers-reduced-motion: reduce) { .promo { overflow-x: auto; scrollbar-width: none; } .promo .track { animation: none; } .promo .run[aria-hidden] { display: none; } .promo .run { padding-inline: var(--gutter); } }
+
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
 header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Heebo", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
@@ -9,7 +22,13 @@ header.top .brand span, footer.foot .brand span { color: var(--accent); }
 header.top .nav { display: flex; gap: 2px; align-items: center; }
 header.top .nav a { color: var(--ink); min-height: 40px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 8px; font-size: 14px; font-weight: 500; line-height: 1; text-decoration: none; transition: background .2s ease; }
 header.top .nav a[aria-current="page"] { background: var(--surface); }
-header.top .end { margin-inline-start: auto; display: flex; align-items: center; gap: 8px; }
+header.top .end { display: flex; align-items: center; gap: 8px; flex: none; }
+/* Search field in the bar: a grey 8px field, like Awwwards' */
+header.top .hsearch { margin-inline-start: auto; flex: 0 1 380px; min-width: 0; display: flex; align-items: center; gap: 8px; background: var(--surface); border-radius: 8px; padding-inline: 14px 6px; min-height: 44px; color: var(--muted); cursor: text; transition: box-shadow .2s ease; }
+header.top .hsearch:focus-within { box-shadow: inset 0 0 0 1px var(--ink); }
+header.top .hsearch svg { flex: none; }
+header.top .hsearch input { flex: 1; min-width: 0; width: auto; border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 15px; padding: 0; min-height: 44px; border-radius: 0; box-shadow: none; outline: none; }
+header.top .hsearch input::placeholder { color: var(--muted); }
 /* The one filled button: ink, white words, 8px corners (also used in the sheet) */
 header.top .cta, .btn-ink { background: var(--ink); color: var(--bg); min-height: 40px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0 16px; border-radius: 8px; font-weight: 500; font-size: 14px; line-height: 1; text-decoration: none; white-space: nowrap; transition: opacity .2s ease; }
 @media (hover: hover) {
@@ -58,23 +77,23 @@ header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1f
 
 @media (max-width: 860px) {
   header.top .nav, header.top .end .themebtn { display: none; }
-  .burger { display: inline-block; }
+  .burger { display: inline-block; border-color: transparent; margin-inline-start: -8px; }
+  header.top .wrap { gap: 6px; }
+  header.top .brand { margin-inline-end: 4px; }
+  header.top .hsearch { flex: 1 1 auto; margin-inline-start: 4px; }
+  /* The call to action becomes a plain icon (the label stays for screen readers) */
+  header.top .cta { background: transparent; color: var(--ink); padding: 0; inline-size: 44px; min-height: 44px; margin-inline-end: -8px; }
+  header.top .cta .cta-l { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  header.top .cta .cta-s { display: none !important; }
+  header.top .cta .cta-i { display: inline-flex; }
+  header.top .cta .cta-i svg { width: 24px; height: 24px; }
 }
 @media (min-width: 861px) { .menusheet { display: none !important; } }
 @media (max-width: 560px) {
   header.top .wrap { min-height: 64px; }
   header.top .brand { font-size: 19px; }
-  header.top .cta { min-height: 44px; padding: 0 14px; }
 }
-@media (max-width: 420px) {
-  header.top .cta .cta-l { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  header.top .cta .cta-s { display: inline; }
-}
-@media (max-width: 340px) {
-  header.top .cta { padding: 0; inline-size: 44px; }
-  header.top .cta .cta-s { display: none; }
-  header.top .cta .cta-i { display: inline-flex; }
-}
+@media (max-width: 360px) { header.top .brand span { display: none; } header.top .hsearch { padding-inline: 10px 4px; } }
 
 /* Footer: a paper block, wordmark + line, link grid, small print */
 footer.foot { padding: 0 var(--gutter) 16px; color: var(--muted); font-size: 14px; margin-block-start: 48px; }

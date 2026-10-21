@@ -39,6 +39,22 @@ Inspiration only. We copy the design language, never Awwwards' name, logo, wordi
 | Layout | wide; content runs almost edge to edge with thin side margins | |
 | Motion | quiet: fades and short transforms | |
 
+### Measured from the owner's phone screenshots (Oct 2026)
+These override the extraction above where they differ.
+- **Colours.** The page is `#f8f8f8`. Grey blocks are `#ededed`: the promo strip, the search field and the filter tray. Filter buttons are `#f8f8f8` (page colour) inside that tray. Ink is `#222`, underlines `#b7b7b7`, radio rings `#a7a7a7`. A dropdown dims the page behind it (about 30% black).
+- **Mobile header.** Hamburger, the "W." logo, a grey search field that fills the rest of the row, and an account icon. A grey promo strip with a ticker runs above it and scrolls away; the header stays.
+- **Listing page.**
+  - The title is modest and semibold ("Winning websites. Web Design Inspiration"), with the count in a small box outlined in ink.
+  - Under it, a grey tray of six filter buttons (Awards, Category, Tag, Technology, Country, Font), two per row on phones, each with a chevron.
+  - Then a line of copy with bold words and an underlined "Read more".
+  - Then the grid: one column on phones, the thumbnail on top with 8px corners.
+- **Filter dropdown.** A page-coloured panel with 8px corners floats over a dimmed page. It holds a list of options, each with a radio ring.
+- **Card byline.** Avatar, name in semibold, a tiny "PRO" superscript, and small outlined tags at the end ("DEV" in blue-grey, "SOTD" in orange).
+- **Detail page.**
+  - It covers the screen, with a square ink close button flush in the top corner.
+  - Each section has a small regular label ("Technologies & Tools", "Description", "Inside look") over a dotted rule.
+  - Tags are fully rounded outlined pills. The description is set large and light. Headings are big and semibold.
+
 ## 2. How we apply it
 
 ### Tokens
@@ -46,14 +62,16 @@ These are set in `app/globals.css` and repeated in `site/app.html`.
 
 | Token | Light | Dark |
 |---|---|---|
-| `--bg` (canvas) | `#e9e9e9` | `#111111` |
-| `--surface` (paper) | `#ffffff` | `#1c1c1c` |
-| `--soft` | `#f4f4f4` | `#262626` |
-| `--soft-2` | `#dedede` | `#2e2e2e` |
+| `--bg` (page) | `#f8f8f8` | `#111111` |
+| `--surface` (grey blocks: cards, fields, trays, strip) | `#ededed` | `#1e1e1e` |
+| `--paper` (on a grey block: filter buttons, dropdown) | `#f8f8f8` | `#111111` |
+| `--soft` (hover on grey) | `#e3e3e3` | `#2a2a2a` |
+| `--soft-2` | `#d9d9d9` | `#333333` |
+| `--radio` | `#a7a7a7` | `#6a6a6a` |
 | `--ink` | `#222222` | `#f2f2f2` |
 | `--ink-2` | `#4d4d4d` | `#cfcfcf` |
-| `--muted` | `#5c5c5c` (5.5:1 on canvas; Awwwards' `#808080` fails AA) | `#9a9a9a` |
-| `--line` / `--line-2` | `#d6d6d6` / `#b8b8b8` | `#333` / `#4d4d4d` |
+| `--muted` | `#5c5c5c` (5.7:1 on `#ededed`; Awwwards' `#808080` fails AA) | `#9a9a9a` |
+| `--line` / `--line-2` | `#dcdcdc` / `#b7b7b7` | `#333` / `#5a5a5a` |
 | `--accent` | `#8217ff` (Simply purple) | `#a466ff` |
 | Radii | `--r-sm` 4, `--r` 8, `--r-lg` 14 | |
 | Layout | `--max` 1760px, `--gutter` 16–32px | |
@@ -72,6 +90,27 @@ Purple is our version of Awwwards' orange: one small marker, never a button, a f
 - **Sizes.** Hero 48–127px at weight 300, line height 0.93. Page titles 36–64px at 400. Section titles 26–42px at 400. Card titles 18px at 600. Body 16px (one step above Awwwards' 14px, for Hebrew reading). Labels and buttons 14px at 500. Metadata 12px.
 
 ### Components
+- **Promo strip** (`promoHtml()` in `lib/chrome.mjs`). A grey line above the header with a slow ticker: the weekly digest, plus the rates survey while it's open. It replaces the old survey banner, scrolls away, and holds still under reduced motion.
+- **Header search** (both apps). A grey 8px field. On the Next pages it searches the whole site (`/search`). In the companies app it is the list's own search (`#q`).
+- **Phone header.** Hamburger at the start, the wordmark, the search field filling the row, and the call to action as a plain icon (envelope, or a person when signed in).
+- **Listing heads** (`.pagehead.list`, the companies `.listhead`). A modest 600 title, a `.cbox` count outlined in ink, and a line of copy with bold words.
+- **Filter tray** (`.toolbar` on the Next pages, `.ftray` in the companies app).
+  - A grey block holding page-coloured buttons, 2 columns on phones and 6 in a row from 900px.
+  - The six buttons in the companies app are Show, Type, Craft, Industry, City and Sort.
+  - A button shows its chosen value (single choice) or an ink count (multiple choice), plus an ink outline while set.
+- **Filter dropdown** (`#dd`).
+  - On phones it covers the tray, full width. On desktop it opens under its button, at least 320px wide. The page is dimmed and locked behind it.
+  - The options have radio rings, filled ink when chosen. A single choice applies and closes. A multiple choice stays open, with "ניקוי" and an ink "הצגת N חברות" button.
+  - Esc, a tap on the dimmed page, or ✕ closes it, and focus returns to the button.
+- **Thumbnail cards** (companies).
+  - A 4:3 grey tile with the logo (64px, on white) over the name in light type. A company without a logo shows its name as a wordmark.
+  - On hover the tile zooms slightly, and an ink caption slides up with what they buy, their clients, or what they do.
+  - Under the tile is the byline: a round logo, the name in 600, the kind as a superscript, and the city. Small outlined tags sit at the end: "עדכון" with a purple dot, the saved stage in ink, and "מתאים לכם".
+  - Cards are 40px apart vertically and 16px horizontally.
+- **Company page** (`#sheet`).
+  - It covers the screen on phones; on desktop it is a 920px panel from the reading side. It has a square ink ✕ in the corner.
+  - Top to bottom: a large thumbnail, the metadata line, the name (600, up to 52px), and the actions.
+  - Sections each have a small label over a dotted rule. Description comes first, set large and light, followed by the facts, then crafts as pill tags, then why now, what they commission, ways in, links and sources.
 - **Header** (`lib/chrome.mjs`, `app/chrome.css`; one source for both apps).
   - The bar is flat and canvas-coloured: the wordmark, then People / Companies / Tenders at 14px/500. The current page gets a white 8px label.
   - At the end: the theme button (40px, outlined) and one filled ink call to action.

@@ -1,7 +1,6 @@
 import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import AutoSelect from "@/components/AutoSelect";
-import SurveyBanner from "@/components/SurveyBanner";
 import { SearchIcon } from "@/components/Icons";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { ROLE_TYPES, searchSeeds } from "@/lib/people";
@@ -43,9 +42,9 @@ export default async function People({ searchParams }) {
 
   return (
     <div className="wrap">
-      <div className="pagehead">
-        <h1>אנשים בתעשייה</h1>
-        <p>מושן, אנימציה, פוסט, מיתוג, סאונד, הפקה ושיווק. לפי שם, תפקיד, חברה או תחום.</p>
+      <div className="pagehead list">
+        <h1>אנשים בתעשייה <span className="cbox">{seeds.length.toLocaleString("he-IL")}</span></h1>
+        <p>מי מחליט בחברות: <b>שיווק, הפקה, קריאייטיב, מושן, אנימציה, פוסט, מיתוג וסאונד</b>. לפי שם, תפקיד, חברה או תחום, מפרסומים פומביים ועם המקור.</p>
       </div>
 
       <form className="toolbar" role="search" action="/people">
@@ -107,7 +106,6 @@ export default async function People({ searchParams }) {
           : null}
         מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.
       </p>
-      <div style={{ marginBlockStart: 32 }}><SurveyBanner /></div>
     </div>
   );
 }

@@ -20,14 +20,17 @@
    Colour: one accent (purple) plus neutrals. Org types are told apart by their label, not by colour.
    Direction: logical properties throughout so the Hebrew UI (dir=rtl) mirrors cleanly. */
 :root {
-  --bg: #e9e9e9;
-  --soft: #f4f4f4;
-  --soft-2: #dedede;
-  --surface: #ffffff;
+  --bg: #f8f8f8;
+  --surface: #ededed;
+  --paper: #f8f8f8;
+  --soft: #e3e3e3;
+  --soft-2: #d9d9d9;
   --ink: #222222;
   --muted: #5c5c5c;
-  --line: #d6d6d6;
-  --line-2: #b8b8b8;
+  --line: #dcdcdc;
+  --line-2: #b7b7b7;
+  --radio: #a7a7a7;
+  --thumb: #ededed;
   --accent: #8217ff;
   --accent-hover: #6b0fe0;
   --accent-ink: #ffffff;
@@ -36,7 +39,7 @@
   --g-tech: #222222;
   --g-buyer: #222222;
   --now: #222222;
-  --now-soft: #f4f4f4;
+  --now-soft: #e3e3e3;
   --ok: #15803d;
   --logo-bg: #ffffff;
   --scrim: rgba(0, 0, 0, .42);
@@ -53,16 +56,16 @@
    Inside the Artifact host it follows the device, as before. */
 @media (prefers-color-scheme: dark) {
   :root:not([data-site]):not([data-theme="light"]), :root[data-site][data-theme="system"] {
-    --bg: #111111; --soft: #262626; --soft-2: #2e2e2e; --surface: #1c1c1c; --ink: #f2f2f2; --muted: #9a9a9a; --line: #333333; --line-2: #4d4d4d;
+    --bg: #111111; --surface: #1e1e1e; --paper: #111111; --soft: #2a2a2a; --soft-2: #333333; --ink: #f2f2f2; --muted: #9a9a9a; --line: #333333; --line-2: #5a5a5a; --radio: #6a6a6a; --thumb: #dcdcdc;
     --accent: #a466ff; --accent-hover: #b884ff; --accent-ink: #111111; --accent-soft: #2a1a4d;
-    --g-maker: #f2f2f2; --g-tech: #f2f2f2; --g-buyer: #f2f2f2; --now: #f2f2f2; --now-soft: #262626; --ok: #4ade80;
+    --g-maker: #f2f2f2; --g-tech: #f2f2f2; --g-buyer: #f2f2f2; --now: #f2f2f2; --now-soft: #2a2a2a; --ok: #4ade80;
     --scrim: rgba(0, 0, 0, .6); --shadow: 0 24px 60px rgba(0, 0, 0, .55); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #111111; --soft: #262626; --soft-2: #2e2e2e; --surface: #1c1c1c; --ink: #f2f2f2; --muted: #9a9a9a; --line: #333333; --line-2: #4d4d4d;
+  --bg: #111111; --surface: #1e1e1e; --paper: #111111; --soft: #2a2a2a; --soft-2: #333333; --ink: #f2f2f2; --muted: #9a9a9a; --line: #333333; --line-2: #5a5a5a; --radio: #6a6a6a; --thumb: #dcdcdc;
   --accent: #a466ff; --accent-hover: #b884ff; --accent-ink: #111111; --accent-soft: #2a1a4d;
-  --g-maker: #f2f2f2; --g-tech: #f2f2f2; --g-buyer: #f2f2f2; --now: #f2f2f2; --now-soft: #262626; --ok: #4ade80;
+  --g-maker: #f2f2f2; --g-tech: #f2f2f2; --g-buyer: #f2f2f2; --now: #f2f2f2; --now-soft: #2a2a2a; --ok: #4ade80;
   --scrim: rgba(0, 0, 0, .6); --shadow: 0 24px 60px rgba(0, 0, 0, .55); color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -132,11 +135,11 @@ html:not([data-site]) header.top .brand { pointer-events: none; }
 .notice { margin-top: 8px; font-size: 13px; color: var(--muted); background: var(--surface); border: 0; border-radius: 8px; padding: 10px 14px; }
 
 /* controls: only the search stays on screen */
-.sbar { position: sticky; top: 64px; z-index: 5; background: var(--bg); padding-block: 8px; }
-@media (min-width: 561px) { .sbar { top: 72px; } }
 .bar { padding-block: 4px 12px; display: grid; gap: 12px; }
-.vhead { text-align: start; padding-block: clamp(20px, 5vw, 56px) 12px; display: grid; gap: 12px; justify-items: start; }
-.vhead h1 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(36px, 5vw, 64px); line-height: 1.02; letter-spacing: 0; text-wrap: balance; max-width: 18ch; }
+/* Listing heads (Awwwards): a modest semibold title with the count in a small outlined box */
+.vhead, .listhead { text-align: start; padding-block: clamp(16px, 3vw, 40px) 16px; display: grid; gap: 8px; justify-items: start; }
+.vhead h1, .listhead h1 { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: clamp(19px, 2vw, 26px); line-height: 1.25; letter-spacing: 0; text-wrap: balance; }
+.cbox { display: inline-block; vertical-align: 2px; margin-inline-start: 6px; padding: 1px 6px; border: 1px solid var(--ink); border-radius: 4px; font-size: .62em; font-weight: 400; line-height: 1.5; font-variant-numeric: tabular-nums; }
 .vhead p { margin: 0; color: var(--muted); font-size: 16px; max-width: 600px; }
 #v-explore .search, #v-explore .bar { width: 100%; }
 .seg { max-width: 560px; width: 100%; margin-inline: auto; }
@@ -389,16 +392,117 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   .sources a { display: inline-block; padding-block: 6px; }
 }
 .toast { position: fixed; z-index: 30; left: 50%; transform: translateX(-50%); bottom: calc(var(--tabbar) + env(safe-area-inset-bottom, 0px) + 12px); background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 8px; font-size: 14px; box-shadow: var(--shadow); max-width: calc(100% - 32px); }
+
+/* ---------- Awwwards listing: filter tray + dropdown ---------- */
+.ftray { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; background: var(--surface); border-radius: 8px; padding: 6px; }
+@media (min-width: 900px) { .ftray { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+.fbtn { display: flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 16px; border: 1px solid transparent; border-radius: 6px; background: var(--paper); color: var(--ink); font-size: 16px; font-weight: 400; text-align: start; min-width: 0; transition: border-color .2s; }
+.fbtn .fl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.fbtn .chev { flex: none; transition: transform .2s; }
+.fbtn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.fbtn .fn { flex: none; min-width: 20px; padding: 0 5px; border-radius: 4px; background: var(--ink); color: var(--bg); font-size: 11px; font-weight: 600; line-height: 18px; text-align: center; }
+.fbtn.on { border-color: var(--ink); font-weight: 500; }
+@media (hover: hover) { .fbtn:hover { border-color: var(--line-2); } .fbtn.on:hover { border-color: var(--ink); } }
+.listdesc { margin: 24px 0 8px; font-size: 16px; line-height: 2; max-width: 760px; }
+.listdesc b { font-weight: 600; }
+#mine { margin-block: 4px 8px; }
+.ddscrim { position: fixed; inset: 0; z-index: 25; background: rgba(0, 0, 0, .3); }
+.dd { position: fixed; z-index: 26; background: var(--paper); border-radius: 8px; overflow-y: auto; overscroll-behavior: contain; padding: 8px 0 0; box-shadow: 0 24px 60px rgba(0, 0, 0, .18); }
+.ddhead { display: flex; align-items: center; justify-content: space-between; padding: 4px 8px 4px 24px; }
+[dir="rtl"] .ddhead { padding: 4px 24px 4px 8px; }
+.ddhead b { font-size: 13px; font-weight: 500; color: var(--muted); }
+.ddx { width: 44px; height: 44px; border: 0; background: none; border-radius: 6px; display: grid; place-items: center; color: var(--ink); }
+.ddlist { display: grid; padding: 0 0 12px; }
+.ddgrp { margin: 12px 24px 4px; font-size: 13px; color: var(--muted); }
+.ddopt { display: flex; align-items: center; gap: 14px; min-height: 52px; padding: 0 24px; border: 0; background: none; color: var(--ink); font-size: 17px; text-align: start; width: 100%; }
+.ddopt .lb { flex: 1; min-width: 0; }
+.ddopt .n { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ddopt .ring { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--radio); position: relative; transition: border-color .15s; }
+.ddopt[aria-checked="true"] .ring { border-color: var(--ink); }
+.ddopt[aria-checked="true"] .ring::after { content: ""; position: absolute; inset: 4px; border-radius: 50%; background: var(--ink); }
+.ddopt[aria-checked="true"] .lb { font-weight: 500; }
+@media (hover: hover) { .ddopt:hover { background: var(--surface); } }
+.ddfoot { position: sticky; bottom: 0; display: flex; gap: 8px; justify-content: space-between; align-items: center; padding: 12px 16px; background: var(--paper); border-top: 1px solid var(--line); }
+:root.dd-open { overflow: hidden; }
+@media (prefers-reduced-motion: no-preference) { .dd:not([hidden]) { animation: dd-in .18s ease-out; } @keyframes dd-in { from { opacity: 0; transform: translateY(-6px); } } }
+
+/* ---------- Thumbnail cards: tile first, byline under it ---------- */
+#grid.grid { gap: 40px 16px; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); margin-top: 16px; }
+.card.shot { background: none; border: 0; padding: 0; gap: 0; border-radius: 0; transform: none; color: var(--ink); }
+.card.shot:hover { border: 0; }
+.card.shot:focus-visible { outline: none; }
+.card.shot:focus-visible .frame { outline: 2px solid var(--accent); outline-offset: 3px; }
+.frame { position: relative; display: block; border-radius: 8px; overflow: hidden; }
+.thumb { aspect-ratio: 4 / 3; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 24px; background: var(--thumb); color: #222; text-align: center; transition: transform .6s var(--ease); }
+.thumb .tl { width: 64px; height: 64px; border-radius: 12px; background: #fff; display: grid; place-items: center; overflow: hidden; }
+.thumb .tl img { width: 80%; height: 80%; object-fit: contain; }
+.thumb .tn { font-family: var(--f-display); font-weight: 300; font-size: clamp(20px, 2vw, 26px); line-height: 1.15; max-width: 16ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.thumb.word .tn { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; }
+.thumb.big { aspect-ratio: 16 / 9; max-height: 340px; width: 100%; }
+.thumb.big .tl { width: 88px; height: 88px; border-radius: 16px; }
+.thumb.big .tn { font-size: clamp(26px, 4vw, 44px); }
+.thumb.big.word .tn { font-size: clamp(40px, 6vw, 72px); }
+.over { position: absolute; inset-inline: 8px; bottom: 8px; background: var(--ink); color: var(--bg); border-radius: 6px; padding: 10px 12px; font-size: 13px; line-height: 1.45; text-align: start; opacity: 0; transform: translateY(8px); transition: opacity .25s var(--ease), transform .25s var(--ease); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.over:empty { display: none; }
+.over b { font-weight: 600; }
+@media (hover: hover) {
+  .card.shot:hover .thumb { transform: scale(1.03); }
+  .card.shot:hover .over, .card.shot:focus-visible .over { opacity: 1; transform: none; }
+}
+.by { display: flex; align-items: center; gap: 10px; margin-top: 14px; min-width: 0; }
+.logo.av { width: 32px; height: 32px; border-radius: 50%; font-size: 11px; }
+.by .nm { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 4px; flex-wrap: wrap; row-gap: 0; }
+.by .n { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.by sup { font-size: 10px; font-weight: 500; color: var(--ink); top: -.6em; }
+.by .w { flex-basis: 100%; font-size: 13px; color: var(--muted); }
+.by .tags { flex: none; display: flex; gap: 6px; }
+.by .t { font-size: 12px; font-weight: 500; line-height: 1; padding: 6px 8px; border-radius: 4px; border: 1px solid var(--line-2); color: var(--ink); white-space: nowrap; }
+.by .t.new { display: inline-flex; align-items: center; gap: 5px; }
+.by .t.new::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.by .t.ink { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+
+/* ---------- Detail page (Awwwards' site page): full screen on phones, a wide panel on desktop ---------- */
+#sheet { background: var(--paper); }
+@media (max-width: 859px) { #sheet { inset: 0; max-height: none; border-radius: 0; padding-top: 0; } #sheet::before { display: none; } }
+@media (min-width: 860px) { #sheet.side { width: min(920px, 94vw); padding: 0 40px 48px; } }
+#sheet .close { width: 56px; height: 56px; border: 0; border-radius: 0; background: var(--ink); color: var(--bg); margin-inline-end: -18px; margin-block-end: -56px; display: grid; place-items: center; font-size: 22px; }
+@media (min-width: 860px) { #sheet .close { margin-inline-end: -40px; } }
+#sheet .close svg { width: 24px; height: 24px; }
+.dhero { margin: 0 -18px; }
+@media (min-width: 860px) { .dhero { margin: 0 -40px; } }
+.dhero .thumb { border-radius: 0; }
+#sheet .ident { margin-top: 24px; }
+#sheet .ident .logo.lg { display: none; }
+#sheet h2 { font-weight: 600; font-size: clamp(30px, 5vw, 52px); line-height: 1.05; margin-top: 6px; }
+#sheet .actions { margin-top: 20px; }
+#sheet section { border-top: 0; margin-top: 44px; padding-top: 0; }
+#sheet section > h4, #sheet section > details > summary { font-size: 14px; font-weight: 400; color: var(--ink); margin: 0 0 20px; padding-bottom: 18px; text-decoration: none;
+  background: radial-gradient(circle, currentColor 1px, transparent 1.4px) left bottom / 12px 3px repeat-x; min-height: 0; display: block; }
+#sheet .about .desc { font-size: clamp(22px, 2.8vw, 32px); font-weight: 300; line-height: 1.3; margin: 0; }
+#sheet .facts { margin-top: 24px; font-size: 15px; gap: 8px 24px; }
+.pills { display: flex; flex-wrap: wrap; gap: 10px; }
+#sheet .pills .tag, #sheet .pills .chip { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 18px; margin: 0; border-radius: 999px; border: 1px solid var(--line-2); background: transparent; font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; }
+#sheet .pills .tag.hit { border-color: var(--ink); background: var(--ink); color: var(--bg); }
+@media (hover: hover) { #sheet .pills a.chip:hover { border-color: var(--ink); } }
+#sheet .ways .items button { border-radius: 999px; padding-inline: 6px 16px; min-height: 44px; font-weight: 500; }
+#sheet .ways .items .plain { border-radius: 999px; min-height: 44px; padding: 0 16px; }
+#sheet .person { background: var(--surface); }
+#sheet .sig { background: var(--surface); }
+html:not([data-site]) .promo { display: none; }
 </style>
 
 <script>if (window.LANDSCAPE_SITE) document.documentElement.setAttribute("data-site", "");</script>
 <!-- chrome:header -->
+<div class="promo"><div class="track"><div class="run"><a href="/digest#subscribe"><b>השבוע בתעשייה</b> כל יום ראשון במייל, חינם</a><a href="/survey" data-promo-survey="2026-12-31T23:59:59+02:00"><b>סקר התעריפים 2026</b> 4 דקות, ורואים את התוצאות</a></div><div class="run" aria-hidden="true"><a tabindex="-1" href="/digest#subscribe"><b>השבוע בתעשייה</b> כל יום ראשון במייל, חינם</a><a tabindex="-1" href="/survey" data-promo-survey="2026-12-31T23:59:59+02:00"><b>סקר התעריפים 2026</b> 4 דקות, ורואים את התוצאות</a></div></div></div>
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="/" lang="en" aria-label="Landscape">Landscape<span>.</span></a>
-    <nav class="nav sitenav" aria-label="ניווט ראשי"><a href="/people" data-i18n="nav.people">People</a><a href="/companies" aria-current="page" data-i18n="nav.companies">Companies</a></nav>
-    <div class="end"><button class="langbtn" type="button" id="lang" lang="en">English</button><a class="cta" href="/onboard" data-cta data-i18n="nav.join">Join</a></div>
+    <button type="button" class="burger" data-menu-toggle aria-expanded="false" aria-controls="sitemenu"><span class="bars" aria-hidden="true"></span><span class="sr-only">תפריט</span></button>
+    <a class="brand" href="/" lang="en" aria-label="Landscape, לדף הבית">Landscape<span>.</span></a>
+    <nav class="nav sitenav" aria-label="ניווט ראשי"><a href="/people">אנשים</a><a href="/companies" aria-current="page">חברות</a><a href="/tenders">מכרזים</a></nav>
+    <label class="hsearch" for="q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" data-i18n-ph="search.ph" placeholder="חיפוש חברות: שם, תחום או עיר" autocomplete="off" aria-label="חיפוש חברות"></label>
+    <div class="end"><button class="langbtn" type="button" id="lang" lang="en">English</button><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button><a class="cta" href="/digest#subscribe" data-cta><span class="cta-l">לגיליון השבועי</span><span class="cta-s" aria-hidden="true">לגיליון</span><span class="cta-i" aria-hidden="true"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span></a></div>
   </div>
+  <div class="menusheet" id="sitemenu" hidden><div class="wrap"><nav class="menusheet-nav" aria-label="תפריט"><a href="/people">אנשים</a><a href="/companies" aria-current="page">חברות</a><a href="/tenders">מכרזים</a><a href="/companies#signals">עדכונים</a><a href="/digest">השבוע בתעשייה</a><a href="/survey">סקר התעריפים</a></nav><div class="menusheet-end"><a class="btn-ink" href="/digest#subscribe" data-cta-sheet>לגיליון השבועי</a><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button></div></div></div>
 </header>
 <!-- /chrome:header -->
 <nav class="subnav wrap" aria-label="Sections"><div class="in">
@@ -433,37 +537,20 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 
   <!-- EXPLORE -->
   <section id="v-explore" aria-labelledby="ex-h" hidden>
-    <div class="vhead"><h1 id="ex-h" data-i18n="ex.h">Companies</h1><p id="exSub"></p></div>
-    <div class="sbar">
-      <label class="search" for="q">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" data-i18n-ph="search.ph" placeholder="Search companies: name, craft or city" autocomplete="off" aria-label="Search companies">
-      </label>
+    <div class="listhead"><h1 id="ex-h"><span data-i18n="ex.h">Companies</span> <span class="cbox" id="count"></span></h1></div>
+    <!-- Filters: a grey tray of six buttons; each opens a dropdown list (#dd) -->
+    <div class="ftray" id="ftray" role="group" aria-label="Filters">
+      <button class="fbtn" type="button" data-dd="lens" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="dd.lens">Show</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="kinds" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.type">Type</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="cats" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.craft">Craft</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="inds" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.industry">Industry</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="city" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="fl.city">City</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+      <button class="fbtn" type="button" data-dd="sort" aria-haspopup="dialog" aria-expanded="false"><span class="fl" data-i18n="dd.sort">Sort</span><span class="fn" hidden></span><svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
     </div>
-    <div class="bar">
-      <div class="seg" id="lens" role="group" aria-label="Lens">
-        <button type="button" data-lens="all" data-i18n="lens.all">All</button>
-        <button type="button" data-lens="brands" data-i18n="lens.brands">Brands</button>
-        <button type="button" data-lens="collab" data-i18n="lens.collab">Collaborators</button>
-      </div>
-      <div class="scroller" id="mine" aria-label="What I make"></div>
-      <div class="tools">
-        <button class="btn" type="button" id="openFilters">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
-          <span data-i18n="filters">Filters</span> <span class="badge" id="fcount" hidden></span>
-        </button>
-        <select class="btn" id="sort" aria-label="Sort">
-          <option value="fit" data-i18n="sort.fit">Best fit</option>
-          <option value="name" data-i18n="sort.name">A → Z</option>
-          <option value="size" data-i18n="sort.size">Largest</option>
-          <option value="founded" data-i18n="sort.founded">Newest</option>
-        </select>
-        <span class="count" id="count"></span>
-      </div>
-      <div class="scroller" id="active" hidden></div>
-    </div>
+    <p class="listdesc"><span id="exSub"></span></p>
+    <div class="scroller" id="mine" aria-label="What I make"></div>
+    <div class="scroller" id="active" hidden></div>
     <main>
-      <p class="survey-banner" id="surveyBanner"><span data-i18n="survey.b">Rates survey 2026</span> <a href="/survey" data-i18n="survey.a">Take the survey ›</a></p>
       <div class="grid" id="grid"></div>
       <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more" data-i18n="more">Show more</button></div>
       <div class="empty" id="empty" hidden>
@@ -514,6 +601,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 <div class="scrim" id="scrim" hidden></div>
 <aside class="sheet side" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="d-name"></aside>
 <aside class="sheet center" id="panel" hidden role="dialog" aria-modal="true" aria-label="Options"></aside>
+<div class="ddscrim" id="ddscrim" hidden></div>
+<div class="dd" id="dd" hidden role="dialog" aria-modal="true" aria-labelledby="dd-h"></div>
 <div class="toast" id="toast" hidden role="status" aria-live="polite"></div>
 
 <script>
@@ -524,10 +613,10 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     en: {
       "app.sub": "· Israel’s creative industry", "nav.people": "People", "nav.companies": "Companies", "nav.join": "Join", "loading": "Loading…", "loadfail": "Couldn’t load the data. Reload to try again.",
       "meta": "{0} companies · {1} updates · updated {2}",
-      "search.ph": "Search companies: name, craft or city", "ex.h": "Companies", "ex.sub": "{0} studios, brands and agencies. By craft, city or name.",
+      "search.ph": "Search companies: name, craft or city", "ex.h": "Companies", "ex.sub": "Every <b>studio, brand and agency</b> in Israel's creative industry, with who commissions what. Filter by craft, city or name.",
       "lens.brands": "Clients", "lens.collab": "Studios", "lens.all": "All",
       "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts", "mine.hint": "What fits you comes first", "t.noorg": "Company not found", "mine.remove": "Remove {0}",
-      "filters": "Filters", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
+      "filters": "Filters", "dd.lens": "Show", "dd.sort": "Sort", "dd.clear": "Clear", "card.new": "New", "card.fit": "Fits you", "sh.desc": "Description", "sh.tags": "Crafts and fields", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
       "survey.b": "Rates survey 2026: 4 minutes, and you see the results.", "survey.a": "Take the survey ›",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
@@ -578,10 +667,10 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     he: {
       "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
       "meta": "{0} חברות · {1} עדכונים · עודכן {2}",
-      "search.ph": "חיפוש בחברות: שם, תחום או עיר", "ex.h": "חברות בתעשייה", "ex.sub": "{0} סטודיואים, מותגים וסוכנויות. לפי תחום, עיר או שם.",
+      "search.ph": "חיפוש בחברות: שם, תחום או עיר", "ex.h": "חברות בתעשייה", "ex.sub": "כל <b>הסטודיואים, המותגים ומשרדי הפרסום</b> בתעשיית הקריאייטיב בישראל, ומי מזמין מה. לפי תחום, עיר או שם.",
       "lens.brands": "לקוחות", "lens.collab": "סטודיואים", "lens.all": "הכול",
       "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
-      "filters": "סינון", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
+      "filters": "סינון", "dd.lens": "הצגה", "dd.sort": "מיון", "dd.clear": "ניקוי", "card.new": "עדכון", "card.fit": "מתאים לכם", "sh.desc": "תיאור", "sh.tags": "תחומים", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
       "survey.b": "סקר התעריפים 2026: 4 דקות, ורואים את התוצאות.", "survey.a": "לענות על הסקר ‹",
       "empty.h": "אין תוצאות", "empty.p": "אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
@@ -862,7 +951,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = t(el.dataset.i18n)));
     // The rates survey line shows only while the survey is open. The build fills in the close date from
     // lib/survey/config.js (CLOSES_AT); without it (e.g. the Artifact copy) the line stays hidden.
-    if ($("surveyBanner")) { const c = Date.parse("__SURVEY_CLOSES_AT__"); $("surveyBanner").hidden = !(c > Date.now()); }
+    document.querySelectorAll("[data-promo-survey]").forEach((a) => { if (!(Date.parse(a.dataset.promoSurvey) > Date.now())) a.hidden = true; });
     document.querySelectorAll("[data-i18n-ph]").forEach((el) => (el.placeholder = t(el.dataset.i18nPh)));
     ["lang", "lang2"].forEach((id) => { $(id).textContent = LANG === "he" ? "English" : "עברית"; $(id).lang = LANG === "he" ? "en" : "he"; });
     if (ORGS.length) $("meta").textContent = t("meta", ORGS.length, BASE_SIGNALS.length, new Date(GENERATED).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" }));
@@ -934,29 +1023,33 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     const r = (o.relations || []).find((r) => r.type === "agency");
     return r ? (BY_ID[r.target_id]?.name || r.target) : "";
   }
+  // The thumbnail: the logo (64px source, so it stays small) over the name in light type, on a grey tile.
+  // A company without a logo gets its name as a wordmark.
+  function thumb(o, big) {
+    const src = LOGOS[o.id], nm = names(o).main;
+    return `<span class="thumb${src ? "" : " word"}${big ? " big" : ""}">${src ? `<span class="tl"><img src="${esc(src)}" alt="" loading="lazy"></span>` : ""}<span class="tn" dir="auto">${esc(nm)}</span></span>`;
+  }
   function card(o) {
     const buyer = GROUP[o.kind] === "buyer" || (o.kind === "startup" && o.needs.length);
     const e = Store.entry(o.id);
     const sig = freshSignal(o);
-    const hits = new Set(needHits(o));
+    const hits = needHits(o);
     const nm = names(o);
-    let body = "";
-    if (buyer && o.needs.length) {
-      const needs = [...o.needs].sort((a, b) => hits.has(b) - hits.has(a)).slice(0, 4);
-      body += `<p class="line"><span class="k">${t("card.buys")}</span>${needs.map((n) => hits.has(n) ? `<b class="fit">${esc(needLabel(n))}</b>` : esc(needLabel(n))).join(" · ")}</p>`;
-      const ag = agencyOf(o);
-      if (ag && o.kind !== "agency") body += `<p class="line"><span class="k">${t("card.via")}</span><bdi>${esc(ag)}</bdi></p>`;
-    } else if (o.kind === "agency" && (o.notable_clients || []).length) {
-      body += `<p class="line"><span class="k">${t("card.clients")}</span><bdi>${esc(o.notable_clients.slice(0, 3).join(" · "))}</bdi></p>`;
-    } else {
-      body += `<p dir="auto">${bidi(orgDesc(o))}</p>`;
-      const shown = o.categories.filter((c) => GROUP[o.kind] !== "maker" || CRAFTS.includes(c)).slice(0, 3);
-      if (shown.length) body += `<div>${shown.map((c) => `<span class="tag${myCrafts().includes(c) ? " hit" : ""}">${esc(catLabel(c))}</span>`).join("")}</div>`;
-    }
-    if (sig) body += `<div class="nowline"><span class="t">${esc(sigType(sig.type))}</span><span dir="auto">${bidi(trim(sigHead(sig), 90))} <span class="mono muted">${ago(sig.date)}</span></span></div>`;
-    return `<button class="card" type="button" data-id="${o.id}" style="${gstyle(o)}">
-      <div class="top">${logo(o)}<div class="nm"><h3><bdi>${esc(nm.main)}</bdi></h3>${nm.alt ? `<bdi class="alt" dir="auto">${esc(nm.alt)}</bdi>` : ""}${kindLine(o)}</div>
-      ${e ? `<span class="stage">${IC.saved} ${esc(stageLabel(e.stage) || t("st.saved"))}</span>` : ""}</div>${body}</button>`;
+    // On hover (desktop) the tile shows what matters most: what they buy, their clients, or what they do.
+    let over = "";
+    if (buyer && o.needs.length) over = `<b>${t("card.buys")}</b> ${esc(o.needs.slice(0, 4).map(needLabel).join(" · "))}`;
+    else if (o.kind === "agency" && (o.notable_clients || []).length) over = `<b>${t("card.clients")}</b> <bdi>${esc(o.notable_clients.slice(0, 3).join(" · "))}</bdi>`;
+    else over = bidi(trim(orgDesc(o) || "", 120));
+    const where = cityName(o.location.city) || countryName(o.location.country);
+    const tags = [
+      e ? `<span class="t ink">${esc(stageLabel(e.stage) || t("st.saved"))}</span>` : "",
+      sig ? `<span class="t new" title="${esc(sigHead(sig) + " · " + ago(sig.date))}">${t("card.new")}</span>` : "",
+      hits.length ? `<span class="t">${t("card.fit")}</span>` : "",
+    ].join("");
+    return `<button class="card shot" type="button" data-id="${o.id}" style="${gstyle(o)}">
+      <span class="frame">${thumb(o)}<span class="over" dir="auto">${over}</span></span>
+      <span class="by">${logo(o, "av")}<span class="nm"><bdi class="n">${esc(nm.main)}</bdi><sup>${esc(kindOne(o.kind))}</sup><span class="w">${esc(where)}</span></span>${tags ? `<span class="tags">${tags}</span>` : ""}</span>
+    </button>`;
   }
 
   function renderMine() {
@@ -970,11 +1063,8 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
   function renderAskBtn() { document.querySelectorAll("[data-asktab]").forEach((b) => (b.hidden = !askReady())); }
 
   function renderExplore() {
-    document.querySelectorAll("#lens button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lens === state.lens));
     if ($("q").value.trim() !== state.q) $("q").value = state.q;
-    $("sort").value = state.sort;
-    const nf = state.kinds.length + state.cats.length + state.inds.length + state.needs.length + (state.city ? 1 : 0);
-    $("fcount").hidden = !nf; $("fcount").textContent = nf;
+    renderTray();
     const act = [
       ...state.kinds.map((k) => ["kinds", k, kindMany(k)]), ...state.needs.map((k) => ["needs", k, needLabel(k)]),
       ...state.cats.map((k) => ["cats", k, catLabel(k)]), ...state.inds.map((k) => ["inds", k, catLabel(k)]),
@@ -998,8 +1088,10 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
       list.length = 0;
       while (q.buyer.length || q.maker.length || q.tech.length) ["maker", "buyer", "tech"].forEach((g) => q[g].length && list.push(q[g].shift()));
     }
-    $("count").textContent = list.length === 1 ? t("count1") : t("count", list.length);
-    $("exSub").textContent = t("ex.sub", ORGS.length);
+    $("count").textContent = list.length.toLocaleString(locale());
+    $("count").setAttribute("aria-label", list.length === 1 ? t("count1") : t("count", list.length));
+    $("exSub").innerHTML = t("ex.sub", ORGS.length);
+    if (!$("dd").hidden) renderDD();
     if ($("fShow")) $("fShow").textContent = list.length === 1 ? t("fl.show1") : t("fl.show", list.length);
     $("empty").hidden = list.length > 0;
     $("grid").innerHTML = list.slice(0, state.shown).map(card).join("");
@@ -1036,6 +1128,75 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     showPanel();
   }
   function showPanel(back) { if (back) $("panel").dataset.back = back; else delete $("panel").dataset.back; $("sheet").hidden = true; $("panel").hidden = false; $("scrim").hidden = false; $("panel").scrollTop = 0; $("panel").querySelector(".close").focus({ preventScroll: true }); }
+
+  // ---------- filter dropdowns (Awwwards-style: a tray of buttons, each opens a list with radio rings) ----------
+  const SINGLE = { lens: true, city: true, sort: true };
+  const DD_LABEL = { lens: "dd.lens", kinds: "fl.type", cats: "fl.craft", inds: "fl.industry", city: "fl.city", sort: "dd.sort" };
+  let ddKey = "", ddBtn = null;
+  const usedFacet = (facet) => (TAX.facets?.[facet] || []).filter((c) => ORGS.some((o) => o.categories.includes(c)));
+  function ddGroups(key) {
+    if (key === "lens") return [["", [["all", t("lens.all")], ["brands", t("lens.brands")], ["collab", t("lens.collab")]]]];
+    if (key === "sort") return [["", ["fit", "name", "size", "founded"].map((k) => [k, t("sort." + k)])]];
+    if (key === "kinds") return [["", KINDS.filter((k) => ORGS.some((o) => o.kind === k)).map((k) => [k, kindMany(k)])]];
+    if (key === "cats") return [["", usedFacet("craft").map((c) => [c, catLabel(c)])], [t("fl.product"), usedFacet("product").map((c) => [c, catLabel(c)])]];
+    if (key === "inds") return [["", usedFacet("industry").map((c) => [c, catLabel(c)])]];
+    const cities = {}; ORGS.forEach((o) => { const c = o.location.city; if (c) cities[c] = (cities[c] || 0) + 1; });
+    return [["", [["", t("fl.anycity")], ...Object.entries(cities).sort((a, b) => b[1] - a[1]).map(([c, n]) => [c, cityName(c), n])]]];
+  }
+  const ddValue = (key) => (key === "lens" ? state.lens : key === "city" ? state.city : key === "sort" ? state.sort : null);
+  const ddOn = (key, v) => (SINGLE[key] ? ddValue(key) === v : state[key].includes(v));
+  function renderTray() {
+    document.querySelectorAll("#ftray [data-dd]").forEach((b) => {
+      const k = b.dataset.dd, fl = b.querySelector(".fl"), fn = b.querySelector(".fn");
+      if (SINGLE[k]) {
+        const v = ddValue(k), def = k === "lens" ? "all" : k === "sort" ? "fit" : "";
+        const opt = v !== def && ddGroups(k)[0][1].find((x) => x[0] === v);
+        fl.textContent = opt ? opt[1] : t(DD_LABEL[k]); fn.hidden = true; b.classList.toggle("on", !!opt);
+      } else {
+        fl.textContent = t(DD_LABEL[k]); const n = state[k].length; fn.hidden = !n; fn.textContent = n; b.classList.toggle("on", n > 0);
+      }
+    });
+  }
+  function renderDD() {
+    const k = ddKey, single = SINGLE[k];
+    const opts = ddGroups(k).filter(([, items]) => items.length).map(([h, items]) => `${h ? `<p class="ddgrp">${esc(h)}</p>` : ""}` + items.map(([v, l, n]) =>
+      `<button class="ddopt" type="button" role="${single ? "radio" : "checkbox"}" aria-checked="${ddOn(k, v)}" data-ddv="${esc(v)}"><span class="ring" aria-hidden="true"></span><span class="lb">${esc(l)}</span>${n ? `<span class="n">${n}</span>` : ""}</button>`).join("")).join("");
+    const n = ORGS.filter(matches).length;
+    $("dd").innerHTML = `<div class="ddhead"><b id="dd-h">${t(DD_LABEL[k])}</b><button class="ddx" type="button" data-ddclose aria-label="${t("close")}">${IC.x}</button></div>
+      <div class="ddlist" role="${single ? "radiogroup" : "group"}" aria-labelledby="dd-h">${opts}</div>
+      ${single ? "" : `<div class="ddfoot"><button class="btn ghost" type="button" data-ddclear>${t("dd.clear")}</button><button class="btn primary" type="button" data-ddclose>${n === 1 ? t("fl.show1") : t("fl.show", n)}</button></div>`}`;
+  }
+  function placeDD() {
+    const dd = $("dd"), r = ddBtn.getBoundingClientRect(), W = innerWidth, H = innerHeight, phone = W < 640;
+    const g = phone ? 16 : 0;
+    const width = phone ? W - 2 * g : Math.max(r.width, 320);
+    let start = phone ? g : (document.dir === "rtl" || document.documentElement.dir === "rtl" ? W - r.right : r.left);
+    start = Math.min(start, W - width - 16);
+    const top = phone ? Math.max(12, r.top) : r.bottom + 8;
+    Object.assign(dd.style, { top: top + "px", width: width + "px", maxHeight: Math.max(240, H - top - 16) + "px" });
+    dd.style.setProperty("inset-inline-start", Math.max(phone ? g : 16, start) + "px");
+  }
+  function openDD(key, btn) {
+    if (ddBtn) ddBtn.setAttribute("aria-expanded", "false");
+    ddKey = key; ddBtn = btn; btn.setAttribute("aria-expanded", "true");
+    renderDD(); $("dd").hidden = false; $("ddscrim").hidden = false; document.documentElement.classList.add("dd-open");
+    placeDD(); ($("dd").querySelector('[aria-checked="true"]') || $("dd").querySelector(".ddopt"))?.focus({ preventScroll: true });
+  }
+  function closeDD() {
+    if ($("dd").hidden) return;
+    $("dd").hidden = true; $("ddscrim").hidden = true; document.documentElement.classList.remove("dd-open");
+    if (ddBtn) { ddBtn.setAttribute("aria-expanded", "false"); ddBtn.focus({ preventScroll: true }); }
+    ddKey = ""; ddBtn = null;
+  }
+  function pickDD(v) {
+    const k = ddKey;
+    if (k === "lens") { state.lens = v; state.kinds = []; }
+    else if (k === "city") state.city = v;
+    else if (k === "sort") state.sort = v;
+    else { const arr = state[k], i = arr.indexOf(v); i >= 0 ? arr.splice(i, 1) : arr.push(v); }
+    refresh();
+    if (SINGLE[k]) closeDD();
+  }
 
   // ---------- detail sheet ----------
   function orgChip(x) { return `<button type="button" data-id="${x.id}" style="${gstyle(x)}">${logo(x, "sm")}<bdi>${esc(orgName(x))}</bdi></button>`; }
@@ -1110,6 +1271,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
     const ways = waysIn(o);
     sh.dataset.id = o.id;
     sh.innerHTML = `${closeBtn()}
+      <div class="dhero">${thumb(o, true)}</div>
       <div class="ident" style="${gstyle(o)}">${logo(o, "lg")}<div>${kindLine(o)}<h2 id="d-name"><bdi>${esc(nm.main)}</bdi></h2>${nm.alt ? `<bdi class="alt" dir="auto">${esc(nm.alt)}</bdi>` : ""}</div></div>
       <div class="actions">
         ${e ? `<button class="btn primary" type="button" data-toggle-editor aria-expanded="true">${following(o.id) ? IC.bell : IC.saved} ${esc(stageLabel(e.stage))}${following(o.id) ? esc(" · " + t("sh.following")) : ""}${e.next_date ? esc(t("sh.followup", fmtDate(e.next_date))) : ""}</button>`
@@ -1118,25 +1280,24 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
         ${o.website ? `<a class="btn" href="${esc(o.website)}" target="_blank" rel="noopener">${t("sh.website")} ${IC.ext}</a>` : ""}
       </div>
       ${e ? editor(e) : ""}
+      <section class="about"><h4>${t("sh.desc")}</h4><p class="desc" dir="auto">${bidi(orgDesc(o))}</p>
+        ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
+        ${facts.length ? `<dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}</section>
+      ${o.categories.length ? `<section><h4>${t("sh.tags")}</h4><div class="pills">${o.categories.map((c) => `<span class="tag">${esc(catLabel(c))}</span>`).join("")}</div></section>` : ""}
       ${e && e.draft ? `<section><h4>${t("sh.draft")}</h4><p style="white-space:pre-wrap;font-size:14px;margin-top:0" dir="auto">${esc(e.draft)}</p></section>` : ""}
       ${sigs.length ? `<section><h4>${t("sh.whynow")}</h4><div class="feed">${sigs.slice(0, 4).map((s) => sigCard(s, true)).join("")}</div></section>` : ""}
       ${buyer && (o.needs.length || o.client_profile?.creative_needs?.length) ? `<section><h4>${t("sh.buy")}</h4>
-        <div>${o.needs.map((n) => `<span class="tag${hits.has(n) ? " hit" : ""}">${hits.has(n) ? IC.check + " " : ""}${esc(needLabel(n))}</span>`).join("")}</div>
+        <div class="pills">${o.needs.map((n) => `<span class="tag${hits.has(n) ? " hit" : ""}">${hits.has(n) ? IC.check + " " : ""}${esc(needLabel(n))}</span>`).join("")}</div>
         ${LANG !== "he" && o.client_profile?.creative_needs?.length ? `<p class="muted" style="font-size:13px" dir="auto">${esc(o.client_profile.creative_needs.join(" · "))}</p>` : ""}
         ${!myCrafts().length ? `<p style="font-size:13px"><button class="btn ghost" type="button" data-crafts>${t("sh.pickcrafts")}</button>${t("sh.pickcrafts2")}</p>` : ""}
         ${o.client_profile?.in_house_studio ? `<p style="font-size:13px">${t("sh.inhouse")}</p>` : ""}</section>` : ""}
       ${ways.length ? `<section><h4>${t("sh.ways")}</h4><div class="ways">${ways.map(([h, x]) => `<div class="grp"><span>${h}</span>${x.startsWith('<div class="people">') ? x : `<div class="items">${x}</div>`}</div>`).join("")}</div></section>` : ""}
-      <section><h4>${t("sh.about")}</h4><p style="margin-top:0" dir="auto">${bidi(orgDesc(o))}</p>
-        ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
-        ${facts.length ? `<dl class="facts" style="margin-top:10px">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}
-        <div style="margin-top:10px">${o.categories.map((c) => `<span class="tag">${esc(catLabel(c))}</span>`).join("")}</div>
-      </section>
       ${(o.services?.length || o.notable_work?.length || o.funding?.investors?.length) ? `<section><details><summary>${t("sh.work")}</summary>
         ${o.services?.length ? `<h4>${t("sh.services")}</h4><ul class="plain" dir="auto">${o.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
         ${o.notable_work?.length ? `<h4 style="margin-top:10px">${t("sh.notable")}</h4><ul class="plain" dir="auto">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
         ${o.funding?.investors?.length ? `<h4 style="margin-top:10px">${t("sh.investors")}</h4><p style="margin:0;font-size:14px">${esc(o.funding.investors.join(", "))}</p>` : ""}
       </details></section>` : ""}
-      ${links.length ? `<section><h4>${t("sh.links")}</h4><div class="chipset">${links.map(([l, u]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ${IC.ext}</a>`).join("")}</div></section>` : ""}
+      ${links.length ? `<section><h4>${t("sh.links")}</h4><div class="chipset pills">${links.map(([l, u]) => `<a class="chip" href="${esc(u)}" target="_blank" rel="noopener">${esc(l)} ${IC.ext}</a>`).join("")}</div></section>` : ""}
       <section><details><summary>${esc(t("sh.sources", t("conf." + o.confidence), fmtDate(o.last_verified)))}</summary>
         <div class="sources" dir="ltr">${o.sources.map((s) => `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s.replace(/^https?:\/\/(www\.)?/, ""))}</a>`).join("")}</div></details>
         ${Store.mode === "db" && !Store.readOnly ? `<button class="btn ghost" type="button" data-report style="margin-top:6px">${t("sh.report")}</button>` : ""}</section>`;
@@ -1639,19 +1800,28 @@ Question: ${q}`;
   $("askQ").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); ask($("askQ").value); } });
   $("askQ").addEventListener("input", autosize);
   ["lang", "lang2"].forEach((id) => $(id).addEventListener("click", () => setLang(LANG === "he" ? "en" : "he")));
-  $("lens").addEventListener("click", (e) => { const b = e.target.closest("[data-lens]"); if (b) { state.lens = b.dataset.lens; state.kinds = []; refresh(); } });
-  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; refresh(); });
-  $("openFilters").addEventListener("click", openFilters);
+  $("ftray").addEventListener("click", (e) => { const b = e.target.closest("[data-dd]"); if (!b) return; ddKey === b.dataset.dd ? closeDD() : openDD(b.dataset.dd, b); });
+  $("dd").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.ddv !== undefined) return pickDD(b.dataset.ddv);
+    if (b.dataset.ddclear !== undefined) { if (!SINGLE[ddKey]) { state[ddKey] = []; refresh(); } return; }
+    if (b.dataset.ddclose !== undefined) return closeDD();
+  });
+  $("ddscrim").addEventListener("click", closeDD);
+  window.addEventListener("resize", () => { if (!$("dd").hidden) placeDD(); });
   $("more").addEventListener("click", () => { state.shown += PAGE; renderExplore(); });
   $("clearAll").addEventListener("click", () => { Object.assign(state, { q: "", kinds: [], cats: [], inds: [], needs: [], city: "" }); $("q").value = ""; refresh(); });
   $("export").addEventListener("click", exportData);
   document.querySelectorAll("nav.tabbar, nav.subnav").forEach((n) => n.addEventListener("click", (e) => { const b = e.target.closest("[data-tab]"); if (b) { closeAll(); goTab(b.dataset.tab); } }));
   const dismiss = () => { const wasPanel = !$("panel").hidden; const back = wasPanel && $("panel").dataset.back; closeAll(); if (back) return openOrg(back); if (wasPanel) refresh(); };
   $("scrim").addEventListener("click", dismiss);
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !($("sheet").hidden && $("panel").hidden)) dismiss(); });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !$("dd").hidden) { e.stopPropagation(); return closeDD(); }
+    if (e.key === "Escape" && !($("sheet").hidden && $("panel").hidden)) dismiss();
+  });
 
   document.addEventListener("click", async (e) => {
-    const b = e.target.closest("button, a"); if (!b || b.closest("nav.tabbar") || b.closest("nav.subnav") || b.closest("#lens") || b.id === "lang" || b.id === "lang2") return;
+    const b = e.target.closest("button, a"); if (!b || b.closest("nav.tabbar") || b.closest("nav.subnav") || b.closest("#ftray") || b.closest("#dd") || b.id === "lang" || b.id === "lang2") return;
     const d = b.dataset;
     if (b.classList.contains("close")) return dismiss();
     if (d.goto) { closeAll(); return goTab(d.goto); }

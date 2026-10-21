@@ -66,6 +66,14 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
 - **One product**: the same tokens in `app/globals.css` and `site/app.html`.
 
+## Visual design v5 (owner: "copy Awwwards' filtering, thumbnails and inner pages as close to 1:1 as possible; we can change later")
+- Measured from the owner's screenshots: page `#f8f8f8`, grey blocks `#ededed`, page-coloured buttons in a grey filter tray (details in `team/DESIGN.md`).
+- **Header**: a promo strip above it (digest + survey ticker, replacing the survey banner). A search field in the bar in both apps (site search on the Next pages, the list's own search in the companies app). On phones: hamburger, wordmark, search, icon.
+- **Companies list**: a small title with a count box; a tray of six filter dropdowns with radio rings (Show, Type, Craft, Industry, City, Sort) replacing the lens switch, the filter sheet and the sort select. Cards are thumbnail-first with an Awwwards-style byline; the details moved into the hover caption and the company page.
+- **Company page**: full screen on phones, a square ink close button, dotted section labels, description first, pill tags.
+- **Next listing pages** (people, tenders, search): the same small title + count box; the search and filters sit in a grey tray. The home hero loses its search (the header has it) and gets two buttons.
+- Thumbnails use our 64px logos, not screenshots of company sites. Screenshots would need a capture service and storage; that's a later decision.
+
 ## Visual design v4 (owner: "even more like Awwwards: same margins, UI, menu, hamburger on phones, their buttons; mostly monochrome greys, purple less dominant")
 - **Spec**: `team/DESIGN.md` (analysis of awwwards.com + our tokens and components). Supersedes v3's look below.
 - **Look**: grey canvas `#e9e9e9`, white cards, `#222` ink, no shadows or gradients; 4/8/14px radii only; wide layout (max 1760px, 16–32px side margins).

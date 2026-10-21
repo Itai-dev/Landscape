@@ -1,8 +1,7 @@
 import SignupForm from "@/components/SignupForm";
 import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
-import SurveyBanner from "@/components/SurveyBanner";
-import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon } from "@/components/Icons";
+import { PeopleIcon, BuildingIcon, BellIcon, CraftIcon } from "@/components/Icons";
 import { craftLabel } from "@/lib/taxonomy";
 import { STATS, companiesWithCraft } from "@/lib/companies";
 import { supabaseConfig, PROFILES_ENABLED } from "@/lib/config";
@@ -39,12 +38,11 @@ export default function Home() {
               מותגים, משרדי פרסום וסטודיואים לפי מה שהם מזמינים, עם הסיבה לפנות עכשיו. חינם, לפי התחום שלכם.
             </p>
           )}
-          <form className="psearch lg searchbox" role="search" action="/search">
-            <input type="search" name="q" placeholder="תחום, חברה או שם" aria-label="חיפוש בכל האתר" />
-            <button className="go" aria-label="חיפוש"><SearchIcon size={22} /></button>
-          </form>
+          <div className="row">
+            <a className="btn primary lg" href="/companies">לכל החברות</a>
+            <a className="btn lg" href="/digest">השבוע בתעשייה</a>
+          </div>
         </div>
-        <SurveyBanner />
       </section>
 
       <section className="wrap section reveal" aria-labelledby="crafts-h">

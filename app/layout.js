@@ -12,7 +12,7 @@ export const metadata = {
   icons: { icon: "/favicon.svg" },
 };
 
-export const viewport = { width: "device-width", initialScale: 1, themeColor: "#e9e9e9" };
+export const viewport = { width: "device-width", initialScale: 1, themeColor: "#f8f8f8" };
 
 export default function RootLayout({ children }) {
   // Public Supabase settings go to the browser through context, so any env naming works.
