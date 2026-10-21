@@ -20,6 +20,10 @@ import { liveProof } from "@/lib/proof";
 import "./tenders/tenders.css";
 import "./sell.css";
 
+// Home hero: a centered search block (default), or the earlier split hero with the update carousel
+// (NEXT_PUBLIC_HOME_HERO=split brings it back).
+const HERO_SPLIT = process.env.NEXT_PUBLIC_HOME_HERO === "split";
+
 // Tender deadlines count down: rebuild the page hourly.
 export const metadata = { alternates: { canonical: "/" } };
 
@@ -59,24 +63,35 @@ export default function Home() {
     <>
       <div className="wrap"><AuthNotice /></div>
 
-      <section className="wrap">
-        <div className="hero sell split">
-          <div className="htext">
-            <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
-            <p className="lead">מי מונה, מי החליף משרד, אילו מכרזים ומשרות פורסמו. לפי התחום שלכם, כל יום ראשון במייל.</p>
-            <ul className="checks">
-              <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
-              <li><CheckIcon size={18} /><span>מכרזים ומשרות שפורסמו, עם מועד הגשה אמיתי</span></li>
-              <li><CheckIcon size={18} /><span>מייל אחד ביום ראשון, רק מה ששייך לתחום שלכם. חינם</span></li>
-            </ul>
-            <div className="row">
-              <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
+      {HERO_SPLIT ? (
+        <section className="wrap">
+          <div className="hero sell split">
+            <div className="htext">
+              <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
+              <p className="lead">מי מונה, מי החליף משרד, אילו מכרזים ומשרות פורסמו. לפי התחום שלכם, כל יום ראשון במייל.</p>
+              <ul className="checks">
+                <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
+                <li><CheckIcon size={18} /><span>מכרזים ומשרות שפורסמו, עם מועד הגשה אמיתי</span></li>
+                <li><CheckIcon size={18} /><span>מייל אחד ביום ראשון, רק מה ששייך לתחום שלכם. חינם</span></li>
+              </ul>
+              <div className="row">
+                <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
+              </div>
             </div>
+            <HeroMedia items={media} />
           </div>
-          <HeroMedia items={media} />
-        </div>
-        <HeroSearch popular={POPULAR.map((slug) => ({ slug, label: craftLabel(slug) }))} />
-      </section>
+          <HeroSearch popular={POPULAR.map((slug) => ({ slug, label: craftLabel(slug) }))} />
+        </section>
+      ) : (
+        <section className="wrap">
+          <div className="hero ask">
+            <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
+            <p className="lead">חיפוש אחד בכל תעשיית הקריאייטיב בישראל: {STATS.orgs} חברות, אנשים ומכרזים, עם מקור לכל פרט.</p>
+            <HeroSearch popular={POPULAR.map((slug) => ({ slug, label: craftLabel(slug) }))} />
+            <p className="askmail">מה השתנה השבוע בתחום שלכם, כל יום ראשון במייל. <a href="/join" data-track="hero_join">להרשמה, בחינם</a></p>
+          </div>
+        </section>
+      )}
 
       <section className="wrap section tight reveal" aria-labelledby="cat-h">
         <div className="sechead">
