@@ -490,19 +490,32 @@ def tender_errors(t: dict, orgs: dict) -> list[str]:
     return errs
 
 
-def tender_deadline_utc(t: dict) -> dt.datetime:
-    """deadline_at is Israel local time; a date without a time means the end of that day."""
+def _il_utc(raw: str, end_of_day: str) -> dt.datetime:
+    """Israel local time -> UTC; a date without a time takes `end_of_day` (HH:MM)."""
     from zoneinfo import ZoneInfo
-    raw = t["deadline_at"]
-    local = dt.datetime.fromisoformat(raw if "T" in raw else raw + "T23:59")
+    local = dt.datetime.fromisoformat(raw if "T" in raw else f"{raw}T{end_of_day}")
     return local.replace(tzinfo=ZoneInfo("Asia/Jerusalem")).astimezone(dt.timezone.utc)
 
 
+def tender_deadline_utc(t: dict) -> dt.datetime:
+    """deadline_at is Israel local time; a date without a time means the end of that day."""
+    return _il_utc(t["deadline_at"], "23:59")
+
+
+def tender_opens_utc(t: dict) -> dt.datetime | None:
+    """submission_opens is Israel local time; a date without a time means the start of that day."""
+    return _il_utc(t["submission_opens"], "00:00") if t.get("submission_opens") else None
+
+
 def tender_state(t: dict, now: dt.datetime | None = None) -> str:
+    """cancelled > closed (deadline passed) > upcoming (submissions not open yet) > open."""
     if t.get("status") == "cancelled":
         return "cancelled"
     now = now or dt.datetime.now(dt.timezone.utc)
-    return "closed" if t.get("status") == "closed" or tender_deadline_utc(t) <= now else "open"
+    if t.get("status") == "closed" or tender_deadline_utc(t) <= now:
+        return "closed"
+    opens = tender_opens_utc(t)
+    return "upcoming" if opens and opens > now else "open"
 
 
 def site_tenders(tenders: list[dict], orgs: dict, now: dt.datetime | None = None) -> list[dict]:
@@ -512,18 +525,21 @@ def site_tenders(tenders: list[dict], orgs: dict, now: dt.datetime | None = None
     for t in tenders:
         state = tender_state(t, now)
         due = tender_deadline_utc(t)
-        if state != "open" and (now - due).days > TENDER_RECENT_DAYS:
+        if state in ("closed", "cancelled") and (now - due).days > TENDER_RECENT_DAYS:
             continue
         row = {k: v for k, v in t.items() if k not in ("note", "added", "keywords_matched")}
         row["state"] = state
         row["deadline_utc"] = due.isoformat(timespec="minutes")
+        if tender_opens_utc(t):
+            row["opens_utc"] = tender_opens_utc(t).isoformat(timespec="minutes")
         if row.get("buyer_org_id") and row["buyer_org_id"] in orgs:
             o = orgs[row["buyer_org_id"]]
             row["buyer_name_he"] = o.get("name_he") or o["name"]
         out.append(row)
-    # open: soonest deadline first; closed: most recently closed first
-    open_ = sorted((r for r in out if r["state"] == "open"), key=lambda r: r["deadline_utc"])
-    rest = sorted((r for r in out if r["state"] != "open"), key=lambda r: r["deadline_utc"], reverse=True)
+    # open and upcoming: soonest deadline first; closed: most recently closed first
+    live = ("open", "upcoming")
+    open_ = sorted((r for r in out if r["state"] in live), key=lambda r: r["deadline_utc"])
+    rest = sorted((r for r in out if r["state"] not in live), key=lambda r: r["deadline_utc"], reverse=True)
     return open_ + rest
 
 

@@ -7,7 +7,7 @@ import { STATS, companiesWithCraft } from "@/lib/companies";
 import { supabaseConfig, PROFILES_ENABLED } from "@/lib/config";
 import TenderCard from "@/components/TenderCard";
 import { listTenders } from "@/lib/tenders";
-import { composeDigest, siteUrl } from "@/lib/digest";
+import { composeDigest, siteUrl, WHY_HE } from "@/lib/digest";
 import Bidi from "@/components/Bidi";
 import { liveProof } from "@/lib/proof";
 import "./tenders/tenders.css";
@@ -88,12 +88,13 @@ export default function Home() {
           <ol className="ugrid swipe">
             {updates.map((i) => (
               <li key={i.id} className="ucard">
-                <p className="umeta"><b>{i.label}</b> · {i.day}</p>
+                <p className="umeta"><b>{i.class_label}</b> · {i.day}</p>
                 <p className="uhead"><Bidi>{i.headline}</Bidi></p>
-                {i.why && <p className="uwhy"><Bidi>{i.why}</Bidi></p>}
-                {i.org?.name && (
-                  <p className="uorg">{i.org.href ? <a className="tap" href={rel(i.org.href)} data-track="company_open" data-track-where="home_update"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}</p>
-                )}
+                {i.why && <p className="uwhy">{WHY_HE}: <Bidi>{i.why}</Bidi></p>}
+                <p className="uorg">
+                  {i.org?.name && (i.org.href ? <a className="tap" href={rel(i.org.href)} data-track="company_open" data-track-where="home_update"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>)}
+                  {i.source_url && <>{i.org?.name ? " · " : ""}<a className="tap" href={i.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category={i.type} data-track-where="home_update"><bdi>{i.source || "מקור"}</bdi></a></>}
+                </p>
               </li>
             ))}
           </ol>
@@ -103,7 +104,10 @@ export default function Home() {
       {tenders.length > 0 && (
         <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
           <div className="sechead">
-            <h2 id="tenders-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
+            <div>
+              <h2 id="tenders-h">מכרזים <span className="count">{tenders.length}</span></h2>
+              <p>{proof.openTenders} פתוחים להגשה{proof.upcomingTenders ? ` · ${proof.upcomingTenders} פורסמו וההגשה תיפתח בקרוב` : ""}. כל אחד עם קישור לפרסום הרשמי.</p>
+            </div>
             <a className="btn" href="/tenders" data-track="tender_open">לכל המכרזים</a>
           </div>
           <div className="tgrid swipe">{tenders.slice(0, 3).map((t) => <TenderCard key={t.id} t={t} compact />)}</div>
@@ -156,7 +160,7 @@ function ClassicHome() {
             </p>
           ) : (
             <p className="lead">
-              מותגים, משרדי פרסום וסטודיואים: מה כל אחד מזמין, ולמה לפנות דווקא עכשיו.
+              מותגים, משרדי פרסום וסטודיואים: מה כל אחד מזמין, ומה השתנה אצלו לאחרונה.
             </p>
           )}
           <div className="row">
@@ -239,7 +243,7 @@ function ClassicHome() {
             <div className="ico"><BellIcon size={22} /></div>
             <div>
               <h3>{PROFILES_ENABLED ? "לדעת לפני כולם" : "מה השתנה"}</h3>
-              <p className="muted">גיוסים, החלפות משרד ומינויים. כל עדכון עם הסיבה לפנות.</p>
+              <p className="muted">גיוסים, החלפות משרד ומינויים. כל עדכון עם מקור ולמה הוא רלוונטי.</p>
             </div>
           </a>
         </div>
@@ -251,7 +255,7 @@ function ClassicHome() {
             <div className="stack">
               <h2 id="join-h">{open ? "הצטרפות, והמייל השבועי" : "השבוע בתעשייה"}</h2>
               <p className="muted">
-                כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם סיבה לפנות.
+                כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם מקור לכל פרט.
                 {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}
               </p>
               <p><a className="btn inv" href="/digest">לעדכוני השבוע</a></p>
@@ -263,7 +267,7 @@ function ClassicHome() {
             <div className="stack">
               <h2 id="join-h">השבוע בתעשייה, במייל</h2>
               <p className="muted">
-                כל יום ראשון בבוקר: מינויים, החלפות משרד, קמפיינים ומכרזים, ומי מזמין עכשיו את מה שאתם עושים. לפי התחומים שלכם, חינם.
+                כל יום ראשון בבוקר: מינויים, החלפות משרד, קמפיינים ומכרזים, ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, חינם.
               </p>
               <p><a className="btn inv" href="/digest">לעדכוני השבוע</a></p>
             </div>

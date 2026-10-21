@@ -34,7 +34,7 @@ export default async function Search({ searchParams }) {
   const companies = any ? searchCompanies(q, craft) : [];
   const seeds = any ? searchSeeds({ q, craft, exclude: hidden }) : [];
   const people = seeds.length + members.length;
-  // Open tenders for the same words or craft (they also count as results).
+  // Live tenders (open, then upcoming) for the same words or craft; each row says which.
   const tenders = any ? listTenders({ q, craft }) : [];
   const nothing = any && companies.length + people + tenders.length === 0;
 
@@ -46,7 +46,7 @@ export default async function Search({ searchParams }) {
         ) : (
           <h1>{q ? <>תוצאות ל<bdi>״{q}״</bdi></> : "חיפוש בכל האתר"}</h1>
         )}
-        {any ? <p>{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים פתוחים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
+        {any ? <p>{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
       </div>
       <form className="psearch lg searchbox" role="search" action="/search">
         <input type="search" name="q" defaultValue={q} placeholder={craft && !q ? `חיפוש בתוך ${craftLabel(craft)}` : "חברה, תחום, תפקיד או שם"} aria-label="חיפוש בכל האתר" />
@@ -69,14 +69,14 @@ export default async function Search({ searchParams }) {
       {tenders.length > 0 && (
         <section aria-labelledby="td-h">
           <div className="subhead">
-            <h2 id="td-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
+            <h2 id="td-h">מכרזים <span className="count">{tenders.length}</span></h2>
             <a className="btn sm" href={`/tenders?${qs({ q, craft })}`}>למכרזים</a>
           </div>
           <div className="tresults">
             {tenders.slice(0, 4).map((t) => (
               <a key={t.id} className="trow" href={`/tenders?${qs({ q, craft })}`}>
                 <b>{t.scope_summary}</b>
-                <span>{t.buyer_name_he || t.buyer} · {t.countdown.text} · הגשה עד <bdi>{t.deadline}</bdi></span>
+                <span>{t.buyer_name_he || t.buyer} · {t.state === "open" ? `${t.countdown.text} · ` : ""}<bdi>{t.when}</bdi></span>
               </a>
             ))}
           </div>

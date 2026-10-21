@@ -7,6 +7,7 @@
 /* The one colour on a tender: closing soon */
 .tcard .due.soon, .tcard .due.urgent { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
 .tcard .due.closed { background: var(--soft-2); color: var(--muted); box-shadow: none; }
+.tcard .due.upcoming { background: transparent; color: var(--ink-2); box-shadow: none; outline: 1px dashed var(--line-2); outline-offset: -1px; }
 .tcard .when { font-size: var(--t-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
 .tcard h3 { margin: 0; font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
 .tcard .buyer { margin: 0; font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }

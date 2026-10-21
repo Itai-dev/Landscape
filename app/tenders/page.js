@@ -30,7 +30,8 @@ export default async function Tenders({ searchParams }) {
 
   const all = listTenders({ craft, buyerType, q, closed: true, now });
   const open = all.filter((t) => t.state === "open");
-  const closed = all.filter((t) => t.state !== "open");
+  const upcoming = all.filter((t) => t.state === "upcoming");
+  const closed = all.filter((t) => t.state === "closed" || t.state === "cancelled");
   const href = (over) => {
     const p = { ...(q ? { q } : {}), ...(craft ? { craft } : {}), ...(buyerType ? { buyer: buyerType } : {}), ...over };
     Object.keys(p).forEach((k) => !p[k] && delete p[k]);
@@ -74,8 +75,8 @@ export default async function Tenders({ searchParams }) {
         </div>
         {open.length === 0 ? (
           <div className="soon">
-            <h3>{filtered ? "אין כרגע מכרז פתוח שמתאים לחיפוש" : "אין כרגע מכרזים פתוחים במאגר"}</h3>
-            <p>מכרזים חדשים נוספים כל שבוע, ומגיעים גם למייל ״השבוע בתעשייה״.</p>
+            <h3>{filtered ? "אין כרגע מכרז פתוח להגשה שמתאים לחיפוש" : "אין כרגע מכרזים פתוחים להגשה במאגר"}</h3>
+            <p>{upcoming.length > 0 ? "יש מכרזים שפורסמו וההגשה אליהם תיפתח בקרוב (למטה). " : ""}מכרזים חדשים נוספים כל שבוע, ומגיעים גם למייל ״השבוע בתעשייה״.</p>
             <div className="row center">
               {filtered && <a className="btn" href="/tenders">לכל המכרזים</a>}
               <a className="btn primary" href="/digest#subscribe">לקבל במייל</a>
@@ -85,6 +86,16 @@ export default async function Tenders({ searchParams }) {
           <div className="tgrid">{open.map((t) => <TenderCard key={t.id} t={t} />)}</div>
         )}
       </section>
+
+      {upcoming.length > 0 && (
+        <section aria-labelledby="upcoming-h">
+          <div className="subhead">
+            <h2 id="upcoming-h">פורסמו, ההגשה עוד לא נפתחה <span className="count">{upcoming.length}</span></h2>
+            <p>המכרז כבר פורסם ואפשר לקרוא את המסמכים ולהתכונן. הגשת הצעות נפתחת בתאריך שמופיע בכרטיס.</p>
+          </div>
+          <div className="tgrid">{upcoming.map((t) => <TenderCard key={t.id} t={t} />)}</div>
+        </section>
+      )}
 
       {closed.length > 0 && (
         <section aria-labelledby="closed-h">

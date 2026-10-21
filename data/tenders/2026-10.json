@@ -22,7 +22,7 @@
       "צילום",
       "עריכה"
     ],
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   },
   {
@@ -32,8 +32,10 @@
     "title": "להפקת אירועי הרמת מסך לשנת 2027",
     "buyer": "משרד המדע התרבות והספורט",
     "buyer_type": "ministry",
+    "procedure_no": "13/2026",
     "kind": "tender",
     "published_at": "2026-10-19",
+    "submission_opens": "2026-11-09T09:00",
     "deadline_at": "2026-11-15T12:00",
     "status": "open",
     "scope_summary": "הפקת אירועי ״הרמת מסך״ של משרד התרבות לשנת 2027.",
@@ -45,7 +47,7 @@
       "אירועים"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   },
   {
@@ -58,6 +60,7 @@
     "procedure_no": "31/2026",
     "kind": "tender",
     "published_at": "2026-10-18",
+    "submission_opens": "2026-11-11T12:00",
     "deadline_at": "2026-11-15T12:00",
     "status": "open",
     "scope_summary": "תכלול, אסטרטגיה, מדיה והפקה לפעילות ההסברה של משרד החוץ בעולם.",
@@ -71,7 +74,7 @@
       "הסברה"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   },
   {
@@ -85,6 +88,7 @@
     "procedure_no": "17/26",
     "kind": "tender",
     "published_at": "2026-10-05",
+    "submission_opens": "2026-10-13T12:00",
     "deadline_at": "2026-11-02T12:00",
     "status": "open",
     "scope_summary": "חברות הפקה לקמפיינים ממשלתיים: הפקת סרטים ותוכן לקמפיינים של משרדי הממשלה, וליווי ההפקה.",
@@ -98,7 +102,7 @@
       "קמפיינים"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-20",
+    "last_checked_at": "2026-10-21",
     "added": "2026-10-20"
   }
 ]
