@@ -1,6 +1,7 @@
 import { LinkIcon, MoreIcon, PersonIcon } from "@/components/Icons";
 import { orgLabel, roleHe, roleTypeLabel } from "@/lib/people";
-import { companyHref } from "@/lib/companies";
+import { companyHref, orgById } from "@/lib/companies";
+import KindTag from "@/components/KindTag";
 
 const host = (u) => {
   try {
@@ -11,13 +12,22 @@ const host = (u) => {
 };
 const month = (d) => (d ? new Date(d).toLocaleDateString("he-IL", { month: "long", year: "numeric" }) : "");
 
-// One role: the company and the title as published, as a single link to the company (a large tap area).
+// One role: the company's logo and name, its type and the title as published, as one link to the company.
 function RoleLink({ r }) {
   const he = r.role ? roleHe(r.role) : null;
+  const o = orgById(r.org_id);
   return (
     <a className="orgline" href={companyHref(r.org_id)}>
-      <span className="org"><bdi>{orgLabel(r)}</bdi></span>
-      {r.role && <span className="role" title={he ? r.role : undefined}><bdi>{he || r.role}</bdi></span>}
+      <span className="orglogo" aria-hidden="true">
+        {o?.logo_hi ? <img src={o.logo_hi} alt="" width={36} height={36} loading="lazy" decoding="async" style={o.logo_px ? { maxWidth: Math.min(o.logo_px, 30), maxHeight: Math.min(o.logo_px, 30) } : undefined} /> : (orgLabel(r) || "").slice(0, 1)}
+      </span>
+      <span className="orgtext">
+        <span className="org"><bdi>{orgLabel(r)}</bdi></span>
+        <span className="otags">
+          {o?.kind && <KindTag kind={o.kind} />}
+          {r.role && <span className="ttag" title={he ? r.role : undefined}><bdi>{he || r.role}</bdi></span>}
+        </span>
+      </span>
     </a>
   );
 }
