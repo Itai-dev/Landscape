@@ -7,6 +7,8 @@ import { STATS, companiesWithCraft } from "@/lib/companies";
 import { supabaseConfig, PROFILES_ENABLED } from "@/lib/config";
 import TenderCard from "@/components/TenderCard";
 import { listTenders } from "@/lib/tenders";
+import { composeDigest, siteUrl } from "@/lib/digest";
+import Bidi from "@/components/Bidi";
 import "./tenders/tenders.css";
 
 // Tender deadlines count down: rebuild the page hourly.
@@ -18,16 +20,20 @@ const CRAFTS = ["motion-design", "animation-3d", "vfx", "branding", "sound-desig
 export default function Home() {
   const open = Boolean(supabaseConfig());
   const tenders = listTenders();
+  // This week's updates: the same items the digest leads with.
+  const week = composeDigest({ maxItems: 3 });
+  const updates = [...week.items, ...week.more].slice(0, 3);
+  const rel = (u) => String(u || "").replace(siteUrl(), "");
   return (
     <>
       <div className="wrap"><AuthNotice /></div>
 
       <section className="wrap">
         <div className="hero">
-          <span className="eyebrow">{STATS.orgs} חברות ו־{STATS.people} אנשים במאגר</span>
+          <span className="eyebrow">תעשיית הקריאייטיב בישראל · {STATS.orgs} חברות · {STATS.people} אנשים</span>
           {PROFILES_ENABLED
-            ? <h1>כל תעשיית הקריאייטיב בישראל. <em>במקום אחד.</em></h1>
-            : <h1>מי מזמין מה בתעשיית הקריאייטיב. <em>ומה השתנה השבוע.</em></h1>}
+            ? <h1>כל תעשיית הקריאייטיב. <em>במקום אחד.</em></h1>
+            : <h1>מי מזמין מה. <em>ומה השתנה השבוע.</em></h1>}
           {PROFILES_ENABLED ? (
             <p className="lead">
               מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
@@ -35,15 +41,36 @@ export default function Home() {
             </p>
           ) : (
             <p className="lead">
-              מותגים, משרדי פרסום וסטודיואים לפי מה שהם מזמינים, עם הסיבה לפנות עכשיו. חינם, לפי התחום שלכם.
+              מותגים, משרדי פרסום וסטודיואים: מה כל אחד מזמין, ולמה לפנות דווקא עכשיו.
             </p>
           )}
           <div className="row">
-            <a className="btn primary lg" href="/companies">לכל החברות</a>
-            <a className="btn lg" href="/digest">השבוע בתעשייה</a>
+            <a className="btn primary lg" href="#join">להרשמה לגיליון</a>
+            <a className="btn lg" href="/companies">לכל החברות</a>
           </div>
         </div>
       </section>
+
+      {updates.length > 0 && (
+        <section className="wrap section reveal" aria-labelledby="week-h">
+          <div className="sechead">
+            <h2 id="week-h">השבוע בתעשייה</h2>
+            <a className="btn" href="/digest">לגיליון המלא</a>
+          </div>
+          <ol className="ugrid">
+            {updates.map((i) => (
+              <li key={i.id} className="ucard">
+                <p className="umeta"><b>{i.label}</b> · {i.day}</p>
+                <p className="uhead"><Bidi>{i.headline}</Bidi></p>
+                {i.why && <p className="uwhy"><Bidi>{i.why}</Bidi></p>}
+                {i.org?.name && (
+                  <p className="uorg">{i.org.href ? <a className="tap" href={rel(i.org.href)}><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}</p>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       <section className="wrap section reveal" aria-labelledby="crafts-h">
         <div className="sechead">
@@ -76,29 +103,28 @@ export default function Home() {
 
       <section className="wrap section reveal" aria-labelledby="what-h">
         <div className="sechead">
-          <h2 id="what-h">{PROFILES_ENABLED ? "מה אפשר לעשות כאן" : "מה מקבלים כאן"}</h2>
-          <a className="btn" href="/companies">לכל החברות</a>
+          <h2 id="what-h">{PROFILES_ENABLED ? "מה אפשר לעשות כאן" : "מה יש כאן"}</h2>
         </div>
         <div className="rows">
           <a className="feature" href="/companies">
             <div className="ico"><BuildingIcon size={22} /></div>
             <div>
               <h3>{PROFILES_ENABLED ? "למצוא לקוחות" : "מי מזמין מה"}</h3>
-              <p className="muted">מותגים ומשרדי פרסום לפי מה שהם מזמינים, עם המשרד שלהם ומה השתנה אצלם לאחרונה.</p>
+              <p className="muted">מותגים ומשרדי פרסום: מה הם מזמינים, ודרך איזה משרד.</p>
             </div>
           </a>
           <a className="feature" href="/people">
             <div className="ico"><PeopleIcon size={22} /></div>
             <div>
               <h3>{PROFILES_ENABLED ? "למצוא שותפים" : "מי מחליט"}</h3>
-              <p className="muted">{PROFILES_ENABLED ? "אנשי מקצוע וסטודיואים לפי תחום ועיר, לפרויקט הבא או לגיוס." : "מנהלי שיווק, הפקה וקריאייטיב בחברות, לפי מה שפורסם בפומבי ועם המקור."}</p>
+              <p className="muted">{PROFILES_ENABLED ? "אנשי מקצוע וסטודיואים לפי תחום ועיר, לפרויקט הבא או לגיוס." : "מנהלי שיווק, הפקה וקריאייטיב. מפרסומים פומביים, עם מקור."}</p>
             </div>
           </a>
           <a className="feature" href="/companies#signals">
             <div className="ico"><BellIcon size={22} /></div>
             <div>
-              <h3>{PROFILES_ENABLED ? "לדעת לפני כולם" : "מה השתנה ולמה עכשיו"}</h3>
-              <p className="muted">גיוסים, החלפות משרד פרסום ומינויים חדשים בשיווק, וכל עדכון עם הסיבה שהוא רלוונטי.</p>
+              <h3>{PROFILES_ENABLED ? "לדעת לפני כולם" : "מה השתנה"}</h3>
+              <p className="muted">גיוסים, החלפות משרד ומינויים. כל עדכון עם הסיבה לפנות.</p>
             </div>
           </a>
         </div>
@@ -122,7 +148,7 @@ export default function Home() {
             <div className="stack">
               <h2 id="join-h">השבוע בתעשייה, במייל</h2>
               <p className="muted">
-                כל יום ראשון בבוקר: מינויים בשיווק, החלפות משרד, קמפיינים ומי עשה אותם, מכרזים פתוחים, ומי מזמין עכשיו את מה שאתם עושים. לפי התחומים שלכם, חינם.
+                כל יום ראשון בבוקר: מינויים, החלפות משרד, קמפיינים ומכרזים, ומי מזמין עכשיו את מה שאתם עושים. לפי התחומים שלכם, חינם.
               </p>
               <p><a className="btn inv" href="/digest">לגיליון של השבוע</a></p>
             </div>

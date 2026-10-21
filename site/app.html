@@ -388,7 +388,7 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 /* ---------- Awwwards listing: filter tray + dropdown ---------- */
 .ftray { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; background: var(--surface); border-radius: 8px; padding: 6px; }
 @media (min-width: 900px) { .ftray { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
-.fbtn { display: flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 16px; border: 1px solid transparent; border-radius: 6px; background: var(--paper); color: var(--ink); font-size: 16px; font-weight: 400; text-align: start; min-width: 0; transition: border-color .2s; }
+.fbtn { display: flex; align-items: center; gap: 6px; min-height: 52px; padding: 0 14px; border: 1px solid transparent; border-radius: 6px; background: var(--paper); color: var(--ink); font-size: 16px; font-weight: 400; text-align: start; min-width: 0; transition: border-color .2s; }
 .fbtn .fl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
 .fbtn .chev { flex: none; transition: transform .2s; }
 .fbtn[aria-expanded="true"] .chev { transform: rotate(180deg); }
@@ -425,16 +425,17 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 .card.shot:focus-visible { outline: none; }
 .card.shot:focus-visible .frame { outline: 2px solid var(--accent); outline-offset: 3px; }
 .frame { position: relative; display: block; border-radius: 8px; overflow: hidden; }
-.thumb { aspect-ratio: 4 / 3; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 24px; background: var(--thumb); color: #222; text-align: center; transition: transform .6s var(--ease); }
-.thumb .tl { width: 64px; height: 64px; border-radius: 12px; background: #fff; display: grid; place-items: center; overflow: hidden; }
-.thumb .tl img { width: 80%; height: 80%; object-fit: contain; }
+.thumb { aspect-ratio: 16 / 10; display: grid; place-content: center; justify-items: center; gap: 14px; padding: 24px; background: var(--thumb); color: #222; text-align: center; transition: transform .6s var(--ease); }
+.thumb .tl { width: 76px; height: 76px; display: grid; place-items: center; }
+/* Logos sit on the grey; multiply drops their white backgrounds, light logos stay visible */
+.thumb .tl img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 .thumb .tn { font-family: var(--f-display); font-weight: 300; font-size: clamp(20px, 2vw, 26px); line-height: 1.15; max-width: 16ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
 .thumb.word .tn { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; }
-.thumb.big { aspect-ratio: 16 / 9; max-height: 340px; width: 100%; }
-.thumb.big .tl { width: 88px; height: 88px; border-radius: 16px; }
+.thumb.big { aspect-ratio: 21 / 9; max-height: 260px; width: 100%; }
+.thumb.big .tl { width: 96px; height: 96px; }
 .thumb.big .tn { font-size: clamp(26px, 4vw, 44px); }
 .thumb.big.word .tn { font-size: clamp(40px, 6vw, 72px); }
-.over { position: absolute; inset-inline: 8px; bottom: 8px; background: var(--ink); color: var(--bg); border-radius: 6px; padding: 10px 12px; font-size: 13px; line-height: 1.45; text-align: start; opacity: 0; transform: translateY(8px); transition: opacity .25s var(--ease), transform .25s var(--ease); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.over { display: none !important; position: absolute; inset-inline: 8px; bottom: 8px; background: var(--ink); color: var(--bg); border-radius: 6px; padding: 10px 12px; font-size: 13px; line-height: 1.45; text-align: start; opacity: 0; transform: translateY(8px); transition: opacity .25s var(--ease), transform .25s var(--ease); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .over:empty { display: none; }
 .over b { font-weight: 600; }
 @media (hover: hover) {
@@ -443,10 +444,19 @@ textarea.export { width: 100%; min-height: 220px; font-family: var(--f-mono); fo
 }
 .by { display: flex; align-items: center; gap: 10px; margin-top: 14px; min-width: 0; }
 .logo.av { width: 32px; height: 32px; border-radius: 50%; font-size: 11px; }
-.by .nm { flex: 1; min-width: 0; display: flex; align-items: baseline; gap: 4px; flex-wrap: wrap; row-gap: 0; }
-.by .n { font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
-.by sup { font-size: 10px; font-weight: 500; color: var(--ink); top: -.6em; }
-.by .w { flex-basis: 100%; font-size: 13px; color: var(--muted); }
+.by .nm { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.by .n { font-size: 16px; font-weight: 600; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* A Latin name in a <bdi> would otherwise align to the left in the Hebrew UI */
+[dir="rtl"] .by .n, [dir="rtl"] .by .k { text-align: right; }
+.by .k { font-size: 13px; color: var(--muted); line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card.shot .info { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 10px; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.card.shot .info b { font-weight: 600; }
+.card.shot .info mark { background: none; color: var(--ok); font-weight: 600; }
+.card.shot .info .via { color: var(--muted); }
+.card.shot .upd { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 8px; padding-inline-start: 12px; position: relative; font-size: 13px; line-height: 1.5; color: var(--ink); }
+.card.shot .upd::before { content: ""; position: absolute; inset-inline-start: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.card.shot .upd b { font-weight: 600; }
+.card.shot .upd .ago { color: var(--muted); white-space: nowrap; }
 .by .tags { flex: none; display: flex; gap: 6px; }
 .by .t { font-size: 12px; font-weight: 500; line-height: 1; padding: 6px 8px; border-radius: 4px; border: 1px solid var(--line-2); color: var(--ink); white-space: nowrap; }
 .by .t.new { display: inline-flex; align-items: center; gap: 5px; }
@@ -491,7 +501,7 @@ html:not([data-site]) .promo { display: none; }
     <button type="button" class="burger" data-menu-toggle aria-expanded="false" aria-controls="sitemenu"><span class="bars" aria-hidden="true"></span><span class="sr-only">תפריט</span></button>
     <a class="brand" href="/" lang="en" aria-label="Landscape, לדף הבית">Landscape<span>.</span></a>
     <nav class="nav sitenav" aria-label="ניווט ראשי"><a href="/people">אנשים</a><a href="/companies" aria-current="page">חברות</a><a href="/tenders">מכרזים</a></nav>
-    <label class="hsearch" for="q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" data-i18n-ph="search.ph" placeholder="חיפוש חברות: שם, תחום או עיר" autocomplete="off" aria-label="חיפוש חברות"></label>
+    <label class="hsearch" for="q"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" data-i18n-ph="search.ph" placeholder="חיפוש בחברות" autocomplete="off" aria-label="חיפוש חברות לפי שם, תחום או עיר"></label>
     <div class="end"><button class="langbtn" type="button" id="lang" lang="en">English</button><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button><a class="cta" href="/digest#subscribe" data-cta><span class="cta-l">לגיליון השבועי</span><span class="cta-s" aria-hidden="true">לגיליון</span><span class="cta-i" aria-hidden="true"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span></a></div>
   </div>
   <div class="menusheet" id="sitemenu" hidden><div class="wrap"><nav class="menusheet-nav" aria-label="תפריט"><a href="/people">אנשים</a><a href="/companies" aria-current="page">חברות</a><a href="/tenders">מכרזים</a><a href="/companies#signals">עדכונים</a><a href="/digest">השבוע בתעשייה</a><a href="/survey">סקר התעריפים</a></nav><div class="menusheet-end"><a class="btn-ink" href="/digest#subscribe" data-cta-sheet>לגיליון השבועי</a><button type="button" class="themebtn" data-theme-toggle title="ערכת צבעים: בהירה, כהה או לפי המכשיר"><span class="ti-light"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span class="sr-only">ערכת צבעים: בהירה. לחיצה מחליפה לכהה</span></span><span class="ti-dark"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><span class="sr-only">ערכת צבעים: כהה. לחיצה מחליפה ללפי המכשיר</span></span><span class="ti-system"><svg class="ti" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span class="sr-only">ערכת צבעים: לפי המכשיר. לחיצה מחליפה לבהירה</span></span></button></div></div></div>
@@ -605,10 +615,10 @@ html:not([data-site]) .promo { display: none; }
     en: {
       "app.sub": "· Israel’s creative industry", "nav.people": "People", "nav.companies": "Companies", "nav.join": "Join", "loading": "Loading…", "loadfail": "Couldn’t load the data. Reload to try again.",
       "meta": "{0} companies · {1} updates · updated {2}",
-      "search.ph": "Search companies: name, craft or city", "ex.h": "Companies", "ex.sub": "Every <b>studio, brand and agency</b> in Israel's creative industry, with who commissions what. Filter by craft, city or name.",
+      "search.ph": "Search companies", "ex.h": "Companies", "ex.sub": "Who commissions what: <b>brands, agencies and studios</b>. By craft, city or name.",
       "lens.brands": "Clients", "lens.collab": "Studios", "lens.all": "All",
       "mine.label": "I make", "mine.edit": "+ Edit", "mine.pick": "+ Pick your crafts", "mine.hint": "What fits you comes first", "t.noorg": "Company not found", "mine.remove": "Remove {0}",
-      "filters": "Filters", "dd.lens": "Show", "dd.sort": "Sort", "dd.clear": "Clear", "card.new": "New", "card.fit": "Fits you", "sh.desc": "Description", "sh.tags": "Crafts and fields", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
+      "filters": "Filters", "dd.lens": "Clients or suppliers", "dd.sort": "Sort", "dd.clear": "Clear", "card.new": "New", "card.fit": "Fits you", "sh.desc": "Description", "sh.tags": "Crafts and fields", "sort.fit": "Best fit", "sort.name": "A → Z", "sort.size": "Largest", "sort.founded": "Newest",
       "count": "{0} matches", "count1": "1 match", "more": "Show more",
       "survey.b": "Rates survey 2026: 4 minutes, and you see the results.", "survey.a": "Take the survey ›",
       "empty.h": "Nothing matches", "empty.p": "Try fewer filters, or search in English (only some names have Hebrew).", "clear": "Clear filters", "clearAll": "Clear all",
@@ -625,7 +635,7 @@ html:not([data-site]) .promo { display: none; }
       "sig.funding": "Funding", "sig.acquisition": "Acquisition", "sig.agency_move": "Agency move", "sig.ownership": "Ownership", "sig.rebrand": "Rebrand", "sig.new_exec": "New marketing head", "sig.campaign": "Campaign", "sig.launch": "Launch", "sig.hiring": "Hiring", "sig.award": "Award", "sig.closure": "Closure",
       "sigf.all": "All", "sigf.hiring": "Hiring", "sigf.funding": "Funding", "sigf.agency_move": "Agency moves", "sigf.new_exec": "People", "sigf.campaign": "Campaigns", "sigf.launch": "Launches", "sigf.rebrand": "Rebrands", "sigf.ownership": "Ownership", "sigf.acquisition": "Deals",
       "card.buys": "Commissions", "card.via": "Agency", "card.clients": "Clients",
-      "fl.title": "Filters", "fl.type": "Type", "fl.needs": "What they buy", "fl.craft": "Craft", "fl.industry": "Industry", "fl.product": "Product (startups)", "fl.city": "City", "fl.anycity": "Any city", "fl.show": "Show {0} companies", "fl.show1": "Show 1 company",
+      "fl.title": "Filters", "fl.type": "Company type", "fl.needs": "What they buy", "fl.craft": "Craft", "fl.industry": "Industry", "fl.product": "Product (startups)", "fl.city": "City", "fl.anycity": "Any city", "fl.show": "Show {0} companies", "fl.show1": "Show 1 company",
       "cr.title": "What do you make?", "cr.p": "Pick any. Brands that buy these move to the top of Best fit.", "done": "Done", "close": "Close",
       "ways.agency": "Their agency", "ways.worked": "Worked for them", "ways.users": "Brands that use them", "ways.clients": "Their clients", "ways.shares": "Shares clients with", "ways.group": "Group & deals", "ways.people": "People in public roles",
       "ed.stage": "Stage", "ed.note": "Note (private)", "ed.noteph": "Who you spoke to, what you sent, what’s next…", "ed.follow": "Follow up", "q.1": "Tomorrow", "q.7": "1 week", "q.30": "1 month", "ed.date": "Follow-up date", "ed.clear": "Clear", "ed.saved": "Saved {0}", "ed.device": " · on this device", "ed.remove": "Remove from pipeline",
@@ -659,10 +669,10 @@ html:not([data-site]) .promo { display: none; }
     he: {
       "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
       "meta": "{0} חברות · {1} עדכונים · עודכן {2}",
-      "search.ph": "חיפוש בחברות: שם, תחום או עיר", "ex.h": "חברות בתעשייה", "ex.sub": "כל <b>הסטודיואים, המותגים ומשרדי הפרסום</b> בתעשיית הקריאייטיב בישראל, ומי מזמין מה. לפי תחום, עיר או שם.",
-      "lens.brands": "לקוחות", "lens.collab": "סטודיואים", "lens.all": "הכול",
+      "search.ph": "חיפוש בחברות", "ex.h": "חברות בתעשייה", "ex.sub": "מי מזמין מה: <b>מותגים, משרדי פרסום וסטודיואים</b>. לפי תחום, עיר או שם.",
+      "lens.brands": "לקוחות (מזמינים)", "lens.collab": "ספקים וסטודיואים", "lens.all": "הכול",
       "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
-      "filters": "סינון", "dd.lens": "הצגה", "dd.sort": "מיון", "dd.clear": "ניקוי", "card.new": "עדכון", "card.fit": "מתאים לכם", "sh.desc": "תיאור", "sh.tags": "תחומים", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
+      "filters": "סינון", "dd.lens": "לקוחות או ספקים", "dd.sort": "מיון", "dd.clear": "ניקוי", "card.new": "עדכון", "card.fit": "מתאים לכם", "sh.desc": "תיאור", "sh.tags": "תחומים", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
       "survey.b": "סקר התעריפים 2026: 4 דקות, ורואים את התוצאות.", "survey.a": "לענות על הסקר ‹",
       "empty.h": "אין תוצאות", "empty.p": "אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
@@ -679,7 +689,7 @@ html:not([data-site]) .promo { display: none; }
       "sig.funding": "גיוס הון", "sig.acquisition": "רכישה", "sig.agency_move": "החלפת משרד פרסום", "sig.ownership": "בעלות", "sig.rebrand": "מיתוג מחדש", "sig.new_exec": "מינוי בשיווק", "sig.campaign": "קמפיין", "sig.launch": "השקה", "sig.hiring": "דרושים", "sig.award": "פרס", "sig.closure": "סגירה",
       "sigf.all": "הכול", "sigf.hiring": "דרושים", "sigf.funding": "גיוסים", "sigf.agency_move": "החלפות משרד", "sigf.new_exec": "מינויים", "sigf.campaign": "קמפיינים", "sigf.launch": "השקות", "sigf.rebrand": "מיתוגים", "sigf.ownership": "בעלות", "sigf.acquisition": "עסקאות",
       "card.buys": "מזמינים", "card.via": "משרד פרסום", "card.clients": "לקוחות",
-      "fl.title": "סינון", "fl.type": "סוג", "fl.needs": "מה הם מזמינים", "fl.craft": "תחום", "fl.industry": "תעשייה", "fl.product": "מוצר (סטארטאפים)", "fl.city": "עיר", "fl.anycity": "כל הערים", "fl.show": "הצגת {0} חברות", "fl.show1": "הצגת חברה אחת",
+      "fl.title": "סינון", "fl.type": "סוג חברה", "fl.needs": "מה הם מזמינים", "fl.craft": "תחום", "fl.industry": "תעשייה", "fl.product": "מוצר (סטארטאפים)", "fl.city": "עיר", "fl.anycity": "כל הערים", "fl.show": "הצגת {0} חברות", "fl.show1": "הצגת חברה אחת",
       "cr.title": "מה אתם עושים?", "cr.p": "אפשר לבחור כמה. מותגים שמזמינים את זה יעלו לראש הרשימה.", "done": "סיום", "close": "סגירה",
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים בתפקידים פומביים",
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
@@ -1015,32 +1025,35 @@ html:not([data-site]) .promo { display: none; }
     const r = (o.relations || []).find((r) => r.type === "agency");
     return r ? (BY_ID[r.target_id]?.name || r.target) : "";
   }
-  // The thumbnail: the logo (64px source, so it stays small) over the name in light type, on a grey tile.
-  // A company without a logo gets its name as a wordmark.
+  // The thumbnail: the logo (64px source, so it stays small) on a grey tile; without a logo, the name as a wordmark.
   function thumb(o, big) {
     const src = LOGOS[o.id], nm = names(o).main;
-    return `<span class="thumb${src ? "" : " word"}${big ? " big" : ""}">${src ? `<span class="tl"><img src="${esc(src)}" alt="" loading="lazy"></span>` : ""}<span class="tn" dir="auto">${esc(nm)}</span></span>`;
+    return `<span class="thumb${src ? "" : " word"}${big ? " big" : ""}">${src ? `<span class="tl"><img src="${esc(src)}" alt="" loading="lazy"></span>` : `<span class="tn" dir="auto">${esc(nm)}</span>`}</span>`;
   }
   function card(o) {
     const buyer = GROUP[o.kind] === "buyer" || (o.kind === "startup" && o.needs.length);
     const e = Store.entry(o.id);
     const sig = freshSignal(o);
-    const hits = needHits(o);
+    const hits = new Set(needHits(o));
     const nm = names(o);
-    // On hover (desktop) the tile shows what matters most: what they buy, their clients, or what they do.
-    let over = "";
-    if (buyer && o.needs.length) over = `<b>${t("card.buys")}</b> ${esc(o.needs.slice(0, 4).map(needLabel).join(" · "))}`;
-    else if (o.kind === "agency" && (o.notable_clients || []).length) over = `<b>${t("card.clients")}</b> <bdi>${esc(o.notable_clients.slice(0, 3).join(" · "))}</bdi>`;
-    else over = bidi(trim(orgDesc(o) || "", 120));
+    // One line on what matters for this company: what they commission (and through whom), their clients, or what they do.
+    let info = "";
+    if (buyer && o.needs.length) {
+      const needs = [...o.needs].sort((a, b) => hits.has(b) - hits.has(a)).slice(0, 3);
+      const ag = o.kind !== "agency" && agencyOf(o);
+      info = `<b>${t("card.buys")}</b> ${needs.map((n) => hits.has(n) ? `<mark>${esc(needLabel(n))}</mark>` : esc(needLabel(n))).join(" · ")}${ag ? ` <span class="via">· ${t("card.via")} <bdi>${esc(ag)}</bdi></span>` : ""}`;
+    } else if (o.kind === "agency" && (o.notable_clients || []).length) info = `<b>${t("card.clients")}</b> <bdi>${esc(o.notable_clients.slice(0, 3).join(" · "))}</bdi>`;
+    else info = bidi(trim(orgDesc(o) || "", 110));
     const where = cityName(o.location.city) || countryName(o.location.country);
     const tags = [
       e ? `<span class="t ink">${esc(stageLabel(e.stage) || t("st.saved"))}</span>` : "",
-      sig ? `<span class="t new" title="${esc(sigHead(sig) + " · " + ago(sig.date))}">${t("card.new")}</span>` : "",
-      hits.length ? `<span class="t">${t("card.fit")}</span>` : "",
+      hits.size ? `<span class="t">${t("card.fit")}</span>` : "",
     ].join("");
     return `<button class="card shot" type="button" data-id="${o.id}" style="${gstyle(o)}">
-      <span class="frame">${thumb(o)}<span class="over" dir="auto">${over}</span></span>
-      <span class="by">${logo(o, "av")}<span class="nm"><bdi class="n">${esc(nm.main)}</bdi><sup>${esc(kindOne(o.kind))}</sup><span class="w">${esc(where)}</span></span>${tags ? `<span class="tags">${tags}</span>` : ""}</span>
+      <span class="frame">${thumb(o)}</span>
+      <span class="by">${logo(o, "av")}<span class="nm"><bdi class="n">${esc(nm.main)}</bdi><span class="k">${esc(kindOne(o.kind))}${where ? " · " + esc(where) : ""}</span></span>${tags ? `<span class="tags">${tags}</span>` : ""}</span>
+      <span class="info">${info}</span>
+      ${sig ? `<span class="upd"><b>${esc(sigType(sig.type))}</b> ${bidi(trim(sigHead(sig), 80))} <span class="ago">${ago(sig.date)}</span></span>` : ""}
     </button>`;
   }
 
@@ -1275,7 +1288,6 @@ html:not([data-site]) .promo { display: none; }
       <section class="about"><h4>${t("sh.desc")}</h4><p class="desc" dir="auto">${bidi(orgDesc(o))}</p>
         ${LANG === "he" && !o.description_he ? `<p class="ennote">${t("sh.ennote")}</p>` : ""}
         ${facts.length ? `<dl class="facts">${facts.map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`).join("")}</dl>` : ""}</section>
-      ${o.categories.length ? `<section><h4>${t("sh.tags")}</h4><div class="pills">${o.categories.map((c) => `<span class="tag">${esc(catLabel(c))}</span>`).join("")}</div></section>` : ""}
       ${e && e.draft ? `<section><h4>${t("sh.draft")}</h4><p style="white-space:pre-wrap;font-size:14px;margin-top:0" dir="auto">${esc(e.draft)}</p></section>` : ""}
       ${sigs.length ? `<section><h4>${t("sh.whynow")}</h4><div class="feed">${sigs.slice(0, 4).map((s) => sigCard(s, true)).join("")}</div></section>` : ""}
       ${buyer && (o.needs.length || o.client_profile?.creative_needs?.length) ? `<section><h4>${t("sh.buy")}</h4>
@@ -1284,6 +1296,7 @@ html:not([data-site]) .promo { display: none; }
         ${!myCrafts().length ? `<p style="font-size:13px"><button class="btn ghost" type="button" data-crafts>${t("sh.pickcrafts")}</button>${t("sh.pickcrafts2")}</p>` : ""}
         ${o.client_profile?.in_house_studio ? `<p style="font-size:13px">${t("sh.inhouse")}</p>` : ""}</section>` : ""}
       ${ways.length ? `<section><h4>${t("sh.ways")}</h4><div class="ways">${ways.map(([h, x]) => `<div class="grp"><span>${h}</span>${x.startsWith('<div class="people">') ? x : `<div class="items">${x}</div>`}</div>`).join("")}</div></section>` : ""}
+      ${o.categories.length ? `<section><h4>${t("sh.tags")}</h4><div class="pills">${o.categories.map((c) => `<span class="tag">${esc(catLabel(c))}</span>`).join("")}</div></section>` : ""}
       ${(o.services?.length || o.notable_work?.length || o.funding?.investors?.length) ? `<section><details><summary>${t("sh.work")}</summary>
         ${o.services?.length ? `<h4>${t("sh.services")}</h4><ul class="plain" dir="auto">${o.services.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}
         ${o.notable_work?.length ? `<h4 style="margin-top:10px">${t("sh.notable")}</h4><ul class="plain" dir="auto">${o.notable_work.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}

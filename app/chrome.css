@@ -101,7 +101,7 @@ footer.foot .wrap { display: grid; gap: 32px; width: 100%; max-width: var(--max)
 footer.foot .foot-top { display: grid; gap: 8px; }
 footer.foot .brand { font-size: clamp(32px, 5vw, 56px); margin: 0; min-height: 0; }
 footer.foot .fine { margin: 0; color: var(--muted); }
-footer.foot .foot-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0 24px; border-block-start: 1px solid var(--line); padding-block-start: 16px; }
+footer.foot .foot-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(130px, 40%), 1fr)); gap: 0 24px; border-block-start: 1px solid var(--line); padding-block-start: 16px; }
 footer.foot .foot-links a { color: var(--ink); font-weight: 500; min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; }
 footer.foot .foot-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; }
 @media (hover: hover) { footer.foot .foot-links a:hover { text-decoration: underline; text-underline-offset: 3px; } }

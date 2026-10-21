@@ -66,6 +66,11 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
 - **One product**: the same tokens in `app/globals.css` and `site/app.html`.
 
+## Design round: founder + UX + copy + QA pass on v5 (owner: "the product got lost chasing Awwwards")
+- **Product first**: the home page now shows this week's three updates (the digest's lead items) right under the hero, and the primary button is the digest sign-up (stage 1). Company cards carry what they commission (and through which agency), or their clients, or what they do, plus the latest update with its date; the generic "עדכון" tag and the hover-only caption are gone, so phones see it too. Thumbnails show the logo once (no repeated name); the company page orders description → why now → what they buy → ways in → crafts.
+- **Copy**: shorter everywhere ("מי מזמין מה. ומה השתנה השבוע.", one-line list intros, short search placeholders). Filter labels say what they do ("לקוחות או ספקים", "סוג חברה").
+- **QA**: section titles inside a page sit under the page title (20–24px, 600); tags start-aligned with the page; home tender cards fill the row; logos sit on the grey (multiply) so white logos no longer vanish into a white square; footer links two per row on phones. RTL arrows checked: "‹" and "←" point forward in Hebrew, "→" only in English.
+
 ## Visual design v5 (owner: "copy Awwwards' filtering, thumbnails and inner pages as close to 1:1 as possible; we can change later")
 - Measured from the owner's screenshots: page `#f8f8f8`, grey blocks `#ededed`, page-coloured buttons in a grey filter tray (details in `team/DESIGN.md`).
 - **Header**: a promo strip above it (digest + survey ticker, replacing the survey banner). A search field in the bar in both apps (site search on the Next pages, the list's own search in the companies app). On phones: hamburger, wordmark, search, icon.
