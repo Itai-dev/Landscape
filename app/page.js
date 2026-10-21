@@ -15,6 +15,7 @@ import { listTenders } from "@/lib/tenders";
 import { composeDigest, siteUrl, WHY_HE } from "@/lib/digest";
 import Bidi from "@/components/Bidi";
 import ToolsStrip from "@/components/ToolsStrip";
+import { isOpen as surveyOpen, CLOSES_LABEL } from "@/lib/survey/config";
 import { liveProof } from "@/lib/proof";
 import "./tenders/tenders.css";
 import "./sell.css";
@@ -119,6 +120,17 @@ export default function Home() {
               </li>
             ))}
           </ol>
+        </section>
+      )}
+
+      {surveyOpen() && (
+        <section className="wrap section reveal" aria-labelledby="survey-h">
+          <div className="panel inverse surveyband">
+            <p className="eyebrow inv">סקר התעריפים 2026</p>
+            <h2 id="survey-h">כמה גובים בתעשייה?<br />ומתי באמת משלמים?</h2>
+            <p className="muted">4 דקות, אנונימי. מחירים לפי תחום ולפי סוג עבודה, ותנאי התשלום בפועל, משוטף 30 ועד שוטף 90. התוצאות פתוחות לכולם ברגע שיש מספיק תשובות. פתוח עד {CLOSES_LABEL}.</p>
+            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">לענות על הסקר</a></p>
+          </div>
         </section>
       )}
 

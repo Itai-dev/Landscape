@@ -113,3 +113,10 @@
   .hpop::-webkit-scrollbar { display: none; }
   .hpop > * { flex: none; }
 }
+
+/* Survey band: hero-sized question on an ink panel. */
+.surveyband { display: grid; gap: var(--s-4); justify-items: start; }
+.panel.inverse.surveyband h2 { font-size: 8.4vw; font-weight: 700; line-height: 1.02; letter-spacing: -.01em; margin: 0; color: var(--bg); }
+@media (min-width: 960px) { .panel.inverse.surveyband h2 { font-size: clamp(48px, 5.2vw, 88px); } }
+.surveyband .muted { max-width: 620px; margin: 0; }
+.surveyband .eyebrow.inv { color: var(--bg); margin: 0; }
