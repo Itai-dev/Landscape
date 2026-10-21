@@ -29,7 +29,7 @@ body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footer
 const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
-  '<meta name="theme-color" content="#ffffff">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+  '<meta name="theme-color" content="#e9e9e9">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
   "<script>window.LANDSCAPE_SITE = true;</script>\n" +
   `<script>${THEME_SCRIPT}</script>\n`;
 writeFileSync("public/companies/index.html", shell + body);

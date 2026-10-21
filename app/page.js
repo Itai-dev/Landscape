@@ -29,35 +29,29 @@ export default function Home() {
           {PROFILES_ENABLED
             ? <h1>כל תעשיית הקריאייטיב בישראל. <em>במקום אחד.</em></h1>
             : <h1>מי מזמין מה בתעשיית הקריאייטיב. <em>ומה השתנה השבוע.</em></h1>}
-          <div className="hero-foot">
-            {PROFILES_ENABLED ? (
-              <p className="lead">
-                מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
-                {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.</span>}
-              </p>
-            ) : (
-              <p className="lead">
-                מותגים, משרדי פרסום וסטודיואים לפי מה שהם מזמינים, עם הסיבה לפנות עכשיו. חינם, לפי התחום שלכם.
-              </p>
-            )}
-            <form className="psearch lg searchbox" role="search" action="/search">
-              <input type="search" name="q" placeholder="תחום, חברה או שם" aria-label="חיפוש בכל האתר" />
-              <button className="go" aria-label="חיפוש"><SearchIcon size={22} /></button>
-            </form>
-          </div>
+          {PROFILES_ENABLED ? (
+            <p className="lead">
+              מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
+              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.</span>}
+            </p>
+          ) : (
+            <p className="lead">
+              מותגים, משרדי פרסום וסטודיואים לפי מה שהם מזמינים, עם הסיבה לפנות עכשיו. חינם, לפי התחום שלכם.
+            </p>
+          )}
+          <form className="psearch lg searchbox" role="search" action="/search">
+            <input type="search" name="q" placeholder="תחום, חברה או שם" aria-label="חיפוש בכל האתר" />
+            <button className="go" aria-label="חיפוש"><SearchIcon size={22} /></button>
+          </form>
         </div>
         <SurveyBanner />
       </section>
 
-      {/* Decorative ticker of the same crafts; the links are in the grid below. */}
-      <div className="marquee" aria-hidden="true">
-        <div className="track">
-          {[...CRAFTS, ...CRAFTS].map((c, i) => <span key={i}>{craftLabel(c)}</span>)}
-        </div>
-      </div>
-
       <section className="wrap section reveal" aria-labelledby="crafts-h">
-        <p className="kicker"><span className="idx">01</span><span id="crafts-h">חיפוש לפי תחום</span></p>
+        <div className="sechead">
+          <h2 id="crafts-h">לפי תחום</h2>
+          <a className="btn" href="/search">לכל התחומים</a>
+        </div>
         <div className="crafts row8 scroll">
           {CRAFTS.map((c) => {
             const n = companiesWithCraft(c);
@@ -74,18 +68,18 @@ export default function Home() {
 
       {tenders.length > 0 && (
         <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
-          <p className="kicker"><span className="idx">02</span><span>מכרזים</span><a className="end" href="/tenders">לכל המכרזים ‹</a></p>
-          <div className="subhead">
-            <h2 id="tenders-h">מכרזים פתוחים עכשיו <span className="count">{tenders.length}</span></h2>
+          <div className="sechead">
+            <h2 id="tenders-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
+            <a className="btn" href="/tenders">לכל המכרזים</a>
           </div>
           <div className="tgrid">{tenders.slice(0, 3).map((t) => <TenderCard key={t.id} t={t} compact />)}</div>
         </section>
       )}
 
       <section className="wrap section reveal" aria-labelledby="what-h">
-        <p className="kicker"><span className="idx">{tenders.length > 0 ? "03" : "02"}</span><span>מה יש כאן</span></p>
-        <div className="intro">
+        <div className="sechead">
           <h2 id="what-h">{PROFILES_ENABLED ? "מה אפשר לעשות כאן" : "מה מקבלים כאן"}</h2>
+          <a className="btn" href="/companies">לכל החברות</a>
         </div>
         <div className="rows">
           <a className="feature" href="/companies">
@@ -121,7 +115,7 @@ export default function Home() {
                 כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם סיבה לפנות.
                 {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}
               </p>
-              <p><a className="tap" href="/digest">לגיליון של השבוע ‹</a></p>
+              <p><a className="btn inv" href="/digest">לגיליון של השבוע</a></p>
             </div>
             {open && <div className="form"><SignupForm /></div>}
           </div>
@@ -132,7 +126,7 @@ export default function Home() {
               <p className="muted">
                 כל יום ראשון בבוקר: מינויים בשיווק, החלפות משרד, קמפיינים ומי עשה אותם, מכרזים פתוחים, ומי מזמין עכשיו את מה שאתם עושים. לפי התחומים שלכם, חינם.
               </p>
-              <p><a className="tap" href="/digest">לגיליון של השבוע ‹</a></p>
+              <p><a className="btn inv" href="/digest">לגיליון של השבוע</a></p>
             </div>
             <div className="form"><DigestSubscribe id="home-subscribe" /></div>
           </div>

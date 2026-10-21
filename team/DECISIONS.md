@@ -66,7 +66,16 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
 - **One product**: the same tokens in `app/globals.css` and `site/app.html`.
 
-## Visual design v3 (owner: "Awwwards-like UI and UX instead of Dribbble")
+## Visual design v4 (owner: "even more like Awwwards: same margins, UI, menu, hamburger on phones, their buttons; mostly monochrome greys, purple less dominant")
+- **Spec**: `team/DESIGN.md` (analysis of awwwards.com + our tokens and components). Supersedes v3's look below.
+- **Look**: grey canvas `#e9e9e9`, white cards, `#222` ink, no shadows or gradients; 4/8/14px radii only; wide layout (max 1760px, 16–32px side margins).
+- **Buttons**: Awwwards' pair, filled ink or outlined ink, same size, 8px corners, 500 weight. No purple buttons.
+- **Purple**: a marker only (wordmark dot, metadata dot, current menu item, focus ring, new-update count, tender closing soon).
+- **Type**: Inter Tight (Latin) replaces Mona Sans; Heebo stays for Hebrew. Display 300, headings 400, no 700+.
+- **Menu**: one header for both apps; under 861px a hamburger opens a full-height menu (big light words on hairlines, full-width call to action, theme button). The companies app's section switcher is a floating ink bar.
+- **Footer**: one source (`footerHtml()` in `lib/chrome.mjs`) for both apps.
+
+## Visual design v3 (owner: "Awwwards-like UI and UX instead of Dribbble") (look superseded by v4)
 - **Reference**: the editorial sites featured on Awwwards (Site of the Day style). Inspiration only: no Awwwards name, badge, copy or assets, and nothing copied from a specific winner.
 - **Look**: warm paper canvas (`#f5f4f0`), near-black ink (`#0f0d14`), hairline rules instead of shadows, squarer cards (8/12/20px radii; buttons and tags stay pills). Dark theme is the same idea inverted (`#0b0a0f` / `#f2f0ea`). Accent stays Simply's purple; all text pairs pass WCAG AA.
 - **Type**: oversized display headings (hero up to 120px, page heads up to 72px, weight 800, tight leading), start-aligned, calm 16px body. Still Mona Sans + Heebo, no tracking or uppercase on Hebrew.
