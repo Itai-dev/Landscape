@@ -7,6 +7,7 @@
     "banking-finance"
   ],
   "description": "Israeli bank (est. 1923) and the country's largest mortgage lender; its 2025 campaign was rated the most memorable of the year by Globes' ad index.",
+  "description_he": "בנק ישראלי (נוסד ב-1923) ונותן המשכנתאות הגדול במדינה; הקמפיין שלו ב-2025 דורג כזכיר ביותר של השנה במדד הפרסומות של גלובס.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -16,6 +17,12 @@
   "website": "https://www.mizrahi-tefahot.co.il",
   "contact_url": "https://www.mizrahi-tefahot.co.il/contact-us/",
   "careers_url": "https://www.mizrahi-tefahot.co.il/about-mizrahi-tefahot-he/career/open-jobs/",
+  "links": {
+    "facebook": "https://www.facebook.com/bank.mizrahi.tefahot",
+    "youtube": "https://www.youtube.com/user/MizrahiTefahot",
+    "linkedin": "https://www.linkedin.com/company/mizrahi-tefahot-bank/",
+    "instagram": "https://www.instagram.com/Mizrahi.Tefahot"
+  },
   "key_people": [
     {
       "name": "Teri Yaskil",
@@ -70,6 +77,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "2026 Effie Gold (financial services) with Reuveni-Pridan; presenter changed in 2026 (Globes). Agency as of 2026-06: Reuveni-Pridan (Effie 2026 gold for \"Don't call me\"; listed among its main clients Jun 2026).",
-  "description_he": "בנק ישראלי (נוסד ב-1923) ונותן המשכנתאות הגדול במדינה; הקמפיין שלו ב-2025 דורג כזכיר ביותר של השנה במדד הפרסומות של גלובס."
+  "notes": "2026 Effie Gold (financial services) with Reuveni-Pridan; presenter changed in 2026 (Globes). Agency as of 2026-06: Reuveni-Pridan (Effie 2026 gold for \"Don't call me\"; listed among its main clients Jun 2026)."
 }

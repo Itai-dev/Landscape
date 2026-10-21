@@ -1,0 +1,19 @@
+/* /tools: "כלים ו־AI". Same grey blocks and ink as the rest of the site. */
+.tools .tgroup { margin-block-end: var(--s-6); }
+.tools .tgroup h3 { margin: 0 0 var(--s-3); }
+.tools .tcat { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); }
+.tools .tool { background: var(--surface); border-radius: var(--r); padding: var(--s-4) var(--s-5); display: grid; gap: var(--s-2); align-content: start; }
+.tools .tool p { margin: 0; color: var(--ink-2); font-size: var(--t-sm); line-height: 1.6; }
+.tools .ttop { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s-3); flex-wrap: wrap; }
+.tools .ttop b { font-size: var(--t-md); font-weight: 600; }
+.tools .ttags { display: flex; gap: var(--s-2); flex-wrap: wrap; }
+.tools .ttags:empty { display: none; }
+.tools .tag.il { background: var(--accent-soft); color: var(--ink); border-color: transparent; }
+.tools .tool > a { justify-self: start; display: inline-flex; align-items: center; gap: 6px; min-height: 32px; }
+.tools .uorg a, .toolsstrip .uorg a { display: inline-flex; align-items: center; gap: 6px; }
+/* "למה זה רלוונטי" is the point of an update here: show it in full. */
+.tools .uwhy { display: block; -webkit-line-clamp: unset; overflow: visible; }
+.tools .tnote { margin-block-start: var(--s-5); }
+
+/* Home strip (components/ToolsStrip.js) */
+.toolsstrip .ugrid .umeta b { font-weight: 600; }

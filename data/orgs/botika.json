@@ -7,12 +7,19 @@
     "photo-tools"
   ],
   "description": "Tel Aviv startup that uses generative AI to turn basic product photos into studio-quality on-model fashion images with AI-generated models and backgrounds, serving online clothing brands via web and an iOS app.",
+  "description_he": "סטארטאפ תל אביבי שמשתמש בג'נרטיב AI כדי להפוך צילומי מוצר בסיסיים לתמונות אופנה על דוגמנים באיכות סטודיו, עם דוגמנים ורקעים שנוצרו ב-AI, ומשרת מותגי ביגוד אונליין דרך הווב ואפליקציית iOS.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
   },
   "status": "active",
   "website": "https://botika.com",
+  "contact_url": "https://botika.com/contact-us",
+  "links": {
+    "instagram": "https://www.instagram.com/botika_com",
+    "linkedin": "https://www.linkedin.com/company/botika-com/",
+    "youtube": "https://www.youtube.com/@Botika_com"
+  },
   "services": [
     "AI fashion model photography",
     "E-commerce product imagery app"
@@ -49,6 +56,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$8M seed Jan 2025. Caplight lists a Dec 2025 Series A (total $18M, Infinity Ventures) - unconfirmed.",
-  "description_he": "סטארטאפ תל אביבי שמשתמש בג'נרטיב AI כדי להפוך צילומי מוצר בסיסיים לתמונות אופנה על דוגמנים באיכות סטודיו, עם דוגמנים ורקעים שנוצרו ב-AI, ומשרת מותגי ביגוד אונליין דרך הווב ואפליקציית iOS."
+  "notes": "$8M seed Jan 2025. Caplight lists a Dec 2025 Series A (total $18M, Infinity Ventures) - unconfirmed."
 }

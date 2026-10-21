@@ -7,6 +7,7 @@
     "digital-agency"
   ],
   "description": "Digital marketing agency founded in 2017 at Kibbutz Ma'oz Haim in the Spring Valley (Emek HaMaayanot) region as part of the McCann Tel Aviv group. Provides web design/development, SEO and Google Ads, social media management, branding and content.",
+  "description_he": "סוכנות שיווק דיגיטלי שנוסדה ב-2017 בקיבוץ מעוז חיים שבעמק המעיינות, כחלק מקבוצת מקאן תל אביב. מספקת עיצוב ופיתוח אתרים, SEO ו-Google Ads, ניהול סושיאל, מיתוג ותוכן.",
   "location": {
     "country": "IL",
     "city": "Kibbutz Ma'oz Haim"
@@ -16,6 +17,11 @@
   "website": "https://spring-valley.co.il/",
   "contact_url": "https://spring-valley.co.il/contact-us/",
   "careers_url": "https://spring-valley.co.il/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/18027542/",
+    "facebook": "https://www.facebook.com/springvalleydigital",
+    "instagram": "https://www.instagram.com/spring_valley_digital"
+  },
   "services": [
     "Digital strategy",
     "Web design & development",
@@ -75,6 +81,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "description_he": "סוכנות שיווק דיגיטלי שנוסדה ב-2017 בקיבוץ מעוז חיים שבעמק המעיינות, כחלק מקבוצת מקאן תל אביב. מספקת עיצוב ופיתוח אתרים, SEO ו-Google Ads, ניהול סושיאל, מיתוג ותוכן."
+  "last_verified": "2026-10-19"
 }

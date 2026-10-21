@@ -1,4 +1,4 @@
-import { composeDigest, craftsTitle, linkedinPost, siteUrl } from "@/lib/digest";
+import { composeDigest, craftsTitle, linkedinPost, siteUrl, WHY_HE } from "@/lib/digest";
 import { CRAFTS, CRAFT_SLUGS } from "@/lib/taxonomy";
 import { isOpen as surveyOpen } from "@/lib/survey/config";
 import DigestSubscribe from "@/components/DigestSubscribe";
@@ -20,28 +20,28 @@ export async function generateMetadata({ searchParams }) {
   const who = craftsTitle(d);
   const title = who ? `השבוע בתעשייה: ${who}` : "השבוע בתעשייה";
   const top = [...d.items, ...d.more].slice(0, 2).map((i) => i.headline).join(" · ");
-  const description = top || "מי מונה לשיווק, מי החליף משרד ואילו מכרזים נפתחו השבוע בתעשיית הקריאייטיב בישראל. ולמה זה הזמן לפנות.";
+  const description = top || "מי מונה לשיווק, מי החליף משרד ואילו מכרזים נפתחו השבוע בתעשיית הקריאייטיב בישראל. ולמה זה רלוונטי לכם.";
   const url = `${siteUrl()}/digest${d.crafts.length ? `?crafts=${d.crafts.map((c) => c.slug).join(",")}` : ""}`;
-  const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · Landscape" };
+  const image = { url: "/og/digest.png", width: 1200, height: 630, alt: "השבוע בתעשייה · CreativeIn" };
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title: `${title} · Landscape`, description, url, type: "article", locale: "he_IL", siteName: "Landscape", images: [image] },
-    twitter: { card: "summary_large_image", title: `${title} · Landscape`, description, images: [image.url] },
+    openGraph: { title: `${title} · CreativeIn`, description, url, type: "article", locale: "he_IL", siteName: "CreativeIn", images: [image] },
+    twitter: { card: "summary_large_image", title: `${title} · CreativeIn`, description, images: [image.url] },
   };
 }
 
 function Item({ i, span }) {
   return (
     <li className="ditem">
-      <div className="dmeta"><span className="dtype">{i.label}</span> · <span>{i.day}</span>{i.late && <span className="muted"> · הגיע אלינו {span}</span>}</div>
+      <div className="dmeta"><span className="dtype">{i.class_label || i.label}</span> · <span>{i.day}</span>{i.late && <span className="muted"> · הגיע אלינו {span}</span>}</div>
       <p className="dhead"><Bidi>{i.headline}</Bidi></p>
-      {i.why && <p className="dwhy"><Bidi>{i.why}</Bidi></p>}
+      {i.why && <p className="dwhy"><span className="muted">{WHY_HE}: </span><Bidi>{i.why}</Bidi></p>}
       <div className="dfoot">
         {i.org?.href ? <a className="tap" href={i.org.href.replace(siteUrl(), "")}><bdi>{i.org.name}</bdi></a> : i.org?.name ? <bdi>{i.org.name}</bdi> : null}
         {i.source_url && (
-          <a className="src tap" href={i.source_url} target="_blank" rel="noopener noreferrer">
+          <a className="src tap" href={i.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category={i.type || "signal"}>
             <bdi>{i.source || "מקור"}</bdi> <LinkIcon size={14} />
           </a>
         )}
@@ -69,7 +69,7 @@ export default async function Digest({ searchParams }) {
         <span className="eyebrow">{d.range}</span>
         <h1>השבוע בתעשייה</h1>
         <p>
-          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה הזמן לפנות.</> : "מי מונה לשיווק, מי החליף משרד, אילו מכרזים נפתחו ומי מזמין עכשיו. כל עדכון עם הסיבה לפנות ועם מקור."}
+          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה יכול להיות רלוונטי.</> : "מי מונה לשיווק, מי החליף משרד, אילו מכרזים פורסמו ואילו משרות נפתחו. כל פרט עם מקור, תאריך ולמה הוא רלוונטי."}
         </p>
       </div>
 
@@ -123,17 +123,41 @@ export default async function Digest({ searchParams }) {
           {d.tenders.length > 0 && (
             <section aria-labelledby="d-tenders">
               <div className="subhead">
-                <h2 id="d-tenders">{who ? `מכרזים פתוחים ב${who}` : "מכרזים פתוחים"} <span className="count">{d.tenders.length}</span></h2>
+                <h2 id="d-tenders">{who ? `מכרזים ב${who}` : "מכרזים"} <span className="count">{d.tenders.length}</span></h2>
                 <a className="tap" href={`/tenders${chosen.length === 1 ? `?craft=${chosen[0]}` : ""}`}>לכל המכרזים ‹</a>
               </div>
               <div className="tresults">
                 {d.tenders.map((t) => (
-                  <a key={t.id} className="trow" href={t.url} target="_blank" rel="noopener noreferrer">
+                  <a key={t.id} className="trow" href={t.url} target="_blank" rel="noopener noreferrer" data-track="tender_source_click">
+                    <span className="muted small">{t.label}</span>
                     <b>{t.summary}</b>
-                    <span>{t.buyer} · {t.countdown} · הגשה עד <bdi>{t.deadline}</bdi> · למכרז במקור הרשמי</span>
+                    <span>{t.buyer} · {t.state === "open" ? `${t.countdown} · ` : ""}<bdi>{t.when}</bdi> · למכרז במקור הרשמי</span>
                   </a>
                 ))}
               </div>
+            </section>
+          )}
+
+          {d.tools?.length > 0 && (
+            <section aria-labelledby="d-tools">
+              <div className="subhead">
+                <h2 id="d-tools">כלים ו־AI השבוע <span className="count">{d.tools.length}</span></h2>
+                <a className="tap" href="/tools">לכל הכלים ‹</a>
+              </div>
+              <ol className="dlist">
+                {d.tools.map((u) => (
+                  <li key={u.id} className="ditem">
+                    <div className="dmeta"><span className="dtype">עדכון · <bdi lang="en">{u.tool}</bdi></span> · <span>{u.day}</span></div>
+                    <p className="dhead"><Bidi>{u.headline}</Bidi></p>
+                    <p className="dwhy"><span className="muted">למה זה רלוונטי: </span><Bidi>{u.why}</Bidi></p>
+                    <div className="dfoot">
+                      <a className="src tap" href={u.source_url} target="_blank" rel="noopener noreferrer" data-track="tool_source_click" data-track-category={u.category}>
+                        מקור רשמי <LinkIcon size={14} />
+                      </a>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </section>
           )}
 
@@ -147,8 +171,8 @@ export default async function Digest({ searchParams }) {
           {d.picks.length > 0 && (
             <section aria-labelledby="d-picks">
               <div className="subhead">
-                <h2 id="d-picks">{who ? `מי מזמין ${who} עכשיו` : "מותגים ומשרדים עם חדשות"}</h2>
-                <p>עם הסיבה לפנות דווקא עכשיו</p>
+                <h2 id="d-picks">{who ? `מי מזמין ${who}` : "מותגים ומשרדים עם חדשות"}</h2>
+                <p>{who ? "לפי מה שידוע שהם מזמינים, ועם עדכון אחרון אם יש" : "עם העדכון האחרון על כל אחד"}</p>
               </div>
               <ul className="dpicks">
                 {d.picks.map((p) => (

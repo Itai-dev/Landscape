@@ -11,6 +11,12 @@ Research notes for the "מכרזים פתוחים" feed (checked 20 Oct 2026). R
   protected by copyright (Copyright Act 2007 §5); tenders are public notices. Not legal advice.
 - **No personal data.** Detail pages list contact names, emails and phones: never store them. לפ"מ exemption
   notices name individual directors and talent: keep company names only.
+- **Record when submissions open.** mr.gov.il detail pages show "מועד תחילת ההגשה" separately from the
+  deadline, and it can be weeks after publication. Store it as `submission_opens` (Israel time). Until then the
+  site shows the tender as "ההגשה נפתחת ב־…", never as open, and it doesn't count as open anywhere.
+  Re-check `deadline_at`, `submission_opens` and status on every run: buyers move dates ("עודכן").
+  Verification log 21 Oct 2026: all 11 records checked against the official page or PDF (dates, buyer,
+  title, URL); two (mr-4000622905, mr-4000623022) were published but not yet open.
 - **Never bypass a block.** gov.il, Kan, Tel Aviv municipality and others sit behind Cloudflare/WAF (403/472).
   Use web search for those and link the official page you find; don't fetch around the block.
 - **Fetch gently:** at most a few dozen requests a week to mr.gov.il, 1–2 s apart, with a UA that names Landscape.

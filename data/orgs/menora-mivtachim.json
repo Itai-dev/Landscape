@@ -7,6 +7,7 @@
     "banking-finance"
   ],
   "description": "One of Israel's largest insurance and pension groups (roots in 1935), TASE-listed and headquartered at the Menora Mivtachim Tower in Ramat Gan; runs insurance, pension, provident and finance businesses.",
+  "description_he": "מקבוצות הביטוח והפנסיה הגדולות בישראל (שורשיה ב-1935), נסחרת בבורסת תל אביב ומטהּ במגדל מנורה מבטחים ברמת גן; פועלת בתחומי הביטוח, הפנסיה, הגמל והפיננסים.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -16,6 +17,11 @@
   "website": "https://www.menoramivt.co.il",
   "contact_url": "https://www.menoramivt.co.il/general-contact-us/",
   "careers_url": "https://www.menoramivt.co.il/job-posting/jobs",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/menora/",
+    "instagram": "https://www.instagram.com/menoramivtachim",
+    "facebook": "https://www.facebook.com/menoramivtltd"
+  },
   "client_profile": {
     "industry": "insurance and pensions",
     "creative_needs": [
@@ -44,6 +50,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Agency link is from 2021; check before pitching.",
-  "description_he": "מקבוצות הביטוח והפנסיה הגדולות בישראל (שורשיה ב-1935), נסחרת בבורסת תל אביב ומטהּ במגדל מנורה מבטחים ברמת גן; פועלת בתחומי הביטוח, הפנסיה, הגמל והפיננסים."
+  "notes": "Agency link is from 2021; check before pitching."
 }

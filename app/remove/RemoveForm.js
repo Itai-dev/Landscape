@@ -6,6 +6,7 @@ const ERR = {
   save_failed: "השמירה נכשלה. מה שמילאתם נשאר כאן, אפשר לנסות שוב.",
   confirm: "צריך לסמן את התיבה.",
   not_found: "לא מצאנו את האדם הזה במאגר. אולי כבר הוסר.",
+  rate_limited: "נשלחו מכאן הרבה בקשות בזמן קצר. אפשר לנסות שוב בעוד שעה, או לכתוב לנו.",
 };
 
 export default function RemoveForm({ id, email = "" }) {
@@ -52,7 +53,7 @@ export default function RemoveForm({ id, email = "" }) {
       {state.error && (
         <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>
           {state.error}
-          {email && <> אפשר לכתוב ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־Landscape")}`} className="ltr">{email}</a> ולציין את השם.</>}
+          {email && <> אפשר לכתוב ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־CreativeIn")}`} className="ltr">{email}</a> ולציין את השם.</>}
         </div>
       )}
       <button className="btn primary" disabled={!confirm || state.busy}>

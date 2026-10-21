@@ -2,12 +2,15 @@ import { NextResponse } from "next/server";
 import { adminClient } from "@/lib/supabase/server";
 import { seedById } from "@/lib/people";
 import { str } from "@/lib/profile";
-import { readJson } from "@/lib/guard";
+import { readJson, allow } from "@/lib/guard";
 
 export const runtime = "nodejs";
 
 // A request to remove a person listed from public sources. Body: JSON {id, reason?, contact?, confirm: true}.
 export async function POST(request) {
+  // A request hides the name at once (no account needed), so limit how many one visitor can send.
+  const ip = (request.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
+  if (!allow(`removal:${ip}`, { max: 10, windowMs: 60 * 60_000 })) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   const body = (await readJson(request, 4 * 1024)) || {};
   const seed = seedById(body.id);
   if (!seed) return NextResponse.json({ error: "not_found" }, { status: 404 });

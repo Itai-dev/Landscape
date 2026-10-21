@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import { PROFILES_ENABLED } from "@/lib/config";
-import { ME, ctaInner } from "@/lib/chrome.mjs";
+import { ME, ctaInner, tabCtaInner } from "@/lib/chrome.mjs";
 
 export const dynamic = "force-dynamic";
 
@@ -15,7 +15,7 @@ export async function GET() {
       signup: Boolean(sb),
       signedIn: Boolean(user),
       profiles: PROFILES_ENABLED,
-      ...(user ? { me: { href: ME.href, label: ME.label, html: ctaInner(ME) } } : {}),
+      ...(user ? { me: { href: ME.href, label: ME.label, html: ctaInner(ME), bar: tabCtaInner(ME) } } : {}),
     },
     { headers: { "cache-control": "private, no-store" } },
   );

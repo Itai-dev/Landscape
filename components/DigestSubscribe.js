@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { useUser } from "@/components/useUser";
 import { CRAFTS, CONSENT_TEXT } from "@/lib/taxonomy";
-import { callbackUrl } from "@/lib/authLink";
+import { callbackUrl, normalEmail, validEmail } from "@/lib/authLink";
 import { firstSendLabel } from "@/lib/digestSchedule";
 import { track } from "@vercel/analytics";
 
@@ -32,12 +32,13 @@ const label = (slugs) => slugs.map((s) => CRAFTS.find((c) => c.slug === s)?.he |
 // Email-only sign-up for the digest. The consent box starts unchecked (anti-spam law §30A): nothing is sent
 // without it, and nothing is sent until the address is confirmed by opening the link in the email.
 // Signed-in readers (already confirmed) save straight away.
-export default function DigestSubscribe({ crafts: initialCrafts = [], compact = false, id = "subscribe", cta = "", note = "", where = "" }) {
+// `onSent(email)` lets a flow (/join) show its own "sent" screen; `event` is an extra analytics event on submit.
+export default function DigestSubscribe({ crafts: initialCrafts = [], frequency: initialFrequency = "weekly", compact = false, id = "subscribe", cta = "", note = "", where = "", onSent = null, event = "" }) {
   const { supabase, configured } = useSupabase();
   const user = useUser();
   const [email, setEmail] = useState("");
   const [crafts, setCrafts] = useState(initialCrafts);
-  const [frequency, setFrequency] = useState("weekly");
+  const [frequency, setFrequency] = useState(initialFrequency);
   const [consent, setConsent] = useState(false);
   const [state, setState] = useState("idle"); // idle | sending | sent | saved | error
   const [error, setError] = useState("");
@@ -50,7 +51,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, מכרזים פתוחים ומי מזמין עכשיו. אחרי האישור אפשר לבחור תחומים. כדאי לפתוח את הקישור באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, משרות ומכרזים, ומה עוד השתנה בתעשייה. {crafts.length ? "התחומים שבחרתם נשמרים עם האישור." : "אחרי האישור אפשר לבחור תחומים."} הקישור עובד רק במכשיר ובדפדפן האלה. לא הגיע? כדאי לבדוק בספאם.
       </div>
     );
   }
@@ -65,22 +66,38 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], compact = 
   async function submit(e) {
     e.preventDefault();
     if (!consent) return;
-    try { track("digest_subscribe_submit", { where: where || id }); } catch {}
+    try { track("digest_subscribe_submit", { where: where || id }); if (event) track(event, { crafts: crafts.length, frequency }); } catch {}
     setState("sending");
     setError("");
+    const fail = (msg) => { setState("error"); setError(msg); };
+    const OFFLINE = "אין חיבור כרגע. אפשר לנסות שוב בעוד רגע.";
     if (user) {
-      const res = await fetch("/api/digest/prefs", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ frequency, crafts, consent: true }) });
+      let res;
+      try {
+        res = await fetch("/api/digest/prefs", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ frequency, crafts, consent: true }) });
+      } catch {
+        return fail(OFFLINE);
+      }
       if (res.ok) setState("saved");
-      else { setState("error"); setError("לא הצלחנו לשמור. אפשר לנסות שוב."); }
+      else fail(res.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
       return;
     }
-    const { error } = await supabase.auth.signInWithOtp({
-      email: email.trim(),
-      options: { emailRedirectTo: callbackUrl({ next: "/digest/settings?welcome=1", subscribe: frequency, crafts }) },
-    });
+    const address = normalEmail(email);
+    if (!validEmail(address)) return fail("הכתובת לא נראית תקינה. כדאי לבדוק אותה.");
+    let error;
+    try {
+      ({ error } = await supabase.auth.signInWithOtp({
+        email: address,
+        options: { emailRedirectTo: callbackUrl({ next: "/digest/settings?welcome=1", subscribe: frequency, crafts }) },
+      }));
+    } catch {
+      return fail(OFFLINE);
+    }
     if (error) {
-      setState("error");
-      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+      fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+    } else if (onSent) {
+      setState("idle");
+      onSent(address);
     } else setState("sent");
   }
 

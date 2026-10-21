@@ -1,29 +1,6 @@
-/* Home page: sell the weekly digest (hook, this week, before/after, preview, FAQ). Awwwards look: grey blocks, ink, no shadows. */
-.hero.sell h1 { font-size: var(--t-2xl); line-height: 1.04; max-width: 26ch; }
-.herobox { width: 100%; max-width: 560px; margin: 0 auto; text-align: start; background: var(--surface); border-radius: var(--r-lg); padding: clamp(16px, 3vw, 24px); }
-.herobox .row { justify-content: flex-start; margin-block-start: 0; }
-
-.ba { display: grid; gap: var(--s-2); }
-@media (min-width: 760px) { .ba { grid-template-columns: 1fr 1fr; } }
-.ba .col { border-radius: var(--r-lg); padding: clamp(20px, 3vw, 40px); }
-.ba .before { background: transparent; box-shadow: inset 0 0 0 1px var(--line); }
-.ba .after { background: var(--surface); }
-.ba h3 { font-size: var(--t-lg); font-weight: 400; margin: 0 0 var(--s-4); }
-.ba .after h3::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-inline-end: var(--s-2); vertical-align: middle; }
-.ba ul { margin: 0; padding-inline-start: 1.2em; display: grid; gap: var(--s-3); }
-.ba .before li { color: var(--muted); }
-
-.join.preview { align-items: start; }
-.join.preview .form h3 { font-size: var(--t-lg); font-weight: 400; margin-block-end: var(--s-4); }
-.dpreview { display: grid; gap: var(--s-3); }
-.dcard { background: var(--paper); border-radius: var(--r); padding: var(--s-5); display: grid; gap: var(--s-4); }
-.dcard .dtop { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; border-block-end: 1px solid var(--line); padding-block-end: var(--s-3); }
-.dcard .dtop b span { color: var(--accent); }
-.dcard .lbl { font-size: var(--t-xs); font-weight: 600; color: var(--ink); }
-.ditems { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-4); }
-.ditems li, .dtender, .dpick { display: grid; gap: 2px; }
-.dcard .hl { font-size: var(--t-sm); line-height: 1.5; color: var(--ink-2); }
-.dtender { background: var(--surface); border-radius: var(--r-sm); padding: var(--s-3); }
+/* Home page: sell the weekly digest (hook, crafts, this week, tenders, FAQ, closing band). Awwwards look: grey blocks, ink, no shadows. */
+.hero.sell h1 { max-width: 26ch; }
+.hero.sell .herohint { margin: var(--s-3) 0 0; }
 
 .faq { max-width: 880px; display: grid; border-block-start: 1px solid var(--line); }
 .faq details { border-block-end: 1px solid var(--line); }
@@ -33,8 +10,125 @@
 .faq details[open] summary::after { content: "–"; }
 .faq details p { margin: 0; padding: 0 0 var(--s-5); color: var(--ink-2); max-width: 680px; }
 
-/* Phones: keep the page short (hook, this week, before/after, tenders, preview, FAQ). */
-@media (max-width: 759px) { .crafts-sec { display: none; } }
-.join.preview .form { background: var(--paper); }
-.join.preview .chip { background: var(--paper); }
-.join.preview .chip.on { background: var(--ink); color: var(--bg); }
+/* Closing band: one line and one button */
+.closer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--s-5); }
+.panel.inverse.closer h2 { margin: 0; max-width: 22ch; }
+.closer .btn { flex: none; }
+
+@media (max-width: 639px) {
+  .hero.sell { padding-block: var(--s-7) var(--s-5); }
+  .hero.sell .row .btn { width: 100%; }
+  /* Crafts: a compact swipe row right under the hero (like an app's categories) */
+  .crafts-sec { padding-block-start: 0; }
+  .crafts-sec .sechead { margin-block-end: var(--s-3); }
+  .crafts.scroll .craft { flex: 0 0 116px; min-height: 104px; padding: var(--s-3); gap: var(--s-3); font-size: var(--t-sm); }
+  .crafts.scroll .craft .ico { width: 26px; height: 26px; }
+  .crafts.scroll .craft .n { display: none; }
+
+  /* This week and open tenders: swipe rows with a peek of the next card */
+  .swipe { display: flex !important; gap: var(--s-2); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain;
+    margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter); }
+  .swipe::-webkit-scrollbar { display: none; }
+  .swipe > * { flex: 0 0 84%; scroll-snap-align: start; }
+
+  .panel.inverse.closer { padding: var(--s-6) var(--s-5); }
+  .closer .btn { width: 100%; }
+}
+
+/* Dribbble-style split hero: text on the right (start), the update card on the left; search block under it. */
+.hero.sell.split { text-align: start; justify-items: stretch; max-width: none; padding-block: clamp(32px, 6vw, 96px) var(--s-6); display: grid; gap: var(--s-7); align-items: center; }
+@media (min-width: 960px) { .hero.sell.split { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } }
+.hero.sell.split .htext { display: grid; justify-items: start; gap: 0; }
+/* Hero headline: big and heavy; "מה קורה" on one line, the rolling craft on the next. Sized so the longest
+   craft ("באנימציה תלת־ממדית?") fits its column without wrapping. */
+.hero.sell.split h1 { max-width: none; margin-block-end: var(--s-5); }
+.hero.sell.split h1 .rot { display: grid; }
+.hero.sell.split .lead { margin: 0 0 var(--s-5); max-width: 520px; text-align: start; }
+.hero.sell.split .row { justify-content: flex-start; }
+
+/* The rotating word (components/RotatingWord.js): rolls like Apple's clock digits, the old word up and out while the new one comes up from below, as one strip. Every word sits invisible in
+   one grid cell (.rsize) so the box keeps the longest word's size; the live layers roll inside a clipped line. */
+.rot { display: grid; justify-items: start; color: var(--accent); white-space: nowrap; overflow: hidden; padding-block: .04em .08em; margin-block-start: .06em; }
+.rot > span { grid-area: 1 / 1; }
+.rot .rsize { visibility: hidden; }
+.rot .rl { display: inline-flex; }
+.rot .rc { display: inline-block; white-space: pre; }
+/* One word at a time: the old one rolls up and out, then the new one rolls up into place, so the two never share
+   the line (no overlap, no fade). */
+.rot .rl.out { animation: roll-out .3s cubic-bezier(.55, 0, .75, .2) both; }
+.rot .rl.in { animation: roll-in .45s cubic-bezier(.2, .8, .25, 1) .28s both; }
+@keyframes roll-out { from { transform: none; } to { transform: translateY(-115%); visibility: hidden; } }
+@keyframes roll-in { from { transform: translateY(115%); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .rot .rl { animation: none !important; } .rot .rl.out { display: none; } }
+
+.checks { list-style: none; margin: 0 0 var(--s-6); padding: 0; display: grid; gap: var(--s-3); }
+.checks li { display: flex; align-items: flex-start; gap: var(--s-3); color: var(--ink-2); font-size: var(--t-base); line-height: 1.5; }
+.checks svg { flex: none; color: var(--accent); margin-block-start: 3px; }
+
+/* Desktop card: this week's updates, one at a time, with the company as a chip in the corner. */
+.hmedia { display: none; }
+@media (min-width: 960px) {
+  .hmedia { display: grid; position: relative; background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); min-height: 440px; }
+  .hcard { grid-area: 1 / 1; display: grid; align-content: end; gap: var(--s-4); background: var(--paper); border-radius: var(--r); padding: var(--s-7) var(--s-6) var(--s-8);
+    color: var(--ink); text-decoration: none; opacity: 0; pointer-events: none; transition: opacity .6s var(--ease); }
+  .hcard.on { opacity: 1; pointer-events: auto; }
+  @media (hover: hover) { a.hcard.on:hover .hhead { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; } }
+  .hlabel { font-size: var(--t-sm); color: var(--muted); }
+  .hhead { font-size: var(--t-xl); font-weight: 300; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .hchip { position: absolute; inset-block-end: var(--s-5); inset-inline-end: var(--s-5); display: inline-flex; align-items: center; gap: var(--s-2);
+    background: var(--bg); border-radius: var(--r-pill); padding: 6px 14px 6px 6px; font-size: var(--t-sm); font-weight: 500; max-width: 70%; }
+  .hchip bdi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hchip img, .hmono { width: 28px; height: 28px; border-radius: 50%; flex: none; object-fit: cover; background: var(--surface); }
+  .hmono { display: grid; place-items: center; font-size: 13px; color: var(--ink); }
+  .hdots { position: absolute; inset-block-start: var(--s-6); inset-inline-start: var(--s-6); display: flex; gap: 6px; }
+  .hdots i { width: 6px; height: 6px; border-radius: 1.5px; background: var(--line-2); transition: background .3s ease; }
+  .hdots i.on { background: var(--accent); }
+}
+@media (prefers-reduced-motion: reduce) { .hcard { transition: none; } }
+
+/* "התעשייה, מסודרת": one tile per company type, with its tag, the real count and a short line. 3 columns, 2 on phones. */
+.catalog { display: grid; gap: var(--s-2); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 759px) { .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ctile { display: grid; align-content: start; justify-items: start; gap: var(--s-3); background: var(--surface); border-radius: var(--r); padding: var(--s-5); color: var(--ink); text-decoration: none; min-height: 168px; transition: background .2s ease; }
+@media (hover: hover) { .ctile:hover { background: var(--soft); text-decoration: none; } }
+.ctile .cn { font-size: var(--t-xl); font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; margin-block-start: var(--s-2); }
+.ctile .cl { font-size: var(--t-sm); color: var(--muted); line-height: 1.5; }
+@media (max-width: 639px) { .ctile { padding: var(--s-4); min-height: 140px; gap: var(--s-2); } }
+
+/* Search block: tabs, one field (not full width) with a square accent button, popular crafts. */
+.hsearchblock { display: grid; gap: var(--s-3); margin-block-start: clamp(var(--s-7), 6vw, var(--s-9)); padding-block-end: var(--s-6); width: 100%; max-width: 720px; margin-inline: auto; }
+.htabs { display: flex; gap: var(--s-1); flex-wrap: wrap; justify-content: center; }
+.htabs button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: var(--t-sm); font-weight: 500; padding: 0 16px; min-height: 40px; border-radius: var(--r); cursor: pointer; }
+.htabs button.on { background: var(--surface); color: var(--ink); }
+@media (hover: hover) { .htabs button:not(.on):hover { color: var(--ink); } }
+.hfield input[type="search"] { border-radius: var(--r-lg); padding-inline-start: var(--s-5); }
+.hfield .go { inset-inline-end: 6px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); }
+.hpop { margin-block-start: var(--s-1); justify-content: center; }
+.hpop .tag { border-radius: var(--r); padding: 6px 14px; font-size: var(--t-sm); }
+@media (max-width: 639px) {
+  .hero.sell.split { gap: var(--s-5); padding-block: var(--s-6) var(--s-5); }
+  .checks { margin-block-end: var(--s-5); }
+  .checks li { font-size: var(--t-sm); }
+  .hpop { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); }
+  .hpop::-webkit-scrollbar { display: none; }
+  .hpop > * { flex: none; }
+}
+
+/* Survey band: hero-sized question on an ink panel. */
+.surveyband { display: grid; gap: var(--s-4); justify-items: start; }
+.panel.inverse.surveyband h2 { margin: 0; color: var(--bg); }
+.surveyband .muted { max-width: 620px; margin: 0; }
+.surveyband .eyebrow.inv { color: var(--bg); margin: 0; }
+
+/* Home hero, search first (like an AI product's start page): one question, one line under it, the search, a quiet
+   digest link, centered in the first screen. The search field types its examples (lib/typing.mjs). */
+.hero.ask { max-width: 880px; min-height: min(78svh, 760px); align-content: center; padding-block: clamp(32px, 6vw, 96px) clamp(40px, 6vw, 96px); }
+.hero.ask h1 { max-width: 18ch; margin-block-end: var(--s-4); text-wrap: balance; }
+.hero.ask .lead { margin-block-end: 0; max-width: 600px; text-wrap: balance; }
+.hero.ask .hsearchblock { margin-block-start: clamp(var(--s-6), 4vw, var(--s-7)); padding-block-end: 0; }
+.askmail { margin: var(--s-6) 0 0; font-size: var(--t-sm); color: var(--muted); }
+.askmail a { color: var(--ink); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
+@media (max-width: 639px) {
+  .hero.ask { min-height: 0; padding-block: var(--s-7) var(--s-6); }
+  .hero.ask .htabs { justify-content: center; }
+}

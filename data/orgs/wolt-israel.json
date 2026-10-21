@@ -15,7 +15,14 @@
   },
   "status": "active",
   "website": "https://wolt.com/he/isr",
+  "contact_url": "https://explore.wolt.com/he/isr/contact",
   "careers_url": "https://careers.wolt.com",
+  "links": {
+    "instagram": "https://www.instagram.com/wolt.israel",
+    "facebook": "https://www.facebook.com/woltisrael",
+    "linkedin": "https://www.linkedin.com/company/wolt-oy/",
+    "youtube": "https://www.youtube.com/@WoltforMerchants"
+  },
   "key_people": [
     {
       "name": "Tomer Cohen",

@@ -7,11 +7,17 @@
     "banking-finance"
   ],
   "description": "Bank Leumi's mobile-only banking brand, launched as a separate digital bank and folded into Leumi's core systems from 2023; targets young customers and families with campaigns built around creators.",
+  "description_he": "מותג הבנקאות של בנק לאומי שפועל רק במובייל, שהושק כבנק דיגיטלי נפרד ומ-2023 שולב במערכות הליבה של לאומי; פונה ללקוחות צעירים ולמשפחות בקמפיינים שנבנים סביב יוצרי תוכן.",
   "location": {
     "country": "IL"
   },
   "status": "active",
   "website": "https://www.pepper.co.il",
+  "links": {
+    "facebook": "https://www.facebook.com/PepperBanking",
+    "instagram": "https://www.instagram.com/pepper_banking",
+    "linkedin": "https://www.linkedin.com/company/pepper-banking/"
+  },
   "key_people": [
     {
       "name": "Meital Shiran Harel",
@@ -59,6 +65,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "מותג הבנקאות של בנק לאומי שפועל רק במובייל, שהושק כבנק דיגיטלי נפרד ומ-2023 שולב במערכות הליבה של לאומי; פונה ללקוחות צעירים ולמשפחות בקמפיינים שנבנים סביב יוצרי תוכן."
+  "last_verified": "2026-10-19"
 }

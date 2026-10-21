@@ -8,6 +8,7 @@
     "banking-finance"
   ],
   "description": "Cross-border payments platform founded in 2005 by Yuval Tal, HQ in New York with a large operation in Petah Tikva, Israel; Nasdaq: PAYO.",
+  "description_he": "פלטפורמת תשלומים חוצי גבולות שנוסדה ב-2005 על ידי יובל טל, עם מטה בניו יורק ופעילות גדולה בפתח תקווה; נאסד\"ק: PAYO.",
   "location": {
     "country": "IL",
     "city": "Petah Tikva",
@@ -20,6 +21,11 @@
   "status": "active",
   "website": "https://www.payoneer.com",
   "careers_url": "https://careers.payoneer.com/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/payoneer/",
+    "youtube": "https://www.youtube.com/user/Payoneer",
+    "instagram": "https://www.instagram.com/payoneer"
+  },
   "key_people": [
     {
       "name": "Yuval Tal",
@@ -48,6 +54,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Wikipedia infobox lists NYC HQ; a photo caption references Petah Tikva HQ. Employee band based on 1,871 (2021).",
-  "description_he": "פלטפורמת תשלומים חוצי גבולות שנוסדה ב-2005 על ידי יובל טל, עם מטה בניו יורק ופעילות גדולה בפתח תקווה; נאסד\"ק: PAYO."
+  "notes": "Wikipedia infobox lists NYC HQ; a photo caption references Petah Tikva HQ. Employee band based on 1,871 (2021)."
 }

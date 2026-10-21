@@ -7,6 +7,7 @@
     "media-infrastructure"
   ],
   "description": "Video creation platform for publishers, brands and social teams that automates short-form/social video production from text, licensed footage and templates. Founded in Israel in 2012, with offices in New York, London and the Tel Aviv area.",
+  "description_he": "פלטפורמה ליצירת וידאו למוציאים לאור, מותגים וצוותי סושיאל, שמבצעת אוטומציה של הפקת וידאו קצר לסושיאל מטקסט, מצולמים ברישיון ותבניות. נוסדה בישראל ב-2012, עם משרדים בניו יורק, בלונדון ובאזור תל אביב.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -18,6 +19,12 @@
   "founded": 2012,
   "status": "active",
   "website": "https://www.wochit.com",
+  "contact_url": "https://www.wochit.com/contact",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/wochit/",
+    "facebook": "https://www.facebook.com/Wochit",
+    "instagram": "https://www.instagram.com/wochit"
+  },
   "services": [
     "Wochit Studio video creation",
     "Frame white-label video editor",
@@ -73,6 +80,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "HQ listed variously as New York or Beit Dagan/Tel Aviv; R&D in Israel.",
-  "description_he": "פלטפורמה ליצירת וידאו למוציאים לאור, מותגים וצוותי סושיאל, שמבצעת אוטומציה של הפקת וידאו קצר לסושיאל מטקסט, מצולמים ברישיון ותבניות. נוסדה בישראל ב-2012, עם משרדים בניו יורק, בלונדון ובאזור תל אביב."
+  "notes": "HQ listed variously as New York or Beit Dagan/Tel Aviv; R&D in Israel."
 }

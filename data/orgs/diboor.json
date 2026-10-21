@@ -17,6 +17,10 @@
   "status": "active",
   "website": "https://diboor.co.il",
   "careers_url": "https://diboor.co.il/?page_id=1549",
+  "links": {
+    "instagram": "https://www.instagram.com/diboor_media",
+    "facebook": "https://www.facebook.com/diboor"
+  },
   "services": [
     "advertising campaigns",
     "social media",

@@ -7,6 +7,7 @@
     "food-beverage"
   ],
   "description": "Israeli dairy producer (est. 1980) of cheeses, yogurts and desserts; listed on the TASE in Sept 2025. Its campaign won Platinum at the 2026 Effie Awards.",
+  "description_he": "יצרנית מוצרי חלב ישראלית (נוסדה ב-1980) של גבינות, יוגורטים וקינוחים; הונפקה בבורסת תל אביב בספטמבר 2025. הקמפיין שלה זכה בפלטינה בתחרות אפי 2026.",
   "location": {
     "country": "IL",
     "city": "Bat Yam"
@@ -16,6 +17,10 @@
   "website": "https://www.gad-dairy.co.il",
   "contact_url": "https://gad-dairy.co.il/%d7%a6%d7%95%d7%a8-%d7%a7%d7%a9%d7%a8/",
   "careers_url": "https://gad-dairy.co.il/gad-careers/",
+  "links": {
+    "instagram": "https://www.instagram.com/gaddairy",
+    "facebook": "https://www.facebook.com/gaddairy"
+  },
   "key_people": [
     {
       "name": "Maayan Dar Hasson",
@@ -63,6 +68,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Agency as of 2026-04: Reuveni-Pridan (Effie 2026 Platinum gold).",
-  "description_he": "יצרנית מוצרי חלב ישראלית (נוסדה ב-1980) של גבינות, יוגורטים וקינוחים; הונפקה בבורסת תל אביב בספטמבר 2025. הקמפיין שלה זכה בפלטינה בתחרות אפי 2026."
+  "notes": "Agency as of 2026-04: Reuveni-Pridan (Effie 2026 Platinum gold)."
 }

@@ -7,6 +7,7 @@
     "public-sector"
   ],
   "description": "Municipality of Israel's economic and cultural centre. Runs its advertising through public tenders (a NIS ~6M budget won by Adler Chomski in 2017, replacing McCann) and international tourism campaigns through its corporation 'Ir Olam ve-Tayarut' (World City & Tourism), e.g. the 2025 Pride campaign with the Ministry of Tourism.",
+  "description_he": "עירייה של המרכז הכלכלי והתרבותי של ישראל. מנהלת את הפרסום שלה באמצעות מכרזים ציבוריים (תקציב של כ-6 מיליון ₪ שבו זכה אדלר חומסקי ב-2017, במקום מקאן) ואת קמפייני התיירות הבינלאומיים דרך תאגיד 'עיר עולם ותיירות', למשל קמפיין הגאווה של 2025 יחד עם משרד התיירות.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -14,6 +15,7 @@
   "status": "active",
   "website": "https://www.tel-aviv.gov.il",
   "contact_url": "https://www.tel-aviv.gov.il/Contact/Pages/Contact.aspx",
+  "careers_url": "https://www.tel-aviv.gov.il/AuctionAndCareers/Pages/AuctionAndCareers.aspx",
   "client_profile": {
     "industry": "municipal government / city marketing",
     "creative_needs": [
@@ -74,6 +76,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Ad agency after the 2017 tender cycle not verified; tenders are published on tel-aviv.gov.il (AuctionAndCareers). Tourism campaigns run through the municipal corporation Ir Olam ve-Tayarut.",
-  "description_he": "עירייה של המרכז הכלכלי והתרבותי של ישראל. מנהלת את הפרסום שלה באמצעות מכרזים ציבוריים (תקציב של כ-6 מיליון ₪ שבו זכה אדלר חומסקי ב-2017, במקום מקאן) ואת קמפייני התיירות הבינלאומיים דרך תאגיד 'עיר עולם ותיירות', למשל קמפיין הגאווה של 2025 יחד עם משרד התיירות."
+  "notes": "Ad agency after the 2017 tender cycle not verified; tenders are published on tel-aviv.gov.il (AuctionAndCareers). Tourism campaigns run through the municipal corporation Ir Olam ve-Tayarut."
 }

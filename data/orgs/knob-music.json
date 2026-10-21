@@ -10,6 +10,7 @@
     "sound-design"
   ],
   "description": "Tel Aviv music and sound studio run by musicians Niv and Meital (20+ years in the industry), creating original music, covers, sonic branding, film and game scoring, voiceover and post-sound with Dolby Atmos; work includes campaigns for Playtika, SuperPlay, Samsung, Volkswagen, IKEA and KIA.",
+  "description_he": "סטודיו למוזיקה וסאונד בתל אביב בניהול המוזיקאים ניב ומיטל (יותר מ-20 שנה בתעשייה), היוצר מוזיקה מקורית, קאברים, מיתוג קולי, פסקולים לסרטים ולמשחקים, קריינות ופוסט סאונד ב-Dolby Atmos; בין העבודות: קמפיינים לפלייטיקה, SuperPlay, סמסונג, פולקסווגן, איקאה ו-KIA.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -21,7 +22,8 @@
   "links": {
     "facebook": "https://www.facebook.com/knobstudio",
     "instagram": "https://www.instagram.com/knob_cast/",
-    "youtube": "https://www.youtube.com/@TheKnobstudio"
+    "youtube": "https://www.youtube.com/@TheKnobstudio",
+    "linkedin": "https://www.linkedin.com/company/knob-music-studio/"
   },
   "services": [
     "Original music for ads",
@@ -57,6 +59,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו למוזיקה וסאונד בתל אביב בניהול המוזיקאים ניב ומיטל (יותר מ-20 שנה בתעשייה), היוצר מוזיקה מקורית, קאברים, מיתוג קולי, פסקולים לסרטים ולמשחקים, קריינות ופוסט סאונד ב-Dolby Atmos; בין העבודות: קמפיינים לפלייטיקה, SuperPlay, סמסונג, פולקסווגן, איקאה ו-KIA."
+  "last_verified": "2026-10-18"
 }

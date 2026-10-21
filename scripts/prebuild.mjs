@@ -5,7 +5,8 @@
 // 4. applies the database migration when a Postgres URL is available (Vercel + Supabase integration).
 import { cpSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { migrate } from "./migrate.mjs";
-import { headerHtml, footerHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
+import { headerHtml, footerHtml, tabbarHtml, THEME_SCRIPT } from "../lib/chrome.mjs";
+import { KIND_ICONS, KIND_HE as KIND_LABELS } from "../lib/kinds.mjs";
 import { CLOSES_AT } from "../lib/survey/config.js";
 
 // 1. Companies app. site/app.html is a page body (the Artifact host adds the document shell),
@@ -14,22 +15,58 @@ rmSync("public/map", { recursive: true, force: true });
 rmSync("public/companies", { recursive: true, force: true });
 mkdirSync("public/companies/data", { recursive: true });
 // The header and footer come from the same source as the Next.js pages (lib/chrome.mjs, app/chrome.css).
-const between = (s, open, close, put) => {
+// Each block is filled between its markers, which stay in place.
+const fill = (s, open, close, put) => {
   const a = s.indexOf(open), b = s.indexOf(close);
   if (a < 0 || b < a) throw new Error(`prebuild: marker ${open} missing in site/app.html`);
-  return s.slice(0, a) + put + s.slice(b + close.length);
+  // The CSS marker is a whole comment ("/* chrome:css … */"): keep it.
+  const end = open.startsWith("/*") ? s.indexOf("*/", a) + 2 : a + open.length;
+  return s.slice(0, end) + "\n" + put + "\n" + s.slice(b);
 };
-let body = readFileSync("site/app.html", "utf8").replaceAll('fetch("data/', 'fetch("/companies/data/')
+const source = readFileSync("site/app.html", "utf8");
+let synced = fill(source, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8").trim());
+synced = fill(synced, "<!-- chrome:header -->", "<!-- /chrome:header -->",
+  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
+synced = fill(synced, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
+synced = fill(synced, "<!-- chrome:tabbar -->", "<!-- /chrome:tabbar -->", tabbarHtml("companies"));
+// Company-type icons have one source (lib/kinds.mjs); the app builds its tags from them (kindTag in site/app.html).
+synced = fill(synced, "/* kinds:js", "/* /kinds:js */", `  const KIND_ICONS = ${JSON.stringify(KIND_ICONS)};`);
+// The Artifact publishes site/app.html as it is, so the blocks are written back there too.
+if (synced !== source) { writeFileSync("site/app.html", synced); console.log("prebuild: synced the header, footer and tab bar into site/app.html"); }
+// The company list as plain Hebrew HTML, so the page has real content before (or without) the script:
+// search engines, slow networks, a failed data fetch. The app replaces it once the data loads.
+// Written only into public/companies, not back into site/app.html (the Artifact keeps its small source).
+const ds = JSON.parse(readFileSync("site/data/dataset.json", "utf8"));
+const KIND_HE = Object.fromEntries(Object.entries(KIND_LABELS).map(([k, v]) => [k, v.one]));
+const escH = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+const clip = (s, n) => { s = String(s || "").replace(/\s+/g, " ").trim(); return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, "") + "…" : s; };
+const staticList =
+  `<p class="bootnote">${ds.orgs.length.toLocaleString("he-IL")} חברות: מותגים, משרדי פרסום, סטודיואים וחברות הפקה, ומה כל אחת מזמינה. כל פרט עם מקור.</p>\n` +
+  '<ul class="ssrlist">' + ds.orgs.map((o) => {
+    const name = o.name_he || o.name, city = ds.taxonomy.cities_he?.[o.location?.city] || o.location?.city || "";
+    const meta = [KIND_HE[o.kind], city].filter(Boolean).join(" · ");
+    const desc = clip(o.description_he || "", 110);
+    return `<li><a href="/companies/${encodeURIComponent(o.id)}"><b><bdi>${escH(name)}</bdi></b>${meta ? ` <span>${escH(meta)}</span>` : ""}</a>${desc ? `<p>${escH(desc)}</p>` : ""}</li>`;
+  }).join("") + "</ul>";
+const body = fill(synced, "<!-- static:companies -->", "<!-- /static:companies -->", staticList)
+  .replaceAll('fetch("data/', 'fetch("/companies/data/')
   // The survey close date has one source (lib/survey/config.js).
   .replaceAll("__SURVEY_CLOSES_AT__", CLOSES_AT);
-body = between(body, "/* chrome:css", "/* /chrome:css */", readFileSync("app/chrome.css", "utf8"));
-body = between(body, "<!-- chrome:header -->", "<!-- /chrome:header -->",
-  headerHtml("companies", '<button class="langbtn" type="button" id="lang" lang="en">English</button>'));
-body = between(body, "<!-- chrome:footer -->", "<!-- /chrome:footer -->", footerHtml());
+// Canonical URL only when the production address is known (the same sources as lib/digest.js siteUrl()).
+const siteBase = (() => {
+  const u = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_PROJECT_PRODUCTION_URL || "";
+  return u ? (u.startsWith("http") ? u : `https://${u}`).replace(/\/$/, "") : "";
+})();
+const DESC = "מותגים, משרדי פרסום, סטודיואים וחברות הפקה בתעשיית הקריאייטיב בישראל: מה כל אחת מזמינה, דרך איזה משרד, ומה השתנה לאחרונה. כל פרט עם מקור.";
 const shell =
   '<!doctype html>\n<html lang="he" dir="rtl" data-site="" data-theme="light">\n<head>\n<meta charset="utf-8">\n' +
   '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' +
-  '<meta name="theme-color" content="#f8f8f8">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n' +
+  `<meta name="description" content="${escH(DESC)}">\n` +
+  '<meta property="og:type" content="website">\n<meta property="og:locale" content="he_IL">\n<meta property="og:site_name" content="CreativeIn">\n' +
+  '<meta property="og:title" content="חברות בתעשיית הקריאייטיב · CreativeIn">\n' +
+  `<meta property="og:description" content="${escH(DESC)}">\n` +
+  (siteBase ? `<link rel="canonical" href="${siteBase}/companies">\n<meta property="og:url" content="${siteBase}/companies">\n` : "") +
+  '<meta name="theme-color" content="#f8f8f8">\n<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' +
   "<script>window.LANDSCAPE_SITE = true;</script>\n" +
   `<script>${THEME_SCRIPT}</script>\n` +
   // Vercel Web Analytics (counts nothing until enabled for the project in the Vercel dashboard).
@@ -122,6 +159,9 @@ const orgs = dataset.orgs.map((o) => ({
   buys: (o.needs || []).map((n) => NEEDS[n]?.label_he || NEEDS[n]?.label).filter(Boolean),
   text: searchText(o),
   logo: logos[o.id] || null,
+  // Hi-res file served with the companies app (site/data/logo/), never drawn above its native size.
+  logo_hi: o.logo_ext ? `/companies/data/logo/${encodeURIComponent(o.id)}.${o.logo_ext}` : null,
+  logo_px: o.logo_px || null,
 }));
 const count = (...kinds) => dataset.orgs.filter((o) => kinds.includes(o.kind)).length;
 const stats = {
@@ -131,6 +171,8 @@ const stats = {
   startups: count("startup"),
   signals: signals.length,
   people: list.length,
+  // Per company type, for the home catalog (lib/kinds.mjs).
+  byKind: Object.fromEntries(Object.keys(KIND_LABELS).map((k) => [k, count(k)])),
 };
 writeFileSync("lib/generated/orgs.json", JSON.stringify({ stats, orgs }));
 console.log(`prebuild: ${orgs.length} companies indexed for search`);

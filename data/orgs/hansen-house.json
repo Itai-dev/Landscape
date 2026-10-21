@@ -9,12 +9,14 @@
     "festival-event"
   ],
   "description": "Restored 19th-century compound in Jerusalem's Talbiyeh run as a center for design, media and technology: exhibitions, sound and audio-visual installations, creator residencies, the Mamuta art and research center, and home of Jerusalem Design Week.",
+  "description_he": "מתחם משוחזר מהמאה ה-19 בשכונת טלביה בירושלים, הפועל כמרכז לעיצוב, מדיה וטכנולוגיה: תערוכות, מיצבי סאונד ואודיו-ויזואל, רזידנסי ליוצרים, מרכז ממותה לאמנות ומחקר, והבית של שבוע העיצוב ירושלים.",
   "location": {
     "country": "IL",
     "city": "Jerusalem"
   },
   "status": "active",
   "website": "https://hansen.co.il/en/",
+  "contact_url": "https://hansen.co.il/en/contact",
   "links": {
     "instagram": "https://www.instagram.com/hansen_house/",
     "facebook": "https://www.facebook.com/hansen.house.1887"
@@ -37,6 +39,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "מתחם משוחזר מהמאה ה-19 בשכונת טלביה בירושלים, הפועל כמרכז לעיצוב, מדיה וטכנולוגיה: תערוכות, מיצבי סאונד ואודיו-ויזואל, רזידנסי ליוצרים, מרכז ממותה לאמנות ומחקר, והבית של שבוע העיצוב ירושלים."
+  "last_verified": "2026-10-19"
 }

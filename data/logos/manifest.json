@@ -1,1719 +1,2575 @@
 {
  "3sisters": {
-  "source": "https://cdn.prod.website-files.com/62acabbccb11f4095158a31b/62acabbdcb11f4030b58a355_Apple%20Touch.jpg",
-  "fetched": "2026-10-19"
+  "source_url": "https://cdn.prod.website-files.com/62acabbccb11f4095158a31b/62acabbdcb11f4030b58a355_Apple%20Touch.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png"
  },
  "5ive-ux": {
-  "source": "https://5ive.co.il/wp-content/uploads/2020/03/cropped-5ive_SquareMX-1-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://5ive.co.il/wp-content/uploads/2020/03/cropped-5ive_SquareMX-1-192x192.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "94-films": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://94-films.com&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://94-films.com/wp-content/uploads/2024/12/cropped-94.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "abot-hameiri": {
-  "source": "https://ahe.co.il/wp-content/uploads/2019/02/cropped-logo_all-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://ahe.co.il/wp-content/uploads/2019/02/cropped-logo_all.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "act3": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "adler-chomski-warshavsky": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "aiode": {
-  "source": "https://aiode.com/favicon-192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://aiode.com/favicon-192.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "alefalefalef": {
-  "source": "https://alefalefalef.co.il/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://alefalefalef.co.il/apple-touch-icon.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "alison-ai": {
-  "source": "https://alison.ai/wp-content/uploads/cropped-icon-logo-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://alison.ai/wp-content/uploads/cropped-icon-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 438,
+  "format": "png",
+  "kind": "icon-original"
  },
  "altshuler-shaham": {
-  "source": "https://www.as-invest.co.il/img/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.as-invest.co.il/img/favicon.ico",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "animation-israel": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "animation-lab": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "animatorit": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "animix-festival": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://animix.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://animix.co.il/wp-content/uploads/2024/06/favicon-animix.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "anka-studio": {
-  "source": "https://www.ankanimation.com/wp-content/uploads/Untitled-3-300x300.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.ankanimation.com/wp-content/uploads/Untitled-3.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 486,
+  "format": "png",
+  "kind": "icon-original"
  },
  "anyword": {
-  "source": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65d85069221f999621761943_Group%201261159146.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/65a5365ee6f4219bc2d2f822/65d85069221f999621761943_Group%201261159146.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "arkia": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "arlo-digital": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://arlodigital.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://arlodigital.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "artlist": {
-  "source": "https://artlist.io/apple-touch-icon.png?v=1",
-  "fetched": "2026-10-18"
+  "source_url": "https://artlist.io/android-chrome-512x512.png?v=1",
+  "fetched_at": "2026-10-21",
+  "src_px": 507,
+  "format": "png",
+  "kind": "manifest"
  },
  "astria": {
-  "source": "https://a.astria.ai/assets/favicon/apple-touch-icon-11f97c8ebc6e462818ab04f1e834385b41fd8a2992757e43414e0acae47bf3fe.avif",
-  "fetched": "2026-10-18"
+  "source_url": "https://a.astria.ai/assets/favicon/apple-touch-icon-11f97c8ebc6e462818ab04f1e834385b41fd8a2992757e43414e0acae47bf3fe.avif",
+  "fetched_at": "2026-10-21",
+  "src_px": 161,
+  "format": "png",
+  "kind": "apple"
  },
  "atreo": {
-  "source": "https://cdn.prod.website-files.com/679085bea33c0a4e3728a7b1/67dd32c4a1b4d0d8a819c0d7_webclip.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/679085bea33c0a4e3728a7b1/67dd32c4a1b4d0d8a819c0d7_webclip.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "aviv-advertising": {
-  "source": "https://avivadv.co.il/wp-content/uploads/2023/12/cropped-aviv-favicon-192x192.png",
-  "fetched": "2026-10-20"
+  "source_url": "https://avivadv.co.il/wp-content/uploads/2023/12/cropped-aviv-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "aviv-melisron": {
-  "source": "https://avivmelisron.co.il/wp-content/uploads/2024/03/cropped-aAsset-2-192x192.png",
-  "fetched": "2026-10-20"
+  "source_url": "https://avivmelisron.co.il/wp-content/uploads/2024/03/cropped-aAsset-2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 497,
+  "format": "png",
+  "kind": "icon-original"
  },
  "avraham-advertising": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "ayalon-insurance": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ayalon-ins.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ayalon-ins.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "babushka-productions": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "bank-hapoalim": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bankhapoalim.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bankhapoalim.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "bank-leumi": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://leumi.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://leumi.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "baram-indoor": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "baseline-sound": {
   "source": null,
   "fetched": "2026-10-19"
  },
  "basman-tenenbaum": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://d2bakrs2lj0pyb.cloudfront.net/wp-content/uploads/2025/07/favicon-1.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "bassline-sound-design": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "bazaart": {
-  "source": "https://www.bazaart.com/wp-content/uploads/2025/07/cropped-icon_rounded_512x512_P3-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.bazaart.com/wp-content/uploads/2025/07/cropped-icon_rounded_512x512_P3.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "bbr-saatchi-saatchi": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "beach-bum": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "bee-creations": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bee-creations.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bee-creations.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "bezalel-academy": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bezalel.ac.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bezalel.ac.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "bezeq": {
-  "source": "https://www.bezeq.co.il/images/logo/android-icon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.bezeq.co.il/images/logo/android-icon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 178,
+  "format": "png",
+  "kind": "icon"
  },
  "bigvu": {
-  "source": "https://bigvu.tv/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://bigvu.tv/applogo.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "bilderish": {
-  "source": "https://bilderish.com/wp-content/uploads/2022/06/cropped-512-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://bilderish.com/wp-content/uploads/2022/06/cropped-512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 507,
+  "format": "png",
+  "kind": "icon-original"
  },
  "black-sheep-film-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "blackboard-studios": {
-  "source": "https://images.squarespace-cdn.com/content/v1/5f21b3ed001aa005ea85300d/55ca0cfb-a258-4e9c-85ed-7b1239c48f2c/favicon.ico?format=100w",
-  "fetched": "2026-10-18"
+  "source_url": "https://images.squarespace-cdn.com/content/v1/5f21b3ed001aa005ea85300d/55ca0cfb-a258-4e9c-85ed-7b1239c48f2c/favicon.ico?format=100w",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "blink-havas": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://blinkit.co.il/wp-content/uploads/2026/07/HB_New_2026_up.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 101,
+  "format": "png",
+  "kind": "icon"
  },
  "blue-monkeys-productions": {
-  "source": "https://blue-monkeys.com/assets/favicon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://blue-monkeys.com/assets/bm-logo-2x.png?v=20260923m",
+  "fetched_at": "2026-10-21",
+  "src_px": 219,
+  "format": "png",
+  "kind": "header-logo"
  },
  "bonamaze": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://www.bonamaze.com/wp-content/themes/bonamaze/images/site/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "botika": {
-  "source": "https://cdn.prod.website-files.com/66fa67b1f207f846cd05b5a1/677e4cb0403eb301fc3a7418_Botika_Logo_AppleWebclip.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/66fa67b1f207f846cd05b5a1/677e4cb0403eb301fc3a7418_Botika_Logo_AppleWebclip.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "bria": {
-  "source": "https://bria.ai/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://bria.ai/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fzppcnj0l%2Fproduction%2Fd0f4aef10abdcc4bacaebeade789ea8c3e453882-210x132.png%3Fw%3D200%26fm%3Dwebp%26q%3D80%26fit%3Dmax&w=200&q=75",
+  "fetched_at": "2026-10-21",
+  "src_px": 200,
+  "format": "png",
+  "kind": "header-logo"
  },
  "brio-animation": {
-  "source": "https://brioanimation.com/wp-content/uploads/2019/02/brio-fav.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://brioanimation.com/wp-content/uploads/2019/02/brio-fav.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "broadcast-media-tlv": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "brokner-yaar-levy": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "bunker-studio": {
-  "source": "https://static.wixstatic.com/media/794dbc_7fe8881aeb294d399da3301577a9b3c5%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/794dbc_7fe8881aeb294d399da3301577a9b3c5%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/794dbc_7fe8881aeb294d399da3301577a9b3c5%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/794dbc_7fe8881aeb294d399da3301577a9b3c5%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 166,
+  "format": "png",
+  "kind": "icon"
  },
  "burger-king-israel": {
-  "source": "https://www.burgerking.co.il/wp-content/uploads/sites/106/2024/12/cropped-logos-02-192x192.png",
-  "fetched": "2026-10-20"
+  "source_url": "https://www.burgerking.co.il/wp-content/uploads/sites/106/2024/12/cropped-logos-02.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 486,
+  "format": "png",
+  "kind": "icon-original"
  },
  "butcher-studio": {
-  "source": "https://cdn.prod.website-files.com/68d28630dc033fd1054bdfe5/68d287889e342834f051bef9_ezgif-44fa43547bc5b8.webp",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/68d28630dc033fd1054bdfe5/68d287889e342834f051bef9_ezgif-44fa43547bc5b8.webp",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "buyme": {
-  "source": "https://buyme.co.il/images/fav/apple-touch-icon.png",
-  "fetched": "2026-10-20"
+  "source_url": "https://buyme.co.il/images/fav/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "buzz-bros": {
-  "source": "https://buzzbros.co.il/wp-content/uploads/2023/11/Group-62-1-e1699191707991.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://buzzbros.co.il/wp-content/uploads/2023/11/Group-62-1-e1699191707991.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 400,
+  "format": "png",
+  "kind": "icon"
  },
  "cal": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "cameri-theatre": {
-  "source": "https://s-cameri-pull-zone.b-cdn.net/wp-content/uploads/2026/02/Frame-1984079796-300x300.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://s-cameri-pull-zone.b-cdn.net/wp-content/uploads/2026/02/Frame-1984079796.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "carmi-and-cohen": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "carolina-lemke": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "source_url": "https://carolinalemke.com/cdn/shop/files/favicon-carolina_32x32.png?v=1651066978",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "castro": {
-  "source": "https://www.castro.com/pub/media/favicon/websites/1/favicon-castro.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.castro.com/pub/media/idus/default/LOGO_1_2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 396,
+  "format": "png",
+  "kind": "header-logo"
  },
  "cellcom": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cellcom.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cellcom.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "central-bottling-company": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "check-point": {
-  "source": "https://www.checkpoint.com/wp-content/themes/checkpoint-theme-v2/images/fav/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.checkpoint.com/wp-content/themes/checkpoint-theme-v2/images/fav/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 175,
+  "format": "png",
+  "kind": "apple"
  },
  "cimagine": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "clal-insurance": {
-  "source": "https://www.clalbit.co.il/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.clalbit.co.il/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "icon"
  },
  "clalit-health-services": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "clear-cut-post-production": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "clinch": {
-  "source": "https://cdn.prod.website-files.com/6602f44d0ecacadb068116ea/680a4685a34b1551e32844b1_Clinch_Favicon_256x256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/6602f44d0ecacadb068116ea/680a4685a34b1551e32844b1_Clinch_Favicon_256x256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "cloudinary": {
-  "source": "https://cloudinary-res.cloudinary.com/image/upload/f_auto,q_auto/c_scale,w_196/v1597183771/website/cloudinary_web_favicon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cloudinary-res.cloudinary.com/image/upload/f_auto,q_auto/c_scale,w_196/v1597183771/website/cloudinary_web_favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 196,
+  "format": "png",
+  "kind": "icon"
  },
  "colmobil": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://colmobil.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://colmobil.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "coloron-post-production": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "comrax": {
-  "source": "https://www.comrax.com/themes/comrax/favicon/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.comrax.com/themes/comrax/favicon/apple-touch-icon.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png",
+  "skip_header": true
  },
  "connect-digital": {
-  "source": "https://connect.co.il/wp-content/uploads/2026/10/connect-favicon-300x300.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://connect.co.il/wp-content/uploads/2026/10/connect-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "cowboy-productions": {
-  "source": "https://thecowboy.co.il/wp-content/uploads/2026/10/cropped-OMNITICON-1-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://thecowboy.co.il/wp-content/uploads/2026/10/cropped-OMNITICON-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "creative-labs-israel": {
-  "source": "https://www.creativelabs.co.il/wp-content/uploads/2023/03/fav.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.creativelabs.co.il/wp-content/uploads/2023/03/fav.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 197,
+  "format": "png",
+  "kind": "icon"
  },
  "crew972": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "crystalino-group": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "cyberark": {
-  "source": "https://www.paloaltonetworks.com/etc/clientlibs/pan/img/favicons2020/apple-touch-icon-180x180.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.paloaltonetworks.com/etc/clientlibs/clean/imgs/idira/icon-idira-logo.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "d-id": {
-  "source": "https://www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1-300x300.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.d-id.com/wp-content/uploads/2024/10/D-ID-logo-350x350-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 282,
+  "format": "png",
+  "kind": "icon-original"
  },
  "debby-group": {
-  "source": "https://debby.co.il/wp-content/uploads/fbrfg/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://debby.co.il/wp-content/themes/debby/assets/img/debby-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 168,
+  "format": "png",
+  "kind": "header-logo"
  },
  "decart": {
-  "source": "https://cdn.prod.website-files.com/69a974f0b1fffb03644ecf2c/69b7eec046f48ce787bbaaf1_webclip.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://decart.ai/images/webclip.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "deepdub": {
-  "source": "https://cdn.prod.website-files.com/655b714ebf7407f92f939947/695f1f18ef4bda6d8cd823b6_DD-webclip.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/655b714ebf7407f92f939947/695f1f18ef4bda6d8cd823b6_DD-webclip.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "delek-israel": {
-  "source": "https://delek.co.il/wp-content/uploads/2024/09/cropped-favicon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://delek.co.il/wp-content/uploads/2024/09/cropped-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon"
  },
  "delek-motors": {
-  "source": "https://www.delek-motors.co.il/wp-content/uploads/2025/01/favicon-black.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.delek-motors.co.il/wp-content/uploads/2025/01/favicon-black.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "delta-galil": {
-  "source": "https://s29.q4cdn.com/481127684/files/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://s29.q4cdn.com/481127684/files/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "icon"
  },
  "design-museum-holon": {
-  "source": "https://www.dmh.org.il/wp-content/uploads/2021/11/cropped-LOGO-DMH-01-copy-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.dmh.org.il/wp-content/uploads/2021/11/cropped-LOGO-DMH-01-copy.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 470,
+  "format": "png",
+  "kind": "icon-original"
  },
  "diboor": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "source_url": "https://diboor.co.il/wp-content/uploads/2025/04/LOGO_DIBOOR-cropped-2.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "diskin": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://diskin.com&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://diskin.com&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "docaviv": {
-  "source": "https://www.docaviv.co.il/wp-content/uploads/2026/07/Wordpress-Logo-DOCAVIV-300x300.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.docaviv.co.il/wp-content/uploads/2026/07/Wordpress-Logo-DOCAVIV.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "dori-media-darset": {
-  "source": "https://dorimedia.com/wp-content/uploads/2016/09/cropped-favicon-dorimedia-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://dorimedia.com/wp-content/uploads/2016/09/cropped-favicon-dorimedia.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 505,
+  "format": "png",
+  "kind": "icon-original"
  },
  "dov-abramson-studio": {
-  "source": "https://www.studiodov.com/wp-content/uploads/2020/01/cropped-android-chrome-512x512-1-3-225x225.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.studiodov.com/wp-content/themes/dov-abramson/images/favicon/android-chrome-512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "dr-fischer": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://dr-fischer.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://dr-fischer.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "dreams-and-magic": {
-  "source": "https://static.wixstatic.com/media/bc63dd_78c26dda71784132b977e333608ac18a%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/bc63dd_78c26dda71784132b977e333608ac18a%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/bc63dd_78c26dda71784132b977e333608ac18a%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/bc63dd_78c26dda71784132b977e333608ac18a%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "dubidub-studios": {
-  "source": "https://dubidubstudios.com/wp-content/uploads/2021/01/cropped-logo-for-icon-512_512-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://dubidubstudios.com/wp-content/uploads/2021/01/cropped-logo-for-icon-512_512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 494,
+  "format": "png",
+  "kind": "icon-original"
  },
  "duda": {
-  "source": "https://irp.cdn-website.com/a8ff2f1c/site_favicon_16_1753604947224.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://irp.cdn-website.com/a8ff2f1c/site_favicon_16_1753604947224.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png",
+  "skip_header": true
  },
  "edit-studios": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "edologic": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "eilat-tourism-corporation": {
-  "source": "https://eilat.city/assets/images/favicons/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://eilat.city/assets/images/favicons/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "eko": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://helloeko.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://helloeko.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "el-al": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://www.elal.com/favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "electra-consumer-products": {
-  "source": "https://www.ecp.co.il/cdn/shop/files/pacman.png?v=1770278011&width=180",
-  "fetched": "2026-10-20"
+  "source_url": "https://www.ecp.co.il/cdn/shop/files/pacman.png?v=1770278011&width=180",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "elementor": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://elementor.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://elementor.com/wp-content/uploads/2025/10/logo-symbol-1.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "emaze": {
-  "source": "https://www.emaze.com/assets/logo/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.emaze.com/assets/logo/emaze-favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "entasis-visualization": {
-  "source": "https://entasis.co.il/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://entasis.co.il/android-chrome-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "manifest"
  },
  "etoro": {
-  "source": "https://www.etoro.com/wp-content/uploads/favicons/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.etoro.com/wp-content/uploads/favicons/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "ex-co": {
-  "source": "https://ex.co/wp-content/themes/tg/assets/images/favicon/android-icon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://ex.co/wp-content/themes/tg/assets/images/favicon/android-icon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "eyeview": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "finq": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://finqai.co.il&size=128",
-  "fetched": "2026-10-20"
+  "source_url": "https://finqai.co.il/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "firma": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://firmabrands.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://bunny-wp-pullzone-y9g9th3kmx.b-cdn.net/wp-content/themes/firma/assets/images/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "fiverr": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://fiverr.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://fiverr.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "flow-post-production": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "fontbit": {
-  "source": "https://fontbit.co.il/wp-content/themes/fontbit/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://fontbit.co.il/wp-content/themes/fontbit/favicon.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "fontef": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://fontef.com/assets/images/fontef_fav2.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "fontimonim": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://fontimonim.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://fontimonim.co.il/wp-content/favicons/android-chrome-256x256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "manifest"
  },
  "fontype": {
-  "source": "https://www.fontype.co.il/wp-content/uploads/2020/04/Group-49.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.fontype.co.il/wp-content/uploads/2020/04/Group-49.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 104,
+  "format": "png",
+  "kind": "icon"
  },
  "fox-group": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://fox.co.il/cdn/shop/files/66f09c4a7a05e4ac1fcc302c485d4eb1_5ff8c165-c1c2-4740-9594-fb05002bc536.svg?v=1767880148&width=500",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "freetv": {
-  "source": "https://www.freetv.co.il/wp-content/uploads/2023/06/cropped-home1-192x192.png",
-  "fetched": "2026-10-20",
-  "rejected": "generic or non-logo image"
+  "source_url": "https://www.freetv.co.il/wp-content/uploads/2023/06/cropped-home1-192x192.png",
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "fresh-nadlan": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "fridaylab-studio": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "fundbox": {
-  "source": "https://fundbox.com/img/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://fundbox.com/img/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "funkeyz-animation": {
-  "source": "https://static.wixstatic.com/media/064d59_969e63ec777d424bb09238a1633779a0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/064d59_969e63ec777d424bb09238a1633779a0%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/064d59_969e63ec777d424bb09238a1633779a0%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/064d59_969e63ec777d424bb09238a1633779a0%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "gad-dairies": {
-  "source": "https://gad-dairy.co.il/wp-content/uploads/2016/05/cropped-GADfavicon_512-512-192x192.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://gad-dairy.co.il/wp-content/uploads/2016/05/cropped-GADfavicon_512-512.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "gameis": {
-  "source": "https://www.gameis.org.il/wp-content/uploads/2025/07/cropped-favic-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.gameis.org.il/wp-content/uploads/2025/07/cropped-favic.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 499,
+  "format": "png",
+  "kind": "icon-original"
  },
  "geller-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "gigi-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "gindi-holdings": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "gitam-bbdo": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "glickman-shamir-samsonov": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "go-advertising": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "golbary": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://golbary.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://golbary.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "golf-and-co": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://golfco.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://golfco.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "gong": {
-  "source": "https://www.gong.io/marketing-assets/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.gong.io/marketing-assets/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "graphic-designers-association-israel": {
-  "source": "https://gdai.co.il/wp-content/uploads/2019/07/cropped-fav-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://gdai.co.il/wp-content/uploads/2019/07/cropped-fav.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "gravity-creative-space": {
-  "source": "https://c-p.rmcdn.net/61da8a8e6051e9001a2318fc/Favicon-59790915-bd5e-4896-ba7a-940c3eaba958_57.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://c-p.rmcdn.net/61da8a8e6051e9001a2318fc/Favicon-59790915-bd5e-4896-ba7a-940c3eaba958_144.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 135,
+  "format": "png",
+  "kind": "icon"
  },
  "green-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "grossman-tv": {
-  "source": "https://static.wixstatic.com/media/de6aae_f37720b5a31d4874aa203d0488f3f896%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/de6aae_f37720b5a31d4874aa203d0488f3f896%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/de6aae_f37720b5a31d4874aa203d0488f3f896%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/de6aae_f37720b5a31d4874aa203d0488f3f896%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 126,
+  "format": "png",
+  "kind": "icon"
  },
  "gum-films": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "gustavo-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "guts-agency": {
-  "source": "https://cdn.prod.website-files.com/6285e77eaf03d3b5e63ee110/629928bcb7e9b66288d59b13_Frame%2048095430256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/6285e77eaf03d3b5e63ee110/629928bcb7e9b66288d59b13_Frame%2048095430256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 240,
+  "format": "png",
+  "kind": "apple"
  },
  "h-and-o": {
-  "source": "https://www.h-o.co.il/media/favicon/stores/1/HO_favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.h-o.co.il/media/logo/stores/1/5424_H_O_real_life_brands_logo_200x84px.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 200,
+  "format": "png",
+  "kind": "header-logo"
  },
  "habima": {
-  "source": "https://www.habima.co.il/wp-content/uploads/2022/01/cropped-WhatsApp-Image-2022-01-24-at-19.10.24-192x192.jpeg",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.habima.co.il/wp-content/uploads/2022/01/cropped-WhatsApp-Image-2022-01-24-at-19.10.24.jpeg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "hafontia": {
-  "source": "https://hafontia.com/wp-content/plugins/hafontia-new-font-page/assets/icons/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://hafontia.com/wp-content/plugins/hafontia-new-font-page/assets/icons/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "hagilda": {
-  "source": "https://hagilda.com/wp-content/themes/hagilda/images/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://hagilda.com/wp-content/themes/hagilda/images/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 177,
+  "format": "png",
+  "kind": "apple"
  },
  "haifa-municipality": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "hamitham-post-production": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "hansen-house": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://hansen.co.il/wp-content/themes/hansen-house/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "harel-insurance": {
-  "source": "https://media.harel-group.co.il/media/aobgd2fl/favicon-192-192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://media.harel-group.co.il/media/aobgd2fl/favicon-192-192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "icon"
  },
  "havas-tel-aviv": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://il.havas.com/wp-content/uploads/2016/02/logo3.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 98,
+  "format": "png",
+  "kind": "icon"
  },
  "hebrew-university-of-jerusalem": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://new.huji.ac.il/profiles/openscholar/themes/os_bootstrap/images/logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 278,
+  "format": "png",
+  "kind": "header-logo"
  },
  "hello-design": {
-  "source": "https://cdn.prod.website-files.com/66a0b3bf1714b284cc7616b8/6890f51179592cd421f48b67_hello-fav-256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/66a0b3bf1714b284cc7616b8/6890f51179592cd421f48b67_hello-fav-256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "herzliya-studios": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "hexa": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "hibob": {
-  "source": "https://new.hibob.com/app/uploads/2026/05/cropped-HiBob-Logo-Icon-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://new.hibob.com/app/uploads/2026/05/cropped-HiBob-Logo-Icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 424,
+  "format": "png",
+  "kind": "icon-original"
  },
  "highlight-films": {
-  "source": null,
-  "fetched": "2026-10-18",
-  "rejected": "generic or non-logo image"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "hit-holon-design": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://www.hit.ac.il/en/wp-content/uploads/sites/21/2026/05/cropped-fav-300x300.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 264,
+  "format": "png",
+  "kind": "icon"
  },
  "hiway": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://hiway.design&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://hiway.design/logo.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "hogla-kimberly": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kimberly-clark.co.il&size=128",
-  "fetched": "2026-10-20"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kimberly-clark.co.il&size=128",
+  "fetched_at": "2026-10-20",
+  "src_px": 96,
+  "format": "png"
  },
  "hot": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "hour-one": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "humanz": {
-  "source": "https://www.humanz.com/wp-content/uploads/2026/07/cropped-Humanz-logomark-scaled-1-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.humanz.com/wp-content/uploads/2026/07/cropped-Humanz-logomark-scaled-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 446,
+  "format": "png",
+  "kind": "icon-original"
  },
  "hybrid-partners": {
-  "source": "https://hybrid.co.il/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://hybrid.co.il/android-chrome-512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "icon-festival": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://icon.org.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://icon.org.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "idi-direct-insurance": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://555.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://555.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "idomoo": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://idomoo.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.idomoo.com/wp-content/uploads/Idomoo-favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "igloo-creative-house": {
-  "source": "https://www.igloocreative.co/wp-content/uploads/2020/06/cropped-favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.sanity.io/images/63a1k7d5/production/3b89e0825d6d2b6bb7b30ea257e8821dbdc85513-192x192.png?w=192&h=192&fit=crop&fm=png",
+  "fetched_at": "2026-10-21",
+  "src_px": 186,
+  "format": "png",
+  "kind": "icon"
  },
  "ikea-israel": {
-  "source": "https://www.ikea.com/global/assets/dwf/nav/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.ikea.com/global/assets/logos/brand/ikea.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "imagen": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://imagen-ai.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://imagen-ai.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "inception-vr": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "infinityar": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "inmanage": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://www.inmanage.co.il/_media/images/general/inmanage_txt.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 327,
+  "format": "png",
+  "kind": "header-logo"
  },
  "innplay-labs": {
-  "source": "https://www.innplaylabs.com/wp-content/uploads/2023/07/Logos_InnplayLabs.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.innplaylabs.com/wp-content/uploads/2023/07/Logos_InnplayLabs.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon"
  },
  "isracard": {
-  "source": "https://static.wixstatic.com/media/71f3b5_1ea8e1965e5e4c559fdcd9b34ed2be89%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/71f3b5_1ea8e1965e5e4c559fdcd9b34ed2be89%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/71f3b5_1ea8e1965e5e4c559fdcd9b34ed2be89%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/71f3b5_1ea8e1965e5e4c559fdcd9b34ed2be89%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "israel-aids-task-force": {
-  "source": "https://static.wixstatic.com/media/1d314f_928ae5cfa5894c3b88526162d809a893%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/1d314f_928ae5cfa5894c3b88526162d809a893%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/1d314f_928ae5cfa5894c3b88526162d809a893%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/1d314f_928ae5cfa5894c3b88526162d809a893%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "israel-cancer-association": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cancer.org.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.cancer.org.il/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 239,
+  "format": "png",
+  "kind": "icon"
  },
  "israel-discount-bank": {
-  "source": "https://www.discountbank.co.il/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.discountbank.co.il/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "israel-electric-corporation": {
-  "source": "https://www.iec.co.il/assets/icons/512x512.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.iec.co.il/assets/icons/512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon"
  },
  "israel-film-tv-academy": {
-  "source": "https://israelfilmacademy.co.il/templates/t8130/images/footer_logo.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://israelfilmacademy.co.il/templates/t8130/images/logo.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "israel-ministry-of-health": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "israel-ministry-of-tourism": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "israel-museum": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://imj.org.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://imj.org.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "israel-philharmonic-orchestra": {
-  "source": "https://www.ipo.co.il/wp-content/uploads/2023/01/cropped-favicon-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.ipo.co.il/wp-content/uploads/2023/01/cropped-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 445,
+  "format": "png",
+  "kind": "icon-original"
  },
  "israel-police": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "israel-sports-betting-board": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://winner.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://winner.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "israeli-opera": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://israel-opera.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://israel-opera.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "israir": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "jelly-button-games": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "jerusalem-design-week": {
-  "source": "https://jdw.co.il/assets/images/favicon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://jdw.co.il/assets/images/favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "apple"
  },
  "jerusalem-film-festival": {
-  "source": "https://jff.org.il/sites/all/themes/cinemateque/favicon/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://jff.org.il/sites/all/themes/cinemateque/favicon/android-chrome-512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 476,
+  "format": "png",
+  "kind": "manifest"
  },
  "jerusalem-municipality": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "jiminy-creative": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://jiminy.tv/wp-content/uploads/2025/04/logo-jiminy-black.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "header-logo"
  },
  "july-august-productions": {
-  "source": "https://july-august.com/wp-content/uploads/2025/08/cropped-favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://july-august.com/wp-content/uploads/2025/08/cropped-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "jungle-sound": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "kaltura": {
-  "source": "https://corp.kaltura.com/wp-content/uploads/2020/07/fav_icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://corp.kaltura.com/wp-content/uploads/2020/07/fav_icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 97,
+  "format": "png",
+  "kind": "icon"
  },
  "kan": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kan.org.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kan.org.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "kastina-communications": {
-  "source": "https://kastina.co.il/app/uploads/2024/11/logo.3c1533.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://kastina.co.il/app/uploads/2024/11/logo.3c1533.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 500,
+  "format": "png",
+  "kind": "icon"
  },
  "keren-and-golan": {
-  "source": null,
-  "fetched": "2026-10-18",
-  "rejected": "generic or non-logo image"
+  "source_url": "https://www.01kg.com/wp-content/uploads/2019/01/kg-blue.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 219,
+  "format": "png",
+  "kind": "header-logo"
  },
  "keshet-media-group": {
-  "source": "https://img.mako.co.il/2024/07/15/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://img.mako.co.il/2024/07/15/favicon.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "keter": {
-  "source": "https://www.keter.com/on/demandware.static/Sites-keter-US-Site/-/default/dw0c0a1c17/images/favicons/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.keter.com/on/demandware.static/Sites-keter-US-Site/-/default/dw67030ffc/images/favicons/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "knob-music": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://knob.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://knob.co.il/wp-content/uploads/2025/01/Knob_Favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "koda-communications": {
-  "source": "https://www.koda.co.il/wp-content/uploads/2018/05/cropped-ico1-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.koda.co.il/wp-content/uploads/2018/05/cropped-ico1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 500,
+  "format": "png",
+  "kind": "icon-original"
  },
  "kpln": {
-  "source": "https://kpln.co.il/wp-content/uploads/2026/02/cropped-KPLN-Logo-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://kpln.co.il/wp-content/uploads/2026/02/cropped-KPLN-Logo-192x192.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "ksp": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "kukuruza-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "label1-sound-design": {
-  "source": "https://static.wixstatic.com/media/fdef4a_0e2a68fbb5f9422688a10e733f014d1d%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/fdef4a_0e2a68fbb5f9422688a10e733f014d1d%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/fdef4a_0e2a68fbb5f9422688a10e733f014d1d%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/fdef4a_0e2a68fbb5f9422688a10e733f014d1d%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "laila-films": {
-  "source": "https://static.wixstatic.com/media/e3bdb5_b90d9fdc40d842c3b8622a3383b9a203%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/e3bdb5_b90d9fdc40d842c3b8622a3383b9a203%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/e3bdb5_b90d9fdc40d842c3b8622a3383b9a203%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/e3bdb5_b90d9fdc40d842c3b8622a3383b9a203%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "lapam": {
-  "source": "https://www.lapam.gov.il/wp-content/uploads/2014/01/lapmicon-min.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.lapam.gov.il/wp-content/uploads/2014/01/lapmicon-min.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "laserbee": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "lead-advertising": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://leadogilvy.com/wp-content/uploads/2021/06/leadogilvy-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 241,
+  "format": "png",
+  "kind": "header-logo"
  },
  "lemonade": {
-  "source": "https://marketing-edge-assets.lemonade.com/_next/static/media/favicon.9c3a6176.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.lemonade.com/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 144,
+  "format": "png",
+  "kind": "apple-default"
  },
  "leo-burnett-tel-aviv": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "leumit": {
-  "source": "https://www.leumit.co.il/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.leumit.co.il/media/rwsdhs1u/36467_113985_leumit_website_bnrs_logo_208x52_05.png?width=208&v=1dc6f559785bda0",
+  "fetched_at": "2026-10-21",
+  "src_px": 186,
+  "format": "png",
+  "kind": "header-logo"
  },
  "lightricks": {
-  "source": "https://cdn.prod.website-files.com/62f26ffdad0984b3380da896/62f26ffdad0984df5b0dadd1_LTXLOGO.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/62f26ffdad0984b3380da896/62f26ffdad0984df5b0dadd1_LTXLOGO.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "loreal-israel": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://www.loreal.com/-/media/project/loreal/brand-sites/corp/master/lcorp/favicon.png?rev=-1",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "maccabi-healthcare-services": {
-  "source": "https://www.maccabi4u.co.il/Style/Images/SharedIcons/FAVICON-MACCABI.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.maccabi4u.co.il/media/shgay3kt/assuta90-2x.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 349,
+  "format": "png",
+  "kind": "header-logo"
  },
  "madlan": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://madlan.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://madlan.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "magen-david-adom": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://www.mdais.org/images/favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "magisto": {
-  "source": "https://f.vimeocdn.com/cms/images/apple-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://f.vimeocdn.com/cms/images/apple-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "makethecut": {
-  "source": "https://makethecut.studio/images/touch.avif",
-  "fetched": "2026-10-18"
+  "source_url": "https://makethecut.studio/images/touch.avif",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "makor-foundation": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kerenmakor.org.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kerenmakor.org.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "market-master": {
-  "source": "https://www.marketmaster.co.il/wp-content/uploads/2017/05/cropped-favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.marketmaster.co.il/wp-content/uploads/2017/05/cropped-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "masterfont": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "max": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://max.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://max.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "max-stock": {
-  "source": "https://cdn.maxstock.co.il/wp-content/uploads/2016/10/cropped-NewLogo-250x250.gif",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.maxstock.co.il/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "mccann-digital": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0,
+  "skip_header": true
  },
  "mccann-tel-aviv": {
-  "source": "https://mccann.co.il/wp-content/themes/mccann/images/favicon.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://mccann.co.il/wp-content/uploads/2022/11/logo512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png"
  },
  "mccann-valley": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "mcdonalds-israel": {
-  "source": "https://www.mcdonalds.co.il/ver/9/tpl/website/favicon/app.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.mcdonalds.co.il/ver/9/tpl/website/favicon/app.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 320,
+  "format": "png",
+  "kind": "apple"
  },
  "mediacom-israel": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "meitav": {
-  "source": "https://www.meitav.co.il/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.meitav.co.il/media/1hth1iw1/410917_logo_151x73-01.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "melio": {
-  "source": "https://melio.com/wp-content/uploads/2023/05/cropped-Melio_favicon_01-300x300.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://melio.com/wp-content/uploads/2023/05/cropped-Melio_favicon_01.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "menora-mivtachim": {
-  "source": "https://www.menoramivt.co.il/static/img/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.menoramivt.co.il/customers-homepage/static/pwa/icon_512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "meuhedet": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://meuhedet.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://meuhedet.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "mialma": {
-  "source": "https://www.mialma.co.il/wp-content/uploads/2021/06/cropped-mialma-facebook-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.mialma.co.il/wp-content/uploads/2021/06/cropped-mialma-facebook.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "michael-goorevich-sound": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "mifal-hapais": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pais.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pais.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "migdal-insurance": {
-  "source": "https://static.wixstatic.com/media/571a7f_a3af177b8c8a45c09b77c24afbdbc136%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/571a7f_a3af177b8c8a45c09b77c24afbdbc136%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/571a7f_a3af177b8c8a45c09b77c24afbdbc136%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/571a7f_a3af177b8c8a45c09b77c24afbdbc136%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "mimezis": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "mind-the-gap-animation": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "minshar-for-art": {
-  "source": "https://www.minshar.org.il/wp-content/uploads/2024/05/cropped-308758580_472382138241332_3036640177625005653_n-192x192.jpg",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.minshar.org.il/wp-content/uploads/2024/05/cropped-308758580_472382138241332_3036640177625005653_n-192x192.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "minute-media": {
-  "source": "https://www.minutegroup.com/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.minutegroup.com/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "mixtiles": {
-  "source": "https://www.mixtiles.com/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.mixtiles.com/android-chrome-512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "mizrahi-tefahot": {
-  "source": "https://www.mizrahi-tefahot.co.il/Images/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.mizrahi-tefahot.co.il/media/vlwlbdf2/logo.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "mola-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "monday-com": {
-  "source": "https://cdn.prod.website-files.com/656da6fea306219773d04208/65af6bd6e742d497b5f23f69_645898132bbaac20f1963919_256x256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/656da6fea306219773d04208/65af6bd6e742d497b5f23f69_645898132bbaac20f1963919_256x256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "moon-active": {
-  "source": "https://www.moonactive.com/wp-content/uploads/2024/08/cropped-MA-Icon3-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.moonactive.com/wp-content/uploads/2024/08/cropped-MA-Icon3.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "moosh-studio": {
-  "source": "https://moosh-studio.com/favicon.ico?favicon.2vob68tjqpejf.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://moosh-studio.com/favicon.ico?favicon.2vob68tjqpejf.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "icon"
  },
  "more-investment-house": {
-  "source": "https://www.moreinvest.co.il/media/wkwjmltm/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.moreinvest.co.il/media/wkwjmltm/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 142,
+  "format": "png",
+  "kind": "icon"
  },
  "moveo-group": {
-  "source": "https://www.moveo.group/apple-icon.png?apple-icon.3lby4iws_633r.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.moveo.group/icon.svg?icon.3edx2jwkvi54_.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "munch": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://mench-adv.co.il/wp-content/uploads/2019/07/cropped-tm.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "mustache-studio": {
-  "source": "https://files.cdn-files-a.com/uploads/11018325/800_687dfe78ba64a.png?aspect_ratio=1:1&width=180&format=png",
-  "fetched": "2026-10-18"
+  "source_url": "https://files.cdn-files-a.com/uploads/11018325/800_687dfe78ba64a.png?aspect_ratio=1:1&width=180&format=png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "muze": {
-  "source": "https://www.muzedesign.com/muze-favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.muzedesign.com/muze-favicon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "mv-productions": {
-  "source": "https://meiravizer.com/wp-content/uploads/2018/01/favicon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://meiravizer.com/wp-content/uploads/2018/01/favicon.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "natie": {
-  "source": "https://natie.com/wp-content/uploads/2019/03/cropped-logo-flavicon-2019-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://natie.com/wp-content/themes/natie/assets/images/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "national-insurance-institute": {
-  "source": "https://www.btl.gov.il:443/SiteCollectionImages/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.btl.gov.il:443/SiteCollectionImages/favicon.ico",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "nayax": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nayax.com&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://nayax.com&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "ndg-studios": {
-  "source": "https://www.ndg-studios.com/wp-content/uploads/2018/12/ndgstudios-grey-300x300.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.ndg-studios.com/wp-content/uploads/2018/12/ndgstudios-grey.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 485,
+  "format": "png",
+  "kind": "icon-original"
  },
  "no-no-no-no-no-yes": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "notfromhere": {
-  "source": "https://notfromhere.net/wp-content/uploads/cropped-site-logo-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://notfromhere.net/wp-content/uploads/cropped-site-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "nua-motion": {
-  "source": "https://static.wixstatic.com/media/22b198_b6b5ab69f7b24942ace18154d2e7c4d6%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/22b198_b6b5ab69f7b24942ace18154d2e7c4d6%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/22b198_b6b5ab69f7b24942ace18154d2e7c4d6%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/22b198_b6b5ab69f7b24942ace18154d2e7c4d6%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "oded-ezer-typography": {
-  "source": "https://cdn.prod.website-files.com/60072d7ac354b3023ec19a63/60b7a7631e29326c02162ac8_android-chrome-256x256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/60072d7ac354b3023ec19a63/60b7a7631e29326c02162ac8_android-chrome-256x256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "og-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "omd-israel": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "on-air-graphics": {
-  "source": "https://on-airgraphics.com/wp-content/uploads/2018/02/cropped-SiteID-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://on-airgraphics.com/wp-content/uploads/2018/02/cropped-SiteID.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 509,
+  "format": "png",
+  "kind": "icon-original"
  },
  "one-zero-bank": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://onezerobank.com&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://onezerobank.com&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "open-total-brand-experience": {
-  "source": "https://www.open.co.il/wp-content/themes/open/gfx/favicon/android-icon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.open.co.il/wp-content/themes/open/gfx/favicon/android-icon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "opus-post-production": {
-  "source": "https://static.wixstatic.com/media/309874_1ff98a0a7dcf435082b59cf160d31cb1.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/309874_1ff98a0a7dcf435082b59cf160d31cb1.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/309874_1ff98a0a7dcf435082b59cf160d31cb1.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/309874_1ff98a0a7dcf435082b59cf160d31cb1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "oron-productions": {
-  "source": "https://static.wixstatic.com/media/9a27d7_e1323f215cd64fb6874bd36f2ab5e4c0%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9a27d7_e1323f215cd64fb6874bd36f2ab5e4c0%7Emv2.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/9a27d7_e1323f215cd64fb6874bd36f2ab5e4c0%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/9a27d7_e1323f215cd64fb6874bd36f2ab5e4c0%7Emv2.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "osem-nestle": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://osem.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://osem.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "overwolf": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "pan-animation": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pananimation.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pananimation.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "panjaya": {
-  "source": "https://www.panjaya.ai/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.panjaya.ai/favicon.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "papaya-global": {
-  "source": "https://www.papayaglobal.com/wp-content/uploads/2024/03/cropped-favicon-for-papayaglobal-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.papayaglobal.com/wp-content/uploads/2024/03/cropped-favicon-for-papayaglobal.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 478,
+  "format": "png",
+  "kind": "icon-original"
  },
  "parallax-virtual-production-studio": {
-  "source": "https://static.wixstatic.com/media/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/935e05_8ef18412832a4275a1bc53876286ee21%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "parsman-baruch": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "partner-communications": {
-  "source": "https://www.partner.co.il/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.partner.co.il/favicon.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "payoneer": {
-  "source": "https://www.payoneer.com/wp-content/themes/payo/assets/img/favicons/android-icon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.payoneer.com/wp-content/themes/payo/assets/img/favicons/android-icon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "paz": {
-  "source": "https://www.paz.co.il/apple-touch-icon.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.paz.co.il/android-chrome-512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 510,
+  "format": "png",
+  "kind": "manifest"
  },
  "peach-content": {
-  "source": "https://www.peachcontent.com/wp-content/uploads/2021/04/cropped-peach-davicon-1-192x192.jpg",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.peachcontent.com/wp-content/uploads/2021/04/cropped-peach-davicon-1.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "peanuts-productions": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "peech": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "pelephone": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pelephone.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://pelephone.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "pepper": {
-  "source": "https://www.pepper.co.il/themes/custom/pepper/favicon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.pepper.co.il/themes/custom/pepper/images/logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 100,
+  "format": "png",
+  "kind": "header-logo"
  },
  "perfect-voices": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://perfectvoices.com&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://perfectvoices.com&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "photomyne": {
-  "source": "https://d3ebpjo8i5k1d2.cloudfront.net/images/favicon/photomyne_favicon@180.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://d3ebpjo8i5k1d2.cloudfront.net/images/favicon/photomyne_favicon@512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "phygital-factory": {
-  "source": "https://phygital.co.il/wp-content/uploads/cropped-PhygitalBranding-01-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://phygital.co.il/wp-content/uploads/cropped-PhygitalBranding-01.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "pil-animation": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://pilanimation.com/wp-content/uploads/2014/03/logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 170,
+  "format": "png",
+  "kind": "header-logo"
  },
  "pitchipoy": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://pitchipoy.tv/wp-content/uploads/2013/06/pp_logo3.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 16,
+  "format": "png",
+  "kind": "icon"
  },
  "pixellot": {
-  "source": "https://www.pixellot.tv/wp-content/uploads/2020/07/cropped-pixellot_favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.pixellot.tv/wp-content/uploads/2020/07/cropped-pixellot_favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 494,
+  "format": "png",
+  "kind": "icon-original"
  },
  "plarium": {
-  "source": "https://company.plarium.com/favicon/favicon-32x32.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://company.plarium.com/favicon/favicon-32x32.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "playground-post": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "playsight": {
-  "source": "https://playsight.com/wp-content/uploads/2020/09/cropped-PS-favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://playsight.com/wp-content/uploads/2020/09/cropped-PS-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "playstudios-tel-aviv": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://playstudios.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://playstudios.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "playtika": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://playtika.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.playtika.com/img/logo-playtika.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png"
  },
  "pov-productions": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "powtoon": {
-  "source": "https://cdn.prod.website-files.com/6808941b54478d5c7d4b1b65/68467f783d1d66ded81dbc11_powtoon-256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/6808941b54478d5c7d4b1b65/68467f783d1d66ded81dbc11_powtoon-256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "prashkovsky": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://prashkovsky.co.il&size=128",
-  "fetched": "2026-10-20",
-  "rejected": "generic or non-logo image"
+  "source_url": "https://www.prashkovsky.co.il/wp-content/uploads/2022/01/fivicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "primus-design-animation": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "programa-1": {
-  "source": "https://static.wixstatic.com/media/d79840_a718cee8e09b4aecb3a9b4fb625dd585%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/d79840_a718cee8e09b4aecb3a9b4fb625dd585%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/d79840_a718cee8e09b4aecb3a9b4fb625dd585%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/d79840_a718cee8e09b4aecb3a9b4fb625dd585%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "promarket-group": {
-  "source": "https://www.promarket.co.il/wp-content/uploads/2019/12/promarket-favicon.jpeg",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.promarket.co.il/wp-content/uploads/2019/12/promarket-favicon.jpeg",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "promo-com": {
-  "source": "https://promo.com/favicons/favicon180x180.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://promo.com/images/Promo.com_Logo_Square_Black_pink.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "promotheus": {
-  "source": "https://www.promots.tv/wp-content/uploads/2017/05/favicon432-300x300.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.promots.tv/wp-content/uploads/2017/05/favicon432.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 432,
+  "format": "png",
+  "kind": "icon-original"
  },
  "publicis-tel-aviv": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "rabbi-interactive": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "rabel-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "rami-levy": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://rami-levy.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://rami-levy.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "rapyd": {
-  "source": "https://www.rapyd.net/wp-content/uploads/2024/11/android-chrome-256x256-1.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.rapyd.net/android-chrome-256x256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 254,
+  "format": "png",
+  "kind": "manifest"
  },
  "re-levant": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://re-levant.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://re-levant.co.il/wp-content/uploads/2022/12/re-star.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "reichman-university": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://runi.ac.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://runi.ac.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "renuar": {
-  "source": "https://renuar.co.il/cdn/shop/files/Favicon_Black_Renuar_c5e6ff7e-572b-494d-a5c2-02970d082384.png?v=1753350841&width=180",
-  "fetched": "2026-10-19"
+  "source_url": "https://renuar.co.il/cdn/shop/files/Favicon_Black_Renuar_c5e6ff7e-572b-494d-a5c2-02970d082384.png?v=1753350841&width=180",
+  "fetched_at": "2026-10-21",
+  "src_px": 109,
+  "format": "png",
+  "kind": "apple"
  },
  "replay-technologies": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "replica-works": {
-  "source": "https://cdn.prod.website-files.com/60630373e4fac9f685ae9714/60a4fd470f9d1f17bd17cdf1_256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/60630373e4fac9f685ae9714/60a4fd470f9d1f17bd17cdf1_256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "reshet-13": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://13tv.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://13tv.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "reuveni-pridan": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "richkid": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "riskified": {
-  "source": "https://www.riskified.com/app/uploads/2022/03/cropped-icon_512x512-1-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.riskified.com/app/themes/riskified/public/pwa_icons/windows11/SplashScreen.scale-400.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "manifest"
  },
  "riverside": {
-  "source": "https://cdn.prod.website-files.com/685be7dcd32275d3830651d3/685be7dcd32275d383065e48_RS_favicon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/685be7dcd32275d3830651d3/685be7dcd32275d383065e48_RS_favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "sam-spiegel-film-school": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://jsfs.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/b6e3b8_5b494b64b20243179dab40dba44f5056%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/b6e3b8_5b494b64b20243179dab40dba44f5056%7Emv2.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "samsung-israel": {
-  "source": "https://resources.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/app_ico.png",
-  "fetched": "2026-10-20"
+  "source_url": "https://resources.samsung.com/etc.clientlibs/samsung/clientlibs/consumer/global/clientlib-common/resources/images/app_ico.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 137,
+  "format": "png",
+  "kind": "apple"
  },
  "sano": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://www.sano.co.il/wp-content/themes/anova/assets/images/logo.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 160,
+  "format": "png",
+  "kind": "header-logo"
  },
  "sapir-school-audio-visual-arts": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sapir.ac.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sapir.ac.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "scpg-shortcut-playground": {
-  "source": "https://scpg.tv/wp-content/uploads/2022/11/cropped-oie_transparent-4-1-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://scpg.tv/",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-svg"
  },
  "screen-post-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "session42": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "shalmor-avnon-amichay-yr": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "shenkar": {
-  "source": "https://www.shenkar.ac.il/wp-content/uploads/2025/11/logo-1.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.shenkar.ac.il/wp-content/uploads/2025/11/logo-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 200,
+  "format": "png",
+  "kind": "icon"
  },
  "shoof-video": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://shoofvideo.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.shoofvideo.co.il/wp-content/uploads/2025/04/favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "shoshi-and-udi": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "shufersal": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "shuffll": {
-  "source": "https://shuffll.com/wp-content/uploads/2024/09/shuffll_symbol_light_250px-1-Vectorized-300x300.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://shuffll.com/wp-content/uploads/2024/09/shuffll_symbol_light_250px-1-Vectorized.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "similarweb": {
-  "source": "https://static-us-east-1.similarcdn.com/build/20261018.master.cd29447/dist/scripts/lite-app/assets/bf0781432ef84ce62b85.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static-us-east-1.similarcdn.com/build/20261021.master.1c24f44/dist/scripts/lite-app/assets/bf0781432ef84ce62b85.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "simply": {
-  "source": "https://www.hellosimply.com/simply-icon-256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.hellosimply.com/simply-icon-256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "snowball-studios": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://assets.squarespace.com/universal/default-favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 32,
+  "format": "png",
+  "kind": "icon"
  },
  "sodastream": {
-  "source": "https://sodastream.co.il/cdn/shop/t/114/assets/favicon_120x.png?v=118667553952267251851757917726",
-  "fetched": "2026-10-19"
+  "source_url": "https://sodastream.co.il/cdn/shop/t/114/assets/favicon_120x.png?v=118667553952267251851757917726",
+  "fetched_at": "2026-10-21",
+  "src_px": 120,
+  "format": "png",
+  "kind": "apple"
  },
  "sound-house": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "sound-radix": {
-  "source": "https://www.soundradix.com/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.soundradix.com/android-chrome-384x384.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 384,
+  "format": "png",
+  "kind": "manifest"
  },
  "spectx": {
-  "source": "https://static.wixstatic.com/media/375a49_11b8f794905e4d6c8cc6811b4c960a30%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/375a49_11b8f794905e4d6c8cc6811b4c960a30%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/375a49_11b8f794905e4d6c8cc6811b4c960a30%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/375a49_11b8f794905e4d6c8cc6811b4c960a30%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 191,
+  "format": "png",
+  "kind": "icon"
  },
  "sporta-digital": {
-  "source": "https://sporta.digital/wp-content/uploads/2023/11/cropped-Icon-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://sporta.digital/wp-content/uploads/2023/11/cropped-Icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 504,
+  "format": "png",
+  "kind": "icon-original"
  },
  "spring-valley": {
-  "source": "https://spring-valley.co.il/wp-content/uploads/favicon-300x300.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://spring-valley.co.il/wp-content/uploads/favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 343,
+  "format": "png",
+  "kind": "icon-original"
  },
  "starcom-israel": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "strauss-group": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://strauss-group.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://strauss-group.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "streetlight-studio": {
-  "source": "https://cdn.prod.website-files.com/65a2f5a912b731ca69981bae/668fa8b86eeae97558234ef5_webclip.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/65a2f5a912b731ca69981bae/668fa8b86eeae97558234ef5_webclip.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "studio-aiko": {
-  "source": "https://framerusercontent.com/images/GVVocHxUf3rYYjCajUfriVxyqs.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://framerusercontent.com/images/GVVocHxUf3rYYjCajUfriVxyqs.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "studio-and-more": {
-  "source": "https://framerusercontent.com/images/qFb4Bl8h9SFfSQTvzueJw3odg.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://framerusercontent.com/images/qFb4Bl8h9SFfSQTvzueJw3odg.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 500,
+  "format": "png",
+  "kind": "apple"
  },
  "studio-animade": {
-  "source": "https://animade.me/wp-content/uploads/2025/10/cropped-Site-Icon-192x192.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://animade.me/wp-content/uploads/2025/10/cropped-Site-Icon.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "studio-animedia": {
-  "source": "https://www.studioanimedia.com/wp-content/uploads/2021/05/Icon_Positive.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.studioanimedia.com/wp-content/uploads/2021/05/Icon_Positive.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "studio-chrivi-animation": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://studiochrivi.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://studiochrivi.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "studio-grin": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "studio-liran-kapel": {
-  "source": "https://www.lirankapel.com/wp-content/uploads/2025/05/mini-logo.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.lirankapel.com/wp-content/uploads/2025/05/mini-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 184,
+  "format": "png",
+  "kind": "icon"
  },
  "studio-pixel": {
-  "source": "https://studiopixel.co.il/wp-content/uploads/2023/03/cropped-logo-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://studiopixel.co.il/wp-content/uploads/2023/03/cropped-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "studio-poink": {
-  "source": "https://studiopoink.com/media/cropped-brand-logo-ea29e8247b67.webp",
-  "fetched": "2026-10-18"
+  "source_url": "https://studiopoink.com/media/cropped-brand-logo-ea29e8247b67.webp",
+  "fetched_at": "2026-10-21",
+  "src_px": 419,
+  "format": "png",
+  "kind": "apple"
  },
  "studio-t-ai": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "studio-vida": {
-  "source": "https://www.vida3d.co.il/wp-content/themes/vida3d/images/favicon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.vida3d.co.il/wp-content/uploads/2023/08/logo.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "sundaysky": {
-  "source": "https://sundaysky.com/wp-content/uploads/2022/10/favicon-194x194-1.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://sundaysky.com/wp-content/uploads/2022/10/favicon-194x194-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 160,
+  "format": "png",
+  "kind": "icon"
  },
  "super-pharm": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://super-pharm.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://super-pharm.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "superplay": {
-  "source": "https://www.superplay.co/wp-content/uploads/2025/01/cropped-superplay-favicon-16x16-1-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.superplay.co/wp-content/uploads/2025/01/cropped-superplay-favicon-16x16-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "sweet-sound-studios": {
-  "source": "https://static.wixstatic.com/media/892975_6c099e1f84ef459c8a160b84047e835b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/892975_6c099e1f84ef459c8a160b84047e835b%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/892975_6c099e1f84ef459c8a160b84047e835b%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/892975_6c099e1f84ef459c8a160b84047e835b%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "taboola": {
-  "source": "https://www.taboola.com/wp-content/uploads-neo/2024/07/favicon-300x300-lqip.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.taboola.com/wp-content/uploads-neo/2024/07/favicon-300x300-lqip.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 277,
+  "format": "png",
+  "kind": "icon"
  },
  "tailor-brands": {
-  "source": "https://www.tailorbrands.com/wp-content/uploads/2024/10/Tailor-Brands-logo-192-x-192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.tailorbrands.com/wp-content/uploads/2024/10/Tailor-Brands-logo-192-x-192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "tara-dairy": {
-  "source": "https://www.tara.co.il/on/demandware.static/Sites-tara-Site/-/default/dw48ef4713/images/favicon-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.tara.co.il/on/demandware.static/Sites-tara-Site/-/default/dw84d29dcc/images/favicon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "tau-steve-tisch-film-school": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://en-arts.tau.ac.il/sites/arts-english.tau.ac.il/files/arts-logo_0_0.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 212,
+  "format": "png",
+  "kind": "header-logo"
  },
  "tec-studio": {
-  "source": "https://tec.studio/wp-content/uploads/2026/09/favicon-96x96-1.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://tec.studio/wp-content/uploads/fbrfg/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "svg-icon"
  },
  "technion": {
-  "source": "https://www.technion.ac.il/wp-content/themes/technion2023/dist/images/favicon/android-chrome-512x512.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.technion.ac.il/wp-content/themes/technion2023/dist/images/favicon/android-chrome-512x512.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon"
  },
  "tedy-productions": {
-  "source": "https://static.wixstatic.com/media/0129af_0f0ed4b803bb4a3aaa649c9ce90dce30%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/0129af_0f0ed4b803bb4a3aaa649c9ce90dce30%7Emv2.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/0129af_0f0ed4b803bb4a3aaa649c9ce90dce30%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/0129af_0f0ed4b803bb4a3aaa649c9ce90dce30%7Emv2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "tel-aviv-cinematheque": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cinema.co.il&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://cinema.co.il&size=128",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "tel-aviv-museum-of-art": {
-  "source": "https://storage.googleapis.com/tama-static/static/favicon.b7005309a379.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://storage.googleapis.com/tama-static/static/favicon.b7005309a379.ico",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "tel-aviv-university": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://www.tau.ac.il/sites/default/files/TAU_Logo_2.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 200,
+  "format": "png",
+  "kind": "header-logo"
  },
  "tel-aviv-yafo-municipality": {
-  "source": "https://www.tel-aviv.gov.il/_layouts/15/TlvSP2013PublicSite/Images/IriaFavIcon.ico",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.tel-aviv.gov.il/_layouts/15/TlvSP2013PublicSite/images/logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 220,
+  "format": "png",
+  "kind": "header-logo"
  },
  "tempo-beverages": {
-  "source": "https://www.tempo.co.il/wp-content/uploads/2020/07/cropped-tempofav-e1594112929439-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.tempo.co.il/wp-content/uploads/2020/07/cropped-tempofav-e1594112929439.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "terminal-x": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "teva-israel": {
-  "source": "https://www.teva.co.il/globalassets/scs-branded-images/favicon/teva.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.teva.co.il/globalassets/scs-branded-images/favicon/teva.png",
+  "fetched_at": "2026-10-19",
+  "src_px": 96,
+  "format": "png"
  },
  "the-bract": {
-  "source": "https://cdn.prod.website-files.com/65fc0439df245a9c01affa26/6698c1eaefd6c15891b4d736_webclip.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/65fc0439df245a9c01affa26/6698c1eaefd6c15891b4d736_webclip.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 256,
+  "format": "png",
+  "kind": "apple"
  },
  "the-craft": {
-  "source": "https://cdn.myportfolio.com/ad3ad17d18625d64c978c37bb660f724/95eb47a0-88c2-4f63-959c-fdbf57dc0295_carw_1x1x180.jpg?h=6d577b9c91267319cac921cf4c58171c",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.myportfolio.com/ad3ad17d18625d64c978c37bb660f724/95eb47a0-88c2-4f63-959c-fdbf57dc0295_carw_1x1x180.jpg?h=6d577b9c91267319cac921cf4c58171c",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "the-hive-studio": {
-  "source": "https://thehivepro.com/wp-content/uploads/2023/03/cropped-favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://thehivepro.com/wp-content/uploads/2023/03/cropped-favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "the-moving-company-tmc": {
-  "source": null,
-  "fetched": "2026-10-18",
-  "rejected": "generic or non-logo image"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "the-phoenix": {
-  "source": "https://www.fnx.co.il/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.fnx.co.il/favicon.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "tipalti": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://tipalti.com&size=128",
-  "fetched": "2026-10-19"
+  "source_url": "https://tipalti.com/wp-content/uploads/2025/11/tipalti-ai.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "titan-branding": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://titan-branding.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://titan-branding.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "tiv-taam": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "tnuva": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://tnuva.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://tnuva.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "tolstoy": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://gotolstoy.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.gotolstoy.com/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "tomer-biran-audio-artists": {
-  "source": "https://images.squarespace-cdn.com/content/v1/5d2e4caeaaad3e0001c77f7e/1564007411611-14S21BYRQCRTGSLJGZHJ/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://images.squarespace-cdn.com/content/v1/5d2e4caeaaad3e0001c77f7e/1564007411611-14S21BYRQCRTGSLJGZHJ/favicon.ico",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "tomi-house": {
-  "source": "https://tomihouse.com/wp-content/uploads/2023/10/cropped-Tomi-Signature-9-192x192.webp",
-  "fetched": "2026-10-18"
+  "source_url": "https://tomihouse.com/wp-content/uploads/2023/10/cropped-Tomi-Signature-9-192x192.webp",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png",
+  "skip_header": true
  },
  "tonara": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "touch-design-studio": {
-  "source": "https://static.wixstatic.com/media/099426_dbe55dfdbb95427d8da70583ee712f6f%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/099426_dbe55dfdbb95427d8da70583ee712f6f%7Emv2.jpg",
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/099426_dbe55dfdbb95427d8da70583ee712f6f%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/099426_dbe55dfdbb95427d8da70583ee712f6f%7Emv2.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "treepodia": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "ttv-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://static.wixstatic.com/media/ebd842_97106b5b3d7d418a887daf58ff59c743~mv2.jpg/v1/crop/x_0,y_91,w_480,h_297/fill/w_183,h_108,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ebd842_97106b5b3d7d418a887daf58ff59c743~mv2.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 183,
+  "format": "png",
+  "kind": "header-logo"
  },
  "twist-animation": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "unilever-israel": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://unilever.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://unilever.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "union-media-israel": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "source_url": "https://unionmedia.co.il/wp-content/uploads/2016/03/logo-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 154,
+  "format": "png",
+  "kind": "header-logo"
  },
  "union-motors": {
-  "source": "https://www.toyota.co.il/etc.clientlibs/dxp/clientlibs/clientlib-toyota/resources/images/favicons/apple-touch-icon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.toyota.co.il/etc.clientlibs/dxp/clientlibs/clientlib-toyota/resources/images/favicons/apple-touch-icon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "universal-mccann-israel": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "university-of-haifa": {
-  "source": "https://www.haifa.ac.il/wp-content/uploads/2024/02/cropped-Haifa_logo_rgb_symbol_dark-1-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://www.haifa.ac.il/wp-content/uploads/2024/02/cropped-Haifa_logo_rgb_symbol_dark-1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 483,
+  "format": "png",
+  "kind": "icon-original"
  },
  "uri-amitai-productions": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "vector-4-studio": {
-  "source": "https://studio-v4.com/Brand/favicon-180.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://studio-v4.com/Brand/favicon-180.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 180,
+  "format": "png",
+  "kind": "apple"
  },
  "veople": {
-  "source": "https://static.wixstatic.com/media/41fa4b_163b5464ebf7460c982395830b093c47%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/41fa4b_163b5464ebf7460c982395830b093c47%7Emv2.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/41fa4b_e59857f26db44c14ab7fd8a4c43cff3b~mv2.png/v1/fill/w_211,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%2BTAG-LINE_L.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 183,
+  "format": "png",
+  "kind": "header-logo"
  },
  "victory-supermarkets": {
-  "source": "https://victory.co.il/wp-content/uploads/2018/06/cropped-site-logo-192x192.png",
-  "fetched": "2026-10-19"
+  "source_url": "https://victory.co.il/wp-content/uploads/2018/06/cropped-site-logo.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 511,
+  "format": "png",
+  "kind": "icon-original"
  },
  "videofilm-international": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "videohead": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://videohead.co.il/wp-content/uploads/2020/08/LOGO1.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 266,
+  "format": "png",
+  "kind": "header-logo"
  },
  "virtual-point": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://virtual-point.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://virtual-point.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "visual3d": {
-  "source": "https://storage.googleapis.com/webydo-published-sites/A004888/images/img-4e505f0558.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://storage.googleapis.com/webydo-published-sites/A004888/images/img-4e505f0558.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 486,
+  "format": "png",
+  "kind": "icon"
  },
  "visualife": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "vo1-post": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "wakingapp": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "waves-audio": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://waves.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://waves.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "way-studio": {
-  "source": "https://static.wixstatic.com/media/3a102c_252771c717bf4fdfb1816a76e0c5daaf%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/3a102c_252771c717bf4fdfb1816a76e0c5daaf%7Emv2.jpg",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.wixstatic.com/media/3a102c_252771c717bf4fdfb1816a76e0c5daaf%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/3a102c_252771c717bf4fdfb1816a76e0c5daaf%7Emv2.jpg",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "wayy-studio": {
-  "source": "https://cdn.prod.website-files.com/67225f068efda4efa29c9d11/672381826183bbadb1647108_Wayy%20icon%20256.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://cdn.prod.website-files.com/67225f068efda4efa29c9d11/672381826183bbadb1647108_Wayy%20icon%20256.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 226,
+  "format": "png",
+  "kind": "apple"
  },
  "webydo": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://webydo.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://storage.googleapis.com/webydo-published-sites/A111111/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "why-worry": {
-  "source": null,
-  "fetched": "2026-10-20"
+  "fetched_at": "2026-10-20",
+  "src_px": 0
  },
  "wibbitz": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "wild-kids-animation-studio": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "wings-games-studio": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://www.wingsgames.com/favicon.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "svg-icon"
  },
  "wissotzky": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "wix": {
-  "source": "https://www.wix.com/favicon.ico",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.wix.com/favicon.ico",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png"
  },
  "wochit": {
-  "source": "https://www.wochit.com/wp-content/themes/wochit/favicon.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.wochit.com/wp-content/themes/wochit/favicon.png",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "wolt-israel": {
-  "source": "https://wolt-com-static-assets.wolt.com/android-icon-192x192.png",
-  "fetched": "2026-10-20"
+  "source_url": "https://wolt-com-static-assets.wolt.com/android-icon-192x192.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "wsc-sports": {
-  "source": "https://wsc-sports.com/wp-content/uploads/2024/04/cropped-Favicon-192x192.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://wsc-sports.com/wp-content/uploads/2024/04/cropped-Favicon.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon-original"
  },
  "yad2": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://yad2.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://visuals.yad2.co.il/mango/yad2-main-logo-v2.svg",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "svg",
+  "kind": "header-logo"
  },
  "yashinski-studio": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "yehoshua-tbwa": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "source_url": "https://www.ytbwa.co.il/Publish/ffec4c0fda104177a5762772026d29e1/d54cf23332da403f8b47d967a4c5a73b/src/contents/4d60ebdfca224373bdcfc9efc4e4e954_Off_Tov_Logo_1.webp",
+  "fetched_at": "2026-10-21",
+  "src_px": 94,
+  "format": "png",
+  "kind": "header-logo"
  },
  "yes": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://yes.co.il&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://yes.co.il&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "yes-studios": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "yoav-gross-productions": {
-  "source": "https://www.yoavgross.com/icon.png?icon.08k1i_zfodn87.png",
-  "fetched": "2026-10-18"
+  "source_url": "https://www.yoavgross.com/icon.png?icon.08k1i_zfodn87.png",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "icon"
  },
  "yochananof": {
-  "source": null,
-  "fetched": "2026-10-19"
+  "fetched_at": "2026-10-19",
+  "src_px": 0
  },
  "yoom": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "zed-films": {
-  "source": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://zedfilms.com&size=128",
-  "fetched": "2026-10-18"
+  "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://zedfilms.com&size=128",
+  "fetched_at": "2026-10-18",
+  "src_px": 96,
+  "format": "png"
  },
  "zeekit": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "zenith-israel": {
-  "source": null,
-  "fetched": "2026-10-18"
+  "fetched_at": "2026-10-18",
+  "src_px": 0
  },
  "zoa-films": {
-  "source": "https://static.fabrik.io/133q/15bccd443f098518.png?s=20a221848eca6837021d3e1137b76ce9",
-  "fetched": "2026-10-19"
+  "source_url": "https://static.fabrik.io/133q/15bccd443f098518.png?s=20a221848eca6837021d3e1137b76ce9",
+  "fetched_at": "2026-10-21",
+  "src_px": 512,
+  "format": "png",
+  "kind": "apple"
  }
 }

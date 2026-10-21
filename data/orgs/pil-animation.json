@@ -8,6 +8,7 @@
     "motion-design"
   ],
   "description": "Petah Tikva animation studio with 20+ years of experience producing explainer, promo, training, in-flight safety and educational videos, plus animated TV series and fillers for Israeli broadcasters and kids channels.",
+  "description_he": "סטודיו אנימציה בפתח תקווה עם יותר מ-20 שנות ניסיון בהפקת סרטוני הסבר, פרומו, הדרכה, בטיחות בטיסה וחינוך, וכן סדרות אנימציה ופילרים לגופי שידור ישראליים ולערוצי ילדים.",
   "location": {
     "country": "IL",
     "city": "Petah Tikva"
@@ -18,7 +19,8 @@
   "contact_url": "https://pilanimation.com/contact/",
   "links": {
     "linkedin": "https://www.linkedin.com/company/pilanimation/",
-    "youtube": "https://www.youtube.com/channel/UCKvQkCwZfTBEy79pVjhDB2A"
+    "youtube": "https://www.youtube.com/channel/UCKvQkCwZfTBEy79pVjhDB2A",
+    "facebook": "https://www.facebook.com/PilAnimation"
   },
   "services": [
     "Explainer and promo videos",
@@ -66,6 +68,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו אנימציה בפתח תקווה עם יותר מ-20 שנות ניסיון בהפקת סרטוני הסבר, פרומו, הדרכה, בטיחות בטיסה וחינוך, וכן סדרות אנימציה ופילרים לגופי שידור ישראליים ולערוצי ילדים."
+  "last_verified": "2026-10-18"
 }

@@ -6,15 +6,16 @@ const Clock = () => (
   </svg>
 );
 
-// One tender: what is being bought (our summary), who buys it, the deadline, and the official notice.
+// One tender: what is being bought (our summary), who buys it, its state and dates, and the official notice.
+// States: open (submissions open now), upcoming (published, submissions not open yet), closed, cancelled.
 // `compact` is the home-page strip version.
 export default function TenderCard({ t, compact = false }) {
-  const closed = t.state !== "open";
+  const closed = t.state === "closed" || t.state === "cancelled";
   return (
-    <article className={`tcard${closed ? " closed" : ""}${compact ? " compact" : ""}`}>
+    <article className={`tcard${closed ? " closed" : ""}${t.state === "upcoming" ? " upcoming" : ""}${compact ? " compact" : ""}`}>
       <div className="thead">
         <span className={`due ${t.countdown.tone}`}><Clock />{t.countdown.text}</span>
-        <span className="when">{closed ? "ההגשה הייתה עד" : "הגשה עד"} <bdi>{t.deadline}</bdi></span>
+        <span className="when"><bdi>{t.when}</bdi></span>
       </div>
       <h3>{t.scope_summary}</h3>
       <p className="buyer">

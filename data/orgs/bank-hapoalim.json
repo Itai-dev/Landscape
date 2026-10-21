@@ -7,6 +7,7 @@
     "banking-finance"
   ],
   "description": "One of Israel's two largest banks (est. 1921), with 250+ branches and a large retail-banking advertising presence; also owns digital wallet Bit.",
+  "description_he": "אחד משני הבנקים הגדולים בישראל (נוסד ב-1921), עם יותר מ-250 סניפים ונוכחות פרסומית גדולה בבנקאות הקמעונאית; בבעלותו גם הארנק הדיגיטלי ביט.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -16,6 +17,11 @@
   "website": "https://www.bankhapoalim.co.il",
   "contact_url": "https://www.bankhapoalim.co.il/contact-us",
   "careers_url": "https://www.bankhapoalim.co.il/forms/he/jobs-site",
+  "links": {
+    "instagram": "https://www.instagram.com/poalimbank",
+    "youtube": "https://www.youtube.com/user/BankHapoalim",
+    "facebook": "https://www.facebook.com/BankHapoalimSocial"
+  },
   "key_people": [
     {
       "name": "Yigal Barkat",
@@ -60,6 +66,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Jul 2025 (Globes): Hapoalim ended its relationship with BBR Saatchi & Saatchi (Baumann Ber Rivnay) and kept only Gitam BBDO, alongside a presenter change. Ticker from general knowledge (TASE: POLI). Agency as of 2026-10: Gitam BBDO credited on Hapoalim's top-rated ads (Globes weekly ad ranking, Oct 2026).",
-  "description_he": "אחד משני הבנקים הגדולים בישראל (נוסד ב-1921), עם יותר מ-250 סניפים ונוכחות פרסומית גדולה בבנקאות הקמעונאית; בבעלותו גם הארנק הדיגיטלי ביט."
+  "notes": "Jul 2025 (Globes): Hapoalim ended its relationship with BBR Saatchi & Saatchi (Baumann Ber Rivnay) and kept only Gitam BBDO, alongside a presenter change. Ticker from general knowledge (TASE: POLI). Agency as of 2026-10: Gitam BBDO credited on Hapoalim's top-rated ads (Globes weekly ad ranking, Oct 2026)."
 }

@@ -11,6 +11,7 @@
     "media-broadcast"
   ],
   "description": "Israel's leading commercial broadcaster (est. 1993): Keshet 12, mako, N12, the freeTV streaming JV and global producer/distributor Keshet International. Controlled by Central Bottling Company.",
+  "description_he": "השדרן המסחרי המוביל בישראל (נוסד ב-1993): קשת 12, mako, N12, מיזם הסטרימינג המשותף freeTV וחברת ההפקה וההפצה הגלובלית Keshet International. בשליטת החברה המרכזית להפצת משקאות.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -21,7 +22,9 @@
   "contact_url": "https://www.mako.co.il/help/Article-9446174b77b2a31006.htm",
   "careers_url": "https://jobs.keshet-mediagroup.com/",
   "links": {
-    "keshet_international": "https://www.keshetinternational.com"
+    "keshet_international": "https://www.keshetinternational.com",
+    "instagram": "https://www.instagram.com/mako.il",
+    "facebook": "https://www.facebook.com/keshet.mako"
   },
   "notable_clients": [
     "Mizrahi Tefahot"
@@ -75,6 +78,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "freeTV (Keshet + RGE) was Israel's biggest TV advertiser in 2025 (~NIS 48M, Yifat via Globes).",
-  "description_he": "השדרן המסחרי המוביל בישראל (נוסד ב-1993): קשת 12, mako, N12, מיזם הסטרימינג המשותף freeTV וחברת ההפקה וההפצה הגלובלית Keshet International. בשליטת החברה המרכזית להפצת משקאות."
+  "notes": "freeTV (Keshet + RGE) was Israel's biggest TV advertiser in 2025 (~NIS 48M, Yifat via Globes)."
 }

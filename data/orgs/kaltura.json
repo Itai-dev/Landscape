@@ -1,12 +1,14 @@
 {
   "id": "kaltura",
   "name": "Kaltura",
+  "name_he": "קלטורה",
   "kind": "startup",
   "categories": [
     "media-infrastructure",
     "video-tools"
   ],
   "description": "Video platform company offering enterprise video management, webinars and virtual events, education video, and cloud TV software. Founded in Israel in 2006; legal HQ in New York with main R&D in Ramat Gan. Listed on Nasdaq since July 2021; in late 2025 agreed to acquire Israeli AI-avatar startup eSelf.",
+  "description_he": "חברת פלטפורמת וידאו המציעה ניהול וידאו לארגונים, וובינרים ואירועים וירטואליים, וידאו לחינוך ותוכנת טלוויזיה בענן. נוסדה בישראל ב-2006; המטה המשפטי בניו יורק ומרכז הפיתוח העיקרי ברמת גן. נסחרת בנאסד\"ק מאז יולי 2021; בסוף 2025 הסכימה לרכוש את eSelf, סטארטאפ ישראלי לאווטארים מבוססי AI.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan",
@@ -20,6 +22,13 @@
   "size": "501-1000",
   "status": "active",
   "website": "https://corp.kaltura.com",
+  "contact_url": "https://corp.kaltura.com/contact",
+  "careers_url": "https://corp.kaltura.com/company/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/kaltura/",
+    "facebook": "https://www.facebook.com/Kaltura",
+    "instagram": "https://www.instagram.com/kaltura"
+  },
   "services": [
     "Enterprise video platform (OVP)",
     "Webinars & virtual events",
@@ -80,7 +89,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "569 employees (July 2024) per Wikipedia. eSelf closing not confirmed.",
-  "description_he": "חברת פלטפורמת וידאו המציעה ניהול וידאו לארגונים, וובינרים ואירועים וירטואליים, וידאו לחינוך ותוכנת טלוויזיה בענן. נוסדה בישראל ב-2006; המטה המשפטי בניו יורק ומרכז הפיתוח העיקרי ברמת גן. נסחרת בנאסד\"ק מאז יולי 2021; בסוף 2025 הסכימה לרכוש את eSelf, סטארטאפ ישראלי לאווטארים מבוססי AI.",
-  "name_he": "קלטורה"
+  "notes": "569 employees (July 2024) per Wikipedia. eSelf closing not confirmed."
 }

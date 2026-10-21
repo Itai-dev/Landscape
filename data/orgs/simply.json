@@ -11,6 +11,7 @@
     "education"
   ],
   "description": "Tel Aviv music-education app company (founded 2011 as JoyTunes) behind Simply Piano, Simply Guitar and Simply Sing, plus Simply Draw and Piano Maestro; it says millions of learners in 180 countries use its apps.",
+  "description_he": "חברת אפליקציות ללימוד מוזיקה מתל אביב (נוסדה ב-2011 בשם JoyTunes), שמאחורי Simply Piano, Simply Guitar ו-Simply Sing, וגם Simply Draw ו-Piano Maestro; לדבריה מיליוני לומדים ב-180 מדינות משתמשים באפליקציות שלה.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -18,6 +19,13 @@
   "founded": 2011,
   "status": "active",
   "website": "https://www.hellosimply.com",
+  "careers_url": "https://www.hellosimply.com/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/hellosimply",
+    "instagram": "https://www.instagram.com/hellosimply",
+    "youtube": "https://www.youtube.com/c/hellosimply",
+    "linkedin": "https://www.linkedin.com/company/simply-joytunes/"
+  },
   "services": [
     "Simply Piano",
     "Simply Guitar",
@@ -62,6 +70,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$43M raised by Aug 2019 (Globes); aggregators report a 2021 $50M round led by GV (unconfirmed by primary source) and ~$92M total. Headcount ~200+ per aggregators; size omitted.",
-  "description_he": "חברת אפליקציות ללימוד מוזיקה מתל אביב (נוסדה ב-2011 בשם JoyTunes), שמאחורי Simply Piano, Simply Guitar ו-Simply Sing, וגם Simply Draw ו-Piano Maestro; לדבריה מיליוני לומדים ב-180 מדינות משתמשים באפליקציות שלה."
+  "notes": "$43M raised by Aug 2019 (Globes); aggregators report a 2021 $50M round led by GV (unconfirmed by primary source) and ~$92M total. Headcount ~200+ per aggregators; size omitted."
 }

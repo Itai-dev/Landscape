@@ -8,6 +8,7 @@
     "commercial-production"
   ],
   "description": "Tel Aviv production company founded in 2010 by producer Itai Tamir, focused on independent and arthouse cinema (The Cakemaker, Red Cow, Policeman, Sharqiya, Of Dogs and Men) with 100+ festival awards; it also produced Munch's 2026 hybrid AI/live-action Arkia campaign with Lihi Toledano.",
+  "description_he": "חברת הפקות תל אביבית שנוסדה ב-2010 על ידי המפיק איתי תמיר, המתמקדת בקולנוע עצמאי ואמנותי (האופה מברלין, פרה אדומה, השוטר, שרקייה, Of Dogs and Men) עם יותר מ-100 פרסים בפסטיבלים; הפיקה גם את קמפיין ארקיע ההיברידי של Munch מ-2026, המשלב AI ולייב-אקשן, עם ליהי טולדנו.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -15,6 +16,9 @@
   "founded": 2010,
   "status": "active",
   "website": "https://www.laila-films.com/",
+  "links": {
+    "instagram": "https://www.instagram.com/lailafilmsofficial"
+  },
   "notable_clients": [
     "Arkia"
   ],
@@ -47,6 +51,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "חברת הפקות תל אביבית שנוסדה ב-2010 על ידי המפיק איתי תמיר, המתמקדת בקולנוע עצמאי ואמנותי (האופה מברלין, פרה אדומה, השוטר, שרקייה, Of Dogs and Men) עם יותר מ-100 פרסים בפסטיבלים; הפיקה גם את קמפיין ארקיע ההיברידי של Munch מ-2026, המשלב AI ולייב-אקשן, עם ליהי טולדנו."
+  "last_verified": "2026-10-19"
 }

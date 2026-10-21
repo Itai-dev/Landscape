@@ -1,6 +1,7 @@
 {
   "id": "minute-media",
   "name": "Minute Media",
+  "name_he": "מינוט מדיה",
   "aka": [
     "90min"
   ],
@@ -10,6 +11,7 @@
     "media-infrastructure"
   ],
   "description": "Sports media and technology company (founded 2011 as 90min) that runs a publishing, video and monetization platform and owns or licenses sports brands, including digital and print rights to Sports Illustrated via a 10-year licence from Authentic Brands. HQ in London with a large Tel Aviv R&D presence; valued at over $1B in 2024.",
+  "description_he": "חברת מדיה וטכנולוגיה בתחום הספורט (נוסדה ב-2011 בשם 90min) שמפעילה פלטפורמת הוצאה לאור, וידאו ומונטיזציה ומחזיקה או מקבלת ברישיון מותגי ספורט, כולל הזכויות הדיגיטליות והמודפסות של Sports Illustrated במסגרת רישיון ל-10 שנים מ-Authentic Brands. המטה בלונדון ומרכז פיתוח גדול בתל אביב; הוערכה ב-2024 ביותר ממיליארד דולר.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -22,6 +24,12 @@
   "size": "201-500",
   "status": "active",
   "website": "https://www.minutemedia.com",
+  "contact_url": "https://www.minutegroup.com/company/contact",
+  "careers_url": "https://www.minutegroup.com/company/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/minute-media/",
+    "instagram": "https://www.instagram.com/minute_media"
+  },
   "services": [
     "Publishing & video platform for media owners",
     "Sports content brands",
@@ -62,7 +70,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Axios (2024): ~500 employees, about one-third in Tel Aviv. Total funding figures conflict ($120M per Globes 2019; much higher per aggregators).",
-  "description_he": "חברת מדיה וטכנולוגיה בתחום הספורט (נוסדה ב-2011 בשם 90min) שמפעילה פלטפורמת הוצאה לאור, וידאו ומונטיזציה ומחזיקה או מקבלת ברישיון מותגי ספורט, כולל הזכויות הדיגיטליות והמודפסות של Sports Illustrated במסגרת רישיון ל-10 שנים מ-Authentic Brands. המטה בלונדון ומרכז פיתוח גדול בתל אביב; הוערכה ב-2024 ביותר ממיליארד דולר.",
-  "name_he": "מינוט מדיה"
+  "notes": "Axios (2024): ~500 employees, about one-third in Tel Aviv. Total funding figures conflict ($120M per Globes 2019; much higher per aggregators)."
 }

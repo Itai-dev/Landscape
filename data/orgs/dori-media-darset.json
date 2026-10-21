@@ -11,6 +11,7 @@
     "film-production"
   ],
   "description": "Israeli TV development and production company led by producer Danny Paran and part of Dori Media Group, known for telenovelas, dramas and youth series such as Avoda Aravit (Arab Labor), Doctor Libby, Shababnikim and Galis.",
+  "description_he": "חברת פיתוח והפקות טלוויזיה ישראלית בהובלת המפיק דני פרן, חלק מקבוצת דורי מדיה, המוכרת בטלנובלות, דרמות וסדרות נוער כמו 'עבודה ערבית', 'דוקטור ליבי', 'שבאבניקים' ו'גאליס'.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -20,7 +21,8 @@
   "contact_url": "https://dorimedia.com/contact-us/",
   "links": {
     "instagram": "https://www.instagram.com/dorimediagroup/",
-    "linkedin": "https://www.linkedin.com/company/dori-media-group/"
+    "linkedin": "https://www.linkedin.com/company/dori-media-group/",
+    "facebook": "https://www.facebook.com/dorimediagroup"
   },
   "notable_work": [
     "Arab Labor (Avoda Aravit)",
@@ -55,6 +57,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Located in Ramat HaHayal (Tel Aviv) per Hebrew Wikipedia.",
-  "description_he": "חברת פיתוח והפקות טלוויזיה ישראלית בהובלת המפיק דני פרן, חלק מקבוצת דורי מדיה, המוכרת בטלנובלות, דרמות וסדרות נוער כמו 'עבודה ערבית', 'דוקטור ליבי', 'שבאבניקים' ו'גאליס'."
+  "notes": "Located in Ramat HaHayal (Tel Aviv) per Hebrew Wikipedia."
 }

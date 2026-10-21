@@ -2,14 +2,18 @@ import PersonCard from "@/components/PersonCard";
 import SeedCard from "@/components/SeedCard";
 import { SearchIcon, CraftIcon, XIcon } from "@/components/Icons";
 import FollowButton from "@/components/FollowButton";
+import KindTag from "@/components/KindTag";
 import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
-import { PROFILES_ENABLED } from "@/lib/config";
-import { craftOfQuery } from "@/lib/match";
+import { PROFILES_ENABLED, aiReady } from "@/lib/config";
+import AskAnswer from "@/components/AskAnswer";
+import { askable } from "@/lib/askable";
+import { parseQuery } from "@/lib/match";
 import { supabaseConfig } from "@/lib/config";
 import { listTenders } from "@/lib/tenders";
+import { searchTools } from "@/lib/tools";
 import "../tenders/tenders.css";
 
 export const metadata = { title: "חיפוש", robots: { index: false } };
@@ -22,9 +26,11 @@ export default async function Search({ searchParams }) {
   const typed = String(sp?.q || "").slice(0, 80).trim();
   const asked = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
   // A query that is a craft's name ("מושן", "VFX") is that craft: the same results and counts as the craft page.
-  const named = asked ? "" : craftOfQuery(typed);
+  // A question ("מי מזמין מושן בתל אביב") becomes the craft plus the remaining words ("תל אביב").
+  const parsed = asked ? { craft: "", q: typed } : parseQuery(typed);
+  const named = parsed.craft;
   const craft = asked || named;
-  const q = named ? "" : typed;
+  const q = parsed.q;
   const any = Boolean(q || craft);
   const claim = PROFILES_ENABLED && Boolean(supabaseConfig());
 
@@ -32,9 +38,11 @@ export default async function Search({ searchParams }) {
   const companies = any ? searchCompanies(q, craft) : [];
   const seeds = any ? searchSeeds({ q, craft, exclude: hidden }) : [];
   const people = seeds.length + members.length;
-  // Open tenders for the same words or craft (they also count as results).
+  // Live tenders (open, then upcoming) for the same words or craft; each row says which.
   const tenders = any ? listTenders({ q, craft }) : [];
-  const nothing = any && companies.length + people + tenders.length === 0;
+  // Tools by name or maker (only with the TOOLS flag on; empty otherwise).
+  const tools = q ? searchTools(q) : [];
+  const nothing = any && companies.length + people + tenders.length + tools.length === 0;
 
   return (
     <div className="wrap">
@@ -44,7 +52,7 @@ export default async function Search({ searchParams }) {
         ) : (
           <h1>{q ? <>תוצאות ל<bdi>״{q}״</bdi></> : "חיפוש בכל האתר"}</h1>
         )}
-        {any ? <p>{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים פתוחים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
+        {any ? <p>{companies.length} חברות · {people} אנשים{tenders.length ? ` · ${tenders.length} מכרזים` : ""}</p> : <p>חברות, סטודיואים, מותגים ואנשים. לפי שם, תחום או תפקיד.</p>}
       </div>
       <form className="psearch lg searchbox" role="search" action="/search">
         <input type="search" name="q" defaultValue={q} placeholder={craft && !q ? `חיפוש בתוך ${craftLabel(craft)}` : "חברה, תחום, תפקיד או שם"} aria-label="חיפוש בכל האתר" />
@@ -57,6 +65,8 @@ export default async function Search({ searchParams }) {
         </div>
       )}
 
+      {aiReady() && askable(typed) && <AskAnswer key={typed} q={typed} />}
+
       {nothing && (
         <div className="soon" style={{ marginBlockStart: 48 }}>
           <h3>לא מצאנו כלום ל<bdi>״{q || craftLabel(craft)}״</bdi></h3>
@@ -67,14 +77,31 @@ export default async function Search({ searchParams }) {
       {tenders.length > 0 && (
         <section aria-labelledby="td-h">
           <div className="subhead">
-            <h2 id="td-h">מכרזים פתוחים <span className="count">{tenders.length}</span></h2>
+            <h2 id="td-h">מכרזים <span className="count">{tenders.length}</span></h2>
             <a className="btn sm" href={`/tenders?${qs({ q, craft })}`}>למכרזים</a>
           </div>
           <div className="tresults">
             {tenders.slice(0, 4).map((t) => (
               <a key={t.id} className="trow" href={`/tenders?${qs({ q, craft })}`}>
                 <b>{t.scope_summary}</b>
-                <span>{t.buyer_name_he || t.buyer} · {t.countdown.text} · הגשה עד <bdi>{t.deadline}</bdi></span>
+                <span>{t.buyer_name_he || t.buyer} · {t.state === "open" ? `${t.countdown.text} · ` : ""}<bdi>{t.when}</bdi></span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {tools.length > 0 && (
+        <section aria-labelledby="tl-h">
+          <div className="subhead">
+            <h2 id="tl-h">כלים <span className="count">{tools.length}</span></h2>
+            <a className="btn sm" href="/tools">לכל הכלים</a>
+          </div>
+          <div className="tresults">
+            {tools.map((t) => (
+              <a key={t.id} className="trow" href={`/tools#${t.id}`}>
+                <b lang="en" dir="ltr" style={{ textAlign: "start" }}>{t.name}</b>
+                <span>{t.one_line_he}</span>
               </a>
             ))}
           </div>
@@ -91,10 +118,10 @@ export default async function Search({ searchParams }) {
             {companies.slice(0, 9).map((o) => (
               <div key={o.id} className="orow-wrap">
                 <a className="orow" href={companyHref(o.id)}>
-                  <span className="logo">{o.logo ? <img src={o.logo} alt="" /> : (o.name_he || o.name).slice(0, 1)}</span>
+                  <span className="logo">{o.logo_hi ? <img src={o.logo_hi} alt="" width={48} height={48} loading="lazy" decoding="async" style={o.logo_px ? { maxWidth: o.logo_px, maxHeight: o.logo_px } : undefined} /> : (o.name_he || o.name).slice(0, 1)}</span>
                   <span className="nm">
                     <b><bdi>{o.name_he || o.name}</bdi></b>
-                    <span>{[kindLabel(o.kind), ["client", "agency"].includes(o.kind) && o.buys.length ? `מזמינים ${o.buys.slice(0, 2).join(", ")}` : o.categories.slice(0, 2).map(craftLabel).join(", ")].filter(Boolean).join(" · ")}</span>
+                    <span className="kline"><KindTag kind={o.kind} /><span>{["client", "agency"].includes(o.kind) && o.buys.length ? `מזמינים ${o.buys.slice(0, 2).join(", ")}` : o.categories.slice(0, 2).map(craftLabel).join(", ")}</span></span>
                   </span>
                 </a>
                 <FollowButton orgId={o.id} orgName={o.name_he || o.name} compact />

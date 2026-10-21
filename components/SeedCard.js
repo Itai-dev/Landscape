@@ -25,12 +25,19 @@ function RoleLink({ r }) {
 // A person listed from public sources (a company site, the trade press). Not a member: no profile page, no contact details.
 // The page explains "from public sources" once, so the card doesn't repeat it. The claim button shows only when
 // profiles are on (NEXT_PUBLIC_PROFILES) and sign-up is open.
+// Two initials from the listed name ("Amit Krasny" → "AK"). Letters only, never a picture.
+const initials = (name) => {
+  const w = String(name || "").split(/\s+/).map((x) => x.replace(/[^\p{L}]/gu, "")).filter(Boolean);
+  if (!w.length) return "";
+  return ((w[0][0] || "") + (w.length > 1 ? w[w.length - 1][0] : "")).toUpperCase();
+};
+
 export default function SeedCard({ p, claim = false }) {
   const [first, ...rest] = p.roles;
   return (
     <article className="pcard">
       <div className="head">
-        <span className="avatar md soft" aria-hidden><PersonIcon size={22} /></span>
+        <span className="avatar md initials" aria-hidden lang="en">{initials(p.name) || <PersonIcon size={22} />}</span>
         <div>
           <h3><bdi>{p.name}</bdi></h3>
           {roleTypeLabel(first.role_type) && <span className="kindlabel">{roleTypeLabel(first.role_type)}</span>}

@@ -7,6 +7,7 @@
     "retail-fashion"
   ],
   "description": "Israeli family fashion chain (est. 1992 by HaMashbir) selling clothing for men, women and kids plus footwear, homewares, bedding and toiletries; owned by the Livnat family, ~800 employees.",
+  "description_he": "רשת אופנה ישראלית למשפחה (נוסדה ב-1992 על ידי המשביר) המוכרת ביגוד לגברים, נשים וילדים וגם הנעלה, מוצרי בית, מצעים וטואלטיקה; בבעלות משפחת לבנת, כ-800 עובדים.",
   "location": {
     "country": "IL"
   },
@@ -15,6 +16,11 @@
   "status": "active",
   "website": "https://www.h-o.co.il",
   "contact_url": "https://www.h-o.co.il/contact",
+  "links": {
+    "facebook": "https://www.facebook.com/h.o.official",
+    "instagram": "https://www.instagram.com/ho.fashion_",
+    "youtube": "https://www.youtube.com/channel/UCU27gTDhgyOlJMDhhbpLxuw"
+  },
   "client_profile": {
     "industry": "family fashion retail",
     "creative_needs": [
@@ -43,6 +49,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "רשת אופנה ישראלית למשפחה (נוסדה ב-1992 על ידי המשביר) המוכרת ביגוד לגברים, נשים וילדים וגם הנעלה, מוצרי בית, מצעים וטואלטיקה; בבעלות משפחת לבנת, כ-800 עובדים."
+  "last_verified": "2026-10-19"
 }

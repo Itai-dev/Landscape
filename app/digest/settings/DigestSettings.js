@@ -28,9 +28,13 @@ export default function DigestSettings() {
   useEffect(() => {
     if (!user) return;
     (async () => {
-      const res = await fetch("/api/digest/prefs", { cache: "no-store" });
-      if (res.ok) setPrefs((await res.json()).prefs);
-      else setState("error");
+      try {
+        const res = await fetch("/api/digest/prefs", { cache: "no-store" });
+        if (res.ok) setPrefs((await res.json()).prefs);
+        else setState("error");
+      } catch {
+        setState("error");
+      }
     })();
   }, [user]);
 
@@ -54,18 +58,27 @@ export default function DigestSettings() {
   async function save(e) {
     e.preventDefault();
     setState("saving");
-    const res = await fetch("/api/digest/prefs", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ frequency: prefs.frequency, crafts: prefs.crafts, consent }),
-    });
+    let res;
+    try {
+      res = await fetch("/api/digest/prefs", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ frequency: prefs.frequency, crafts: prefs.crafts, consent }),
+      });
+    } catch {
+      setSaveError("אין חיבור כרגע. אפשר לנסות שוב.");
+      setState("error");
+      return;
+    }
     if (res.ok) {
       const j = await res.json();
-      setPrefs({ ...prefs, ...j, consent_at: prefs.consent_at || (j.frequency !== "off" ? new Date().toISOString() : null) });
+      // Switching the email off withdraws consent; switching it on again asks for it again.
+      setPrefs({ ...prefs, ...j, consent_at: j.frequency === "off" ? null : prefs.consent_at || new Date().toISOString() });
+      setConsent(false);
       setState("saved");
     } else {
       const j = await res.json().catch(() => ({}));
-      setSaveError(j.error === "consent_required" ? "כדי לקבל את המייל השבועי צריך לסמן את האישור." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setSaveError(j.error === "consent_required" ? "כדי לקבל את המייל השבועי צריך לסמן את האישור." : res.status === 429 ? "יותר מדי שמירות ברצף. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
       setState("error");
     }
   }

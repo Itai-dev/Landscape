@@ -1,12 +1,14 @@
 {
   "id": "rapyd",
   "name": "Rapyd",
+  "name_he": "ראפיד",
   "kind": "client",
   "categories": [
     "tech",
     "banking-finance"
   ],
   "description": "Fintech-as-a-service payments platform founded in Tel Aviv in 2016 by Arik Shtilman, Arkady Karpman and Omer Priel; Israel's largest private tech company. Title sponsor of Maccabi Rapyd Tel Aviv basketball since 2025.",
+  "description_he": "פלטפורמת תשלומים בשיטת Fintech-as-a-Service שנוסדה בתל אביב ב-2016 על ידי אריק שטילמן, ארקדי קרפמן ועומר פריאל; חברת הטכנולוגיה הפרטית הגדולה בישראל. נותנת החסות השמית של מכבי ראפיד תל אביב בכדורסל מאז 2025.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -16,6 +18,12 @@
   "website": "https://www.rapyd.net",
   "contact_url": "https://www.rapyd.net/contact/",
   "careers_url": "https://www.rapyd.net/company/careers/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/rapydpayments/",
+    "facebook": "https://www.facebook.com/rapydpayments",
+    "instagram": "https://www.instagram.com/wearerapyd",
+    "youtube": "https://www.youtube.com/channel/UCQEgwX9qILl5NAsRULVRZWA"
+  },
   "key_people": [
     {
       "name": "Marc Winitz",
@@ -54,7 +62,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "פלטפורמת תשלומים בשיטת Fintech-as-a-Service שנוסדה בתל אביב ב-2016 על ידי אריק שטילמן, ארקדי קרפמן ועומר פריאל; חברת הטכנולוגיה הפרטית הגדולה בישראל. נותנת החסות השמית של מכבי ראפיד תל אביב בכדורסל מאז 2025.",
-  "name_he": "ראפיד"
+  "last_verified": "2026-10-19"
 }

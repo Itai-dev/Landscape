@@ -11,6 +11,7 @@
     "video-tools"
   ],
   "description": "Tel Aviv publisher-video technology company, founded 2012 as interactive-content platform Playbuzz and rebranded EX.CO in 2019. Offers a video player, video CMS, livestreaming, CTV and an ML-driven monetization engine for publishers and media owners.",
+  "description_he": "חברת טכנולוגיית וידאו למו\"לים מתל אביב, שנוסדה ב-2012 כפלטפורמת התוכן האינטראקטיבי Playbuzz ומותגה מחדש כ-EX.CO ב-2019. מציעה נגן וידאו, CMS לווידאו, שידורים חיים, CTV ומנוע מונטיזציה מבוסס למידת מכונה למו\"לים ולבעלי מדיה.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -19,6 +20,12 @@
   "size": "51-200",
   "status": "active",
   "website": "https://ex.co",
+  "contact_url": "https://ex.co/contact",
+  "careers_url": "https://ex.co/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/excoplatform/",
+    "youtube": "https://www.youtube.com/channel/UCc99IT0x9Za1uQ_r8b1PwXQ"
+  },
   "services": [
     "Web video player & OVP",
     "Video CMS",
@@ -55,6 +62,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "חברת טכנולוגיית וידאו למו\"לים מתל אביב, שנוסדה ב-2012 כפלטפורמת התוכן האינטראקטיבי Playbuzz ומותגה מחדש כ-EX.CO ב-2019. מציעה נגן וידאו, CMS לווידאו, שידורים חיים, CTV ומנוע מונטיזציה מבוסס למידת מכונה למו\"לים ולבעלי מדיה."
+  "last_verified": "2026-10-18"
 }

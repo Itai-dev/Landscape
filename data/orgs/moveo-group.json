@@ -8,6 +8,7 @@
     "branding"
   ],
   "description": "Tel Aviv technology and creative group made up of specialist business units covering software development, AI and automation, creative and branding, and growth marketing, among others. Client logos include Google, Nestlé, Teva, SodaStream, Elementor, Artlist and Bank Leumi.",
+  "description_he": "קבוצת טכנולוגיה וקריאייטיב מתל אביב שמורכבת מיחידות עסקיות מתמחות בתחומי פיתוח תוכנה, AI ואוטומציה, קריאייטיב ומיתוג, שיווק צמיחה ועוד. בין הלקוחות: Google, נסטלה, טבע, סודהסטרים, Elementor, Artlist ובנק לאומי.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -16,6 +17,10 @@
   "website": "https://www.moveo.group/",
   "contact_url": "https://www.moveo.group/contact",
   "careers_url": "https://www.moveo.group/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/moveo-group/",
+    "instagram": "https://www.instagram.com/moveo_group"
+  },
   "services": [
     "Software development",
     "AI & automation",
@@ -46,6 +51,5 @@
   "confidence": "low",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Address: Lilienblum 31, Tel Aviv. Only official-site evidence; mostly a software/tech services group with a creative unit.",
-  "description_he": "קבוצת טכנולוגיה וקריאייטיב מתל אביב שמורכבת מיחידות עסקיות מתמחות בתחומי פיתוח תוכנה, AI ואוטומציה, קריאייטיב ומיתוג, שיווק צמיחה ועוד. בין הלקוחות: Google, נסטלה, טבע, סודהסטרים, Elementor, Artlist ובנק לאומי."
+  "notes": "Address: Lilienblum 31, Tel Aviv. Only official-site evidence; mostly a software/tech services group with a creative unit."
 }

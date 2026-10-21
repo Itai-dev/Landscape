@@ -8,12 +8,17 @@
     "real-estate"
   ],
   "description": "Israel's largest classifieds site (founded 2005) for cars, real estate, second-hand goods and jobs; acquired by Apax from KKR in Dec 2025 (~$950M). A major TV advertiser.",
+  "description_he": "אתר הלוחות הגדול בישראל (נוסד ב-2005) לרכב, נדל\"ן, יד שנייה ודרושים; נרכש על ידי Apax מ-KKR בדצמבר 2025 (כ-950 מיליון דולר). מפרסם גדול בטלוויזיה.",
   "location": {
     "country": "IL"
   },
   "founded": 2005,
   "status": "active",
   "website": "https://www.yad2.co.il",
+  "links": {
+    "facebook": "https://www.facebook.com/yad2page",
+    "youtube": "https://www.youtube.com/user/MeYad2"
+  },
   "key_people": [
     {
       "name": "Ayelet Nitzan",
@@ -55,6 +60,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Budget moved from Reuveni-Pridan to McCann Tel Aviv from 2026 (Globes, Dec 2025). Rival Madlan went to Reuveni-Pridan (Jun 2026). Agency as of 2026-10: McCann Tel Aviv lists Yad2 among its main budgets (Globes, Oct 2026).",
-  "description_he": "אתר הלוחות הגדול בישראל (נוסד ב-2005) לרכב, נדל\"ן, יד שנייה ודרושים; נרכש על ידי Apax מ-KKR בדצמבר 2025 (כ-950 מיליון דולר). מפרסם גדול בטלוויזיה."
+  "notes": "Budget moved from Reuveni-Pridan to McCann Tel Aviv from 2026 (Globes, Dec 2025). Rival Madlan went to Reuveni-Pridan (Jun 2026). Agency as of 2026-10: McCann Tel Aviv lists Yad2 among its main budgets (Globes, Oct 2026)."
 }

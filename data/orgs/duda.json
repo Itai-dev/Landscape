@@ -7,6 +7,7 @@
     "design-tools"
   ],
   "description": "Professional website-building platform aimed at web agencies and SaaS/hosting companies that build sites for small businesses (white-label 'website-as-a-service'). Founded in 2009 by Itai Sadan and Amir Glatt; headquartered in Palo Alto with its R&D centre in Tel Aviv.",
+  "description_he": "פלטפורמה מקצועית לבניית אתרים המיועדת לסוכנויות ווב ולחברות SaaS ואחסון שבונות אתרים לעסקים קטנים ('אתר כשירות' בווייט לייבל). נוסדה ב-2009 על ידי איתי סדן ואמיר גלט; מטה בפאלו אלטו ומרכז פיתוח בתל אביב.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -17,6 +18,13 @@
   "founded": 2009,
   "status": "active",
   "website": "https://www.duda.co",
+  "contact_url": "https://www.duda.co/contact",
+  "careers_url": "https://www.duda.co/careers",
+  "links": {
+    "facebook": "https://www.facebook.com/duda",
+    "linkedin": "https://www.linkedin.com/company/duda/",
+    "youtube": "https://www.youtube.com/user/dudamobile"
+  },
   "services": [
     "White-label website builder for agencies",
     "Website-as-a-service APIs for SaaS platforms"
@@ -53,6 +61,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Legal HQ Palo Alto; Israeli presence is the Tel Aviv R&D office.",
-  "description_he": "פלטפורמה מקצועית לבניית אתרים המיועדת לסוכנויות ווב ולחברות SaaS ואחסון שבונות אתרים לעסקים קטנים ('אתר כשירות' בווייט לייבל). נוסדה ב-2009 על ידי איתי סדן ואמיר גלט; מטה בפאלו אלטו ומרכז פיתוח בתל אביב."
+  "notes": "Legal HQ Palo Alto; Israeli presence is the Tel Aviv R&D office."
 }

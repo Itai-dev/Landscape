@@ -11,7 +11,8 @@ const DESC = "כמה גובים במושן, אנימציה, VFX, פוסט, סא�
 export const metadata = {
   title: TITLE,
   description: DESC,
-  openGraph: { title: TITLE, description: DESC, type: "article", locale: "he_IL", siteName: "Landscape", images: [{ url: "/og/survey.png", width: 1200, height: 630, alt: TITLE }] },
+  alternates: { canonical: "/survey/results" },
+  openGraph: { title: TITLE, description: DESC, type: "article", locale: "he_IL", siteName: "CreativeIn", images: [{ url: "/og/survey.png", width: 1200, height: 630, alt: TITLE }] },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/og/survey.png"] },
 };
 

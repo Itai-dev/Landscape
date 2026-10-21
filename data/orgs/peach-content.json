@@ -10,6 +10,7 @@
     "pr-social"
   ],
   "description": "Content agency of the Gitam BBDO group: branded content, original series, documentaries and music videos, TV/radio/digital integrations, influencer teams and content strategy; its Peach Agendot unit works for non-profits. Credited on Strauss's 2026 Energy campaign with Hila Saada.",
+  "description_he": "סוכנות התוכן של קבוצת גיתם BBDO: תוכן שיווקי, סדרות מקור, דוקומנטרי וקליפים, אינטגרציות בטלוויזיה, ברדיו ובדיגיטל, צוותי משפיענים ואסטרטגיית תוכן; יחידת Peach Agendot שלה עובדת עם עמותות. מופיעה בקרדיטים של קמפיין Energy של שטראוס ל-2026 עם הילה סעדה.",
   "location": {
     "country": "IL",
     "city": "Bnei Brak"
@@ -20,7 +21,9 @@
   "contact_url": "https://www.peachcontent.com/contact/",
   "careers_url": "https://www.peachcontent.com/jobs/",
   "links": {
-    "linkedin": "https://www.linkedin.com/company/peachcontent"
+    "linkedin": "https://www.linkedin.com/company/peachcontent",
+    "facebook": "https://www.facebook.com/PeachContent",
+    "instagram": "https://www.instagram.com/peachcontent"
   },
   "services": [
     "Branded content",
@@ -116,6 +119,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
-  "description_he": "סוכנות התוכן של קבוצת גיתם BBDO: תוכן שיווקי, סדרות מקור, דוקומנטרי וקליפים, אינטגרציות בטלוויזיה, ברדיו ובדיגיטל, צוותי משפיענים ואסטרטגיית תוכן; יחידת Peach Agendot שלה עובדת עם עמותות. מופיעה בקרדיטים של קמפיין Energy של שטראוס ל-2026 עם הילה סעדה."
+  "last_verified": "2026-10-19"
 }

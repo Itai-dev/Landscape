@@ -10,6 +10,7 @@
     "gen-ai-video"
   ],
   "description": "Israeli visual generative-AI platform for enterprises and developers, offering image (and expanding to video) generation and editing models trained on 100% licensed data, with an attribution engine that compensates content owners.",
+  "description_he": "פלטפורמת ג'נרטיב AI ויזואלי ישראלית לארגונים ולמפתחים, שמציעה מודלים ליצירה ועריכה של תמונות (ומתרחבת לווידאו) שאומנו על דאטה מורשה ב-100%, עם מנוע ייחוס שמתגמל את בעלי התוכן.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -20,6 +21,12 @@
   "founded": 2020,
   "status": "active",
   "website": "https://bria.ai",
+  "contact_url": "https://bria.ai/contact-us",
+  "careers_url": "https://bria.ai/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/briaai/",
+    "instagram": "https://www.instagram.com/bria.ai"
+  },
   "services": [
     "Licensed-data text-to-image models",
     "Image editing APIs",
@@ -59,6 +66,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "$40M Series B (March 2025) led by Red Dot Capital brought total to $65M; Series B extension (Sept 2025) with Bright Pixel Capital.",
-  "description_he": "פלטפורמת ג'נרטיב AI ויזואלי ישראלית לארגונים ולמפתחים, שמציעה מודלים ליצירה ועריכה של תמונות (ומתרחבת לווידאו) שאומנו על דאטה מורשה ב-100%, עם מנוע ייחוס שמתגמל את בעלי התוכן."
+  "notes": "$40M Series B (March 2025) led by Red Dot Capital brought total to $65M; Series B extension (Sept 2025) with Bright Pixel Capital."
 }

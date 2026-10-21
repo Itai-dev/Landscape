@@ -8,12 +8,18 @@
     "education"
   ],
   "description": "Public research university on Mount Carmel, Haifa. Tenders its advertising and media buying (~NIS 3M a year in 2015, including student recruitment): Avraham won in 2015, replacing Yarkoni; publishes tenders at tender.haifa.ac.il.",
+  "description_he": "אוניברסיטת מחקר ציבורית על הכרמל בחיפה. מוציאה למכרז את הפרסום וקניית המדיה שלה (כ-3 מיליון ₪ בשנה ב-2015, כולל גיוס סטודנטים): אברהם זכה ב-2015 במקום ירקוני; מפרסמת מכרזים ב-tender.haifa.ac.il.",
   "location": {
     "country": "IL",
     "city": "Haifa"
   },
   "status": "active",
   "website": "https://www.haifa.ac.il",
+  "links": {
+    "instagram": "https://www.instagram.com/university_of_haifa",
+    "facebook": "https://www.facebook.com/univ.haifa.ac.il",
+    "youtube": "https://www.youtube.com/user/UniversityofHaifa"
+  },
   "client_profile": {
     "industry": "higher education",
     "creative_needs": [
@@ -55,6 +61,5 @@
   "confidence": "medium",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Current agency after the 2015 contract not verified.",
-  "description_he": "אוניברסיטת מחקר ציבורית על הכרמל בחיפה. מוציאה למכרז את הפרסום וקניית המדיה שלה (כ-3 מיליון ₪ בשנה ב-2015, כולל גיוס סטודנטים): אברהם זכה ב-2015 במקום ירקוני; מפרסמת מכרזים ב-tender.haifa.ac.il."
+  "notes": "Current agency after the 2015 contract not verified."
 }

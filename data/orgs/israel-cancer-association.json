@@ -11,6 +11,7 @@
     "health-pharma"
   ],
   "description": "Israeli non-profit for cancer prevention, research and patient support. Runs national awareness campaigns, e.g. colorectal-cancer screening campaigns with the Ministry of Health, created pro bono by Gitam BBDO (March 2024).",
+  "description_he": "עמותה ישראלית למניעת סרטן, מחקר ותמיכה בחולים. מריצה קמפיינים ארציים להעלאת מודעות, למשל קמפיינים לבדיקות סקר לסרטן המעי הגס יחד עם משרד הבריאות, שנוצרו בהתנדבות על ידי גיתם BBDO (מרץ 2024).",
   "location": {
     "country": "IL"
   },
@@ -18,7 +19,9 @@
   "website": "https://www.cancer.org.il",
   "contact_url": "https://www.cancer.org.il/contact/",
   "links": {
-    "youtube": "https://www.youtube.com/user/cancerisrael"
+    "youtube": "https://www.youtube.com/user/cancerisrael",
+    "instagram": "https://www.instagram.com/israel_cancer_association",
+    "facebook": "https://www.facebook.com/cancer.org.il"
   },
   "key_people": [
     {
@@ -63,6 +66,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Founding year and HQ city not verified.",
-  "description_he": "עמותה ישראלית למניעת סרטן, מחקר ותמיכה בחולים. מריצה קמפיינים ארציים להעלאת מודעות, למשל קמפיינים לבדיקות סקר לסרטן המעי הגס יחד עם משרד הבריאות, שנוצרו בהתנדבות על ידי גיתם BBDO (מרץ 2024)."
+  "notes": "Founding year and HQ city not verified."
 }

@@ -10,6 +10,7 @@
     "typography"
   ],
   "description": "Hebrew type foundry ('house of Hebrew typography') founded in 2011 by Tel Aviv typographer Avraham Cornfeld with a group of independent designers. Publishes 40+ mostly bilingual Hebrew-Latin families and runs a Hebrew typography blog/magazine.",
+  "description_he": "בית יציקה לאותיות עבריות ('בית לטיפוגרפיה עברית') שהוקם ב-2011 על ידי הטיפוגרף התל אביבי אברהם קורנפלד יחד עם קבוצת מעצבים עצמאיים. מפרסם יותר מ-40 משפחות פונטים, רובן דו-לשוניות עברית-לטינית, ומפעיל בלוג/מגזין על טיפוגרפיה עברית.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -21,7 +22,8 @@
   "links": {
     "myfonts": "https://www.myfonts.com/collections/alefalefalef/",
     "vimeo": "https://vimeo.com/alefalefalef",
-    "instagram": "https://www.instagram.com/alefalefalef"
+    "instagram": "https://www.instagram.com/alefalefalef",
+    "facebook": "https://www.facebook.com/alefalefalef"
   },
   "services": [
     "retail Hebrew typefaces",
@@ -60,6 +62,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "בית יציקה לאותיות עבריות ('בית לטיפוגרפיה עברית') שהוקם ב-2011 על ידי הטיפוגרף התל אביבי אברהם קורנפלד יחד עם קבוצת מעצבים עצמאיים. מפרסם יותר מ-40 משפחות פונטים, רובן דו-לשוניות עברית-לטינית, ומפעיל בלוג/מגזין על טיפוגרפיה עברית."
+  "last_verified": "2026-10-18"
 }

@@ -11,6 +11,7 @@
     "gen-ai-video"
   ],
   "description": "Israeli sports-tech company whose AI platform automatically creates, personalizes and distributes highlight clips and short-form content in real time for leagues, teams and broadcasters (NBA, LaLiga, DAZN, YouTube, ATP Media, NHL and others). R&D in Ramat Gan; offices in New York, London, Sydney, Tokyo and Beijing.",
+  "description_he": "חברת ספורט-טק ישראלית שפלטפורמת ה-AI שלה יוצרת, מתאימה אישית ומפיצה בזמן אמת ובאופן אוטומטי קטעי תקצירים ותוכן קצר לליגות, קבוצות וגופי שידור (NBA, LaLiga, DAZN, YouTube, ATP Media, NHL ועוד). מרכז פיתוח ברמת גן; משרדים בניו יורק, בלונדון, בסידני, בטוקיו ובבייג'ינג.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan",
@@ -25,6 +26,14 @@
   "founded": 2011,
   "status": "active",
   "website": "https://wsc-sports.com",
+  "contact_url": "https://wsc-sports.com/contact-us",
+  "careers_url": "https://wsc-sports.com/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/wsc-sports-technologies/",
+    "instagram": "https://www.instagram.com/wsc_sports",
+    "youtube": "https://www.youtube.com/@wsc-sports",
+    "facebook": "https://www.facebook.com/WSC.SportsTechnologies"
+  },
   "services": [
     "Automated highlights generation",
     "Sports video distribution",
@@ -80,6 +89,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Funding/founders not verified in this pass (search budget exhausted). Overlaps sports-media segment.",
-  "description_he": "חברת ספורט-טק ישראלית שפלטפורמת ה-AI שלה יוצרת, מתאימה אישית ומפיצה בזמן אמת ובאופן אוטומטי קטעי תקצירים ותוכן קצר לליגות, קבוצות וגופי שידור (NBA, LaLiga, DAZN, YouTube, ATP Media, NHL ועוד). מרכז פיתוח ברמת גן; משרדים בניו יורק, בלונדון, בסידני, בטוקיו ובבייג'ינג."
+  "notes": "Funding/founders not verified in this pass (search budget exhausted). Overlaps sports-media segment."
 }

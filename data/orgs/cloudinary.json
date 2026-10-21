@@ -1,6 +1,7 @@
 {
   "id": "cloudinary",
   "name": "Cloudinary",
+  "name_he": "קלאודינרי",
   "kind": "startup",
   "categories": [
     "media-infrastructure",
@@ -8,6 +9,7 @@
     "video-tools"
   ],
   "description": "Image and video management platform (digital asset management, transformation, optimization and delivery APIs) used by developers and marketing teams. Founded in Israel in 2012 by Itai Lahan, Tal Lev-Ami and Nadav Soferman; major R&D in Petah Tikva, US HQ in Santa Clara. Valued at $2B in a 2022 Blackstone secondary.",
+  "description_he": "פלטפורמה לניהול תמונות ווידאו (ניהול נכסים דיגיטליים ו-APIs להמרה, אופטימיזציה והגשה) שמשמשת מפתחים וצוותי שיווק. נוסדה בישראל ב-2012 על ידי איתי להן, טל לב-עמי ונדב סופרמן; מרכז פיתוח גדול בפתח תקווה, מטה אמריקאי בסנטה קלרה. הוערכה ב-2 מיליארד דולר בעסקת סקנדרי של Blackstone ב-2022.",
   "location": {
     "country": "IL",
     "city": "Petah Tikva",
@@ -21,6 +23,14 @@
   "size": "201-500",
   "status": "active",
   "website": "https://cloudinary.com",
+  "contact_url": "https://cloudinary.com/contact",
+  "careers_url": "https://cloudinary.com/careers",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/cloudinary/",
+    "facebook": "https://www.facebook.com/Cloudinary",
+    "instagram": "https://www.instagram.com/cloudinarylife",
+    "youtube": "https://www.youtube.com/@Cloudinary"
+  },
   "services": [
     "Image & video APIs",
     "Digital asset management (DAM)",
@@ -64,7 +74,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Reported $100M ARR in 2021. Headcount estimates 325-411 (third-party).",
-  "description_he": "פלטפורמה לניהול תמונות ווידאו (ניהול נכסים דיגיטליים ו-APIs להמרה, אופטימיזציה והגשה) שמשמשת מפתחים וצוותי שיווק. נוסדה בישראל ב-2012 על ידי איתי להן, טל לב-עמי ונדב סופרמן; מרכז פיתוח גדול בפתח תקווה, מטה אמריקאי בסנטה קלרה. הוערכה ב-2 מיליארד דולר בעסקת סקנדרי של Blackstone ב-2022.",
-  "name_he": "קלאודינרי"
+  "notes": "Reported $100M ARR in 2021. Headcount estimates 325-411 (third-party)."
 }

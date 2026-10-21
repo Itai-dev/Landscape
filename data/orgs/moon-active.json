@@ -1,11 +1,13 @@
 {
   "id": "moon-active",
   "name": "Moon Active",
+  "name_he": "מון אקטיב",
   "kind": "startup",
   "categories": [
     "game-development"
   ],
   "description": "Tel Aviv mobile game developer founded in 2011 by Samuel Albin, maker of Coin Master (which passed $6B lifetime gross revenue in 2024) and Travel Town; acquired Cyprus-based Melsoft (Family Island, My Cafe) in 2020 and was valued at $5B in a 2021 secondary round.",
+  "description_he": "מפתחת משחקי מובייל מתל אביב שנוסדה ב-2011 על ידי שמואל אלבין, היוצרת של Coin Master (שעבר הכנסות ברוטו מצטברות של 6 מיליארד דולר ב-2024) ו-Travel Town; רכשה ב-2020 את Melsoft הקפריסאית (Family Island, My Cafe) והוערכה ב-5 מיליארד דולר בסבב סקנדרי ב-2021.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv",
@@ -18,6 +20,7 @@
   "size": "1001-5000",
   "status": "active",
   "website": "https://www.moonactive.com/",
+  "careers_url": "https://www.moonactive.com/careers",
   "links": {
     "linkedin": "https://www.linkedin.com/company/moon-active/",
     "instagram": "https://www.instagram.com/lifeatmoonactive/",
@@ -73,7 +76,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "~1,300 employees (2021, Wikipedia); layoffs reported January 2025.",
-  "description_he": "מפתחת משחקי מובייל מתל אביב שנוסדה ב-2011 על ידי שמואל אלבין, היוצרת של Coin Master (שעבר הכנסות ברוטו מצטברות של 6 מיליארד דולר ב-2024) ו-Travel Town; רכשה ב-2020 את Melsoft הקפריסאית (Family Island, My Cafe) והוערכה ב-5 מיליארד דולר בסבב סקנדרי ב-2021.",
-  "name_he": "מון אקטיב"
+  "notes": "~1,300 employees (2021, Wikipedia); layoffs reported January 2025."
 }

@@ -10,6 +10,7 @@
     "motion-design"
   ],
   "description": "Tel Aviv 2D animation studio making explainer videos, motion graphics, character animation and animated commercials, focused on tech, SaaS and cybersecurity brands.",
+  "description_he": "סטודיו אנימציית 2D בתל אביב שמפיק סרטוני הסבר, מושן גרפיקס, אנימציית דמויות ופרסומות מונפשות, עם התמקדות במותגי טכנולוגיה, SaaS וסייבר.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -22,7 +23,8 @@
   "links": {
     "youtube": "https://www.youtube.com/@studiopoinkanima9961",
     "instagram": "https://www.instagram.com/studiopoink/",
-    "linkedin": "https://www.linkedin.com/company/poink-animation-studio"
+    "linkedin": "https://www.linkedin.com/company/poink-animation-studio",
+    "facebook": "https://www.facebook.com/StudioPoink"
   },
   "services": [
     "Explainer videos",
@@ -72,6 +74,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו אנימציית 2D בתל אביב שמפיק סרטוני הסבר, מושן גרפיקס, אנימציית דמויות ופרסומות מונפשות, עם התמקדות במותגי טכנולוגיה, SaaS וסייבר."
+  "last_verified": "2026-10-18"
 }

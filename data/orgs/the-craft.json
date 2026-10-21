@@ -10,6 +10,7 @@
     "cgi-3d"
   ],
   "description": "Tel Aviv architectural and interior visualization studio founded in 2015, crafting high-fidelity renderings, animations and virtual experiences for hotel brands, developers, architects, interior designers and branding agencies, with projects in Israel, the US, UK and the Gulf.",
+  "description_he": "סטודיו להדמיות אדריכלות ועיצוב פנים בתל אביב שנוסד ב-2015, ויוצר הדמיות ברמת נאמנות גבוהה, אנימציות וחוויות וירטואליות לרשתות מלונות, יזמים, אדריכלים, מעצבי פנים וסוכנויות מיתוג, עם פרויקטים בישראל, בארה\"ב, בבריטניה ובמפרץ.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -25,7 +26,8 @@
     "behance": "https://www.behance.net/thecraft",
     "instagram": "https://www.instagram.com/thecrafttlv/",
     "youtube": "https://www.youtube.com/@TheCraftTLV",
-    "x": "https://twitter.com/TheCraftTLV"
+    "x": "https://twitter.com/TheCraftTLV",
+    "facebook": "https://www.facebook.com/TheCraftTLV"
   },
   "services": [
     "Architectural visualization",
@@ -52,6 +54,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "סטודיו להדמיות אדריכלות ועיצוב פנים בתל אביב שנוסד ב-2015, ויוצר הדמיות ברמת נאמנות גבוהה, אנימציות וחוויות וירטואליות לרשתות מלונות, יזמים, אדריכלים, מעצבי פנים וסוכנויות מיתוג, עם פרויקטים בישראל, בארה\"ב, בבריטניה ובמפרץ."
+  "last_verified": "2026-10-18"
 }

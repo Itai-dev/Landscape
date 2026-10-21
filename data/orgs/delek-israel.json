@@ -10,6 +10,7 @@
     "energy"
   ],
   "description": "One of Israel's four big fuel companies (est. 1951), running hundreds of filling stations and convenience stores (rebranded from Menta to JOE in 2022) plus fuel-logistics subsidiaries. Not Delek Motors.",
+  "description_he": "אחת מארבע חברות הדלק הגדולות בישראל (נוסדה ב-1951), שמפעילה מאות תחנות דלק וחנויות נוחות (שמותגו מחדש ממנטה ל-JOE ב-2022) לצד חברות בת ללוגיסטיקת דלק. אינה דלק מוטורס.",
   "location": {
     "country": "IL"
   },
@@ -18,6 +19,9 @@
   "website": "https://delek.co.il",
   "contact_url": "https://delek.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8/",
   "careers_url": "https://delek.co.il/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D-%D7%97%D7%93%D7%A9/",
+  "links": {
+    "facebook": "https://www.facebook.com/Delek.il"
+  },
   "key_people": [
     {
       "name": "Keren Kupermintz",
@@ -73,6 +77,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Oct 2026 campaign was AI-directed — buyer for AI video. HQ city not confirmed.",
-  "description_he": "אחת מארבע חברות הדלק הגדולות בישראל (נוסדה ב-1951), שמפעילה מאות תחנות דלק וחנויות נוחות (שמותגו מחדש ממנטה ל-JOE ב-2022) לצד חברות בת ללוגיסטיקת דלק. אינה דלק מוטורס."
+  "notes": "Oct 2026 campaign was AI-directed — buyer for AI video. HQ city not confirmed."
 }

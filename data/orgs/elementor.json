@@ -1,12 +1,14 @@
 {
   "id": "elementor",
   "name": "Elementor",
+  "name_he": "אלמנטור",
   "kind": "startup",
   "categories": [
     "website-builders",
     "design-tools"
   ],
   "description": "Israeli company behind the Elementor visual page/website builder for WordPress (launched 2016), plus managed hosting and AI site tools; it reports powering over 21 million websites. Founded by Yoni Luksenberg and Ariel Klikstein and headquartered in Ramat Gan.",
+  "description_he": "החברה הישראלית שמאחורי Elementor, בונה העמודים והאתרים הוויזואלי לוורדפרס (הושק ב-2016), לצד אחסון מנוהל וכלי AI לבניית אתרים; לדבריה מופעלים באמצעותה יותר מ-21 מיליון אתרים. נוסדה על ידי יוני לוקסנבורג ואריאל קליקשטיין, ומטה החברה ברמת גן.",
   "location": {
     "country": "IL",
     "city": "Ramat Gan"
@@ -15,8 +17,11 @@
   "size": "201-500",
   "status": "active",
   "website": "https://elementor.com",
+  "contact_url": "https://elementor.com/contact",
   "links": {
-    "linkedin": "https://linkedin.com/company/elementor"
+    "linkedin": "https://linkedin.com/company/elementor",
+    "facebook": "https://www.facebook.com/elemntor",
+    "youtube": "https://www.youtube.com/channel/UCt9kG_EDX8zwGSC1-ycJJVA"
   },
   "services": [
     "WordPress website builder",
@@ -54,7 +59,5 @@
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "description_he": "החברה הישראלית שמאחורי Elementor, בונה העמודים והאתרים הוויזואלי לוורדפרס (הושק ב-2016), לצד אחסון מנוהל וכלי AI לבניית אתרים; לדבריה מופעלים באמצעותה יותר מ-21 מיליון אתרים. נוסדה על ידי יוני לוקסנבורג ואריאל קליקשטיין, ומטה החברה ברמת גן.",
-  "name_he": "אלמנטור"
+  "last_verified": "2026-10-18"
 }

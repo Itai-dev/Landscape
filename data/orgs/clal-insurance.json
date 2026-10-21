@@ -10,6 +10,7 @@
     "banking-finance"
   ],
   "description": "Israeli insurance and finance group (Clal Holdings) covering insurance, pensions and savings; acquired credit-card company Max in 2023.",
+  "description_he": "קבוצת ביטוח ופיננסים ישראלית (כלל החזקות) הפועלת בביטוח, פנסיה וחיסכון; רכשה ב-2023 את חברת כרטיסי האשראי מקס.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -18,6 +19,10 @@
   "website": "https://www.clalbit.co.il",
   "contact_url": "https://www.clalbit.co.il/contactus/",
   "careers_url": "https://www.clalbit.co.il/careers/",
+  "links": {
+    "facebook": "https://www.facebook.com/clalbit",
+    "youtube": "https://youtube.com/@clalinsurance"
+  },
   "key_people": [
     {
       "name": "Gali Shved",
@@ -69,6 +74,5 @@
   "confidence": "medium",
   "added": "2026-10-18",
   "last_verified": "2026-10-19",
-  "notes": "Globes (Jan 2023) listed Clal among Yehoshua TBWA's clients, but it was not in TBWA's Nov 2025 client list, so current agency unconfirmed. HQ city from general knowledge.",
-  "description_he": "קבוצת ביטוח ופיננסים ישראלית (כלל החזקות) הפועלת בביטוח, פנסיה וחיסכון; רכשה ב-2023 את חברת כרטיסי האשראי מקס."
+  "notes": "Globes (Jan 2023) listed Clal among Yehoshua TBWA's clients, but it was not in TBWA's Nov 2025 client list, so current agency unconfirmed. HQ city from general knowledge."
 }

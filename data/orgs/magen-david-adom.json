@@ -11,6 +11,7 @@
     "health-pharma"
   ],
   "description": "Israel's national emergency medical, disaster, ambulance and blood-bank service, recognised by the ICRC. Tenders its advertising: Ashkenazi Zalzman won the 2016 tender for the 'Ne'emanei Chaim' (Life Guardians) volunteer-responder campaign across TV, press, outdoor and digital.",
+  "description_he": "שירות החירום הרפואי, ההצלה, האמבולנסים ובנק הדם הלאומי של ישראל, המוכר על ידי הוועד הבינלאומי של הצלב האדום. מוציא את הפרסום שלו למכרז: אשכנזי זלצמן זכה במכרז 2016 לקמפיין גיוס המתנדבים 'נאמני חיים' בטלוויזיה, בעיתונות, בחוצות ובדיגיטל.",
   "location": {
     "country": "IL"
   },
@@ -20,7 +21,9 @@
   "contact_url": "https://www.mdais.org/contactus",
   "careers_url": "https://www.mdais.org/jobs",
   "links": {
-    "youtube": "https://www.youtube.com/mdaisrael"
+    "youtube": "https://www.youtube.com/mdaisrael",
+    "instagram": "https://www.instagram.com/magen_david_adom",
+    "facebook": "https://www.facebook.com/mdaisrael"
   },
   "client_profile": {
     "industry": "emergency medical service / NGO",
@@ -54,6 +57,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Tenders and single-supplier notices at mdais.org/tenders. Current agency not verified.",
-  "description_he": "שירות החירום הרפואי, ההצלה, האמבולנסים ובנק הדם הלאומי של ישראל, המוכר על ידי הוועד הבינלאומי של הצלב האדום. מוציא את הפרסום שלו למכרז: אשכנזי זלצמן זכה במכרז 2016 לקמפיין גיוס המתנדבים 'נאמני חיים' בטלוויזיה, בעיתונות, בחוצות ובדיגיטל."
+  "notes": "Tenders and single-supplier notices at mdais.org/tenders. Current agency not verified."
 }

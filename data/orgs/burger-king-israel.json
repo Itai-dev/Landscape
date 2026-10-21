@@ -13,6 +13,13 @@
   },
   "status": "active",
   "website": "https://www.burgerking.co.il",
+  "contact_url": "https://www.burgerking.co.il/contact",
+  "careers_url": "https://www.burgerking.co.il/jobs",
+  "links": {
+    "facebook": "https://www.facebook.com/burgerkingil",
+    "instagram": "https://www.instagram.com/burgerkingisrael",
+    "youtube": "https://www.youtube.com/channel/UCz89-VUKl6BnMxudrY0DEtw"
+  },
   "key_people": [
     {
       "name": "Dana Tuchner",

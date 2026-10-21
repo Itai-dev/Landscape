@@ -7,6 +7,7 @@
     "retail-fashion"
   ],
   "description": "Israeli fashion chain (est. 1993) selling women's and men's apparel, accessories and a home line (Renuar & More), plus the young-adult brand Twentyfourseven; about 95 points of sale and ~1,300 employees, owned by its founders.",
+  "description_he": "רשת אופנה ישראלית (נוסדה ב-1993) שמוכרת ביגוד לנשים ולגברים, אקססוריז וקו לבית (Renuar & More), לצד מותג הצעירים Twentyfourseven; כ-95 נקודות מכירה וכ-1,300 עובדים, בבעלות המייסדים.",
   "location": {
     "country": "IL",
     "city": "Rishon LeZion"
@@ -17,6 +18,11 @@
   "website": "https://www.renuar.co.il",
   "contact_url": "https://renuar.co.il/pages/contact",
   "careers_url": "https://www.renuar.co.il/pages/%D7%93%D7%A8%D7%95%D7%A9%D7%99%D7%9D",
+  "links": {
+    "facebook": "https://www.facebook.com/renuaril",
+    "instagram": "https://www.instagram.com/renuar",
+    "youtube": "https://www.youtube.com/user/renuaril"
+  },
   "key_people": [
     {
       "name": "Ron Kahan",
@@ -71,6 +77,5 @@
   "confidence": "high",
   "added": "2026-10-19",
   "last_verified": "2026-10-19",
-  "notes": "Marketing VP Yifat Pasternak left in June 2026 after ~7 years (ICE); successor not reported yet — a reason to reach out now. Jul 2026: Noa Ariel (ex-Renuar brand manager) returned as group VP marketing, replacing Yifat Pasternak (ICE).",
-  "description_he": "רשת אופנה ישראלית (נוסדה ב-1993) שמוכרת ביגוד לנשים ולגברים, אקססוריז וקו לבית (Renuar & More), לצד מותג הצעירים Twentyfourseven; כ-95 נקודות מכירה וכ-1,300 עובדים, בבעלות המייסדים."
+  "notes": "Marketing VP Yifat Pasternak left in June 2026 after ~7 years (ICE); successor not reported yet — a reason to reach out now. Jul 2026: Noa Ariel (ex-Renuar brand manager) returned as group VP marketing, replacing Yifat Pasternak (ICE)."
 }

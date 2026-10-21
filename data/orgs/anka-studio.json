@@ -14,6 +14,7 @@
     "commercial-production"
   ],
   "description": "Givatayim-based veteran animation and video studio producing promotional, product, explainer, exhibition and pitch videos since 2013, combining animation with live action for corporates and tech companies.",
+  "description_he": "סטודיו ותיק לאנימציה ווידאו מגבעתיים, שמפיק מאז 2013 סרטוני תדמית, מוצר, הסבר, תערוכות ופיץ', בשילוב אנימציה ולייב אקשן, לחברות ולחברות טכנולוגיה.",
   "location": {
     "country": "IL",
     "city": "Givatayim"
@@ -27,7 +28,8 @@
   "links": {
     "instagram": "https://www.instagram.com/anka_studio",
     "linkedin": "https://www.linkedin.com/company/10688377/",
-    "youtube": "https://www.youtube.com/channel/UC_9IV6tTU_M0SfKhCL8Pgxg"
+    "youtube": "https://www.youtube.com/channel/UC_9IV6tTU_M0SfKhCL8Pgxg",
+    "facebook": "https://www.facebook.com/ankanimation"
   },
   "services": [
     "Explainer videos",
@@ -63,6 +65,5 @@
   "confidence": "high",
   "added": "2026-10-18",
   "last_verified": "2026-10-18",
-  "notes": "Founded year 2013 from its own directory blurb ('since 2013').",
-  "description_he": "סטודיו ותיק לאנימציה ווידאו מגבעתיים, שמפיק מאז 2013 סרטוני תדמית, מוצר, הסבר, תערוכות ופיץ', בשילוב אנימציה ולייב אקשן, לחברות ולחברות טכנולוגיה."
+  "notes": "Founded year 2013 from its own directory blurb ('since 2013')."
 }
