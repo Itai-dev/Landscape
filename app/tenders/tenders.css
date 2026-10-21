@@ -25,7 +25,7 @@
 .tnote p { margin: 0; max-width: 720px; }
 
 /* Home: "מכרזים פתוחים עכשיו" */
-.tstrip { margin-block-start: var(--s-8); }
+.tstrip:not(.section) { margin-block-start: var(--s-8); }
 .tstrip .subhead { margin-block-start: 0; }
 .tstrip .subhead a { font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
 .tstrip .tgrid { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }

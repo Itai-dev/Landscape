@@ -60,11 +60,19 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - **Graceful without config**: with no env vars the site builds and shows "בקרוב" notices instead of sign-up.
 - Next: people search with AI across people + companies, newsletter sending (Resend), contact requests, Hebrew-name slugs.
 
-## Visual design v2 (owner: "Dribbble's look, with Simply's purple")
-- **Look**: white canvas, deep-purple ink, dark pill primary buttons, soft grey pill search with a round accent button, outlined pill tags, image-first people cards (cover tile, headline on hover, avatar + name below). Inspiration only: no Dribbble name, logo, copy or assets.
+## Visual design v2 (owner: "Dribbble's look, with Simply's purple") (look superseded by v3)
+- **Look** (replaced by v3 below): white canvas, deep-purple ink, dark pill primary buttons, soft grey pill search with a round accent button, outlined pill tags, image-first people cards. The accent colour and type below still hold.
 - **Colour**: one accent, Simply's `--color-primary-purple-haze` `#8217ff` (from hellosimply.com's CSS); ink is Simply's deep purple `#110034`. Both pass WCAG AA on white. Org-group colours (makers / tech / buyers) stay for the map; buyer moved from magenta to raspberry so it doesn't read as the accent.
 - **Type**: Mona Sans for Latin, Heebo for Hebrew (Mona Sans has no Hebrew; Heebo is the closest neutral grotesque).
 - **One product**: the same tokens in `app/globals.css` and `site/app.html`.
+
+## Visual design v3 (owner: "Awwwards-like UI and UX instead of Dribbble")
+- **Reference**: the editorial sites featured on Awwwards (Site of the Day style). Inspiration only: no Awwwards name, badge, copy or assets, and nothing copied from a specific winner.
+- **Look**: warm paper canvas (`#f5f4f0`), near-black ink (`#0f0d14`), hairline rules instead of shadows, squarer cards (8/12/20px radii; buttons and tags stay pills). Dark theme is the same idea inverted (`#0b0a0f` / `#f2f0ea`). Accent stays Simply's purple; all text pairs pass WCAG AA.
+- **Type**: oversized display headings (hero up to 120px, page heads up to 72px, weight 800, tight leading), start-aligned, calm 16px body. Still Mona Sans + Heebo, no tracking or uppercase on Hebrew.
+- **Layout**: start-aligned page heads with a hairline under them; home sections open with a numbered label on an ink rule ("01 חיפוש לפי תחום"); crafts are an index grid of hairline cells; "what you get" is numbered rows with an arrow; the digest sign-up sits in an inverse (ink) block.
+- **Motion**: hover states fill with ink or draw a line (nav underline, arrows sliding in); the hero settles in on load; sections rise into view where `animation-timeline: view()` is supported; a decorative craft ticker (aria-hidden; its links are in the grid). Everything stops under `prefers-reduced-motion`. No custom cursor, no scroll-jacking, no preloader: speed and tap targets (≥44px) come first.
+- **One product**: same tokens in `app/globals.css` and `site/app.html`; header and footer in `app/chrome.css`.
 
 ## Design round 1: layout, naming, people seed (owner feedback on v2)
 - **Layout**: search moved out of the header. Header = logo, People, Companies, one call to action (same bar in the companies app). Centered hero and section intros; one container (max 1200px, side gutter 20–48px); spacing, type and radius scales as tokens.

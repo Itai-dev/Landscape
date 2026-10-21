@@ -2,7 +2,7 @@ import SignupForm from "@/components/SignupForm";
 import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
 import SurveyBanner from "@/components/SurveyBanner";
-import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon, SparkIcon } from "@/components/Icons";
+import { SearchIcon, PeopleIcon, BuildingIcon, BellIcon, CraftIcon } from "@/components/Icons";
 import { craftLabel } from "@/lib/taxonomy";
 import { STATS, companiesWithCraft } from "@/lib/companies";
 import { supabaseConfig, PROFILES_ENABLED } from "@/lib/config";
@@ -25,33 +25,39 @@ export default function Home() {
 
       <section className="wrap">
         <div className="hero">
-          <span className="eyebrow"><SparkIcon size={14} /> {STATS.orgs} חברות ו־{STATS.people} אנשים במאגר</span>
-          {PROFILES_ENABLED ? (
-            <>
-              <h1>כל תעשיית הקריאייטיב בישראל. <em>במקום אחד.</em></h1>
+          <span className="eyebrow">{STATS.orgs} חברות ו־{STATS.people} אנשים במאגר</span>
+          {PROFILES_ENABLED
+            ? <h1>כל תעשיית הקריאייטיב בישראל. <em>במקום אחד.</em></h1>
+            : <h1>מי מזמין מה בתעשיית הקריאייטיב. <em>ומה השתנה השבוע.</em></h1>}
+          <div className="hero-foot">
+            {PROFILES_ENABLED ? (
               <p className="lead">
                 מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
                 {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.</span>}
               </p>
-            </>
-          ) : (
-            <>
-              <h1>מי מזמין מה בתעשיית הקריאייטיב. <em>ומה השתנה השבוע.</em></h1>
+            ) : (
               <p className="lead">
                 מותגים, משרדי פרסום וסטודיואים לפי מה שהם מזמינים, עם הסיבה לפנות עכשיו. חינם, לפי התחום שלכם.
               </p>
-            </>
-          )}
-          <form className="psearch lg searchbox" role="search" action="/search">
-            <input type="search" name="q" placeholder="תחום, חברה או שם" aria-label="חיפוש בכל האתר" />
-            <button className="go" aria-label="חיפוש"><SearchIcon size={22} /></button>
-          </form>
+            )}
+            <form className="psearch lg searchbox" role="search" action="/search">
+              <input type="search" name="q" placeholder="תחום, חברה או שם" aria-label="חיפוש בכל האתר" />
+              <button className="go" aria-label="חיפוש"><SearchIcon size={22} /></button>
+            </form>
+          </div>
         </div>
         <SurveyBanner />
       </section>
 
-      <section className="wrap section tight" aria-labelledby="crafts-h">
-        <h2 id="crafts-h" className="sr-only">חיפוש לפי תחום</h2>
+      {/* Decorative ticker of the same crafts; the links are in the grid below. */}
+      <div className="marquee" aria-hidden="true">
+        <div className="track">
+          {[...CRAFTS, ...CRAFTS].map((c, i) => <span key={i}>{craftLabel(c)}</span>)}
+        </div>
+      </div>
+
+      <section className="wrap section reveal" aria-labelledby="crafts-h">
+        <p className="kicker"><span className="idx">01</span><span id="crafts-h">חיפוש לפי תחום</span></p>
         <div className="crafts row8 scroll">
           {CRAFTS.map((c) => {
             const n = companiesWithCraft(c);
@@ -67,20 +73,21 @@ export default function Home() {
       </section>
 
       {tenders.length > 0 && (
-        <section className="wrap tstrip" aria-labelledby="tenders-h">
+        <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
+          <p className="kicker"><span className="idx">02</span><span>מכרזים</span><a className="end" href="/tenders">לכל המכרזים ‹</a></p>
           <div className="subhead">
             <h2 id="tenders-h">מכרזים פתוחים עכשיו <span className="count">{tenders.length}</span></h2>
-            <a href="/tenders">לכל המכרזים ‹</a>
           </div>
           <div className="tgrid">{tenders.slice(0, 3).map((t) => <TenderCard key={t.id} t={t} compact />)}</div>
         </section>
       )}
 
-      <section className="wrap section">
+      <section className="wrap section reveal" aria-labelledby="what-h">
+        <p className="kicker"><span className="idx">{tenders.length > 0 ? "03" : "02"}</span><span>מה יש כאן</span></p>
         <div className="intro">
-          <h2>{PROFILES_ENABLED ? "מה אפשר לעשות כאן" : "מה מקבלים כאן"}</h2>
+          <h2 id="what-h">{PROFILES_ENABLED ? "מה אפשר לעשות כאן" : "מה מקבלים כאן"}</h2>
         </div>
-        <div className="grid fit features">
+        <div className="rows">
           <a className="feature" href="/companies">
             <div className="ico"><BuildingIcon size={22} /></div>
             <div>
@@ -105,9 +112,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wrap section" id="join" aria-labelledby="join-h">
+      <section className="wrap section reveal" id="join" aria-labelledby="join-h">
         {PROFILES_ENABLED ? (
-          <div className="panel join">
+          <div className="panel inverse join">
             <div className="stack">
               <h2 id="join-h">{open ? "הצטרפות, והגיליון במייל" : "השבוע בתעשייה"}</h2>
               <p className="muted">
@@ -119,7 +126,7 @@ export default function Home() {
             {open && <div className="form"><SignupForm /></div>}
           </div>
         ) : (
-          <div className="panel join">
+          <div className="panel inverse join">
             <div className="stack">
               <h2 id="join-h">השבוע בתעשייה, במייל</h2>
               <p className="muted">
