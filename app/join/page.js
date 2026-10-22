@@ -6,17 +6,17 @@ import JoinFlow from "./JoinFlow";
 import "./join.css";
 
 export const metadata = {
-  title: "הרשמה לניוזלטר",
-  description: "בוחרים תחום, רואים איך ייראה המייל של יום ראשון, ומשאירים כתובת. חינם, הסרה בלחיצה.",
+  title: "הרשמה",
+  description: "חשבון חינם: מעקב אחרי חברות מכל מכשיר, התראות, ואם רוצים, ניוזלטר שבועי לפי התחום שלכם.",
   alternates: { canonical: "/join" },
 };
 
-// Sign-up for the weekly email in three short steps (crafts → preview → address). Signed in, the account
-// already has a confirmed address, so the settings page does the same job.
+// Sign-up in three short steps (crafts → newsletter yes / not now → address). Signed in, there is
+// nothing to sign up for: the personal area (/me) has the same choices.
 export default async function Join() {
   const sb = await serverClient();
   const user = sb ? await currentUser(sb).catch(() => null) : null;
-  if (user) redirect("/digest/settings");
+  if (user) redirect("/me");
   // Crafts with the most companies first: the first twelve show, the rest open on request.
   const crafts = CRAFTS.map((c) => ({ ...c, n: companiesWithCraft(c.slug) })).sort((a, b) => b.n - a.n);
   return <JoinFlow crafts={crafts} />;

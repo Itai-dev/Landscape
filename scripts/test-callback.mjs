@@ -72,5 +72,27 @@ await t("next must stay on this site", async () => {
   assert.ok(res.headers.get("location").startsWith("https://x.test/"));
 });
 
+await t("an account without the newsletter keeps its crafts and stays off the mailing list", async () => {
+  stub.state.user = user;
+  stub.tables.newsletter_prefs = [{ user_id: user.id, email: user.email, frequency: "off", crafts: [], consent_at: null }];
+  const res = await GET(new Request("https://x.test/auth/callback?code=abc&crafts=motion-design,branding,not-a-craft&next=/me%3Fwelcome%3D1"));
+  assert.equal(res.headers.get("location"), "https://x.test/me?welcome=1");
+  const prefs = stub.tables.newsletter_prefs[0];
+  assert.deepEqual(prefs.crafts, ["motion-design", "branding"]);
+  assert.equal(prefs.frequency, "off");
+  assert.ok(!prefs.consent_at);
+  assert.deepEqual(errors, []);
+});
+
+await t("the newsletter opt-in on sign-up subscribes with the crafts and records consent", async () => {
+  stub.state.user = user;
+  stub.tables.newsletter_prefs = [{ user_id: user.id, email: user.email, frequency: "off", crafts: [], consent_at: null }];
+  await GET(new Request("https://x.test/auth/callback?code=abc&subscribe=weekly&crafts=motion-design&next=/me%3Fwelcome%3D1"));
+  const prefs = stub.tables.newsletter_prefs[0];
+  assert.equal(prefs.frequency, "weekly");
+  assert.deepEqual(prefs.crafts, ["motion-design"]);
+  assert.ok(prefs.consent_at);
+});
+
 console.error = origError;
 console.log(`${passed} checks passed`);

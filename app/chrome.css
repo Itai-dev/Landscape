@@ -207,3 +207,8 @@ header.top form.hsearch { position: relative; }
 }
 @media (prefers-reduced-motion: reduce) { .totop, .totop svg { transition: none; } }
 @media print { .totop { display: none; } }
+
+/* "כניסה" beside the sign-up button, signed out only (desktop; on phones the tab bar leads to sign-up). */
+header.top .signin { color: var(--ink); min-height: 40px; display: inline-flex; align-items: center; padding: 0 12px; border-radius: 8px; font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap; }
+@media (hover: hover) { header.top .signin:hover { background: var(--surface); } }
+@media (max-width: 860px) { header.top .signin { display: none; } }

@@ -19,7 +19,7 @@ async function loadFollows(sb, userId) {
     sb.from("newsletter_prefs").select("alerts, alerts_consent_at").eq("user_id", userId).maybeSingle(),
   ]);
   const follows = (rows || []).filter((r) => ORG_NAMES.has(r.org_id)).map((r) => ({ id: r.org_id, name: ORG_NAMES.get(r.org_id), href: `/companies/${encodeURIComponent(r.org_id)}` }));
-  return { follows, alerts: prefs?.alerts || "off", consent: Boolean(prefs?.alerts_consent_at) };
+  return { follows, alerts: prefs?.alerts || "off", consent: Boolean(prefs?.alerts_consent_at), names: Object.fromEntries(ORG_NAMES) };
 }
 
 export default async function Me({ searchParams }) {
@@ -39,9 +39,9 @@ export default async function Me({ searchParams }) {
       // Signed out (or on another device): a sign-in link brings people back to their follows and settings.
       return (
         <div className="wrap narrow stack">
-          <div className="pagehead"><h1>החשבון שלי</h1><p>נכנסים עם קישור במייל: הניוזלטר, ההתראות על חברות והסקר.</p></div>
+          <div className="pagehead"><h1>כניסה</h1><p>נכנסים עם קישור במייל, בלי סיסמה: המעקב שלכם מכל מכשיר, ההתראות והניוזלטר.</p></div>
           <div className="card"><SignupForm next="/me#follows" digest={false} /></div>
-          <p className="small muted center">עוד לא נרשמתם? <a href="/digest#subscribe">להרשמה לניוזלטר</a></p>
+          <p className="small muted center">עוד אין לכם חשבון? <a href="/join">להרשמה, בחינם</a></p>
         </div>
       );
     }
@@ -50,6 +50,7 @@ export default async function Me({ searchParams }) {
     return (
       <div className="wrap narrow stack">
         <div className="pagehead"><h1>החשבון שלי</h1><p><bdi className="small">{user.email}</bdi></p></div>
+        {sp?.welcome === "1" && <p className="notice ok" role="status"><b>נכנסתם.</b> מכאן מנהלים את המעקב, ההתראות והניוזלטר. מה ששמרתם במעקב בדפדפן הזה נוסף לחשבון.</p>}
         <FollowsClient initial={follows} justFollowed={typeof sp?.followed === "string" ? sp.followed : ""} />
         <AccountClient />
       </div>
