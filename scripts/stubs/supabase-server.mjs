@@ -67,6 +67,10 @@ export async function serverClient() {
     auth: {
       exchangeCodeForSession: async () =>
         state.exchangeError ? { data: null, error: state.exchangeError } : { data: { user: state.user, session: { user: state.user } }, error: null },
+      verifyOtp: async ({ token_hash }) => {
+        state.verified = token_hash;
+        return state.exchangeError || !token_hash ? { data: null, error: state.exchangeError || { message: "bad token" } } : { data: { user: state.user, session: { user: state.user } }, error: null };
+      },
       getUser: async () => ({ data: { user: state.user } }),
     },
     from: query,
