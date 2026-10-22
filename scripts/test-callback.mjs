@@ -94,5 +94,21 @@ await t("the newsletter opt-in on sign-up subscribes with the crafts and records
   assert.ok(prefs.consent_at);
 });
 
+await t("a token_hash link (the email templates' link) works in any browser and saves the choices", async () => {
+  stub.state.user = user;
+  stub.tables.newsletter_prefs = [{ user_id: user.id, email: user.email, frequency: "off", crafts: [], consent_at: null }];
+  const res = await GET(new Request("https://x.test/auth/callback?next=%2Fme%3Fwelcome%3D1&subscribe=weekly&crafts=motion-design&token_hash=abc123&type=email"));
+  assert.equal(res.headers.get("location"), "https://x.test/me?welcome=1");
+  assert.equal(stub.state.verified, "abc123");
+  assert.equal(stub.tables.newsletter_prefs[0].frequency, "weekly");
+});
+
+await t("a link that fails lands on the sign-in page with a message", async () => {
+  stub.state.user = user;
+  stub.state.exchangeError = { message: "expired" };
+  const res = await GET(new Request("https://x.test/auth/callback?token_hash=old&type=email"));
+  assert.equal(res.headers.get("location"), "https://x.test/me?auth_error=1");
+});
+
 console.error = origError;
 console.log(`${passed} checks passed`);

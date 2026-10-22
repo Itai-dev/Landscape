@@ -13,14 +13,25 @@ const HOME = PROFILES_ENABLED ? "/onboard" : "/digest/settings";
 //   ?crafts=a,b (no subscribe)                     — an account without the newsletter: the crafts only
 //   ?ref=CODE                                      — an invite link, credited only to a brand-new account
 //   ?follow=ORG_ID&alerts=daily                    — a company followed signed out, with the alerts opt-in
+// Two kinds of link land here:
+//   ?token_hash=…&type=email — the email templates' link (docs/supabase-email-templates.md). Verified on the
+//     server, so it works in whatever browser opens it (a mail app's own browser, another phone).
+//   ?code=… — Supabase's default PKCE link; it only works in the browser that asked for it.
+// A link that fails lands on /me with a message and a sign-in form, never silently on the home page.
+const OTP_TYPES = new Set(["email", "magiclink", "signup"]);
+
 export async function GET(request) {
   const { searchParams, origin } = new URL(request.url);
   const code = searchParams.get("code");
+  const tokenHash = searchParams.get("token_hash");
+  const otpType = OTP_TYPES.has(searchParams.get("type")) ? searchParams.get("type") : "email";
   const nextParam = searchParams.get("next") || HOME;
   const next = nextParam.startsWith("/") && !nextParam.startsWith("//") ? nextParam : HOME;
   const sb = await serverClient();
-  if (sb && code) {
-    const { data, error } = await sb.auth.exchangeCodeForSession(code);
+  if (sb && (code || tokenHash)) {
+    const { data, error } = tokenHash
+      ? await sb.auth.verifyOtp({ type: otpType, token_hash: tokenHash })
+      : await sb.auth.exchangeCodeForSession(code);
     if (!error) {
       const user = data?.user || data?.session?.user || null;
       const admin = adminClient();
@@ -46,5 +57,5 @@ export async function GET(request) {
       return NextResponse.redirect(`${origin}${next}`);
     }
   }
-  return NextResponse.redirect(`${origin}/?auth_error=1`);
+  return NextResponse.redirect(`${origin}/me?auth_error=1`);
 }
