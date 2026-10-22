@@ -18,17 +18,17 @@ export default function Header() {
   useEffect(() => installTyping(document.querySelector("header.top form.hsearch input")), [path]);
   const active = MENU.find((n) => here(n.href))?.key || "";
   // Phone tab bar: which item is this page (the call to action counts for /join and the account).
-  const tab = path === "/" ? "home" : here("/tenders") ? "tenders" : here("/join") || here("/me") || here("/digest/settings") ? "cta" : "";
+  const tab = here("/companies") ? "companies" : here("/people") ? "people" : here("/tenders") ? "tenders" : here("/join") || here("/me") || here("/digest/settings") ? "cta" : "";
   return (
     <>
       <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: promoHtml() }} />
-      {/* Pages with their own big search (/test, the search-first home, and /search results) hide the header one. */}
-      <header className={["/test", "/search"].includes(path) ? "top home" : "top"}>
+      {/* Pages with their own search box (/test, /search, /people, /tenders) hide the header one. */}
+      <header className={["/test", "/search", "/people", "/tenders"].includes(path) ? "top nosearch" : "top"}>
         <div className="wrap">
           <span style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: BURGER }} />
           <a className="brand" href="/" lang="en" aria-label={`${BRAND}, לדף הבית`} dangerouslySetInnerHTML={{ __html: WORDMARK }} />
           <nav className="nav" aria-label="ניווט ראשי">
-            {NAV.map((n) => <a key={n.key} href={n.href} aria-current={here(n.href)}>{n.label}</a>)}
+            {NAV.map((n) => <a key={n.key} href={n.href} aria-current={n.key === "signals" ? undefined : here(n.href)}>{n.label}</a>)}
           </nav>
           <span style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: SITE_SEARCH }} />
           <div className="end">

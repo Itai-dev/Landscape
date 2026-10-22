@@ -6,6 +6,7 @@ import RotatingWord from "@/components/RotatingWord";
 import HeroMedia from "@/components/HeroMedia";
 import HeroSearch from "@/components/HeroSearch";
 import KindTag from "@/components/KindTag";
+import CountUp from "@/components/CountUp";
 import { KINDS } from "@/lib/kinds.mjs";
 import { craftLabel } from "@/lib/taxonomy";
 import { STATS, companiesWithCraft } from "@/lib/companies";
@@ -32,7 +33,7 @@ const POPULAR = ["motion-design", "branding", "animation-3d", "editing", "sound-
 
 // Three questions people ask before signing up. The rest is answered on /join.
 const FAQ = [
-  ["זה באמת בחינם?", "כן. המייל השבועי, החיפוש, המכרזים וההתראות בחינם. אין כרטיס אשראי ואין תקופת ניסיון."],
+  ["זה באמת בחינם?", "כן. הניוזלטר, החיפוש, המכרזים וההתראות בחינם. אין כרטיס אשראי ואין תקופת ניסיון."],
   ["מאיפה המידע?", "מפרסומים פומביים: אתרי החברות, ICE, גלובס, CTech, Geektime, משרות בלינקדאין ואתר מנהל הרכש הממשלתי. ליד כל פרט מופיע המקור שלו."],
   ["כמה מיילים, ואיך מסירים?", "עד מייל אחד בשבוע, ביום ראשון בבוקר (אפשר גם כל שבועיים או פעם בחודש). בכל מייל יש קישור להסרה בלחיצה אחת. את הכתובת לא מוכרים ולא משתפים."],
 ];
@@ -67,7 +68,7 @@ export default function HomePage({ split = false }) {
               <ul className="checks">
                 <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
                 <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי</span></li>
-                <li><CheckIcon size={18} /><span>מייל אחד ביום ראשון, רק מה ששייך לתחום שלכם. חינם</span></li>
+                <li><CheckIcon size={18} /><span>ניוזלטר שבועי בהתאמה אישית, חינם.</span></li>
               </ul>
               <div className="row">
                 <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
@@ -87,19 +88,12 @@ export default function HomePage({ split = false }) {
         </section>
       )}
 
-      <section className="wrap section tight reveal" aria-labelledby="cat-h">
-        <div className="sechead">
-          <div>
-            <h2 id="cat-h">התעשייה, מסודרת</h2>
-            <p>{STATS.orgs} חברות לפי סוג, תחום ועיר. כל אחת עם מה שהיא עושה או מזמינה, ומקור לכל פרט.</p>
-          </div>
-          <a className="btn" href="/companies" data-track="catalog_all">לכל החברות</a>
-        </div>
+      <section className="wrap section tight reveal" aria-label="החברות בתעשייה לפי סוג">
         <div className="catalog">
           {KINDS.filter((k) => STATS.byKind?.[k.kind]).map((k) => (
             <a key={k.kind} className="ctile" href={`/companies?kind=${k.kind}`} data-track="catalog_open" data-track-label={k.kind}>
               <KindTag kind={k.kind} many />
-              <span className="cn">{STATS.byKind[k.kind].toLocaleString("he-IL")}</span>
+              <CountUp className="cn" to={STATS.byKind[k.kind]} />
               <span className="cl">{k.line_he}</span>
             </a>
           ))}
@@ -173,7 +167,7 @@ export default function HomePage({ split = false }) {
       <section className="wrap section reveal" aria-labelledby="close-h">
         <div className="panel inverse closer">
           <h2 id="close-h">לא צריך להכיר את כולם. צריך לדעת מי מזמין, ומתי לפנות.</h2>
-          <a className="btn inv lg" href="/join" data-track="closer_join">להרשמה למייל השבועי</a>
+          <a className="btn inv lg" href="/join" data-track="closer_join">להרשמה לניוזלטר</a>
         </div>
       </section>
     </>
@@ -208,7 +202,7 @@ function ClassicHome() {
             </p>
           )}
           <div className="row">
-            <a className="btn primary lg" href="#join">להרשמה למייל השבועי</a>
+            <a className="btn primary lg" href="#join">להרשמה לניוזלטר</a>
             <a className="btn lg" href="/companies">לכל החברות</a>
           </div>
         </div>
@@ -297,7 +291,7 @@ function ClassicHome() {
         {PROFILES_ENABLED ? (
           <div className="panel inverse join">
             <div className="stack">
-              <h2 id="join-h">{open ? "הצטרפות, והמייל השבועי" : "השבוע בתעשייה"}</h2>
+              <h2 id="join-h">{open ? "הצטרפות, והניוזלטר" : "השבוע בתעשייה"}</h2>
               <p className="muted">
                 כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם מקור לכל פרט.
                 {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}

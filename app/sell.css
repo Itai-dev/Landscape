@@ -88,6 +88,7 @@
 
 /* "התעשייה, מסודרת": one tile per company type, with its tag, the real count and a short line. 3 columns, 2 on phones. */
 .catalog { display: grid; gap: var(--s-2); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (min-width: 1200px) { .catalog { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 @media (max-width: 759px) { .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .ctile { display: grid; align-content: start; justify-items: start; gap: var(--s-3); background: var(--surface); border-radius: var(--r); padding: var(--s-5); color: var(--ink); text-decoration: none; min-height: 168px; transition: background .2s ease; }
 @media (hover: hover) { .ctile:hover { background: var(--soft); text-decoration: none; } }

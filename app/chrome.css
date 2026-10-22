@@ -143,9 +143,9 @@ nav.sitebar { display: none; }
 }
 @media (hover: hover) and (max-width: 860px) { nav.sitebar a:not([aria-current]):hover { color: var(--bg); } }
 
-/* Home page: the hero has the search, so the header field is hidden there (Next site only; .home is set by Header.js). */
-header.top.home .hsearch { display: none; }
-header.top.home .end { margin-inline-start: auto; }
+/* Pages with their own search box hide the header field (.nosearch, set by Header.js and by headerHtml without a search). */
+header.top.nosearch .hsearch { display: none; }
+header.top.nosearch .end { margin-inline-start: auto; }
 
 /* Typing placeholder (lib/typing.mjs): an overlay over the search input, with a blinking caret after the text. */
 header.top form.hsearch { position: relative; }

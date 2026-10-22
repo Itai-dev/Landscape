@@ -1,6 +1,6 @@
 import { verifyUnsubscribe } from "@/lib/mailer";
 
-export const metadata = { title: "הסרה מהמייל השבועי", robots: { index: false } };
+export const metadata = { title: "הסרה מהניוזלטר", robots: { index: false } };
 
 // The unsubscribe link in every email opens this page. The confirm button does the change, so a mail
 // scanner that opens links can't unsubscribe anyone by accident (one-click clients POST directly).
@@ -13,7 +13,7 @@ export default async function Unsubscribe({ searchParams }) {
       <div className="wrap narrow">
         <div className="soon">
           <h1>ההסרה בוצעה</h1>
-          <p>המייל השבועי לא יישלח יותר לכתובת הזו. אפשר לחזור בכל רגע מעמוד ״השבוע בתעשייה״.</p>
+          <p>הניוזלטר לא יישלח יותר לכתובת הזו. אפשר לחזור בכל רגע מעמוד ״השבוע בתעשייה״.</p>
           <a className="btn" href="/digest">ל״השבוע בתעשייה״ באתר</a>
         </div>
       </div>
@@ -28,11 +28,11 @@ export default async function Unsubscribe({ searchParams }) {
   return (
     <div className="wrap narrow">
       <div className="soon">
-        <h1>הסרה מהמייל השבועי</h1>
+        <h1>הסרה מהניוזלטר</h1>
         {problem ? (
           <>
             <p>{problem}</p>
-            <a className="btn" href="/digest/settings">להגדרות המייל השבועי</a>
+            <a className="btn" href="/digest/settings">להגדרות הניוזלטר</a>
           </>
         ) : (
           <>
@@ -40,7 +40,7 @@ export default async function Unsubscribe({ searchParams }) {
             <form method="post" action="/api/digest/unsubscribe?form=1">
               <input type="hidden" name="u" value={u} />
               <input type="hidden" name="t" value={t} />
-              <button className="btn primary">להפסיק לקבל את המייל השבועי</button>
+              <button className="btn primary">להפסיק לקבל את הניוזלטר</button>
             </form>
             <a className="small tap" href="/digest/settings">אפשר גם רק לשנות תדירות או תחומים</a>
           </>
