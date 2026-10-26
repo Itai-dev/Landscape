@@ -2,9 +2,9 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300..700&family=Heebo:wght@300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
 <style>
-/* Type: Inter Tight (Latin) + Heebo (Hebrew); numbers in tabular figures, no monospace face (none has Hebrew).
+/* Type: Google Sans, one family for Latin and Hebrew (like Firma's single family); numbers in tabular figures, no monospace face (none has Hebrew).
    Look (reference: Awwwards, spec in team/DESIGN.md): grey canvas, white cards, #222 ink, no shadows; 8px corners on buttons,
    cards and fields, 4px on tags; filled or outlined ink buttons; a floating ink tab bar. Purple only as a small marker.
    Shared with the Next.js app (app/globals.css).
@@ -37,8 +37,8 @@
   --scrim: rgba(0, 0, 0, .42);
   --shadow: 0 24px 60px rgba(0, 0, 0, .14);
   --ease: cubic-bezier(.22, 1, .36, 1);
-  --f-display: "Inter Tight", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --f-body: "Inter Tight", "Heebo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-display: "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: var(--f-body);
   --tabbar: 62px;
   --max: 1760px;
@@ -100,7 +100,7 @@ button { cursor: pointer; }
 
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Heebo", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
+header.top .brand, footer.foot .brand { font-family: "Google Sans", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
 /* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a square black badge with a hard
    purple shadow. Hover (desktop, motion allowed): the badge tilts to +1deg, lifts, and the shadow grows and turns pink. */
 .wordmark { display: block; height: 30px; width: auto; overflow: visible; }
@@ -152,7 +152,7 @@ header.top .cta .cta-s, header.top .cta .cta-i { display: none; }
 @media (min-width: 561px) { .menusheet { inset-block-start: 72px; } }
 header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1fr); flex-direction: column; gap: 32px; align-content: start; min-height: 100%; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding: 8px var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px)); }
 .menusheet-nav { display: grid; border-block-start: 1px solid var(--line); }
-.menusheet-nav a { display: flex; align-items: center; min-height: 64px; border-block-end: 1px solid var(--line); color: var(--ink); font-size: 30px; font-weight: 300; line-height: 1.1; text-decoration: none; }
+.menusheet-nav a { display: flex; align-items: center; min-height: 64px; border-block-end: 1px solid var(--line); color: var(--ink); font-size: 28px; font-weight: 500; line-height: 1.1; text-decoration: none; }
 .menusheet-nav a[aria-current="page"] { font-weight: 500; }
 .menusheet-nav a[aria-current="page"]::after { content: ""; inline-size: 8px; block-size: 8px; border-radius: 2px; background: var(--accent); margin-inline-start: 12px; }
 .menusheet-end { display: flex; gap: 8px; align-items: center; }
@@ -311,7 +311,7 @@ html:not([data-site]) header.top .brand { pointer-events: none; }
 :root { --h1: clamp(28px, 8.2vw, 44px); --h2: clamp(24px, 5.8vw, 32px); --h3: clamp(17px, 4.4vw, 19px); --hw: 600; }
 @media (min-width: 960px) { :root { --h1: clamp(48px, 5vw, 80px); --h2: clamp(32px, 2.8vw, 44px); --h3: clamp(18px, 1.35vw, 21px); } }
 /* Same heading scale as the Next pages (app/globals.css): each level looks the same on every page. */
-.vhead h1, .listhead h1 { margin: 0; font-family: var(--f-display); font-weight: var(--hw); font-size: var(--h1); line-height: 1.04; letter-spacing: -.005em; text-wrap: balance; }
+.vhead h1, .listhead h1 { margin: 0; font-family: var(--f-display); font-weight: var(--hw); font-size: var(--h1); line-height: 1.08; letter-spacing: -.005em; text-wrap: balance; }
 .cbox { display: inline-block; vertical-align: 2px; margin-inline-start: 6px; padding: 1px 6px; border: 1px solid var(--ink); border-radius: 4px; font-size: .62em; font-weight: 400; line-height: 1.5; font-variant-numeric: tabular-nums; }
 .vhead p { margin: 0; color: var(--muted); font-size: 16px; max-width: 600px; }
 #v-explore .search, #v-explore .bar { width: 100%; }
@@ -432,7 +432,7 @@ main { padding-block: 6px 24px; }
 .home { max-width: 800px; margin-inline: auto; }
 .hero { padding-block: clamp(24px, 6vw, 64px) 8px; display: grid; gap: 16px; text-align: center; justify-items: center; }
 .hero > * { width: 100%; }
-.hero h1, .hero h2 { margin: 0; font-family: var(--f-display); font-weight: var(--hw); font-size: var(--h1); line-height: 1.04; letter-spacing: 0; text-wrap: balance; }
+.hero h1, .hero h2 { margin: 0; font-family: var(--f-display); font-weight: var(--hw); font-size: var(--h1); line-height: 1.08; letter-spacing: 0; text-wrap: balance; }
 .hero p { margin: 0 auto; color: var(--muted); font-size: 16px; max-width: 560px; }
 .metarow { display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: -4px; }
 #lang2 { display: none; }
@@ -534,7 +534,7 @@ nav.tabbar .badge { position: absolute; top: 4px; inset-inline-start: calc(50% +
 .sheet .close { position: sticky; top: 0; float: inline-end; margin-inline-start: 8px; border: 1px solid var(--line); background: var(--surface); border-radius: 8px; width: 44px; height: 44px; font-size: 20px; line-height: 1; z-index: 1; }
 .sheet .ident { display: flex; gap: 14px; align-items: center; margin-top: 2px; }
 .sheet .ident > div { min-width: 0; }
-.sheet h2 { font-family: var(--f-display); font-weight: var(--hw); font-size: var(--h2); line-height: 1.12; letter-spacing: 0; margin: 2px 0 0; text-wrap: balance; }
+.sheet h2 { font-family: var(--f-display); font-weight: var(--hw); font-size: var(--h2); line-height: 1.15; letter-spacing: 0; margin: 2px 0 0; text-wrap: balance; }
 .sheet .he, .sheet .alt { font-size: 16px; }
 .sheet section { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 14px; }
 .sheet h4 { margin: 0 0 8px; font-size: 13px; color: var(--muted); font-weight: 600; }
@@ -640,7 +640,7 @@ a.card.shot { display: grid; text-decoration: none; }
 /* A wide wordmark gets a wide box instead of a square one */
 .thumb .tl.wide { width: min(62%, 220px); height: 64px; }
 .thumb.big .tl.wide { width: min(50%, 280px); height: 84px; }
-.thumb .tn { font-family: var(--f-display); font-weight: 300; font-size: clamp(20px, 2vw, 26px); line-height: 1.15; max-width: 16ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
+.thumb .tn { font-family: var(--f-display); font-weight: 500; font-size: clamp(20px, 2vw, 26px); line-height: 1.15; max-width: 16ch; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
 .thumb.word .tn { font-size: clamp(30px, 3.4vw, 44px); line-height: 1.05; }
 .thumb.big { aspect-ratio: 21 / 9; max-height: 260px; width: 100%; }
 .thumb.big .tl { width: 96px; height: 96px; }
@@ -689,12 +689,12 @@ a.card.shot { display: grid; text-decoration: none; }
 .dhero .thumb { border-radius: 0; }
 #sheet .ident { margin-top: 24px; }
 #sheet .ident .logo.lg { display: none; }
-#sheet h2 { font-weight: var(--hw); font-size: var(--h2); line-height: 1.12; margin-top: 6px; }
+#sheet h2 { font-weight: var(--hw); font-size: var(--h2); line-height: 1.15; margin-top: 6px; }
 #sheet .actions { margin-top: 20px; }
 #sheet section { border-top: 0; margin-top: 44px; padding-top: 0; }
 #sheet section > h4, #sheet section > details > summary { font-size: 14px; font-weight: 400; color: var(--ink); margin: 0 0 20px; padding-bottom: 18px; text-decoration: none;
   background: radial-gradient(circle, currentColor 1px, transparent 1.4px) left bottom / 12px 3px repeat-x; min-height: 0; display: block; }
-#sheet .about .desc { font-size: clamp(22px, 2.8vw, 32px); font-weight: 300; line-height: 1.3; margin: 0; }
+#sheet .about .desc { font-size: clamp(20px, 2.4vw, 28px); font-weight: 400; line-height: 1.45; margin: 0; }
 #sheet .facts { margin-top: 24px; font-size: 15px; gap: 8px 24px; }
 .pills { display: flex; flex-wrap: wrap; gap: 10px; }
 #sheet .pills .tag, #sheet .pills .chip { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 18px; margin: 0; border-radius: 999px; border: 1px solid var(--line-2); background: transparent; font-size: 15px; font-weight: 500; color: var(--ink); text-decoration: none; }

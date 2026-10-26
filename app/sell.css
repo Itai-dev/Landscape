@@ -6,7 +6,7 @@
 .faq details { border-block-end: 1px solid var(--line); }
 .faq summary { cursor: pointer; text-decoration: none; font-weight: 400; font-size: var(--t-md); min-height: 56px; display: flex; align-items: center; padding: var(--s-3) 0; list-style: none; }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; margin-inline-start: auto; font-size: var(--t-lg); font-weight: 300; }
+.faq summary::after { content: "+"; margin-inline-start: auto; font-size: var(--t-lg); font-weight: 400; }
 .faq details[open] summary::after { content: "–"; }
 .faq details p { margin: 0; padding: 0 0 var(--s-5); color: var(--ink-2); max-width: 680px; }
 
@@ -74,7 +74,7 @@
   .hcard.on { opacity: 1; pointer-events: auto; }
   @media (hover: hover) { a.hcard.on:hover .hhead { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; } }
   .hlabel { font-size: var(--t-sm); color: var(--muted); }
-  .hhead { font-size: var(--t-xl); font-weight: 300; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .hhead { font-size: var(--t-xl); font-weight: 500; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
   .hchip { position: absolute; inset-block-end: var(--s-5); inset-inline-end: var(--s-5); display: inline-flex; align-items: center; gap: var(--s-2);
     background: var(--bg); border-radius: var(--r-pill); padding: 6px 14px 6px 6px; font-size: var(--t-sm); font-weight: 500; max-width: 70%; }
   .hchip bdi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -92,7 +92,7 @@
 @media (max-width: 759px) { .catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .ctile { display: grid; align-content: start; justify-items: start; gap: var(--s-3); background: var(--surface); border-radius: var(--r); padding: var(--s-5); color: var(--ink); text-decoration: none; min-height: 168px; transition: background .2s ease; }
 @media (hover: hover) { .ctile:hover { background: var(--soft); text-decoration: none; } }
-.ctile .cn { font-size: var(--t-xl); font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; margin-block-start: var(--s-2); }
+.ctile .cn { font-size: var(--t-xl); font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; margin-block-start: var(--s-2); }
 .ctile .cl { font-size: var(--t-sm); color: var(--muted); line-height: 1.5; }
 @media (max-width: 639px) { .ctile { padding: var(--s-4); min-height: 140px; gap: var(--s-2); } }
 
