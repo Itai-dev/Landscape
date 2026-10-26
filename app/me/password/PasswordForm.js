@@ -26,7 +26,7 @@ export default function PasswordForm() {
     return (
       <div className="stack">
         <p className="notice ok" role="status"><b>הסיסמה נשמרה.</b> מעכשיו נכנסים עם המייל והסיסמה.</p>
-        <div className="row"><a className="btn primary" href="/me">לחשבון שלי</a></div>
+        <div className="row"><a className="btn primary" href="/me">לאזור האישי</a></div>
       </div>
     );
   }

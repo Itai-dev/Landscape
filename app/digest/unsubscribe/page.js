@@ -36,7 +36,7 @@ export default async function Unsubscribe({ searchParams }) {
           </>
         ) : (
           <>
-            <p>אחרי האישור, ״השבוע בתעשייה״ לא יישלח יותר לכתובת הזו. החשבון עצמו נשאר, ואפשר למחוק אותו בעמוד <a href="/me">החשבון שלי</a>.</p>
+            <p>אחרי האישור, ״השבוע בתעשייה״ לא יישלח יותר לכתובת הזו. החשבון עצמו נשאר, ואפשר למחוק אותו ב<a href="/me">אזור האישי</a>.</p>
             <form method="post" action="/api/digest/unsubscribe?form=1">
               <input type="hidden" name="u" value={u} />
               <input type="hidden" name="t" value={t} />

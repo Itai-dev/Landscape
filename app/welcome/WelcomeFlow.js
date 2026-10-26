@@ -207,7 +207,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             </p>
             <div className="jfoot">
               <a className="btn primary lg" href="/companies">לכל החברות</a>
-              <a className="tap jskip" href="/me">לחשבון שלי</a>
+              <a className="tap jskip" href="/me">לאזור האישי</a>
             </div>
           </section>
         )}

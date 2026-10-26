@@ -606,11 +606,14 @@ ul { list-style-type: square; }
 .askfine { margin: 0; font-size: var(--t-xs); color: var(--muted); }
 .loosenote { margin: 0 0 var(--s-4); color: var(--muted); }
 
-/* People cards: each role shows the company's logo, its type tag and the title as a tag. */
+/* People cards: name, then the person's title; under it the company line (logo, name, type). */
+.pcard .ptitle { margin: 2px 0 0; font-size: var(--t-sm); color: var(--ink-2); line-height: 1.4; overflow-wrap: anywhere; }
+.pcard .orgrow { display: flex; flex-wrap: wrap; align-items: center; gap: 4px var(--s-2); min-width: 0; }
+.pcard .otitle { font-size: var(--t-xs); color: var(--muted); }
 .pcard .orgline { grid-template-columns: 36px minmax(0, 1fr); column-gap: var(--s-3); align-items: center; }
 .pcard .orglogo { width: 36px; height: 36px; border-radius: 8px; background: var(--paper); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; font-size: 14px; font-weight: 600; color: var(--muted); }
 .pcard .orglogo img { width: auto; height: auto; max-width: 30px; max-height: 30px; object-fit: contain; }
-.pcard .orgtext { display: grid; gap: 6px; min-width: 0; }
+.pcard .orgtext { display: grid; gap: 2px; min-width: 0; }
 .pcard .otags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .pcard .ttag { display: inline-flex; align-items: center; min-height: 24px; padding: 2px 10px; border-radius: 6px; background: var(--paper); border: 1px solid var(--line); color: var(--ink-2); font-size: var(--t-xs); font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; }
 /* A short hint under a form field */

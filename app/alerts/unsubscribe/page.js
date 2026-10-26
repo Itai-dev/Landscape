@@ -14,7 +14,7 @@ export default async function AlertsUnsubscribe({ searchParams }) {
         <div className="soon">
           <h1>ההתראות הופסקו</h1>
           <p>לא יישלחו יותר התראות על חברות לכתובת הזו. הניוזלטר, אם נרשמתם אליו, ממשיך כרגיל.</p>
-          <a className="btn" href="/me#follows">לחשבון שלי</a>
+          <a className="btn" href="/me#follows">לאזור האישי</a>
         </div>
       </div>
     );
@@ -32,7 +32,7 @@ export default async function AlertsUnsubscribe({ searchParams }) {
         {problem ? (
           <>
             <p>{problem}</p>
-            <a className="btn" href="/me#follows">לחשבון שלי</a>
+            <a className="btn" href="/me#follows">לאזור האישי</a>
           </>
         ) : (
           <>

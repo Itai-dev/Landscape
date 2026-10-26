@@ -110,12 +110,15 @@ export default async function Tenders({ searchParams }) {
           </div>
           <ol className="jobs">
             {jobs.map((j) => (
-              <li key={j.id}>
-                <p className="jhead"><Bidi>{j.headline}</Bidi></p>
+              <li key={j.id} className={j.source_url ? "jclick" : undefined}>
+                {/* The whole row opens the job (a stretched link); the company name stays its own link. */}
+                {j.source_url
+                  ? <a className="jhead jlink" href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs"><Bidi>{j.headline}</Bidi></a>
+                  : <p className="jhead"><Bidi>{j.headline}</Bidi></p>}
                 <p className="jmeta">
-                  {j.org?.name && (j.org.href ? <a href={rel(j.org.href)} data-track="company_open" data-track-where="jobs"><bdi>{j.org.name}</bdi></a> : <bdi>{j.org.name}</bdi>)}
+                  {j.org?.name && (j.org.href ? <a className="jorg" href={rel(j.org.href)} data-track="company_open" data-track-where="jobs"><bdi>{j.org.name}</bdi></a> : <bdi>{j.org.name}</bdi>)}
                   {j.org?.name ? " · " : ""}{j.day}
-                  {j.source_url && <> · <a href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs"><bdi>{j.source || "מקור"}</bdi></a></>}
+                  {j.source_url && <span className="jgo" aria-hidden="true">למשרה ב־<bdi>{String(j.source || "מקור").replace(/\s*jobs$/i, "")}</bdi> ↗</span>}
                 </p>
               </li>
             ))}
