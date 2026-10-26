@@ -63,12 +63,13 @@ export default function HomePage({ split = false }) {
         <section className="wrap">
           <div className="hero sell split">
             <div className="htext">
+              <p className="kicker">תעשיית הקריאייטיב בישראל</p>
               <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
-              <p className="lead">מי מונה, מי החליף משרד, אילו מכרזים ומשרות פורסמו. לפי התחום שלכם, כל יום ראשון במייל.</p>
+              <p className="lead">מי מונה, מי עבר משרד, ומה נפתח להגשה.<br />בתחום שלכם, כל יום ראשון במייל.</p>
               <ul className="checks">
-                <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
-                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי</span></li>
-                <li><CheckIcon size={18} /><span>ניוזלטר שבועי בהתאמה אישית, חינם.</span></li>
+                <li><CheckIcon size={18} /><span>{STATS.orgs} מותגים, משרדים, סטודיואים והפקות. לפי תחום ועיר, עם מקור לכל פרט.</span></li>
+                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי.</span></li>
+                <li><CheckIcon size={18} /><span>מייל אחד בשבוע, לפי התחום שלכם. חינם.</span></li>
               </ul>
               <div className="row">
                 <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
@@ -104,8 +105,9 @@ export default function HomePage({ split = false }) {
         <section className="wrap section reveal" aria-labelledby="week-h">
           <div className="sechead">
             <div>
+              <p className="kicker">מה נכנס למייל של יום ראשון</p>
               <h2 id="week-h">השבוע בתעשייה</h2>
-              <p>מה נכנס למייל של יום ראשון. כל פרט עם מקור.</p>
+              <p>כל עדכון עם מקור. בלי שמועות.</p>
             </div>
             <a className="btn" href="/digest" data-track="digest_full_open">לכל העדכונים</a>
           </div>
@@ -143,6 +145,7 @@ export default function HomePage({ split = false }) {
         <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
           <div className="sechead">
             <div>
+              <p className="kicker">גופים ציבוריים שמחפשים ספקים</p>
               <h2 id="tenders-h">מכרזים <span className="count">{tenders.length}</span></h2>
               <p>{proof.openTenders} פתוחים להגשה{proof.upcomingTenders ? ` · ${proof.upcomingTenders} פורסמו וההגשה תיפתח בקרוב` : ""}. כל אחד עם קישור לפרסום הרשמי.</p>
             </div>
@@ -153,7 +156,7 @@ export default function HomePage({ split = false }) {
       )}
 
       <section className="wrap section reveal" aria-labelledby="faq-h">
-        <div className="sechead"><h2 id="faq-h">לפני שנרשמים</h2></div>
+        <div className="sechead"><div><p className="kicker">שאלות</p><h2 id="faq-h">רגע לפני שנרשמים</h2></div></div>
         <div className="faq">
           {FAQ.map(([q, a]) => (
             <details key={q}>
@@ -166,7 +169,7 @@ export default function HomePage({ split = false }) {
 
       <section className="wrap section reveal" aria-labelledby="close-h">
         <div className="panel inverse closer">
-          <h2 id="close-h">לא צריך להכיר את כולם. צריך לדעת מי מזמין, ומתי לפנות.</h2>
+          <h2 id="close-h">לא צריך להכיר את כולם.<br />מספיק להישאר <span lang="en">In</span>.</h2>
           <a className="btn inv lg" href="/join" data-track="closer_join">להרשמה לניוזלטר</a>
         </div>
       </section>

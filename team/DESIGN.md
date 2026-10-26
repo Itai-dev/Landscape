@@ -85,9 +85,19 @@ Purple is our version of Awwwards' orange: one small marker, never a button, a f
 - the count of new updates in the companies app;
 - the deadline badge on a tender that closes soon.
 
-### Type
-- **Fonts.** Inter Tight for Latin, Heebo for Hebrew. Inter Tight has no Hebrew, so Hebrew falls through to Heebo. No letter spacing and no uppercase on Hebrew.
-- **Sizes.** Hero 48–127px at weight 300, line height 0.93. Page titles 36–64px at 400. Section titles 26–42px at 400. Card titles 18px at 600. Body 16px (one step above Awwwards' 14px, for Hebrew reading). Labels and buttons 14px at 500. Metadata 12px.
+### Type (after Firma, Oct 2026)
+The owner asked to take typography and copy from Firma (firmabrands.com/he), an Israeli branding studio. We copy the approach, never their font files, wording or images.
+- **What Firma does.** One geometric Hebrew family (Polin, commercial) for everything. Headlines 600–700 with tight leading (1.0 at display size, 1.1–1.2 for titles), in two or three short lines that end with a period. Body 18–20px at about 1.6. Labels 500. Nothing light.
+- **Fonts.** Inter Tight for Latin, Rubik for Hebrew (the closest free match to Polin: geometric, open forms). Inter Tight has no Hebrew, so Hebrew falls through to Rubik. No letter spacing and no uppercase on Hebrew. Weights 400–700 load; nothing under 400.
+- **Sizes.** Page titles and the hero 48–80px at 600, line height 1.08. Section titles 32–44px at 600, 1.15. Card titles 18–21px at 600. Body 16px. Leads (`.lead`, page-head lines) `--t-lead`, 18–20px at 1.6. Labels and buttons 14px at 500. Metadata 12px. Big numbers (counts, KPIs) at 600.
+- **Kicker** (`.kicker`). A 16px/500 muted line over a title saying what the section is, so the title itself can be the hook ("מה נכנס למייל של יום ראשון" over "השבוע בתעשייה").
+
+### Copy voice (after Firma)
+- Short declarative lines that end with a period, two or three to a headline, broken where the meaning breaks.
+- Rhythm in threes: "מי מונה, מי עבר משרד, ומה נפתח להגשה."
+- Question and answer for calls to action ("כמה גובים בתעשייה? ומתי באמת משלמים?").
+- One brand word to play on: "In" (CreativeIn., "להישאר In"). Use it sparingly: once per page at most, and never where it hides what the button does.
+- Plain, a little colloquial, always plural and gender-neutral. The data rules still win: no invented numbers, and updates are never worded as proof of hiring.
 
 ### Components
 - **Promo strip** (`promoHtml()` in `lib/chrome.mjs`). A grey line above the header with a slow ticker: the weekly digest, plus the rates survey while it's open. It replaces the old survey banner, scrolls away, and holds still under reduced motion.
@@ -103,26 +113,26 @@ Purple is our version of Awwwards' orange: one small marker, never a button, a f
   - The options have radio rings, filled ink when chosen. A single choice applies and closes. A multiple choice stays open, with "ניקוי" and an ink "הצגת N חברות" button.
   - Esc, a tap on the dimmed page, or ✕ closes it, and focus returns to the button.
 - **Thumbnail cards** (companies).
-  - A 4:3 grey tile with the logo (64px, on white) over the name in light type. A company without a logo shows its name as a wordmark.
+  - A 4:3 grey tile with the logo (64px, on white) over the name at 500. A company without a logo shows its name as a wordmark.
   - On hover the tile zooms slightly, and an ink caption slides up with what they buy, their clients, or what they do.
   - Under the tile is the byline: a round logo, the name in 600, the kind as a superscript, and the city. Small outlined tags sit at the end: "עדכון" with a purple dot, the saved stage in ink, and "מתאים לכם".
   - Cards are 40px apart vertically and 16px horizontally.
 - **Company page** (`#sheet`).
   - It covers the screen on phones; on desktop it is a 920px panel from the reading side. It has a square ink ✕ in the corner.
   - Top to bottom: a large thumbnail, the metadata line, the name (600, up to 52px), and the actions.
-  - Sections each have a small label over a dotted rule. Description comes first, set large and light, followed by the facts, then crafts as pill tags, then why now, what they commission, ways in, links and sources.
+  - Sections each have a small label over a dotted rule. Description comes first, set large at 400, followed by the facts, then crafts as pill tags, then why now, what they commission, ways in, links and sources.
 - **Header** (`lib/chrome.mjs`, `app/chrome.css`; one source for both apps).
   - The bar is flat and canvas-coloured: the wordmark, then People / Companies / Tenders at 14px/500. The current page gets a white 8px label.
   - At the end: the theme button (40px, outlined) and one filled ink call to action.
 - **Hamburger** (under 861px).
   - The bar shows the wordmark, the call to action and a 44px outlined button whose two lines turn into an X.
-  - It opens a full-height sheet under the bar: big light words on hairlines, with the call to action as a full-width ink button and the theme button beside it.
+  - It opens a full-height sheet under the bar: big 500-weight words on hairlines, with the call to action as a full-width ink button and the theme button beside it.
   - Esc, a tap on a link, or widening the window closes it. Focus moves into the menu on open and back to the button on close, and the page doesn't scroll behind it.
 - **Buttons** (`.btn`).
   - The default is outlined: 1px ink border, 8px corners, 14px/500, 44px tall. On hover it fills with ink.
   - `.primary` is filled ink and dims on hover. The two share the same size.
   - `.accent` is now also ink. `.ghost` is an underlined text button. `.sm` is 36px, and goes back up to 44px on touch screens.
-- **Section heads** (`.sechead`). A light title at the start and an outlined "לכל …" button at the end.
+- **Section heads** (`.sechead`). An optional kicker and a 600 title at the start and an outlined "לכל …" button at the end.
 - **Cards.**
   - Cards, tenders, people, updates and rows are white on the canvas with 8px corners, no border and no shadow, 8px apart.
   - Hover shows an ink outline, or fills with ink on the craft tiles.
@@ -132,7 +142,7 @@ Purple is our version of Awwwards' orange: one small marker, never a button, a f
 - **Companies app.**
   - The section switcher is a floating ink bar with 14px corners, the current section on a canvas-coloured label. It sits centered under the header on desktop and floats at the bottom on phones.
   - The lens switch is a grey track with an ink thumb.
-- **Promo block** (`.panel.inverse`). Ink with 14px corners and a light title, with an outlined button in the canvas colour.
+- **Promo block** (`.panel.inverse`). Ink with 14px corners and a 600 title, with an outlined button in the canvas colour.
 - **Footer.** A white block with 14px corners: a large wordmark and tagline, a grid of links, then small print and the theme button.
 
 ### Motion

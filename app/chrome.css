@@ -18,7 +18,7 @@
 
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Heebo", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
+header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Rubik", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
 /* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a square black badge with a hard
    purple shadow. Hover (desktop, motion allowed): the badge tilts to +1deg, lifts, and the shadow grows and turns pink. */
 .wordmark { display: block; height: 30px; width: auto; overflow: visible; }
@@ -70,7 +70,7 @@ header.top .cta .cta-s, header.top .cta .cta-i { display: none; }
 @media (min-width: 561px) { .menusheet { inset-block-start: 72px; } }
 header.top .menusheet .wrap { display: grid; grid-template-columns: minmax(0, 1fr); flex-direction: column; gap: 32px; align-content: start; min-height: 100%; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding: 8px var(--gutter) calc(32px + env(safe-area-inset-bottom, 0px)); }
 .menusheet-nav { display: grid; border-block-start: 1px solid var(--line); }
-.menusheet-nav a { display: flex; align-items: center; min-height: 64px; border-block-end: 1px solid var(--line); color: var(--ink); font-size: 30px; font-weight: 300; line-height: 1.1; text-decoration: none; }
+.menusheet-nav a { display: flex; align-items: center; min-height: 64px; border-block-end: 1px solid var(--line); color: var(--ink); font-size: 28px; font-weight: 500; line-height: 1.1; text-decoration: none; }
 .menusheet-nav a[aria-current="page"] { font-weight: 500; }
 .menusheet-nav a[aria-current="page"]::after { content: ""; inline-size: 8px; block-size: 8px; border-radius: 2px; background: var(--accent); margin-inline-start: 12px; }
 .menusheet-end { display: flex; gap: 8px; align-items: center; }

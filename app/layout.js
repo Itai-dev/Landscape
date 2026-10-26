@@ -57,7 +57,7 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300..700&family=Heebo:wght@300..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..700&family=Rubik:wght@400..700&display=swap"
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd() }} />
       </head>
