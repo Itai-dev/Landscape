@@ -1,16 +1,18 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Bidi from "@/components/Bidi";
+import KindTag from "@/components/KindTag";
 
-// Desktop hero card: this week's updates, one at a time. Each card leads with the company's logo and name (like a
-// post and its author), then the update, then its source; it links to the company. It moves on by itself and pauses
-// while the pointer or focus is on it; arrows, the dots and a swipe move it by hand. Reduced motion: no autoplay.
-// Hidden on phones (sell.css), where the week's updates follow the hero anyway.
+// Desktop hero card: this week's updates, one at a time, in the same anatomy as the update cards below
+// (type and date, headline, why it matters, then the company and the source), only larger. It moves on by itself
+// and pauses while the pointer or focus is on it; arrows, the dots and a swipe move it by hand. Reduced motion:
+// no autoplay. Hidden on phones (sell.css), where the week's updates follow the hero anyway.
 const Arrow = ({ flip }) => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={flip ? { transform: "scaleX(-1)" } : undefined}><path d="m9 18 6-6-6-6" /></svg>
 );
+const WHY = "למה זה רלוונטי";
 
-export default function HeroMedia({ items, interval = 5200 }) {
+export default function HeroMedia({ items, interval = 6000 }) {
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
   const touch = useRef(null);
@@ -39,22 +41,37 @@ export default function HeroMedia({ items, interval = 5200 }) {
       onFocus={() => setPaused(true)} onBlur={() => setPaused(false)}
       onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       {items.map((x, k) => {
-        const Tag = x.href ? "a" : "div";
+        const on = k === i;
+        const tab = on ? undefined : -1;
         return (
-          <Tag key={x.id} className={`hcard${k === i ? " on" : ""}`} aria-hidden={k === i ? undefined : "true"} tabIndex={k === i ? undefined : -1}
-            aria-roledescription="שקופית" aria-label={`${k + 1} מתוך ${n}`}
-            {...(x.href ? { href: x.href, "data-track": "company_open", "data-track-where": "home_hero" } : {})}>
-            {x.org && (
-              <span className="hby">
-                <span className="hlogo">
-                  {x.logo ? <img src={x.logo} alt="" width="64" height="64" style={x.logo_px ? { maxWidth: Math.min(x.logo_px, 56), maxHeight: Math.min(x.logo_px, 56) } : undefined} /> : <span aria-hidden="true">{String(x.org).trim().charAt(0)}</span>}
-                </span>
-                <span className="horg"><bdi>{x.org}</bdi><span className="hlabel">{x.label} · {x.day}</span></span>
-              </span>
-            )}
-            <span className="hhead"><Bidi>{x.headline}</Bidi></span>
-            {x.source && <span className="hsrc">מקור: <bdi>{x.source}</bdi></span>}
-          </Tag>
+          <article key={x.id} className={`hcard${on ? " on" : ""}`} aria-hidden={on ? undefined : "true"}
+            aria-roledescription="שקופית" aria-label={`${k + 1} מתוך ${n}`}>
+            <p className="umeta"><b>{x.label}</b> · {x.day}</p>
+            <div className="hbody">
+              <p className="hhead"><Bidi>{x.headline}</Bidi></p>
+              {x.why && <p className="hwhy">{WHY}: <Bidi>{x.why}</Bidi></p>}
+            </div>
+            <div className="hfoot">
+              {x.org && (() => {
+                const Org = x.href ? "a" : "span";
+                return (
+                  <Org className="hco" tabIndex={x.href ? tab : undefined}
+                    {...(x.href ? { href: x.href, "data-track": "company_open", "data-track-where": "home_hero" } : {})}>
+                    <span className="hlogo">
+                      {x.logo ? <img src={x.logo} alt="" width="48" height="48" style={x.logo_px ? { maxWidth: Math.min(x.logo_px, 40), maxHeight: Math.min(x.logo_px, 40) } : undefined} /> : <span aria-hidden="true">{String(x.org).trim().charAt(0)}</span>}
+                    </span>
+                    <span className="hname"><bdi>{x.org}</bdi>{x.kind && <KindTag kind={x.kind} />}</span>
+                  </Org>
+                );
+              })()}
+              {x.source_url && (
+                <a className="btn sm hsrc" href={x.source_url} target="_blank" rel="noopener noreferrer" tabIndex={tab}
+                  data-track="opportunity_source_click" data-track-category={x.type} data-track-where="home_hero">
+                  <span>לפרסום{x.source ? <> ב־<bdi>{x.source}</bdi></> : ""}</span><span aria-hidden="true">↗</span>
+                </a>
+              )}
+            </div>
+          </article>
         );
       })}
       {n > 1 && (

@@ -49,12 +49,11 @@ export default function HomePage({ split = false }) {
   const week = composeDigest({ maxItems: 3, now });
   const updates = [...week.items, ...week.more].slice(0, 3);
   const rel = (u) => String(u || "").replace(siteUrl(), "");
-  // Hero card: up to 4 recent updates (this week's first), each linking to its company.
   // Hero card: 6 recent updates, this week's first. If the week is quiet it falls back to the latest ones
   // (30 days, then a year), so the card never runs empty; HeroMedia loops through them without end.
   const pool = [...week.items, ...week.more, ...composeDigest({ maxItems: 6, days: 30, now }).items, ...composeDigest({ maxItems: 6, days: 365, now }).items];
   const media = pool.filter((x, n, a) => x.headline && a.findIndex((y) => y.id === x.id) === n).slice(0, 6)
-    .map((i) => ({ id: i.id, label: i.class_label, day: i.day, headline: i.headline, org: i.org?.name || "", logo: i.org?.logo_hi || i.org?.logo || null, logo_px: i.org?.logo_px || null, source: i.source || "", href: i.org?.href ? rel(i.org.href) : null }));
+    .map((i) => ({ id: i.id, type: i.type || "", label: i.class_label, day: i.day, headline: i.headline, why: i.why || "", org: i.org?.name || "", kind: i.org?.kind || "", logo: i.org?.logo_hi || i.org?.logo || null, logo_px: i.org?.logo_px || null, source: i.source || "", source_url: i.source_url || "", href: i.org?.href ? rel(i.org.href) : null }));
   return (
     <>
       <div className="wrap"><AuthNotice /></div>
