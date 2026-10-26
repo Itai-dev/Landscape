@@ -75,7 +75,7 @@ export default async function Search({ searchParams }) {
       {nothing && (
         <div className="soon" style={{ marginBlockStart: 48 }}>
           <h3>לא מצאנו כלום ל<bdi>״{typed || craftLabel(craft)}״</bdi></h3>
-          <p>אפשר לנסות מילה אחרת, שם באנגלית או תחום רחב יותר.</p>
+          <p>נסו מילה אחרת, שם באנגלית או תחום רחב יותר.</p>
         </div>
       )}
 

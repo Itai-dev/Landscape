@@ -49,7 +49,7 @@ export default function OAuthButtons({ redirectTo, disabled = false, where = "",
     // On success the browser is already leaving for the provider's page.
     if (err) {
       setBusy("");
-      setError("לא הצלחנו להתחבר כרגע. אפשר לנסות שוב, או להיכנס עם קישור במייל.");
+      setError("לא הצלחנו להתחבר כרגע. נסו שוב, או היכנסו עם קישור במייל.");
     }
   }
 
@@ -58,7 +58,7 @@ export default function OAuthButtons({ redirectTo, disabled = false, where = "",
       {OAUTH.map((p) => p === "google" && GOOGLE_CLIENT_ID ? (
         <GoogleButton key={p} redirectTo={redirectTo} disabled={disabled || Boolean(busy)}
           onStart={(provider) => { setError(""); try { track("oauth_start", { provider, where }); } catch {} onStart?.(provider); }}
-          onError={() => setError("לא הצלחנו להתחבר כרגע. אפשר לנסות שוב, או להיכנס עם קישור במייל.")} />
+          onError={() => setError("לא הצלחנו להתחבר כרגע. נסו שוב, או היכנסו עם קישור במייל.")} />
       ) : (
         <button key={p} type="button" className={`btn oauthbtn ${p}`} disabled={disabled || Boolean(busy)} onClick={() => go(p)}>
           {busy === p ? <span className="spinner" aria-hidden /> : PROVIDERS[p].icon}

@@ -21,9 +21,9 @@ export default async function Unsubscribe({ searchParams }) {
   }
   const problem =
     sp?.error === "unavailable"
-      ? "ההסרה לא זמינה כרגע. אפשר לנסות שוב בעוד כמה דקות."
+      ? "ההסרה לא זמינה כרגע. נסו שוב בעוד כמה דקות."
       : sp?.error || !verifyUnsubscribe(u, t)
-        ? "הקישור לא תקין. אפשר להשתמש בקישור שבמייל האחרון, או להתחבר ולשנות את ההגדרות."
+        ? "הקישור לא תקין. השתמשו בקישור שבמייל האחרון, או התחברו ושנו את ההגדרות."
         : "";
   return (
     <div className="wrap narrow">

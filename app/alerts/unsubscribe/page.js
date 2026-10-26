@@ -21,9 +21,9 @@ export default async function AlertsUnsubscribe({ searchParams }) {
   }
   const problem =
     sp?.error === "unavailable"
-      ? "הפעולה לא זמינה כרגע. אפשר לנסות שוב בעוד כמה דקות."
+      ? "הפעולה לא זמינה כרגע. נסו שוב בעוד כמה דקות."
       : sp?.error || !verifyListToken("alerts", u, t)
-        ? "הקישור לא תקין. אפשר להשתמש בקישור שבמייל האחרון, או להתחבר ולשנות את ההגדרות."
+        ? "הקישור לא תקין. השתמשו בקישור שבמייל האחרון, או התחברו ושנו את ההגדרות."
         : "";
   return (
     <div className="wrap narrow">

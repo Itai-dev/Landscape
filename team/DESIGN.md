@@ -98,6 +98,7 @@ The owner asked to take typography and copy from Firma (firmabrands.com/he), an 
 - Question and answer for calls to action ("כמה גובים בתעשייה? ומתי באמת משלמים?").
 - One brand word to play on: "In" (CreativeIn., "להישאר In"). Use it sparingly: once per page at most, and never where it hides what the button does.
 - Plain, a little colloquial, always plural and gender-neutral. The data rules still win: no invented numbers, and updates are never worded as proof of hiring.
+- Talk to the reader in the plural imperative: "בחרו", "נסו שוב", "בדקו בספאם", "ענו על הסקר" (not "לבחור", "אפשר לנסות שוב", "כדאי לבדוק"). Keep the infinitive only where grammar needs it (after כדי, רוצים, a question like "למחוק את החשבון?") or for a stated possibility ("אפשר להסיר בכל רגע"). Never "את/ה" slashes. Legal consent text stays as recorded.
 
 ### Components
 - **Promo strip** (`promoHtml()` in `lib/chrome.mjs`). A grey line above the header with a slow ticker: the weekly digest, plus the rates survey while it's open. It replaces the old survey banner, scrolls away, and holds still under reduced motion.

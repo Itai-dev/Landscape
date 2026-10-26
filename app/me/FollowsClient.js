@@ -30,13 +30,13 @@ export default function FollowsClient({ initial, justFollowed }) {
   async function unfollow(id) {
     const res = await post({ org_id: id, on: false });
     if (res.ok) { setFollows((f) => f.filter((x) => x.id !== id)); setTracked(id, false); }
-    else setMsg("לא הצלחנו להסיר. אפשר לנסות שוב.");
+    else setMsg("לא הצלחנו להסיר. נסו שוב.");
   }
   async function mode(next) {
-    if (next !== "off" && !consented && !consent) { setMsg("כדי לקבל התראות צריך לסמן את תיבת ההסכמה."); return; }
+    if (next !== "off" && !consented && !consent) { setMsg("כדי לקבל התראות, סמנו את תיבת ההסכמה."); return; }
     const res = await post({ alerts: next, consent: !consented && consent });
     if (res.ok) { setAlerts(res.alerts); if (next !== "off") setConsented(true); setMsg(""); }
-    else setMsg(res.error === "unconfirmed" ? "צריך לאשר את כתובת המייל קודם." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+    else setMsg(res.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב.");
   }
 
   const fresh = justFollowed && follows.find((f) => f.id === justFollowed);

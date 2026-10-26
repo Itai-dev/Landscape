@@ -4,9 +4,9 @@ import { track } from "@vercel/analytics";
 
 const MAX = 1000;
 const ERR = {
-  empty: "צריך לכתוב לפחות כמה מילים.",
-  bad_email: "כתובת המייל לא נראית תקינה. אפשר גם להשאיר את השדה ריק.",
-  rate_limited: "נשלחו כבר כמה הערות מהמכשיר הזה. אפשר לנסות שוב בעוד כמה דקות.",
+  empty: "כתבו לפחות כמה מילים.",
+  bad_email: "כתובת המייל לא נראית תקינה. תקנו אותה, או השאירו את השדה ריק.",
+  rate_limited: "נשלחו כבר כמה הערות מהמכשיר הזה. נסו שוב בעוד כמה דקות.",
   not_configured: "שליחת הערות לא זמינה כרגע.",
 };
 
@@ -39,7 +39,7 @@ export default function FeedbackForm({ ready, from }) {
       try { track("feedback_submit", from ? { where: from } : undefined); } catch {}
       setState({ busy: false, done: true, error: "" });
     } else {
-      setState({ busy: false, done: false, error: ERR[out.error] || "השליחה נכשלה. מה שכתבתם נשאר כאן, אפשר לנסות שוב." });
+      setState({ busy: false, done: false, error: ERR[out.error] || "השליחה נכשלה. מה שכתבתם נשאר כאן. נסו שוב." });
     }
   }
 

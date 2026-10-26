@@ -134,7 +134,7 @@ export default function HomePage({ split = false }) {
             <p className="eyebrow inv">סקר התעריפים 2026</p>
             <h2 id="survey-h">כמה גובים בתעשייה?<br />ומתי באמת משלמים?</h2>
             <p className="muted">4 דקות, אנונימי. מחירים לפי תחום ולפי סוג עבודה, ותנאי התשלום בפועל, משוטף 30 ועד שוטף 90. התוצאות פתוחות לכולם ברגע שיש מספיק תשובות. פתוח עד {CLOSES_LABEL}.</p>
-            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">לענות על הסקר</a></p>
+            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">ענו על הסקר</a></p>
           </div>
         </section>
       )}
