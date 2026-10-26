@@ -10,22 +10,16 @@ export default function AccountClient() {
     setDeleting(true);
     const res = await fetch("/api/account/delete", { method: "POST" });
     if (res.ok) { clearLocalData(); window.location.href = "/?deleted=1"; }
-    else { setDeleting(false); window.alert("המחיקה נכשלה. נסו שוב."); }
+    else { setDeleting(false); window.alert("לא הצלחנו למחוק את החשבון. נסו שוב."); }
   }
   return (
     <div className="stack">
-      <div className="card stack">
-        <h2>הניוזלטר</h2>
-        <p className="muted">תחומים, תדירות או הסרה מהרשימה.</p>
-        <div className="row"><a className="btn" href="/digest/settings">להגדרות הניוזלטר</a></div>
-      </div>
-      <div className="card stack">
-        <h2>סקר התעריפים</h2>
-        <p className="muted">אפשר לחזור לתשובות ולעדכן אותן עד סגירת הסקר.</p>
-        <div className="row"><a className="btn" href="/survey">לסקר</a></div>
-      </div>
-      <div className="card stack">
-        <h2>חשבון</h2>
+      <div className="card stack mesettings">
+        <h2>הגדרות החשבון</h2>
+        <div className="mrow">
+          <div><b>סיסמה</b><p className="muted small">כניסה עם המייל והסיסמה מכל מכשיר, בלי לחכות לקישור.</p></div>
+          <a className="btn sm" href="/me/password">הגדרת סיסמה</a>
+        </div>
         <div className="row">
           <SignOutButton />
           <button className="btn danger" onClick={remove} disabled={deleting}>מחיקת החשבון וכל המידע</button>

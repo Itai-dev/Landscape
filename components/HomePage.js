@@ -49,12 +49,11 @@ export default function HomePage({ split = false }) {
   const week = composeDigest({ maxItems: 3, now });
   const updates = [...week.items, ...week.more].slice(0, 3);
   const rel = (u) => String(u || "").replace(siteUrl(), "");
-  // Hero card: up to 4 recent updates (this week's first), each linking to its company.
   // Hero card: 6 recent updates, this week's first. If the week is quiet it falls back to the latest ones
   // (30 days, then a year), so the card never runs empty; HeroMedia loops through them without end.
   const pool = [...week.items, ...week.more, ...composeDigest({ maxItems: 6, days: 30, now }).items, ...composeDigest({ maxItems: 6, days: 365, now }).items];
   const media = pool.filter((x, n, a) => x.headline && a.findIndex((y) => y.id === x.id) === n).slice(0, 6)
-    .map((i) => ({ id: i.id, label: i.class_label, day: i.day, headline: i.headline, org: i.org?.name || "", logo: i.org?.logo || null, href: i.org?.href ? rel(i.org.href) : null }));
+    .map((i) => ({ id: i.id, type: i.type || "", label: i.class_label, day: i.day, headline: i.headline, why: i.why || "", org: i.org?.name || "", kind: i.org?.kind || "", logo: i.org?.logo_hi || i.org?.logo || null, logo_px: i.org?.logo_px || null, source: i.source || "", source_url: i.source_url || "", href: i.org?.href ? rel(i.org.href) : null }));
   return (
     <>
       <div className="wrap"><AuthNotice /></div>
@@ -67,9 +66,9 @@ export default function HomePage({ split = false }) {
               <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
               <p className="lead">מי מונה, מי עבר משרד, ומה נפתח להגשה.<br />בתחום שלכם, כל יום ראשון במייל.</p>
               <ul className="checks">
-                <li><CheckIcon size={18} /><span>{STATS.orgs} מותגים, משרדים, סטודיואים והפקות. לפי תחום ועיר, עם מקור לכל פרט.</span></li>
-                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי.</span></li>
-                <li><CheckIcon size={18} /><span>מייל אחד בשבוע, לפי התחום שלכם. חינם.</span></li>
+                <li><CheckIcon size={18} /><span><b>מי מזמין מה.</b> {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, ודרך מי הם עובדים.</span></li>
+                <li><CheckIcon size={18} /><span><b>הזדמנויות בזמן.</b> <a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> בתחום שלכם, עם מועד הגשה וקישור למקור.</span></li>
+                <li><CheckIcon size={18} /><span><b>רק מה שרלוונטי.</b> מייל אחד ביום ראשון, לפי התחום שלכם. חינם.</span></li>
               </ul>
               <div className="row">
                 <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
@@ -134,7 +133,7 @@ export default function HomePage({ split = false }) {
             <p className="eyebrow inv">סקר התעריפים 2026</p>
             <h2 id="survey-h">כמה גובים בתעשייה?<br />ומתי באמת משלמים?</h2>
             <p className="muted">4 דקות, אנונימי. מחירים לפי תחום ולפי סוג עבודה, ותנאי התשלום בפועל, משוטף 30 ועד שוטף 90. התוצאות פתוחות לכולם ברגע שיש מספיק תשובות. פתוח עד {CLOSES_LABEL}.</p>
-            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">לענות על הסקר</a></p>
+            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">למילוי הסקר</a></p>
           </div>
         </section>
       )}
@@ -197,7 +196,7 @@ function ClassicHome() {
           {PROFILES_ENABLED ? (
             <p className="lead">
               מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
-              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.</span>}
+              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מתיק העבודות.</span>}
             </p>
           ) : (
             <p className="lead">
@@ -297,7 +296,7 @@ function ClassicHome() {
               <h2 id="join-h">{open ? "הצטרפות, והניוזלטר" : "השבוע בתעשייה"}</h2>
               <p className="muted">
                 כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם מקור לכל פרט.
-                {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}
+                {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או תיק העבודות, ואתם מאשרים."}
               </p>
               <p><a className="btn inv" href="/digest">לעדכוני השבוע</a></p>
             </div>

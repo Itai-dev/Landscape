@@ -39,17 +39,17 @@ export default function DigestSettings() {
   }, [user]);
 
   if (!configured) return <div className="soon"><h3>ההרשמה במייל נפתחת בקרוב</h3><p>בינתיים ״השבוע בתעשייה״ מתעדכן באתר כל שבוע.</p><a className="btn" href="/digest">לעדכוני השבוע</a></div>;
-  if (user === undefined) return <p className="center muted"><span className="spinner" aria-hidden /> טוען…</p>;
+  if (user === undefined) return <p className="center muted"><span className="spinner" aria-hidden /> טוענים…</p>;
   if (!user) {
     return (
       <div className="panel stack">
-        <h2>להירשם לניוזלטר</h2>
+        <h2>הירשמו לניוזלטר</h2>
         <p className="muted">משאירים מייל ומאשרים בקישור. מי שכבר רשום יקבל קישור כניסה לשינוי ההגדרות.</p>
         <DigestSubscribe />
       </div>
     );
   }
-  if (!prefs) return state === "error" ? <div className="notice err">לא הצלחנו לטעון את ההגדרות. אפשר לרענן.</div> : <p className="center muted"><span className="spinner" aria-hidden /> טוען…</p>;
+  if (!prefs) return state === "error" ? <div className="notice err">לא הצלחנו לטעון את ההגדרות. רעננו את הדף.</div> : <p className="center muted"><span className="spinner" aria-hidden /> טוענים…</p>;
 
   const on = prefs.frequency !== "off";
   const needsConsent = on && !prefs.consent_at;
@@ -66,7 +66,7 @@ export default function DigestSettings() {
         body: JSON.stringify({ frequency: prefs.frequency, crafts: prefs.crafts, consent }),
       });
     } catch {
-      setSaveError("אין חיבור כרגע. אפשר לנסות שוב.");
+      setSaveError("אין חיבור כרגע. נסו שוב.");
       setState("error");
       return;
     }
@@ -78,7 +78,7 @@ export default function DigestSettings() {
       setState("saved");
     } else {
       const j = await res.json().catch(() => ({}));
-      setSaveError(j.error === "consent_required" ? "כדי לקבל את הניוזלטר צריך לסמן את האישור." : res.status === 429 ? "יותר מדי שמירות ברצף. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setSaveError(j.error === "consent_required" ? "כדי לקבל את הניוזלטר, סמנו את האישור." : res.status === 429 ? "יותר מדי שמירות ברצף. נסו שוב בעוד כמה דקות." : "לא הצלחנו לשמור. נסו שוב.");
       setState("error");
     }
   }
@@ -122,14 +122,14 @@ export default function DigestSettings() {
           </label>
         )}
       </div>
-      {state === "error" && <div className="notice err" role="alert">{saveError || "לא הצלחנו לשמור. אפשר לנסות שוב."}</div>}
+      {state === "error" && <div className="notice err" role="alert">{saveError || "לא הצלחנו לשמור. נסו שוב."}</div>}
       {state === "saved" && <div className="notice ok" role="status">נשמר.</div>}
       <div className="row">
         <button className="btn primary" disabled={state === "saving" || (needsConsent && !consent)}>
           {state === "saving" ? <span className="spinner" aria-hidden /> : null}
-          שמירה
+          שמירת ההגדרות
         </button>
-        <a className="btn" href={preview}>לראות את המייל שלי</a>
+        <a className="btn" href={preview}>לתצוגה מקדימה של המייל</a>
       </div>
     </form>
   );

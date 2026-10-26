@@ -1,0 +1,26 @@
+/* The personal area (/me): a greeting with an avatar, summary cards, then tracking and the account's settings. */
+.mehead { display: flex; align-items: center; gap: var(--s-5); padding-block: clamp(16px, 4vw, 40px) var(--s-2); }
+.mehead h1 { margin: 0; }
+.mehead .kicker { margin: 0 0 2px; }
+.mehead p.muted { margin: 2px 0 0; }
+.meavatar { flex: none; width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; overflow: hidden;
+  background: hsl(var(--h, 260) 70% 88%); color: hsl(var(--h, 260) 45% 28%); font-weight: 600; font-size: 26px; }
+.meavatar img { width: 100%; height: 100%; object-fit: cover; }
+:root[data-theme="dark"] .meavatar { background: hsl(var(--h, 260) 35% 26%); color: hsl(var(--h, 260) 70% 86%); }
+@media (prefers-color-scheme: dark) { :root[data-theme="system"] .meavatar { background: hsl(var(--h, 260) 35% 26%); color: hsl(var(--h, 260) 70% 86%); } }
+
+.mecards { display: grid; gap: var(--s-2); }
+@media (min-width: 640px) { .mecards { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); } }
+.mecard { display: grid; align-content: start; gap: 6px; padding: var(--s-5); border-radius: var(--r); background: var(--surface); color: var(--ink); text-decoration: none; transition: background .2s; }
+@media (hover: hover) { .mecard:hover { background: var(--soft); text-decoration: none; } .mecard:hover .go { text-decoration-color: var(--ink); } }
+.mecard .mi { width: 40px; height: 40px; border-radius: var(--r); background: var(--paper); display: grid; place-items: center; margin-block-end: var(--s-2); }
+.mecard .mt { display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; }
+.mecard .mt b { font-weight: 600; font-size: var(--t-md); }
+.mecard .st { font-size: var(--t-xs); font-weight: 600; padding: 2px 8px; border-radius: var(--r-sm); background: var(--paper); color: var(--muted); }
+.mecard .st.on { background: var(--ink); color: var(--bg); }
+.mecard .md { font-size: var(--t-sm); color: var(--muted); line-height: 1.5; }
+.mecard .go { margin-block-start: var(--s-2); font-size: var(--t-sm); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+
+.mesettings .mrow { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-3); border-block: 1px solid var(--line); }
+.mesettings .mrow p { margin: 2px 0 0; }
+@media (prefers-reduced-motion: reduce) { .mecard { transition: none; } }

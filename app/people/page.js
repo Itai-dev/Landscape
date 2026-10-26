@@ -66,7 +66,7 @@ export default async function People({ searchParams }) {
         ))}
       </nav>
 
-      {error && <div className="notice err" style={{ marginBlockStart: 32 }}>לא הצלחנו לטעון את חברי הקהילה כרגע. נסו לרענן.</div>}
+      {error && <div className="notice err" style={{ marginBlockStart: 32 }}>לא הצלחנו לטעון את חברי הקהילה כרגע. נסו לרענן את הדף.</div>}
       {members.length > 0 && (
         <section aria-labelledby="members-h">
           <div className="subhead">
@@ -87,8 +87,8 @@ export default async function People({ searchParams }) {
         </div>
         {seeds.length === 0 ? (
           <div className="soon">
-            <h3>לא מצאנו אנשים{craft ? ` ב${craftLabel(craft)}` : ""}{q ? <> עבור <bdi>״{q}״</bdi></> : ""}</h3>
-            <p>אפשר לנסות מילה אחרת, או לחפש את החברה עצמה.</p>
+            <h3>לא מצאנו אנשים{craft ? ` ב${craftLabel(craft)}` : ""}{q ? <> שמתאימים ל<bdi>״{q}״</bdi></> : ""}</h3>
+            <p>נסו מילה אחרת, או חפשו את החברה עצמה.</p>
             <a className="btn" href={`/search?q=${encodeURIComponent(q || craftLabel(craft))}`}>חיפוש בכל האתר</a>
           </div>
         ) : (
@@ -105,7 +105,7 @@ export default async function People({ searchParams }) {
         {PROFILES_ENABLED && signup && members.length === 0 && !error
           ? <>עוד אין פרופילים אישיים. <a href="/onboard">לבניית הפרופיל הראשון</a> </>
           : null}
-        מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.
+        מופיעים כאן? בקשו הסרה מהתפריט שבכרטיס.
       </p>
     </div>
   );

@@ -76,12 +76,12 @@ export default async function Digest({ searchParams }) {
       <div className="dlayout">
         <aside className="dside" aria-label="הרשמה ושיתוף">
           <div className="panel stack" id="subscribe-panel">
-            <h2>לקבל את זה כל יום ראשון</h2>
+            <h2>קבלו את זה כל יום ראשון</h2>
             <p className="muted">בבוקר, לפני כולם, רק מה ששייך לתחומים שלכם. חינם, ואפשר להסיר בלחיצה.</p>
             <DigestSubscribe crafts={chosen} where="digest-page" />
           </div>
           <div className="card stack share">
-            <h3>לשתף</h3>
+            <h3>שתפו</h3>
             <p className="muted small">פוסט מוכן עם העדכונים הבולטים וקישור ל״השבוע בתעשייה״ באתר.</p>
             <CopyPost text={linkedinPost(d, base)} />
           </div>
@@ -89,7 +89,7 @@ export default async function Digest({ searchParams }) {
             <div className="card stack">
               <h3>סקר התעריפים 2026</h3>
               <p className="muted small">4 דקות, ותראו כמה גובים אחרים בתחום שלכם ותוך כמה זמן משלמים להם.</p>
-              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">לענות על הסקר ‹</a>
+              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">למילוי הסקר ‹</a>
             </div>
           )}
         </aside>

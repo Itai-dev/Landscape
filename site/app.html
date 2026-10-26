@@ -404,6 +404,10 @@ main { padding-block: 6px 24px; }
 .sig .foot .acts { margin-inline-start: auto; display: flex; gap: 6px; align-items: center; }
 /* The source link is a 44px tap target, with the text unchanged. */
 .sig .foot > a { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; min-width: 44px; padding-inline: 6px; margin-inline: -6px; }
+/* The source as a clear button ("למשרה ב־LinkedIn ↗"), not a small link */
+.sig .foot > a.srcbtn { margin-inline: 0; padding-inline: 12px; min-height: 40px; border: 1px solid var(--ink); border-radius: 8px; color: var(--ink); font-weight: 500; text-decoration: none; transition: background .2s, color .2s; }
+@media (hover: hover) { .sig .foot > a.srcbtn:hover { background: var(--ink); color: var(--bg); text-decoration: none; } }
+@media (pointer: coarse) { .sig .foot > a.srcbtn { min-height: 44px; } }
 .alertsrow { justify-content: space-between; flex-wrap: wrap; }
 [id] { scroll-margin-top: 88px; }
 .credits { font-size: 13px; color: var(--muted); }
@@ -709,7 +713,20 @@ html:not([data-site]) .promo { display: none; }
 .cbox:empty { display: none; }
 #v-explore.booting #ftray, #v-explore.booting #mine, #v-explore.booting #active, #v-explore.booting main { display: none; }
 .boot { margin-block: 8px 32px; }
-.bootstate { color: var(--muted); font-size: 14px; }
+/* While the app boots (JS on): grey shapes of the real page with a soft shimmer, instead of the plain list.
+   The list stays in the page for search engines and readers without JS (shown by the <noscript> style). */
+.bootstate { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.boot .bootnote, .boot .ssrlist { display: none; }
+.boot.failed .bootnote, .boot.failed .ssrlist { display: block; }
+.skel { display: grid; gap: 24px; }
+.skel .sk-tray { height: 116px; border-radius: 8px; }
+.skel .sk-grid { display: grid; gap: 40px 24px; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+.skel .sk-tile { aspect-ratio: 16 / 10; border-radius: 8px; }
+.skel .sk-line { height: 14px; width: 60%; border-radius: 4px; margin-top: 14px; }
+.skel .sk-line.s { width: 35%; margin-top: 8px; }
+.sk { background: linear-gradient(90deg, var(--surface) 25%, var(--soft) 50%, var(--surface) 75%) 0 0 / 300% 100%; animation: sk-shine 1.6s ease-in-out infinite; }
+@keyframes sk-shine { from { background-position: 100% 0; } to { background-position: 0 0; } }
+@media (prefers-reduced-motion: reduce) { .sk { animation: none; } }
 .bootfail { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; background: var(--surface); border-radius: 8px; padding: 16px; margin-block-end: 16px; }
 .bootfail[hidden] { display: none; }
 .bootnote { color: var(--muted); font-size: 14px; }
@@ -755,7 +772,7 @@ html:not([data-site]) .promo { display: none; }
     <div class="hero">
       <h1 class="vh1" data-i18n="home.h">שאלו את ה־AI</h1>
       <p data-i18n="home.sub">שאלה במילים פשוטות. התשובות מבוססות רק על המאגר, עם החברות שמאחוריהן.</p>
-      <div class="metarow"><span class="meta" id="meta">טוען…</span><button class="langbtn" type="button" id="lang2" lang="en">English</button></div>
+      <div class="metarow"><span class="meta" id="meta">טוענים…</span><button class="langbtn" type="button" id="lang2" lang="en">English</button></div>
       <form class="askbox" id="askForm">
         <textarea id="askQ" rows="2" dir="auto" data-i18n-ph="home.ph" placeholder="למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה" aria-label="שאלה"></textarea>
         <button class="askgo" id="askGo" type="submit" aria-label="שליחת השאלה"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
@@ -783,8 +800,9 @@ html:not([data-site]) .promo { display: none; }
     <p class="listdesc"><span id="exSub"></span></p>
     <div class="boot" id="boot">
       <p class="bootstate" id="bootState" role="status"><span data-i18n="boot.loading">טוענים את החברות…</span></p>
-      <div class="bootfail" id="bootFail" role="alert" hidden><b data-i18n="boot.fail">לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.</b> <button class="btn" type="button" id="bootRetry" data-i18n="boot.retry">לנסות שוב</button></div>
-      <noscript><style>#bootState{display:none}</style></noscript>
+      <div class="bootfail" id="bootFail" role="alert" hidden><b data-i18n="boot.fail">לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.</b> <button class="btn" type="button" id="bootRetry" data-i18n="boot.retry">טעינה מחדש</button></div>
+      <noscript><style>#bootState,.skel{display:none}.boot .bootnote,.boot .ssrlist{display:block}</style></noscript>
+      <div class="skel" id="skel" aria-hidden="true"><div class="sk sk-tray"></div><div class="sk-grid"><div><div class="sk sk-tile"></div><div class="sk sk-line"></div><div class="sk sk-line s"></div></div><div><div class="sk sk-tile"></div><div class="sk sk-line"></div><div class="sk sk-line s"></div></div><div><div class="sk sk-tile"></div><div class="sk sk-line"></div><div class="sk sk-line s"></div></div><div><div class="sk sk-tile"></div><div class="sk sk-line"></div><div class="sk sk-line s"></div></div><div><div class="sk sk-tile"></div><div class="sk sk-line"></div><div class="sk sk-line s"></div></div><div><div class="sk sk-tile"></div><div class="sk sk-line"></div><div class="sk sk-line s"></div></div></div></div>
       <!-- static:companies -->
       <!-- /static:companies -->
     </div>
@@ -794,8 +812,8 @@ html:not([data-site]) .promo { display: none; }
       <div class="grid" id="grid"></div>
       <div class="more" id="moreWrap" hidden><button class="btn" type="button" id="more" data-i18n="more">עוד חברות</button></div>
       <div class="empty" id="empty" hidden>
-        <h3 data-i18n="empty.h">אין תוצאות</h3>
-        <span data-i18n="empty.p">אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).</span>
+        <h3 data-i18n="empty.h">לא מצאנו חברות שמתאימות</h3>
+        <span data-i18n="empty.p">נסו פחות סינונים, או חפשו באנגלית (לא לכל החברות יש שם בעברית).</span>
         <button class="btn" type="button" id="clearAll" data-i18n="clear">ניקוי מסננים</button>
       </div>
     </main>
@@ -899,7 +917,7 @@ html:not([data-site]) .promo { display: none; }
       "conf.high": "high", "conf.medium": "medium", "conf.low": "low",
       "f.founded": "Founded", "f.size": "Size", "f.people": "{0} people", "f.over": "{0}+", "f.status": "Status", "f.funding": "Funding", "f.public": "Listed", "f.raised": "${0}M raised", "f.offices": "Offices", "f.industry": "Industry",
       "l.reel": "Reel", "l.careers": "Careers", "l.contact": "Contact page", "sh.reach": "Contact & channels",
-      "sig.notinmap": "· not in the directory yet", "sig.save": "Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source",
+      "sig.notinmap": "· not in the directory yet", "sig.save": "Save", "sig.hide": "Hide", "sig.unhide": "Unhide", "sig.source": "Source", "sig.tojob": "View the job on {0}", "sig.toread": "Read on {0}",
       "sig.footer": "New updates arrive every Sunday. Each one links to its source.", "sig.empty.h": "No updates yet", "sig.empty.p": "New ones arrive every Sunday.",
       "sig.h": "Market updates", "sig.sub": "Funding, appointments, agency moves, campaigns and job posts, each with its source and date. An update is a sign of change, not proof that someone is looking for suppliers.", "cls.opp": "Opportunity · published job post", "cls.sig": "Update", "sig.whylbl": "Why it may be relevant:", "boot.loading": "Loading the companies…", "boot.fail": "We couldn’t load the company data. This is a loading problem, not an empty list.", "boot.retry": "Try again", "pipe.h": "Tracking", "pipe.sub": "The brands and studios you saved, with private notes and reminders.",
       "credit.agency": "Agency", "credit.production": "Production", "credit.studio": "Studio", "credit.post": "Post", "credit.director": "Director",
@@ -917,56 +935,56 @@ html:not([data-site]) .promo { display: none; }
       "ago.today": "today", "ago.yesterday": "yesterday", "ago.d": "{0}d ago", "ago.w": "{0}w ago", "ago.mo": "{0}mo ago",
     },
     he: {
-      "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוען…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
+      "app.sub": "· תעשיית הקריאייטיב בישראל", "nav.people": "אנשים", "nav.companies": "חברות", "nav.join": "הצטרפות", "loading": "טוענים…", "loadfail": "לא הצלחנו לטעון את הנתונים. נסו לרענן.",
       "meta": "{0} חברות · {1} עדכונים · עודכן {2}",
       "search.ph": "חיפוש בחברות", "ex.h": "חברות בתעשייה", "ex.sub": "מי מזמין מה: <b>מותגים, משרדי פרסום וסטודיואים</b>. לפי תחום, עיר או שם.",
       "lens.brands": "לקוחות (מזמינים)", "lens.collab": "ספקים וסטודיואים", "lens.all": "הכול",
       "mine.label": "התחומים שלי", "mine.edit": "+ עריכה", "mine.pick": "+ בחירת תחומים", "mine.hint": "מה שמתאים לכם יעלה ראשון", "t.noorg": "החברה לא נמצאה", "mine.remove": "הסרת {0}",
       "filters": "סינון", "dd.lens": "לקוחות או ספקים", "dd.sort": "מיון", "dd.clear": "ניקוי", "card.new": "עדכון", "card.fit": "מתאים לכם", "sh.desc": "תיאור", "sh.tags": "תחומים", "sort.fit": "הכי מתאים", "sort.name": "לפי שם", "sort.size": "הגדולים", "sort.founded": "החדשים",
       "count": "{0} חברות", "count1": "חברה אחת", "more": "עוד חברות",
-      "survey.b": "סקר התעריפים 2026: 4 דקות, ורואים את התוצאות.", "survey.a": "לענות על הסקר ‹",
-      "empty.h": "אין תוצאות", "empty.p": "אפשר לנסות פחות סינונים, או לחפש באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
+      "survey.b": "סקר התעריפים 2026: 4 דקות, ורואים את התוצאות.", "survey.a": "למילוי הסקר ‹",
+      "empty.h": "לא מצאנו חברות שמתאימות", "empty.p": "נסו פחות סינונים, או חפשו באנגלית (לא לכל החברות יש שם בעברית).", "clear": "ניקוי מסננים", "clearAll": "ניקוי הכול",
       "tab.ask": "שאלו AI", "tab.explore": "כל החברות", "tab.signals": "עדכונים",
       "home.h": "שאלו את ה־AI", "home.sub": "שאלה במילים פשוטות. התשובות מבוססות רק על המאגר, עם החברות שמאחוריהן.", "home.ph": "למשל: מותגים שצריכים הדמיות מוצר בתלת־ממד ברבעון הזה",
-      "home.week": "השבוע", "home.aifail": "החיפוש החכם לא הצליח הפעם. אלה החברות שהכי מתאימות למילים שכתבתם:", "home.offline": "החיפוש החכם עוד לא פתוח. הנה החברות שהכי מתאימות למילים שכתבתם:", "home.nores": "עדיין אין במאגר משהו שמתאים לזה. אפשר לנסות מילים אחרות, או לעבור לכל החברות.",
+      "home.week": "השבוע", "home.aifail": "הפעם לא הצלחנו לענות. אלה החברות שהכי מתאימות למילים שכתבתם:", "home.offline": "החיפוש החכם עוד לא פתוח. הנה החברות שהכי מתאימות למילים שכתבתם:", "home.nores": "עוד אין במאגר משהו שמתאים לזה. נסו מילים אחרות, או עברו לכל החברות.",
       "home.p.need": "מי מזמין {0}?", "home.p.agency": "אילו סוכנויות מזמינות {0}?", "home.p.collab": "סטודיואים לשיתוף פעולה ב{0}",
       "step.search": "מחפשים במאגר{0}", "step.org": "קוראים על {0}", "step.signals": "בודקים עדכונים אחרונים", "step.server": "מחפשים במאגר… זה יכול לקחת עד חצי דקה.", "step.pipe": "בודקים את רשימת המעקב", "step.write": "כותבים תשובה", "step.start": "חושבים",
       "r.open": "פתיחה", "r.pitch": "פנייה", "r.match": "התאמה: {0}", "tab.pipeline": "מעקב", "export": "ייצוא הנתונים שלי",
       "k1.studio": "סטודיו", "k1.production_company": "חברת הפקה", "k1.startup": "סטארטאפ", "k1.agency": "משרד פרסום", "k1.client": "מותג", "k1.community": "קהילה",
       "km.studio": "סטודיואים", "km.production_company": "חברות הפקה", "km.startup": "סטארטאפים", "km.agency": "משרדי פרסום", "km.client": "מותגים", "km.community": "קהילות",
       "status.acquired": "נרכש", "status.closed": "נסגר", "status.merged": "מוזג", "status.unknown": "סטטוס לא ידוע",
-      "st.watch": "במעקב", "st.to_pitch": "לפנות", "st.contacted": "נוצר קשר", "st.in_talks": "בשיחות", "st.client": "לקוח", "st.passed": "ירד מהפרק", "st.saved": "שמור",
+      "st.watch": "במעקב", "st.to_pitch": "לפנות", "st.contacted": "נוצר קשר", "st.in_talks": "בשיחות", "st.client": "לקוח", "st.passed": "ירד מהפרק", "st.saved": "נשמר",
       "sig.funding": "גיוס הון", "sig.acquisition": "רכישה", "sig.agency_move": "החלפת משרד פרסום", "sig.ownership": "בעלות", "sig.rebrand": "מיתוג מחדש", "sig.new_exec": "מינוי בשיווק", "sig.campaign": "קמפיין", "sig.launch": "השקה", "sig.hiring": "דרושים", "sig.award": "פרס", "sig.closure": "סגירה",
       "sigf.all": "הכול", "sigf.hiring": "דרושים", "sigf.funding": "גיוסים", "sigf.agency_move": "החלפות משרד", "sigf.new_exec": "מינויים", "sigf.campaign": "קמפיינים", "sigf.launch": "השקות", "sigf.rebrand": "מיתוגים", "sigf.ownership": "בעלות", "sigf.acquisition": "עסקאות",
       "card.buys": "מזמינים", "card.via": "משרד פרסום", "card.clients": "לקוחות",
       "fl.title": "סינון", "fl.type": "סוג חברה", "fl.needs": "מה הם מזמינים", "fl.craft": "תחום", "fl.industry": "תעשייה", "fl.product": "מוצר (סטארטאפים)", "fl.city": "עיר", "fl.anycity": "כל הערים", "fl.show": "הצגת {0} חברות", "fl.show1": "הצגת חברה אחת",
-      "cr.title": "מה אתם עושים?", "cr.p": "אפשר לבחור כמה. מותגים שמזמינים את זה יעלו לראש הרשימה.", "done": "סיום", "close": "סגירה",
+      "cr.title": "מה אתם עושים?", "cr.p": "בחרו אחד או יותר. מותגים שמזמינים את זה יעלו לראש הרשימה.", "done": "סיום", "close": "סגירה",
       "ways.agency": "המשרד שלהם", "ways.worked": "עבדו בשבילם", "ways.users": "מותגים שעובדים איתם", "ways.clients": "הלקוחות שלהם", "ways.shares": "לקוחות משותפים עם", "ways.group": "קבוצה ועסקאות", "ways.people": "אנשים בתפקידים פומביים",
       "ed.stage": "שלב", "ed.note": "הערה (פרטית)", "ed.noteph": "עם מי דיברתם, מה שלחתם, מה הלאה…", "ed.follow": "תזכורת", "q.1": "מחר", "q.7": "שבוע", "q.30": "חודש", "ed.date": "תאריך תזכורת", "ed.clear": "ניקוי", "ed.saved": "נשמר {0}", "ed.device": " · במכשיר הזה", "ed.remove": "הסרה מהמעקב",
       "sh.followup": " · תזכורת {0}", "sh.save": "מעקב", "sh.follow": "התראות במייל", "sh.following": "עם התראות", "sh.alertson": "התראות במייל על החברה הזו פועלות.", "sh.alertsoff": "אפשר לקבל מייל כשמשהו משתנה כאן.", "sh.alertsstop": "הפסקת ההתראות",
-      "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן אופציה.", "fo.later": "לא עכשיו", "fo.p": "תדעו ראשונים כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. לכל היותר מייל אחד ביום, בלי סיסמה.", "fo.email": "מייל",
-      "fo.consent": "אני רוצה לקבל במייל התראות מ־CreativeIn כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "להפעלת ההתראות",
-      "fo.sent": "שלחנו קישור אישור ל־{0}. כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.", "fo.err": "משהו השתבש. אפשר לנסות שוב.", "fo.rate": "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות.",
-      "fo.off": "נשמר במעקב שלכם. התראות במייל אפשר להפעיל בחשבון שלי.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "צריך לאשר את כתובת המייל קודם.",
-      "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "להפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "מה השתנה לאחרונה", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
+      "fo.title": "התראות במייל על {0}", "fo.saved": "נשמר למעקב", "fo.hint": "המעקב נשמר בדפדפן הזה. התראות במייל הן לא חובה.", "fo.later": "לא עכשיו", "fo.p": "תדעו ראשונים כשמשהו משתנה {0}: מינוי בשיווק, החלפת משרד, קמפיין חדש. לכל היותר מייל אחד ביום, בלי סיסמה.", "fo.email": "מייל",
+      "fo.consent": "אני רוצה לקבל במייל התראות מ־CreativeIn כשמשהו משתנה בחברות שבחרתי. אפשר להפסיק בכל רגע.", "fo.send": "שליחת קישור אישור", "fo.on": "הפעלת ההתראות",
+      "fo.sent": "שלחנו קישור אישור ל־{0}. פתחו אותו באותו מכשיר ובאותו דפדפן. לא הגיע? בדקו בספאם.", "fo.err": "משהו השתבש. נסו שוב.", "fo.rate": "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות.",
+      "fo.off": "נשמר במעקב שלכם. התראות במייל אפשר להפעיל בחשבון.", "fo.limit": "אפשר לעקוב אחרי עד 100 חברות.", "fo.unconfirmed": "אשרו קודם את כתובת המייל.",
+      "t.followed": "התראות על {0} פעילות", "t.unfollowed": "ההתראות על {0} הופסקו", "pipe.sync": "לקבל התראות במייל על {0} החברות ששמרתם כאן?", "pipe.syncbtn": "הפעלת ההתראות", "t.synced": "התראות פעילות על {0} חברות", "sh.pitch": "טיוטת פנייה", "sh.website": "אתר", "sh.whynow": "מה השתנה לאחרונה", "sh.buy": "מה הם מזמינים", "sh.pickcrafts": "בחירת תחומים", "sh.pickcrafts2": " כדי לראות מה מתאים לכם.", "sh.inhouse": "יש להם צוות קריאייטיב פנימי.",
       "sh.ways": "איך להגיע אליהם", "sh.about": "אודות", "sh.work": "עבודות, שירותים ומשקיעים", "sh.services": "שירותים ומוצרים", "sh.notable": "עבודות בולטות", "sh.investors": "משקיעים", "sh.links": "קישורים", "sh.sources": "מקורות · רמת ביטחון {0} · נבדק {1}", "sh.report": "דיווח על טעות", "sh.draft": "טיוטה שמורה", "sh.ennote": "התיאור באנגלית, כפי שנאסף מהמקורות.",
       "conf.high": "גבוהה", "conf.medium": "בינונית", "conf.low": "נמוכה",
       "f.founded": "נוסד", "f.size": "גודל", "f.people": "{0} עובדים", "f.over": "יותר מ־{0}", "f.status": "סטטוס", "f.funding": "מימון", "f.public": "נסחרת בבורסה", "f.raised": "גיוס: {0} מיליון $", "f.offices": "משרדים", "f.industry": "תעשייה",
       "l.reel": "שואוריל", "l.careers": "דרושים", "l.contact": "יצירת קשר", "sh.reach": "יצירת קשר וערוצים רשמיים",
-      "sig.notinmap": "· עדיין לא במאגר", "sig.save": "שמירה", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור",
-      "sig.footer": "עדכונים חדשים נוספים בכל יום ראשון. כל עדכון מקושר למקור שלו.", "sig.empty.h": "עדיין אין עדכונים", "sig.empty.p": "עדכונים חדשים נוספים בכל יום ראשון.",
-      "sig.h": "עדכונים מהשוק", "sig.sub": "גיוסים, מינויים, החלפות משרד, קמפיינים ומשרות, כל אחד עם מקור ותאריך. עדכון הוא סימן לשינוי, לא הוכחה שמחפשים ספקים.", "cls.opp": "הזדמנות · משרה שפורסמה", "cls.sig": "עדכון", "sig.whylbl": "למה זה יכול להיות רלוונטי:", "boot.loading": "טוענים את החברות…", "boot.fail": "לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.", "boot.retry": "לנסות שוב", "pipe.h": "מעקב", "pipe.sub": "המותגים והסטודיואים ששמרתם, עם הערות ותזכורות פרטיות.",
+      "sig.notinmap": "· עדיין לא במאגר", "sig.save": "שמירה למעקב", "sig.hide": "הסתרה", "sig.unhide": "ביטול הסתרה", "sig.source": "מקור", "sig.tojob": "למשרה ב־{0}", "sig.toread": "לפרסום ב־{0}",
+      "sig.footer": "עדכונים חדשים נוספים בכל יום ראשון. כל עדכון מקושר למקור שלו.", "sig.empty.h": "עוד אין עדכונים", "sig.empty.p": "עדכונים חדשים נוספים בכל יום ראשון.",
+      "sig.h": "עדכונים מהשוק", "sig.sub": "גיוסים, מינויים, החלפות משרד, קמפיינים ומשרות, כל אחד עם מקור ותאריך. עדכון הוא סימן לשינוי, לא הוכחה שמחפשים ספקים.", "cls.opp": "הזדמנות · משרה שפורסמה", "cls.sig": "עדכון", "sig.whylbl": "למה זה יכול להיות רלוונטי:", "boot.loading": "טוענים את החברות…", "boot.fail": "לא הצלחנו לטעון את נתוני החברות. זו תקלה בטעינה, לא רשימה ריקה.", "boot.retry": "טעינה מחדש", "pipe.h": "מעקב", "pipe.sub": "המותגים והסטודיואים ששמרתם, עם הערות ותזכורות פרטיות.",
       "credit.agency": "משרד", "credit.production": "הפקה", "credit.studio": "סטודיו", "credit.post": "פוסט", "credit.director": "בימוי",
-      "pipe.summary": "{0} במעקב", "pipe.duecount": " · {0} לטיפול", "pipe.empty.h": "רשימת המעקב ריקה", "pipe.empty.p": "שומרים מותג או סטודיו, ועוקבים כאן: מתי לפנות ומה נשלח. ההערות והתזכורות גלויות רק לכם.", "pipe.find": "מצאו מותגים לפנות אליהם", "pipe.duenow": "לטיפול עכשיו", "pipe.due": "עד ", "pipe.snooze": "+שבוע", "pipe.done": "בוצע",
+      "pipe.summary": "{0} במעקב", "pipe.duecount": " · {0} לטיפול", "pipe.empty.h": "עוד אין חברות במעקב", "pipe.empty.p": "שומרים מותג או סטודיו, ועוקבים כאן: מתי לפנות ומה נשלח. ההערות והתזכורות גלויות רק לכם.", "pipe.find": "לחיפוש מותגים", "pipe.duenow": "לטיפול עכשיו", "pipe.due": "עד ", "pipe.snooze": "+שבוע", "pipe.done": "בוצע",
       "export.title": "הנתונים שלכם", "export.p": "העתיקו ושמרו את ה־JSON הזה. הוא כולל את רשימת המעקב, ההערות והתחומים שלכם.", "copy": "העתקה", "copied": "הועתק", "selected": "מסומן. העתיקו מכאן.", "exported": "יוצא",
       "notice.ro": "אפשר לעיין בהכול. כדי לשמור למעקב צריך הרשאת Contributor מהבעלים.", "notice.local": "הרשימה נשמרת כרגע רק בדפדפן הזה.",
-      "t.saveerr": "השמירה נכשלה. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר למעקב · לפנות", "t.removed": "הוסר מהמעקב", "t.hidden": "העדכון הוסתר לכולם", "t.shown": "העדכון מוצג שוב", "t.reportok": "תודה. נבדוק ונתקן בסבב העדכון הבא.", "t.reporterr": "השליחה נכשלה. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
+      "t.saveerr": "לא הצלחנו לשמור. נסו שוב.", "t.ro": "אפשר לעיין, אבל שמירה דורשת הרשאת Contributor.", "t.saved": "נשמר למעקב · לפנות", "t.removed": "הוסר מהמעקב", "t.hidden": "העדכון הוסתר לכולם", "t.shown": "העדכון מוצג שוב", "t.reportok": "תודה. נבדוק ונתקן בסבב העדכון הבא.", "t.reporterr": "לא הצלחנו לשלוח. נסו שוב.", "t.draftsaved": "הטיוטה נשמרה · תזכורת בעוד שבוע",
       "p.title": "פנייה אל {0}", "p.sub": "הודעה אחת, קצרה וממוקדת. אתם עורכים ושולחים בעצמכם. CreativeIn לא שולח כלום.", "p.why": "למה עכשיו", "p.other": "משהו אחר (כתבו)", "p.whyph": "למשל: ראיתי את קמפיין הקיץ החדש שלכם", "p.who": "למי", "p.viaag": "דרך המשרד שלהם · {0}", "p.general": "בלי שם (כללי)",
       "p.me": "עליכם (שורה אחת)", "p.meph": "למשל: נועה, מעצבת מושן מתל אביב, 8 שנים בעבודה עם מותגים", "p.show": "מה להראות", "p.addsample": "+ הוספת עבודה", "p.titleph": "שם העבודה, למשל: השקת בזק, סרטוני מוצר בתלת־ממד", "p.urlph": "קישור (Vimeo, Behance…)", "p.lang": "שפה",
       "p.go": "כתיבת טיוטה", "p.draft": "טיוטה", "p.save": "שמירת טיוטה · תזכורת בעוד שבוע", "p.writing": "כותבים…", "p.done": "ערכו, העתיקו ושלחו בעצמכם.", "p.needwhy": "הוסיפו סיבה לפנות עכשיו.", "p.needsample": "בחרו או הוסיפו עבודה אחת להראות.", "p.fail": "לא הצלחנו לסיים. נסו שוב.",
-      "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "יותר מדי טקסט. קצרו.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במאגר. נסו שוב מאוחר יותר.",
-      "r.title": "דיווח על טעות", "r.about": "לגבי {0}. סבב העדכון הבא בודק את הדיווחים ומתקן.", "r.what": "מה לא נכון?", "r.ph": "למשל: עברו למקאן ב-2026; האתר לא עובד; עיר שגויה", "r.src": "מקור (לא חובה)", "r.srcph": "קישור שמראה את המידע הנכון", "r.send": "שליחה",
-      "ask.title": "שאלו את המאגר", "ask.sub": "התשובות מבוססות רק על נתוני המאגר, עם החברות שעליהן הן נשענות.", "ask.ph": "למשל: אילו מותגים קונים אנימציה ועובדים עם מקאן?", "ask.go": "שאלה", "ask.thinking": "מחפשים במאגר… זה יכול לקחת עד דקה.", "ask.found": "במאגר",
+      "err.not_granted": "קודם אשרו את Claude בעמוד הזה.", "err.rate_limited": "יותר מדי בקשות כרגע. נסו שוב בעוד דקה.", "err.sampling_disabled": "Claude לא זמין בחשבון הזה.", "err.prompt_too_large": "הטקסט ארוך מדי. קצרו אותו ונסו שוב.", "err.refused": "Claude סירב. נסו לנסח אחרת.", "err.tools_unavailable": "התצוגה הזו לא יכולה לחפש במאגר. נסו שוב מאוחר יותר.",
+      "r.title": "דיווח על טעות", "r.about": "לגבי {0}. סבב העדכון הבא בודק את הדיווחים ומתקן.", "r.what": "מה לא נכון?", "r.ph": "למשל: עברו למקאן ב־2026; האתר לא עובד; העיר לא נכונה", "r.src": "מקור (לא חובה)", "r.srcph": "קישור שמראה את המידע הנכון", "r.send": "שליחת הדיווח",
+      "ask.title": "שאלו את המאגר", "ask.sub": "התשובות מבוססות רק על נתוני המאגר, עם החברות שעליהן הן נשענות.", "ask.ph": "למשל: אילו מותגים קונים אנימציה ועובדים עם מקאן?", "ask.go": "שליחת השאלה", "ask.thinking": "מחפשים במאגר… זה יכול לקחת עד דקה.", "ask.found": "במאגר",
       "ask.ex1": "אילו מותגים קונים אנימציה או מושן, ודרך איזה משרד?", "ask.ex2": "מי מנהלי ההפקה במשרדי הפרסום הגדולים?", "ask.ex3": "אילו סטודיואים עבדו עם חברות תקשורת?", "ask.ex4": "מה השתנה החודש שיכול להביא עבודה לאמני תלת־ממד?",
       "ago.today": "היום", "ago.yesterday": "אתמול", "ago.d": "לפני {0} ימים", "ago.w": "לפני {0} שבועות", "ago.mo": "לפני {0} חודשים",
     },
@@ -2040,7 +2058,7 @@ Question: ${q}`;
       ${why ? `<p class="why" dir="auto"><span class="wl">${t("sig.whylbl")}</span> ${bidi(why)}</p>` : ""}
       ${cr ? `<div class="credits" dir="auto">${esc(cr)}</div>` : ""}
       <div class="foot"><span class="mono">${s.date_approx ? "≈ " : ""}${fmtDate(s.date)}</span>
-        <a href="${esc(s.source_url)}" target="_blank" rel="noopener" data-src-cat="${esc(s.type)}" data-src-opp="${opp ? 1 : 0}">${esc(s.source || t("sig.source"))} ${IC.ext}</a>
+        ${s.source_url ? `<a class="srcbtn" href="${esc(s.source_url)}" target="_blank" rel="noopener" data-src-cat="${esc(s.type)}" data-src-opp="${opp ? 1 : 0}">${t(opp ? "sig.tojob" : "sig.toread", `<bdi>${esc(String(s.source || t("sig.source")).replace(/\s*jobs$/i, ""))}</bdi>`)} ${IC.ext}</a>` : ""}
         <span class="acts">
           ${!compact && o ? (inPipe ? `<span class="stage">${IC.saved} ${esc(stageLabel(inPipe.stage))}</span>` : `<button class="btn" type="button" data-save-org="${o.id}" ${Store.readOnly ? "disabled" : ""}>${IC.save} ${t("sig.save")}</button>`) : ""}
           ${Store.isOwner && Store.mode === "db" ? `<button class="btn ghost" type="button" data-hide="${esc(s.id)}">${s.hidden ? t("sig.unhide") : t("sig.hide")}</button>` : ""}
@@ -2238,7 +2256,7 @@ Question: ${q}`;
   async function boot() {
     applyLang();
     $("meta").textContent = t("loading");
-    $("bootFail").hidden = true; $("bootState").hidden = false;
+    $("bootFail").hidden = true; $("bootState").hidden = false; $("skel").hidden = false; $("boot").classList.remove("failed");
     let data, sig;
     try {
       [data, sig] = await Promise.all([
@@ -2249,7 +2267,7 @@ Question: ${q}`;
     } catch (e) {
       // A real error, not an empty list: say so, offer a retry, keep the prebuilt list (if any) under it.
       $("meta").textContent = t("loadfail");
-      $("bootState").hidden = true; $("bootFail").hidden = false;
+      $("bootState").hidden = true; $("bootFail").hidden = false; $("skel").hidden = true; $("boot").classList.add("failed");
       $("v-explore").hidden = false; ["ask", "signals", "pipeline"].forEach((v) => ($("v-" + v).hidden = true));
       try { console.warn("companies: data failed to load", e); } catch (_) {}
       return;

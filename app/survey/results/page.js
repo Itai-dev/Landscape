@@ -16,7 +16,8 @@ export const metadata = {
   twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: ["/og/survey.png"] },
 };
 
-const ils = (v) => (v == null ? "—" : `₪${Math.round(v).toLocaleString("he-IL")}`);
+const num = (v) => Math.round(v).toLocaleString("he-IL");
+const ils = (v) => (v == null ? "—" : `${num(v)} ₪`);
 const pct = (x) => `${Math.round(x * 100)}%`;
 const nLabel = (nb) => (nb ? `${nb}+ משיבים` : "");
 const dayLabel = (iso) => new Intl.DateTimeFormat("he-IL", { day: "numeric", month: "long", timeZone: "Asia/Jerusalem" }).format(new Date(iso));
@@ -26,7 +27,7 @@ function Range({ s }) {
   return (
     <span className="range">
       <b className="mono">{ils(s.median)}</b>
-      {s.p75 > s.p25 && <span className="small muted mono"><bdi dir="ltr">{ils(s.p25)}–{ils(s.p75)}</bdi></span>}
+      {s.p75 > s.p25 && <span className="small muted mono"><bdi dir="ltr">{num(s.p25)}–{num(s.p75)}</bdi> ₪</span>}
     </span>
   );
 }
@@ -171,7 +172,7 @@ export default async function Results() {
               טבלאות לפי תחום וצורת עבודה, מחירים של עבודות נפוצות, תנאי תשלום ואיחורים. 4 דקות, והתשובות חסויות.
               {` אפשר גם להזמין ${UNLOCK_REFERRALS} אנשים שעונים על הסקר.`}
             </p>
-            <a className="btn primary lg" href="/survey">לענות על הסקר</a>
+            <a className="btn primary lg" href="/survey">למילוי הסקר</a>
           </div>
           {user && <ShareInvite showCounter />}
         </div>
