@@ -9,7 +9,7 @@ import FollowButton from "@/components/FollowButton";
 import "../tenders/tenders.css";
 
 // Crafts shown first in the picker; the rest sit under "עוד תחומים".
-const TOP = ["motion-design", "animation-3d", "animation-2d", "vfx", "post-production", "editing", "sound-design", "branding", "illustration", "commercial-production", "content-studio", "ai-creative"];
+const TOP = ["creative-direction", "art-direction", "creative-strategy", "brand-strategy", "copywriting", "ai-creative", "branding", "motion-design", "digital-design", "content-studio", "commercial-production", "editing"];
 const WEB_ITEMS = 8; // the web edition shows a little more than the email
 
 const parseCrafts = (v) => String(v || "").split(",").map((s) => s.trim()).filter((s) => CRAFT_SLUGS.includes(s)).slice(0, 8);
