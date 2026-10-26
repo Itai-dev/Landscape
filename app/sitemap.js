@@ -1,5 +1,5 @@
 import { siteUrl } from "@/lib/digest";
-import { TOOLS } from "@/lib/chrome.mjs";
+import { TOOLS, PREMIUM } from "@/lib/chrome.mjs";
 import { ORG_LIST } from "@/lib/orgs";
 
 // The public pages, and one page per company (/companies/<id>), dated by its last check.
@@ -17,6 +17,7 @@ export default function sitemap() {
     page("/survey", "monthly", 0.6),
     page("/survey/results", "weekly", 0.5),
     ...(TOOLS ? [page("/tools", "weekly", 0.6)] : []),
+    ...(PREMIUM ? [page("/premium", "monthly", 0.6), page("/terms", "yearly", 0.2)] : []),
     page("/privacy", "yearly", 0.2),
     ...ORG_LIST.filter((o) => o.status !== "closed").map((o) => ({
       url: `${base}/companies/${encodeURIComponent(o.id)}`,

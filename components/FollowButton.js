@@ -28,6 +28,11 @@ export function useFollows() {
   return state;
 }
 
+// The free tier is full (premium on) or the hard ceiling is reached.
+const limitText = (max, offer) => offer
+  ? `בחינם אפשר לעקוב אחרי עד ${max} חברות. בפרימיום, בלי הגבלה.`
+  : `אפשר לעקוב אחרי עד ${max || 100} חברות.`;
+
 /**
  * "התראות על החברה": follow a company and get an email when something changes there.
  * Signed in: toggles at once (the first time also asks for alerts consent). Signed out: email + consent,
@@ -40,10 +45,11 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
   const [consent, setConsent] = useState(false);
   const [phase, setPhase] = useState("idle"); // idle | busy | sent | error
   const [msg, setMsg] = useState("");
+  const [upsell, setUpsell] = useState(false); // the free tier is full: point to premium
   const box = useRef(null);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open) { setUpsell(false); return; }
     const close = (e) => { if (e.key === "Escape" || (e.type === "pointerdown" && box.current && !box.current.contains(e.target))) setOpen(false); };
     document.addEventListener("keydown", close);
     document.addEventListener("pointerdown", close);
@@ -67,7 +73,9 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     const j = await res?.json().catch(() => ({}));
     if (!res?.ok) {
       setPhase("error");
-      setMsg(j?.error === "limit" ? "אפשר לעקוב אחרי עד 100 חברות." : j?.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב.");
+      setMsg(j?.error === "limit" ? limitText(j.max, j.offer) : j?.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב.");
+      setUpsell(j?.error === "limit" && Boolean(j.offer));
+      setOpen(true);
       return;
     }
     const follows = following ? s.follows.filter((id) => id !== orgId) : [...(s.follows || []), orgId];
@@ -130,7 +138,12 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
       </button>
       {open && (
         <div className="follow-pop" role="dialog" aria-label={`התראות על ${orgName}`}>
-          {s.signedIn && following && !alerting && s.consent ? (
+          {upsell ? (
+            <div className="stack">
+              <p className="small" role="alert">{msg}</p>
+              <a className="btn primary sm" href="/premium" data-track="premium_upsell">לפרימיום</a>
+            </div>
+          ) : s.signedIn && following && !alerting && s.consent ? (
             <p className="small">החברה במעקב שלכם, וההתראות במייל כבויות. אפשר להפעיל אותן <a href="/me#follows">בחשבון</a>.</p>
           ) : s.signedIn ? (
             <form className="stack" onSubmit={(e) => { e.preventDefault(); if (consent) (following ? enableAlerts() : toggle(true)); }}>

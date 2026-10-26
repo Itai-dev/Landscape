@@ -40,9 +40,11 @@ export default function FollowsClient({ initial, justFollowed }) {
   }
 
   const fresh = justFollowed && follows.find((f) => f.id === justFollowed);
+  const limited = Boolean(initial.offer && !initial.premium); // the free tier counts toward its limit
   return (
     <div className="card stack" id="follows">
-      <h2>המעקב שלי {follows.length > 0 && <span className="count">{follows.length}</span>}</h2>
+      <h2>המעקב שלי {(follows.length > 0 || limited) && <span className="count">{limited ? `${follows.length} מתוך ${initial.max}` : follows.length}</span>}</h2>
+      {limited && follows.length >= initial.max && <p className="notice small">הרשימה מלאה. בחינם אפשר לעקוב אחרי עד {initial.max} חברות. <a href="/premium" data-track="premium_upsell" data-track-where="me">לפרימיום, בלי הגבלה</a></p>}
       {fresh && alerts !== "off" && <p className="notice ok" role="status">מעכשיו יגיע אליכם מייל כשמשהו משתנה <bdi>{prefixed("ב", fresh.name)}</bdi>.</p>}
       <p className="muted">החברות ששמרתם בכפתור ״מעקב״. הרשימה שמורה בחשבון, אז היא זמינה מכל מכשיר.</p>
       {follows.length ? (
@@ -62,7 +64,7 @@ export default function FollowsClient({ initial, justFollowed }) {
       <div>
         <span className="label">מתי לשלוח</span>
         <div className="chips" role="radiogroup" aria-label="מתי לשלוח התראות">
-          {ALERT_MODES.map((m) => (
+          {ALERT_MODES.filter((m) => !m.premium || initial.premium).map((m) => (
             <label key={m.slug} className={`chip${alerts === m.slug ? " on" : ""}`}>
               <input type="radio" name="alerts-mode" checked={alerts === m.slug} onChange={() => mode(m.slug)} />
               {m.he}
@@ -70,6 +72,7 @@ export default function FollowsClient({ initial, justFollowed }) {
           ))}
         </div>
       </div>
+      {initial.offer && !initial.premium && <p className="muted small">בפרימיום ההתראות מגיעות בתוך שעה מהפרסום. <a href="/premium">לפרימיום</a></p>}
       {!consented && (
         <label className="check small"><input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} /><span>{ALERTS_CONSENT_TEXT}</span></label>
       )}
