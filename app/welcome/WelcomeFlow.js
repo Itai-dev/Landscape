@@ -127,8 +127,8 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             </ul>
 
             <div className="jfoot">
-              <button type="button" className="btn primary lg" onClick={() => go(1)}>{needCrafts ? "בואו נתאים את זה אליכם" : "לבחור חברות למעקב"}</button>
-              <a className="tap jskip" href="/">לדלג לאתר</a>
+              <button type="button" className="btn primary lg" onClick={() => go(1)}>{needCrafts ? "בואו נתאים את זה אליכם" : "בחרו חברות למעקב"}</button>
+              <a className="tap jskip" href="/">דלגו לאתר</a>
             </div>
           </section>
         )}
@@ -190,7 +190,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             <div className="jfoot">
               <button type="button" className="btn primary lg" disabled={busy || !picked.length} onClick={follow}>
                 {busy ? <span className="spinner" aria-hidden /> : null}
-                {picked.length ? `לעקוב אחרי ${picked.length === 1 ? "חברה אחת" : `${picked.length} חברות`}` : "לבחור חברות"}
+                {picked.length ? `עקבו אחרי ${picked.length === 1 ? "חברה אחת" : `${picked.length} חברות`}` : "בחרו חברות"}
               </button>
               <button type="button" className="tap jskip" onClick={() => { tryTrack("welcome_follow", { n: 0, skipped: true }); go(step + 1); }}>אחר כך</button>
             </div>
