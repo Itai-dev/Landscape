@@ -54,7 +54,7 @@ export default function HomePage({ split = false }) {
   // (30 days, then a year), so the card never runs empty; HeroMedia loops through them without end.
   const pool = [...week.items, ...week.more, ...composeDigest({ maxItems: 6, days: 30, now }).items, ...composeDigest({ maxItems: 6, days: 365, now }).items];
   const media = pool.filter((x, n, a) => x.headline && a.findIndex((y) => y.id === x.id) === n).slice(0, 6)
-    .map((i) => ({ id: i.id, label: i.class_label, day: i.day, headline: i.headline, org: i.org?.name || "", logo: i.org?.logo || null, href: i.org?.href ? rel(i.org.href) : null }));
+    .map((i) => ({ id: i.id, label: i.class_label, day: i.day, headline: i.headline, org: i.org?.name || "", logo: i.org?.logo_hi || i.org?.logo || null, logo_px: i.org?.logo_px || null, source: i.source || "", href: i.org?.href ? rel(i.org.href) : null }));
   return (
     <>
       <div className="wrap"><AuthNotice /></div>
@@ -67,9 +67,9 @@ export default function HomePage({ split = false }) {
               <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
               <p className="lead">מי מונה, מי עבר משרד, ומה נפתח להגשה.<br />בתחום שלכם, כל יום ראשון במייל.</p>
               <ul className="checks">
-                <li><CheckIcon size={18} /><span>{STATS.orgs} מותגים, משרדים, סטודיואים והפקות. לפי תחום ועיר, עם מקור לכל פרט.</span></li>
-                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי.</span></li>
-                <li><CheckIcon size={18} /><span>מייל אחד בשבוע, לפי התחום שלכם. חינם.</span></li>
+                <li><CheckIcon size={18} /><span><b>מי מזמין מה.</b> {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, ודרך מי הם עובדים.</span></li>
+                <li><CheckIcon size={18} /><span><b>הזדמנויות בזמן.</b> <a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> בתחום שלכם, עם מועד הגשה וקישור למקור.</span></li>
+                <li><CheckIcon size={18} /><span><b>רק מה שרלוונטי.</b> מייל אחד ביום ראשון, לפי התחום שלכם. חינם.</span></li>
               </ul>
               <div className="row">
                 <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>

@@ -65,24 +65,30 @@
 .checks li { display: flex; align-items: flex-start; gap: var(--s-3); color: var(--ink-2); font-size: var(--t-base); line-height: 1.5; }
 .checks svg { flex: none; color: var(--accent); margin-block-start: 3px; }
 
-/* Desktop card: this week's updates, one at a time, with the company as a chip in the corner. */
+/* Desktop card: this week's updates, one at a time: the company's logo and name, the update, its source; controls below. */
 .hmedia { display: none; }
 @media (min-width: 960px) {
-  .hmedia { display: grid; position: relative; background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); min-height: 440px; }
-  .hcard { grid-area: 1 / 1; display: grid; align-content: end; gap: var(--s-4); background: var(--paper); border-radius: var(--r); padding: var(--s-7) var(--s-6) var(--s-8);
-    color: var(--ink); text-decoration: none; opacity: 0; pointer-events: none; transition: opacity .6s var(--ease); }
+  .hmedia { display: grid; grid-template-rows: 1fr auto; gap: var(--s-4); position: relative; background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); min-height: 460px; }
+  .hcard { grid-area: 1 / 1; display: grid; align-content: space-between; gap: var(--s-5); background: var(--paper); border-radius: var(--r); padding: var(--s-6);
+    color: var(--ink); text-decoration: none; opacity: 0; pointer-events: none; transition: opacity .5s var(--ease); }
   .hcard.on { opacity: 1; pointer-events: auto; }
   @media (hover: hover) { a.hcard.on:hover .hhead { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; } }
-  .hlabel { font-size: var(--t-sm); color: var(--muted); }
-  .hhead { font-size: var(--t-xl); font-weight: 500; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-  .hchip { position: absolute; inset-block-end: var(--s-5); inset-inline-end: var(--s-5); display: inline-flex; align-items: center; gap: var(--s-2);
-    background: var(--bg); border-radius: var(--r-pill); padding: 6px 14px 6px 6px; font-size: var(--t-sm); font-weight: 500; max-width: 70%; }
-  .hchip bdi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .hchip img, .hmono { width: 28px; height: 28px; border-radius: 50%; flex: none; object-fit: cover; background: var(--surface); }
-  .hmono { display: grid; place-items: center; font-size: 13px; color: var(--ink); }
-  .hdots { position: absolute; inset-block-start: var(--s-6); inset-inline-start: var(--s-6); display: flex; gap: 6px; }
-  .hdots i { width: 6px; height: 6px; border-radius: 1.5px; background: var(--line-2); transition: background .3s ease; }
-  .hdots i.on { background: var(--accent); }
+  .hby { display: flex; align-items: center; gap: var(--s-4); }
+  .hlogo { flex: none; width: 72px; height: 72px; border-radius: var(--r); background: #fff; border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; font-weight: 600; font-size: 26px; color: #222; }
+  .hlogo img { object-fit: contain; }
+  .horg { display: grid; gap: 2px; min-width: 0; font-weight: 600; font-size: var(--t-md); }
+  .horg bdi { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .hlabel { font-size: var(--t-sm); font-weight: 400; color: var(--muted); }
+  .hhead { font-size: var(--t-xl); font-weight: 500; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .hsrc { font-size: var(--t-sm); color: var(--muted); }
+  .hctrl { grid-row: 2; display: flex; align-items: center; justify-content: space-between; gap: var(--s-3); }
+  .harrow { width: 44px; height: 44px; border-radius: var(--r); border: 1px solid var(--line-2); background: var(--paper); color: var(--ink); display: grid; place-items: center; cursor: pointer; transition: background .2s, color .2s; }
+  @media (hover: hover) { .harrow:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); } }
+  .hdots { display: flex; gap: 4px; }
+  .hdots button { width: 24px; height: 24px; border: 0; padding: 0; background: none; cursor: pointer; display: grid; place-items: center; }
+  .hdots button::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--line-2); transition: background .3s ease, width .3s ease; }
+  .hdots button.on::before { width: 18px; background: var(--accent); }
+
 }
 @media (prefers-reduced-motion: reduce) { .hcard { transition: none; } }
 
