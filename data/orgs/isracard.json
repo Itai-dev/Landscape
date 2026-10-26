@@ -41,7 +41,8 @@
       "motion graphics"
     ],
     "known_agencies": [
-      "Reuveni-Pridan"
+      "Adler Chomski (from Oct 2026)",
+      "Interaction (digital, Adler Chomski group)"
     ]
   },
   "relations": [
@@ -53,7 +54,12 @@
     {
       "type": "agency",
       "target": "reuveni-pridan",
-      "note": "agency (per trade press / agency client list)"
+      "note": "agency for about 2.5 years until Oct 2026, when the ~NIS 25M account moved to Adler Chomski (Globes, 2026-10-22)"
+    },
+    {
+      "type": "agency",
+      "target": "adler-chomski-warshavsky",
+      "note": "won the ~NIS 25M advertising account from Reuveni Pridan, Oct 2026, to bring advertising, marketing and digital under one group; digital already with group agency Interaction (Globes 2026-10-22, ICE 2026-10-23)"
     }
   ],
   "sources": [
@@ -63,10 +69,12 @@
     "https://www.isracard.co.il/contact-us/private",
     "https://www.isracard.co.il/career",
     "https://www.globes.co.il/news/article.aspx?did=1001546956",
-    "https://www.globes.co.il/news/article.aspx?did=1001534875"
+    "https://www.globes.co.il/news/article.aspx?did=1001534875",
+    "https://www.globes.co.il/news/article.aspx?did=1001560520",
+    "https://www.ice.co.il/advertising-marketing/news/article/1134815"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
+  "last_verified": "2026-10-26",
   "notes": "Apr 2024: NIS 25M budget moved from Publicis to Reuveni-Pridan after 12 years. The Aug 2026 Fly Card (El Al + Isracard) ad was made by McCann Tel Aviv (Globes). Agency as of 2026-06: Reuveni-Pridan lists Isracard among its main clients (Globes, Jun 2026). Marketing VP Amit Sagi left in 2025; successor not confirmed in trade press. Feb 2026: Adar Goren (Isracard marketing & data manager for four years, acting marketing VP) promoted to VP Data, Digital & Marketing under new CEO Itamar Forman (Globes)."
 }

@@ -1,15 +1,15 @@
 # Landscape stats
 
-_Generated 2026-10-21 · 427 organizations_
+_Generated 2026-10-26 · 430 organizations_
 
 ## By kind
 
 | Kind | Count |
 |---|---|
-| client | 135 |
+| client | 137 |
 | studio | 128 |
 | startup | 67 |
-| agency | 42 |
+| agency | 43 |
 | production_company | 38 |
 | community | 17 |
 
@@ -17,19 +17,19 @@ _Generated 2026-10-21 · 427 organizations_
 
 | Country | Count |
 |---|---|
-| IL | 427 |
+| IL | 430 |
 
 ## Top cities
 
 | City | Count |
 |---|---|
 | Tel Aviv | 220 |
-| — | 76 |
+| — | 78 |
 | Jerusalem | 18 |
 | Ramat Gan | 16 |
 | Petah Tikva | 15 |
 | Herzliya | 13 |
-| Bnei Brak | 9 |
+| Bnei Brak | 10 |
 | Givatayim | 6 |
 | Netanya | 5 |
 | Haifa | 5 |
@@ -44,23 +44,23 @@ _Generated 2026-10-21 · 427 organizations_
 | Category | Count |
 |---|---|
 | Commercial / ad production | 34 |
+| Branding / identity | 31 |
 | 3D animation | 30 |
 | Motion design / motion graphics | 30 |
-| Branding / identity | 30 |
 | Public sector / NGO | 30 |
 | 2D animation | 29 |
 | Film & TV production | 28 |
 | Banking / finance / insurance | 28 |
-| Technology | 25 |
+| Technology | 26 |
+| Advertising agency | 25 |
 | AR / VR / XR | 24 |
-| Advertising agency | 24 |
+| Digital product / UX / web design | 24 |
 | Retail / fashion | 24 |
-| Digital product / UX / web design | 23 |
 | Video creation / editing tools | 23 |
 | Post-production | 23 |
 | Visual effects | 19 |
+| Digital / performance agency | 19 |
 | Creative technology / interactive | 19 |
-| Digital / performance agency | 18 |
 | Graphic design | 17 |
 | Sound design / audio post | 17 |
 | CGI / 3D visualization | 16 |
@@ -83,13 +83,13 @@ _Generated 2026-10-21 · 427 organizations_
 | Design tools | 8 |
 | Dubbing / localization | 8 |
 | Music tech | 7 |
+| Telecom | 7 |
 | Color grading | 7 |
 | Avatars / synthetic humans | 6 |
 | Association / community | 6 |
 | Illustration | 6 |
 | Real estate | 6 |
 | Music production / composition | 6 |
-| Telecom | 6 |
 | Website builders | 6 |
 | Media / broadcast / streaming | 6 |
 | Travel / hospitality | 5 |
@@ -99,10 +99,10 @@ _Generated 2026-10-21 · 427 organizations_
 | Sports media tech | 5 |
 | Generative AI — voice / music / audio | 4 |
 | 3D tools / capture | 4 |
+| Automotive | 4 |
 | Game art | 4 |
 | Photography | 4 |
 | Packaging design | 3 |
-| Automotive | 3 |
 | Energy / industry | 3 |
 | Stock media / licensing | 1 |
 | Freelance / creative marketplace | 1 |
@@ -112,6 +112,6 @@ _Generated 2026-10-21 · 427 organizations_
 
 | Level | Count |
 |---|---|
-| high | 238 |
-| medium | 165 |
+| high | 239 |
+| medium | 167 |
 | low | 24 |
