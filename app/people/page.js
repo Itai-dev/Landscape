@@ -10,7 +10,7 @@ import { PROFILES_ENABLED } from "@/lib/config";
 
 export const metadata = {
   title: "אנשים",
-  description: "מי מחליט בתעשיית הקריאייטיב בישראל: מנהלי שיווק, הפקה וקריאייטיב במותגים, במשרדים ובסטודיואים. לפי מה שפורסם בפומבי, עם המקור.",
+  description: "אנשים בתעשיית הקריאייטיב בישראל: מנהלי שיווק, הפקה וקריאייטיב במותגים, במשרדים ובסטודיואים. לפי מה שפורסם בפומבי, עם המקור.",
   alternates: { canonical: "/people" },
 };
 
@@ -44,7 +44,7 @@ export default async function People({ searchParams }) {
   return (
     <div className="wrap">
       <div className="pagehead list">
-        <h1>מי מחליט בתעשייה <span className="cbox">{seeds.length.toLocaleString("he-IL")}</span></h1>
+        <h1>אנשים בתעשייה <span className="cbox">{seeds.length.toLocaleString("he-IL")}</span></h1>
         <p><b>מנהלי שיווק, הפקה וקריאייטיב</b> במותגים, במשרדים ובסטודיואים. לפני שפונים לחברה, יודעים מי עומד מולכם. מפרסומים פומביים, עם מקור.</p>
       </div>
 
