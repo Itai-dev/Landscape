@@ -191,6 +191,12 @@ input:focus-visible, textarea:focus-visible, select:focus-visible { outline: non
 .field { margin-block-end: var(--s-5); }
 .check { display: flex; gap: var(--s-3); align-items: flex-start; font-weight: 400; font-size: 15px; }
 .check input { margin-block-start: 4px; width: 18px; height: 18px; flex: none; accent-color: var(--ink); }
+/* "כניסה עם Google / Apple" (components/OAuthButtons.js): full-width outlined buttons, then "או עם קישור במייל" on a hairline */
+.oauth { display: grid; gap: var(--s-2); }
+.oauthbtn { width: 100%; min-height: 48px; gap: var(--s-3); background: var(--paper); }
+.oauthbtn svg, .oauthbtn .spinner { flex: none; }
+.oauth-or { display: flex; align-items: center; gap: var(--s-3); margin: var(--s-2) 0 0; font-size: var(--t-sm); color: var(--muted); }
+.oauth-or::before, .oauth-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: var(--s-2);

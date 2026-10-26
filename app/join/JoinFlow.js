@@ -7,6 +7,8 @@ import { firstSendLabel } from "@/lib/digestSchedule";
 import { useSupabase } from "@/components/Providers";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
 import { callbackUrl, normalEmail, validEmail } from "@/lib/authLink";
+import OAuthButtons from "@/components/OAuthButtons";
+import { OAUTH } from "@/lib/oauth";
 
 const FREQS = [
   { slug: "weekly", he: "כל שבוע" },
@@ -172,21 +174,30 @@ export default function JoinFlow({ crafts: all }) {
         {step === 2 && (
           <section className="jstep" aria-labelledby="j2">
             <h1 id="j2" ref={head} tabIndex={-1}>המייל שלכם</h1>
-            <p className="muted">אין סיסמה: שולחים קישור כניסה. ממנו נכנסים לאיזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
+            <p className="muted">אין סיסמה: {OAUTH.length ? "נכנסים עם חשבון קיים או עם קישור במייל" : "שולחים קישור כניסה"}. ממנו נכנסים לאיזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
             {!configured ? (
               <p className="muted small">ההרשמה נפתחת בקרוב.</p>
             ) : (
               <form id="join" onSubmit={submit} className="stack digest-form">
-                <div>
-                  <label htmlFor="join-email">מייל</label>
-                  <input id="join-email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </div>
                 {newsletter && (
                   <label className="check">
                     <input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required />
                     <span>{CONSENT_TEXT}</span>
                   </label>
                 )}
+                <OAuthButtons
+                  where="join"
+                  disabled={newsletter && !consent}
+                  redirectTo={() => callbackUrl({ next: "/me?welcome=1", subscribe: newsletter ? frequency : "", crafts })}
+                  onStart={(provider) => {
+                    tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off", method: provider });
+                    if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });
+                  }}
+                />
+                <div>
+                  <label htmlFor="join-email">מייל</label>
+                  <input id="join-email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                </div>
                 {phase === "error" && <div className="notice err" role="alert">{error}</div>}
                 <div className="row">
                   <button className="btn primary" disabled={phase === "sending" || (newsletter && !consent) || !email.includes("@")}>

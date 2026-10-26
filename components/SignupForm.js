@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useSupabase } from "@/components/Providers";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
 import { callbackUrl } from "@/lib/authLink";
+import OAuthButtons from "@/components/OAuthButtons";
 import { firstSendLabel } from "@/lib/digestSchedule";
 import ComingSoon from "@/components/ComingSoon";
 import { PROFILES } from "@/lib/chrome.mjs";
@@ -46,17 +47,18 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
 
   return (
     <form onSubmit={submit} className="stack" noValidate={false}>
-      <div>
-        <label htmlFor="email">מייל</label>
-        <input id="email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com"
-          value={email} onChange={(e) => setEmail(e.target.value)} />
-      </div>
       {digest && (
         <label className="check">
           <input type="checkbox" checked={newsletter} onChange={(e) => setNewsletter(e.target.checked)} />
           <span>{CONSENT_TEXT}</span>
         </label>
       )}
+      <OAuthButtons where="signin" redirectTo={() => callbackUrl({ next, subscribe: newsletter ? "weekly" : "" })} />
+      <div>
+        <label htmlFor="email">מייל</label>
+        <input id="email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com"
+          value={email} onChange={(e) => setEmail(e.target.value)} />
+      </div>
       {state === "error" && <div className="notice err" role="alert">{error}</div>}
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !email.includes("@")}>
