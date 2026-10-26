@@ -1,0 +1,31 @@
+/* /welcome: right after sign-up. Built on the /join flow (app/join/join.css): same frame, dots and bottom bar. */
+.wok { width: 56px; height: 56px; border-radius: var(--r-lg); background: var(--ink); color: var(--bg); display: grid; place-items: center; }
+.welcome .kicker { margin: 0; }
+.welcome h1 + .wstatus { margin-block-start: var(--s-2); }
+.wstatus { display: grid; gap: var(--s-2); background: var(--surface); border-radius: var(--r); padding: var(--s-4) var(--s-5); }
+.wstatus p { margin: 0; line-height: 1.6; }
+.wh2 { font-size: var(--h3); margin: var(--s-4) 0 0; }
+
+/* What's here: four tiles, two columns from small tablets */
+.wgrid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+@media (min-width: 520px) { .wgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.wgrid .wtile { display: grid; grid-template-columns: auto 1fr; gap: 2px var(--s-3); align-items: start; height: 100%; padding: var(--s-4); border-radius: var(--r); background: var(--surface); color: var(--ink); text-decoration: none; transition: background .2s; }
+.wgrid .wi { grid-row: span 2; width: 40px; height: 40px; border-radius: var(--r); background: var(--paper); display: grid; place-items: center; }
+.wgrid b { font-weight: 600; }
+.wgrid span:last-child { font-size: var(--t-sm); color: var(--muted); line-height: 1.5; }
+@media (hover: hover) { .wgrid .wtile:hover { background: var(--soft); text-decoration: none; } }
+
+/* Companies to follow: rows that toggle */
+.wpicks { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.wpick { width: 100%; display: flex; align-items: center; gap: var(--s-3); padding: var(--s-3) var(--s-4); border: 1px solid transparent; border-radius: var(--r); background: var(--surface); color: var(--ink); font: inherit; text-align: start; cursor: pointer; transition: background .2s, border-color .2s; }
+.wpick[aria-pressed="true"] { border-color: var(--ink); background: var(--paper); }
+@media (hover: hover) { .wpick[aria-pressed="false"]:hover { background: var(--soft); } }
+.wpick:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wlogo { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--logo-bg, #fff); display: grid; place-items: center; overflow: hidden; font-weight: 600; color: var(--ink); }
+.wlogo img { object-fit: contain; }
+.wtext { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.wname { display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; font-weight: 600; }
+.wreason { font-size: var(--t-sm); color: var(--muted); line-height: 1.45; }
+.wcheck { flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line-2); font-weight: 600; }
+.wpick[aria-pressed="true"] .wcheck { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .wgrid a, .wpick { transition: none; } }

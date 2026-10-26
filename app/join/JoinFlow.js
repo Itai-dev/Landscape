@@ -53,7 +53,7 @@ export default function JoinFlow({ crafts: all }) {
     try {
       ({ error: err } = await supabase.auth.signInWithOtp({
         email: address,
-        options: { emailRedirectTo: callbackUrl({ next: "/me?welcome=1", subscribe: newsletter ? frequency : "", crafts }) },
+        options: { emailRedirectTo: callbackUrl({ next: "/welcome", subscribe: newsletter ? frequency : "", crafts }) },
       }));
     } catch {
       setPhase("error"); setError("אין חיבור כרגע. אפשר לנסות שוב בעוד רגע."); return;
@@ -188,7 +188,7 @@ export default function JoinFlow({ crafts: all }) {
                 <OAuthButtons
                   where="join"
                   disabled={newsletter && !consent}
-                  redirectTo={() => callbackUrl({ next: "/me?welcome=1", subscribe: newsletter ? frequency : "", crafts })}
+                  redirectTo={() => callbackUrl({ next: "/welcome", subscribe: newsletter ? frequency : "", crafts })}
                   onStart={(provider) => {
                     tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off", method: provider });
                     if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });

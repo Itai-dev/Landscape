@@ -88,7 +88,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
     try {
       ({ error } = await supabase.auth.signInWithOtp({
         email: address,
-        options: { emailRedirectTo: callbackUrl({ next: "/digest/settings?welcome=1", subscribe: frequency, crafts }) },
+        options: { emailRedirectTo: callbackUrl({ next: "/welcome", subscribe: frequency, crafts }) },
       }));
     } catch {
       return fail(OFFLINE);

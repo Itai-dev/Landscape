@@ -46,11 +46,12 @@ export default async function Me({ searchParams }) {
       );
     }
     const sp = await searchParams;
+    // Old sign-up links landed here; the welcome flow is /welcome now.
+    if (sp?.welcome === "1") redirect("/welcome");
     const follows = await loadFollows(sb, user.id);
     return (
       <div className="wrap narrow stack">
         <div className="pagehead"><h1>החשבון שלי</h1><p><bdi className="small">{user.email}</bdi></p></div>
-        {sp?.welcome === "1" && <p className="notice ok" role="status"><b>נכנסתם.</b> מכאן מנהלים את המעקב, ההתראות והניוזלטר. מה ששמרתם במעקב בדפדפן הזה נוסף לחשבון.</p>}
         <FollowsClient initial={follows} justFollowed={typeof sp?.followed === "string" ? sp.followed : ""} />
         <AccountClient />
       </div>
