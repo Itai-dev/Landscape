@@ -10,20 +10,20 @@ import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS } from "@/lib/
 import { REQUIRED } from "@/lib/profile";
 
 const ERRORS = {
-  sign_in: "התחברו מחדש.",
+  sign_in: "היכנסו שוב לחשבון ונסו שוב.",
   ai_unavailable: "הבנייה האוטומטית עוד לא זמינה. ממשיכים עם שאלון קצר.",
   not_configured: "ההרשמה נפתחת בקרוב.",
   pdf_too_big: "הקובץ גדול מדי. עד 10MB.",
   not_pdf: "צריך קובץ PDF.",
-  bad_url: "הקישור לא נראה תקין.",
+  bad_url: "הקישור לא נראה שלם. בדקו אותו.",
   no_sources: "לא הצלחנו לקרוא אף מקור. נסו קובץ PDF או הדביקו טקסט.",
   refused: "לא הצלחנו לעבד את החומר. ממשיכים עם שאלון קצר.",
-  ai_failed: "הבנייה האוטומטית נכשלה הפעם. ממשיכים עם שאלון קצר.",
+  ai_failed: "הפעם לא הצלחנו לבנות טיוטה אוטומטית. ממשיכים עם שאלון קצר.",
 };
 
 const NOTES = {
   linkedin: "לינקדאין לא מאפשר לקרוא פרופילים מבחוץ, אז שמרנו רק את הקישור. כדי לבנות מהלינקדאין, מעלים את ה־PDF שלו (ההסבר למעלה).",
-  page_thin: "בדף הפורטפוליו כמעט אין טקסט (נפוץ באתרים מבוססי תמונות), אז לא היה הרבה מה לקרוא.",
+  page_thin: "בדף תיק העבודות כמעט אין טקסט (נפוץ באתרים מבוססי תמונות), אז לא היה הרבה מה לקרוא.",
   page_failed: "לא הצלחנו לפתוח את הקישור. בדקו שהוא ציבורי.",
 };
 
@@ -91,14 +91,14 @@ export default function Onboard({ claim = null }) {
   if (!configured) {
     return (
       <div className="stack">
-        <div className="pagehead"><h1>פרופיל מקצועי בדקה</h1><p>מעלים קורות חיים או קישור לפורטפוליו, וה־AI מכין טיוטה.</p></div>
+        <div className="pagehead"><h1>פרופיל מקצועי בדקה</h1><p>מעלים קורות חיים או קישור לתיק עבודות, וה־AI מכין טיוטה.</p></div>
         <Claim />
         <ComingSoon title="ההרשמה והפרופילים נפתחים בקרוב" />
         <HowTo />
       </div>
     );
   }
-  if (user === undefined) return <p className="muted center">טוען…</p>;
+  if (user === undefined) return <p className="muted center">טוענים…</p>;
   if (!user) {
     return (
       <div className="stack">
@@ -174,7 +174,7 @@ export default function Onboard({ claim = null }) {
         <ProfileForm
           initial={{ profile, ai_fields: aiFields, visibility, prefs, claimed_from: claim?.id || null }}
           cvFile={file}
-          submitLabel="אישור ושמירה"
+          submitLabel="שמירת הפרופיל"
           onSaved={setSaved}
         />
       </div>
@@ -229,7 +229,7 @@ export default function Onboard({ claim = null }) {
             </div>
           )}
           <div className="row" style={{ marginBlockStart: 24 }}>
-            <button className="btn primary" disabled={!answered}>{qi + 1 < queue.length ? "הבא" : "לסיכום"}</button>
+            <button className="btn primary" disabled={!answered}>{qi + 1 < queue.length ? "לשאלה הבאה" : "לסיכום"}</button>
             {qi > 0 && <button type="button" className="btn ghost" onClick={() => setQi(qi - 1)}>חזרה</button>}
           </div>
         </form>
@@ -268,7 +268,7 @@ export default function Onboard({ claim = null }) {
         </details>
         <div className="or">ואפשר גם</div>
         <div className="field">
-          <label htmlFor="ob-link">קישור לפורטפוליו או לשואוריל</label>
+          <label htmlFor="ob-link">קישור לתיק עבודות או לשואוריל</label>
           <p className="hint">Behance, Vimeo, ArtStation או אתר אישי</p>
           <input id="ob-link" type="url" dir="ltr" placeholder="https://" value={link} onChange={(e) => setLink(e.target.value)} />
         </div>
@@ -306,7 +306,7 @@ function HowTo() {
     <div className="card">
       <h3>איך זה עובד</h3>
       <ol className="muted" style={{ paddingInlineStart: 20, margin: 0 }}>
-        <li>מעלים קורות חיים, PDF מלינקדאין או קישור לפורטפוליו.</li>
+        <li>מעלים קורות חיים, PDF מלינקדאין או קישור לתיק עבודות.</li>
         <li>ה־AI מכין טיוטה: תחומים, כלים, ניסיון וקישורים.</li>
         <li>שאלון קצר רק על מה שחסר.</li>
         <li>בודקים, מתקנים ומחליטים מי רואה.</li>

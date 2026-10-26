@@ -112,7 +112,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             <div className="wstatus">
               <p><span className="muted">נכנסתם בתור</span> <bdi className="ltr">{email}</bdi></p>
               {newsletter ? (
-                <p><b>המייל השבועי פעיל.</b> הראשון יגיע {newsletter.first}{chosen.length ? `, בתחומים: ${chosen.map((c) => c.he).join(", ")}` : ""}. <a className="tap" href="/digest/settings">שינוי</a></p>
+                <p><b>המייל השבועי פעיל.</b> הראשון יגיע {newsletter.first}{chosen.length ? `, בתחומים: ${chosen.map((c) => c.he).join(", ")}` : ""}. <a className="tap" href="/digest/settings">שינוי ההגדרות</a></p>
               ) : (
                 <p><b>בלי ניוזלטר בינתיים.</b> אפשר להפעיל אותו בכל רגע. <a className="tap" href="/digest/settings">להפעלת המייל השבועי</a></p>
               )}
@@ -127,8 +127,8 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             </ul>
 
             <div className="jfoot">
-              <button type="button" className="btn primary lg" onClick={() => go(1)}>{needCrafts ? "בואו נתאים את זה אליכם" : "בחרו חברות למעקב"}</button>
-              <a className="tap jskip" href="/">דלגו לאתר</a>
+              <button type="button" className="btn primary lg" onClick={() => go(1)}>{needCrafts ? "בואו נתאים את זה אליכם" : "בחירת חברות למעקב"}</button>
+              <a className="tap jskip" href="/">לדף הבית</a>
             </div>
           </section>
         )}
@@ -149,7 +149,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             <div className="jfoot">
               <button type="button" className="btn primary lg" disabled={busy} onClick={saveCrafts}>
                 {busy ? <span className="spinner" aria-hidden /> : null}
-                {crafts.length ? `המשך (${crafts.length})` : "המשך, כל התחומים"}
+                {crafts.length === 1 ? "המשך עם תחום אחד" : crafts.length ? `המשך עם ${crafts.length} תחומים` : "המשך עם כל התחומים"}
               </button>
             </div>
           </section>
@@ -190,7 +190,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             <div className="jfoot">
               <button type="button" className="btn primary lg" disabled={busy || !picked.length} onClick={follow}>
                 {busy ? <span className="spinner" aria-hidden /> : null}
-                {picked.length ? `עקבו אחרי ${picked.length === 1 ? "חברה אחת" : `${picked.length} חברות`}` : "בחרו חברות"}
+                {picked.length ? `מעקב אחרי ${picked.length === 1 ? "חברה אחת" : `${picked.length} חברות`}` : "מעקב אחרי חברות"}
               </button>
               <button type="button" className="tap jskip" onClick={() => { tryTrack("welcome_follow", { n: 0, skipped: true }); go(step + 1); }}>אחר כך</button>
             </div>

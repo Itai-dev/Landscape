@@ -46,7 +46,7 @@ export default function JoinFlow({ crafts: all }) {
     e.preventDefault();
     if (newsletter && !consent) return;
     const address = normalEmail(email);
-    if (!validEmail(address)) { setPhase("error"); setError("הכתובת לא נראית תקינה. בדקו אותה."); return; }
+    if (!validEmail(address)) { setPhase("error"); setError("הכתובת לא נראית שלמה. בדקו אותה."); return; }
     if (password && password.length < MIN_PASSWORD) { setPhase("error"); setError(`הסיסמה קצרה מדי. בחרו סיסמה של ${MIN_PASSWORD} תווים לפחות, או השאירו את השדה ריק.`); return; }
     tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off" });
     if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });
@@ -149,10 +149,10 @@ export default function JoinFlow({ crafts: all }) {
             )}
             <div className="jfoot">
               <button type="button" className="btn primary lg" onClick={() => { tryTrack("join_step_crafts", { crafts: crafts.length }); go(1); }}>
-                {crafts.length ? `המשך (${crafts.length})` : "המשך"}
+                {crafts.length === 1 ? "המשך עם תחום אחד" : crafts.length ? `המשך עם ${crafts.length} תחומים` : "המשך עם כל התחומים"}
               </button>
               {!crafts.length && (
-                <button type="button" className="tap jskip" onClick={() => { tryTrack("join_step_crafts", { crafts: 0, skipped: true }); go(1); }}>דלגו, כל התחומים</button>
+                <button type="button" className="tap jskip" onClick={() => { tryTrack("join_step_crafts", { crafts: 0, skipped: true }); go(1); }}>דילוג, כל התחומים</button>
               )}
             </div>
             <p className="small muted">כבר יש לכם חשבון? <a className="tap" href="/me">כניסה</a></p>
@@ -185,7 +185,7 @@ export default function JoinFlow({ crafts: all }) {
         {step === 2 && (
           <section className="jstep" aria-labelledby="j2">
             <h1 id="j2" ref={head} tabIndex={-1}>המייל שלכם</h1>
-            <p className="muted">{OAUTH.length ? "הירשמו עם Google, או עם מייל וסיסמה" : "הירשמו עם מייל וסיסמה"}. נשלח קישור לאישור הכתובת פעם אחת, ומשם לאיזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
+            <p className="muted">{OAUTH.length ? "הירשמו עם Google, או עם מייל וסיסמה" : "הירשמו עם מייל וסיסמה"}. נשלח קישור לאישור הכתובת פעם אחת, ומשם לאזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
             {!configured ? (
               <p className="muted small">ההרשמה נפתחת בקרוב.</p>
             ) : (
@@ -237,14 +237,14 @@ export default function JoinFlow({ crafts: all }) {
             <h1 id="j3" ref={head} tabIndex={-1}>{password ? "אשרו את הכתובת" : "שלחנו קישור"}</h1>
             <p>{password
               ? <>שלחנו קישור לאישור הכתובת ל־<b className="ltr">{email}</b>. לחצו עליו פעם אחת, ומעכשיו נכנסים עם המייל והסיסמה.</>
-              : <>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לחצו עליו ותיכנסו לאיזור האישי.</>}
+              : <>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לחצו עליו ותיכנסו לאזור האישי.</>}
               {newsletter ? ` הניוזלטר הראשון יגיע ${firstSendLabel(frequency)}.` : ""}</p>
             <p className="notice">הקישור עובד רק במכשיר ובדפדפן האלה. פתחו את המייל כאן.</p>
             <p className="muted small">לא הגיע תוך כמה דקות? בדקו בספאם או בקידומי מכירות.</p>
             <p className="small"><a className="tap" href="/feedback?from=join" data-track="feedback_open" data-track-where="join_sent">משהו חסר? יש רעיון לשיפור?</a></p>
             <div className="jfoot">
               <a className="btn primary lg" href="/companies">בינתיים, לחברות</a>
-              <button type="button" className="tap jskip" onClick={() => go(2)}>כתובת אחרת? שלחו שוב</button>
+              <button type="button" className="tap jskip" onClick={() => go(2)}>שליחה לכתובת אחרת</button>
             </div>
           </section>
         )}

@@ -12,7 +12,7 @@ export default async function Unsubscribe({ searchParams }) {
     return (
       <div className="wrap narrow">
         <div className="soon">
-          <h1>ההסרה בוצעה</h1>
+          <h1>הסרנו אתכם מהרשימה</h1>
           <p>הניוזלטר לא יישלח יותר לכתובת הזו. אפשר לחזור בכל רגע מעמוד ״השבוע בתעשייה״.</p>
           <a className="btn" href="/digest">ל״השבוע בתעשייה״ באתר</a>
         </div>
@@ -23,7 +23,7 @@ export default async function Unsubscribe({ searchParams }) {
     sp?.error === "unavailable"
       ? "ההסרה לא זמינה כרגע. נסו שוב בעוד כמה דקות."
       : sp?.error || !verifyUnsubscribe(u, t)
-        ? "הקישור לא תקין. השתמשו בקישור שבמייל האחרון, או התחברו ושנו את ההגדרות."
+        ? "הקישור הזה לא עובד. השתמשו בקישור שבמייל האחרון, או היכנסו לחשבון ושנו את ההגדרות."
         : "";
   return (
     <div className="wrap narrow">
@@ -40,7 +40,7 @@ export default async function Unsubscribe({ searchParams }) {
             <form method="post" action="/api/digest/unsubscribe?form=1">
               <input type="hidden" name="u" value={u} />
               <input type="hidden" name="t" value={t} />
-              <button className="btn primary">להפסיק לקבל את הניוזלטר</button>
+              <button className="btn primary">הסרה מהמייל השבועי</button>
             </form>
             <a className="small tap" href="/digest/settings">אפשר גם רק לשנות תדירות או תחומים</a>
           </>

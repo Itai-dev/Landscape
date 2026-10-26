@@ -58,7 +58,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
   if (state === "saved") {
     return (
       <div className="notice ok" role="status">
-        <b>נרשמתם. המייל הראשון יגיע {firstSendLabel(frequency)}.</b> אפשר לשנות תחומים ותדירות בכל רגע <a href="/digest/settings">כאן</a>.
+        <b>נרשמתם. המייל הראשון יגיע {firstSendLabel(frequency)}.</b> אפשר לשנות תחומים ותדירות בכל רגע <a href="/digest/settings">בהגדרות הניוזלטר</a>.
       </div>
     );
   }
@@ -83,7 +83,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       return;
     }
     const address = normalEmail(email);
-    if (!validEmail(address)) return fail("הכתובת לא נראית תקינה. בדקו אותה.");
+    if (!validEmail(address)) return fail("הכתובת לא נראית שלמה. בדקו אותה.");
     let error;
     try {
       ({ error } = await supabase.auth.signInWithOtp({
@@ -141,7 +141,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !consent || (!user && !email.includes("@"))}>
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
-          {cta || (user ? "הירשמו לניוזלטר" : "שלחו לי את המייל של יום ראשון")}
+          {cta || (user ? "הרשמה לניוזלטר" : "שלחו לי את המייל של יום ראשון")}
         </button>
         <span className="small muted">{note || "עד מייל אחד בשבוע. הסרה בלחיצה. בלי סיסמה."}</span>
       </div>

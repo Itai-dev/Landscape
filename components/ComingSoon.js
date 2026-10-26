@@ -4,7 +4,7 @@ export default function ComingSoon({ title = "ההרשמה נפתחת בקרוב
     <div className="soon">
       <H>{title}</H>
       <p>{text}</p>
-      <a className="btn primary" href="/companies">הציצו בחברות</a>
+      <a className="btn primary" href="/companies">לכל החברות</a>
     </div>
   );
 }

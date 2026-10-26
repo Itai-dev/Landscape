@@ -40,7 +40,7 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
 
   async function submit(e) {
     e.preventDefault();
-    if (!validEmail(address())) { setState("error"); setError("הכתובת לא נראית תקינה. בדקו אותה."); return; }
+    if (!validEmail(address())) { setState("error"); setError("הכתובת לא נראית שלמה. בדקו אותה."); return; }
     setState("sending");
     setError("");
     if (mode === "password") {
@@ -86,7 +86,7 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
           <label htmlFor="password">סיסמה</label>
           <input id="password" type="password" required autoComplete="current-password" dir="ltr"
             value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button type="button" className="tap linkbtn small" onClick={forgot}>שכחתם את הסיסמה?</button>
+          <button type="button" className="tap linkbtn small" onClick={forgot}>שכחתי את הסיסמה</button>
         </div>
       )}
       {state === "error" && <div className="notice err" role="alert">{error}</div>}
@@ -96,7 +96,7 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
           {mode === "password" ? "כניסה" : "שלחו לי קישור כניסה"}
         </button>
         <button type="button" className="tap linkbtn small" onClick={toggle}>
-          {mode === "password" ? "בלי סיסמה? קבלו קישור כניסה במייל" : "יש לכם סיסמה? היכנסו איתה"}
+          {mode === "password" ? "כניסה עם קישור במייל" : "כניסה עם סיסמה"}
         </button>
       </div>
       <p className="small muted">

@@ -67,7 +67,7 @@ Message body:
 
 ## Reset Password
 
-For "שכחתם את הסיסמה?" on the sign-in page. The link lands on `/me/password?reset=1`, where a new password is chosen.
+For "שכחתי את הסיסמה" on the sign-in page. The link lands on `/me/password?reset=1`, where a new password is chosen.
 
 Subject:
 

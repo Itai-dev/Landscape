@@ -131,12 +131,12 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
       {open && (
         <div className="follow-pop" role="dialog" aria-label={`התראות על ${orgName}`}>
           {s.signedIn && following && !alerting && s.consent ? (
-            <p className="small">החברה במעקב שלכם, וההתראות במייל כבויות. אפשר להפעיל אותן ב<a href="/me#follows">חשבון שלי</a>.</p>
+            <p className="small">החברה במעקב שלכם, וההתראות במייל כבויות. אפשר להפעיל אותן <a href="/me#follows">בחשבון</a>.</p>
           ) : s.signedIn ? (
             <form className="stack" onSubmit={(e) => { e.preventDefault(); if (consent) (following ? enableAlerts() : toggle(true)); }}>
               <p className="small"><b>מייל כשמשהו משתנה <bdi>{prefixed("ב", orgName)}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש.</p>
               <label className="check small"><input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required /><span>{ALERTS_CONSENT_TEXT}</span></label>
-              <button className="btn primary sm" disabled={!consent || phase === "busy"}>להפעלת ההתראות</button>
+              <button className="btn primary sm" disabled={!consent || phase === "busy"}>הפעלת ההתראות</button>
               {msg && <p className="small err" role="alert">{msg}</p>}
             </form>
           ) : phase === "sent" ? (

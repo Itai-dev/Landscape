@@ -84,7 +84,7 @@ export default async function Tenders({ searchParams }) {
             <p>{upcoming.length > 0 ? "יש מכרזים שפורסמו וההגשה אליהם תיפתח בקרוב (למטה). " : ""}מכרזים חדשים נוספים כל שבוע, ומגיעים גם למייל ״השבוע בתעשייה״.</p>
             <div className="row center">
               {filtered && <a className="btn" href="/tenders">לכל המכרזים</a>}
-              <a className="btn primary" href="/digest#subscribe">קבלו במייל</a>
+              <a className="btn primary" href="/digest#subscribe">להרשמה למייל השבועי</a>
             </div>
           </div>
         ) : (

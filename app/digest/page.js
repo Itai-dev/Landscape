@@ -89,7 +89,7 @@ export default async function Digest({ searchParams }) {
             <div className="card stack">
               <h3>סקר התעריפים 2026</h3>
               <p className="muted small">4 דקות, ותראו כמה גובים אחרים בתחום שלכם ותוך כמה זמן משלמים להם.</p>
-              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">ענו על הסקר ‹</a>
+              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">למילוי הסקר ‹</a>
             </div>
           )}
         </aside>

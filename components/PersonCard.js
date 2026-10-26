@@ -19,7 +19,7 @@ export default function PersonCard({ p }) {
     <a className="shot" href={`/p/${p.slug}`}>
       <div className={`thumb ${coverClass(p.slug)}`}>
         <span className="big" aria-hidden>{initials(p.name)}</span>
-        <span className="badge verified vbadge"><PeopleIcon size={14} /> חבר קהילה</span>
+        <span className="badge verified vbadge"><PeopleIcon size={14} /> מהקהילה</span>
         {(p.headline || p.city) && (
           <div className="over">{[p.headline, p.city].filter(Boolean).join(" · ")}</div>
         )}

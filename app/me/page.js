@@ -70,7 +70,7 @@ export default async function Me({ searchParams }) {
       <div className="pagehead">
         <h1>הפרופיל שלי</h1>
         <p><bdi className="small">{user.email}</bdi></p>
-        <div className="row center" style={{ marginBlockStart: 16 }}><a className="btn" href={`/p/${slug}`}>צפייה בפרופיל</a></div>
+        <div className="row center" style={{ marginBlockStart: 16 }}><a className="btn" href={`/p/${slug}`}>לצפייה בפרופיל</a></div>
       </div>
       <MeClient
         initial={{ profile: rest, visibility, ai_fields, prefs: prefs || { frequency: "off", topics: [] } }}

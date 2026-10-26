@@ -10,7 +10,7 @@ export default function AccountClient() {
     setDeleting(true);
     const res = await fetch("/api/account/delete", { method: "POST" });
     if (res.ok) { clearLocalData(); window.location.href = "/?deleted=1"; }
-    else { setDeleting(false); window.alert("המחיקה נכשלה. נסו שוב."); }
+    else { setDeleting(false); window.alert("לא הצלחנו למחוק את החשבון. נסו שוב."); }
   }
   return (
     <div className="stack">

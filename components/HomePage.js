@@ -134,7 +134,7 @@ export default function HomePage({ split = false }) {
             <p className="eyebrow inv">סקר התעריפים 2026</p>
             <h2 id="survey-h">כמה גובים בתעשייה?<br />ומתי באמת משלמים?</h2>
             <p className="muted">4 דקות, אנונימי. מחירים לפי תחום ולפי סוג עבודה, ותנאי התשלום בפועל, משוטף 30 ועד שוטף 90. התוצאות פתוחות לכולם ברגע שיש מספיק תשובות. פתוח עד {CLOSES_LABEL}.</p>
-            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">ענו על הסקר</a></p>
+            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">למילוי הסקר</a></p>
           </div>
         </section>
       )}
@@ -197,7 +197,7 @@ function ClassicHome() {
           {PROFILES_ENABLED ? (
             <p className="lead">
               מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
-              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.</span>}
+              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מתיק העבודות.</span>}
             </p>
           ) : (
             <p className="lead">
@@ -297,7 +297,7 @@ function ClassicHome() {
               <h2 id="join-h">{open ? "הצטרפות, והניוזלטר" : "השבוע בתעשייה"}</h2>
               <p className="muted">
                 כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם מקור לכל פרט.
-                {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}
+                {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או תיק העבודות, ואתם מאשרים."}
               </p>
               <p><a className="btn inv" href="/digest">לעדכוני השבוע</a></p>
             </div>

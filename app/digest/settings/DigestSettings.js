@@ -39,7 +39,7 @@ export default function DigestSettings() {
   }, [user]);
 
   if (!configured) return <div className="soon"><h3>ההרשמה במייל נפתחת בקרוב</h3><p>בינתיים ״השבוע בתעשייה״ מתעדכן באתר כל שבוע.</p><a className="btn" href="/digest">לעדכוני השבוע</a></div>;
-  if (user === undefined) return <p className="center muted"><span className="spinner" aria-hidden /> טוען…</p>;
+  if (user === undefined) return <p className="center muted"><span className="spinner" aria-hidden /> טוענים…</p>;
   if (!user) {
     return (
       <div className="panel stack">
@@ -49,7 +49,7 @@ export default function DigestSettings() {
       </div>
     );
   }
-  if (!prefs) return state === "error" ? <div className="notice err">לא הצלחנו לטעון את ההגדרות. רעננו את הדף.</div> : <p className="center muted"><span className="spinner" aria-hidden /> טוען…</p>;
+  if (!prefs) return state === "error" ? <div className="notice err">לא הצלחנו לטעון את ההגדרות. רעננו את הדף.</div> : <p className="center muted"><span className="spinner" aria-hidden /> טוענים…</p>;
 
   const on = prefs.frequency !== "off";
   const needsConsent = on && !prefs.consent_at;
@@ -127,9 +127,9 @@ export default function DigestSettings() {
       <div className="row">
         <button className="btn primary" disabled={state === "saving" || (needsConsent && !consent)}>
           {state === "saving" ? <span className="spinner" aria-hidden /> : null}
-          שמירה
+          שמירת ההגדרות
         </button>
-        <a className="btn" href={preview}>צפו במייל שלכם</a>
+        <a className="btn" href={preview}>לתצוגה מקדימה של המייל</a>
       </div>
     </form>
   );

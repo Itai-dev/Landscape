@@ -137,8 +137,8 @@ export default function Questionnaire() {
         setMsg("חסרות כמה תשובות. השלימו אותן ונסו שוב.");
         if (first >= 0) go(first);
       } else if (j.error === "closed") setPhase("closed");
-      else if (j.error === "sign_in") setMsg("החיבור פג. נכנסים שוב מהעמוד הראשי של הסקר, והתשובות נשמרות.");
-      else setMsg("השמירה לא הצליחה. התשובות שמורות בדפדפן. נסו שוב.");
+      else if (j.error === "sign_in") setMsg("יצאתם מהחשבון. היכנסו שוב מהעמוד הראשי של הסקר. התשובות נשמרות.");
+      else setMsg("לא הצלחנו לשמור. התשובות שמורות בדפדפן. נסו שוב.");
     } catch {
       setPhase("form");
       setMsg("אין חיבור כרגע. התשובות שמורות בדפדפן. נסו שוב.");
@@ -169,7 +169,7 @@ export default function Questionnaire() {
     return (
       <div className="stack">
         <div className="soon">
-          <h2>{wasDone ? "התשובות עודכנו. תודה!" : "תודה! התשובות נשמרו"}</h2>
+          <h2>{wasDone ? "התשובות עודכנו. תודה." : "התשובות נשמרו. תודה."}</h2>
           <p>התוצאות פתוחות לכם כבר עכשיו. כל תשובה נוספת הופכת אותן למדויקות יותר.</p>
           <a className="btn primary lg" href="/survey/results">לתוצאות</a>
         </div>
@@ -300,9 +300,9 @@ export default function Questionnaire() {
       <div className="row survey-nav">
         <button className="btn primary lg" disabled={!step.ok() || phase === "saving"}>
           {phase === "saving" && <span className="spinner" aria-hidden />}
-          {last ? (wasDone ? "שמירת השינויים" : "שליחת התשובות") : "הבא"}
+          {last ? (wasDone ? "שמירת השינויים" : "שליחת התשובות") : "לשאלה הבאה"}
         </button>
-        {i > 0 && <button type="button" className="btn ghost" onClick={() => go(i - 1)}>הקודם</button>}
+        {i > 0 && <button type="button" className="btn ghost" onClick={() => go(i - 1)}>לשאלה הקודמת</button>}
       </div>
     </form>
   );

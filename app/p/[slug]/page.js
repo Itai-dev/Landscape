@@ -51,7 +51,7 @@ export default async function Profile({ params }) {
         </div>
         {(p.portfolio_url || p.links.length > 0) && (
           <div className="row">
-            {p.portfolio_url && <a className="btn primary" href={p.portfolio_url} rel="nofollow ugc noopener" target="_blank">פורטפוליו</a>}
+            {p.portfolio_url && <a className="btn primary" href={p.portfolio_url} rel="nofollow ugc noopener" target="_blank">לתיק העבודות</a>}
             {p.links.map((l) => (
               <a key={l.url} className="btn" href={l.url} rel="nofollow ugc noopener" target="_blank">{l.label || new URL(l.url).hostname}</a>
             ))}
