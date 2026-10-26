@@ -88,7 +88,7 @@ Purple is our version of Awwwards' orange: one small marker, never a button, a f
 ### Type (after Firma, Oct 2026)
 The owner asked to take typography and copy from Firma (firmabrands.com/he), an Israeli branding studio. We copy the approach, never their font files, wording or images.
 - **What Firma does.** One geometric Hebrew family (Polin, commercial) for everything. Headlines 600–700 with tight leading (1.0 at display size, 1.1–1.2 for titles), in two or three short lines that end with a period. Body 18–20px at about 1.6. Labels 500. Nothing light.
-- **Fonts.** Inter Tight for Latin, Rubik for Hebrew (the closest free match to Polin: geometric, open forms). Inter Tight has no Hebrew, so Hebrew falls through to Rubik. No letter spacing and no uppercase on Hebrew. Weights 400–700 load; nothing under 400.
+- **Fonts.** Google Sans for everything, Latin and Hebrew (one family, as Firma does; it has Hebrew on Google Fonts, weights 400–700). No letter spacing and no uppercase on Hebrew. Nothing under 400.
 - **Sizes.** Page titles and the hero 48–80px at 600, line height 1.08. Section titles 32–44px at 600, 1.15. Card titles 18–21px at 600. Body 16px. Leads (`.lead`, page-head lines) `--t-lead`, 18–20px at 1.6. Labels and buttons 14px at 500. Metadata 12px. Big numbers (counts, KPIs) at 600.
 - **Kicker** (`.kicker`). A 16px/500 muted line over a title saying what the section is, so the title itself can be the hook ("מה נכנס למייל של יום ראשון" over "השבוע בתעשייה").
 

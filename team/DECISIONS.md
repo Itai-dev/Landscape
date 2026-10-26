@@ -177,5 +177,5 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 
 ## 2026-10-26: Typography and copy after Firma
 - Owner asked to take typography and copy inspiration from Firma (firmabrands.com/he). Layout and colour stay Awwwards-based.
-- Hebrew moves from Heebo to Rubik (closest free match to Firma's Polin). Nothing under weight 400; headlines 600 with tight leading; leads 18–20px.
+- Type: Google Sans for Latin and Hebrew, replacing Inter Tight + Heebo (owner's pick; one family, like Firma). Nothing under weight 400; headlines 600 with tight leading; leads 18–20px.
 - Copy: short lines ending with a period, a kicker over section titles, and "In" as the one brand pun ("לא צריך להכיר את כולם. מספיק להישאר In."). Details in `team/DESIGN.md`.

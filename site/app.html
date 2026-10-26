@@ -2,9 +2,9 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..700&family=Rubik:wght@400..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400..700&display=swap">
 <style>
-/* Type: Inter Tight (Latin) + Rubik (Hebrew; closest free match to Firma's Polin); numbers in tabular figures, no monospace face (none has Hebrew).
+/* Type: Google Sans, one family for Latin and Hebrew (like Firma's single family); numbers in tabular figures, no monospace face (none has Hebrew).
    Look (reference: Awwwards, spec in team/DESIGN.md): grey canvas, white cards, #222 ink, no shadows; 8px corners on buttons,
    cards and fields, 4px on tags; filled or outlined ink buttons; a floating ink tab bar. Purple only as a small marker.
    Shared with the Next.js app (app/globals.css).
@@ -37,8 +37,8 @@
   --scrim: rgba(0, 0, 0, .42);
   --shadow: 0 24px 60px rgba(0, 0, 0, .14);
   --ease: cubic-bezier(.22, 1, .36, 1);
-  --f-display: "Inter Tight", "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --f-body: "Inter Tight", "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-display: "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: var(--f-body);
   --tabbar: 62px;
   --max: 1760px;
@@ -100,7 +100,7 @@ button { cursor: pointer; }
 
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Rubik", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
+header.top .brand, footer.foot .brand { font-family: "Google Sans", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
 /* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a square black badge with a hard
    purple shadow. Hover (desktop, motion allowed): the badge tilts to +1deg, lifts, and the shadow grows and turns pink. */
 .wordmark { display: block; height: 30px; width: auto; overflow: visible; }

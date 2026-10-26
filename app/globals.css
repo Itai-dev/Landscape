@@ -3,7 +3,7 @@
    8px corners on buttons, cards, fields and images, 4px on tags and badges, 14px on featured blocks.
    Type after Firma (firmabrands.com): headings 600, tight, in short lines; body 400, leads 18–20px; labels and buttons 500. Nothing under 400. Purple is a small accent only
    (brand dot, focus ring, a live marker), never a button or a fill.
-   Type: Inter Tight (Latin) + Rubik (Hebrew), no tracking on Hebrew. Logical properties throughout. */
+   Type: Google Sans, one family for Latin and Hebrew; no tracking on Hebrew. Logical properties throughout. */
 :root {
   /* Sampled from awwwards.com (mobile, Oct 2026) */
   --bg: #f8f8f8;          /* page */
@@ -28,7 +28,7 @@
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, .14);
   --glow: none;
   --ease: cubic-bezier(.22, 1, .36, 1);
-  --f-body: "Inter Tight", "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Google Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: var(--f-body); /* numbers use tabular figures; no monospace face (it has no Hebrew) */
 
   /* spacing (4px base) */

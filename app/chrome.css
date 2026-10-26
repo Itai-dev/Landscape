@@ -18,7 +18,7 @@
 
 header.top { position: sticky; top: 0; z-index: 12; background: var(--bg); }
 header.top .wrap { display: flex; align-items: center; gap: 8px; min-height: 72px; width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
-header.top .brand, footer.foot .brand { font-family: "Inter Tight", "Rubik", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
+header.top .brand, footer.foot .brand { font-family: "Google Sans", system-ui, sans-serif; font-weight: 600; font-size: 22px; line-height: 1; color: var(--ink); letter-spacing: -.02em; flex: none; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; margin-inline-end: 16px; }
 /* The wordmark (lib/logo.mjs): SVG paths, "Creative" in currentColor, "In" in a square black badge with a hard
    purple shadow. Hover (desktop, motion allowed): the badge tilts to +1deg, lifts, and the shadow grows and turns pink. */
 .wordmark { display: block; height: 30px; width: auto; overflow: visible; }
