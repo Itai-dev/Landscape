@@ -171,7 +171,7 @@ export default async function Results() {
               טבלאות לפי תחום וצורת עבודה, מחירים של עבודות נפוצות, תנאי תשלום ואיחורים. 4 דקות, והתשובות חסויות.
               {` אפשר גם להזמין ${UNLOCK_REFERRALS} אנשים שעונים על הסקר.`}
             </p>
-            <a className="btn primary lg" href="/survey">לענות על הסקר</a>
+            <a className="btn primary lg" href="/survey">ענו על הסקר</a>
           </div>
           {user && <ShareInvite showCounter />}
         </div>

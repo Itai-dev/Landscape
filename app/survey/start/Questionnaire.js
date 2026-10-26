@@ -138,14 +138,14 @@ export default function Questionnaire() {
         if (first >= 0) go(first);
       } else if (j.error === "closed") setPhase("closed");
       else if (j.error === "sign_in") setMsg("החיבור פג. נכנסים שוב מהעמוד הראשי של הסקר, והתשובות נשמרות.");
-      else setMsg("השמירה לא הצליחה. התשובות שמורות בדפדפן, אפשר לנסות שוב.");
+      else setMsg("השמירה לא הצליחה. התשובות שמורות בדפדפן. נסו שוב.");
     } catch {
       setPhase("form");
-      setMsg("אין חיבור כרגע. התשובות שמורות בדפדפן, אפשר לנסות שוב.");
+      setMsg("אין חיבור כרגע. התשובות שמורות בדפדפן. נסו שוב.");
     }
   }
 
-  if (!configured) return <ComingSoon title="הסקר נפתח בקרוב" text="ההרשמה לאתר עוד לא פתוחה. בינתיים אפשר לעבור על החברות והאנשים במאגר." />;
+  if (!configured) return <ComingSoon title="הסקר נפתח בקרוב" text="ההרשמה לאתר עוד לא פתוחה. בינתיים, הציצו בחברות ובאנשים שבמאגר." />;
   if (user === undefined || (user && phase === "loading")) return <div className="soon" aria-busy="true"><span className="spinner" aria-hidden /><p>טוענים את הסקר…</p></div>;
   if (!user) {
     return (
@@ -221,7 +221,7 @@ export default function Questionnaire() {
 
       {step.id === "rate" && (
         <>
-          <Q title="מה התעריף הרגיל לשעה?" hint="לפני מע״מ, ללקוח ישיר. אפשר לענות על שעה, על יום או על שניהם.">
+          <Q title="מה התעריף הרגיל לשעה?" hint="לפני מע״מ, ללקוח ישיר. ענו על שעה, על יום או על שניהם.">
             <Money name="hourly" bands={HOURLY} band={a.hourly} exact={a.hourly_exact} onBand={set("hourly")} onExact={set("hourly_exact")} unit="תעריף לשעה" />
           </Q>
           <Q title="ומה התעריף ליום עבודה?">
@@ -231,14 +231,14 @@ export default function Questionnaire() {
       )}
 
       {step.id === "salary" && (
-        <Q title="מה השכר החודשי ברוטו?" hint="משרה מלאה, בלי בונוסים. אם המשרה חלקית, אפשר לחשב לפי משרה מלאה.">
+        <Q title="מה השכר החודשי ברוטו?" hint="משרה מלאה, בלי בונוסים. אם המשרה חלקית, חשבו לפי משרה מלאה.">
           <Money name="salary" bands={SALARY} band={a.salary} exact={a.salary_exact} onBand={set("salary")} onExact={set("salary_exact")} unit="שכר חודשי" />
         </Q>
       )}
 
       {step.id === "prices" && (
         <>
-          <p className="muted">כמה גובים בדרך כלל על העבודות האלה, כפרויקט שלם לפני מע״מ? אפשר לדלג על מה שלא עושים.</p>
+          <p className="muted">כמה גובים בדרך כלל על העבודות האלה, כפרויקט שלם לפני מע״מ? דלגו על מה שלא עושים.</p>
           {DELIVERABLES[a.craft].map((d) => (
             <Q key={d.slug} title={d.he}>
               <Money name={`p-${d.slug}`} bands={PRICE} band={a.prices?.[d.slug]?.band} exact={a.prices?.[d.slug]?.exact}
@@ -267,7 +267,7 @@ export default function Questionnaire() {
       {step.id === "clients" && (
         <>
           {indep && (
-            <Q title="מי הלקוחות?" hint="אפשר לבחור כמה.">
+            <Q title="מי הלקוחות?" hint="בחרו את כל מה שמתאים.">
               <Choices name="clients" multi options={CLIENT_TYPES} value={a.clients} onChange={set("clients")} label="סוגי לקוחות" />
             </Q>
           )}

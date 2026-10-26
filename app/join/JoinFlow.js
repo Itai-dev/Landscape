@@ -44,7 +44,7 @@ export default function JoinFlow({ crafts: all }) {
     e.preventDefault();
     if (newsletter && !consent) return;
     const address = normalEmail(email);
-    if (!validEmail(address)) { setPhase("error"); setError("הכתובת לא נראית תקינה. כדאי לבדוק אותה."); return; }
+    if (!validEmail(address)) { setPhase("error"); setError("הכתובת לא נראית תקינה. בדקו אותה."); return; }
     tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off" });
     if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });
     setPhase("sending");
@@ -56,11 +56,11 @@ export default function JoinFlow({ crafts: all }) {
         options: { emailRedirectTo: callbackUrl({ next: "/me?welcome=1", subscribe: newsletter ? frequency : "", crafts }) },
       }));
     } catch {
-      setPhase("error"); setError("אין חיבור כרגע. אפשר לנסות שוב בעוד רגע."); return;
+      setPhase("error"); setError("אין חיבור כרגע. נסו שוב בעוד רגע."); return;
     }
     if (err) {
       setPhase("error");
-      setError(/rate|limit/i.test(err.message) || err.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : (/sending|email/i.test(err?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב."));
+      setError(/rate|limit/i.test(err.message) || err.status === 429 ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : (/sending|email/i.test(err?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב."));
       return;
     }
     setPhase("idle");
@@ -124,7 +124,7 @@ export default function JoinFlow({ crafts: all }) {
         {step === 0 && (
           <section className="jstep" aria-labelledby="j0">
             <h1 id="j0" ref={head} tabIndex={-1}>מה אתם עושים?</h1>
-            <p className="muted">אפשר לבחור כמה. נתאים לכם את העדכונים, ומי שמזמין את זה יופיע ראשון.</p>
+            <p className="muted">בחרו אחד או יותר. נתאים לכם את העדכונים, ומי שמזמין את זה יופיע ראשון.</p>
             <div className="jcrafts" role="group" aria-label="תחומים">
               {shown.map((c) => (
                 <button key={c.slug} type="button" className="jcraft" aria-pressed={crafts.includes(c.slug)} onClick={() => toggle(c.slug)}>
@@ -165,7 +165,7 @@ export default function JoinFlow({ crafts: all }) {
             </div>
             <div aria-live="polite"><EditionCard ed={ed} busy={busy} /></div>
             <div className="jfoot">
-              <button type="button" className="btn primary lg" onClick={() => { tryTrack("join_step_newsletter", { newsletter: true, frequency }); setNewsletter(true); go(2); }}>כן, לשלוח לי</button>
+              <button type="button" className="btn primary lg" onClick={() => { tryTrack("join_step_newsletter", { newsletter: true, frequency }); setNewsletter(true); go(2); }}>כן, שלחו לי</button>
               <button type="button" className="tap jskip" onClick={() => { tryTrack("join_step_newsletter", { newsletter: false }); setNewsletter(false); setConsent(false); go(2); }}>לא עכשיו, רק חשבון</button>
             </div>
           </section>
@@ -220,12 +220,12 @@ export default function JoinFlow({ crafts: all }) {
             </div>
             <h1 id="j3" ref={head} tabIndex={-1}>שלחנו קישור</h1>
             <p>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לוחצים עליו ונכנסים לאיזור האישי.{newsletter ? ` הניוזלטר הראשון יגיע ${firstSendLabel(frequency)}.` : ""}</p>
-            <p className="notice">הקישור עובד רק במכשיר ובדפדפן האלה. כדאי לפתוח את המייל כאן.</p>
-            <p className="muted small">לא הגיע תוך כמה דקות? כדאי לבדוק בספאם או בקידומי מכירות.</p>
+            <p className="notice">הקישור עובד רק במכשיר ובדפדפן האלה. פתחו את המייל כאן.</p>
+            <p className="muted small">לא הגיע תוך כמה דקות? בדקו בספאם או בקידומי מכירות.</p>
             <p className="small"><a className="tap" href="/feedback?from=join" data-track="feedback_open" data-track-where="join_sent">משהו חסר? יש רעיון לשיפור?</a></p>
             <div className="jfoot">
               <a className="btn primary lg" href="/companies">בינתיים, לחברות</a>
-              <button type="button" className="tap jskip" onClick={() => go(2)}>כתובת אחרת? לשלוח שוב</button>
+              <button type="button" className="tap jskip" onClick={() => go(2)}>כתובת אחרת? שלחו שוב</button>
             </div>
           </section>
         )}

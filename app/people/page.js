@@ -88,7 +88,7 @@ export default async function People({ searchParams }) {
         {seeds.length === 0 ? (
           <div className="soon">
             <h3>לא מצאנו אנשים{craft ? ` ב${craftLabel(craft)}` : ""}{q ? <> עבור <bdi>״{q}״</bdi></> : ""}</h3>
-            <p>אפשר לנסות מילה אחרת, או לחפש את החברה עצמה.</p>
+            <p>נסו מילה אחרת, או חפשו את החברה עצמה.</p>
             <a className="btn" href={`/search?q=${encodeURIComponent(q || craftLabel(craft))}`}>חיפוש בכל האתר</a>
           </div>
         ) : (
@@ -105,7 +105,7 @@ export default async function People({ searchParams }) {
         {PROFILES_ENABLED && signup && members.length === 0 && !error
           ? <>עוד אין פרופילים אישיים. <a href="/onboard">לבניית הפרופיל הראשון</a> </>
           : null}
-        מופיעים כאן? אפשר לבקש הסרה מהתפריט שבכרטיס.
+        מופיעים כאן? בקשו הסרה מהתפריט שבכרטיס.
       </p>
     </div>
   );

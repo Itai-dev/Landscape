@@ -76,7 +76,7 @@ export default async function Tenders({ searchParams }) {
       <section aria-labelledby="open-h">
         <div className="subhead">
           <h2 id="open-h">פתוחים להגשה{open.length > 0 && <> <span className="count">{open.length}</span></>}</h2>
-          {open.length > 0 && <p>המידע לפי פרסום רשמי. לפני הגשה יש לבדוק את מסמכי המכרז במקור.</p>}
+          {open.length > 0 && <p>המידע לפי פרסום רשמי. לפני הגשה, בדקו את מסמכי המכרז במקור.</p>}
         </div>
         {open.length === 0 ? (
           <div className="soon">
@@ -84,7 +84,7 @@ export default async function Tenders({ searchParams }) {
             <p>{upcoming.length > 0 ? "יש מכרזים שפורסמו וההגשה אליהם תיפתח בקרוב (למטה). " : ""}מכרזים חדשים נוספים כל שבוע, ומגיעים גם למייל ״השבוע בתעשייה״.</p>
             <div className="row center">
               {filtered && <a className="btn" href="/tenders">לכל המכרזים</a>}
-              <a className="btn primary" href="/digest#subscribe">לקבל במייל</a>
+              <a className="btn primary" href="/digest#subscribe">קבלו במייל</a>
             </div>
           </div>
         ) : (
@@ -96,7 +96,7 @@ export default async function Tenders({ searchParams }) {
         <section aria-labelledby="upcoming-h">
           <div className="subhead">
             <h2 id="upcoming-h">פורסמו, ההגשה עוד לא נפתחה <span className="count">{upcoming.length}</span></h2>
-            <p>המכרז כבר פורסם ואפשר לקרוא את המסמכים ולהתכונן. הגשת הצעות נפתחת בתאריך שמופיע בכרטיס.</p>
+            <p>המכרז כבר פורסם. קראו את המסמכים והתכוננו. הגשת הצעות נפתחת בתאריך שמופיע בכרטיס.</p>
           </div>
           <div className="tgrid">{upcoming.map((t) => <TenderCard key={t.id} t={t} />)}</div>
         </section>
@@ -106,7 +106,7 @@ export default async function Tenders({ searchParams }) {
         <section id="jobs" aria-labelledby="jobs-h">
           <div className="subhead">
             <h2 id="jobs-h">משרות שפורסמו <span className="count">{jobs.length}</span></h2>
-            <p>משרות קריאייטיב מ־45 הימים האחרונים, מלינקדאין ומאתרי החברות. כדאי לבדוק במקור שהמשרה עדיין פתוחה.</p>
+            <p>משרות קריאייטיב מ־45 הימים האחרונים, מלינקדאין ומאתרי החברות. בדקו במקור שהמשרה עדיין פתוחה.</p>
           </div>
           <ol className="jobs">
             {jobs.map((j) => (
@@ -139,7 +139,7 @@ export default async function Tenders({ searchParams }) {
           ממינהל הרכש הממשלתי, מערכות המכרזים של רשויות מקומיות, חברות ממשלתיות, אוניברסיטאות וגופים ציבוריים.
           אנחנו מביאים את הכותרת, הגוף המזמין ותאריך ההגשה, וקישור לפרסום הרשמי. בלי פרטי אנשי קשר.
         </p>
-        <p className="small muted">המידע לפי פרסום רשמי; יש לבדוק את מסמכי המכרז. מועדים משתנים לפעמים, והמקור הוא הקובע.</p>
+        <p className="small muted">המידע לפי פרסום רשמי; בדקו את מסמכי המכרז. מועדים משתנים לפעמים, והמקור הוא הקובע.</p>
         <a className="btn primary" href="/digest#subscribe">מכרזים חדשים במייל, כל יום ראשון</a>
       </div>
     </div>

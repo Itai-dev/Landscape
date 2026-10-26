@@ -10,7 +10,7 @@ import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS } from "@/lib/
 import { REQUIRED } from "@/lib/profile";
 
 const ERRORS = {
-  sign_in: "צריך להתחבר מחדש.",
+  sign_in: "התחברו מחדש.",
   ai_unavailable: "הבנייה האוטומטית עוד לא זמינה. ממשיכים עם שאלון קצר.",
   not_configured: "ההרשמה נפתחת בקרוב.",
   pdf_too_big: "הקובץ גדול מדי. עד 10MB.",
@@ -24,14 +24,14 @@ const ERRORS = {
 const NOTES = {
   linkedin: "לינקדאין לא מאפשר לקרוא פרופילים מבחוץ, אז שמרנו רק את הקישור. כדי לבנות מהלינקדאין, מעלים את ה־PDF שלו (ההסבר למעלה).",
   page_thin: "בדף הפורטפוליו כמעט אין טקסט (נפוץ באתרים מבוססי תמונות), אז לא היה הרבה מה לקרוא.",
-  page_failed: "לא הצלחנו לפתוח את הקישור. כדאי לבדוק שהוא ציבורי.",
+  page_failed: "לא הצלחנו לפתוח את הקישור. בדקו שהוא ציבורי.",
 };
 
 // One question per missing field, then always visibility + newsletter.
 const QUESTIONS = {
   name: { title: "מה השם?", kind: "text", placeholder: "שם מלא" },
   headline: { title: "מה אתם עושים, בשורה אחת?", kind: "text", placeholder: "למשל: מושן דיזיין ואנימציית תלת־ממד", hint: "זו הכותרת שמופיעה ליד השם." },
-  crafts: { title: "באילו תחומים?", kind: "chips", options: CRAFTS, hint: "אפשר לבחור כמה." },
+  crafts: { title: "באילו תחומים?", kind: "chips", options: CRAFTS, hint: "בחרו את כל מה שמתאים." },
   city: { title: "מאיפה אתם עובדים?", kind: "city", hint: "העיר שממנה עובדים, או ״מרחוק״." },
   open_to: { title: "מה מעניין אתכם עכשיו?", kind: "chips", options: OPEN_TO },
   visibility: { title: "מי יכול לראות את הפרופיל?", kind: "radio", options: VISIBILITY, hint: "אפשר לשנות בכל רגע." },

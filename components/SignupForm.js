@@ -26,7 +26,7 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
         <b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
         {newsletter ? `הלחיצה עליו מאשרת גם את ההרשמה ל״השבוע בתעשייה״, והמייל הראשון יגיע ${firstSendLabel("weekly")}. ` : ""}
-        כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.
+        פתחו אותו באותו מכשיר ובאותו דפדפן. לא הגיע? בדקו בספאם.
       </div>
     );
   }
@@ -41,7 +41,7 @@ export default function SignupForm({ next = PROFILES ? "/onboard" : "/digest/set
     });
     if (error) {
       setState("error");
-      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב.");
+      setError(/rate|limit/i.test(error.message) ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב.");
     } else setState("sent");
   }
 

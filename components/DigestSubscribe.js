@@ -51,7 +51,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       <div className="notice ok" role="status">
         <b>כמעט סיימנו: שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b>
         <br />
-        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, משרות ומכרזים, ומה עוד השתנה בתעשייה. {crafts.length ? "התחומים שבחרתם נשמרים עם האישור." : "אחרי האישור אפשר לבחור תחומים."} הקישור עובד רק במכשיר ובדפדפן האלה. לא הגיע? כדאי לבדוק בספאם.
+        לוחצים עליו כדי לאשר, והמייל הראשון יגיע {firstSendLabel(frequency)}: מינויים, החלפות משרד, משרות ומכרזים, ומה עוד השתנה בתעשייה. {crafts.length ? "התחומים שבחרתם נשמרים עם האישור." : "אחרי האישור אפשר לבחור תחומים."} הקישור עובד רק במכשיר ובדפדפן האלה. לא הגיע? בדקו בספאם.
       </div>
     );
   }
@@ -70,7 +70,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
     setState("sending");
     setError("");
     const fail = (msg) => { setState("error"); setError(msg); };
-    const OFFLINE = "אין חיבור כרגע. אפשר לנסות שוב בעוד רגע.";
+    const OFFLINE = "אין חיבור כרגע. נסו שוב בעוד רגע.";
     if (user) {
       let res;
       try {
@@ -79,11 +79,11 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
         return fail(OFFLINE);
       }
       if (res.ok) setState("saved");
-      else fail(res.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      else fail(res.status === 429 ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : "לא הצלחנו לשמור. נסו שוב.");
       return;
     }
     const address = normalEmail(email);
-    if (!validEmail(address)) return fail("הכתובת לא נראית תקינה. כדאי לבדוק אותה.");
+    if (!validEmail(address)) return fail("הכתובת לא נראית תקינה. בדקו אותה.");
     let error;
     try {
       ({ error } = await supabase.auth.signInWithOtp({
@@ -94,7 +94,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       return fail(OFFLINE);
     }
     if (error) {
-      fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : (/sending|email/i.test(error?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. אפשר לנסות שוב בעוד כמה דקות." : "משהו השתבש. כדאי לבדוק את הכתובת ולנסות שוב."));
+      fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : (/sending|email/i.test(error?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב."));
     } else if (onSent) {
       setState("idle");
       onSent(address);
@@ -141,7 +141,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       <div className="row">
         <button className="btn primary" disabled={state === "sending" || !consent || (!user && !email.includes("@"))}>
           {state === "sending" ? <span className="spinner" aria-hidden /> : null}
-          {cta || (user ? "להירשם לניוזלטר" : "שלחו לי את המייל של יום ראשון")}
+          {cta || (user ? "הירשמו לניוזלטר" : "שלחו לי את המייל של יום ראשון")}
         </button>
         <span className="small muted">{note || "עד מייל אחד בשבוע. הסרה בלחיצה. בלי סיסמה."}</span>
       </div>

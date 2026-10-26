@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS, CONSENT_TEXT } from "@/lib/taxonomy";
 
-const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהחומר שהעליתם. כדאי לבדוק.">✦ מולא אוטומטית</span> : null);
+const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהחומר שהעליתם. בדקו שהוא נכון.">✦ מולא אוטומטית</span> : null);
 
 export function Chips({ options, value, onChange, name }) {
   const toggle = (slug) => onChange(value.includes(slug) ? value.filter((v) => v !== slug) : [...value, slug]);
@@ -75,12 +75,12 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
     if (!res.ok) {
       const msg =
         out.error === "missing" ? "חסרים שדות חובה: שם, כותרת, תחום, עיר וזמינות." :
-        out.error === "sign_in" ? "צריך להתחבר מחדש." : "השמירה נכשלה. נסו שוב.";
+        out.error === "sign_in" ? "התחברו מחדש." : "השמירה נכשלה. נסו שוב.";
       setState({ busy: false, error: msg });
       return;
     }
     if (out.prefs_error === "consent_required") {
-      setState({ busy: false, error: "הפרופיל נשמר. כדי לקבל ניוזלטר צריך לסמן את האישור שמתחת לתדירות." });
+      setState({ busy: false, error: "הפרופיל נשמר. כדי לקבל ניוזלטר, סמנו את האישור שמתחת לתדירות." });
       return;
     }
     setState({ busy: false, error: "" });
@@ -198,7 +198,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
           {state.busy ? <span className="spinner" aria-hidden /> : null}
           {submitLabel}
         </button>
-        {ai.size > 0 && <span className="small muted">שדות עם ✦ מולאו אוטומטית. כדאי לעבור עליהם.</span>}
+        {ai.size > 0 && <span className="small muted">שדות עם ✦ מולאו אוטומטית. עברו עליהם.</span>}
       </div>
     </form>
   );

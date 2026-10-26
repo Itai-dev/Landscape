@@ -67,7 +67,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     const j = await res?.json().catch(() => ({}));
     if (!res?.ok) {
       setPhase("error");
-      setMsg(j?.error === "limit" ? "אפשר לעקוב אחרי עד 100 חברות." : j?.error === "unconfirmed" ? "צריך לאשר את כתובת המייל קודם." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setMsg(j?.error === "limit" ? "אפשר לעקוב אחרי עד 100 חברות." : j?.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב.");
       return;
     }
     const follows = following ? s.follows.filter((id) => id !== orgId) : [...(s.follows || []), orgId];
@@ -89,7 +89,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     }).catch(() => null);
     const j = await res?.json().catch(() => ({}));
     if (res?.ok) setPhase("sent");
-    else { setPhase("error"); setMsg(j?.error === "rate_limited" ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : j?.error === "bad_email" ? "כדאי לבדוק את כתובת המייל." : "משהו השתבש. אפשר לנסות שוב."); }
+    else { setPhase("error"); setMsg(j?.error === "rate_limited" ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : j?.error === "bad_email" ? "בדקו את כתובת המייל." : "משהו השתבש. נסו שוב."); }
   }
 
   // Already tracked, alerts never agreed to: the consent switches alerts on for the account (no unfollow).
@@ -97,7 +97,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     setPhase("busy");
     const res = await fetch("/api/follows", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ alerts: "daily", consent: true }) }).catch(() => null);
     const j = await res?.json().catch(() => ({}));
-    if (!res?.ok) { setPhase("error"); setMsg(j?.error === "unconfirmed" ? "צריך לאשר את כתובת המייל קודם." : "לא הצלחנו לשמור. אפשר לנסות שוב."); return; }
+    if (!res?.ok) { setPhase("error"); setMsg(j?.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב."); return; }
     publish({ ...s, alerts: j.alerts || "daily", consent: true });
     setPhase("idle");
     setOpen(false);
@@ -140,7 +140,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
               {msg && <p className="small err" role="alert">{msg}</p>}
             </form>
           ) : phase === "sent" ? (
-            <p className="small" role="status"><b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b> כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.</p>
+            <p className="small" role="status"><b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b> פתחו אותו באותו מכשיר ובאותו דפדפן. לא הגיע? בדקו בספאם.</p>
           ) : (
             <form className="stack" onSubmit={start}>
               <p className="small"><b>מייל כשמשהו משתנה <bdi>{prefixed("ב", orgName)}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה.</p>
