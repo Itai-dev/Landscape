@@ -2,7 +2,8 @@
 import { useState } from "react";
 import { track } from "@vercel/analytics";
 import { useSupabase } from "@/components/Providers";
-import { OAUTH } from "@/lib/oauth";
+import { OAUTH, GOOGLE_CLIENT_ID } from "@/lib/oauth";
+import GoogleButton from "@/components/GoogleButton";
 
 const GOOGLE = (
   <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
@@ -23,6 +24,8 @@ const PROVIDERS = {
 };
 
 // "כניסה עם Google / Apple" above an email form. Returns nothing until a provider is switched on (lib/oauth.js).
+// Google uses its own button on the page when NEXT_PUBLIC_GOOGLE_CLIENT_ID is set (components/GoogleButton.js),
+// otherwise the redirect through Supabase, like Apple.
 // The provider confirms the address, so the same /auth/callback link a magic link uses does the rest
 // (crafts, the newsletter opt-in, the follow). `redirectTo` builds that link at click time, so it carries
 // whatever the form holds by then; `disabled` holds the buttons until the form is ready (e.g. consent ticked).
@@ -52,7 +55,11 @@ export default function OAuthButtons({ redirectTo, disabled = false, where = "",
 
   return (
     <div className="oauth">
-      {OAUTH.map((p) => (
+      {OAUTH.map((p) => p === "google" && GOOGLE_CLIENT_ID ? (
+        <GoogleButton key={p} redirectTo={redirectTo} disabled={disabled || Boolean(busy)}
+          onStart={(provider) => { setError(""); try { track("oauth_start", { provider, where }); } catch {} onStart?.(provider); }}
+          onError={() => setError("לא הצלחנו להתחבר כרגע. אפשר לנסות שוב, או להיכנס עם קישור במייל.")} />
+      ) : (
         <button key={p} type="button" className={`btn oauthbtn ${p}`} disabled={disabled || Boolean(busy)} onClick={() => go(p)}>
           {busy === p ? <span className="spinner" aria-hidden /> : PROVIDERS[p].icon}
           {PROVIDERS[p].label}

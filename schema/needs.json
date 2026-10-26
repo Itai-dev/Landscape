@@ -19,7 +19,10 @@
         "color-grading",
         "post-production",
         "vfx",
-        "sound-design"
+        "sound-design",
+        "creative-direction",
+        "art-direction",
+        "copywriting"
       ],
       "label_he": "פרסומות טלוויזיה"
     },
@@ -38,7 +41,9 @@
         "motion-design",
         "editing",
         "commercial-production",
-        "animation-2d"
+        "animation-2d",
+        "creative-strategy",
+        "copywriting"
       ],
       "label_he": "וידאו לסושיאל"
     },
@@ -125,7 +130,8 @@
         "film-production",
         "commercial-production",
         "content-studio",
-        "editing"
+        "editing",
+        "creative-direction"
       ],
       "label_he": "סרטי מותג ותוכן"
     },
@@ -149,7 +155,9 @@
       "crafts": [
         "branding",
         "graphic-design",
-        "typography"
+        "typography",
+        "brand-strategy",
+        "art-direction"
       ],
       "label_he": "מיתוג וזהות"
     },
@@ -184,7 +192,11 @@
         "graphic-design",
         "motion-design",
         "creative-technology",
-        "illustration"
+        "illustration",
+        "creative-direction",
+        "art-direction",
+        "copywriting",
+        "creative-strategy"
       ],
       "label_he": "קמפיינים דיגיטליים ומודעות"
     },
@@ -242,7 +254,8 @@
       ],
       "crafts": [
         "ai-creative",
-        "motion-design"
+        "motion-design",
+        "ai-building"
       ],
       "label_he": "וידאו AI"
     }

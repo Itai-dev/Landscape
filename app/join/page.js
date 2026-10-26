@@ -17,7 +17,8 @@ export default async function Join() {
   const sb = await serverClient();
   const user = sb ? await currentUser(sb).catch(() => null) : null;
   if (user) redirect("/me");
-  // Crafts with the most companies first: the first twelve show, the rest open on request.
-  const crafts = CRAFTS.map((c) => ({ ...c, n: companiesWithCraft(c.slug) })).sort((a, b) => b.n - a.n);
+  // Crafts in the taxonomy's order (creative and art direction, strategy, copy and AI first; schema/taxonomy.json
+  // → facets.craft): the first twelve show, the rest open on request.
+  const crafts = CRAFTS.map((c) => ({ ...c, n: companiesWithCraft(c.slug) }));
   return <JoinFlow crafts={crafts} />;
 }

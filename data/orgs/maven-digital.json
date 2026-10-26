@@ -1,0 +1,66 @@
+{
+  "id": "maven-digital",
+  "name": "Maven",
+  "kind": "agency",
+  "categories": [
+    "digital-agency",
+    "advertising",
+    "branding",
+    "digital-design"
+  ],
+  "description": "Israeli advertising and digital agency founded in 2018 by Yuval Meni, Gal Shapira and Dor Malion, with dozens of employees and 100+ clients. Services: strategy and creative, social media management, performance and data-driven media, branding, UX/UI, websites and e-commerce, SEO and AI-engine optimisation, and automation. Acquired in full by the Gitam BBDO group in October 2026; it keeps operating as an independent company inside the group and moves to Gitam's Ramat HaHayal offices in January 2027.",
+  "description_he": "משרד פרסום ודיגיטל ישראלי שהוקם ב־2018 על ידי יובל מני, גל שפירא ודור מליון, עם עשרות עובדים ויותר מ־100 לקוחות. תחומים: אסטרטגיה וקריאייטיב, ניהול סושיאל, מדיה ופרפורמנס מבוססי דאטה, מיתוג, UX/UI, אתרים ואיקומרס, SEO ואופטימיזציה למנועי AI ואוטומציה. נרכש במלואו על ידי קבוצת גיתם BBDO באוקטובר 2026; ממשיך לפעול כחברה עצמאית בתוך הקבוצה ועובר למשרדי גיתם ברמת החייל בינואר 2027.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 2018,
+  "status": "active",
+  "services": [
+    "Strategy & creative",
+    "Social media management",
+    "Performance media",
+    "Branding",
+    "UX/UI",
+    "Websites & e-commerce",
+    "SEO / AI-engine optimisation"
+  ],
+  "key_people": [
+    {
+      "name": "Yuval Meni",
+      "role": "CEO",
+      "role_type": "founder",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1134369",
+      "as_of": "2026-10-20",
+      "note": "Co-founder"
+    },
+    {
+      "name": "Gal Shapira",
+      "role": "Co-founder & Media VP",
+      "role_type": "founder",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1134369",
+      "as_of": "2026-10-20"
+    },
+    {
+      "name": "Dor Malion",
+      "role": "Co-founder & CTO",
+      "role_type": "founder",
+      "source": "https://www.ice.co.il/advertising-marketing/news/article/1134369",
+      "as_of": "2026-10-20"
+    }
+  ],
+  "relations": [
+    {
+      "type": "acquired_by",
+      "target": "gitam-bbdo",
+      "note": "100% acquired, announced 2026-10-20 (Globes, ICE); price 'several million shekels'. Excludes Norbert, the branding firm Maven had merged with the year before (that merger ends)."
+    }
+  ],
+  "sources": [
+    "https://www.ice.co.il/advertising-marketing/news/article/1134369",
+    "https://www.globes.co.il/news/article.aspx?did=1001560149"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-26",
+  "last_verified": "2026-10-26",
+  "notes": "Official website not confirmed (maven.co.il returns 403 to fetches; not verified as theirs)."
+}

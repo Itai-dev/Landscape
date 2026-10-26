@@ -27,9 +27,9 @@ import "@/app/sell.css";
 const CRAFTS = ["motion-design", "animation-3d", "vfx", "branding", "sound-design", "editing", "illustration", "ai-creative"];
 
 // The hero's rotating craft, with its own prefix and the question mark (the box keeps the longest one's size).
-const ROTATE = ["במושן?", "במיתוג?", "באנימציה תלת־ממדית?", "בעיצוב סאונד?", "בעריכה?", "באיור?", "בהפקה?"];
+const ROTATE = ["בקריאייטיב?", "בארט דיירקשן?", "באסטרטגיה?", "במיתוג?", "בקופירייטינג?", "במושן?", "בהפקה?"];
 // "פופולרי:" pills under the hero search.
-const POPULAR = ["motion-design", "branding", "animation-3d", "editing", "sound-design", "illustration", "vfx", "ai-creative"];
+const POPULAR = ["creative-direction", "art-direction", "brand-strategy", "copywriting", "ai-creative", "branding", "motion-design", "editing"];
 
 // Three questions people ask before signing up. The rest is answered on /join.
 const FAQ = [

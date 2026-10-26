@@ -71,7 +71,13 @@
     "energy": "Energy / industry",
     "education": "School / education",
     "festival-event": "Festival / event",
-    "association": "Association / community"
+    "association": "Association / community",
+    "creative-direction": "Creative direction",
+    "art-direction": "Art direction",
+    "creative-strategy": "Creative strategy",
+    "brand-strategy": "Brand strategy",
+    "copywriting": "Copywriting",
+    "ai-building": "AI building / vibe coding"
   },
   "sizes": [
     "1-10",
@@ -95,32 +101,38 @@
   },
   "facets": {
     "craft": [
+      "creative-direction",
+      "art-direction",
+      "creative-strategy",
+      "brand-strategy",
+      "copywriting",
+      "ai-creative",
+      "ai-building",
+      "branding",
+      "motion-design",
+      "digital-design",
+      "content-studio",
+      "creative-technology",
+      "graphic-design",
+      "commercial-production",
+      "editing",
       "animation-2d",
       "animation-3d",
-      "motion-design",
-      "vfx",
       "cgi-3d",
+      "vfx",
       "post-production",
       "color-grading",
-      "editing",
       "sound-design",
       "music-production",
-      "branding",
-      "graphic-design",
-      "illustration",
-      "digital-design",
-      "creative-technology",
+      "film-production",
       "experiential",
       "xr",
-      "game-art",
-      "game-development",
-      "film-production",
-      "commercial-production",
-      "content-studio",
       "photography",
-      "ai-creative",
       "packaging",
-      "typography"
+      "typography",
+      "illustration",
+      "game-art",
+      "game-development"
     ],
     "product": [
       "gen-ai-video",
@@ -194,7 +206,7 @@
     "commercial-production": "הפקת פרסומות",
     "content-studio": "סטודיו תוכן וסושיאל",
     "photography": "צילום",
-    "ai-creative": "יצירה עם AI",
+    "ai-creative": "עיצוב ויצירה עם AI",
     "packaging": "עיצוב אריזות",
     "typography": "טיפוגרפיה",
     "gen-ai-video": "AI גנרטיבי — וידאו",
@@ -234,7 +246,13 @@
     "energy": "אנרגיה ותעשייה",
     "education": "לימודים ואקדמיה",
     "festival-event": "פסטיבלים ואירועים",
-    "association": "איגודים וקהילות"
+    "association": "איגודים וקהילות",
+    "creative-direction": "קריאייטיב דיירקשן",
+    "art-direction": "ארט דיירקשן",
+    "creative-strategy": "אסטרטגיה קריאייטיבית",
+    "brand-strategy": "אסטרטגיית מותג",
+    "copywriting": "קופירייטינג",
+    "ai-building": "בניית מוצרים עם AI"
   },
   "cities_he": {
     "Airport City": "איירפורט סיטי",
@@ -419,7 +437,10 @@
       "בינה מלאכותית",
       "genai",
       "gen ai",
-      "יצירה עם ai"
+      "יצירה עם ai",
+      "עיצוב עם ai",
+      "ai design",
+      "ai designer"
     ],
     "packaging": [
       "אריזות",
@@ -431,6 +452,56 @@
       "פונטים",
       "typography",
       "type design"
+    ],
+    "creative-direction": [
+      "קריאייטיב דיירקשן",
+      "קריאייטיב דירקטור",
+      "קריאייטיב דיירקטור",
+      "מנהל קריאייטיב",
+      "ניהול קריאייטיב",
+      "creative director",
+      "creative direction",
+      "ecd"
+    ],
+    "art-direction": [
+      "ארט דיירקשן",
+      "ארט דירקטור",
+      "ארט דיירקטור",
+      "art director",
+      "art direction"
+    ],
+    "creative-strategy": [
+      "אסטרטגיה קריאייטיבית",
+      "קריאייטיב סטרטג'י",
+      "creative strategy",
+      "creative strategist"
+    ],
+    "brand-strategy": [
+      "אסטרטגיית מותג",
+      "אסטרטגיה",
+      "אסטרטג",
+      "פלנר",
+      "brand strategy",
+      "brand strategist",
+      "strategy",
+      "planner"
+    ],
+    "copywriting": [
+      "קופירייטינג",
+      "קופירייטר",
+      "קופי",
+      "copywriting",
+      "copywriter",
+      "copy"
+    ],
+    "ai-building": [
+      "בניית מוצרים עם ai",
+      "וייב קודינג",
+      "ai builder",
+      "ai builders",
+      "vibe coding",
+      "no code",
+      "נו קוד"
     ]
   }
 }
