@@ -8,6 +8,7 @@ import { useSupabase } from "@/components/Providers";
 import { CONSENT_TEXT } from "@/lib/taxonomy";
 import { callbackUrl, normalEmail, validEmail } from "@/lib/authLink";
 import OAuthButtons from "@/components/OAuthButtons";
+import { authErrorHe, MIN_PASSWORD } from "@/lib/authErrors";
 import { OAUTH } from "@/lib/oauth";
 
 const FREQS = [
@@ -33,6 +34,7 @@ export default function JoinFlow({ crafts: all }) {
   const [ed, setEd] = useState(null);
   const [busy, setBusy] = useState(false);
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [newsletter, setNewsletter] = useState(true);
   const [consent, setConsent] = useState(false);
   const [phase, setPhase] = useState("idle"); // idle | sending | error
@@ -45,22 +47,31 @@ export default function JoinFlow({ crafts: all }) {
     if (newsletter && !consent) return;
     const address = normalEmail(email);
     if (!validEmail(address)) { setPhase("error"); setError("הכתובת לא נראית תקינה. בדקו אותה."); return; }
+    if (password && password.length < MIN_PASSWORD) { setPhase("error"); setError(`הסיסמה קצרה מדי. בחרו סיסמה של ${MIN_PASSWORD} תווים לפחות, או השאירו את השדה ריק.`); return; }
     tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off" });
     if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });
     setPhase("sending");
     setError("");
     let err;
+    const emailRedirectTo = callbackUrl({ next: "/welcome", subscribe: newsletter ? frequency : "", crafts });
     try {
-      ({ error: err } = await supabase.auth.signInWithOtp({
-        email: address,
-        options: { emailRedirectTo: callbackUrl({ next: "/welcome", subscribe: newsletter ? frequency : "", crafts }) },
-      }));
+      if (password) {
+        // With a password: an account confirmed once by email; later sign-ins use the password.
+        const { data, error } = await supabase.auth.signUp({ email: address, password, options: { emailRedirectTo } });
+        err = error;
+        // An address that already has an account comes back with no identities, and no email is sent.
+        if (!err && data?.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+          setPhase("error"); setError("כבר יש חשבון עם הכתובת הזו. היכנסו עם הסיסמה או עם קישור במייל."); return;
+        }
+      } else {
+        ({ error: err } = await supabase.auth.signInWithOtp({ email: address, options: { emailRedirectTo } }));
+      }
     } catch {
       setPhase("error"); setError("אין חיבור כרגע. נסו שוב בעוד רגע."); return;
     }
     if (err) {
       setPhase("error");
-      setError(/rate|limit/i.test(err.message) || err.status === 429 ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : (/sending|email/i.test(err?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב."));
+      setError(authErrorHe(err));
       return;
     }
     setPhase("idle");
@@ -174,7 +185,7 @@ export default function JoinFlow({ crafts: all }) {
         {step === 2 && (
           <section className="jstep" aria-labelledby="j2">
             <h1 id="j2" ref={head} tabIndex={-1}>המייל שלכם</h1>
-            <p className="muted">אין סיסמה: {OAUTH.length ? "נכנסים עם חשבון קיים או עם קישור במייל" : "שולחים קישור כניסה"}. ממנו נכנסים לאיזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
+            <p className="muted">{OAUTH.length ? "הירשמו עם Google, או עם מייל וסיסמה" : "הירשמו עם מייל וסיסמה"}. נשלח קישור לאישור הכתובת פעם אחת, ומשם לאיזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
             {!configured ? (
               <p className="muted small">ההרשמה נפתחת בקרוב.</p>
             ) : (
@@ -198,11 +209,16 @@ export default function JoinFlow({ crafts: all }) {
                   <label htmlFor="join-email">מייל</label>
                   <input id="join-email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
+                <div>
+                  <label htmlFor="join-password">סיסמה</label>
+                  <input id="join-password" type="password" autoComplete="new-password" dir="ltr" minLength={MIN_PASSWORD} value={password} onChange={(e) => setPassword(e.target.value)} aria-describedby="join-password-hint" />
+                  <p id="join-password-hint" className="small muted field-hint">{MIN_PASSWORD} תווים לפחות. אפשר גם להשאיר ריק ולהיכנס כל פעם עם קישור במייל.</p>
+                </div>
                 {phase === "error" && <div className="notice err" role="alert">{error}</div>}
                 <div className="row">
                   <button className="btn primary" disabled={phase === "sending" || (newsletter && !consent) || !email.includes("@")}>
                     {phase === "sending" ? <span className="spinner" aria-hidden /> : null}
-                    שלחו לי קישור כניסה
+                    {password ? "הרשמה" : "שלחו לי קישור כניסה"}
                   </button>
                   <span className="small muted">{newsletter ? "הניוזלטר עד פעם בשבוע. הסרה בלחיצה." : "בלי ניוזלטר. אפשר להירשם אליו אחר כך."}</span>
                 </div>
@@ -218,8 +234,11 @@ export default function JoinFlow({ crafts: all }) {
             <div className="jicon" aria-hidden="true">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
             </div>
-            <h1 id="j3" ref={head} tabIndex={-1}>שלחנו קישור</h1>
-            <p>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לוחצים עליו ונכנסים לאיזור האישי.{newsletter ? ` הניוזלטר הראשון יגיע ${firstSendLabel(frequency)}.` : ""}</p>
+            <h1 id="j3" ref={head} tabIndex={-1}>{password ? "אשרו את הכתובת" : "שלחנו קישור"}</h1>
+            <p>{password
+              ? <>שלחנו קישור לאישור הכתובת ל־<b className="ltr">{email}</b>. לחצו עליו פעם אחת, ומעכשיו נכנסים עם המייל והסיסמה.</>
+              : <>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לחצו עליו ותיכנסו לאיזור האישי.</>}
+              {newsletter ? ` הניוזלטר הראשון יגיע ${firstSendLabel(frequency)}.` : ""}</p>
             <p className="notice">הקישור עובד רק במכשיר ובדפדפן האלה. פתחו את המייל כאן.</p>
             <p className="muted small">לא הגיע תוך כמה דקות? בדקו בספאם או בקידומי מכירות.</p>
             <p className="small"><a className="tap" href="/feedback?from=join" data-track="feedback_open" data-track-where="join_sent">משהו חסר? יש רעיון לשיפור?</a></p>

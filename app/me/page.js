@@ -6,6 +6,7 @@ import AccountClient from "./AccountClient";
 import { PROFILES_ENABLED } from "@/lib/config";
 import FollowsClient from "./FollowsClient";
 import SignupForm from "@/components/SignupForm";
+import { OAUTH } from "@/lib/oauth";
 import index from "@/lib/generated/orgs.json";
 
 const ORG_NAMES = new Map(index.orgs.map((o) => [o.id, o.name_he || o.name]));
@@ -39,7 +40,7 @@ export default async function Me({ searchParams }) {
       // Signed out (or on another device): a sign-in link brings people back to their follows and settings.
       return (
         <div className="wrap narrow stack">
-          <div className="pagehead"><h1>כניסה</h1><p>נכנסים עם קישור במייל, בלי סיסמה: המעקב שלכם מכל מכשיר, ההתראות והניוזלטר.</p></div>
+          <div className="pagehead"><h1>כניסה</h1><p>היכנסו עם המייל והסיסמה{OAUTH.includes("google") ? ", עם Google" : ""} או עם קישור במייל: המעקב שלכם מכל מכשיר, ההתראות והניוזלטר.</p></div>
           <div className="card"><SignupForm next="/me#follows" digest={false} /></div>
           <p className="small muted center">עוד אין לכם חשבון? <a href="/join">להרשמה, בחינם</a></p>
         </div>

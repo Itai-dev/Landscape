@@ -66,7 +66,7 @@ export default function OAuthButtons({ redirectTo, disabled = false, where = "",
         </button>
       ))}
       {error && <div className="notice err" role="alert">{error}</div>}
-      <p className="oauth-or"><span>או עם קישור במייל</span></p>
+      <p className="oauth-or"><span>או עם מייל</span></p>
     </div>
   );
 }

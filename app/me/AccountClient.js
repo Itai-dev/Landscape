@@ -25,6 +25,11 @@ export default function AccountClient() {
         <div className="row"><a className="btn" href="/survey">לסקר</a></div>
       </div>
       <div className="card stack">
+        <h2>סיסמה</h2>
+        <p className="muted">הגדירו סיסמה ותיכנסו עם המייל והסיסמה מכל מכשיר, בלי לחכות לקישור.</p>
+        <div className="row"><a className="btn" href="/me/password">הגדרת סיסמה</a></div>
+      </div>
+      <div className="card stack">
         <h2>חשבון</h2>
         <div className="row">
           <SignOutButton />
