@@ -25,7 +25,7 @@ const CHECK = (
 // Welcome after sign-up, on one page with no reloads (each screen is a history entry, so the phone's back gesture
 // goes back a screen): 1) you're in, what was set up and what the site does; 2) crafts, only if none were chosen;
 // 3) companies to follow, which come first in the weekly email; then a short "all set".
-export default function WelcomeFlow({ email, crafts: initialCrafts, allCrafts, newsletter, alertsConsent, following, stats, suggestions: initialSuggestions }) {
+export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts, allCrafts, newsletter, alertsConsent, following, stats, suggestions: initialSuggestions }) {
   const needCrafts = initialCrafts.length === 0;
   const screens = needCrafts ? ["hello", "crafts", "follow", "done"] : ["hello", "follow", "done"];
   const [step, setStep] = useState(0);
@@ -60,7 +60,7 @@ export default function WelcomeFlow({ email, crafts: initialCrafts, allCrafts, n
 
   async function saveCrafts() {
     setBusy(true);
-    const res = await post("/api/welcome", { crafts });
+    const res = await post("/api/welcome", { crafts, demo });
     setBusy(false);
     if (res.ok) setSuggestions(res.suggestions || []);
     tryTrack("welcome_crafts", { crafts: crafts.length });
@@ -71,13 +71,13 @@ export default function WelcomeFlow({ email, crafts: initialCrafts, allCrafts, n
     if (!picked.length) return;
     setBusy(true);
     setError("");
-    const res = await post("/api/follows", { add: picked, consent: alerts && !alertsConsent });
+    const res = demo ? { ok: true } : await post("/api/follows", { add: picked, consent: alerts && !alertsConsent });
     setBusy(false);
     if (!res.ok) {
       setError(res.error === "limit" ? "הגעתם למספר החברות המרבי במעקב." : "לא הצלחנו לשמור כרגע. אפשר לנסות שוב.");
       return;
     }
-    picked.forEach((id) => setTracked(id, true));
+    if (!demo) picked.forEach((id) => setTracked(id, true));
     setFollowed(picked.length);
     tryTrack("welcome_follow", { n: picked.length, alerts });
     go(step + 1);
@@ -89,6 +89,7 @@ export default function WelcomeFlow({ email, crafts: initialCrafts, allCrafts, n
   return (
     <div className="joinflow welcome">
       <div className="wrap jwrap">
+        {demo && <p className="notice small">תצוגה לדוגמה (רק באתר התצוגה המקדימה): שום דבר לא נשמר.</p>}
         {screen !== "done" && (
           <div className="jtop">
             {step > 0 ? (

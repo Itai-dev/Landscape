@@ -13,6 +13,11 @@ const err = (status, error) => NextResponse.json({ error }, { status });
 export async function POST(request) {
   const sb = await serverClient();
   const user = await currentUser(sb);
+  // Preview deploys only: the /welcome?demo=1 sample gets suggestions without signing in, and nothing is saved.
+  if (!user && process.env.VERCEL_ENV !== "production") {
+    const body = await readJson(request);
+    if (body?.demo === true) return NextResponse.json({ ok: true, crafts: cleanCraftList(body.crafts), suggestions: suggestCompanies(cleanCraftList(body.crafts)) });
+  }
   if (!user) return err(401, "signed_out");
   if (!allow(`welcome:${user.id}`, { max: 20, windowMs: 10 * 60_000 })) return err(429, "rate_limited");
   const body = await readJson(request);
