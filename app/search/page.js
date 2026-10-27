@@ -7,7 +7,9 @@ import { CRAFTS, craftLabel } from "@/lib/taxonomy";
 import { searchSeeds, kindLabel } from "@/lib/people";
 import { searchCompanies, companyHref } from "@/lib/companies";
 import { loadMembers, hiddenSeeds } from "@/lib/members";
-import { PROFILES_ENABLED, aiSearchOn } from "@/lib/config";
+import { PROFILES_ENABLED, aiSearchOn, aiSearchPremium, aiSearchFor } from "@/lib/config";
+import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
+import { planOf } from "@/lib/subscription";
 import AskAnswer from "@/components/AskAnswer";
 import { askable } from "@/lib/askable";
 import { parseQuery } from "@/lib/match";
@@ -25,6 +27,13 @@ const qs = (o) => new URLSearchParams(Object.fromEntries(Object.entries(o).filte
 export default async function Search({ searchParams }) {
   const sp = await searchParams;
   const typed = String(sp?.q || "").slice(0, 80).trim();
+  // AI answers: everyone (AI_SEARCH=on), or premium accounts only (AI_SEARCH=premium).
+  let aiAnswers = aiSearchOn();
+  if (!aiAnswers && aiSearchPremium() && askable(typed)) {
+    const user = await currentUser(await serverClient()).catch(() => null);
+    const db = user && adminClient();
+    aiAnswers = Boolean(db && aiSearchFor((await planOf(db, user.id)).premium));
+  }
   const asked = CRAFTS.some((c) => c.slug === sp?.craft) ? sp.craft : "";
   // A query that is a craft's name ("מושן", "VFX") is that craft: the same results and counts as the craft page.
   // A question ("מי מזמין מושן בתל אביב") becomes the craft plus the remaining words ("תל אביב").
@@ -70,7 +79,10 @@ export default async function Search({ searchParams }) {
         </div>
       )}
 
-      {aiSearchOn() && askable(typed) && <AskAnswer key={typed} q={typed} />}
+      {aiAnswers && askable(typed) && <AskAnswer key={typed} q={typed} />}
+      {!aiAnswers && aiSearchPremium() && askable(typed) && (
+        <p className="notice small askup">שאלה כזאת אפשר לשאול גם את ה־AI, עם תשובה ומקורות. זה חלק מפרימיום. <a href="/premium" data-track="premium_upsell" data-track-where="search">לפרימיום</a></p>
+      )}
 
       {nothing && (
         <div className="soon" style={{ marginBlockStart: 48 }}>

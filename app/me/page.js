@@ -8,12 +8,29 @@ import FollowsClient from "./FollowsClient";
 import SignupForm from "@/components/SignupForm";
 import { OAUTH } from "@/lib/oauth";
 import index from "@/lib/generated/orgs.json";
-import { BellIcon, BuildingIcon, SparkIcon } from "@/components/Icons";
+import { BellIcon, BuildingIcon, SparkIcon, CheckIcon } from "@/components/Icons";
 import { activeConsent } from "@/lib/consent";
 import { firstSendLabel } from "@/lib/digestSchedule";
 import { FREQUENCIES, ALERT_MODES, craftLabel } from "@/lib/taxonomy";
 import { isOpen as surveyOpen, CLOSES_LABEL } from "@/lib/survey/config";
+import { PREMIUM, followLimit, FREE_FOLLOWS } from "@/lib/premium";
+import { planOf } from "@/lib/subscription";
+import { KINDS } from "@/lib/kinds.mjs";
+import { cityHe } from "@/lib/orgs";
+import dataset from "@/site/data/dataset.json";
+import PlanClient from "./PlanClient";
 import "./me.css";
+
+// Filter choices for list export (premium): company types, crafts, and the cities with at least 3 companies.
+const EXPORT_OPTIONS = (() => {
+  const n = new Map();
+  for (const o of dataset.orgs) { const c = o.location?.city; if (c) n.set(c, (n.get(c) || 0) + 1); }
+  return {
+    kinds: KINDS.map((k) => ({ slug: k.kind, he: k.plural_he })),
+    categories: Object.entries(dataset.taxonomy.categories_he || {}).map(([slug, he]) => ({ slug, he })).sort((a, b) => a.he.localeCompare(b.he, "he")),
+    cities: [...n].filter(([, k]) => k >= 3).sort((a, b) => b[1] - a[1]).map(([slug]) => ({ slug, he: cityHe(slug) })),
+  };
+})();
 
 const ORG_NAMES = new Map(index.orgs.map((o) => [o.id, o.name_he || o.name]));
 
@@ -43,7 +60,7 @@ function avatarOf(user) {
 }
 
 // The signed-in personal area (stage 1): greeting, summary cards, tracking, settings.
-function MeHome({ user, follows, prefs, justFollowed = "", demo = false }) {
+function MeHome({ user, follows, prefs, plan = null, justFollowed = "", demo = false }) {
   const av = avatarOf(user);
     const on = Boolean(prefs && prefs.frequency && prefs.frequency !== "off" && activeConsent(prefs));
     const crafts = (prefs?.crafts || []).map(craftLabel);
@@ -75,8 +92,17 @@ function MeHome({ user, follows, prefs, justFollowed = "", demo = false }) {
             <span className="mi"><BuildingIcon size={22} /></span>
             <span className="mt"><b>המעקב שלי</b> <span className="st">{follows.follows.length === 1 ? "חברה אחת" : `${follows.follows.length} חברות`}</span></span>
             <span className="md">התראות במייל: {alertsHe}</span>
+            {PREMIUM && !plan?.premium && <span className="md">{follows.follows.length} מתוך {FREE_FOLLOWS} בחינם</span>}
             <span className="go">לרשימת המעקב</span>
           </a>
+          {PREMIUM && (
+            <a className="mecard" href={plan?.premium ? "#plan" : "/premium"}>
+              <span className="mi"><CheckIcon size={22} /></span>
+              <span className="mt"><b>פרימיום</b> <span className={`st${plan?.premium ? " on" : ""}`}>{plan?.premium ? "פעיל" : "לא פעיל"}</span></span>
+              <span className="md">{plan?.premium ? "מעקב בלי הגבלה, התראות מיידיות, ייצוא רשימות וחיפוש עם AI." : "מעקב בלי הגבלה, התראות בתוך שעה, ייצוא רשימות וחיפוש עם AI."}</span>
+              <span className="go">{plan?.premium ? "לניהול המנוי" : "לפרטים על פרימיום"}</span>
+            </a>
+          )}
           {surveyOpen() && (
             <a className="mecard" href="/survey">
               <span className="mi"><BellIcon size={22} /></span>
@@ -87,7 +113,8 @@ function MeHome({ user, follows, prefs, justFollowed = "", demo = false }) {
           )}
         </section>
 
-        <FollowsClient initial={follows} justFollowed={justFollowed} />
+        <FollowsClient initial={{ ...follows, premium: Boolean(plan?.premium), max: followLimit(Boolean(plan?.premium)), offer: PREMIUM }} justFollowed={justFollowed} />
+        {PREMIUM && !demo && <PlanClient premium={Boolean(plan?.premium)} sub={plan?.sub || null} options={EXPORT_OPTIONS} />}
         <AccountClient />
       </div>
     );
@@ -127,11 +154,14 @@ export default async function Me({ searchParams }) {
     const sp = await searchParams;
     // Old sign-up links landed here; the welcome flow is /welcome now.
     if (sp?.welcome === "1") redirect("/welcome");
-    const [follows, { data: prefs }] = await Promise.all([
+    const [follows, { data: prefs }, plan] = await Promise.all([
       loadFollows(sb, user.id),
       sb.from("newsletter_prefs").select("frequency, crafts, consent_at, unsubscribed_at").eq("user_id", user.id).maybeSingle(),
+      PREMIUM ? planOf(sb, user.id) : null,
     ]);
-    return <MeHome user={user} follows={follows} prefs={prefs} justFollowed={typeof sp?.followed === "string" ? sp.followed : ""} />;
+    // "instant" alerts are premium; after a plan ends they arrive daily, and the page says so.
+    if (follows.alerts === "instant" && !plan?.premium) follows.alerts = "daily";
+    return <MeHome user={user} follows={follows} prefs={prefs} plan={plan} justFollowed={typeof sp?.followed === "string" ? sp.followed : ""} />;
   }
   if (!user) redirect("/onboard");
   const [{ data: profile }, { data: prefs }] = await Promise.all([

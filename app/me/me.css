@@ -24,3 +24,8 @@
 .mesettings .mrow { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); padding-block: var(--s-3); border-block: 1px solid var(--line); }
 .mesettings .mrow p { margin: 2px 0 0; }
 @media (prefers-reduced-motion: reduce) { .mecard { transition: none; } }
+/* Premium: list export filters */
+.prexport { display: grid; gap: var(--s-3); }
+@media (min-width: 640px) { .prexport { grid-template-columns: repeat(2, 1fr); } }
+.prexport label:not(.check) { display: grid; gap: 4px; }
+.prexport .check { grid-column: 1 / -1; }

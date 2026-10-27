@@ -9,6 +9,7 @@ export const maxDuration = 60;
 
 // Vercel Cron (vercel.json) calls this every morning with "Authorization: Bearer $CRON_SECRET".
 // It sends one email per person with the new updates on the companies they follow.
+// Premium "instant" alerts also go out every hour, from /api/cron/alerts-instant.
 export async function GET(request) {
   if (!cronAuthorized(request)) return NextResponse.json({ error: "unauthorized" }, { status: 401 });
   const db = adminClient();

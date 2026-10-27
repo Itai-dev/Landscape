@@ -10,7 +10,13 @@ export default function AccountClient() {
     setDeleting(true);
     const res = await fetch("/api/account/delete", { method: "POST" });
     if (res.ok) { clearLocalData(); window.location.href = "/?deleted=1"; }
-    else { setDeleting(false); window.alert("לא הצלחנו למחוק את החשבון. נסו שוב."); }
+    else {
+      setDeleting(false);
+      const j = await res.json().catch(() => ({}));
+      window.alert(j.error === "cancel_plan_first"
+        ? "לא הצלחנו לבטל את מנוי הפרימיום אצל חברת הסליקה, אז החשבון לא נמחק. בטלו קודם את המנוי למעלה, או כתבו לנו."
+        : "לא הצלחנו למחוק את החשבון. נסו שוב.");
+    }
   }
   return (
     <div className="stack">

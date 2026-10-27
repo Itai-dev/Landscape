@@ -77,8 +77,10 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
       setError(res.error === "limit" ? "הגעתם למספר החברות המרבי במעקב." : "לא הצלחנו לשמור כרגע. אפשר לנסות שוב.");
       return;
     }
-    if (!demo) picked.forEach((id) => setTracked(id, true));
-    setFollowed(picked.length);
+    // The free tier may hold fewer than were picked: only what the account kept joins this browser's list.
+    const kept = demo || !Array.isArray(res.follows) ? picked : picked.filter((id) => res.follows.includes(id));
+    if (!demo) kept.forEach((id) => setTracked(id, true));
+    setFollowed(kept.length);
     tryTrack("welcome_follow", { n: picked.length, alerts });
     go(step + 1);
   }
