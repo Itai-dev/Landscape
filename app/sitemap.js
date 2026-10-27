@@ -17,8 +17,9 @@ export default function sitemap() {
     page("/survey", "monthly", 0.6),
     page("/survey/results", "weekly", 0.5),
     ...(TOOLS ? [page("/tools", "weekly", 0.6)] : []),
-    ...(PREMIUM ? [page("/premium", "monthly", 0.6), page("/terms", "yearly", 0.2)] : []),
+    ...(PREMIUM ? [page("/premium", "monthly", 0.6)] : []),
     page("/privacy", "yearly", 0.2),
+    page("/terms", "yearly", 0.2),
     ...ORG_LIST.filter((o) => o.status !== "closed").map((o) => ({
       url: `${base}/companies/${encodeURIComponent(o.id)}`,
       lastModified: o.last_verified ? new Date(`${o.last_verified}T00:00:00Z`) : now,

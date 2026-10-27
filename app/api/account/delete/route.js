@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
 import { sameOrigin } from "@/lib/guard";
 import { getSubscription } from "@/lib/subscription";
-import { provider } from "@/lib/billing";
+import { cancelPlan } from "@/lib/billing/cancel";
 
 export const runtime = "nodejs";
 
@@ -15,13 +15,12 @@ export async function POST(request) {
   const admin = adminClient();
   if (!admin) return NextResponse.json({ error: "not_configured" }, { status: 503 });
 
-  // A paid plan still renewing is stopped at the payment provider first; otherwise deleting the account would
-  // delete our record of it while the card keeps being charged.
+  // A paid plan still renewing is cancelled first, the same way as the cancel button (including any refund
+  // owed); otherwise deleting the account would delete our record of it while the card keeps being charged.
   const sub = await getSubscription(admin, user.id);
-  if (sub && ["active", "past_due"].includes(sub.status) && sub.provider !== "test") {
-    const p = provider();
-    const res = p && p.name === sub.provider ? await p.cancel({ ref: sub.provider_ref }).catch(() => ({ ok: false })) : { ok: false };
-    if (!res.ok) return NextResponse.json({ error: "cancel_plan_first" }, { status: 409 });
+  if (sub && ["active", "past_due"].includes(sub.status)) {
+    const out = await cancelPlan(admin, user.id, sub);
+    if (out.error) return NextResponse.json({ error: "cancel_plan_first" }, { status: 409 });
   }
 
   const { data: files } = await admin.storage.from("cvs").list(user.id).catch(() => ({ data: [] }));

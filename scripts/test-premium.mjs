@@ -8,11 +8,14 @@ import assert from "node:assert/strict";
 process.env.NEXT_PUBLIC_PREMIUM = "on";
 process.env.BILLING_PROVIDER = "test";
 process.env.BILLING_WEBHOOK_SECRET = "whsec";
+Object.assign(process.env, { BUSINESS_NAME: "Test Biz", BUSINESS_ID: "000000018", BUSINESS_ADDRESS: "1 Test St", NEXT_PUBLIC_PRIVACY_EMAIL: "p@b.c" });
 delete process.env.VERCEL_ENV;
 
 register("./alias-hooks.mjs", import.meta.url);
-const { followLimit, FREE_FOLLOWS, PREMIUM_FOLLOWS, shekels } = await import("../lib/premium.js");
+const { followLimit, FREE_FOLLOWS, PREMIUM_FOLLOWS, shekels, cancelOutcome, addMonths } = await import("../lib/premium.js");
 const { isActive, planOf, GRACE_DAYS } = await import("../lib/subscription.js");
+const { cancelPlan } = await import("../lib/billing/cancel.js");
+const { runRenewalNotices } = await import("../lib/renewals.js");
 const { addFollows, setAlerts } = await import("../lib/follows.js");
 const { applyEvents } = await import("../lib/billing/apply.js");
 const { provider, billingReady } = await import("../lib/billing/index.js");
@@ -34,7 +37,7 @@ const KEYS = {
   alert_sends: (r) => `${r.user_id}|${r.signal_id}`, newsletter_prefs: (r) => r.user_id, signal_seen: (r) => r.signal_id, digest_sends: (r) => r.user_id,
 };
 function fakeDb(seed = {}, recipients = []) {
-  const tables = { org_follows: [], subscriptions: [], billing_events: [], alert_sends: [], newsletter_prefs: [], signal_seen: [], digest_sends: [], ...seed };
+  const tables = { org_follows: [], subscriptions: [], billing_events: [], alert_sends: [], newsletter_prefs: [], signal_seen: [], digest_sends: [], terms_acceptances: [], ...seed };
   function query(table) {
     const filters = [];
     let op = "select", payload = null, opts = {}, head = false, single = false, back = false;
@@ -42,6 +45,7 @@ function fakeDb(seed = {}, recipients = []) {
       select(_c, o = {}) { if (op !== "select") back = true; head = Boolean(o.head); return q; },
       eq(c, v) { filters.push((r) => r[c] === v); return q; },
       gte(c, v) { filters.push((r) => String(r[c] || "") >= String(v)); return q; },
+      lte(c, v) { filters.push((r) => String(r[c] || "") <= String(v)); return q; },
       in(c, vs) { filters.push((r) => vs.includes(r[c])); return q; },
       order() { return q; },
       maybeSingle() { single = true; return q; },
@@ -74,7 +78,8 @@ function fakeDb(seed = {}, recipients = []) {
     }
     return q;
   }
-  return { tables, from: query, rpc: () => ({ range: async () => ({ data: recipients, error: null }) }) };
+  const auth = { admin: { getUserById: async (id) => ({ data: { user: { id, email: `${id.slice(-4)}@example.com` } }, error: null }) } };
+  return { tables, auth, from: query, rpc: () => ({ range: async () => ({ data: recipients, error: null }) }) };
 }
 const future = (days = 20) => new Date(Date.now() + days * DAY).toISOString();
 const past = (days = 1) => new Date(Date.now() - days * DAY).toISOString();
@@ -153,6 +158,73 @@ t("the test provider: preview only, and its webhook needs a valid signature", as
   process.env.VERCEL_ENV = "production";
   assert.equal(provider(), null); // never in production
   delete process.env.VERCEL_ENV;
+});
+
+
+// --- cancelling and refunds --------------------------------------------------------------------------
+t("cancel rules: full refund within 14 days, yearly pays back the months not started, monthly runs out", () => {
+  const now = new Date("2026-06-15T12:00:00Z");
+  const joined = (days) => new Date(now.getTime() - days * DAY).toISOString();
+  const full = cancelOutcome({ plan: "monthly", amount: 29, started_at: joined(3), period_start: joined(3), current_period_end: future() }, now);
+  assert.deepEqual([full.kind, full.refund, full.until], ["full", 29, now.toISOString()]);
+  // Yearly, joined 3.5 months ago: month 4 has started, 8 months come back.
+  const start = new Date("2026-03-01T00:00:00Z");
+  const y = { plan: "yearly", amount: 290, started_at: start.toISOString(), period_start: start.toISOString(), current_period_end: addMonths(start, 12).toISOString() };
+  const pr = cancelOutcome(y, now);
+  assert.deepEqual([pr.kind, pr.months, pr.refund, pr.until], ["prorata", 8, 193.33, addMonths(start, 4).toISOString()]);
+  const last = cancelOutcome(y, new Date(addMonths(start, 11).getTime() + DAY)); // in the last month
+  assert.equal(last.kind, "none");
+  const monthly = cancelOutcome({ plan: "monthly", amount: 29, started_at: joined(40), period_start: joined(10), current_period_end: future(20) }, now);
+  assert.deepEqual([monthly.kind, monthly.refund], ["none", 0]);
+});
+
+t("a new plan gets one confirmation email; a renewal keeps the start date and sends none", async () => {
+  Object.assign(process.env, { RESEND_API_KEY: "k", DIGEST_FROM: "L <a@b.c>", DIGEST_SENDER_NAME: "S", DIGEST_SENDER_ADDRESS: "Addr" });
+  const sent = [];
+  globalThis.fetch = async (_url, init) => { const b = JSON.parse(init.body); sent.push(...b); return new Response(JSON.stringify({ data: b.map((_, i) => ({ id: `m${i}` })) }), { status: 200 }); };
+  const db = fakeDb();
+  const u = U(20);
+  await applyEvents(db, "test", [{ id: "c1", kind: "paid", userId: u, plan: "monthly", ref: "r", amount: 29 }]);
+  const started = db.tables.subscriptions[0].started_at;
+  assert.equal(sent.length, 1);
+  assert.match(sent[0].subject, /הפרימיום פעיל/);
+  assert.match(sent[0].text, /עוסק פטור 000000018/);
+  assert.match(sent[0].text, /מחזיר את כל הסכום/);
+  await new Promise((r) => setTimeout(r, 5));
+  await applyEvents(db, "test", [{ id: "c2", kind: "paid", userId: u, plan: "monthly", ref: "r", amount: 29 }]);
+  assert.equal(sent.length, 1);
+  assert.equal(db.tables.subscriptions[0].started_at, started);
+});
+
+t("cancelling within 14 days refunds and ends premium now; payments need the business details", async () => {
+  const u = U(21);
+  const db = fakeDb({ subscriptions: [sub(u, { amount: 29, started_at: past(2), period_start: past(2) })] });
+  const out = await cancelPlan(db, u, db.tables.subscriptions[0]);
+  assert.deepEqual([out.ok, out.kind, out.refund, out.refunded], [true, "full", 29, true]);
+  const row = db.tables.subscriptions[0];
+  assert.deepEqual([row.status, row.refund_amount, row.refund_due], ["canceled", 29, false]);
+  assert.equal((await planOf(db, u)).premium, false);
+  const id = process.env.BUSINESS_ID;
+  delete process.env.BUSINESS_ID;
+  assert.equal(billingReady(), false);
+  process.env.BUSINESS_ID = id;
+  assert.equal(billingReady(), true);
+});
+
+t("yearly plans get one renewal reminder, 30 days ahead; monthly and cancelled plans none", async () => {
+  const sent = [];
+  globalThis.fetch = async (_url, init) => { const b = JSON.parse(init.body); sent.push(...b); return new Response(JSON.stringify({ data: b.map((_, i) => ({ id: `m${i}` })) }), { status: 200 }); };
+  const db = fakeDb({ subscriptions: [
+    sub(U(30), { plan: "yearly", current_period_end: future(20) }),
+    sub(U(31), { plan: "yearly", current_period_end: future(60) }),
+    sub(U(32), { plan: "monthly", current_period_end: future(20) }),
+    sub(U(33), { plan: "yearly", status: "canceled", cancel_at_period_end: true, current_period_end: future(20) }),
+  ] });
+  const r1 = await runRenewalNotices(db);
+  assert.deepEqual([r1.due, r1.sent], [1, 1]);
+  assert.match(sent[0].subject, /מתחדש/);
+  const r2 = await runRenewalNotices(db);
+  assert.equal(r2.due, 0);
 });
 
 // --- export ------------------------------------------------------------------------------------------

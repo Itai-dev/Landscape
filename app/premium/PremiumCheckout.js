@@ -13,6 +13,7 @@ export default function PremiumCheckout({ plans, ready, signedIn = true, childre
   const [signIn, setSignIn] = useState(false); // signed out: show the sign-in form
   const [phase, setPhase] = useState("idle"); // idle | busy | listed
   const [msg, setMsg] = useState("");
+  const [agree, setAgree] = useState(false);
 
   async function go(e) {
     e.preventDefault();
@@ -26,7 +27,8 @@ export default function PremiumCheckout({ plans, ready, signedIn = true, childre
       setPhase("idle");
       return setMsg("לא הצלחנו לשמור. נסו שוב.");
     }
-    const res = await post("/api/billing/checkout", { plan });
+    if (!agree) { setPhase("idle"); return setMsg("כדי להמשיך, סמנו את תיבת האישור."); }
+    const res = await post("/api/billing/checkout", { plan, agree: true });
     if (res.ok && res.url) { window.location.assign(res.url); return; }
     setPhase("idle");
     setMsg(res.error === "already_premium" ? "הפרימיום כבר פעיל בחשבון שלכם." : res.error === "rate_limited" ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : "לא הצלחנו לפתוח את עמוד התשלום. נסו שוב בעוד רגע.");
@@ -51,6 +53,12 @@ export default function PremiumCheckout({ plans, ready, signedIn = true, childre
           </label>
         ))}
       </div>
+      {ready && signedIn && (
+        <label className="check small">
+          <input type="checkbox" checked={agree} onChange={(e) => { setAgree(e.target.checked); setMsg(""); }} required />
+          <span>קראתי את <a href="/terms" target="_blank">תנאי השימוש</a> ואת <a href="/privacy" target="_blank">מדיניות הפרטיות</a>, אני בגיל 18 ומעלה, וידוע לי שהמנוי מתחדש אוטומטית עד שאבטל אותו.</span>
+        </label>
+      )}
       {signIn ? (
         <div className="stack">{children}</div>
       ) : (

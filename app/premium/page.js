@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
-import { PREMIUM, PLANS, BENEFITS, FREE_FOLLOWS, TAX, shekels } from "@/lib/premium";
+import { PREMIUM, PLANS, BENEFITS, FREE_FOLLOWS, REFUND_DAYS, TAX, shekels } from "@/lib/premium";
 import { planOf } from "@/lib/subscription";
 import { billingReady } from "@/lib/billing";
 import SignupForm from "@/components/SignupForm";
@@ -56,7 +56,7 @@ export default async function Premium() {
             <SignupForm next="/premium#buy" digest={false} />
           </PremiumCheckout>
         )}
-        <p className="small muted">{TAX.note} אפשר לבטל בכל רגע מהאזור האישי, בלחיצה אחת, והפרימיום ממשיך עד סוף התקופה ששולמה. <a href="/terms">לתנאי השימוש</a></p>
+        <p className="small muted">{TAX.note} אפשר לבטל בכל רגע מהאזור האישי, בלחיצה אחת. ביטול בתוך {REFUND_DAYS} יום מההצטרפות מחזיר את כל הסכום. <a href="/terms#cancel">לתנאי הביטול</a></p>
       </section>
 
       <section className="prcompare" aria-label="חינם מול פרימיום">
@@ -73,7 +73,7 @@ export default async function Premium() {
       <section className="card stack prfaq" aria-labelledby="faq-h">
         <h2 id="faq-h">שאלות</h2>
         <details><summary>מה קורה למעקב אם מבטלים?</summary><p>החברות שכבר במעקב נשארות, וההתראות עליהן ממשיכות פעם ביום. חברות חדשות אפשר להוסיף עד {FREE_FOLLOWS}.</p></details>
-        <details><summary>איך מבטלים?</summary><p>באזור האישי, בכפתור ״ביטול המנוי״. אין התחייבות ואין דמי ביטול. אחרי הביטול לא מחייבים יותר, והפרימיום פעיל עד סוף החודש או השנה ששילמתם עליהם.</p></details>
+        <details><summary>איך מבטלים?</summary><p>באזור האישי, בכפתור ״ביטול המנוי״. אין התחייבות ואין דמי ביטול. ביטול בתוך {REFUND_DAYS} יום מההצטרפות מחזיר את כל הסכום. אחר כך, במסלול החודשי הפרימיום פעיל עד סוף החודש ששולם, ובמסלול השנתי מחזירים את החודשים שעוד לא התחילו.</p></details>
         <details><summary>מקבלים קבלה?</summary><p>כן. {TAX.receipt} נשלחת במייל אחרי כל תשלום.</p></details>
         <details><summary>מה ההבדל בין המסלולים?</summary><p>רק אופן החיוב. במסלול השנתי משלמים {shekels(PLANS.yearly.price)} פעם בשנה, כלומר חודשיים מתנה.</p></details>
       </section>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { PLANS, FREE_FOLLOWS, shekels } from "@/lib/premium";
+import { PLANS, FREE_FOLLOWS, cancelOutcome, shekels } from "@/lib/premium";
 
 const day = (iso) => new Date(iso).toLocaleDateString("he-IL", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Jerusalem" });
 
@@ -19,8 +19,18 @@ export default function PlanClient({ premium, sub, options }) {
       .then(async (r) => ({ ok: r.ok, ...(await r.json().catch(() => ({}))) })).catch(() => ({ ok: false }));
     setBusy(false);
     setConfirm(false);
-    if (res.ok) setState({ ...state, status: "canceled", cancel_at_period_end: true });
-    else setMsg("לא הצלחנו לבטל כרגע. נסו שוב בעוד כמה דקות, או כתבו לנו ונבטל בעצמנו.");
+    if (res.ok) {
+      setState({ ...state, status: "canceled", cancel_at_period_end: true, current_period_end: res.until || state.current_period_end, refund_amount: res.refund || null });
+      setMsg(res.refund > 0 ? `נחזיר ${shekels(res.refund)} לכרטיס בתוך 14 יום. שלחנו לכם מייל אישור.` : "שלחנו לכם מייל אישור.");
+    } else setMsg("לא הצלחנו לבטל כרגע. נסו שוב בעוד כמה דקות, או כתבו לנו ונבטל בעצמנו.");
+  }
+
+  // What cancelling now would do, said before the person confirms (lib/premium.js holds the rules).
+  function preview() {
+    const o = cancelOutcome(state);
+    if (o.kind === "full") return `ההצטרפות הייתה לפני פחות מ־14 יום, אז נחזיר את כל הסכום, ${shekels(o.refund)}, והפרימיום ייסגר עכשיו.`;
+    if (o.kind === "prorata") return `לא נחייב יותר, ונחזיר ${shekels(o.refund)} על ${o.months === 1 ? "חודש אחד" : `${o.months} חודשים`} שעוד לא התחילו. הפרימיום יישאר פעיל עד ${day(o.until)}.`;
+    return `לא נחייב יותר, והפרימיום יישאר פעיל עד ${day(o.until)}.`;
   }
 
   if (!premium) {
@@ -35,19 +45,23 @@ export default function PlanClient({ premium, sub, options }) {
 
   const href = `/api/export?${new URLSearchParams(Object.entries(f).filter(([, v]) => v)).toString()}`;
   const plan = PLANS[state?.plan];
+  const ended = state?.status === "canceled" && new Date(state.current_period_end) <= new Date();
   return (
     <div className="card stack" id="plan">
       <h2>פרימיום <span className="count">{plan ? plan.label : ""}</span></h2>
       {state?.status === "canceled" ? (
-        <p>המנוי בוטל, ולא נחייב יותר. הפרימיום פעיל עד {day(state.current_period_end)}.</p>
+        ended
+          ? <p>המנוי בוטל, והפרימיום נסגר.</p>
+          : <p>המנוי בוטל, ולא נחייב יותר. הפרימיום פעיל עד {day(state.current_period_end)}.</p>
       ) : state?.status === "past_due" ? (
-        <p>החיוב האחרון לא עבר, ונסה שוב בימים הקרובים. כדאי לבדוק את פרטי הכרטיס אצל חברת האשראי.</p>
+        <p>החיוב האחרון לא עבר, וננסה שוב בימים הקרובים. כדאי לבדוק את פרטי הכרטיס אצל חברת האשראי.</p>
       ) : (
         <p>{plan ? `${shekels(plan.price)} ${plan.per}` : ""}. החיוב הבא ב־{day(state.current_period_end)}.</p>
       )}
 
+      {!ended && (<>
       <h3 className="sub">ייצוא רשימות</h3>
-      <p className="muted small">קובץ CSV שנפתח באקסל, עם מה שכבר מופיע באתר ועם המקור לכל איש מפתח.</p>
+      <p className="muted small">קובץ CSV שנפתח באקסל, עם מה שכבר מופיע באתר ועם המקור לכל איש מפתח. לשימוש מקצועי אישי בלבד: אסור לשלוח לאנשים שברשימה דיוור שיווקי בלי הסכמתם, ואסור למכור או להעביר את הרשימה. <a href="/terms#use">לכללים המלאים</a></p>
       <div className="prexport">
         <label><span className="label">מה להוריד</span>
           <select value={f.type} onChange={(e) => setF({ ...f, type: e.target.value })}>
@@ -76,11 +90,12 @@ export default function PlanClient({ premium, sub, options }) {
         <label className="check small"><input type="checkbox" checked={f.mine === "1"} onChange={(e) => setF({ ...f, mine: e.target.checked ? "1" : "" })} /><span>רק החברות שבמעקב שלי</span></label>
       </div>
       <div><a className="btn" href={href} download data-track="export_download">הורדת הקובץ</a></div>
+      </>)}
 
       {state?.status !== "canceled" && (
         confirm ? (
           <div className="notice stack" role="alertdialog" aria-label="ביטול המנוי">
-            <p><b>לבטל את המנוי?</b> לא נחייב יותר, והפרימיום יישאר פעיל עד {day(state.current_period_end)}.</p>
+            <p><b>לבטל את המנוי?</b> {preview()}</p>
             <div className="row">
               <button type="button" className="btn primary sm" onClick={cancel} disabled={busy}>ביטול המנוי</button>
               <button type="button" className="btn sm" onClick={() => setConfirm(false)} disabled={busy}>השארת המנוי</button>
