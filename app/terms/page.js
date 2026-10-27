@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { PREMIUM, PLANS, FREE_FOLLOWS, shekels } from "@/lib/premium";
+import { PREMIUM, PLANS, FREE_FOLLOWS, TAX, shekels } from "@/lib/premium";
 import { sender } from "@/lib/mailer";
 
 export const metadata = { title: "תנאי השימוש", alternates: { canonical: "/terms" } };
@@ -26,9 +26,9 @@ export default function Terms() {
         <h2>פרימיום</h2>
         <ul>
           <li><b>מה כלול:</b> מעקב אחרי כמה חברות שרוצים, התראות בתוך שעה מהפרסום, ייצוא רשימות ל־CSV וחיפוש עם AI.</li>
-          <li><b>מחיר:</b> {shekels(PLANS.monthly.price)} לחודש או {shekels(PLANS.yearly.price)} לשנה, כולל מע״מ.</li>
+          <li><b>מחיר:</b> {shekels(PLANS.monthly.price)} לחודש או {shekels(PLANS.yearly.price)} לשנה. {TAX.note}</li>
           <li><b>חידוש:</b> המנוי מתחדש אוטומטית בסוף כל חודש או שנה, באותו מחיר, עד שמבטלים. על כל שינוי מחיר נודיע במייל 30 יום מראש, ואפשר לבטל לפני שהוא חל.</li>
-          <li><b>תשלום:</b> בכרטיס אשראי, דרך חברת סליקה ישראלית. פרטי הכרטיס נשמרים אצלה ולא אצלנו. אחרי כל תשלום נשלחת חשבונית מס קבלה במייל.</li>
+          <li><b>תשלום:</b> בכרטיס אשראי, דרך חברת סליקה ישראלית. פרטי הכרטיס נשמרים אצלה ולא אצלנו. אחרי כל תשלום נשלחת {TAX.receipt} במייל.</li>
         </ul>
       </div>
 
