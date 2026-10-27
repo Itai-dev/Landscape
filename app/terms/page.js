@@ -1,5 +1,6 @@
 import { PREMIUM, PLANS, FREE_FOLLOWS, REFUND_DAYS, TAX, shekels } from "@/lib/premium";
 import { business } from "@/lib/business";
+import { billingReady } from "@/lib/billing";
 
 export const metadata = { title: "תנאי השימוש", alternates: { canonical: "/terms" } };
 
@@ -9,6 +10,7 @@ export const metadata = { title: "תנאי השימוש", alternates: { canonica
 export default function Terms() {
   const b = business();
   const m = PLANS.monthly, y = PLANS.yearly;
+  const paywall = billingReady(); // the free tracking limit applies once payments are open
   return (
     <div className="wrap narrow stack">
       <div className="pagehead">
@@ -20,7 +22,7 @@ export default function Terms() {
         <h2>השירות</h2>
         <p>CreativeIn מרכז מידע עסקי פומבי על תעשיית הקריאייטיב בישראל: חברות, אנשי מפתח בתפקידם המקצועי, עדכונים, מכרזים ומשרות. לכל פרט מוצג המקור שלו.</p>
         <p>אנחנו בודקים את המידע מול המקורות ומעדכנים אותו, אבל הוא עלול להיות חלקי, ישן או שגוי. הוא לא תחליף לבדיקה שלכם לפני החלטה עסקית. תשובות של החיפוש עם AI נוצרות אוטומטית ועלולות לטעות, לכן בדקו אותן מול המקורות שמוצגים לידן.</p>
-        <p>השימוש באתר, במייל השבועי ובמעקב אחרי עד {FREE_FOLLOWS} חברות הוא בחינם. אנחנו רשאים לשנות, להוסיף או להפסיק חלקים מהשירות.</p>
+        <p>השימוש באתר, במייל השבועי ובמעקב אחרי {PREMIUM && paywall ? `עד ${FREE_FOLLOWS} ` : ""}חברות הוא בחינם. אנחנו רשאים לשנות, להוסיף או להפסיק חלקים מהשירות.</p>
       </div>
 
       <div className="card stack" id="use">

@@ -3,6 +3,7 @@ import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
 import { listFollows, alertPrefs, addFollows, removeFollow, setAlerts, isOrgId, cleanOrgIds } from "@/lib/follows";
 import { planOf } from "@/lib/subscription";
 import { PREMIUM, followLimit } from "@/lib/premium";
+import { billingReady } from "@/lib/billing";
 import { readJson, allow } from "@/lib/guard";
 
 export const runtime = "nodejs";
@@ -13,8 +14,9 @@ const NO_STORE = { headers: { "cache-control": "private, no-store" } };
 // GET: the signed-in person's follows and alert choice (read with their own session, RLS: own rows only).
 // Signed out, it only says whether sign-up is available, so pages know which button to show.
 // `max` is how many companies this person can track (the free tier when signed out); `premium` and
-// `offer` (premium is on, so pages can point to it) let pages explain the limit.
-const tier = (premium) => ({ max: followLimit(premium), premium, offer: PREMIUM });
+// `offer` (premium is on, so pages can point to it) let pages explain the limit; `paywall` says the free limit
+// applies (payments are open; before that premium is a waitlist and the old cap stays).
+const tier = (premium) => { const paywall = billingReady(); return { max: followLimit(premium, paywall), premium, offer: PREMIUM, paywall }; };
 export async function GET() {
   const sb = await serverClient();
   if (!sb) return NextResponse.json({ signup: false, signedIn: false, follows: [], ...tier(false) }, NO_STORE);
