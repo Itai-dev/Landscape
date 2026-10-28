@@ -34,3 +34,12 @@
 .prfaq details p { margin: var(--s-2) 0 0; color: var(--ink-2); }
 .askup { margin-block: var(--s-3); }
 .trackfull { flex-basis: 100%; margin: var(--s-2) 0 0; }
+
+/* /premium/checkout: the payment page */
+.prplans a.prplan { color: inherit; text-decoration: none; }
+.prplan .prgo { margin-block-start: var(--s-2); justify-self: start; }
+.premium fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.premium legend { font-weight: 600; margin-block-end: var(--s-2); }
+.prfields { display: grid; gap: 0 var(--s-3); }
+@media (min-width: 560px) { .prfields { grid-template-columns: 1fr 1fr; } .prfields .prwide { grid-column: 1 / -1; } }
+.prsum { padding: var(--s-3) var(--s-4); border-radius: var(--r); background: var(--bg); border: 1px solid var(--line); }

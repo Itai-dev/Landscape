@@ -1,5 +1,6 @@
 import { PROFILES_ENABLED as P } from "@/lib/config";
 import { OAUTH } from "@/lib/oauth";
+import { PREMIUM } from "@/lib/premium";
 
 export const metadata = { title: "פרטיות", alternates: { canonical: "/privacy" } };
 
@@ -93,6 +94,17 @@ export default function Privacy() {
           בכל מייל יש קישור להפסקת ההתראות בלחיצה, ואפשר להסיר חברות או לשנות את התדירות ב<a href="/me#follows">אזור האישי</a>. מחיקת החשבון מוחקת גם את הרשימה.
         </p>
       </div>
+
+      {PREMIUM && (
+        <div className="card stack" id="payments">
+          <h2>תשלום על פרימיום</h2>
+          <p>
+            בעמוד התשלום מבקשים שם פרטי, שם משפחה, טלפון, מדינה ומייל. הפרטים עוברים לחברת הסליקה כדי לבצע את החיוב ולהפיק קבלה,
+            ולא נשמרים אצלנו. פרטי כרטיס האשראי מוקלדים בעמוד של חברת הסליקה ונשמרים רק אצלה. אצלנו נשמרים המסלול, תאריכי החיוב והחידוש,
+            ומתי אישרתם את התקנון.
+          </p>
+        </div>
+      )}
 
       <div className="card stack" id="feedback">
         <h2>הערות ורעיונות</h2>

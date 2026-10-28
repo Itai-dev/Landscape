@@ -2,10 +2,7 @@ import { notFound } from "next/navigation";
 import { serverClient, currentUser } from "@/lib/supabase/server";
 import { PREMIUM, PLANS, BENEFITS, FREE_FOLLOWS, REFUND_DAYS, TAX, shekels } from "@/lib/premium";
 import { planOf } from "@/lib/subscription";
-import { billingReady } from "@/lib/billing";
-import SignupForm from "@/components/SignupForm";
 import { CheckIcon } from "@/components/Icons";
-import PremiumCheckout from "./PremiumCheckout";
 import "./premium.css";
 
 export const metadata = {
@@ -23,7 +20,6 @@ export default async function Premium() {
   const sb = await serverClient();
   const user = sb ? await currentUser(sb).catch(() => null) : null;
   const plan = user ? await planOf(sb, user.id) : { premium: false };
-  const ready = billingReady();
 
   return (
     <div className="wrap stack premium">
@@ -50,11 +46,15 @@ export default async function Premium() {
             <a className="btn primary" href="/me#plan">לאזור האישי</a>
           </div>
         ) : (
-          <PremiumCheckout plans={Object.values(PLANS)} ready={ready} signedIn={Boolean(user)}>
-            {/* Signed out: the plans show; joining starts with an account, which brings people back here. */}
-            <p>כדי להצטרף צריך חשבון. היכנסו או הירשמו, ותחזרו לכאן.</p>
-            <SignupForm next="/premium#buy" digest={false} />
-          </PremiumCheckout>
+          <div className="prplans">
+            {Object.values(PLANS).map((p) => (
+              <a key={p.slug} className="prplan" href={`/premium/checkout?plan=${p.slug}`} data-track="premium_plan">
+                <span className="pn">{p.label}{p.note && <span className="pt">{p.note}</span>}</span>
+                <span className="pp"><b>{shekels(p.price)}</b> {p.per}</span>
+                <span className="btn primary prgo">להצטרפות</span>
+              </a>
+            ))}
+          </div>
         )}
         <p className="small muted">{TAX.note} אפשר לבטל בכל רגע מהאזור האישי, בלחיצה אחת. ביטול בתוך {REFUND_DAYS} יום מההצטרפות מחזיר את כל הסכום. <a href="/terms#cancel">לתנאי הביטול</a></p>
       </section>
