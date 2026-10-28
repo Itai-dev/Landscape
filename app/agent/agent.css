@@ -1,0 +1,71 @@
+/* /agent: the agent, test version. A conversation, then a briefing. Awwwards look: grey blocks, ink, no shadows,
+   purple only as a small marker. */
+.agent { min-height: calc(100svh - 104px); }
+.awrap { max-width: 760px; padding-block: var(--s-6) var(--s-8); display: flex; flex-direction: column; gap: var(--s-5); }
+.awrap .eyebrow { margin: 0; }
+
+/* The conversation: the agent speaks in plain lines, the reader's answers sit in ink bubbles at the far end */
+.achat { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.achat li { animation: arise .35s var(--ease) both; max-width: 92%; font-size: var(--t-md); line-height: 1.55; }
+.achat li.m-agent { justify-self: start; color: var(--ink); }
+.achat li.m-agent:first-child { font-size: var(--t-lg); font-weight: 500; line-height: 1.4; }
+.achat li.m-me { justify-self: end; background: var(--ink); color: var(--bg); border-radius: var(--r-lg); padding: 10px 16px; font-size: var(--t-base); font-weight: 500; }
+@keyframes arise { from { opacity: 0; transform: translateY(6px); } }
+
+.aform { display: grid; grid-template-columns: 1fr auto; gap: var(--s-2); align-items: stretch; }
+.aform .btn { min-height: 48px; }
+.ajump { grid-column: 1 / -1; justify-self: start; border: 0; background: none; font: inherit; font-size: var(--t-sm); color: var(--muted); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; min-height: 44px; }
+.apanel { display: grid; gap: var(--s-3); background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); animation: arise .35s var(--ease) both; }
+.apanel .label { font-weight: 600; font-size: var(--t-sm); }
+.apanel .chip { background: var(--paper); }
+.apanel .chip.on, .apanel .chip.on:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.apanel .ajump { grid-column: auto; min-height: 36px; }
+
+/* The agent at work */
+.awork { list-style: none; margin: 0; padding: var(--s-5); display: grid; gap: var(--s-3); background: var(--surface); border-radius: var(--r-lg); }
+.awork li { display: flex; align-items: center; gap: var(--s-3); font-size: var(--t-base); animation: arise .3s var(--ease) both; }
+.awork li.done { color: var(--ink); }
+.awork li.done svg { color: var(--ink); flex: none; }
+.awork li.run { color: var(--muted); }
+.awork .spinner { width: 16px; height: 16px; flex: none; }
+
+/* The briefing */
+.brief { max-width: 860px; gap: var(--s-7); }
+.bhead { display: grid; gap: var(--s-3); justify-items: start; }
+.bhead h1 { margin: 0; font-size: var(--t-2xl); font-weight: 500; letter-spacing: -.01em; line-height: 1.05; }
+.bhead p { margin: 0; font-size: var(--t-md); line-height: 1.6; max-width: 620px; }
+.bhead .btn.ghost { padding-inline: 0; }
+.bsec { display: grid; gap: var(--s-4); }
+.bsec h2 { margin: 0; font-size: var(--t-xl); font-weight: 500; }
+.blist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.acard { background: var(--surface); border-radius: var(--r); padding: var(--s-5); display: grid; gap: var(--s-3); }
+.acard h3 { margin: 0; font-size: var(--t-md); font-weight: 600; line-height: 1.45; }
+.acard p { margin: 0; }
+.blabel { font-size: var(--t-xs); font-weight: 500; color: var(--muted); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.blabel .mark { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); font-weight: 600; }
+.blabel .mark::before { content: ""; width: 6px; height: 6px; border-radius: 1.5px; background: var(--accent); }
+.btag { background: var(--ink); color: var(--bg); border-radius: var(--r-sm); padding: 2px 8px; font-weight: 600; }
+.bmeta { color: var(--ink-2); }
+.bmeta a { color: inherit; }
+.pill-urgent { background: var(--ink); color: var(--bg); border-radius: var(--r-sm); padding: 1px 8px; font-weight: 600; }
+.bwhy { background: var(--paper); border-radius: var(--r-sm); padding: var(--s-3) var(--s-4); display: grid; gap: 4px; border-inline-start: 3px solid var(--accent); }
+.bwhy b { font-size: var(--t-xs); font-weight: 600; }
+.bwhy p { font-size: var(--t-sm); line-height: 1.6; color: var(--ink); }
+.bact { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; }
+.bact .btn svg { margin-inline-start: 4px; }
+.bact .btn.ghost { padding-inline: var(--s-2); }
+.bdraft { display: grid; gap: var(--s-2); }
+.bdraft label { margin: 0; }
+.bdraft textarea { background: var(--paper); min-height: 150px; line-height: 1.6; }
+
+.bco { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.bco-top { display: flex; align-items: center; gap: var(--s-3); }
+.bco-top img, .bco-ph { width: 40px; height: 40px; border-radius: var(--r-sm); object-fit: contain; background: #fff; flex: none; }
+.bco-ph { display: grid; place-items: center; font-weight: 600; color: var(--ink); background: var(--paper); }
+
+.bmission { background: var(--surface); border-radius: var(--r-lg); padding: var(--s-6) var(--s-5); }
+.bmis { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+.bmis li { display: flex; gap: var(--s-3); align-items: flex-start; font-size: var(--t-base); line-height: 1.5; }
+.bmis svg { flex: none; margin-block-start: 3px; }
+.bcta { display: grid; gap: var(--s-2); justify-items: start; margin-block-start: var(--s-3); }
+@media (prefers-reduced-motion: reduce) { .achat li, .apanel, .awork li { animation: none; } }
