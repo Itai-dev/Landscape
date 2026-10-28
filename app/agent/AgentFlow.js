@@ -23,6 +23,8 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   const [role, setRole] = useState("");
   const [crafts, setCrafts] = useState([]);
   const [goals, setGoals] = useState([]);
+  const [clients, setClients] = useState([]); // [{ id, name, on }] brands found on the reader's site
+  const [self, setSelf] = useState(""); // the reader's own company, when it is on the map
   const [more, setMore] = useState(false);
   const [brief, setBrief] = useState(null);
   const [steps, setSteps] = useState([]);
@@ -34,8 +36,8 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   const say = (who, t) => setLog((l) => [...l, { who, text: t }]);
   useEffect(() => {
     const p = load();
-    if (p?.role) { setRole(p.role); setCrafts(p.crafts || []); setGoals(p.goals || []); work(p, true); }
-    else { setPhase("intro"); setLog([{ who: "agent", text: "היי. אנחנו הסוכן של CreativeIn: סורקים כל יום את תעשיית הקריאייטיב בישראל, בודקים כל פרט מול המקור, ומביאים לכם רק את מה שרלוונטי." }, { who: "agent", text: "ספרו במשפט אחד מה אתם עושים." }]); }
+    if (p?.role) { setRole(p.role); setCrafts(p.crafts || []); setGoals(p.goals || []); setSelf(p.self || ""); work(p, true); }
+    else { setPhase("intro"); setLog([{ who: "agent", text: "היי. אנחנו הסוכן של CreativeIn: סורקים כל יום את תעשיית הקריאייטיב בישראל, בודקים כל פרט מול המקור, ומביאים לכם רק את מה שרלוונטי." }, { who: "agent", text: "ספרו במשפט אחד מה אתם עושים, או הדביקו קישור לאתר או לפורטפוליו." }]); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => { endRef.current?.scrollIntoView({ block: "end", behavior: "smooth" }); }, [log, phase, steps.length]);
@@ -46,6 +48,7 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
     if (!t) return;
     say("me", t);
     setText("");
+    if (/^(https?:\/\/)?[^\s/]+\.[a-z]{2,}(\/\S*)?$/i.test(t)) return readSite(t);
     const r = await post({ action: "read", text: t });
     const r0 = r?.role || "", c0 = r?.crafts || [];
     setRole(r0 || "studio"); setCrafts(c0);
@@ -53,6 +56,24 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
     say("agent", c0.length || r0
       ? "הבנו ככה. תקנו אם צריך:"
       : "לא הצלחנו להבין מהמשפט במה אתם עובדים. בחרו כאן:");
+    setPhase("confirm");
+  }
+  async function readSite(url) {
+    say("agent", "קוראים את האתר…");
+    setPhase("reading");
+    const r = await post({ action: "site", url });
+    const host = url.replace(/^https?:\/\//i, "").replace(/^www\./i, "").split("/")[0];
+    tryTrack("agent_site", { ok: Boolean(r?.ok), found: Boolean(r?.found), clients: r?.clients?.length || 0 });
+    if (!r?.ok) {
+      setRole("studio"); setCrafts([]); setClients([]);
+      say("agent", `לא הצלחנו לקרוא את ${host}. יש אתרים שלא נותנים לקרוא אותם. ספרו במשפט מה אתם עושים, או בחרו כאן:`);
+      setPhase("confirm");
+      return;
+    }
+    setRole(r.role || "studio"); setCrafts(r.crafts || []); setSelf(r.found?.id || "");
+    setClients((r.clients || []).map((c) => ({ ...c, on: true })));
+    say("agent", r.found ? `מצאנו אתכם במפה: ${r.found.name}. ככה אנחנו מכירים אתכם, תקנו אם צריך:` : `קראנו את ${host}. ככה הבנו, תקנו אם צריך:`);
+    if (r.clients?.length) say("agent", `זיהינו לקוחות: ${hebrewList(r.clients.slice(0, 4).map((c) => c.name))}${r.clients.length > 4 ? " ועוד" : ""}. נעקוב אחריהם בשבילכם.`);
     setPhase("confirm");
   }
   function pickList() {
@@ -70,7 +91,7 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   function start() {
     const g = goals.length ? goals : (goalsByRole[role] || []).slice(0, 1).map((x) => x.slug);
     say("me", hebrewList(g.map((x) => (goalsByRole[role] || []).find((y) => y.slug === x)?.he || x)));
-    const p = { role, crafts, goals: g };
+    const p = { role, crafts, goals: g, clients: clients.filter((c) => c.on).map((c) => c.id), self };
     save(p);
     tryTrack("agent_start", { role, crafts: crafts.length, goals: g.join(",") });
     work(p, false);
@@ -79,7 +100,7 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   async function work(p, again) {
     setPhase("working"); setError(""); setSteps([]);
     const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-    const req = post({ action: "brief", role: p.role, crafts: p.crafts, goals: p.goals, follows: follows() });
+    const req = post({ action: "brief", role: p.role, crafts: p.crafts, goals: p.goals, follows: follows(), clients: p.clients || [], self: p.self || "" });
     const b = await req;
     if (!b) { setError("לא הצלחנו להכין את התדריך. נסו שוב בעוד רגע."); setPhase(again ? "brief" : "goals"); return; }
     const lines = [
@@ -96,8 +117,8 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   }
   function reset() {
     try { localStorage.removeItem(KEY); } catch {}
-    setBrief(null); setRole(""); setCrafts([]); setGoals([]); setSteps([]); setMore(false);
-    setLog([{ who: "agent", text: "בואו נתחיל מחדש. ספרו במשפט אחד מה אתם עושים." }]);
+    setBrief(null); setRole(""); setCrafts([]); setGoals([]); setSteps([]); setMore(false); setClients([]); setSelf("");
+    setLog([{ who: "agent", text: "בואו נתחיל מחדש. ספרו במשפט אחד מה אתם עושים, או הדביקו קישור לאתר או לפורטפוליו." }]);
     setPhase("intro");
     window.scrollTo({ top: 0 });
   }
@@ -118,11 +139,13 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
           <form className="aform" onSubmit={sendIntro}>
             <label className="sr-only" htmlFor="intro">מה אתם עושים</label>
             <input id="intro" type="text" value={text} onChange={(e) => setText(e.target.value)} maxLength={300} autoComplete="off"
-              placeholder="לדוגמה: סטודיו למושן ומיתוג בתל אביב" autoFocus />
+              placeholder="לדוגמה: סטודיו למושן ומיתוג, או studio.co.il" autoFocus />
             <button className="btn primary" disabled={!text.trim()}>שליחה</button>
             <button type="button" className="tap ajump" onClick={pickList}>אפשר גם לבחור מרשימה</button>
           </form>
         )}
+
+        {phase === "reading" && <ol className="awork"><li className="run"><span className="spinner" aria-hidden /><span>קוראים את הדף ומחפשים אתכם במפה…</span></li></ol>}
 
         {phase === "confirm" && (
           <section className="apanel" aria-label="מה הבנו">
@@ -141,6 +164,14 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
               ))}
               {!more && allCrafts.length > FIRST && <button type="button" className="tap ajump" onClick={() => setMore(true)}>עוד תחומים</button>}
             </div>
+            {clients.length > 0 && <>
+              <span className="label">לקוחות לעקוב אחריהם</span>
+              <div className="chips" role="group" aria-label="לקוחות">
+                {clients.map((c) => (
+                  <button key={c.id} type="button" className={`chip${c.on ? " on" : ""}`} aria-pressed={c.on} onClick={() => setClients(clients.map((x) => (x.id === c.id ? { ...x, on: !x.on } : x)))}>{c.name}</button>
+                ))}
+              </div>
+            </>}
             <div><button type="button" className="btn primary lg" onClick={confirm}>זה נכון</button></div>
           </section>
         )}
@@ -271,7 +302,7 @@ function Update({ u, p }) {
   }
   return (
     <li className="acard">
-      <p className="blabel"><span>{u.label}</span> · {u.day}{u.followed ? <span className="btag">במעקב שלכם</span> : null}</p>
+      <p className="blabel"><span>{u.label}</span> · {u.day}{u.client ? <span className="btag">הלקוח שלכם</span> : u.followed ? <span className="btag">במעקב שלכם</span> : null}</p>
       <h3>{u.headline}</h3>
       <div className="bwhy">
         <b>למה זה רלוונטי לכם</b>

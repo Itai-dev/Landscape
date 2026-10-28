@@ -1,7 +1,7 @@
 // The agent (/agent): reading a one-line intro, and the briefing it composes. node scripts/test-agent.mjs
 import { register } from "node:module";
 register("./alias-hooks.mjs", import.meta.url);
-const { readIntro, composeBrief } = await import("../lib/agent.js");
+const { readIntro, composeBrief, siteOnMap, onMap, readSiteText } = await import("../lib/agent.js");
 
 let fail = 0;
 const ok = (cond, msg) => { if (!cond) { fail++; console.log(`✗ ${msg}`); } };
@@ -17,6 +17,17 @@ for (const [text, role, crafts] of intro) {
   ok(r.role === role, `"${text}": role ${r.role}, expected ${role}`);
   for (const c of crafts) ok(r.crafts.includes(c), `"${text}": missing ${c} (got ${r.crafts.join(", ")})`);
 }
+
+// A site link: a company already on the map is recognised by its address; any other page is read for brands it names.
+ok(siteOnMap("https://www.ankanimation.com/he") === "anka-studio", "a site on the map is recognised (with www and a path)");
+ok(siteOnMap("ankanimation.com") === "anka-studio", "a bare address is recognised");
+ok(siteOnMap("https://example.org") === null, "an unknown site is not on the map");
+const anka = onMap("anka-studio");
+ok(anka.role === "studio" && anka.crafts.length > 0, "what the map knows: role and crafts");
+const site = readSiteText("Motion and branding studio in Tel Aviv. Selected clients: Isracard, Strauss, El Al. כאן תמצאו את העבודות שלנו");
+ok(site.role === "studio" && site.crafts.includes("motion-design") && site.crafts.includes("branding"), `a page: role and crafts (${site.role}, ${site.crafts})`);
+ok(site.clients.includes("isracard"), `a page: brands it names (${site.clients})`);
+ok(!site.clients.some((id) => id.startsWith("kan")), "an everyday word (כאן) is not read as a brand");
 
 const now = new Date("2026-10-28T12:00:00Z");
 const studio = composeBrief({ role: "studio", crafts: ["commercial-production", "branding"], goals: ["clients", "tenders"], now });
@@ -35,6 +46,9 @@ if (followed) {
   const f = composeBrief({ role: "studio", crafts: ["branding"], follows: [followed], now });
   ok(f.updates.some((u) => u.followed), "followed companies are marked");
 }
+const withClient = composeBrief({ role: "studio", crafts: ["branding"], clients: ["isracard"], self: "anka-studio", now });
+ok(withClient.updates.some((u) => u.client), "updates about the reader's clients are marked");
+ok(!withClient.updates.some((u) => u.org?.id === "anka-studio"), "the reader's own company is left out");
 console.log(`studio: ${studio.opportunities.length} opportunities, ${studio.updates.length} updates, ${studio.companies.length} companies`);
 for (const u of studio.updates) console.log(`  ${u.label} · ${u.headline.slice(0, 70)}`);
 if (fail) { console.log(`${fail} checks failed`); process.exit(1); }
