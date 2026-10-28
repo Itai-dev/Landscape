@@ -226,10 +226,9 @@ function Brief({ b, onReset, error }) {
 
         <section className="bsec bmission" aria-labelledby="b-mis">
           <h2 id="b-mis">מה נמשיך לעשות בשבילכם</h2>
-          <ul className="bmis">{b.missions.map((m) => <li key={m}><CheckIcon size={16} /><span>{m}</span></li>)}</ul>
+          <ul className="bmis">{b.missions.map((m) => <li key={m.text} className={m.live ? "" : "soon"}>{m.live ? <CheckIcon size={16} /> : <span className="bsoon">בקרוב</span>}<span>{m.text}</span></li>)}</ul>
           <div className="bcta">
             <a className="btn primary lg" href="/join" data-track="agent_join">הרשמה לתדריך השבועי</a>
-            <p className="small muted">התראות לטלפון ברגע שמשהו זז: בקרוב.</p>
           </div>
         </section>
       </div>
@@ -247,6 +246,7 @@ function Opp({ o }) {
         {o.kind === "tender" ? <>{o.buyer} · {o.when} · <span className={o.urgent ? "pill-urgent" : ""}>{o.countdown}</span></> : o.org?.name}
         {o.crafts?.length ? <> · בתחום שלכם: {o.crafts.join(", ")}</> : null}
       </p>
+      <Facts facts={o.facts} />
       <div className="bact">
         {o.source_url && <a className="btn sm" href={o.source_url} target="_blank" rel="noopener" data-track={o.kind === "tender" ? "tender_source_click" : "opportunity_source_click"}>{o.kind === "tender" ? "לפרסום הרשמי" : `למשרה ב־${o.source}`}<LinkIcon size={14} /></a>}
         {o.calendar && <a className="btn ghost sm" href={o.calendar} target="_blank" rel="noopener" data-track="agent_calendar">הוספה ליומן</a>}
@@ -260,9 +260,12 @@ function Update({ u, p }) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const crafts = hebrewList(p.crafts.slice(0, 3).map((c) => c.he));
+  const who = (u.facts || []).find((f) => f.k === "בשיווק")?.v.split(" ")[0] || "";
+  const what = u.label.split(" · ")[1] || "עדכון";
+  const fit = u.fit ? `\nראיתי שאתם מזמינים ${u.fit}, וזה בדיוק מה שאנחנו עושים.` : "";
   const draft = u.org ? (p.role === "freelance"
-    ? `היי,\nראיתי את העדכון על ${u.org.name} (${u.label.split(" · ")[1] || "עדכון"}).\nאני עושה ${crafts || "עבודה קריאייטיבית"} באופן עצמאי. אם זה רלוונטי עכשיו או בהמשך, אשמח לשיחה קצרה ולהראות כמה עבודות.\n\nתודה,`
-    : `היי,\nראינו את העדכון על ${u.org.name} (${u.label.split(" · ")[1] || "עדכון"}).\nאנחנו ${p.role === "studio" ? "סטודיו" : "צוות"} ${crafts ? `ל${crafts}` : "קריאייטיב"}. אם זה רלוונטי עכשיו או בהמשך, נשמח לשיחה קצרה ולהראות כמה עבודות.\n\nתודה,`) : "";
+    ? `היי${who ? ` ${who}` : ""},\nראיתי את העדכון על ${u.org.name} (${what}).${fit.replace("שאנחנו עושים", "שאני עושה")}\nאני עושה ${crafts || "עבודה קריאייטיבית"} באופן עצמאי. אם זה רלוונטי עכשיו או בהמשך, אשמח לשיחה קצרה ולהראות כמה עבודות.\n\nתודה,`
+    : `היי${who ? ` ${who}` : ""},\nראינו את העדכון על ${u.org.name} (${what}).${fit.replace("ראיתי", "ראינו")}\nאנחנו ${p.role === "studio" ? "סטודיו" : "צוות"} ${crafts ? `ל${crafts}` : "קריאייטיב"}. אם זה רלוונטי עכשיו או בהמשך, נשמח לשיחה קצרה ולהראות כמה עבודות.\n\nתודה,`) : "";
   async function copy() {
     try { await navigator.clipboard.writeText(draft); setCopied(true); setTimeout(() => setCopied(false), 2000); } catch {}
   }
@@ -274,9 +277,10 @@ function Update({ u, p }) {
         <b>למה זה רלוונטי לכם</b>
         <p>{u.why}{u.crafts.length ? ` נוגע בתחום שלכם: ${u.crafts.join(", ")}.` : ""}</p>
       </div>
-      {u.org?.name && <p className="bmeta small">{u.org.href ? <a href={u.org.href}>{u.org.name}</a> : u.org.name}</p>}
+      <Facts facts={u.facts} title={`מה אנחנו יודעים על ${u.org?.name || "החברה"}`} />
       <div className="bact">
         {u.source_url && <a className="btn sm" href={u.source_url} target="_blank" rel="noopener" data-track="agent_source">לפרסום ב־{u.source}<LinkIcon size={14} /></a>}
+        {u.org?.href && <a className="btn ghost sm" href={u.org.href} data-track="agent_company">לעמוד החברה</a>}
         {u.draft && <button type="button" className="btn ghost sm" aria-expanded={open} onClick={() => { setOpen(!open); if (!open) tryTrack("agent_draft", { type: u.type }); }}>טיוטת פנייה</button>}
         {u.org?.id && <Track id={u.org.id} />}
       </div>
@@ -288,6 +292,19 @@ function Update({ u, p }) {
         </div>
       )}
     </li>
+  );
+}
+
+// What the map knows about this company: the part a general AI agent doesn't have.
+function Facts({ facts, title = "מהמפה של CreativeIn" }) {
+  if (!facts?.length) return null;
+  return (
+    <div className="bfacts">
+      <b className="bfacts-t">{title}</b>
+      <dl>{facts.map((f) => (
+        <div key={f.k}><dt>{f.k}</dt><dd>{f.v}{f.href ? <> · <a href={f.href} target="_blank" rel="noopener" className="small">מקור</a></> : null}</dd></div>
+      ))}</dl>
+    </div>
   );
 }
 
