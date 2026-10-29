@@ -196,7 +196,7 @@ t("a new plan gets one confirmation email; a renewal keeps the start date and se
   assert.equal(db.tables.subscriptions[0].started_at, started);
 });
 
-t("cancelling within 14 days refunds and ends premium now; payments need the business details", async () => {
+t("cancelling within 14 days refunds and ends premium now; payments (and the free limit) need the business details", async () => {
   const u = U(21);
   const db = fakeDb({ subscriptions: [sub(u, { amount: 29, started_at: past(2), period_start: past(2) })] });
   const out = await cancelPlan(db, u, db.tables.subscriptions[0]);
@@ -207,7 +207,11 @@ t("cancelling within 14 days refunds and ends premium now; payments need the bus
   const id = process.env.BUSINESS_ID;
   delete process.env.BUSINESS_ID;
   assert.equal(billingReady(), false);
+  // Before payments open, premium is a waitlist and the free tier keeps the old cap of 100.
+  const waiting = await planOf(fakeDb(), U(22));
+  assert.deepEqual([waiting.paywall, waiting.limit], [false, 100]);
   process.env.BUSINESS_ID = id;
+  assert.deepEqual([(await planOf(fakeDb(), U(22))).limit], [10]);
   assert.equal(billingReady(), true);
 });
 

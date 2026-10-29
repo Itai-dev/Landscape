@@ -92,7 +92,7 @@ function MeHome({ user, follows, prefs, plan = null, justFollowed = "", demo = f
             <span className="mi"><BuildingIcon size={22} /></span>
             <span className="mt"><b>המעקב שלי</b> <span className="st">{follows.follows.length === 1 ? "חברה אחת" : `${follows.follows.length} חברות`}</span></span>
             <span className="md">התראות במייל: {alertsHe}</span>
-            {PREMIUM && !plan?.premium && <span className="md">{follows.follows.length} מתוך {FREE_FOLLOWS} בחינם</span>}
+            {PREMIUM && plan?.paywall && !plan?.premium && <span className="md">{follows.follows.length} מתוך {FREE_FOLLOWS} בחינם</span>}
             <span className="go">לרשימת המעקב</span>
           </a>
           {PREMIUM && (
@@ -113,8 +113,8 @@ function MeHome({ user, follows, prefs, plan = null, justFollowed = "", demo = f
           )}
         </section>
 
-        <FollowsClient initial={{ ...follows, premium: Boolean(plan?.premium), max: followLimit(Boolean(plan?.premium)), offer: PREMIUM }} justFollowed={justFollowed} />
-        {PREMIUM && !demo && <PlanClient premium={Boolean(plan?.premium)} sub={plan?.sub || null} options={EXPORT_OPTIONS} />}
+        <FollowsClient initial={{ ...follows, premium: Boolean(plan?.premium), max: plan?.limit ?? followLimit(false, false), offer: PREMIUM, paywall: Boolean(plan?.paywall) }} justFollowed={justFollowed} />
+        {PREMIUM && !demo && <PlanClient premium={Boolean(plan?.premium)} paywall={Boolean(plan?.paywall)} sub={plan?.sub || null} options={EXPORT_OPTIONS} />}
         <AccountClient />
       </div>
     );

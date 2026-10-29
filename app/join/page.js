@@ -13,12 +13,16 @@ export const metadata = {
 
 // Sign-up in three short steps (crafts → newsletter yes / not now → address). Signed in, there is
 // nothing to sign up for: the personal area (/me) has the same choices.
-export default async function Join() {
+export default async function Join({ searchParams }) {
   const sb = await serverClient();
   const user = sb ? await currentUser(sb).catch(() => null) : null;
   if (user) redirect("/me");
   // Crafts in the taxonomy's order (creative and art direction, strategy, copy and AI first; schema/taxonomy.json
   // → facets.craft): the first twelve show, the rest open on request.
   const crafts = CRAFTS.map((c) => ({ ...c, n: companiesWithCraft(c.slug) }));
-  return <JoinFlow crafts={crafts} />;
+  // Crafts can arrive from the agent ("שמירת הסוכן שלי"): /join?crafts=motion,branding
+  const sp = (await searchParams) || {};
+  const known = new Set(CRAFTS.map((c) => c.slug));
+  const initial = String(sp.crafts || "").split(",").filter((s) => known.has(s)).slice(0, 12);
+  return <JoinFlow crafts={crafts} initial={initial} />;
 }

@@ -40,7 +40,7 @@ export default function FollowsClient({ initial, justFollowed }) {
   }
 
   const fresh = justFollowed && follows.find((f) => f.id === justFollowed);
-  const limited = Boolean(initial.offer && !initial.premium); // the free tier counts toward its limit
+  const limited = Boolean(initial.offer && initial.paywall && !initial.premium); // the free tier counts toward its limit (once payments are open)
   return (
     <div className="card stack" id="follows">
       <h2>המעקב שלי {(follows.length > 0 || limited) && <span className="count">{limited ? `${follows.length} מתוך ${initial.max}` : follows.length}</span>}</h2>

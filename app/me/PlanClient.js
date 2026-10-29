@@ -5,7 +5,7 @@ import { PLANS, FREE_FOLLOWS, cancelOutcome, shekels } from "@/lib/premium";
 const day = (iso) => new Date(iso).toLocaleDateString("he-IL", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Jerusalem" });
 
 // "פרימיום" in the personal area: the plan, cancelling it in one step, and list export.
-export default function PlanClient({ premium, sub, options }) {
+export default function PlanClient({ premium, paywall = true, sub, options }) {
   const [state, setState] = useState(sub);
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -37,7 +37,7 @@ export default function PlanClient({ premium, sub, options }) {
     return (
       <div className="card stack" id="plan">
         <h2>פרימיום</h2>
-        <p className="muted">בחינם אפשר לעקוב אחרי עד {FREE_FOLLOWS} חברות. פרימיום מוסיף מעקב בלי הגבלה, התראות בתוך שעה, ייצוא רשימות וחיפוש עם AI, ב־{shekels(PLANS.monthly.price)} לחודש.</p>
+        <p className="muted">{paywall ? `בחינם אפשר לעקוב אחרי עד ${FREE_FOLLOWS} חברות. ` : ""}פרימיום מוסיף מעקב בלי הגבלה, התראות בתוך שעה, ייצוא רשימות וחיפוש עם AI, ב־{shekels(PLANS.monthly.price)} לחודש.</p>
         <div><a className="btn primary" href="/premium" data-track="premium_upsell" data-track-where="me">לפרימיום</a></div>
       </div>
     );

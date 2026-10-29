@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useUser } from "@/components/useUser";
 import { installTyping } from "@/lib/typing.mjs";
 import { syncTracking } from "@/lib/trackSync";
-import { BRAND, WORDMARK, NAV, MENU, JOIN, ME, THEME_BUTTON, BURGER, SITE_SEARCH, ctaInner, sheetHtml, promoHtml, tabbarInner, installTheme, installMenu } from "@/lib/chrome.mjs";
+import { BRAND, WORDMARK, NAV, MENU, JOIN, ME, THEME_BUTTON, BURGER, SITE_SEARCH, AGENT_HOME, ctaInner, sheetHtml, promoHtml, tabbarInner, installTheme, installMenu } from "@/lib/chrome.mjs";
 
 // The site header. Same lists and markup as the companies app's header (lib/chrome.mjs), styles in app/chrome.css.
 // Under 861px the links move into the hamburger sheet (installMenu wires the button in both apps).
@@ -21,17 +21,17 @@ export default function Header() {
   useEffect(() => installTyping(document.querySelector("header.top form.hsearch input")), [path]);
   const active = MENU.find((n) => here(n.href))?.key || "";
   // Phone tab bar: which item is this page (the call to action counts for /join and the account).
-  const tab = here("/companies") ? "companies" : here("/people") ? "people" : here("/tenders") ? "tenders" : here("/join") || here("/me") || here("/digest/settings") ? "cta" : "";
+  const tab = AGENT_HOME && path === "/" ? "home" : here("/companies") ? "companies" : here("/people") ? "people" : here("/tenders") ? "tenders" : here("/join") || here("/me") || here("/digest/settings") ? "cta" : "";
   return (
     <>
       <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: promoHtml() }} />
       {/* Pages with their own search box (/test, /search, /people, /tenders) hide the header one. */}
-      <header className={["/test", "/search", "/people", "/tenders"].includes(path) ? "top nosearch" : "top"}>
+      <header className={["/test", "/search", "/people", "/tenders", ...(AGENT_HOME ? ["/", "/agent"] : [])].includes(path) ? "top nosearch" : "top"}>
         <div className="wrap">
           <span style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: BURGER }} />
           <a className="brand" href="/" lang="en" aria-label={`${BRAND}, לדף הבית`} dangerouslySetInnerHTML={{ __html: WORDMARK }} />
           <nav className="nav" aria-label="ניווט ראשי">
-            {NAV.map((n) => <a key={n.key} href={n.href} aria-current={n.key === "signals" ? undefined : here(n.href)}>{n.label}</a>)}
+            {NAV.map((n) => <a key={n.key} href={n.href} aria-current={n.key === "signals" ? undefined : n.href === "/" ? (path === "/" ? "page" : undefined) : here(n.href)}>{n.label}</a>)}
           </nav>
           <span style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: SITE_SEARCH }} />
           <div className="end">
