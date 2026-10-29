@@ -8,6 +8,7 @@ import { readTrack, setTracked } from "@/lib/trackSync";
 // what matters most now), the agent at work, then the briefing. Nothing is stored on the server: the profile
 // stays in this browser, and the briefing is composed from the directory's published data.
 const KEY = "landscape-agent";
+const SEEN = "landscape-agent-seen"; // what the last briefing showed, for "מאז הביקור הקודם"
 const FIRST = 12;
 const tryTrack = (name, props) => { try { track(name, props); } catch {} };
 const load = () => { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch { return null; } };
@@ -16,7 +17,7 @@ const follows = () => Object.keys(readTrack().pipeline || {});
 const hebrewList = (xs) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} ו${xs[xs.length - 1]}`);
 const post = (body) => fetch("/api/agent", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
 
-export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole }) {
+export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole, home = false }) {
   const [phase, setPhase] = useState("loading"); // loading | intro | confirm | goals | working | brief
   const [log, setLog] = useState([]); // the conversation: { who: "agent" | "me", text }
   const [text, setText] = useState("");
@@ -29,12 +30,30 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   const [brief, setBrief] = useState(null);
   const [steps, setSteps] = useState([]);
   const [error, setError] = useState("");
+  const [ans, setAns] = useState(null); // the answer to a question ("שאלו את הסוכן")
+  const [asking, setAsking] = useState(false);
   const endRef = useRef(null);
   const he = (slug) => allCrafts.find((c) => c.slug === slug)?.he || slug;
   const roleHe = (slug) => roles.find((r) => r.slug === slug)?.short || "";
 
   const say = (who, t) => setLog((l) => [...l, { who, text: t }]);
+  async function ask(q) {
+    q = String(q || "").trim();
+    if (!q) return;
+    setAsking(true);
+    const p = load() || {};
+    const a = await post({ action: "ask", q, role: p.role || "", crafts: p.crafts || [] });
+    setAsking(false);
+    setAns(a || { q, title: q, lead: "לא הצלחנו לענות עכשיו. נסו שוב בעוד רגע.", cards: [] });
+    tryTrack("agent_ask", { cards: a?.cards?.length || 0 });
+    try { const u = new URL(location.href); u.searchParams.set("q", q); history.replaceState(null, "", u); } catch {}
+  }
+  function closeAnswer() {
+    setAns(null);
+    try { const u = new URL(location.href); u.searchParams.delete("q"); history.replaceState(null, "", u); } catch {}
+  }
   useEffect(() => {
+    try { const q = new URLSearchParams(location.search).get("q"); if (q) ask(q); } catch {}
     const p = load();
     if (p?.role) { setRole(p.role); setCrafts(p.crafts || []); setGoals(p.goals || []); setSelf(p.self || ""); work(p, true); }
     else { setPhase("intro"); setLog([{ who: "agent", text: "היי. אנחנו הסוכן של CreativeIn: סורקים כל יום את תעשיית הקריאייטיב בישראל, בודקים כל פרט מול המקור, ומביאים לכם רק את מה שרלוונטי." }, { who: "agent", text: "ספרו במשפט אחד מה אתם עושים, או הדביקו קישור לאתר או לפורטפוליו." }]); }
@@ -126,11 +145,13 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
   const toggle = (list, set, slug) => set(list.includes(slug) ? list.filter((x) => x !== slug) : [...list, slug]);
   const shown = more ? allCrafts : [...allCrafts.slice(0, FIRST), ...allCrafts.slice(FIRST).filter((c) => crafts.includes(c.slug))];
 
-  if (phase === "brief" && brief) return <Brief b={brief} onReset={reset} error={error} />;
+  const askProps = { ans, asking, onAsk: ask, onClose: closeAnswer, crafts: (brief?.profile?.crafts || []).map((c) => c.he) };
+  if (phase === "brief" && brief) return <Brief b={brief} onReset={reset} error={error} ask={askProps} />;
   return (
     <div className="agent">
       <div className="wrap awrap">
-        <p className="eyebrow">הסוכן של CreativeIn · גרסת ניסיון</p>
+        {(ans || asking) && <Answer {...askProps} invite />}
+        <p className="eyebrow">{home ? "הסוכן של CreativeIn" : "הסוכן של CreativeIn · גרסת ניסיון"}</p>
         <ol className="achat" aria-live="polite">
           {log.map((m, i) => <li key={i} className={`m-${m.who}`}>{m.text}</li>)}
         </ol>
@@ -205,9 +226,32 @@ export default function AgentFlow({ crafts: allCrafts, roles, goals: goalsByRole
 }
 
 // ---------- the briefing ----------
-function Brief({ b, onReset, error }) {
+function Brief({ b, onReset, error, ask }) {
   const p = b.profile;
   const date = new Intl.DateTimeFormat("he-IL", { day: "numeric", month: "long", timeZone: "Asia/Jerusalem" }).format(new Date());
+  // Since the last visit: what this briefing shows that the last one didn't.
+  const ids = [...b.opportunities, ...b.updates].map((x) => x.id);
+  const [since, setSince] = useState(null); // { days, fresh: Set }
+  useEffect(() => {
+    let prev = null;
+    try { prev = JSON.parse(localStorage.getItem(SEEN) || "null"); } catch {}
+    if (prev?.at && Array.isArray(prev.ids)) {
+      const days = Math.floor((Date.now() - Date.parse(prev.at)) / 864e5);
+      const seen = new Set(prev.ids);
+      setSince({ days, fresh: new Set(ids.filter((id) => !seen.has(id))) });
+    }
+    const t = setTimeout(() => { try { localStorage.setItem(SEEN, JSON.stringify({ at: new Date().toISOString(), ids })); } catch {} }, 4000);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [b]);
+  const fresh = (id) => Boolean(since?.fresh.has(id));
+  // Saving the agent: the clients join the tracking list (it joins the account at sign-in), the crafts ride to sign-up.
+  function saveAgent() {
+    const prof = load() || {};
+    for (const id of prof.clients || []) setTracked(id, true);
+    tryTrack("agent_save", { crafts: p.crafts.length, clients: (prof.clients || []).length });
+    location.href = `/join${p.crafts.length ? `?crafts=${p.crafts.map((c) => c.slug).join(",")}` : ""}`;
+  }
   return (
     <div className="agent">
       <div className="wrap awrap brief">
@@ -217,21 +261,24 @@ function Brief({ b, onReset, error }) {
           <p className="muted">
             {p.role_he}{p.crafts.length ? `, ${hebrewList(p.crafts.slice(0, 4).map((c) => c.he))}` : ""}. מתוך {b.stats.signals} עדכונים ו־{b.stats.tenders} מכרזים מהחודשיים האחרונים, בחרנו {b.count}. כל פריט נבדק מול המקור.
           </p>
+          {since && <p className="bsince">{since.fresh.size ? `מאז הביקור הקודם${since.days > 0 ? ` (לפני ${since.days === 1 ? "יום" : `${since.days} ימים`})` : ""}: ${since.fresh.size === 1 ? "דבר אחד חדש" : `${since.fresh.size} דברים חדשים`}, מסומנים ב״חדש״.` : "אין חדש מאז הביקור הקודם. נמשיך לבדוק בשבילכם."}</p>}
           <button type="button" className="btn ghost sm" onClick={onReset} data-track="agent_reset">שינוי ההגדרות</button>
         </header>
+        <AskBar {...ask} />
+        {(ask.ans || ask.asking) && <Answer {...ask} />}
         {error && <div className="notice err" role="alert">{error}</div>}
 
         {b.opportunities.length > 0 && (
           <section className="bsec" aria-labelledby="b-opp">
             <h2 id="b-opp">הזדמנויות פתוחות</h2>
-            <ul className="blist">{b.opportunities.map((o) => <Opp key={o.id} o={o} />)}</ul>
+            <ul className="blist">{b.opportunities.map((o) => <Opp key={o.id} o={o} fresh={fresh(o.id)} />)}</ul>
           </section>
         )}
 
         {b.updates.length > 0 && (
           <section className="bsec" aria-labelledby="b-upd">
             <h2 id="b-upd">עדכונים בשבילכם</h2>
-            <ul className="blist">{b.updates.map((u) => <Update key={u.id} u={u} p={p} />)}</ul>
+            <ul className="blist">{b.updates.map((u) => <Update key={u.id} u={u} p={p} fresh={fresh(u.id)} />)}</ul>
           </section>
         )}
         {!b.count && (
@@ -259,7 +306,8 @@ function Brief({ b, onReset, error }) {
           <h2 id="b-mis">מה נמשיך לעשות בשבילכם</h2>
           <ul className="bmis">{b.missions.map((m) => <li key={m.text} className={m.live ? "" : "soon"}>{m.live ? <CheckIcon size={16} /> : <span className="bsoon">בקרוב</span>}<span>{m.text}</span></li>)}</ul>
           <div className="bcta">
-            <a className="btn primary lg" href="/join" data-track="agent_join">הרשמה לתדריך השבועי</a>
+            <button type="button" className="btn primary lg" onClick={saveAgent}>שמירת הסוכן שלי</button>
+            <p className="small muted">חשבון חינם: התדריך במייל ביום ראשון, והתראה כשמשהו זז אצל החברות שלכם. אפשר להפסיק בכל רגע.</p>
           </div>
         </section>
       </div>
@@ -267,10 +315,10 @@ function Brief({ b, onReset, error }) {
   );
 }
 
-function Opp({ o }) {
+function Opp({ o, fresh = false }) {
   return (
     <li className="acard">
-      <p className="blabel"><span className={o.kind === "tender" && o.state === "open" ? "mark" : ""}>{o.label}</span>{o.day ? ` · ${o.day}` : ""}</p>
+      <p className="blabel"><span className={o.kind === "tender" && o.state === "open" ? "mark" : ""}>{o.label}</span>{o.day ? ` · ${o.day}` : ""}{fresh ? <span className="bnew">חדש</span> : null}</p>
       <h3>{o.title}</h3>
       {o.summary && <p className="small">{o.summary}</p>}
       <p className="bmeta small">
@@ -279,7 +327,8 @@ function Opp({ o }) {
       </p>
       <Facts facts={o.facts} />
       <div className="bact">
-        {o.source_url && <a className="btn sm" href={o.source_url} target="_blank" rel="noopener" data-track={o.kind === "tender" ? "tender_source_click" : "opportunity_source_click"}>{o.kind === "tender" ? "לפרסום הרשמי" : `למשרה ב־${o.source}`}<LinkIcon size={14} /></a>}
+        {o.source_url && <a className="btn sm" href={o.source_url} target="_blank" rel="noopener" data-track={o.kind === "tender" ? "tender_source_click" : o.kind === "news" ? "agent_news_source" : "opportunity_source_click"}>{o.kind === "tender" ? "לפרסום הרשמי" : o.kind === "news" ? (o.source ? `לפרסום ב־${o.source}` : "למקור") : `למשרה ב־${o.source}`}<LinkIcon size={14} /></a>}
+        {o.kind === "news" && o.org?.href && <a className="btn ghost sm" href={o.org.href}>לעמוד החברה</a>}
         {o.calendar && <a className="btn ghost sm" href={o.calendar} target="_blank" rel="noopener" data-track="agent_calendar">הוספה ליומן</a>}
         {o.kind === "tender" && o.buyer_href && <a className="btn ghost sm" href={o.buyer_href}>לעמוד הגוף המזמין</a>}
       </div>
@@ -287,7 +336,7 @@ function Opp({ o }) {
   );
 }
 
-function Update({ u, p }) {
+function Update({ u, p, fresh = false }) {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const crafts = hebrewList(p.crafts.slice(0, 3).map((c) => c.he));
@@ -302,7 +351,7 @@ function Update({ u, p }) {
   }
   return (
     <li className="acard">
-      <p className="blabel"><span>{u.label}</span> · {u.day}{u.client ? <span className="btag">הלקוח שלכם</span> : u.followed ? <span className="btag">במעקב שלכם</span> : null}</p>
+      <p className="blabel"><span>{u.label}</span> · {u.day}{fresh ? <span className="bnew">חדש</span> : null}{u.client ? <span className="btag">הלקוח שלכם</span> : u.followed ? <span className="btag">במעקב שלכם</span> : null}</p>
       <h3>{u.headline}</h3>
       <div className="bwhy">
         <b>למה זה רלוונטי לכם</b>
@@ -322,6 +371,51 @@ function Update({ u, p }) {
           <div><button type="button" className="btn sm" onClick={copy}>{copied ? "הועתק" : "העתקת הטיוטה"}</button></div>
         </div>
       )}
+    </li>
+  );
+}
+
+// "שאלו את הסוכן": a question about the industry, answered from the map.
+function AskBar({ onAsk, crafts = [] }) {
+  const [q, setQ] = useState("");
+  const ex = [crafts[0] ? `מי מזמין ${crafts[0]}?` : "מי מזמין מושן?", "אילו מכרזים פתוחים?", "מי עובד עם ישראכרט?"];
+  return (
+    <section className="ask" aria-label="שאלו את הסוכן">
+      <form className="aform" onSubmit={(e) => { e.preventDefault(); onAsk(q); }}>
+        <label className="sr-only" htmlFor="askq">שאלה לסוכן</label>
+        <input id="askq" type="search" value={q} onChange={(e) => setQ(e.target.value)} maxLength={120} autoComplete="off" placeholder="שאלו את הסוכן: מי מזמין, מי עובד עם מי, אילו מכרזים" />
+        <button className="btn primary" disabled={!q.trim()}>שאלה</button>
+      </form>
+      <div className="chips askex">{ex.map((x) => <button key={x} type="button" className="chip" onClick={() => { setQ(x); onAsk(x); }}>{x}</button>)}</div>
+    </section>
+  );
+}
+
+function Answer({ ans, asking, onClose, invite = false }) {
+  if (asking && !ans) return <ol className="awork"><li className="run"><span className="spinner" aria-hidden /><span>מחפשים במפה…</span></li></ol>;
+  if (!ans) return null;
+  return (
+    <section className="answer" aria-live="polite" aria-labelledby="ans-t">
+      <div className="ans-top">
+        <div><p className="eyebrow">תשובה מהמפה</p><h2 id="ans-t">{ans.title}</h2></div>
+        <button type="button" className="btn ghost sm" onClick={onClose}>סגירה</button>
+      </div>
+      {ans.lead && <p className="ans-lead">{ans.lead}</p>}
+      {ans.cards?.length > 0 && <ul className="blist">{ans.cards.map((c) => (c.kind === "org" ? <OrgCard key={c.org.id} c={c} /> : <Opp key={c.id} o={c} />))}</ul>}
+      {ans.more && <a className="btn ghost sm" href={ans.more.href}>{ans.more.label}</a>}
+      {invite && <p className="small muted">רוצים תדריך אישי, עם מה שרלוונטי רק לכם? ספרו לסוכן מה אתם עושים, כאן למטה.</p>}
+    </section>
+  );
+}
+
+function OrgCard({ c }) {
+  return (
+    <li className="acard">
+      <div className="bco-top">{c.org.logo ? <img src={c.org.logo} alt="" width="40" height="40" /> : <span className="bco-ph" aria-hidden>{c.org.name.slice(0, 1)}</span>}
+        <div><b>{c.org.name}</b><p className="small muted">{c.org.kind_he}{c.org.city ? ` · ${c.org.city}` : ""}</p></div></div>
+      {c.latest && <p className="small"><b>העדכון האחרון ({c.latest.day}):</b> {c.latest.headline}{c.latest.source_url ? <> · <a href={c.latest.source_url} target="_blank" rel="noopener">{c.latest.source || "מקור"}</a></> : null}</p>}
+      <Facts facts={c.facts} title="מה אנחנו יודעים" />
+      <div className="bact"><a className="btn sm" href={c.org.href} data-track="agent_company">לעמוד החברה</a><Track id={c.org.id} /></div>
     </li>
   );
 }

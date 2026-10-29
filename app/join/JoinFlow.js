@@ -26,11 +26,11 @@ const tryTrack = (name, props) => { try { track(name, props); } catch {} };
 // address. The newsletter is optional; saying yes still needs the consent box ticked on the address step
 // (unchecked by default, anti-spam law §30A). A sign-in link goes out; nothing is saved until it is opened
 // (the link carries the crafts and, if chosen, the frequency), and it lands in the personal area (/me).
-export default function JoinFlow({ crafts: all }) {
+export default function JoinFlow({ crafts: all, initial = [] }) {
   const [step, setStep] = useState(0);
-  const [crafts, setCrafts] = useState([]);
+  const [crafts, setCrafts] = useState(initial);
   const [frequency, setFrequency] = useState("weekly");
-  const [more, setMore] = useState(false);
+  const [more, setMore] = useState(() => initial.some((s) => all.findIndex((c) => c.slug === s) >= 12));
   const [ed, setEd] = useState(null);
   const [busy, setBusy] = useState(false);
   const [email, setEmail] = useState("");

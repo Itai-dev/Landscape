@@ -2,7 +2,7 @@
 // call per person and nothing stored; the profile lives in the reader's browser.
 import { NextResponse } from "next/server";
 import { readJson, allow } from "@/lib/guard";
-import { readIntro, composeBrief, siteOnMap, onMap, readSiteText, clientCards } from "@/lib/agent";
+import { readIntro, composeBrief, siteOnMap, onMap, readSiteText, clientCards, answer } from "@/lib/agent";
 import { fetchPageText } from "@/lib/fetchPage";
 
 export async function POST(request) {
@@ -26,6 +26,11 @@ export async function POST(request) {
     } catch {
       return NextResponse.json({ ok: false, note: "fetch" });
     }
+  }
+  // A question to the agent, answered from the map (rules, no AI call).
+  if (body.action === "ask") {
+    const list = (v, n) => (Array.isArray(v) ? v.map(String).slice(0, n) : []);
+    return NextResponse.json(answer(String(body.q || "").slice(0, 120), { role: String(body.role || ""), crafts: list(body.crafts, 12) }));
   }
   if (body.action === "brief") {
     const list = (v, n) => (Array.isArray(v) ? v.map(String).slice(0, n) : []);

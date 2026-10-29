@@ -82,3 +82,18 @@
 @media (max-width: 560px) { .bfacts dl > div { grid-template-columns: 1fr; gap: 0; } }
 .bmis li.soon { color: var(--muted); }
 .bsoon { flex: none; font-size: var(--t-xs); font-weight: 600; border: 1px solid var(--line-2); border-radius: var(--r-sm); padding: 1px 6px; color: var(--ink-2); }
+
+/* "שאלו את הסוכן" and its answers */
+.ask { display: grid; gap: var(--s-2); }
+.ask .aform input { background: var(--surface); }
+.askex .chip { font-size: var(--t-xs); padding: 6px 12px; }
+.answer { display: grid; gap: var(--s-3); background: var(--surface); border-radius: var(--r-lg); padding: var(--s-5); animation: arise .35s var(--ease) both; }
+.answer .acard { background: var(--paper); }
+.answer .acard .bwhy, .answer .acard .bfacts { background: transparent; }
+.ans-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s-3); }
+.ans-top .eyebrow { margin: 0 0 var(--s-1); }
+.ans-top h2 { margin: 0; font-size: var(--t-xl); font-weight: 500; }
+.ans-lead { margin: 0; font-size: var(--t-base); line-height: 1.6; }
+.bsince { font-weight: 500; }
+.bnew { display: inline-flex; align-items: center; gap: 4px; margin-inline-start: var(--s-2); font-weight: 600; color: var(--ink); }
+.bnew::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }

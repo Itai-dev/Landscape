@@ -1,7 +1,7 @@
 // The agent (/agent): reading a one-line intro, and the briefing it composes. node scripts/test-agent.mjs
 import { register } from "node:module";
 register("./alias-hooks.mjs", import.meta.url);
-const { readIntro, composeBrief, siteOnMap, onMap, readSiteText } = await import("../lib/agent.js");
+const { readIntro, composeBrief, siteOnMap, onMap, readSiteText, answer } = await import("../lib/agent.js");
 
 let fail = 0;
 const ok = (cond, msg) => { if (!cond) { fail++; console.log(`✗ ${msg}`); } };
@@ -49,6 +49,17 @@ if (followed) {
 const withClient = composeBrief({ role: "studio", crafts: ["branding"], clients: ["isracard"], self: "anka-studio", now });
 ok(withClient.updates.some((u) => u.client), "updates about the reader's clients are marked");
 ok(!withClient.updates.some((u) => u.org?.id === "anka-studio"), "the reader's own company is left out");
+// "שאלו את הסוכן"
+const a1 = answer("מי מזמין מושן?", { now });
+ok(a1.cards.length > 0 && a1.cards.every((c) => c.kind === "org"), `ask: who commissions motion (${a1.cards.length})`);
+const a2 = answer("אילו מכרזים פתוחים?", { now });
+ok(a2.cards.every((c) => c.kind === "tender"), "ask: tenders are tenders");
+const a3 = answer("מי עובד עם ישראכרט?", { now });
+ok(a3.cards.length > 0, `ask: who works with a brand (${a3.title})`);
+const a4 = answer("מי עושה מיתוג?", { now });
+ok(a4.cards.length > 0 && a4.cards.every((c) => c.kind === "org"), "ask: who makes branding");
+const a5 = answer("קקקקקק", { now });
+ok(Array.isArray(a5.cards) && a5.lead, "ask: nothing found still answers");
 console.log(`studio: ${studio.opportunities.length} opportunities, ${studio.updates.length} updates, ${studio.companies.length} companies`);
 for (const u of studio.updates) console.log(`  ${u.label} · ${u.headline.slice(0, 70)}`);
 if (fail) { console.log(`${fail} checks failed`); process.exit(1); }
