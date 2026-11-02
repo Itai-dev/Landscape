@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { CRAFTS, CITIES, OPEN_TO, VISIBILITY, FREQUENCIES, TOPICS, CONSENT_TEXT } from "@/lib/taxonomy";
 
-const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהחומר שהעליתם. כדאי לבדוק.">✦ מולא אוטומטית</span> : null);
+const AiTag = ({ on }) => (on ? <span className="ai" title="מולא אוטומטית מהחומר שהעליתם. בדקו שהוא נכון.">✦ מולא אוטומטית</span> : null);
 
 export function Chips({ options, value, onChange, name }) {
   const toggle = (slug) => onChange(value.includes(slug) ? value.filter((v) => v !== slug) : [...value, slug]);
@@ -40,7 +40,7 @@ export const emptyProfile = () => ({
 });
 
 // Full editable profile. Used for the onboarding review step and for /me.
-export default function ProfileForm({ initial, cvFile = null, submitLabel = "שמירה", onSaved }) {
+export default function ProfileForm({ initial, cvFile = null, submitLabel = "שמירת הפרופיל", onSaved }) {
   const [p, setP] = useState({ ...emptyProfile(), ...initial.profile });
   const [ai, setAi] = useState(new Set(initial.ai_fields || []));
   const [visibility, setVisibility] = useState(initial.visibility || "members");
@@ -74,13 +74,13 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
     const out = await res.json().catch(() => ({}));
     if (!res.ok) {
       const msg =
-        out.error === "missing" ? "חסרים שדות חובה: שם, כותרת, תחום, עיר וזמינות." :
-        out.error === "sign_in" ? "צריך להתחבר מחדש." : "השמירה נכשלה. נסו שוב.";
+        out.error === "missing" ? "כדי לשמור נצטרך שם, כותרת, תחום, עיר וזמינות." :
+        out.error === "sign_in" ? "היכנסו שוב לחשבון ונסו שוב." : "לא הצלחנו לשמור. מה שכתבתם נשאר כאן. נסו שוב.";
       setState({ busy: false, error: msg });
       return;
     }
     if (out.prefs_error === "consent_required") {
-      setState({ busy: false, error: "הפרופיל נשמר. כדי לקבל ניוזלטר צריך לסמן את האישור שמתחת לתדירות." });
+      setState({ busy: false, error: "הפרופיל נשמר. כדי לקבל ניוזלטר, סמנו את האישור שמתחת לתדירות." });
       return;
     }
     setState({ busy: false, error: "" });
@@ -126,7 +126,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
             onChange={(e) => { setSkillsText(e.target.value); untag("skills"); }} />
         </div>
         <div className="field">
-          <label htmlFor="pf-portfolio">פורטפוליו / שואוריל <AiTag on={ai.has("portfolio_url")} /></label>
+          <label htmlFor="pf-portfolio">תיק עבודות או שואוריל <AiTag on={ai.has("portfolio_url")} /></label>
           <input id="pf-portfolio" type="url" dir="ltr" placeholder="https://" value={p.portfolio_url || ""} onChange={(e) => set("portfolio_url", e.target.value)} />
         </div>
 
@@ -140,7 +140,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
                 <button type="button" className="btn" aria-label="הסרת קישור" onClick={() => set("links", p.links.filter((_, j) => j !== i))}>✕</button>
               </div>
             ))}
-            <button type="button" className="btn" onClick={() => set("links", [...p.links, { label: "", url: "" }])}>+ קישור</button>
+            <button type="button" className="btn" onClick={() => set("links", [...p.links, { label: "", url: "" }])}>+ הוספת קישור</button>
           </div>
         </div>
 
@@ -153,10 +153,10 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
                 <input type="text" dir="auto" aria-label="תפקיד" placeholder="תפקיד" style={{ flex: "2 1 140px" }} value={x.role || ""} onChange={(e) => setExp(i, "role", e.target.value)} />
                 <input type="text" aria-label="משנה" placeholder="מ־" className="mono" style={{ flex: "1 1 70px" }} value={x.start || ""} onChange={(e) => setExp(i, "start", e.target.value)} />
                 <input type="text" aria-label="עד" placeholder="עד" className="mono" style={{ flex: "1 1 70px" }} value={x.end || ""} onChange={(e) => setExp(i, "end", e.target.value)} />
-                <button type="button" className="btn" aria-label="הסרה" onClick={() => set("experience", p.experience.filter((_, j) => j !== i))}>✕</button>
+                <button type="button" className="btn" aria-label="הסרת מקום העבודה" onClick={() => set("experience", p.experience.filter((_, j) => j !== i))}>✕</button>
               </div>
             ))}
-            <button type="button" className="btn" onClick={() => set("experience", [...p.experience, { org: "", role: "", start: "", end: "" }])}>+ מקום עבודה</button>
+            <button type="button" className="btn" onClick={() => set("experience", [...p.experience, { org: "", role: "", start: "", end: "" }])}>+ הוספת מקום עבודה</button>
           </div>
         </div>
       </div>
@@ -198,7 +198,7 @@ export default function ProfileForm({ initial, cvFile = null, submitLabel = "ש�
           {state.busy ? <span className="spinner" aria-hidden /> : null}
           {submitLabel}
         </button>
-        {ai.size > 0 && <span className="small muted">שדות עם ✦ מולאו אוטומטית. כדאי לעבור עליהם.</span>}
+        {ai.size > 0 && <span className="small muted">שדות עם ✦ מולאו אוטומטית. עברו עליהם.</span>}
       </div>
     </form>
   );

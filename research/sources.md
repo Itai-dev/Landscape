@@ -31,4 +31,8 @@ Good places to discover and verify organizations. Add to this list as runs find 
 - Globes English front page — https://en.globes.co.il
 - CTech (Calcalist English) funding rounds
 - LinkedIn public job search: "motion designer", "3D", "animator", "creative director" in Israel (relative dates → `date_approx`)
+- Globes "הרשת החברתית" tag — https://www.globes.co.il/news/הרשת_החברתית.tag (Galit Hatan's ad-industry items: account moves, campaigns)
+- ICE appointments — https://www.ice.co.il/positions ; marketing appointments — https://shivuk.me/news/marketingnews (relative dates; open each item for the exact date)
+- Portfolio "מה הולך" weekly — https://www.prtfl.co.il (design/illustration/animation events and festivals)
+- mr.gov.il exemption notices (`s=EXEMPTION`, words קמפיין / הפקת): LPM extensions name the production company per campaign → signals
 - Not reliable yet: gov.il / mr.gov.il tenders (blocked / JS-only)

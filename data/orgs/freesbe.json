@@ -1,0 +1,48 @@
+{
+  "id": "freesbe",
+  "name": "freesbe",
+  "name_he": "פריסבי",
+  "aka": [
+    "Carasso Motors",
+    "קרסו מוטורס"
+  ],
+  "kind": "client",
+  "categories": [
+    "automotive"
+  ],
+  "description": "Brand under which Carasso Motors, the TASE-listed Israeli vehicle importer, has run its business since January 2023: new and used cars (Renault, Dacia, Chery and others), private and business leasing, rental, financing, insurance, EV charging, plus construction equipment (Case, Sany). Its October 2026 TV spot used AI to bring back the late actor Israel 'Poli' Poliakov alongside his daughter Yael (ICE ad of the week).",
+  "description_he": "המותג שתחתיו פועלת קרסו מוטורס, יבואנית הרכב הציבורית, מאז ינואר 2023: רכב חדש ומשומש (רנו, דאצ'יה, צ'רי ועוד), ליסינג פרטי ועסקי, השכרה, מימון, ביטוח, טעינה לרכב חשמלי וגם ציוד הנדסי (Case, Sany). הפרסומת שלה מאוקטובר 2026 החזירה בעזרת AI את השחקן המנוח ישראל 'פולי' פוליאקוב לצד בתו יעל (פרסומת השבוע ב־ICE).",
+  "location": {
+    "country": "IL"
+  },
+  "status": "active",
+  "website": "https://www.freesbe.com/",
+  "contact_url": "https://www.freesbe.com/contact-us",
+  "notable_work": [
+    "Yael & Israel Poliakov AI spot (2026, ICE ad of the week)"
+  ],
+  "client_profile": {
+    "industry": "automotive import / leasing / mobility",
+    "creative_needs": [
+      "TV commercials",
+      "AI-generated video",
+      "social video",
+      "digital campaigns"
+    ]
+  },
+  "relations": [
+    {
+      "type": "agency",
+      "target": "og-productions",
+      "note": "production, AI spot with Yael & Israel Poliakov, 2026-10, dir. Asaf Harel, creative Alon Seifert (ICE credits)"
+    }
+  ],
+  "sources": [
+    "https://www.freesbe.com/",
+    "https://www.ice.co.il/advertising-marketing/news/article/1134749",
+    "https://www.hamichlol.org.il/קרסו_מוטורס"
+  ],
+  "confidence": "high",
+  "added": "2026-10-26",
+  "last_verified": "2026-10-26"
+}

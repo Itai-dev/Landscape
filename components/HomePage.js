@@ -27,9 +27,9 @@ import "@/app/sell.css";
 const CRAFTS = ["motion-design", "animation-3d", "vfx", "branding", "sound-design", "editing", "illustration", "ai-creative"];
 
 // The hero's rotating craft, with its own prefix and the question mark (the box keeps the longest one's size).
-const ROTATE = ["במושן?", "במיתוג?", "באנימציה תלת־ממדית?", "בעיצוב סאונד?", "בעריכה?", "באיור?", "בהפקה?"];
+const ROTATE = ["בקריאייטיב?", "בארט דיירקשן?", "באסטרטגיה?", "במיתוג?", "בקופירייטינג?", "במושן?", "בהפקה?"];
 // "פופולרי:" pills under the hero search.
-const POPULAR = ["motion-design", "branding", "animation-3d", "editing", "sound-design", "illustration", "vfx", "ai-creative"];
+const POPULAR = ["creative-direction", "art-direction", "brand-strategy", "copywriting", "ai-creative", "branding", "motion-design", "editing"];
 
 // Three questions people ask before signing up. The rest is answered on /join.
 const FAQ = [
@@ -49,12 +49,11 @@ export default function HomePage({ split = false }) {
   const week = composeDigest({ maxItems: 3, now });
   const updates = [...week.items, ...week.more].slice(0, 3);
   const rel = (u) => String(u || "").replace(siteUrl(), "");
-  // Hero card: up to 4 recent updates (this week's first), each linking to its company.
   // Hero card: 6 recent updates, this week's first. If the week is quiet it falls back to the latest ones
   // (30 days, then a year), so the card never runs empty; HeroMedia loops through them without end.
   const pool = [...week.items, ...week.more, ...composeDigest({ maxItems: 6, days: 30, now }).items, ...composeDigest({ maxItems: 6, days: 365, now }).items];
   const media = pool.filter((x, n, a) => x.headline && a.findIndex((y) => y.id === x.id) === n).slice(0, 6)
-    .map((i) => ({ id: i.id, label: i.class_label, day: i.day, headline: i.headline, org: i.org?.name || "", logo: i.org?.logo || null, href: i.org?.href ? rel(i.org.href) : null }));
+    .map((i) => ({ id: i.id, type: i.type || "", label: i.class_label, day: i.day, headline: i.headline, why: i.why || "", org: i.org?.name || "", kind: i.org?.kind || "", logo: i.org?.logo_hi || i.org?.logo || null, logo_px: i.org?.logo_px || null, source: i.source || "", source_url: i.source_url || "", href: i.org?.href ? rel(i.org.href) : null }));
   return (
     <>
       <div className="wrap"><AuthNotice /></div>
@@ -63,12 +62,13 @@ export default function HomePage({ split = false }) {
         <section className="wrap">
           <div className="hero sell split">
             <div className="htext">
+              <p className="kicker">תעשיית הקריאייטיב בישראל</p>
               <h1>מה קורה <RotatingWord words={ROTATE} label="בתעשיית הקריאייטיב?" /></h1>
-              <p className="lead">מי מונה, מי החליף משרד, אילו מכרזים ומשרות פורסמו. לפי התחום שלכם, כל יום ראשון במייל.</p>
+              <p className="lead">מי מונה, מי עבר משרד, ומה נפתח להגשה.<br />בתחום שלכם, כל יום ראשון במייל.</p>
               <ul className="checks">
-                <li><CheckIcon size={18} /><span>כל התעשייה מסודרת: {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, לפי תחום ועיר, עם מקור לכל פרט</span></li>
-                <li><CheckIcon size={18} /><span><a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> שפורסמו, עם מועד הגשה אמיתי</span></li>
-                <li><CheckIcon size={18} /><span>ניוזלטר שבועי בהתאמה אישית, חינם.</span></li>
+                <li><CheckIcon size={18} /><span><b>מי מזמין מה.</b> {STATS.orgs} מותגים, משרדים, סטודיואים והפקות, ודרך מי הם עובדים.</span></li>
+                <li><CheckIcon size={18} /><span><b>הזדמנויות בזמן.</b> <a href="/tenders">מכרזים</a> ו<a href="/tenders#jobs">משרות</a> בתחום שלכם, עם מועד הגשה וקישור למקור.</span></li>
+                <li><CheckIcon size={18} /><span><b>רק מה שרלוונטי.</b> מייל אחד ביום ראשון, לפי התחום שלכם. חינם.</span></li>
               </ul>
               <div className="row">
                 <a className="btn primary lg" href="/join" data-track="hero_join">שלחו לי את המייל של יום ראשון</a>
@@ -104,8 +104,9 @@ export default function HomePage({ split = false }) {
         <section className="wrap section reveal" aria-labelledby="week-h">
           <div className="sechead">
             <div>
+              <p className="kicker">מה נכנס למייל של יום ראשון</p>
               <h2 id="week-h">השבוע בתעשייה</h2>
-              <p>מה נכנס למייל של יום ראשון. כל פרט עם מקור.</p>
+              <p>כל עדכון עם מקור. בלי שמועות.</p>
             </div>
             <a className="btn" href="/digest" data-track="digest_full_open">לכל העדכונים</a>
           </div>
@@ -132,7 +133,7 @@ export default function HomePage({ split = false }) {
             <p className="eyebrow inv">סקר התעריפים 2026</p>
             <h2 id="survey-h">כמה גובים בתעשייה?<br />ומתי באמת משלמים?</h2>
             <p className="muted">4 דקות, אנונימי. מחירים לפי תחום ולפי סוג עבודה, ותנאי התשלום בפועל, משוטף 30 ועד שוטף 90. התוצאות פתוחות לכולם ברגע שיש מספיק תשובות. פתוח עד {CLOSES_LABEL}.</p>
-            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">לענות על הסקר</a></p>
+            <p><a className="btn inv lg" href="/survey" data-track="survey_start" data-track-where="home_band">למילוי הסקר</a></p>
           </div>
         </section>
       )}
@@ -143,6 +144,7 @@ export default function HomePage({ split = false }) {
         <section className="wrap section tstrip reveal" aria-labelledby="tenders-h">
           <div className="sechead">
             <div>
+              <p className="kicker">גופים ציבוריים שמחפשים ספקים</p>
               <h2 id="tenders-h">מכרזים <span className="count">{tenders.length}</span></h2>
               <p>{proof.openTenders} פתוחים להגשה{proof.upcomingTenders ? ` · ${proof.upcomingTenders} פורסמו וההגשה תיפתח בקרוב` : ""}. כל אחד עם קישור לפרסום הרשמי.</p>
             </div>
@@ -153,7 +155,7 @@ export default function HomePage({ split = false }) {
       )}
 
       <section className="wrap section reveal" aria-labelledby="faq-h">
-        <div className="sechead"><h2 id="faq-h">לפני שנרשמים</h2></div>
+        <div className="sechead"><div><p className="kicker">שאלות</p><h2 id="faq-h">רגע לפני שנרשמים</h2></div></div>
         <div className="faq">
           {FAQ.map(([q, a]) => (
             <details key={q}>
@@ -166,7 +168,7 @@ export default function HomePage({ split = false }) {
 
       <section className="wrap section reveal" aria-labelledby="close-h">
         <div className="panel inverse closer">
-          <h2 id="close-h">לא צריך להכיר את כולם. צריך לדעת מי מזמין, ומתי לפנות.</h2>
+          <h2 id="close-h">לא צריך להכיר את כולם.<br />מספיק להישאר <span lang="en">In</span>.</h2>
           <a className="btn inv lg" href="/join" data-track="closer_join">להרשמה לניוזלטר</a>
         </div>
       </section>
@@ -194,7 +196,7 @@ function ClassicHome() {
           {PROFILES_ENABLED ? (
             <p className="lead">
               מוצאים לקוחות, סטודיואים ואנשי מקצוע לפי מה שאתם עושים.
-              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מהפורטפוליו.</span>}
+              {open && <span className="wide"> ובונים פרופיל מקצועי בדקה, ישר מתוך קורות החיים או מתיק העבודות.</span>}
             </p>
           ) : (
             <p className="lead">
@@ -294,7 +296,7 @@ function ClassicHome() {
               <h2 id="join-h">{open ? "הצטרפות, והניוזלטר" : "השבוע בתעשייה"}</h2>
               <p className="muted">
                 כל יום ראשון: מינויים בשיווק, החלפות משרד פרסום ומי מזמין את מה שאתם עושים. לפי התחומים שלכם, עם מקור לכל פרט.
-                {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או הפורטפוליו, ואתם מאשרים."}
+                {open && " ובאותה הרשמה גם פרופיל מקצועי: ה־AI מכין טיוטה מתוך קורות החיים או תיק העבודות, ואתם מאשרים."}
               </p>
               <p><a className="btn inv" href="/digest">לעדכוני השבוע</a></p>
             </div>

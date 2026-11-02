@@ -5,7 +5,7 @@ export default function NotFound() {
     <div className="wrap narrow">
       <div className="pagehead">
         <h1>הדף לא נמצא</h1>
-        <p>הקישור לא עובד. אולי הוא השתנה, או שהדף הוסר. אבל כבר הגעתם, אז כדאי להציץ במה שהשתנה השבוע.</p>
+        <p>הקישור לא עובד. אולי הוא השתנה, או שהדף הוסר. אבל כבר הגעתם, אז הציצו במה שהשתנה השבוע.</p>
       </div>
       <div className="row center">
         <a className="btn primary" href="/digest">לעדכוני השבוע</a>

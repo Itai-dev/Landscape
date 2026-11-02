@@ -10,7 +10,7 @@ link inside Gmail or Outlook then land signed out.)
 Where: Supabase dashboard → Authentication → Email Templates. Paste each template below into the matching
 template (Subject and Message body). Keep the link exactly as written:
 `{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=email` (the site always asks for a return address that
-already has a `?`, so `&` is right).
+already has a `?`, so `&` is right). The Reset Password template uses `type=recovery` instead.
 
 Also check: Authentication → URL Configuration → Site URL is `https://www.creativein.co.il`, and Redirect URLs
 include `https://www.creativein.co.il/**`. A return address that isn't on that list makes Supabase fall back to
@@ -66,3 +66,29 @@ Message body:
   <p style="font-size:14px;color:#5c5c5c">לא נרשמתם? אפשר להתעלם מהמייל. בלי אישור לא יישלח אליכם שום דבר.</p>
 </div>
 ```
+
+## Reset Password
+
+For "שכחתי את הסיסמה" on the sign-in page. The link lands on `/me/password?reset=1`, where a new password is chosen.
+
+Subject:
+
+```
+בחירת סיסמה חדשה ל־CreativeIn
+```
+
+Message body:
+
+```html
+<div dir="rtl" lang="he" style="font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#222222;max-width:560px">
+  <p style="margin:0 0 4px"><img src="{{ .SiteURL }}/brand/creativein-wordmark.png" width="132" height="36" alt="CreativeIn" style="display:block;border:0"></p>
+  <p style="margin:0 0 16px;font-size:14px;color:#5c5c5c">תעשיית הקריאייטיב בישראל</p>
+  <p>ביקשתם לבחור סיסמה חדשה. לחצו על הכפתור, ובחרו סיסמה חדשה באתר.</p>
+  <p style="margin:24px 0">
+    <a href="{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=recovery" style="background:#222222;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;display:inline-block">בחירת סיסמה חדשה</a>
+  </p>
+  <p style="font-size:14px;color:#5c5c5c">הקישור תקף לזמן קצר ולשימוש אחד.</p>
+  <p style="font-size:14px;color:#5c5c5c">לא ביקשתם? אפשר להתעלם מהמייל. הסיסמה הנוכחית לא משתנה.</p>
+</div>
+```
+

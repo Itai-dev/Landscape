@@ -11,6 +11,7 @@
     "digital-agency"
   ],
   "description": "Tel Aviv advertising agency founded in 1979 by Moshe Theumim and Yochanan Goldberg; BBDO (Omnicom) acquired a 49% stake in 1994, the first international ownership of an Israeli agency. The group includes strategic consulting arm BBDO IM and agency Pitch, and co-owns media agency OMD Israel with Yehoshua TBWA. Won the Winner sports-betting account in 2026.",
+  "description_he": "משרד פרסום תל אביבי שנוסד ב-1979 על ידי משה תאומים ויוחנן גולדברג; ב-1994 רכשה BBDO (אומניקום) 49% ממניותיו, הבעלות הבינלאומית הראשונה במשרד פרסום ישראלי. הקבוצה כוללת את זרוע הייעוץ האסטרטגי BBDO IM ואת משרד הפרסום Pitch, ומחזיקה יחד עם יהושע TBWA במשרד המדיה OMD ישראל. המשרד זכה בתקציב ווינר ב-2026.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
@@ -127,6 +128,11 @@
     {
       "type": "client",
       "target": "bank-hapoalim"
+    },
+    {
+      "type": "acquired",
+      "target": "maven-digital",
+      "note": "Bought 100% of digital agency Maven, announced 2026-10-20; integration from Jan 2027 (Globes, ICE)"
     }
   ],
   "tags": [
@@ -146,11 +152,11 @@
     "https://www.ice.co.il/advertising-marketing/news/article/1081618",
     "https://www.ice.co.il/advertising-marketing/news/article/1110615",
     "https://www.linkedin.com/company/gitam-bbdo",
-    "https://www.ice.co.il/advertising-marketing/news/article/1090591"
+    "https://www.ice.co.il/advertising-marketing/news/article/1090591",
+    "https://www.globes.co.il/news/article.aspx?did=1001560149"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "notes": "gitam.co.il showed an under-construction page on 2026-10-18. Theumim received an Effie Israel lifetime achievement award in 2026.",
-  "description_he": "משרד פרסום תל אביבי שנוסד ב-1979 על ידי משה תאומים ויוחנן גולדברג; ב-1994 רכשה BBDO (אומניקום) 49% ממניותיו, הבעלות הבינלאומית הראשונה במשרד פרסום ישראלי. הקבוצה כוללת את זרוע הייעוץ האסטרטגי BBDO IM ואת משרד הפרסום Pitch, ומחזיקה יחד עם יהושע TBWA במשרד המדיה OMD ישראל. המשרד זכה בתקציב ווינר ב-2026."
+  "last_verified": "2026-10-26",
+  "notes": "gitam.co.il showed an under-construction page on 2026-10-18. Theumim received an Effie Israel lifetime achievement award in 2026."
 }

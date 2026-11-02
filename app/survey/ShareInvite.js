@@ -25,7 +25,7 @@ export default function ShareInvite({ showCounter = false }) {
 
   return (
     <div className="card stack invite">
-      <h2>להזמין עוד אנשים מהתחום</h2>
+      <h2>הזמינו עוד אנשים מהתחום</h2>
       <p className="muted">
         כל תשובה פותחת עוד שורה בתוצאות: קבוצה מוצגת רק מ־5 משיבים.
         {showCounter && ` הזמנה של ${UNLOCK_REFERRALS} אנשים שעונים פותחת את התוצאות המלאות גם בלי לענות.`}
@@ -47,7 +47,7 @@ export default function ShareInvite({ showCounter = false }) {
         <button type="button" className="btn primary" onClick={() => copy(post, "post")}>{copied === "post" ? "הפוסט הועתק" : "העתקה כפוסט ללינקדאין"}</button>
         <a className="btn soft" href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`} target="_blank" rel="noopener noreferrer">פתיחת לינקדאין</a>
       </div>
-      {copied === "fail" && <p className="small muted" role="status">ההעתקה לא הצליחה. אפשר לסמן את הטקסט ולהעתיק ידנית.</p>}
+      {copied === "fail" && <p className="small muted" role="status">ההעתקה לא הצליחה. סמנו את הטקסט והעתיקו ידנית.</p>}
       <p className="small muted" role="status" aria-live="polite">{copied === "post" ? "הדביקו בפוסט חדש בלינקדאין." : ""}</p>
     </div>
   );

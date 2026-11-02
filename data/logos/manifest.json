@@ -703,6 +703,10 @@
   "format": "svg",
   "kind": "header-logo"
  },
+ "freesbe": {
+  "fetched_at": "2026-10-26",
+  "src_px": 0
+ },
  "freetv": {
   "source_url": "https://www.freetv.co.il/wp-content/uploads/2023/06/cropped-home1-192x192.png",
   "fetched_at": "2026-10-20",
@@ -1325,6 +1329,10 @@
   "fetched_at": "2026-10-18",
   "src_px": 0
  },
+ "maven-digital": {
+  "fetched_at": "2026-10-26",
+  "src_px": 0
+ },
  "max": {
   "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://max.co.il&size=128",
   "fetched_at": "2026-10-18",
@@ -1827,6 +1835,13 @@
  "rabel-productions": {
   "fetched_at": "2026-10-18",
   "src_px": 0
+ },
+ "rakuten-viber": {
+  "source_url": "https://www.viber.com/app/themes/viber/assets/images/favicon-v2/android-icon-192x192.png",
+  "fetched_at": "2026-10-26",
+  "src_px": 192,
+  "format": "png",
+  "kind": "icon"
  },
  "rami-levy": {
   "source_url": "https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://rami-levy.co.il&size=128",

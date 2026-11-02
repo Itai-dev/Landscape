@@ -1,5 +1,67 @@
 [
   {
+    "id": "haifa-2026-44",
+    "source": "municipality",
+    "source_url": "https://www2.haifa.muni.il/Michrazim/Default.aspx",
+    "title": "מכרז פומבי מס' 44/2026 למתן שירותי פרסום - קריאייטיב, קופירייטינג, עיצוב וגרפיקה",
+    "buyer": "עיריית חיפה",
+    "buyer_type": "municipality",
+    "buyer_org_id": "haifa-municipality",
+    "procedure_no": "44/2026",
+    "kind": "framework",
+    "published_at": "2026-10-22",
+    "deadline_at": "2026-12-07T14:00",
+    "status": "open",
+    "scope_summary": "כמה ספקי קריאייטיב לעירייה: אסטרטגיה ושפה גרפית לקמפיינים, קופי, עיצוב לפרינט ולדיגיטל ואלמנטים מונפשים קצרים; עד 1,440 שעות בשנה לכל זוכה, כולל שלב הצגת קונספט.",
+    "crafts": [
+      "graphic-design",
+      "branding",
+      "digital-design",
+      "motion-design"
+    ],
+    "keywords_matched": [
+      "פרסום",
+      "קריאייטיב",
+      "עיצוב",
+      "גרפיקה"
+    ],
+    "last_checked_at": "2026-10-26",
+    "added": "2026-10-26",
+    "note": "Tender document: https://www2.haifa.muni.il/Michrazim/TendersFiles/44-2026First.pdf. Physical submission (paper + digital copy) to the municipal tender box; multiple winners."
+  },
+  {
+    "id": "jerusalem-20-2026",
+    "source": "dekel",
+    "source_url": "https://bids.dekel.co.il/Item.aspx?ID=31158",
+    "title": "מכרז פומבי מספר 20.2026 שירותי הפקה, הגברה, תאורה ואספקת ציודים צילום וידאו וסטילס לטקסים ואירועים",
+    "buyer": "עירית ירושלים",
+    "buyer_type": "municipality",
+    "buyer_org_id": "jerusalem-municipality",
+    "procedure_no": "20.2026",
+    "kind": "tender",
+    "published_at": "2026-10-21",
+    "submission_opens": "2026-11-17T15:00",
+    "deadline_at": "2026-11-24T12:00",
+    "status": "open",
+    "scope_summary": "הפקה של טקסים ואירועים עירוניים: הגברה, תאורה וציוד ושירותי צילום וידאו וסטילס.",
+    "crafts": [
+      "experiential",
+      "photography",
+      "film-production"
+    ],
+    "keywords_matched": [
+      "הפקה",
+      "צילום",
+      "וידאו",
+      "אירועים",
+      "טקסים"
+    ],
+    "fee_ils": 0,
+    "last_checked_at": "2026-10-26",
+    "added": "2026-10-26",
+    "note": "Clarification questions until 10/11/2026 15:00 via the online system; physical submission only."
+  },
+  {
     "id": "weizmann-100-2026",
     "source": "university",
     "source_url": "https://www.weizmann.ac.il/michrazim/sites/michrazim/files/tenders/%D7%9E%D7%A1%D7%9E%D7%9B%D7%99%20%D7%9E%D7%9B%D7%A8%D7%96_4.pdf",
@@ -47,7 +109,7 @@
       "אירועים"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-21",
+    "last_checked_at": "2026-10-26",
     "added": "2026-10-20"
   },
   {
@@ -74,7 +136,7 @@
       "הסברה"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-21",
+    "last_checked_at": "2026-10-26",
     "added": "2026-10-20"
   },
   {
@@ -102,7 +164,8 @@
       "קמפיינים"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-21",
-    "added": "2026-10-20"
+    "last_checked_at": "2026-10-26",
+    "added": "2026-10-20",
+    "note": "Clarification answers posted 18/10/2026; deadline unchanged."
   }
 ]

@@ -28,6 +28,11 @@ export function useFollows() {
   return state;
 }
 
+// The free tier is full (premium on) or the hard ceiling is reached.
+const limitText = (max, offer) => offer
+  ? `בחינם אפשר לעקוב אחרי עד ${max} חברות. בפרימיום, בלי הגבלה.`
+  : `אפשר לעקוב אחרי עד ${max || 100} חברות.`;
+
 /**
  * "התראות על החברה": follow a company and get an email when something changes there.
  * Signed in: toggles at once (the first time also asks for alerts consent). Signed out: email + consent,
@@ -40,10 +45,11 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
   const [consent, setConsent] = useState(false);
   const [phase, setPhase] = useState("idle"); // idle | busy | sent | error
   const [msg, setMsg] = useState("");
+  const [upsell, setUpsell] = useState(false); // the free tier is full: point to premium
   const box = useRef(null);
 
   useEffect(() => {
-    if (!open) return;
+    if (!open) { setUpsell(false); return; }
     const close = (e) => { if (e.key === "Escape" || (e.type === "pointerdown" && box.current && !box.current.contains(e.target))) setOpen(false); };
     document.addEventListener("keydown", close);
     document.addEventListener("pointerdown", close);
@@ -67,7 +73,9 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     const j = await res?.json().catch(() => ({}));
     if (!res?.ok) {
       setPhase("error");
-      setMsg(j?.error === "limit" ? "אפשר לעקוב אחרי עד 100 חברות." : j?.error === "unconfirmed" ? "צריך לאשר את כתובת המייל קודם." : "לא הצלחנו לשמור. אפשר לנסות שוב.");
+      setMsg(j?.error === "limit" ? limitText(j.max, j.offer) : j?.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב.");
+      setUpsell(j?.error === "limit" && Boolean(j.offer));
+      setOpen(true);
       return;
     }
     const follows = following ? s.follows.filter((id) => id !== orgId) : [...(s.follows || []), orgId];
@@ -89,7 +97,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     }).catch(() => null);
     const j = await res?.json().catch(() => ({}));
     if (res?.ok) setPhase("sent");
-    else { setPhase("error"); setMsg(j?.error === "rate_limited" ? "יותר מדי ניסיונות. אפשר לנסות שוב בעוד כמה דקות." : j?.error === "bad_email" ? "כדאי לבדוק את כתובת המייל." : "משהו השתבש. אפשר לנסות שוב."); }
+    else { setPhase("error"); setMsg(j?.error === "rate_limited" ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : j?.error === "bad_email" ? "בדקו את כתובת המייל." : "משהו השתבש. נסו שוב."); }
   }
 
   // Already tracked, alerts never agreed to: the consent switches alerts on for the account (no unfollow).
@@ -97,7 +105,7 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
     setPhase("busy");
     const res = await fetch("/api/follows", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ alerts: "daily", consent: true }) }).catch(() => null);
     const j = await res?.json().catch(() => ({}));
-    if (!res?.ok) { setPhase("error"); setMsg(j?.error === "unconfirmed" ? "צריך לאשר את כתובת המייל קודם." : "לא הצלחנו לשמור. אפשר לנסות שוב."); return; }
+    if (!res?.ok) { setPhase("error"); setMsg(j?.error === "unconfirmed" ? "אשרו קודם את כתובת המייל." : "לא הצלחנו לשמור. נסו שוב."); return; }
     publish({ ...s, alerts: j.alerts || "daily", consent: true });
     setPhase("idle");
     setOpen(false);
@@ -130,17 +138,22 @@ export default function FollowButton({ orgId, orgName, compact = false }) {
       </button>
       {open && (
         <div className="follow-pop" role="dialog" aria-label={`התראות על ${orgName}`}>
-          {s.signedIn && following && !alerting && s.consent ? (
-            <p className="small">החברה במעקב שלכם, וההתראות במייל כבויות. אפשר להפעיל אותן ב<a href="/me#follows">חשבון שלי</a>.</p>
+          {upsell ? (
+            <div className="stack">
+              <p className="small" role="alert">{msg}</p>
+              <a className="btn primary sm" href="/premium" data-track="premium_upsell">לפרימיום</a>
+            </div>
+          ) : s.signedIn && following && !alerting && s.consent ? (
+            <p className="small">החברה במעקב שלכם, וההתראות במייל כבויות. אפשר להפעיל אותן <a href="/me#follows">בחשבון</a>.</p>
           ) : s.signedIn ? (
             <form className="stack" onSubmit={(e) => { e.preventDefault(); if (consent) (following ? enableAlerts() : toggle(true)); }}>
               <p className="small"><b>מייל כשמשהו משתנה <bdi>{prefixed("ב", orgName)}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש.</p>
               <label className="check small"><input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} required /><span>{ALERTS_CONSENT_TEXT}</span></label>
-              <button className="btn primary sm" disabled={!consent || phase === "busy"}>להפעלת ההתראות</button>
+              <button className="btn primary sm" disabled={!consent || phase === "busy"}>הפעלת ההתראות</button>
               {msg && <p className="small err" role="alert">{msg}</p>}
             </form>
           ) : phase === "sent" ? (
-            <p className="small" role="status"><b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b> כדאי לפתוח אותו באותו מכשיר ובאותו דפדפן. לא הגיע? כדאי לבדוק בספאם.</p>
+            <p className="small" role="status"><b>שלחנו קישור אישור ל־<span className="ltr">{email}</span>.</b> פתחו אותו באותו מכשיר ובאותו דפדפן. לא הגיע? בדקו בספאם.</p>
           ) : (
             <form className="stack" onSubmit={start}>
               <p className="small"><b>מייל כשמשהו משתנה <bdi>{prefixed("ב", orgName)}</bdi></b>: מינוי בשיווק, החלפת משרד, קמפיין חדש. בלי סיסמה.</p>

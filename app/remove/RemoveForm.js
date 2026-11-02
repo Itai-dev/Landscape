@@ -3,10 +3,10 @@ import { useState } from "react";
 
 const ERR = {
   not_configured: "אי אפשר לשלוח את הבקשה מהאתר הזה כרגע.",
-  save_failed: "השמירה נכשלה. מה שמילאתם נשאר כאן, אפשר לנסות שוב.",
-  confirm: "צריך לסמן את התיבה.",
+  save_failed: "לא הצלחנו לשמור את הבקשה. מה שמילאתם נשאר כאן. נסו שוב.",
+  confirm: "כדי לשלוח, סמנו את התיבה שלמטה.",
   not_found: "לא מצאנו את האדם הזה במאגר. אולי כבר הוסר.",
-  rate_limited: "נשלחו מכאן הרבה בקשות בזמן קצר. אפשר לנסות שוב בעוד שעה, או לכתוב לנו.",
+  rate_limited: "נשלחו מכאן הרבה בקשות בזמן קצר. נסו שוב בעוד שעה, או כתבו לנו.",
 };
 
 export default function RemoveForm({ id, email = "" }) {
@@ -25,7 +25,7 @@ export default function RemoveForm({ id, email = "" }) {
     }).catch(() => null);
     const out = res ? await res.json().catch(() => ({})) : {};
     if (res?.ok) setState({ busy: false, done: true, error: "" });
-    else setState({ busy: false, done: false, error: ERR[out.error] || "השליחה נכשלה. מה שמילאתם נשאר כאן, אפשר לנסות שוב." });
+    else setState({ busy: false, done: false, error: ERR[out.error] || "לא הצלחנו לשלוח את הבקשה. מה שמילאתם נשאר כאן. נסו שוב." });
   }
 
   if (state.done) {
@@ -48,17 +48,17 @@ export default function RemoveForm({ id, email = "" }) {
       </div>
       <label className="check field">
         <input type="checkbox" checked={confirm} onChange={(e) => setConfirm(e.target.checked)} />
-        <span>אני האדם הזה, או פונה בשמו.</span>
+        <span>זה אני, או שאני פונה בשם האדם הזה.</span>
       </label>
       {state.error && (
         <div className="notice err" role="alert" style={{ marginBlockEnd: 16 }}>
           {state.error}
-          {email && <> אפשר לכתוב ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־CreativeIn")}`} className="ltr">{email}</a> ולציין את השם.</>}
+          {email && <> כתבו ל־<a href={`mailto:${email}?subject=${encodeURIComponent("בקשת הסרה מ־CreativeIn")}`} className="ltr">{email}</a> וציינו את השם.</>}
         </div>
       )}
       <button className="btn primary" disabled={!confirm || state.busy}>
         {state.busy ? <span className="spinner" aria-hidden /> : null}
-        שליחת בקשה
+        שליחת בקשת ההסרה
       </button>
     </form>
   );

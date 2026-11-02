@@ -1,5 +1,5 @@
 import { LinkIcon, MoreIcon, PersonIcon } from "@/components/Icons";
-import { orgLabel, roleHe, roleTypeLabel } from "@/lib/people";
+import { orgLabel, roleHe } from "@/lib/people";
 import { companyHref, orgById } from "@/lib/companies";
 import KindTag from "@/components/KindTag";
 
@@ -12,9 +12,12 @@ const host = (u) => {
 };
 const month = (d) => (d ? new Date(d).toLocaleDateString("he-IL", { month: "long", year: "numeric" }) : "");
 
-// One role: the company's logo and name, its type and the title as published, as one link to the company.
-function RoleLink({ r }) {
-  const he = r.role ? roleHe(r.role) : null;
+// The title as published, in Hebrew when it's a known loanword ("Head of Production" → its Hebrew form).
+const titleOf = (r) => (r?.role ? roleHe(r.role) || r.role : "");
+
+// A company line: logo, name and type, as one link to the company. `title` is shown only for a person's other
+// roles (the first role's title sits under the name).
+function RoleLink({ r, title = false }) {
   const o = orgById(r.org_id);
   return (
     <a className="orgline" href={companyHref(r.org_id)}>
@@ -22,10 +25,10 @@ function RoleLink({ r }) {
         {o?.logo_hi ? <img src={o.logo_hi} alt="" width={36} height={36} loading="lazy" decoding="async" style={o.logo_px ? { maxWidth: Math.min(o.logo_px, 30), maxHeight: Math.min(o.logo_px, 30) } : undefined} /> : (orgLabel(r) || "").slice(0, 1)}
       </span>
       <span className="orgtext">
-        <span className="org"><bdi>{orgLabel(r)}</bdi></span>
-        <span className="otags">
+        {title && titleOf(r) && <span className="otitle"><bdi>{titleOf(r)}</bdi></span>}
+        <span className="orgrow">
+          <span className="org"><bdi>{orgLabel(r)}</bdi></span>
           {o?.kind && <KindTag kind={o.kind} />}
-          {r.role && <span className="ttag" title={he ? r.role : undefined}><bdi>{he || r.role}</bdi></span>}
         </span>
       </span>
     </a>
@@ -50,7 +53,7 @@ export default function SeedCard({ p, claim = false }) {
         <span className="avatar md initials" aria-hidden lang="en">{initials(p.name) || <PersonIcon size={22} />}</span>
         <div>
           <h3><bdi>{p.name}</bdi></h3>
-          {roleTypeLabel(first.role_type) && <span className="kindlabel">{roleTypeLabel(first.role_type)}</span>}
+          {titleOf(first) && <p className="ptitle"><bdi>{titleOf(first)}</bdi></p>}
         </div>
         <details className="menu">
           <summary aria-label={`עוד אפשרויות: ${p.name}`}><MoreIcon size={20} /></summary>
@@ -61,7 +64,7 @@ export default function SeedCard({ p, claim = false }) {
         </details>
       </div>
       <div className="roles">
-        {[first, ...rest.slice(0, 1)].map((r, i) => <RoleLink key={i} r={r} />)}
+        {[first, ...rest.slice(0, 1)].map((r, i) => <RoleLink key={i} r={r} title={i > 0} />)}
         {rest.length > 1 && <p className="role muted">ועוד {rest.length - 1} תפקידים</p>}
       </div>
       <div className="meta">

@@ -45,3 +45,13 @@
 .jobs .jhead { margin: 0; font-weight: 500; color: var(--ink); line-height: 1.5; }
 .jobs .jmeta { margin: 0; font-size: var(--t-sm); color: var(--muted); }
 .jobs .jmeta a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+/* A job row opens the job: the headline link stretches over the row; the company link sits above it. */
+.jobs li.jclick { position: relative; transition: background .2s; }
+.jobs .jlink { color: var(--ink); text-decoration: none; }
+.jobs .jlink::after { content: ""; position: absolute; inset: 0; }
+.jobs .jlink:focus-visible { outline: none; }
+.jobs li.jclick:has(.jlink:focus-visible) { outline: 2px solid var(--accent); outline-offset: -2px; }
+.jobs .jorg { position: relative; z-index: 1; }
+.jobs .jgo { margin-inline-start: auto; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border: 1px solid var(--ink); border-radius: var(--r); color: var(--ink); font-weight: 500; font-size: var(--t-xs); white-space: nowrap; }
+.jobs .jmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+@media (hover: hover) { .jobs li.jclick:hover { background: var(--soft); } .jobs li.jclick:hover .jgo { background: var(--ink); color: var(--bg); } }

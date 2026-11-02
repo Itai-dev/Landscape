@@ -1,0 +1,45 @@
+{
+  "id": "rakuten-viber",
+  "name": "Rakuten Viber",
+  "aka": [
+    "Viber"
+  ],
+  "kind": "client",
+  "categories": [
+    "tech",
+    "telecom"
+  ],
+  "description": "Messaging and calling app founded in Israel in 2010 and acquired by Japan's Rakuten in 2014; its Israeli office is in Bnei Brak. Runs an in-house creative team (Creative Director, Creative Lead) for Viber for Business marketing that works with agencies, freelancers and production partners and is adopting AI creative tools (job posting, Oct 2026).",
+  "description_he": "אפליקציית מסרים ושיחות שנוסדה בישראל ב־2010 ונרכשה על ידי Rakuten היפנית ב־2014; המשרד הישראלי בבני ברק. מפעילה צוות קריאייטיב פנימי (Creative Director, Creative Lead) לשיווק של Viber for Business, שעובד עם משרדים, פרילנסרים וחברות הפקה ומאמץ כלי קריאייטיב מבוססי AI (מודעת דרושים, אוקטובר 2026).",
+  "location": {
+    "country": "IL",
+    "city": "Bnei Brak"
+  },
+  "founded": 2010,
+  "status": "active",
+  "website": "https://www.viber.com/",
+  "client_profile": {
+    "industry": "messaging app / B2B messaging",
+    "creative_needs": [
+      "B2B marketing video",
+      "motion graphics",
+      "social video",
+      "event and webinar design",
+      "AI-generated imagery"
+    ]
+  },
+  "relations": [
+    {
+      "type": "parent",
+      "target": "Rakuten"
+    }
+  ],
+  "sources": [
+    "https://en.wikipedia.org/wiki/Viber",
+    "https://il.linkedin.com/jobs/view/creative-lead-at-rakuten-viber-4483375344",
+    "https://en.globes.co.il/en/article-viber-taking-on-the-global-giants-1001213439"
+  ],
+  "confidence": "medium",
+  "added": "2026-10-26",
+  "last_verified": "2026-10-26"
+}

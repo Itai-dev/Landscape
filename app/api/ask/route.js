@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import { aiSearchOn } from "@/lib/config";
+import { aiSearchOn, aiSearchPremium, aiSearchFor } from "@/lib/config";
+import { serverClient, currentUser, adminClient } from "@/lib/supabase/server";
+import { planOf } from "@/lib/subscription";
 import { askDirectory } from "@/lib/ask";
 import { readJson } from "@/lib/guard";
 
@@ -23,14 +25,23 @@ function allowed(ip) {
   return true;
 }
 
-// GET tells the companies app whether to show the "Ask AI" tab at all.
+// AI_SEARCH=premium: only signed-in accounts with an active plan.
+async function allowedHere() {
+  if (aiSearchOn()) return true;
+  if (!aiSearchPremium()) return false;
+  const user = await currentUser(await serverClient()).catch(() => null);
+  const db = user && adminClient();
+  return Boolean(db && aiSearchFor((await planOf(db, user.id)).premium));
+}
+
+// GET tells the companies app whether to show the "Ask AI" tab at all (`premium`: it exists, for premium).
 export async function GET() {
-  return NextResponse.json({ ready: aiSearchOn() }, { headers: { "cache-control": "no-store" } });
+  return NextResponse.json({ ready: await allowedHere(), premium: aiSearchPremium() }, { headers: { "cache-control": "private, no-store" } });
 }
 
 // POST {q, lang?, crafts?} → {summary, results: [{id, why}], followups}
 export async function POST(request) {
-  if (!aiSearchOn()) return NextResponse.json({ error: "ai_unavailable" }, { status: 503 });
+  if (!(await allowedHere())) return NextResponse.json({ error: aiSearchPremium() ? "premium_required" : "ai_unavailable" }, { status: aiSearchPremium() ? 402 : 503 });
   const ip = (request.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
   if (!allowed(ip)) return NextResponse.json({ error: "rate_limited" }, { status: 429 });
   const body = (await readJson(request, 4 * 1024)) || {};

@@ -7,6 +7,7 @@
     "commercial-production"
   ],
   "description": "Israeli commercial production company credited on TV spots including Tadiran (agency Boroda Kaplan, director Rani Carmeli), Gad Dairies' 'Ray of Cheese' with chef Eyal Shani (Reuveni Pridan) and Bank Yahav (Lead Ogilvy).",
+  "description_he": "חברת הפקות פרסומות ישראלית שמופיעה בקרדיטים של תשדירי טלוויזיה, בהם תדיראן (משרד בורודה קפלן, בימוי רני כרמלי), \"קרן של גבינה\" של מחלבות גד עם השף אייל שני (ראובני פרידן) ובנק יהב (Lead Ogilvy).",
   "location": {
     "country": "IL"
   },
@@ -61,6 +62,11 @@
       "type": "client",
       "target": "delek-israel",
       "note": "75th anniversary AI spot to Mosh Ben Ari's song, 2026-10, via GO, dir. Eli Sverdlov (production) (ICE credits)"
+    },
+    {
+      "type": "client",
+      "target": "freesbe",
+      "note": "AI spot bringing back Israel 'Poli' Poliakov with his daughter Yael, 2026-10, dir. Asaf Harel, creative Alon Seifert (ICE ad of the week)"
     }
   ],
   "tags": [
@@ -72,11 +78,11 @@
     "https://www.ice.co.il/advertising-marketing/news/article/1001739",
     "https://www.ice.co.il/advertising-marketing/news/article/1133657",
     "https://www.ice.co.il/advertising-marketing/news/article/1096198",
-    "https://www.ice.co.il/advertising-marketing/news/article/1106021"
+    "https://www.ice.co.il/advertising-marketing/news/article/1106021",
+    "https://www.ice.co.il/advertising-marketing/news/article/1134749"
   ],
   "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "notes": "English name is a transliteration of the Hebrew credit 'אוג'; no website found.",
-  "description_he": "חברת הפקות פרסומות ישראלית שמופיעה בקרדיטים של תשדירי טלוויזיה, בהם תדיראן (משרד בורודה קפלן, בימוי רני כרמלי), \"קרן של גבינה\" של מחלבות גד עם השף אייל שני (ראובני פרידן) ובנק יהב (Lead Ogilvy)."
+  "last_verified": "2026-10-26",
+  "notes": "English name is a transliteration of the Hebrew credit 'אוג'; no website found."
 }

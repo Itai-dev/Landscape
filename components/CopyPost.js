@@ -20,7 +20,7 @@ export default function CopyPost({ text }) {
   }
   return (
     <button type="button" className="btn" onClick={copy} aria-live="polite">
-      {done ? "הועתק. אפשר להדביק בלינקדאין" : "העתקה כפוסט ללינקדאין"}
+      {done ? "הועתק. הדביקו בלינקדאין" : "העתקה כפוסט ללינקדאין"}
     </button>
   );
 }

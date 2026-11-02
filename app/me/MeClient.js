@@ -14,7 +14,7 @@ export default function MeClient({ initial }) {
     if (res.ok) { clearLocalData(); window.location.href = "/?deleted=1"; }
     else {
       setDeleting(false);
-      window.alert("המחיקה נכשלה. נסו שוב.");
+      window.alert("לא הצלחנו למחוק את החשבון. נסו שוב.");
     }
   }
 

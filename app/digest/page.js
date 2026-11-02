@@ -9,7 +9,7 @@ import FollowButton from "@/components/FollowButton";
 import "../tenders/tenders.css";
 
 // Crafts shown first in the picker; the rest sit under "עוד תחומים".
-const TOP = ["motion-design", "animation-3d", "animation-2d", "vfx", "post-production", "editing", "sound-design", "branding", "illustration", "commercial-production", "content-studio", "ai-creative"];
+const TOP = ["creative-direction", "art-direction", "creative-strategy", "brand-strategy", "copywriting", "ai-creative", "branding", "motion-design", "digital-design", "content-studio", "commercial-production", "editing"];
 const WEB_ITEMS = 8; // the web edition shows a little more than the email
 
 const parseCrafts = (v) => String(v || "").split(",").map((s) => s.trim()).filter((s) => CRAFT_SLUGS.includes(s)).slice(0, 8);
@@ -69,19 +69,19 @@ export default async function Digest({ searchParams }) {
         <span className="eyebrow">{d.range}</span>
         <h1>השבוע בתעשייה</h1>
         <p>
-          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה יכול להיות רלוונטי.</> : "מי מונה לשיווק, מי החליף משרד, אילו מכרזים פורסמו ואילו משרות נפתחו. כל פרט עם מקור, תאריך ולמה הוא רלוונטי."}
+          {who ? <>מה השתנה השבוע אצל מי שמזמין <b>{who}</b>, ולמה זה יכול להיות רלוונטי.</> : "מי מונה, מי עבר משרד, ומה נפתח להגשה. כל פרט עם מקור, תאריך ולמה הוא רלוונטי."}
         </p>
       </div>
 
       <div className="dlayout">
         <aside className="dside" aria-label="הרשמה ושיתוף">
           <div className="panel stack" id="subscribe-panel">
-            <h2>לקבל את זה כל יום ראשון</h2>
+            <h2>קבלו את זה כל יום ראשון</h2>
             <p className="muted">בבוקר, לפני כולם, רק מה ששייך לתחומים שלכם. חינם, ואפשר להסיר בלחיצה.</p>
             <DigestSubscribe crafts={chosen} where="digest-page" />
           </div>
           <div className="card stack share">
-            <h3>לשתף</h3>
+            <h3>שתפו</h3>
             <p className="muted small">פוסט מוכן עם העדכונים הבולטים וקישור ל״השבוע בתעשייה״ באתר.</p>
             <CopyPost text={linkedinPost(d, base)} />
           </div>
@@ -89,7 +89,7 @@ export default async function Digest({ searchParams }) {
             <div className="card stack">
               <h3>סקר התעריפים 2026</h3>
               <p className="muted small">4 דקות, ותראו כמה גובים אחרים בתחום שלכם ותוך כמה זמן משלמים להם.</p>
-              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">לענות על הסקר ‹</a>
+              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">למילוי הסקר ‹</a>
             </div>
           )}
         </aside>

@@ -29,7 +29,7 @@ export default function AskAnswer({ q }) {
     <section className="askbox" aria-live="polite" aria-busy={state.status === "loading"}>
       <p className="asklabel"><span className="askdot" aria-hidden="true" />תשובה מהירה</p>
       {state.status === "loading" && <p className="askwait">מחפשים בכל הנתונים באתר…</p>}
-      {state.status === "busy" && <p className="askwait">הרבה שאלות כרגע. אפשר לנסות שוב בעוד כמה דקות; התוצאות הרגילות מופיעות למטה.</p>}
+      {state.status === "busy" && <p className="askwait">הרבה שאלות כרגע. נסו שוב בעוד כמה דקות; התוצאות הרגילות מופיעות למטה.</p>}
       {state.status === "done" && (
         <>
           <p className="asksum" dir="auto">{state.summary}</p>
@@ -48,7 +48,7 @@ export default function AskAnswer({ q }) {
               {state.followups.map((f) => <a key={f} className="tag" href={`/search?q=${encodeURIComponent(f)}`} data-track="ai_followup_click">{f}</a>)}
             </div>
           )}
-          <p className="askfine">נכתב בעזרת AI, מתוך המידע באתר בלבד. כדאי לבדוק כל פרט במקור שלו בדף החברה.</p>
+          <p className="askfine">נכתב בעזרת AI, מתוך המידע באתר בלבד. בדקו כל פרט במקור שלו בדף החברה.</p>
         </>
       )}
     </section>

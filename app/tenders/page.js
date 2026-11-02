@@ -76,7 +76,7 @@ export default async function Tenders({ searchParams }) {
       <section aria-labelledby="open-h">
         <div className="subhead">
           <h2 id="open-h">פתוחים להגשה{open.length > 0 && <> <span className="count">{open.length}</span></>}</h2>
-          {open.length > 0 && <p>המידע לפי פרסום רשמי. לפני הגשה יש לבדוק את מסמכי המכרז במקור.</p>}
+          {open.length > 0 && <p>המידע לפי פרסום רשמי. לפני הגשה, בדקו את מסמכי המכרז במקור.</p>}
         </div>
         {open.length === 0 ? (
           <div className="soon">
@@ -84,7 +84,7 @@ export default async function Tenders({ searchParams }) {
             <p>{upcoming.length > 0 ? "יש מכרזים שפורסמו וההגשה אליהם תיפתח בקרוב (למטה). " : ""}מכרזים חדשים נוספים כל שבוע, ומגיעים גם למייל ״השבוע בתעשייה״.</p>
             <div className="row center">
               {filtered && <a className="btn" href="/tenders">לכל המכרזים</a>}
-              <a className="btn primary" href="/digest#subscribe">לקבל במייל</a>
+              <a className="btn primary" href="/digest#subscribe">להרשמה למייל השבועי</a>
             </div>
           </div>
         ) : (
@@ -96,7 +96,7 @@ export default async function Tenders({ searchParams }) {
         <section aria-labelledby="upcoming-h">
           <div className="subhead">
             <h2 id="upcoming-h">פורסמו, ההגשה עוד לא נפתחה <span className="count">{upcoming.length}</span></h2>
-            <p>המכרז כבר פורסם ואפשר לקרוא את המסמכים ולהתכונן. הגשת הצעות נפתחת בתאריך שמופיע בכרטיס.</p>
+            <p>המכרז כבר פורסם. קראו את המסמכים והתכוננו. הגשת הצעות נפתחת בתאריך שמופיע בכרטיס.</p>
           </div>
           <div className="tgrid">{upcoming.map((t) => <TenderCard key={t.id} t={t} />)}</div>
         </section>
@@ -106,16 +106,19 @@ export default async function Tenders({ searchParams }) {
         <section id="jobs" aria-labelledby="jobs-h">
           <div className="subhead">
             <h2 id="jobs-h">משרות שפורסמו <span className="count">{jobs.length}</span></h2>
-            <p>משרות קריאייטיב מ־45 הימים האחרונים, מלינקדאין ומאתרי החברות. כדאי לבדוק במקור שהמשרה עדיין פתוחה.</p>
+            <p>משרות קריאייטיב מ־45 הימים האחרונים, מלינקדאין ומאתרי החברות. בדקו במקור שהמשרה עדיין פתוחה.</p>
           </div>
           <ol className="jobs">
             {jobs.map((j) => (
-              <li key={j.id}>
-                <p className="jhead"><Bidi>{j.headline}</Bidi></p>
+              <li key={j.id} className={j.source_url ? "jclick" : undefined}>
+                {/* The whole row opens the job (a stretched link); the company name stays its own link. */}
+                {j.source_url
+                  ? <a className="jhead jlink" href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs"><Bidi>{j.headline}</Bidi></a>
+                  : <p className="jhead"><Bidi>{j.headline}</Bidi></p>}
                 <p className="jmeta">
-                  {j.org?.name && (j.org.href ? <a href={rel(j.org.href)} data-track="company_open" data-track-where="jobs"><bdi>{j.org.name}</bdi></a> : <bdi>{j.org.name}</bdi>)}
+                  {j.org?.name && (j.org.href ? <a className="jorg" href={rel(j.org.href)} data-track="company_open" data-track-where="jobs"><bdi>{j.org.name}</bdi></a> : <bdi>{j.org.name}</bdi>)}
                   {j.org?.name ? " · " : ""}{j.day}
-                  {j.source_url && <> · <a href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs"><bdi>{j.source || "מקור"}</bdi></a></>}
+                  {j.source_url && <span className="jgo" aria-hidden="true">למשרה ב־<bdi>{String(j.source || "מקור").replace(/\s*jobs$/i, "")}</bdi> ↗</span>}
                 </p>
               </li>
             ))}
@@ -139,7 +142,7 @@ export default async function Tenders({ searchParams }) {
           ממינהל הרכש הממשלתי, מערכות המכרזים של רשויות מקומיות, חברות ממשלתיות, אוניברסיטאות וגופים ציבוריים.
           אנחנו מביאים את הכותרת, הגוף המזמין ותאריך ההגשה, וקישור לפרסום הרשמי. בלי פרטי אנשי קשר.
         </p>
-        <p className="small muted">המידע לפי פרסום רשמי; יש לבדוק את מסמכי המכרז. מועדים משתנים לפעמים, והמקור הוא הקובע.</p>
+        <p className="small muted">המידע לפי פרסום רשמי; בדקו את מסמכי המכרז. מועדים משתנים לפעמים, והמקור הוא הקובע.</p>
         <a className="btn primary" href="/digest#subscribe">מכרזים חדשים במייל, כל יום ראשון</a>
       </div>
     </div>
