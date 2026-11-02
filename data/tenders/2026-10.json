@@ -25,7 +25,7 @@
       "עיצוב",
       "גרפיקה"
     ],
-    "last_checked_at": "2026-10-26",
+    "last_checked_at": "2026-11-02",
     "added": "2026-10-26",
     "note": "Tender document: https://www2.haifa.muni.il/Michrazim/TendersFiles/44-2026First.pdf. Physical submission (paper + digital copy) to the municipal tender box; multiple winners."
   },
@@ -57,7 +57,7 @@
       "טקסים"
     ],
     "fee_ils": 0,
-    "last_checked_at": "2026-10-26",
+    "last_checked_at": "2026-11-02",
     "added": "2026-10-26",
     "note": "Clarification questions until 10/11/2026 15:00 via the online system; physical submission only."
   },
@@ -109,7 +109,7 @@
       "אירועים"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-26",
+    "last_checked_at": "2026-11-02",
     "added": "2026-10-20"
   },
   {
@@ -136,7 +136,7 @@
       "הסברה"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-26",
+    "last_checked_at": "2026-11-02",
     "added": "2026-10-20"
   },
   {
@@ -152,7 +152,7 @@
     "published_at": "2026-10-05",
     "submission_opens": "2026-10-13T12:00",
     "deadline_at": "2026-11-02T12:00",
-    "status": "open",
+    "status": "closed",
     "scope_summary": "חברות הפקה לקמפיינים ממשלתיים: הפקת סרטים ותוכן לקמפיינים של משרדי הממשלה, וליווי ההפקה.",
     "crafts": [
       "commercial-production",
@@ -164,8 +164,8 @@
       "קמפיינים"
     ],
     "submission_url": "https://quickbid.gpa.gov.il",
-    "last_checked_at": "2026-10-26",
+    "last_checked_at": "2026-11-02",
     "added": "2026-10-20",
-    "note": "Clarification answers posted 18/10/2026; deadline unchanged."
+    "note": "Clarification answers posted 18/10/2026; deadline unchanged. Submissions closed 02/11/2026 12:00 (checked on the official page the same day)."
   }
 ]

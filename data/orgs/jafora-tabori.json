@@ -1,0 +1,63 @@
+{
+  "id": "jafora-tabori",
+  "name": "Jafora-Tabori",
+  "name_he": "יפאורה-תבורי",
+  "kind": "client",
+  "categories": [
+    "food-beverage"
+  ],
+  "description": "Israeli soft-drinks company, described as the country's second-largest soft-drinks producer and marketer, formed through a merger in 1990. Brands include Spring, Crystal, Tapuzina, Mitz Paz, Schweppes, RC Cola, Ein Gedi and Fruit & Veg; plant in Rehovot.",
+  "description_he": "חברת משקאות קלים ישראלית, שמתוארת כיצרנית והמשווקת השנייה בגודלה בתחום, שהוקמה ממיזוג ב־1990. בין המותגים: ספרינג, קריסטל, תפוזינה, מיץ פז, שוופס, RC קולה, עין גדי ו־Fruit & Veg; מפעל ברחובות.",
+  "location": {
+    "country": "IL"
+  },
+  "founded": 1990,
+  "status": "active",
+  "website": "https://www.jafora.co.il",
+  "contact_url": "https://www.jafora.co.il/?page_id=35",
+  "careers_url": "https://www.jafora.co.il/come-work-with-us/",
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/jafora-tabori/",
+    "facebook": "https://www.facebook.com/drinks.jafora/"
+  },
+  "key_people": [
+    {
+      "name": "Doron Glazer",
+      "role": "CEO",
+      "role_type": "executive",
+      "source": "https://www.ice.co.il/positions/news/article/1133143",
+      "as_of": "2026-10-11"
+    },
+    {
+      "name": "Galit Mor-Meshorer",
+      "role": "Marketing Division Manager",
+      "role_type": "marketing",
+      "source": "https://www.ice.co.il/positions/news/article/1133143",
+      "as_of": "2026-10-11",
+      "note": "Appointment announced 11 Oct 2026, starting in the following weeks; also joins the management team. Previously a business-unit manager at Tnuva and in marketing roles at Pelephone."
+    }
+  ],
+  "client_profile": {
+    "industry": "beverages",
+    "creative_needs": [
+      "TV commercials",
+      "social video",
+      "packaging design",
+      "product photography / 3D packshots",
+      "branding"
+    ]
+  },
+  "tags": [
+    "soft drinks",
+    "FMCG"
+  ],
+  "sources": [
+    "https://www.jafora.co.il",
+    "https://www.ice.co.il/positions/news/article/1133143",
+    "https://shivuk.me/news/marketingnews/39799"
+  ],
+  "confidence": "high",
+  "added": "2026-11-02",
+  "last_verified": "2026-11-02",
+  "notes": "Ad agency not found in public sources this run. HQ city not stated on the official site (plant in Rehovot per the site's news)."
+}

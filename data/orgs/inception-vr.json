@@ -2,20 +2,24 @@
   "id": "inception-vr",
   "name": "Inception",
   "aka": [
-    "Inception VR"
+    "Inception VR",
+    "Inception XR",
+    "InceptionXR"
   ],
   "kind": "studio",
   "categories": [
     "xr",
     "creative-technology"
   ],
-  "description": "Tel Aviv immersive-content company founded in early 2016 that produced and distributed interactive VR content through its own app across Oculus, Gear VR, Daydream, Vive and mobile; raised a $15M Series A led by RTL Group in 2017.",
+  "description": "Tel Aviv immersive-content company founded in 2016 that first produced and distributed interactive VR content through its own app (raised a $15M Series A led by RTL Group in 2017), then moved into VR training for healthcare, education and telecom as Inception XR; acquired by Relias (Bertelsmann) in March 2025.",
+  "description_he": "חברת תוכן אימרסיבי תל אביבית שנוסדה ב־2016; בהתחלה הפיקה והפיצה תוכן VR אינטראקטיבי דרך אפליקציה משלה (גייסה 15 מיליון דולר בסבב A בהובלת RTL Group ב־2017), ובהמשך עברה, בשם Inception XR, לסימולציות הדרכה ב־VR לבריאות, לחינוך ולתקשורת; נרכשה על ידי Relias (ברטלסמן) במרץ 2025.",
   "location": {
     "country": "IL",
     "city": "Tel Aviv"
   },
   "founded": 2016,
-  "status": "unknown",
+  "status": "acquired",
+  "website": "https://inceptionxr.com",
   "key_people": [
     {
       "name": "Benny Arbel",
@@ -48,14 +52,21 @@
     {
       "type": "investor",
       "target": "RTL Group"
+    },
+    {
+      "type": "acquired_by",
+      "target": "Relias",
+      "note": "Acquisition announced 11 Mar 2025 (Relias / Bertelsmann press release)"
     }
   ],
   "sources": [
-    "https://israeltrade.org.au/2017/08/02/israeli-immersive-content-co-inception-raises-15m/"
+    "https://israeltrade.org.au/2017/08/02/israeli-immersive-content-co-inception-raises-15m/",
+    "https://www.bertelsmann.com/en/media/news/relias-acquires-inception-xr-adds-virtual-reality-training.html",
+    "https://www.businesswire.com/news/home/20250310741852/en",
+    "https://startupim.com/company/inception-vr"
   ],
-  "confidence": "low",
+  "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
-  "notes": "Current status not verified (latest source 2017); website not confirmed.",
-  "description_he": "חברת תוכן אימרסיבי תל אביבית שנוסדה בתחילת 2016, שהפיקה והפיצה תוכן VR אינטראקטיבי דרך אפליקציה משלה ב-Oculus, Gear VR, Daydream, Vive ובמובייל; גייסה 15 מיליון דולר בסבב A בהובלת RTL Group ב-2017."
+  "last_verified": "2026-11-02",
+  "notes": "Status re-verified 2026-11-02: acquired by Relias (a Bertelsmann company), announced 11 Mar 2025; website inceptionxr.com. Key people listed are from 2017 sources."
 }
