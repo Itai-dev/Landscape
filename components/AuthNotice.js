@@ -11,7 +11,7 @@ export default function AuthNotice() {
   if (kind === "auth_error") {
     return (
       <div className="notice err" role="alert" style={{ marginBlockEnd: 20 }}>
-        הקישור לא עבד, אולי פג תוקפו או נפתח בדפדפן אחר. בקשו קישור חדש למטה.
+        הקישור לא הכניס אתכם: אולי פג תוקפו, או שנפתח בדפדפן אחר מזה שבו נרשמתם (למשל בתוך אפליקציית המייל). אפשר לבקש כאן קישור חדש ולפתוח אותו באותו דפדפן.
       </div>
     );
   }
