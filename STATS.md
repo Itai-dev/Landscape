@@ -1,12 +1,12 @@
 # Landscape stats
 
-_Generated 2026-10-26 · 430 organizations_
+_Generated 2026-11-02 · 431 organizations_
 
 ## By kind
 
 | Kind | Count |
 |---|---|
-| client | 137 |
+| client | 138 |
 | studio | 128 |
 | startup | 67 |
 | agency | 43 |
@@ -17,14 +17,14 @@ _Generated 2026-10-26 · 430 organizations_
 
 | Country | Count |
 |---|---|
-| IL | 430 |
+| IL | 431 |
 
 ## Top cities
 
 | City | Count |
 |---|---|
 | Tel Aviv | 220 |
-| — | 78 |
+| — | 79 |
 | Jerusalem | 18 |
 | Ramat Gan | 16 |
 | Petah Tikva | 15 |
@@ -66,8 +66,8 @@ _Generated 2026-10-26 · 430 organizations_
 | CGI / 3D visualization | 16 |
 | Generative AI — video | 16 |
 | School / education | 15 |
+| Food & beverage | 15 |
 | Game development | 14 |
-| Food & beverage | 14 |
 | Experiential / installations / events | 12 |
 | Media buying agency | 11 |
 | Ad-tech / creative optimization | 11 |
@@ -112,6 +112,6 @@ _Generated 2026-10-26 · 430 organizations_
 
 | Level | Count |
 |---|---|
-| high | 239 |
-| medium | 167 |
-| low | 24 |
+| high | 240 |
+| medium | 169 |
+| low | 22 |

@@ -7,6 +7,7 @@
     "travel-hospitality"
   ],
   "description": "Israel's national flag carrier (est. 1948), listed on the TASE; runs the Fly Card co-branded credit card with Isracard. Its ad was voted most-liked in Globes' 2025 year-end survey.",
+  "description_he": "חברת התעופה הלאומית של ישראל (נוסדה ב-1948), נסחרת בבורסת תל אביב; מפעילה עם ישראכרט את כרטיס האשראי המשותף Fly Card. הפרסומת שלה נבחרה לאהודה ביותר בסקר סוף השנה של גלובס ל-2025.",
   "location": {
     "country": "IL",
     "city": "Lod"
@@ -53,7 +54,7 @@
     {
       "type": "agency",
       "target": "mccann-tel-aviv",
-      "note": "agency (per trade press / agency client list)"
+      "note": "agency (per trade press / agency client list); El Al Matmid × Yellow points campaign, 2026-10 (ICE credits; production Shoshi & Udi)"
     },
     {
       "type": "agency",
@@ -69,11 +70,11 @@
     "https://www.globes.co.il/news/article.aspx?did=1001525894",
     "https://www.ice.co.il/positions/news/article/1129186",
     "https://www.globes.co.il/news/article.aspx?did=1001558746",
-    "https://www.ice.co.il/advertising-marketing/news/article/1116579"
+    "https://www.ice.co.il/advertising-marketing/news/article/1116579",
+    "https://www.ice.co.il/advertising-marketing/news/article/1135713"
   ],
   "confidence": "high",
   "added": "2026-10-18",
-  "last_verified": "2026-10-19",
-  "notes": "HQ at Ben Gurion Airport (near Lod). Agency as of 2026-10: McCann Tel Aviv lists El Al and FLY CARD among its main budgets (Globes, Oct 2026); FLY CARD earlier campaigns were by Peach (Gitam group) before McCann took over (Globes, Aug 2026).",
-  "description_he": "חברת התעופה הלאומית של ישראל (נוסדה ב-1948), נסחרת בבורסת תל אביב; מפעילה עם ישראכרט את כרטיס האשראי המשותף Fly Card. הפרסומת שלה נבחרה לאהודה ביותר בסקר סוף השנה של גלובס ל-2025."
+  "last_verified": "2026-11-02",
+  "notes": "HQ at Ben Gurion Airport (near Lod). Agency as of 2026-10: McCann Tel Aviv lists El Al and FLY CARD among its main budgets (Globes, Oct 2026); FLY CARD earlier campaigns were by Peach (Gitam group) before McCann took over (Globes, Aug 2026)."
 }

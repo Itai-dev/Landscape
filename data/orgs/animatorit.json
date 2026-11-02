@@ -1,6 +1,6 @@
 {
   "id": "animatorit",
-  "name": "Animatorit Studio",
+  "name": "Animatorit",
   "name_he": "אנימטורית",
   "kind": "studio",
   "categories": [
@@ -28,10 +28,11 @@
   "sources": [
     "https://animatorit.com",
     "https://revenuebase.ai/companies/animation-studios/israel",
-    "https://animatorit.com/"
+    "https://animatorit.com/",
+    "https://www.animatorit.com/"
   ],
-  "confidence": "low",
+  "confidence": "medium",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-11-02",
   "notes": "Thin site; no named people or clients."
 }

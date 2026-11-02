@@ -19,6 +19,7 @@
   "size": "11-50",
   "status": "active",
   "website": "https://shuffll.com",
+  "contact_url": "https://shuffll.com/contact/",
   "links": {
     "linkedin": "https://www.linkedin.com/company/shuffll/",
     "youtube": "https://www.youtube.com/@shuffll-b2b-videos"
@@ -54,6 +55,6 @@
   ],
   "confidence": "low",
   "added": "2026-10-18",
-  "last_verified": "2026-10-18",
+  "last_verified": "2026-11-02",
   "notes": "HQ listed as New York in one place and Tel Aviv-Yafo (registered address) in another."
 }

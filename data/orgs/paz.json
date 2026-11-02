@@ -52,7 +52,7 @@
     {
       "type": "agency",
       "target": "mccann-tel-aviv",
-      "note": "2022 rebrand of the EV-charging network around a fictional character (ICE)"
+      "note": "2022 rebrand of the EV-charging network around a fictional character (ICE); Yellow × El Al Matmid points campaign, 2026-10 (ICE credits)"
     },
     {
       "type": "agency",
@@ -66,10 +66,11 @@
     "https://www.ice.co.il/advertising-marketing/news/article/1025670",
     "https://www.paz.co.il/about/about-the-company",
     "https://www.ice.co.il/advertising-marketing/news/article/1129217",
-    "https://www.bizportal.co.il/capitalmarket/quote/profile/1100007"
+    "https://www.bizportal.co.il/capitalmarket/quote/profile/1100007",
+    "https://www.ice.co.il/advertising-marketing/news/article/1135713"
   ],
   "confidence": "medium",
   "added": "2026-10-19",
-  "last_verified": "2026-10-19",
+  "last_verified": "2026-11-02",
   "notes": "McCann link dates from 2022 (ICE profile of then-marketer Adi Negbi); current marketing head not confirmed."
 }

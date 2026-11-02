@@ -1,5 +1,79 @@
 [
   {
+    "type": "campaign",
+    "org_id": "el-al",
+    "org_name": "El Al Israel Airlines",
+    "related_ids": [
+      "paz",
+      "mccann-tel-aviv",
+      "shoshi-and-udi"
+    ],
+    "date": "2026-10-30",
+    "headline": "El Al's Matmid frequent-flyer club and Paz's Yellow app launch a joint points campaign: agency McCann, production Shoshi & Udi, director Kobi Havia, plus a credited AI director; shot on green screen with much of the work done in post with AI tools",
+    "headline_he": "מועדון הנוסע המתמיד של אל על ואפליקציית Yellow של פז בקמפיין משותף לצבירת נקודות: משרד הפרסום מקאן, הפקה: שושי ואודי, בימוי: קובי חביה, ולצידו קרדיט לבימוי AI; צולם על מסך ירוק ורוב העבודה נעשתה בפוסט עם כלי AI",
+    "why": "Another mainstream spot that lists an AI director next to the live-action director, with the heavy lifting moved from the shoot to post-production.",
+    "why_he": "עוד פרסומת מיינסטרים שמציינת בימוי AI לצד הבמאי של הצילומים, כשעיקר העבודה עובר מהסט לפוסט־פרודקשן.",
+    "credits": {
+      "agency": "McCann Tel Aviv",
+      "production": "Shoshi & Udi",
+      "director": "Kobi Havia"
+    },
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1135713",
+    "source": "ICE",
+    "added": "2026-11-02",
+    "v": 1,
+    "id": "sig-2026-10-30-el-al-b578e5"
+  },
+  {
+    "type": "campaign",
+    "org_name": "JACK KUBA",
+    "date": "2026-10-29",
+    "headline": "Lingerie chain JACK KUBA (37 stores) puts about NIS 850K into a campaign for its winter 2027 collection on Keshet 12, Reshet 13, Kan 11 and Channel 9, plus digital and social; no agency or production credits published",
+    "headline_he": "רשת ההלבשה התחתונה JACK KUBA (37 חנויות) משקיעה כ־850,000 ₪ בקמפיין לקולקציית חורף 2027 בקשת 12, ברשת 13, בכאן 11 ובערוץ 9, לצד דיגיטל וסושיאל; לא פורסמו קרדיטים של משרד או הפקה",
+    "why": "A family-run fashion retailer buying national TV for a seasonal collection; seasonal fashion campaigns usually come with product photography and social cut-downs.",
+    "why_he": "רשת אופנה משפחתית שקונה טלוויזיה ארצית לקולקציה עונתית; קמפיינים עונתיים באופנה מגיעים בדרך כלל עם צילומי מוצר וגרסאות קצרות לסושיאל.",
+    "source_url": "https://www.ice.co.il/advertising-marketing/news/article/1135662",
+    "source": "ICE",
+    "added": "2026-11-02",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-29-jack-kuba-3aaf92"
+  },
+  {
+    "type": "campaign",
+    "org_id": "lapam",
+    "org_name": "Israel Government Advertising Agency (LAPAM)",
+    "date": "2026-10-28",
+    "headline": "LAPAM exemption notice: Gray Content engaged for the campaign for the Day of Recognition for wounded IDF soldiers and victims of hostile acts (8 Nov 2026 – 7 May 2027)",
+    "headline_he": "הודעת פטור של לפ״מ: התקשרות עם גריי קונטנט לקמפיין יום ההוקרה לפצועי צה״ל ולנפגעי פעולות האיבה (8 בנובמבר 2026 עד 7 במאי 2027)",
+    "why": "Gray Content's third LAPAM engagement in about two weeks, after the falling-debris and road-safety campaigns; it is not in the directory yet.",
+    "why_he": "ההתקשרות השלישית של גריי קונטנט עם לפ״מ בתוך כשבועיים, אחרי קמפיין הנפלים וקמפיין הבטיחות בדרכים; החברה עוד לא נמצאת במדריך.",
+    "credits": {
+      "production": "Gray Content"
+    },
+    "source_url": "https://mr.gov.il/ilgstorefront/he/p/4000623452",
+    "source": "mr.gov.il",
+    "added": "2026-11-02",
+    "v": 1,
+    "id": "sig-2026-10-28-lapam-1469ba"
+  },
+  {
+    "type": "hiring",
+    "org_id": "artlist",
+    "org_name": "Artlist",
+    "date": "2026-10-27",
+    "date_approx": true,
+    "headline": "Artlist hiring a Social Media Production Manager (Tel Aviv) to run the production pipeline for its Academy content, from creator partnerships to publishing, managing freelancers, agencies and the production budget",
+    "headline_he": "משרה פתוחה ב־Artlist: ניהול הפקת סושיאל (תל אביב), להובלת צנרת ההפקה של תוכן ה־Academy, משיתופי פעולה עם יוצרים ועד פרסום, כולל ניהול פרילנסרים, משרדים ותקציב ההפקה",
+    "why": "The role manages freelancers and agencies for creator content; it asks for editing in Premiere Pro or DaVinci Resolve and hands-on AI creative tools.",
+    "why_he": "התפקיד מנהל פרילנסרים ומשרדים בהפקת תוכן יוצרים; נדרשים עריכה ב־Premiere Pro או ב־DaVinci Resolve וניסיון מעשי בכלי AI לקריאייטיב.",
+    "source_url": "https://il.linkedin.com/jobs/view/social-media-production-manager-at-artlist-4483214913",
+    "source": "LinkedIn Jobs",
+    "added": "2026-11-02",
+    "v": 1,
+    "id": "sig-2026-10-27-artlist-85eaba"
+  },
+  {
     "type": "hiring",
     "org_id": "monday-com",
     "org_name": "monday.com",
@@ -105,6 +179,27 @@
     "added": "2026-10-26",
     "v": 1,
     "id": "sig-2026-10-22-isracard-5b286b"
+  },
+  {
+    "type": "campaign",
+    "org_name": "Carrefour Israel",
+    "related_ids": [
+      "lead-advertising"
+    ],
+    "date": "2026-10-22",
+    "headline": "Carrefour Israel names singer Yuval Raphael as its new presenter; a TV and digital campaign led by agency LEAD is due to air soon",
+    "headline_he": "קרפור ישראל בוחרת בזמרת יובל רפאל לפרזנטורית החדשה שלה; קמפיין לטלוויזיה ולדיגיטל בהובלת משרד הפרסום LEAD צפוי לעלות בקרוב",
+    "why": "A new presenter usually means a new campaign platform: TV spots, digital cut-downs and in-store materials built around her.",
+    "why_he": "פרזנטורית חדשה מביאה בדרך כלל פלטפורמת קמפיין חדשה: תשדירים, גרסאות לדיגיטל וחומרים לחנויות שנבנים סביבה.",
+    "credits": {
+      "agency": "LEAD"
+    },
+    "source_url": "https://www.mako.co.il/culture-articles/Article-5a4df396c0361a1027.htm",
+    "source": "mako",
+    "added": "2026-11-02",
+    "v": 1,
+    "org_id": null,
+    "id": "sig-2026-10-22-carrefour-israel-c90449"
   },
   {
     "type": "campaign",
@@ -638,6 +733,21 @@
     "id": "sig-2026-10-11-dream-20d759",
     "headline_he": "Dream (AI ריבוני / הגנת סייבר לאומית) מגייסת Motion, Video & Brand Designer (תל אביב) לראיונות מנהלים, סרטי לקוחות, סרטוני הסבר ותוכן לאירועים",
     "why_he": "בתפקיד יפיקו את הסרטים בעצמם או ינחו שותפי הפקה חיצוניים, כך שגם צוותים מבחוץ עשויים לקבל עבודה."
+  },
+  {
+    "type": "new_exec",
+    "org_id": "jafora-tabori",
+    "org_name": "Jafora-Tabori",
+    "date": "2026-10-11",
+    "headline": "Jafora-Tabori (Spring, Crystal, Tapuzina, Schweppes in Israel) appoints Galit Mor-Meshorer as head of its marketing division, joining the management team in the coming weeks; she comes from Tnuva (yogurt and protein categories) and Pelephone",
+    "headline_he": "יפאורה־תבורי (ספרינג, קריסטל, תפוזינה, שוופס בישראל) ממנה את גלית מור־משורר למנהלת אגף השיווק ולחברת הנהלה, בכניסה בשבועות הקרובים; היא מגיעה מתנובה (קטגוריות היוגורט והחלבון) ומפלאפון",
+    "why": "A new marketing head at Israel's second-largest soft-drinks company, responsible for brand strategy across a large portfolio; new marketing heads often review agencies and suppliers.",
+    "why_he": "מנהלת שיווק חדשה בחברת המשקאות הקלים השנייה בגודלה בישראל, אחראית על אסטרטגיית המותגים בפורטפוליו גדול; מנהלי שיווק חדשים בוחנים לעיתים קרובות את המשרדים והספקים.",
+    "source_url": "https://www.ice.co.il/positions/news/article/1133143",
+    "source": "ICE",
+    "added": "2026-11-02",
+    "v": 1,
+    "id": "sig-2026-10-11-jafora-tabori-4ced74"
   },
   {
     "id": "sig-2026-10-09-israir-2358ff",
