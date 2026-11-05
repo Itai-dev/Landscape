@@ -21,7 +21,7 @@ export default function EditionCard({ ed, busy = false }) {
           ))}
         </ul>
       ) : (
-        <p className="muted small">השבוע אין עדכון שמזכיר במפורש את התחומים האלה. במקומו מגיעים מכרזים ומי מזמין.</p>
+        <p className="muted small">השבוע לא היה עדכון שעוסק בתחומים האלה. במקומו תקבלו מכרזים ומי מזמין את התחומים.</p>
       )}
       {ed.tender && (
         <div className="dtender">

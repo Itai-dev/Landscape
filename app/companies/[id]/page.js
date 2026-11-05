@@ -155,7 +155,7 @@ export default async function CompanyPage({ params }) {
                 {updates.map((u) => (
                   <li key={u.id} className="ucard">
                     <p className="umeta"><b>{u.label}</b>{u.day ? ` · ${u.day}` : ""}</p>
-                    <p className="uhead"><Bidi>{u.headline}</Bidi></p>
+                    <p className="uhead">{u.href ? <a href={u.href} data-track="update_open" data-track-where="company_page"><Bidi>{u.headline}</Bidi></a> : <Bidi>{u.headline}</Bidi>}</p>
                     {u.why && <p className="uwhy">למה זה יכול להיות רלוונטי: <Bidi>{u.why}</Bidi></p>}
                     {u.source_url && (
                       <p className="uorg">

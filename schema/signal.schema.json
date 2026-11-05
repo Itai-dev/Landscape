@@ -109,6 +109,10 @@
       "type": "string",
       "maxLength": 400
     },
+    "title_he": {
+      "type": "string",
+      "maxLength": 90
+    },
     "why_he": {
       "type": "string",
       "maxLength": 400

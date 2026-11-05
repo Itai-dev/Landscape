@@ -1,8 +1,9 @@
 import { siteUrl } from "@/lib/digest";
 import { TOOLS, PREMIUM } from "@/lib/chrome.mjs";
 import { ORG_LIST } from "@/lib/orgs";
+import { UPDATES, updatePath } from "@/lib/front";
 
-// The public pages, and one page per company (/companies/<id>), dated by its last check.
+// The public pages, one page per company (/companies/<id>, dated by its last check) and one per update.
 export default function sitemap() {
   const base = siteUrl();
   const now = new Date();
@@ -10,6 +11,7 @@ export default function sitemap() {
   return [
     page("/", "weekly", 1),
     page("/companies", "weekly", 0.9),
+    page("/updates", "daily", 0.9),
     page("/tenders", "daily", 0.9),
     page("/digest", "weekly", 0.8),
     page("/join", "monthly", 0.7),
@@ -25,6 +27,12 @@ export default function sitemap() {
       lastModified: o.last_verified ? new Date(`${o.last_verified}T00:00:00Z`) : now,
       changeFrequency: "monthly",
       priority: 0.6,
+    })),
+    ...UPDATES.map((s) => ({
+      url: `${base}${updatePath(s.id)}`,
+      lastModified: new Date(`${s.added && s.added > s.date ? s.added : s.date}T00:00:00Z`),
+      changeFrequency: "monthly",
+      priority: 0.5,
     })),
   ];
 }
