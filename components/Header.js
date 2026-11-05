@@ -24,7 +24,7 @@ export default function Header() {
   const tab = here("/companies") ? "companies" : here("/people") ? "people" : here("/tenders") ? "tenders" : here("/join") || here("/me") || here("/digest/settings") ? "cta" : "";
   return (
     <>
-      <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: promoHtml() }} />
+      <div style={{ display: "contents" }} dangerouslySetInnerHTML={{ __html: promoHtml(Date.now(), { signedIn: Boolean(user) }) }} />
       {/* Pages with their own search box (/test, /search, /people, /tenders) hide the header one. */}
       <header className={["/test", "/search", "/people", "/tenders"].includes(path) ? "top nosearch" : "top"}>
         <div className="wrap">
