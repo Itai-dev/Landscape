@@ -26,7 +26,7 @@ const tryTrack = (name, props) => { try { track(name, props); } catch {} };
 // address. The newsletter is optional; saying yes still needs the consent box ticked on the address step
 // (unchecked by default, anti-spam law §30A). A sign-in link goes out; nothing is saved until it is opened
 // (the link carries the crafts and, if chosen, the frequency), and it lands in the personal area (/me).
-export default function JoinFlow({ crafts: all }) {
+export default function JoinFlow({ crafts: all, source = "join" }) {
   const [step, setStep] = useState(0);
   const [crafts, setCrafts] = useState([]);
   const [frequency, setFrequency] = useState("weekly");
@@ -48,8 +48,8 @@ export default function JoinFlow({ crafts: all }) {
     const address = normalEmail(email);
     if (!validEmail(address)) { setPhase("error"); setError("הכתובת לא נראית שלמה. בדקו אותה."); return; }
     if (password && password.length < MIN_PASSWORD) { setPhase("error"); setError(`הסיסמה קצרה מדי. בחרו סיסמה של ${MIN_PASSWORD} תווים לפחות, או השאירו את השדה ריק.`); return; }
-    tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off" });
-    if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });
+    tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off", where: source });
+    if (newsletter) tryTrack("digest_subscribe_submit", { where: source });
     setPhase("sending");
     setError("");
     let err;
@@ -201,8 +201,8 @@ export default function JoinFlow({ crafts: all }) {
                   disabled={newsletter && !consent}
                   redirectTo={() => callbackUrl({ next: "/welcome", subscribe: newsletter ? frequency : "", crafts })}
                   onStart={(provider) => {
-                    tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off", method: provider });
-                    if (newsletter) tryTrack("digest_subscribe_submit", { where: "join" });
+                    tryTrack("join_submit", { crafts: crafts.length, newsletter, frequency: newsletter ? frequency : "off", method: provider, where: source });
+                    if (newsletter) tryTrack("digest_subscribe_submit", { where: source });
                   }}
                 />
                 <div>
