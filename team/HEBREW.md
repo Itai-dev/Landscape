@@ -99,6 +99,7 @@ A heading that states the situation, then why it's worth acting, then a "ל + no
   - "1 בנובמבר 2026" · "יום ראשון, 1 בנובמבר" · "1.11" · 24-hour time "17:05"
   - Deadlines: "עד 1 בנובמבר, 12:00"
   - Relative: "אתמול", "לפני 3 ימים"
+- **Arrows and chevrons point forward, which in Hebrew is left.** The character ‹ is bidi-mirrored: inside Hebrew text the browser flips it to ›, so never type it into Hebrew copy. On the site use the `Chevron` component (`components/Chevron.js`, a left-to-right isolate), in emails and in plain strings use ←.
 - **Exclamation marks:** almost never. **Emoji:** not in the product.
 
 ## 10. Glossary

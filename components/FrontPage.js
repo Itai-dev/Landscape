@@ -1,3 +1,4 @@
+import Chevron from "@/components/Chevron";
 import KindTag from "@/components/KindTag";
 import Bidi from "@/components/Bidi";
 import DigestSubscribe from "@/components/DigestSubscribe";
@@ -99,7 +100,7 @@ export default function FrontPage({ f, signedIn = false }) {
             )}
             <h2 id="top-h" className="fp-aside-h">עוד השבוע</h2>
             <ol className="fp-list">{top.map((i, n) => <Story key={i.id} i={i} where="home_top" rank={n + 1} />)}</ol>
-            {!signedIn && <p className="fp-join small"><a href="/join" data-track="front_join">נרשמים, ורואים את הדף לפי התחומים שלכם ‹</a></p>}
+            {!signedIn && <p className="fp-join small"><a href="/join" data-track="front_join">נרשמים, ורואים את הדף לפי התחומים שלכם <Chevron /></a></p>}
           </aside>
         </section>
       )}
@@ -122,7 +123,7 @@ export default function FrontPage({ f, signedIn = false }) {
                     </a>
                   ))}
                 </div>
-                <a className="fp-more" href="/tenders">לכל המכרזים ‹</a>
+                <a className="fp-more" href="/tenders">לכל המכרזים <Chevron /></a>
               </div>
             )}
             {jobs.length > 0 && (
@@ -138,7 +139,7 @@ export default function FrontPage({ f, signedIn = false }) {
                     </li>
                   ))}
                 </ul>
-                <a className="fp-more" href="/updates?beat=jobs">לכל המשרות ‹</a>
+                <a className="fp-more" href="/updates?beat=jobs">לכל המשרות <Chevron /></a>
               </div>
             )}
           </div>

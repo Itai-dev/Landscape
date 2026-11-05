@@ -1,3 +1,4 @@
+import Chevron from "@/components/Chevron";
 import { notFound } from "next/navigation";
 import KindTag from "@/components/KindTag";
 import Bidi from "@/components/Bidi";
@@ -100,7 +101,7 @@ export default async function CompanyPage({ params }) {
     <div className="wrap orgpage">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(o) }} />
       <nav className="crumb" aria-label="מיקום">
-        <a href="/companies">חברות</a> <span aria-hidden="true">‹</span> <bdi>{orgName(o)}</bdi>
+        <a href="/companies">חברות</a> <Chevron /> <bdi>{orgName(o)}</bdi>
       </nav>
 
       <header className="ohero">
