@@ -116,7 +116,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
               {newsletter ? (
                 <p><b>המייל השבועי פעיל.</b> הראשון יגיע {newsletter.first}{chosen.length ? `, בתחומים: ${chosen.map((c) => c.he).join(", ")}` : ""}. <a className="tap" href="/digest/settings">שינוי ההגדרות</a></p>
               ) : (
-                <p><b>בלי ניוזלטר בינתיים.</b> אפשר להפעיל אותו בכל רגע. <a className="tap" href="/digest/settings">להפעלת המייל השבועי</a></p>
+                <p><b>בלי המייל השבועי בינתיים.</b> אפשר להפעיל אותו בכל רגע. <a className="tap" href="/digest/settings">להפעלת המייל השבועי</a></p>
               )}
             </div>
 
@@ -129,7 +129,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             </ul>
 
             <div className="jfoot">
-              <button type="button" className="btn primary lg" onClick={() => go(1)}>{needCrafts ? "בואו נתאים את זה אליכם" : "בחירת חברות למעקב"}</button>
+              <button type="button" className="btn primary lg" onClick={() => go(1)}>{needCrafts ? "בחירת התחומים שלכם" : "בחירת חברות למעקב"}</button>
               <a className="tap jskip" href="/">לדף הבית</a>
             </div>
           </section>
@@ -137,8 +137,8 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
 
         {screen === "crafts" && (
           <section className="jstep" aria-labelledby="w1">
-            <h1 id="w1" ref={head} tabIndex={-1}>מה אתם עושים?</h1>
-            <p className="muted">אפשר לבחור כמה. העדכונים והחברות יותאמו לתחומים שלכם.</p>
+            <h1 id="w1" ref={head} tabIndex={-1}>באילו תחומים אתם עובדים?</h1>
+            <p className="muted">בחרו אחד או יותר. לפי זה נבחר לכם את העדכונים ואת החברות.</p>
             <div className="jcrafts" role="group" aria-label="תחומים">
               {shownCrafts.map((c) => (
                 <button key={c.slug} type="button" className="jcraft" aria-pressed={crafts.includes(c.slug)} onClick={() => toggle(crafts, setCrafts, c.slug)}>
@@ -180,7 +180,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
                 ))}
               </ul>
             ) : (
-              <p className="notice">עוד אין הצעות לתחומים האלה. אפשר להוסיף חברות בכל רגע מ<a href="/companies">רשימת החברות</a>, בכפתור ״מעקב״.</p>
+              <p className="notice">עוד אין לנו הצעות לתחומים האלה. אפשר להוסיף חברות בכל רגע מ<a href="/companies">רשימת החברות</a>, בכפתור ״מעקב״.</p>
             )}
             {suggestions.length > 0 && !alertsConsent && (
               <label className="check">

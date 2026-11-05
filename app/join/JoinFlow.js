@@ -125,7 +125,7 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
                 חזרה
               </button>
-            ) : <a className="jback" href="/">ביטול</a>}
+            ) : <a className="jback" href="/">לדף הבית</a>}
             <ol className="jdots" aria-label={`שלב ${step + 1} מתוך ${STEPS}`}>
               {Array.from({ length: STEPS }, (_, i) => <li key={i} className={i === step ? "on" : i < step ? "done" : ""} aria-hidden="true" />)}
             </ol>
@@ -134,8 +134,8 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
 
         {step === 0 && (
           <section className="jstep" aria-labelledby="j0">
-            <h1 id="j0" ref={head} tabIndex={-1}>מה אתם עושים?</h1>
-            <p className="muted">בחרו אחד או יותר. נתאים לכם את העדכונים, ומי שמזמין את זה יופיע ראשון.</p>
+            <h1 id="j0" ref={head} tabIndex={-1}>באילו תחומים אתם עובדים?</h1>
+            <p className="muted">בחרו אחד או יותר. לפי זה נבחר לכם את העדכונים, ומי שמזמין את התחומים האלה יופיע ראשון.</p>
             <div className="jcrafts" role="group" aria-label="תחומים">
               {shown.map((c) => (
                 <button key={c.slug} type="button" className="jcraft" aria-pressed={crafts.includes(c.slug)} onClick={() => toggle(c.slug)}>
@@ -145,15 +145,13 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
               ))}
             </div>
             {!more && all.length > FIRST && (
-              <button type="button" className="tap jmore" onClick={() => setMore(true)}>עוד {all.length - FIRST} תחומים</button>
+              <button type="button" className="tap jmore" onClick={() => setMore(true)}>לכל התחומים (עוד {all.length - FIRST})</button>
             )}
             <div className="jfoot">
               <button type="button" className="btn primary lg" onClick={() => { tryTrack("join_step_crafts", { crafts: crafts.length }); go(1); }}>
                 {crafts.length === 1 ? "המשך עם תחום אחד" : crafts.length ? `המשך עם ${crafts.length} תחומים` : "המשך עם כל התחומים"}
               </button>
-              {!crafts.length && (
-                <button type="button" className="tap jskip" onClick={() => { tryTrack("join_step_crafts", { crafts: 0, skipped: true }); go(1); }}>דילוג, כל התחומים</button>
-              )}
+              {!crafts.length && <span className="small muted">לא בטוחים? אפשר לבחור גם אחר כך, מהחשבון.</span>}
             </div>
             <p className="small muted">כבר יש לכם חשבון? <a className="tap" href="/me">כניסה</a></p>
           </section>
@@ -161,10 +159,10 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
 
         {step === 1 && (
           <section className="jstep" aria-labelledby="j1">
-            <h1 id="j1" ref={head} tabIndex={-1}>רוצים גם ניוזלטר?</h1>
-            <p className="muted">{names.length ? `ככה הוא ייראה: מהדורה אמיתית של השבוע, ל${names.slice(0, 3).join(", ")}${names.length > 3 ? " ועוד" : ""}.` : "ככה הוא ייראה: מהדורה אמיתית של השבוע, מכל התחומים."} אפשר גם בלי, ולהירשם אליו אחר כך.</p>
+            <h1 id="j1" ref={head} tabIndex={-1}>רוצים לקבל את זה במייל?</h1>
+            <p className="muted">{names.length ? `זה המייל השבועי כמו שהיה מגיע אליכם השבוע, ל${names.slice(0, 3).join(", ")}${names.length > 3 ? " ועוד" : ""}.` : "זה המייל השבועי כמו שהיה מגיע אליכם השבוע, מכל התחומים."} מייל אחד, ביום ראשון בבוקר. אפשר להפסיק בכל רגע.</p>
             <div className="jfreq">
-              <span className="label">כל כמה זמן?</span>
+              <span className="label">באיזו תדירות?</span>
               <div className="chips" role="radiogroup" aria-label="תדירות">
                 {FREQS.map((f) => (
                   <label key={f.slug} className={`chip${frequency === f.slug ? " on" : ""}`}>
@@ -177,15 +175,15 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
             <div aria-live="polite"><EditionCard ed={ed} busy={busy} /></div>
             <div className="jfoot">
               <button type="button" className="btn primary lg" onClick={() => { tryTrack("join_step_newsletter", { newsletter: true, frequency }); setNewsletter(true); go(2); }}>כן, שלחו לי</button>
-              <button type="button" className="tap jskip" onClick={() => { tryTrack("join_step_newsletter", { newsletter: false }); setNewsletter(false); setConsent(false); go(2); }}>לא עכשיו, רק חשבון</button>
+              <button type="button" className="tap jskip" onClick={() => { tryTrack("join_step_newsletter", { newsletter: false }); setNewsletter(false); setConsent(false); go(2); }}>לא עכשיו, רק החשבון</button>
             </div>
           </section>
         )}
 
         {step === 2 && (
           <section className="jstep" aria-labelledby="j2">
-            <h1 id="j2" ref={head} tabIndex={-1}>המייל שלכם</h1>
-            <p className="muted">{OAUTH.length ? "הירשמו עם Google, או עם מייל וסיסמה" : "הירשמו עם מייל וסיסמה"}. נשלח קישור לאישור הכתובת פעם אחת, ומשם לאזור האישי, עם המעקב{newsletter ? `, הניוזלטר (${freqHe})` : ""} וההתראות.</p>
+            <h1 id="j2" ref={head} tabIndex={-1}>לאן לשלוח?</h1>
+            <p className="muted">נשלח לכם קישור אחד לאישור הכתובת. אחרי הלחיצה עליו הכול מוכן: {newsletter ? `המייל השבועי (${freqHe}), ` : ""}המעקב אחרי חברות וההתראות.{OAUTH.length ? " אפשר גם עם Google." : ""}</p>
             {!configured ? (
               <p className="muted small">ההרשמה נפתחת בקרוב.</p>
             ) : (
@@ -207,22 +205,23 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
                 />
                 <div>
                   <label htmlFor="join-email">מייל</label>
-                  <input id="join-email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <input id="join-email" type="email" required autoComplete="email" dir="ltr" placeholder="name@example.com" value={email} onChange={(e) => setEmail(e.target.value)} aria-describedby="join-email-hint" />
+                  <p id="join-email-hint" className="small muted field-hint">{newsletter ? "לכניסה ולמייל השבועי. לא מוכרים ולא משתפים." : "לכניסה בלבד. לא מוכרים ולא משתפים."}</p>
                 </div>
                 <div>
-                  <label htmlFor="join-password">סיסמה</label>
+                  <label htmlFor="join-password">סיסמה (לא חובה)</label>
                   <input id="join-password" type="password" autoComplete="new-password" dir="ltr" minLength={MIN_PASSWORD} value={password} onChange={(e) => setPassword(e.target.value)} aria-describedby="join-password-hint" />
-                  <p id="join-password-hint" className="small muted field-hint">{MIN_PASSWORD} תווים לפחות. אפשר גם להשאיר ריק ולהיכנס כל פעם עם קישור במייל.</p>
+                  <p id="join-password-hint" className="small muted field-hint">{MIN_PASSWORD} תווים לפחות. בלי סיסמה נכנסים כל פעם עם קישור במייל.</p>
                 </div>
                 {phase === "error" && <div className="notice err" role="alert">{error}</div>}
                 <div className="row">
                   <button className="btn primary" disabled={phase === "sending" || (newsletter && !consent) || !email.includes("@")}>
                     {phase === "sending" ? <span className="spinner" aria-hidden /> : null}
-                    {password ? "הרשמה" : "שלחו לי קישור כניסה"}
+                    {password ? "פתיחת החשבון" : "שלחו לי קישור כניסה"}
                   </button>
-                  <span className="small muted">{newsletter ? "הניוזלטר עד פעם בשבוע. הסרה בלחיצה." : "בלי ניוזלטר. אפשר להירשם אליו אחר כך."}</span>
+                  <span className="small muted">{newsletter ? "מייל אחד בשבוע, לכל היותר. אפשר להפסיק בכל רגע." : "בלי המייל השבועי. אפשר להפעיל אותו אחר כך."}</span>
                 </div>
-                {newsletter && <button type="button" className="tap jskip" onClick={() => { setNewsletter(false); setConsent(false); }}>בלי ניוזלטר, רק חשבון</button>}
+                {newsletter && <button type="button" className="tap jskip" onClick={() => { setNewsletter(false); setConsent(false); }}>בלי המייל השבועי, רק החשבון</button>}
               </form>
             )}
             <p className="small muted">כבר יש לכם חשבון? <a className="tap" href="/me">כניסה</a></p>
@@ -237,10 +236,9 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
             <h1 id="j3" ref={head} tabIndex={-1}>{password ? "אשרו את הכתובת" : "שלחנו קישור"}</h1>
             <p>{password
               ? <>שלחנו קישור לאישור הכתובת ל־<b className="ltr">{email}</b>. לחצו עליו פעם אחת, ומעכשיו נכנסים עם המייל והסיסמה.</>
-              : <>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לחצו עליו ותיכנסו לאזור האישי.</>}
-              {newsletter ? ` הניוזלטר הראשון יגיע ${firstSendLabel(frequency)}.` : ""}</p>
-            <p className="notice">הקישור עובד רק במכשיר ובדפדפן האלה. פתחו את המייל כאן.</p>
-            <p className="muted small">לא הגיע תוך כמה דקות? בדקו בספאם או בקידומי מכירות.</p>
+              : <>שלחנו קישור כניסה ל־<b className="ltr">{email}</b>. לחצו עליו, ואתם בפנים.</>}
+              {newsletter ? ` המייל השבועי הראשון יגיע ${firstSendLabel(frequency)}.` : ""}</p>
+            <p className="muted small">לא הגיע תוך כמה דקות? בדקו בספאם או בקידומי מכירות. הקישור תקף לזמן קצר ולשימוש אחד.</p>
             <p className="small"><a className="tap" href="/feedback?from=join" data-track="feedback_open" data-track-where="join_sent">משהו חסר? יש רעיון לשיפור?</a></p>
             <div className="jfoot">
               <a className="btn primary lg" href="/companies">בינתיים, לחברות</a>
