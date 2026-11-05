@@ -623,3 +623,6 @@ ul { list-style-type: square; }
 /* A text button that looks like a link ("שכחתם את הסיסמה?") */
 .linkbtn { min-height: 44px; padding: 0; border: 0; background: none; font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); cursor: pointer; }
 .linkbtn.small { font-size: var(--t-sm); }
+
+/* Forward chevron after a link (components/Chevron.js): isolated left-to-right so Hebrew text does not mirror it. */
+.chev { display: inline-block; }

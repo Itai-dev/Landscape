@@ -1,3 +1,4 @@
+import Chevron from "@/components/Chevron";
 import { notFound } from "next/navigation";
 import KindTag from "@/components/KindTag";
 import Bidi from "@/components/Bidi";
@@ -75,7 +76,7 @@ export default async function UpdatePage({ params }) {
     <div className="wrap upd-one">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(i) }} />
       <nav className="crumbs" aria-label="מיקום">
-        <a href="/updates">עדכונים</a> <span aria-hidden="true">‹</span> {i.beat_he ? <a href={`/updates?beat=${i.beat}`}>{i.beat_he}</a> : <b>{i.label}</b>}
+        <a href="/updates">עדכונים</a> <Chevron /> {i.beat_he ? <a href={`/updates?beat=${i.beat}`}>{i.beat_he}</a> : <b>{i.label}</b>}
       </nav>
 
       <article className="upd-article">

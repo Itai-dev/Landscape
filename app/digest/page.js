@@ -1,3 +1,4 @@
+import Chevron from "@/components/Chevron";
 import { composeDigest, craftsTitle, linkedinPost, siteUrl, WHY_HE } from "@/lib/digest";
 import { CRAFTS, CRAFT_SLUGS } from "@/lib/taxonomy";
 import { isOpen as surveyOpen } from "@/lib/survey/config";
@@ -89,7 +90,7 @@ export default async function Digest({ searchParams }) {
             <div className="card stack">
               <h3>סקר התעריפים 2026</h3>
               <p className="muted small">4 דקות, ותראו כמה גובים אחרים בתחום שלכם ותוך כמה זמן משלמים להם.</p>
-              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">למילוי הסקר ‹</a>
+              <a className="btn soft" href="/survey" data-track="survey_start" data-track-label="digest">למילוי הסקר <Chevron /></a>
             </div>
           )}
         </aside>
@@ -124,7 +125,7 @@ export default async function Digest({ searchParams }) {
             <section aria-labelledby="d-tenders">
               <div className="subhead">
                 <h2 id="d-tenders">{who ? `מכרזים ב${who}` : "מכרזים"} <span className="count">{d.tenders.length}</span></h2>
-                <a className="tap" href={`/tenders${chosen.length === 1 ? `?craft=${chosen[0]}` : ""}`}>לכל המכרזים ‹</a>
+                <a className="tap" href={`/tenders${chosen.length === 1 ? `?craft=${chosen[0]}` : ""}`}>לכל המכרזים <Chevron /></a>
               </div>
               <div className="tresults">
                 {d.tenders.map((t) => (
@@ -142,7 +143,7 @@ export default async function Digest({ searchParams }) {
             <section aria-labelledby="d-tools">
               <div className="subhead">
                 <h2 id="d-tools">כלים ו־AI השבוע <span className="count">{d.tools.length}</span></h2>
-                <a className="tap" href="/tools">לכל הכלים ‹</a>
+                <a className="tap" href="/tools">לכל הכלים <Chevron /></a>
               </div>
               <ol className="dlist">
                 {d.tools.map((u) => (
@@ -199,7 +200,7 @@ export default async function Digest({ searchParams }) {
                   {d.added.total > d.added.list.length && <a className="tag soft" href="/companies">ועוד {d.added.total - d.added.list.length}</a>}
                 </div>
               ) : (
-                <p><a className="tap" href="/companies">המאגר גדל {d.period.span} ב־{d.added.total} חברות ‹</a></p>
+                <p><a className="tap" href="/companies">המאגר גדל {d.period.span} ב־{d.added.total} חברות <Chevron /></a></p>
               )}
             </section>
           )}
