@@ -1,0 +1,37 @@
+/* /updates (the archive) and /updates/<id> (one update). Shares .fp-* bits with app/front.css. */
+.upd-page { padding-block-end: var(--s-8); }
+.upd-beats { justify-content: flex-start; margin-block-end: var(--s-6); }
+.upd-day { margin-block-end: var(--s-6); }
+.upd-dayh { font-size: var(--t-xs); font-weight: 600; color: var(--muted); margin: 0 0 var(--s-2); }
+.upd-list { list-style: none; margin: 0; padding: 0; }
+.upd-row { display: flex; flex-direction: column; gap: 4px; padding: var(--s-3) 0; border-block-start: 1px solid var(--line); }
+.upd-meta { margin: 0; display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; font-size: var(--t-xs); color: var(--muted); }
+.upd-head { font-size: var(--t-md); font-weight: 600; line-height: 1.4; text-decoration: none; color: var(--ink); overflow-wrap: anywhere; }
+@media (hover: hover) { .upd-head:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-2); } }
+.upd-org { margin: 0; display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; font-size: var(--t-sm); }
+.upd-org a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+
+/* One update: a narrow reading column */
+.upd-one { max-width: calc(820px + 2 * var(--gutter)); padding-block: var(--s-4) var(--s-8); }
+.upd-article { display: flex; flex-direction: column; gap: var(--s-4); padding-block: var(--s-4) clamp(24px, 3vw, 40px); border-block-end: 1px solid var(--line); }
+.upd-article h1 { margin: 0; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.15; font-weight: 600; overflow-wrap: anywhere; }
+.upd-article h1.xlong { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; }
+.upd-why { margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.6; color: var(--ink-2); }
+.upd-why b { color: var(--ink); font-weight: 600; }
+.upd-credits { margin-block-start: var(--s-2); }
+.upd-foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3) var(--s-4); }
+.upd-foot .btn bdi { margin-inline-start: 4px; }
+.upd-crafts { margin: 0; }
+.upd-crafts a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
+.upd-note { margin: 0; }
+.upd-note a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.upd-sec { padding-block: clamp(24px, 3vw, 40px); border-block-end: 1px solid var(--line); }
+.upd-sec h2 { margin: 0 0 var(--s-2); font-size: var(--h3); font-weight: 600; }
+.upd-sec h2 a { color: var(--ink); text-decoration: none; }
+.upd-sec > .muted { margin: 0 0 var(--s-3); }
+.upd-track { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.upd-track li { display: flex; justify-content: space-between; align-items: center; gap: var(--s-3); flex-wrap: wrap; background: var(--surface); border-radius: var(--r); padding: var(--s-3) var(--s-4); }
+.upd-track-name { display: inline-flex; align-items: center; gap: var(--s-2); font-weight: 600; color: var(--ink); text-decoration: none; }
+.upd-track-btns { display: inline-flex; gap: var(--s-2); flex-wrap: wrap; }
+.upd-cta { margin-block-start: var(--s-6); }
+.upd-cta h2 { margin: 0 0 var(--s-4); font-size: var(--h3); font-weight: 600; line-height: 1.25; }

@@ -179,3 +179,9 @@ Owner brief: profiles anyone can see, onboarding that fills itself from LinkedIn
 - Owner asked to take typography and copy inspiration from Firma (firmabrands.com/he). Layout and colour stay Awwwards-based.
 - Type: Google Sans for Latin and Hebrew, replacing Inter Tight + Heebo (owner's pick; one family, like Firma). Nothing under weight 400; headlines 600 with tight leading; leads 18–20px.
 - Copy: short lines ending with a period, a kicker over section titles, and "In" as the one brand pun ("לא צריך להכיר את כולם. מספיק להישאר In."). Details in `team/DESIGN.md`.
+
+## 2026-11-05: The home page is a news front
+- Owner: the site should feel like inside news, not a database (Business Insider was the reference). We went for an industry briefing, since 10–15 sourced updates a week can't fill a daily news front: the story of the week leads, then "עוד השבוע", opportunities, the rest by section, who's in the news, and one call to action. Every update now has its own page (`/updates/<id>`), so stories can be shared and found; `/updates` is the archive, and "עדכונים" in the nav leads there.
+- The lead is chosen by logic, not by hand: a weight per update type (an agency switch or a new marketing head over a campaign, over a launch; a job never leads), freshness by the day the update reached us, and whether it explains itself and names companies we can link. The email keeps its own ranking (what leads to work first).
+- Signed in, the front is personal: the reader's crafts and tracked companies pull matching stories up (marked "בתחום שלכם" / "במעקב שלכם"), and tracked companies get their own list first. The weekly email already did this; the site now matches it. Signed out, a `?crafts=` link previews a personal front.
+- Kept: our own summaries with the source linked, never copied articles; "הזדמנויות" only for live tenders and sourced job postings; real dates only.

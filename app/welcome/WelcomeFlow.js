@@ -123,7 +123,7 @@ export default function WelcomeFlow({ demo = false, email, crafts: initialCrafts
             <h2 className="wh2">מה יש כאן</h2>
             <ul className="wgrid">
               <li><a className="wtile" href="/companies" data-track="welcome_tile" data-track-label="companies"><span className="wi"><BuildingIcon size={24} /></span><b>חברות</b><span>{stats.orgs} מותגים, משרדים וסטודיואים. מי מזמין מה, ודרך מי.</span></a></li>
-              <li><a className="wtile" href="/companies#signals" data-track="welcome_tile" data-track-label="updates"><span className="wi">{PULSE_ICON}</span><b>עדכונים</b><span>מינויים, מעברי משרד וקמפיינים. כל עדכון עם מקור.</span></a></li>
+              <li><a className="wtile" href="/updates" data-track="welcome_tile" data-track-label="updates"><span className="wi">{PULSE_ICON}</span><b>עדכונים</b><span>מינויים, מעברי משרד וקמפיינים. כל עדכון עם מקור.</span></a></li>
               <li><a className="wtile" href="/tenders" data-track="welcome_tile" data-track-label="tenders"><span className="wi">{TENDER_ICON}</span><b>מכרזים</b><span>{stats.tenders ? `${stats.tenders} פתוחים להגשה עכשיו, ` : ""}עם קישור לפרסום הרשמי ומועד הגשה.</span></a></li>
               <li><a className="wtile" href="/me#follows" data-track="welcome_tile" data-track-label="follows"><span className="wi"><BellIcon size={24} /></span><b>מעקב והתראות</b><span>שומרים חברות, ומקבלים מייל כשמשהו משתנה אצלן.</span></a></li>
             </ul>
