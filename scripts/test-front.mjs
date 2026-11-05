@@ -5,7 +5,7 @@ import { register } from "node:module";
 import assert from "node:assert/strict";
 
 register("./alias-hooks.mjs", import.meta.url);
-const { composeFront, listUpdates, storyScore, updateById, updateItem, moreAbout, relatedUpdates, UPDATES, BEATS, orgIdsOf } = await import("../lib/front.js");
+const { composeFront, listUpdates, storyScore, updateById, updateItem, moreAbout, relatedUpdates, UPDATES, BEATS, orgIdsOf, shortTitle, titleOf } = await import("../lib/front.js");
 const { signalCrafts } = await import("../lib/digest.js");
 
 let passed = 0;
@@ -108,6 +108,20 @@ t("the archive filters by beat and crafts, newest first", () => {
   const craft = [...signalCrafts(UPDATES[0]).strong][0] || "ai-creative";
   const mine = listUpdates({ crafts: [craft], now: NOW, days: 365 });
   assert.ok(mine.every((i) => i.mine && i.crafts.some((c) => c.slug === craft)));
+});
+
+t("every update has a short title: research's title_he, else the headline cut at a clause", () => {
+  for (const s of UPDATES) {
+    const title = titleOf(s);
+    assert.ok(title.length > 0 && title.length <= 91, `${s.id}: ${title}`);
+    assert.ok(s.headline_he.startsWith(title.replace(/…$/, "")), s.id);
+  }
+  assert.equal(titleOf({ title_he: " כותרת קצרה ", headline_he: "משהו ארוך: ועוד" }), "כותרת קצרה");
+  assert.equal(shortTitle("הודעת פטור של לפ״מ: התקשרות עם גריי קונטנט לקמפיין יום ההוקרה, עם עוד פרטים"), "הודעת פטור של לפ״מ: התקשרות עם גריי קונטנט לקמפיין יום ההוקרה");
+  assert.equal(shortTitle("Affle ההודית תרכוש את חברת האד־טק הישראלית פריון ב־420 מיליון דולר (11.70 דולר למניה)"), "Affle ההודית תרכוש את חברת האד־טק הישראלית פריון ב־420 מיליון דולר");
+  assert.equal(shortTitle("כותרת קצרה בלי סימנים"), "כותרת קצרה בלי סימנים");
+  assert.match(shortTitle("מילה ".repeat(40).trim()), /…$/);
+  assert.equal(updateItem(UPDATES[0]).title, titleOf(UPDATES[0]));
 });
 
 for (const [name, fn] of tests) {

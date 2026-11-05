@@ -15,18 +15,16 @@
 
 /* Lead story beside the numbered list */
 .fp-lead { display: flex; flex-wrap: wrap; gap: var(--s-6) clamp(24px, 4vw, 56px); padding-block: clamp(20px, 3vw, 40px); border-block-end: 1px solid var(--line); }
-.fp-leadstory { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: var(--s-4); }
+.fp-leadstory { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: var(--s-5); }
 .fp-top { flex: 1 1 300px; min-width: 0; max-width: 520px; }
 .fp-kicker { margin: 0; display: flex; align-items: center; flex-wrap: wrap; gap: var(--s-2); font-size: var(--t-xs); color: var(--muted); }
 .fp-badge { display: inline-flex; align-items: center; background: var(--ink); color: var(--bg); font-weight: 600; font-size: 11px; padding: 3px 8px; border-radius: var(--r-sm); }
 .fp-mark { display: inline-flex; align-items: center; font-size: 11px; font-weight: 600; color: var(--ink); border: 1px solid var(--ink); padding: 1px 6px; border-radius: var(--r-sm); }
-.fp-leadstory h1 { font-size: clamp(28px, 3.6vw, 46px); line-height: 1.1; font-weight: 600; max-width: 24ch; overflow-wrap: anywhere; }
-/* Our headlines are full sentences; a long one gets a smaller size so the lead stays a lead, not a wall. */
-.fp-leadstory h1.long { font-size: clamp(24px, 2.8vw, 36px); line-height: 1.15; max-width: 32ch; }
-.fp-leadstory h1.xlong { font-size: clamp(21px, 2.2vw, 28px); line-height: 1.25; max-width: 44ch; }
+.fp-leadstory h1 { font-size: clamp(30px, 3.8vw, 50px); line-height: 1.22; font-weight: 600; max-width: 22ch; overflow-wrap: anywhere; }
+.fp-leadstory h1.long { font-size: clamp(26px, 3.1vw, 40px); line-height: 1.25; max-width: 28ch; }
 .fp-leadstory h1 a { text-decoration: none; }
 @media (hover: hover) { .fp-leadstory h1 a:hover, .fp-head:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-2); } }
-.fp-why { margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: var(--ink-2); max-width: 60ch; }
+.fp-why { margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.65; color: var(--ink-2); max-width: 60ch; }
 .fp-why b { color: var(--ink); font-weight: 600; }
 .fp-credits { background: var(--surface); border-radius: var(--r-lg); padding: var(--s-4) var(--s-5); display: grid; gap: var(--s-4); grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); }
 .fp-credit { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
@@ -40,10 +38,10 @@
 .fp-aside-h { font-size: var(--t-xs); font-weight: 600; color: var(--muted); margin: 0 0 var(--s-2); }
 .fp-aside-h + .fp-list + .fp-aside-h { margin-block-start: var(--s-6); }
 .fp-list { list-style: none; margin: 0; padding: 0; }
-.fp-story { display: flex; gap: var(--s-3); padding: var(--s-3) 0; border-block-start: 1px solid var(--line); }
+.fp-story { display: flex; gap: var(--s-3); padding: var(--s-4) 0; border-block-start: 1px solid var(--line); }
 .fp-rank { font-size: 26px; font-weight: 600; line-height: 1; color: var(--line-2); min-width: 22px; font-variant-numeric: tabular-nums; }
-.fp-story-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.fp-head { font-size: var(--t-md); font-weight: 600; line-height: 1.35; text-decoration: none; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.fp-story-body { display: flex; flex-direction: column; gap: var(--s-2); min-width: 0; }
+.fp-head { font-size: var(--t-md); font-weight: 600; line-height: 1.45; text-decoration: none; overflow-wrap: anywhere; }
 .fp-org { margin: 0; display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; font-size: var(--t-sm); }
 .fp-org a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
 .fp-join { margin: var(--s-3) 0 0; }
@@ -80,7 +78,7 @@
 .fp-beat h2 { font-size: var(--t-md); font-weight: 600; border-block-end: 2px solid var(--ink); padding-block-end: var(--s-2); }
 .fp-beat h2 a { text-decoration: none; }
 .fp-beat .fp-story:first-child { border-block-start: 0; }
-.fp-beat .fp-head { font-size: var(--t-base); }
+.fp-beat .fp-head { font-size: var(--t-base); line-height: 1.5; }
 
 /* In the news: chips */
 .fp-chips { display: flex; flex-wrap: wrap; gap: var(--s-2); }

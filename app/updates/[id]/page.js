@@ -24,8 +24,8 @@ export async function generateMetadata({ params }) {
   const s = updateById(id);
   if (!s) return {};
   const i = updateItem(s);
-  const title = clip(i.headline, 90);
-  const description = clip(i.why || i.headline, 160);
+  const title = i.title;
+  const description = clip(i.headline, 160);
   const url = `${siteUrl()}${i.href}`;
   return {
     title,
@@ -40,8 +40,8 @@ function jsonLd(i) {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: i.headline,
-    ...(i.why ? { description: i.why } : {}),
+    headline: i.title,
+    description: i.headline,
     datePublished: i.seen,
     dateModified: i.seen,
     inLanguage: "he",
@@ -56,7 +56,7 @@ function Row({ i, where }) {
   return (
     <li className="upd-row">
       <p className="upd-meta"><span>{i.class_label}</span> · <span>{i.day}</span></p>
-      <a className="upd-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.headline}</Bidi></a>
+      <a className="upd-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.title}</Bidi></a>
       {i.org?.name && <p className="upd-org"><bdi>{i.org.name}</bdi>{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
     </li>
   );
@@ -80,7 +80,8 @@ export default async function UpdatePage({ params }) {
 
       <article className="upd-article">
         <p className="fp-kicker"><span className="fp-badge">{i.class === "opportunity" ? "הזדמנות" : "עדכון"}</span><span>{i.label} · {i.day}</span>{i.late && <span className="muted">· הגיע אלינו ב־{new Intl.DateTimeFormat("he-IL", { day: "numeric", month: "short", timeZone: "UTC" }).format(new Date(`${i.seen}T00:00:00Z`))}</span>}</p>
-        <h1 className={i.headline.length > 150 ? "xlong" : undefined}><Bidi>{i.headline}</Bidi></h1>
+        <h1><Bidi>{i.title}</Bidi></h1>
+        {i.headline !== i.title && <p className="upd-summary"><Bidi>{i.headline}</Bidi></p>}
         {i.why && <p className="upd-why"><b>{WHY_HE}:</b> <Bidi>{i.why}</Bidi></p>}
 
         {(i.credits.length > 0 || i.org) && (

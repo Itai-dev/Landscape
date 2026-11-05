@@ -29,7 +29,7 @@ function Story({ i, where, rank }) {
       {rank != null && <span className="fp-rank" aria-hidden="true">{rank}</span>}
       <div className="fp-story-body">
         <p className="fp-kicker"><span>{i.beat_he || i.label}</span> · <span>{i.day}</span><Marks i={i} /></p>
-        <a className="fp-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.headline}</Bidi></a>
+        <a className="fp-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.title}</Bidi></a>
         {i.org?.name && <p className="fp-org"><OrgLink org={i.org} where={where} />{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
       </div>
     </li>
@@ -64,7 +64,7 @@ export default function FrontPage({ f, signedIn = false }) {
         <section className="fp-lead" aria-labelledby="lead-h">
           <article className="fp-leadstory">
             <p className="fp-kicker"><span className="fp-badge">הסיפור של השבוע</span><span>{lead.beat_he || lead.label} · {lead.day}</span><Marks i={lead} /></p>
-            <h1 id="lead-h" className={lead.headline.length > 150 ? "xlong" : lead.headline.length > 80 ? "long" : undefined}><a href={lead.href} data-track="update_open" data-track-where="home_lead"><Bidi>{lead.headline}</Bidi></a></h1>
+            <h1 id="lead-h" className={lead.title.length > 60 ? "long" : undefined}><a href={lead.href} data-track="update_open" data-track-where="home_lead"><Bidi>{lead.title}</Bidi></a></h1>
             {lead.why && <p className="fp-why"><b>{WHY_HE}:</b> <Bidi>{lead.why}</Bidi></p>}
             {(lead.credits.length > 0 || lead.org) && (
               <div className="fp-credits">
@@ -133,7 +133,7 @@ export default function FrontPage({ f, signedIn = false }) {
                     <li key={j.id}>
                       <a href={j.href} data-track="update_open" data-track-where="home_jobs">
                         <span className="fp-job-org">{j.org?.name ? <bdi>{j.org.name}</bdi> : "משרה"}</span>
-                        <span className="fp-job-head"><Bidi>{j.headline.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
+                        <span className="fp-job-head"><Bidi>{j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
                       </a>
                     </li>
                   ))}

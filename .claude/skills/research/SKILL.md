@@ -107,5 +107,8 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
 - The app is Hebrew-first. Every record needs `description` (English, as sourced) AND
   `description_he` (natural industry Hebrew: מושן, פוסט, קריאייטיב, שואוריל…; same facts).
   Add `name_he` only when the org itself uses a Hebrew name. Every signal needs `headline_he`
-  and `why_he` next to `headline` / `why`. New cities go in `schema/taxonomy.json` → `cities_he`.
+  and `why_he` next to `headline` / `why`, plus `title_he`: a short headline (up to 80 characters,
+  the news in one line, no credits or figures in brackets) for the home page and the lists; the
+  full `headline_he` is the summary shown on the update's own page. New cities go in
+  `schema/taxonomy.json` → `cities_he`.
 - Use only taxonomy category slugs; anything else goes in `tags`.

@@ -4,9 +4,9 @@
 .upd-day { margin-block-end: var(--s-6); }
 .upd-dayh { font-size: var(--t-xs); font-weight: 600; color: var(--muted); margin: 0 0 var(--s-2); }
 .upd-list { list-style: none; margin: 0; padding: 0; }
-.upd-row { display: flex; flex-direction: column; gap: 4px; padding: var(--s-3) 0; border-block-start: 1px solid var(--line); }
+.upd-row { display: flex; flex-direction: column; gap: var(--s-2); padding: var(--s-4) 0; border-block-start: 1px solid var(--line); }
 .upd-meta { margin: 0; display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; font-size: var(--t-xs); color: var(--muted); }
-.upd-head { font-size: var(--t-md); font-weight: 600; line-height: 1.4; text-decoration: none; color: var(--ink); overflow-wrap: anywhere; }
+.upd-head { font-size: var(--t-md); font-weight: 600; line-height: 1.5; text-decoration: none; color: var(--ink); overflow-wrap: anywhere; }
 @media (hover: hover) { .upd-head:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-2); } }
 .upd-org { margin: 0; display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap; font-size: var(--t-sm); }
 .upd-org a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-2); }
@@ -14,9 +14,9 @@
 /* One update: a narrow reading column */
 .upd-one { max-width: calc(820px + 2 * var(--gutter)); padding-block: var(--s-4) var(--s-8); }
 .upd-article { display: flex; flex-direction: column; gap: var(--s-4); padding-block: var(--s-4) clamp(24px, 3vw, 40px); border-block-end: 1px solid var(--line); }
-.upd-article h1 { margin: 0; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.15; font-weight: 600; overflow-wrap: anywhere; }
-.upd-article h1.xlong { font-size: clamp(22px, 2.6vw, 30px); line-height: 1.25; }
-.upd-why { margin: 0; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.6; color: var(--ink-2); }
+.upd-article h1 { margin: 0; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.22; font-weight: 600; overflow-wrap: anywhere; }
+.upd-summary { margin: 0; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.65; color: var(--ink); }
+.upd-why { margin: 0; font-size: var(--t-md); line-height: 1.65; color: var(--ink-2); }
 .upd-why b { color: var(--ink); font-weight: 600; }
 .upd-credits { margin-block-start: var(--s-2); }
 .upd-foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-3) var(--s-4); }

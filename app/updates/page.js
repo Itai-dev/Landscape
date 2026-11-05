@@ -59,7 +59,7 @@ export default async function Updates({ searchParams }) {
             {d.items.map((i) => (
               <li key={i.id} className="upd-row">
                 <p className="upd-meta"><span>{i.class_label}</span>{i.mine && <span className="fp-mark">בתחום שלכם</span>}</p>
-                <a className="upd-head" href={i.href} data-track="update_open" data-track-where="updates_list"><Bidi>{i.headline}</Bidi></a>
+                <a className="upd-head" href={i.href} data-track="update_open" data-track-where="updates_list"><Bidi>{i.title}</Bidi></a>
                 {i.org?.name && <p className="upd-org">{i.org.href ? <a href={i.org.href} data-track="company_open" data-track-where="updates_list"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
               </li>
             ))}
