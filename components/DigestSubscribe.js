@@ -6,6 +6,7 @@ import { CRAFTS, CONSENT_TEXT } from "@/lib/taxonomy";
 import { callbackUrl, normalEmail, validEmail } from "@/lib/authLink";
 import { firstSendLabel } from "@/lib/digestSchedule";
 import { track } from "@vercel/analytics";
+import { setJoined } from "@/lib/joined.mjs";
 
 const FREQS = [
   { slug: "weekly", he: "כל שבוע" },
@@ -78,7 +79,7 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
       } catch {
         return fail(OFFLINE);
       }
-      if (res.ok) setState("saved");
+      if (res.ok) { setJoined("yes"); setState("saved"); }
       else fail(res.status === 429 ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : "לא הצלחנו לשמור. נסו שוב.");
       return;
     }
@@ -95,10 +96,10 @@ export default function DigestSubscribe({ crafts: initialCrafts = [], frequency:
     }
     if (error) {
       fail(/rate|limit/i.test(error.message) || error.status === 429 ? "יותר מדי ניסיונות. נסו שוב בעוד כמה דקות." : (/sending|email/i.test(error?.message || "") ? "לא הצלחנו לשלוח את המייל כרגע. נסו שוב בעוד כמה דקות." : "משהו השתבש. בדקו את הכתובת ונסו שוב."));
-    } else if (onSent) {
-      setState("idle");
-      onSent(address);
-    } else setState("sent");
+    } else {
+      setJoined("pending");
+      if (onSent) { setState("idle"); onSent(address); } else setState("sent");
+    }
   }
 
   return (

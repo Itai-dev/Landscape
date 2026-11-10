@@ -4,6 +4,7 @@
 
 const initials = (name) => {
   const words = String(name || "").replace(/[^\p{L}\p{N}\s]/gu, " ").trim().split(/\s+/).filter(Boolean);
+  if (/^[\u0590-\u05FF]/.test(words[0] || "")) return words[0][0]; // Hebrew: one letter reads as a monogram
   return (words.length > 1 ? words[0][0] + words[1][0] : (words[0] || "").slice(0, 2)).toUpperCase();
 };
 

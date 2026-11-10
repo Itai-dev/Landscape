@@ -110,9 +110,15 @@ t("the archive filters by beat and crafts, newest first", () => {
   assert.ok(mine.every((i) => i.mine && i.crafts.some((c) => c.slug === craft)));
 });
 
-t("every update has a short title: research's title_he, else the headline cut at a clause", () => {
+t("every update has a short title: research's title_he, else the headline cut at a clause; a job is company: posted title", () => {
   for (const s of UPDATES) {
     const title = titleOf(s);
+    if (s.type === "hiring" && s.job_title) {
+      // A job: "<company>: <title as posted>", and the headline uses that same title, never a translation.
+      assert.ok(title.endsWith(`: ${s.job_title}`), `${s.id}: ${title}`);
+      assert.ok(s.headline_he.includes(s.job_title), `${s.id}: headline_he lacks the posted title`);
+      continue;
+    }
     assert.ok(title.length > 0 && title.length <= 91, `${s.id}: ${title}`);
     assert.ok(s.headline_he.startsWith(title.replace(/…$/, "")), s.id);
   }

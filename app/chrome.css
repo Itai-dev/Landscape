@@ -124,9 +124,12 @@ footer.foot .foot-feedback { color: var(--ink); text-decoration: underline; text
 @media (hover: hover) { footer.foot .foot-links a:hover { text-decoration: underline; text-underline-offset: 3px; } }
 @media (prefers-reduced-motion: reduce) { header.top .nav a, .burger .bars, .burger .bars::before { transition: none; } }
 
-/* Phone tab bar (both apps, under 861px): a floating ink bar, like the companies app's section bar */
+/* Phone tab bar (both apps, under 861px): a floating ink bar, only when the site runs as an installed app
+   (display-mode: standalone). In a browser it's too much on screen: the hamburger menu holds the sections,
+   and the header keeps its call to action (an icon). */
 nav.sitebar { display: none; }
-@media (max-width: 860px) {
+@media (max-width: 860px) and (display-mode: standalone) {
+  .menusheet-nav a.msec { display: none; }
   nav.sitebar { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; position: fixed; z-index: 15; inset: auto 12px calc(8px + env(safe-area-inset-bottom, 0px)) 12px; max-width: 600px; margin-inline: auto; background: var(--ink); border-radius: 14px; padding: 4px; }
   nav.sitebar a { min-height: 52px; border-radius: 10px; display: grid; justify-items: center; align-content: center; gap: 2px; font-size: 11.5px; font-weight: 500; line-height: 1.2; color: color-mix(in srgb, var(--bg) 70%, var(--ink)); text-decoration: none; white-space: nowrap; }
   nav.sitebar a .ti { width: 20px; height: 20px; }
@@ -141,7 +144,7 @@ nav.sitebar { display: none; }
   /* The bar stays under the open menu and the companies app's sheets */
   :root.menu-open nav.sitebar { display: none; }
 }
-@media (hover: hover) and (max-width: 860px) { nav.sitebar a:not([aria-current]):hover { color: var(--bg); } }
+@media (hover: hover) and (max-width: 860px) and (display-mode: standalone) { nav.sitebar a:not([aria-current]):hover { color: var(--bg); } }
 
 /* Pages with their own search box hide the header field (.nosearch, set by Header.js and by headerHtml without a search). */
 header.top.nosearch .hsearch { display: none; }
@@ -202,9 +205,10 @@ header.top form.hsearch { position: relative; }
 @media (hover: hover) { .totop:hover svg { transform: translateY(-3px); } }
 .totop:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 860px) {
-  .totop { width: 46px; height: 46px; border-radius: 12px; inset-inline-end: 12px; bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+  .totop { width: 46px; height: 46px; border-radius: 12px; inset-inline-end: 12px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
   :root.menu-open .totop { display: none; }
 }
+@media (max-width: 860px) and (display-mode: standalone) { .totop { bottom: calc(80px + env(safe-area-inset-bottom, 0px)); } }
 @media (prefers-reduced-motion: reduce) { .totop, .totop svg { transition: none; } }
 @media print { .totop { display: none; } }
 
