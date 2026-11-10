@@ -1,5 +1,6 @@
 import KindTag from "@/components/KindTag";
 import Bidi from "@/components/Bidi";
+import { Thumb } from "@/components/Cover";
 import { listUpdates, BEATS, beatByKey } from "@/lib/front";
 import { CRAFTS, CRAFT_SLUGS } from "@/lib/taxonomy";
 import { siteUrl } from "@/lib/digest";
@@ -58,9 +59,12 @@ export default async function Updates({ searchParams }) {
           <ol className="upd-list">
             {d.items.map((i) => (
               <li key={i.id} className="upd-row">
-                <p className="upd-meta"><span>{i.class_label}</span>{i.mine && <span className="fp-mark">בתחום שלכם</span>}</p>
-                <a className="upd-head" href={i.href} data-track="update_open" data-track-where="updates_list"><Bidi>{i.title}</Bidi></a>
-                {i.org?.name && <p className="upd-org">{i.org.href ? <a href={i.org.href} data-track="company_open" data-track-where="updates_list"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
+                <a className="fp-thumb" href={i.href} tabIndex={-1} aria-hidden="true"><Thumb i={i} /></a>
+                <div className="upd-row-body">
+                  <p className="upd-meta"><span>{i.class_label}</span>{i.mine && <span className="fp-mark">בתחום שלכם</span>}</p>
+                  <a className="upd-head" href={i.href} data-track="update_open" data-track-where="updates_list"><Bidi>{i.title}</Bidi></a>
+                  {i.org?.name && <p className="upd-org">{i.org.href ? <a href={i.org.href} data-track="company_open" data-track-where="updates_list"><bdi>{i.org.name}</bdi></a> : <bdi>{i.org.name}</bdi>}{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
+                </div>
               </li>
             ))}
           </ol>

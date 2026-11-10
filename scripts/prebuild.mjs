@@ -162,6 +162,7 @@ const orgs = dataset.orgs.map((o) => ({
   // Hi-res file served with the companies app (site/data/logo/), never drawn above its native size.
   logo_hi: o.logo_ext ? `/companies/data/logo/${encodeURIComponent(o.id)}.${o.logo_ext}` : null,
   logo_px: o.logo_px || null,
+  logo_ar: o.logo_ar || null,
 }));
 const count = (...kinds) => dataset.orgs.filter((o) => kinds.includes(o.kind)).length;
 const stats = {

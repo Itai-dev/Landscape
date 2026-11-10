@@ -6,6 +6,7 @@ import TrackButton from "@/components/TrackButton";
 import FollowButton from "@/components/FollowButton";
 import DigestSubscribe from "@/components/DigestSubscribe";
 import { LinkIcon } from "@/components/Icons";
+import Cover, { Thumb } from "@/components/Cover";
 import { UPDATES, updateById, updateItem, moreAbout, relatedUpdates } from "@/lib/front";
 import { siteUrl, WHY_HE } from "@/lib/digest";
 import "@/app/front.css";
@@ -56,9 +57,12 @@ function jsonLd(i) {
 function Row({ i, where }) {
   return (
     <li className="upd-row">
-      <p className="upd-meta"><span>{i.class_label}</span> · <span>{i.day}</span></p>
-      <a className="upd-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.title}</Bidi></a>
-      {i.org?.name && <p className="upd-org"><bdi>{i.org.name}</bdi>{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
+      <a className="fp-thumb" href={i.href} tabIndex={-1} aria-hidden="true"><Thumb i={i} size={64} /></a>
+      <div className="upd-row-body">
+        <p className="upd-meta"><span>{i.class_label}</span> · <span>{i.day}</span></p>
+        <a className="upd-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.title}</Bidi></a>
+        {i.org?.name && <p className="upd-org"><bdi>{i.org.name}</bdi>{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
+      </div>
     </li>
   );
 }
@@ -82,7 +86,8 @@ export default async function UpdatePage({ params }) {
       <article className="upd-article">
         <p className="fp-kicker"><span className="fp-badge">{i.class === "opportunity" ? "הזדמנות" : "עדכון"}</span><span>{i.label} · {i.day}</span>{i.late && <span className="muted">· הגיע אלינו ב־{new Intl.DateTimeFormat("he-IL", { day: "numeric", month: "short", timeZone: "UTC" }).format(new Date(`${i.seen}T00:00:00Z`))}</span>}</p>
         <h1><Bidi>{i.title}</Bidi></h1>
-        {i.headline !== i.title && <p className="upd-summary"><Bidi>{i.headline}</Bidi></p>}
+        <Cover i={i} priority />
+        {i.rest && <p className="upd-summary"><Bidi>{i.rest}</Bidi></p>}
         {i.why && <p className="upd-why"><b>{WHY_HE}:</b> <Bidi>{i.why}</Bidi></p>}
 
         {(i.credits.length > 0 || i.org) && (

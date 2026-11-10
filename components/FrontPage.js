@@ -5,6 +5,7 @@ import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
 import { LinkIcon } from "@/components/Icons";
 import { WHY_HE } from "@/lib/digest";
+import Cover, { Thumb } from "@/components/Cover";
 import "@/app/front.css";
 
 // The home page as a news front: the story of the week, the next stories, opportunities, the rest by
@@ -24,10 +25,10 @@ function Marks({ i }) {
   return <>{i.tracked && <span className="fp-mark">במעקב שלכם</span>}{i.mine && !i.tracked && <span className="fp-mark">בתחום שלכם</span>}</>;
 }
 
-function Story({ i, where, rank }) {
+function Story({ i, where }) {
   return (
     <li className="fp-story">
-      {rank != null && <span className="fp-rank" aria-hidden="true">{rank}</span>}
+      <a className="fp-thumb" href={i.href} tabIndex={-1} aria-hidden="true" data-track="update_open" data-track-where={where}><Thumb i={i} /></a>
       <div className="fp-story-body">
         <p className="fp-kicker"><span>{i.beat_he || i.label}</span> · <span>{i.day}</span><Marks i={i} /></p>
         <a className="fp-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.title}</Bidi></a>
@@ -49,7 +50,8 @@ export default function FrontPage({ f, signedIn = false }) {
       <div className="fp-dateline">
         <p><b>{f.dateline}</b> · מה קרה השבוע בתעשיית הקריאייטיב בישראל.</p>
         <p className="fp-counts">
-          <a href="/companies">{stats.orgs} חברות במדריך</a> · <a href="/updates">{plural(stats.week, "עדכון אחד נוסף השבוע", "% עדכונים נוספו השבוע")}</a>
+          <a href="/companies">{stats.orgs} חברות במדריך</a>
+          {stats.week > 0 && <> · <a href="/updates">{plural(stats.week, "עדכון אחד נוסף השבוע", "% עדכונים נוספו השבוע")}</a></>}
           {stats.openTenders + stats.upcomingTenders > 0 && <> · <a href="/tenders">{plural(stats.openTenders + stats.upcomingTenders, "מכרז אחד פתוח או בקרוב", "% מכרזים פתוחים או בקרוב")}</a></>}
         </p>
       </div>
@@ -64,6 +66,7 @@ export default function FrontPage({ f, signedIn = false }) {
       {lead && (
         <section className="fp-lead" aria-labelledby="lead-h">
           <article className="fp-leadstory">
+            <a className="fp-cover" href={lead.href} tabIndex={-1} data-track="update_open" data-track-where="home_lead_cover"><Cover i={lead} priority /></a>
             <p className="fp-kicker"><span className="fp-badge">הסיפור של השבוע</span><span>{lead.beat_he || lead.label} · {lead.day}</span><Marks i={lead} /></p>
             <h1 id="lead-h" className={lead.title.length > 60 ? "long" : undefined}><a href={lead.href} data-track="update_open" data-track-where="home_lead"><Bidi>{lead.title}</Bidi></a></h1>
             {lead.why && <p className="fp-why"><b>{WHY_HE}:</b> <Bidi>{lead.why}</Bidi></p>}
@@ -99,7 +102,7 @@ export default function FrontPage({ f, signedIn = false }) {
               </>
             )}
             <h2 id="top-h" className="fp-aside-h">עוד השבוע</h2>
-            <ol className="fp-list">{top.map((i, n) => <Story key={i.id} i={i} where="home_top" rank={n + 1} />)}</ol>
+            <ol className="fp-list">{top.map((i) => <Story key={i.id} i={i} where="home_top" />)}</ol>
             {!signedIn && <p className="fp-join small"><a href="/join" data-track="front_join">נרשמים, ורואים את הדף לפי התחומים שלכם <Chevron /></a></p>}
           </aside>
         </section>
@@ -133,8 +136,11 @@ export default function FrontPage({ f, signedIn = false }) {
                   {jobs.map((j) => (
                     <li key={j.id}>
                       <a href={j.href} data-track="update_open" data-track-where="home_jobs">
-                        <span className="fp-job-org">{j.org?.name ? <bdi>{j.org.name}</bdi> : "משרה"}</span>
-                        <span className="fp-job-head"><Bidi>{j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
+                        <Thumb i={j} size={44} />
+                        <span className="fp-job-text">
+                          <span className="fp-job-org">{j.org?.name ? <bdi>{j.org.name}</bdi> : "משרה"}</span>
+                          <span className="fp-job-head"><Bidi>{j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
+                        </span>
                       </a>
                     </li>
                   ))}
@@ -168,6 +174,7 @@ export default function FrontPage({ f, signedIn = false }) {
           <div className="fp-chips">
             {inTheNews.map((o) => (
               <a key={o.id} className="fp-chip" href={o.href} data-track="company_open" data-track-where="home_inthenews">
+                <Thumb i={{ org: o }} size={48} />
                 <b><bdi>{o.name}</bdi></b>
                 <KindTag kind={o.kind} />
                 <span className="muted small">{plural(o.updates, "עדכון אחד", "% עדכונים")}</span>
