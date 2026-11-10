@@ -3,114 +3,106 @@ import KindTag from "@/components/KindTag";
 import Bidi from "@/components/Bidi";
 import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
-import { LinkIcon } from "@/components/Icons";
 import { WHY_HE } from "@/lib/digest";
+import Cover, { Thumb } from "@/components/Cover";
 import "@/app/front.css";
 
-// The home page as a news front: the story of the week, the next stories, opportunities, the rest by
-// section, who's in the news, and one call to action (the weekly email). `f` comes from composeFront; it is
-// personal when the reader is signed in with crafts or tracked companies.
+// The home page. First it says what the site is and what you get (three things, with real counts), then one
+// numbered section for each of them: what happened (updates), opportunities (open tenders, published jobs),
+// and the companies. One call to action: the weekly email. `f` comes from composeFront; it is personal when
+// the reader is signed in with crafts or tracked companies. The by-topic view lives on /updates.
 
 const plural = (n, one, many) => (n === 1 ? one : many.replace("%", String(n)));
-
-function OrgLink({ org, where }) {
-  if (!org) return null;
-  if (!org.href) return <bdi>{org.name}</bdi>;
-  return <a href={org.href} data-track="company_open" data-track-where={where}><bdi>{org.name}</bdi></a>;
-}
 
 function Marks({ i }) {
   if (!i.mine && !i.tracked) return null;
   return <>{i.tracked && <span className="fp-mark">במעקב שלכם</span>}{i.mine && !i.tracked && <span className="fp-mark">בתחום שלכם</span>}</>;
 }
 
-function Story({ i, where, rank }) {
+function Story({ i, where }) {
   return (
     <li className="fp-story">
-      {rank != null && <span className="fp-rank" aria-hidden="true">{rank}</span>}
+      <a className="fp-thumb" href={i.href} tabIndex={-1} aria-hidden="true" data-track="update_open" data-track-where={where}><Thumb i={i} /></a>
       <div className="fp-story-body">
         <p className="fp-kicker"><span>{i.beat_he || i.label}</span> · <span>{i.day}</span><Marks i={i} /></p>
         <a className="fp-head" href={i.href} data-track="update_open" data-track-where={where}><Bidi>{i.title}</Bidi></a>
-        {i.org?.name && <p className="fp-org"><OrgLink org={i.org} where={where} />{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
+        {i.org?.name && <p className="fp-org"><bdi>{i.org.name}</bdi>{i.org.kind && <KindTag kind={i.org.kind} />}</p>}
       </div>
     </li>
   );
 }
 
+function SecHead({ n, id, title, text, href, more }) {
+  return (
+    <div className="fp-sechead">
+      <div>
+        <h2 id={id}>{n && <span className="fp-n" aria-hidden="true">{n}</span>}{title}</h2>
+        <p className="muted">{text}</p>
+      </div>
+      {href && <a className="btn" href={href}>{more}</a>}
+    </div>
+  );
+}
+
 export default function FrontPage({ f, signedIn = false }) {
-  const { lead, tracked, top, beats, tenders, jobs, inTheNews, stats } = f;
+  const { lead, tracked, top, tenders, jobs, inTheNews, stats } = f;
   const who = f.crafts.map((c) => c.he).slice(0, 3).join(", ");
-  const opportunities = tenders.length + jobs.length;
+  const live = stats.openTenders + stats.upcomingTenders;
+  const news = top.slice(0, 4);
 
   return (
     <div className="wrap fp">
       <AuthNotice />
+      {signedIn && <h1 className="sr-only">CreativeIn: מה קורה בתעשיית הקריאייטיב בישראל</h1>}
 
-      <div className="fp-dateline">
-        <p><b>{f.dateline}</b> · מה קרה השבוע בתעשיית הקריאייטיב בישראל.</p>
-        <p className="fp-counts">
-          <a href="/companies">{stats.orgs} חברות במדריך</a> · <a href="/updates">{plural(stats.week, "עדכון אחד נוסף השבוע", "% עדכונים נוספו השבוע")}</a>
-          {stats.openTenders + stats.upcomingTenders > 0 && <> · <a href="/tenders">{plural(stats.openTenders + stats.upcomingTenders, "מכרז אחד פתוח או בקרוב", "% מכרזים פתוחים או בקרוב")}</a></>}
-        </p>
-      </div>
-
-      {signedIn && (
+      {signedIn ? (
         <p className="fp-personal">
           {who ? <>הדף מותאם לתחומים שלכם: <b>{who}</b>. </> : "בחרו תחומים, והדף והמייל השבועי יותאמו אליהם. "}
           <a href="/digest/settings">{who ? "לשינוי התחומים" : "לבחירת תחומים"}</a>
         </p>
-      )}
-
-      {lead && (
-        <section className="fp-lead" aria-labelledby="lead-h">
-          <article className="fp-leadstory">
-            <p className="fp-kicker"><span className="fp-badge">הסיפור של השבוע</span><span>{lead.beat_he || lead.label} · {lead.day}</span><Marks i={lead} /></p>
-            <h1 id="lead-h" className={lead.title.length > 60 ? "long" : undefined}><a href={lead.href} data-track="update_open" data-track-where="home_lead"><Bidi>{lead.title}</Bidi></a></h1>
-            {lead.why && <p className="fp-why"><b>{WHY_HE}:</b> <Bidi>{lead.why}</Bidi></p>}
-            {(lead.credits.length > 0 || lead.org) && (
-              <div className="fp-credits">
-                {lead.org && (
-                  <div className="fp-credit">
-                    <span className="fp-role">{lead.org.kind === "client" ? "המותג" : "החברה"}</span>
-                    <span className="fp-who"><OrgLink org={lead.org} where="home_lead" /></span>
-                    {lead.org.kind && <KindTag kind={lead.org.kind} />}
-                  </div>
-                )}
-                {lead.credits.map((c) => (
-                  <div key={c.role + c.who} className="fp-credit">
-                    <span className="fp-role">{c.role_he}</span>
-                    <span className="fp-who">{c.org ? <OrgLink org={c.org} where="home_lead" /> : <bdi>{c.who}</bdi>}</span>
-                    {c.org?.kind && <KindTag kind={c.org.kind} />}
-                  </div>
-                ))}
-              </div>
-            )}
-            <p className="fp-actions">
-              <a className="btn" href={lead.href} data-track="update_open" data-track-where="home_lead_btn">לעדכון המלא</a>
-              {lead.source_url && <span className="muted small">מקור: <a href={lead.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category={lead.type} data-track-where="home_lead"><bdi>{lead.source || "מקור"}</bdi> <LinkIcon size={12} /></a></span>}
+      ) : (
+        <section className="fp-intro" aria-labelledby="intro-h">
+          <div className="fp-intro-text">
+            <h1 id="intro-h">כל מה שקורה בתעשיית הקריאייטיב בישראל, במקום אחד.</h1>
+            <p className="fp-intro-lead">כל שבוע אנחנו אוספים מה קרה: קמפיינים ומי עשה אותם, מינויים, עסקאות, מכרזים ומשרות. הכול עם מקור, ובמייל אחד ביום ראשון.</p>
+            <p className="fp-intro-cta">
+              <a className="btn primary lg" href="/join" data-track="front_join">להרשמה למייל השבועי</a>
+              <span className="muted small">חינם. לפי התחום שלכם.</span>
             </p>
-          </article>
-
-          <aside className="fp-top" aria-labelledby="top-h">
-            {tracked.length > 0 && (
-              <>
-                <h2 id="tracked-h" className="fp-aside-h">במעקב שלכם</h2>
-                <ol className="fp-list">{tracked.map((i) => <Story key={i.id} i={i} where="home_tracked" />)}</ol>
-              </>
-            )}
-            <h2 id="top-h" className="fp-aside-h">עוד השבוע</h2>
-            <ol className="fp-list">{top.map((i, n) => <Story key={i.id} i={i} where="home_top" rank={n + 1} />)}</ol>
-            {!signedIn && <p className="fp-join small"><a href="/join" data-track="front_join">נרשמים, ורואים את הדף לפי התחומים שלכם <Chevron /></a></p>}
-          </aside>
+          </div>
+          <ol className="fp-get" aria-label="מה יש כאן">
+            <li><a className="fp-get-a" href="#news-h"><span className="fp-n">01</span><b>עדכונים</b><span className="muted">{plural(stats.month, "עדכון אחד בחודש האחרון", "% עדכונים בחודש האחרון")}</span></a></li>
+            <li><a className="fp-get-a" href="#opp-h"><span className="fp-n">02</span><b>הזדמנויות</b><span className="muted">{live > 0 ? plural(live, "מכרז אחד", "% מכרזים") : "מכרזים"} ו{plural(stats.jobs, "משרה אחת", "־% משרות")}</span></a></li>
+            <li><a className="fp-get-a" href="#companies-h"><span className="fp-n">03</span><b>חברות</b><span className="muted">{stats.orgs} חברות, ומי עובד עם מי</span></a></li>
+          </ol>
         </section>
       )}
 
-      {opportunities > 0 && (
-        <section className="fp-sec" aria-labelledby="opp-h">
-          <div className="fp-sechead">
-            <h2 id="opp-h">הזדמנויות</h2>
-            <p className="muted">רק מכרזים פתוחים ומשרות שפורסמו, עם מקור{who ? `, בתחומים שלכם` : ""}.</p>
+      {tracked.length > 0 && (
+        <section className="fp-sec" aria-labelledby="tracked-h">
+          <SecHead id="tracked-h" title="במעקב שלכם" text="מה השתנה בחברות שאתם עוקבים אחריהן." href="/me" more="לרשימת המעקב" />
+          <ol className="fp-list fp-cols">{tracked.map((i) => <Story key={i.id} i={i} where="home_tracked" />)}</ol>
+        </section>
+      )}
+
+      {lead && (
+        <section className="fp-sec" aria-labelledby="news-h">
+          <SecHead id="news-h" n="01" title="מה קרה בתעשייה" text="הסיפורים החשובים מהשבועות האחרונים: קמפיינים, מינויים, עסקאות והשקות." href="/updates" more="לכל העדכונים" />
+          <div className="fp-news">
+            <article className="fp-leadstory">
+              <a className="fp-cover" href={lead.href} tabIndex={-1} aria-hidden="true" data-track="update_open" data-track-where="home_lead_cover"><Cover i={lead} priority /></a>
+              <p className="fp-kicker"><span>{lead.beat_he || lead.label} · {lead.day}</span><Marks i={lead} /></p>
+              <h3 className={lead.title.length > 60 ? "long" : undefined}><a href={lead.href} data-track="update_open" data-track-where="home_lead"><Bidi>{lead.title}</Bidi></a></h3>
+              {lead.why && <p className="fp-why"><b>{WHY_HE}:</b> <Bidi>{lead.why}</Bidi></p>}
+            </article>
+            {news.length > 0 && <ol className="fp-list fp-side">{news.map((i) => <Story key={i.id} i={i} where="home_top" />)}</ol>}
           </div>
+        </section>
+      )}
+
+      {(tenders.length > 0 || jobs.length > 0) && (
+        <section className="fp-sec" aria-labelledby="opp-h">
+          <SecHead id="opp-h" n="02" title="הזדמנויות" text={`מכרזים פתוחים ומשרות שפורסמו${who ? " בתחומים שלכם" : ""}. מגישים דרך המקור.`} />
           <div className="fp-opp">
             {tenders.length > 0 && (
               <div className="fp-box">
@@ -128,13 +120,16 @@ export default function FrontPage({ f, signedIn = false }) {
             )}
             {jobs.length > 0 && (
               <div className="fp-box">
-                <h3>משרות שפורסמו</h3>
+                <h3>משרות</h3>
                 <ul className="fp-jobs">
-                  {jobs.map((j) => (
+                  {jobs.slice(0, 4).map((j) => (
                     <li key={j.id}>
                       <a href={j.href} data-track="update_open" data-track-where="home_jobs">
-                        <span className="fp-job-org">{j.org?.name ? <bdi>{j.org.name}</bdi> : "משרה"}</span>
-                        <span className="fp-job-head"><Bidi>{j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
+                        <Thumb i={j} size={44} />
+                        <span className="fp-job-text">
+                          <span className="fp-job-org">{j.org?.name ? <bdi>{j.org.name}</bdi> : "משרה"}</span>
+                          <span className="fp-job-head"><Bidi>{j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
+                        </span>
                       </a>
                     </li>
                   ))}
@@ -146,36 +141,20 @@ export default function FrontPage({ f, signedIn = false }) {
         </section>
       )}
 
-      {beats.length > 0 && (
-        <section className="fp-sec" aria-label="לפי נושא">
-          <div className="fp-beats">
-            {beats.map((b) => (
-              <div key={b.key} className="fp-beat">
-                <h2><a href={`/updates?beat=${b.key}`}>{b.he}</a></h2>
-                <ol className="fp-list">{b.items.map((i) => <Story key={i.id} i={i} where={`home_${b.key}`} />)}</ol>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {inTheNews.length > 0 && (
-        <section className="fp-sec" aria-labelledby="news-h">
-          <div className="fp-sechead">
-            <h2 id="news-h">חברות בחדשות</h2>
-            <a className="btn" href="/companies">לכל {stats.orgs} החברות</a>
-          </div>
+      <section className="fp-sec" aria-labelledby="companies-h">
+        <SecHead id="companies-h" n="03" title="החברות" text={`${stats.orgs} מותגים, משרדי פרסום, סטודיואים והפקות: מה כל אחת עושה, ומי עובד עם מי. אלה היו בחדשות לאחרונה.`} href="/companies" more={`לכל ${stats.orgs} החברות`} />
+        {inTheNews.length > 0 && (
           <div className="fp-chips">
             {inTheNews.map((o) => (
               <a key={o.id} className="fp-chip" href={o.href} data-track="company_open" data-track-where="home_inthenews">
+                <Thumb i={{ org: o }} size={48} />
                 <b><bdi>{o.name}</bdi></b>
                 <KindTag kind={o.kind} />
-                <span className="muted small">{plural(o.updates, "עדכון אחד", "% עדכונים")}</span>
               </a>
             ))}
           </div>
-        </section>
-      )}
+        )}
+      </section>
 
       <section className="panel inverse fp-cta" aria-labelledby="cta-h">
         <div className="fp-cta-text">

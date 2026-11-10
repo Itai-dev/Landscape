@@ -67,6 +67,9 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    ("new marketing heads often review suppliers"), never an instruction or a sales line.
    Merge with `python3 scripts/landscape.py signals research/staging/signals-<date>.json`.
    Orgs named in signals but missing from the map are discovery candidates for this run.
+   Pictures (optional): for campaigns, launches, rebrands and awards, look for the work's official page or
+   official video and store its picture with `landscape.py image <sig-id> <url> --credit "…"`. Rules in
+   `research/images-sources.md`: official sources only, never a news outlet's or a stock photo.
 5c. **Tenders** (every cycle): open tenders and supplier-pool calls for creative work. Sources, URL patterns,
    category codes, keywords and the rules are in `research/tenders-sources.md`: read it first.
    - Run `python3 scripts/tenders_mrgov.py` (polite: ≤40 requests, 1.5 s apart) to collect mr.gov.il

@@ -10,6 +10,7 @@
   python3 scripts/landscape.py signals FILE...     # merge new signals into data/signals/
   python3 scripts/landscape.py tenders FILE...     # merge tenders into data/tenders/ (new + status/deadline updates)
   python3 scripts/landscape.py tools FILE...       # merge tool updates into data/tools/updates/ (catalog: data/tools/catalog.json)
+  python3 scripts/landscape.py image SIG_ID URL --credit "..."   # an update's picture from an official page (needs Pillow)
 """
 from __future__ import annotations
 
@@ -28,6 +29,11 @@ ROOT = Path(__file__).resolve().parent.parent
 ORGS = ROOT / "data" / "orgs"
 LOGOS = ROOT / "data" / "logos"
 LOGO_MANIFEST = LOGOS / "manifest.json"
+IMAGES = ROOT / "data" / "update-images"
+IMAGE_MANIFEST = IMAGES / "manifest.json"
+IMAGE_MAX = 1600  # stored master, longest edge
+IMAGE_WEB = 1200  # shipped file (site/data/media/<id>.webp)
+IMAGE_MIN = 600   # narrower pictures are refused: they look soft as a cover
 SCHEMA = json.loads((ROOT / "schema" / "org.schema.json").read_text())
 TAXONOMY = json.loads((ROOT / "schema" / "taxonomy.json").read_text())
 NEEDS = json.loads((ROOT / "schema" / "needs.json").read_text())["needs"]
@@ -366,6 +372,38 @@ def build_logos(orgs: dict, out_dir: Path) -> dict:
     return logos
 
 
+def build_images(sigs: list[dict], out_dir: Path) -> None:
+    """site/data/media/<id>.webp for every update with a picture in data/update-images/ (see cmd_image), and
+    `image` {src, w, h, credit, from} on the signal. src is relative to site/data. Never upscaled."""
+    import io
+    manifest = json.loads(IMAGE_MANIFEST.read_text()) if IMAGE_MANIFEST.exists() else {}
+    media = out_dir / "media"
+    media.mkdir(parents=True, exist_ok=True)
+    keep = set()
+    try:
+        from PIL import Image
+    except ImportError:
+        Image = None
+    for sig in sigs:
+        meta = manifest.get(sig["id"])
+        master = IMAGES / f"{sig['id']}.webp"
+        if not meta or not master.exists() or not Image:
+            continue
+        out = media / master.name
+        im = Image.open(master).convert("RGB")
+        im.thumbnail((IMAGE_WEB, IMAGE_WEB), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "WEBP", quality=80, method=6)
+        if not out.exists() or out.read_bytes() != buf.getvalue():
+            out.write_bytes(buf.getvalue())
+        keep.add(out.name)
+        sig["image"] = {"src": f"media/{out.name}", "w": im.width, "h": im.height,
+                        "credit": meta.get("credit", ""), "from": meta.get("from", "")}
+    for f in media.iterdir():
+        if f.name not in keep:
+            f.unlink()
+
+
 def cmd_build(_args) -> int:
     orgs = load_all()
     resolve_relations(orgs)
@@ -385,6 +423,7 @@ def cmd_build(_args) -> int:
     compact = dict(ensure_ascii=False, separators=(",", ":"))
     (out_dir / "dataset.json").write_text(json.dumps(dataset, **compact))
     sigs = sorted(link_signals(load_signals(), orgs), key=lambda x: x["date"], reverse=True)
+    build_images(sigs, out_dir)
     (out_dir / "signals.json").write_text(json.dumps({"generated": dataset["generated"], "signals": sigs}, **compact))
     (out_dir / "logos.json").write_text(json.dumps(logos, **compact))
     tenders = site_tenders(load_tenders(), orgs)
@@ -1128,6 +1167,80 @@ def cmd_logos(args) -> int:
     return 0
 
 
+# ---------- update images ----------
+
+def _og_image(html: str, base: str) -> str | None:
+    """The page's own share picture: og:image, else twitter:image."""
+    from urllib.parse import urljoin
+    for key in ("og:image:secure_url", "og:image", "twitter:image", "twitter:image:src"):
+        for tag in re.findall(r"<meta\b[^>]*>", html, re.I):
+            if re.search(r'(?:property|name)\s*=\s*["\']' + re.escape(key) + r'["\']', tag, re.I):
+                m = re.search(r'content\s*=\s*["\']([^"\']+)', tag, re.I)
+                if m:
+                    return urljoin(base, m.group(1).strip())
+    return None
+
+
+def cmd_image(args) -> int:
+    """Store one update's picture: the share image (og:image) of an official page (the brand's, agency's or
+    production company's own page, a press kit, or the official video), or a direct image URL from one.
+    Never a news outlet's or a photo agency's picture (research/images-sources.md). Saves
+    data/update-images/<id>.webp (≤1600px) and its credit in manifest.json; the build ships it."""
+    import io
+    from PIL import Image
+    sigs = {s["id"]: s for s in load_signals()}
+    manifest = json.loads(IMAGE_MANIFEST.read_text()) if IMAGE_MANIFEST.exists() else {}
+    if args.remove:
+        manifest.pop(args.id, None)
+        (IMAGES / f"{args.id}.webp").unlink(missing_ok=True)
+        IMAGE_MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
+        print(f"removed the picture of {args.id}")
+        return 0
+    if args.id not in sigs:
+        print(f"unknown update id '{args.id}'")
+        return 1
+    if not args.url or not args.credit:
+        print("need URL and --credit (who made or published the picture, e.g. \"באדיבות מקאן תל אביב\")")
+        return 1
+    f = _Polite()
+    got = f.get(args.url, timeout=15)
+    if not got:
+        print(f"could not fetch {args.url} (refused, robots.txt or offline)")
+        return 1
+    body, final = got
+    src = final
+    try:
+        im = Image.open(io.BytesIO(body))
+    except Exception:
+        src = _og_image(body.decode("utf-8", "ignore"), final)
+        if not src:
+            print("the page has no share picture (og:image); pass the image URL itself")
+            return 1
+        got = f.get(src, timeout=15)
+        if not got:
+            print(f"could not fetch the picture {src}")
+            return 1
+        try:
+            im = Image.open(io.BytesIO(got[0]))
+        except Exception:
+            print(f"not an image: {src}")
+            return 1
+    im = im.convert("RGB")
+    if im.width < IMAGE_MIN:
+        print(f"too small ({im.width}x{im.height}px; need {IMAGE_MIN}px wide or more)")
+        return 1
+    if not 0.9 <= im.width / im.height <= 2.6:
+        print(f"wrong shape for a cover ({im.width}x{im.height}); pick a landscape picture")
+        return 1
+    im.thumbnail((IMAGE_MAX, IMAGE_MAX), Image.LANCZOS)
+    IMAGES.mkdir(parents=True, exist_ok=True)
+    im.save(IMAGES / f"{args.id}.webp", "WEBP", quality=84, method=6)
+    manifest[args.id] = {"from": args.url, "src": src, "credit": args.credit, "w": im.width, "h": im.height, "fetched": TODAY}
+    IMAGE_MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
+    print(f"saved {args.id}: {im.width}x{im.height} from {src}")
+    return 0
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -1162,6 +1275,12 @@ def main() -> int:
     tl.add_argument("--dry-run", action="store_true")
     tl.add_argument("--strict", action="store_true")
     tl.set_defaults(fn=cmd_tools)
+    im = sub.add_parser("image", help="store an update's picture from an official page")
+    im.add_argument("id", help="signal id (sig-...)")
+    im.add_argument("url", nargs="?", help="official page (its og:image is used) or a direct image URL")
+    im.add_argument("--credit", help="shown under the picture, e.g. \"באדיבות מקאן תל אביב\"")
+    im.add_argument("--remove", action="store_true", help="drop this update's picture")
+    im.set_defaults(fn=cmd_image)
     args = p.parse_args()
     return args.fn(args)
 
