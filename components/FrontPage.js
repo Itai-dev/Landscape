@@ -180,7 +180,7 @@ export default function FrontPage({ f, signedIn = false, member = null }) {
                         <Thumb i={j} size={44} />
                         <span className="fp-job-text">
                           <span className="fp-job-org">{j.org?.name ? <bdi>{j.org.name}</bdi> : "משרה"}</span>
-                          <span className="fp-job-head"><Bidi>{j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</Bidi></span>
+                          <span className="fp-job-head"><bdi>{j.job_title || j.title.replace(/^משרה פתוחה ב[־\-]?[^:]{0,60}:\s*/, "")}</bdi></span>
                         </span>
                       </a>
                     </li>

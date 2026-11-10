@@ -114,8 +114,8 @@ export default async function Tenders({ searchParams }) {
               <li key={j.id} className={j.source_url ? "jclick" : undefined}>
                 {/* The whole row opens the job (a stretched link); the company name stays its own link. */}
                 {j.source_url
-                  ? <a className="jhead jlink" href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs"><Bidi>{j.headline}</Bidi></a>
-                  : <p className="jhead"><Bidi>{j.headline}</Bidi></p>}
+                  ? <a className="jhead jlink" href={j.source_url} target="_blank" rel="noopener noreferrer" data-track="opportunity_source_click" data-track-category="hiring" data-track-where="jobs">{j.job_title ? <bdi dir="auto">{j.job_title}</bdi> : <Bidi>{j.headline}</Bidi>}</a>
+                  : <p className="jhead">{j.job_title ? <bdi dir="auto">{j.job_title}</bdi> : <Bidi>{j.headline}</Bidi>}</p>}
                 <p className="jmeta">
                   {j.org?.name && (j.org.href ? <a className="jorg" href={rel(j.org.href)} data-track="company_open" data-track-where="jobs"><bdi>{j.org.name}</bdi></a> : <bdi>{j.org.name}</bdi>)}
                   {j.org?.name ? " · " : ""}{j.day}

@@ -67,6 +67,10 @@ Segments are listed in `research/queue.md` (e.g. `il-animation-motion`, `il-clie
    ("new marketing heads often review suppliers"), never an instruction or a sales line.
    Merge with `python3 scripts/landscape.py signals research/staging/signals-<date>.json`.
    Orgs named in signals but missing from the map are discovery candidates for this run.
+   Jobs (`type: hiring`): put the posting's title in `job_title` exactly as published (on LinkedIn it's
+   usually English; a Hebrew posting stays Hebrew; drop the company name if the title repeats it, e.g.
+   "Sodastream: Global Digital Content Lead" → "Global Digital Content Lead") and use that same title inside `headline_he`, never a
+   translation ("משרה פתוחה ב־Riverside: Senior Marketing Designer (תל אביב), …").
    Pictures (optional): for campaigns, launches, rebrands and awards, look for the work's official page or
    official video and store its picture with `landscape.py image <sig-id> <url> --credit "…"`. Rules in
    `research/images-sources.md`: official sources only, never a news outlet's or a stock photo.

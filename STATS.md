@@ -1,6 +1,6 @@
 # Landscape stats
 
-_Generated 2026-11-02 · 431 organizations_
+_Generated 2026-11-10 · 431 organizations_
 
 ## By kind
 
