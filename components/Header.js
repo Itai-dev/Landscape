@@ -5,10 +5,11 @@ import { useUser } from "@/components/useUser";
 import { useJoined } from "@/components/useJoined";
 import { installTyping } from "@/lib/typing.mjs";
 import { syncTracking } from "@/lib/trackSync";
-import { BRAND, WORDMARK, NAV, MENU, JOIN, ME, SIGNIN, THEME_BUTTON, BURGER, SITE_SEARCH, ctaInner, sheetHtml, promoHtml, tabbarInner, installTheme, installMenu } from "@/lib/chrome.mjs";
+import { BRAND, WORDMARK, NAV, SHEET, JOIN, ME, SIGNIN, THEME_BUTTON, BURGER, SITE_SEARCH, ctaInner, sheetHtml, promoHtml, tabbarInner, installTheme, installMenu } from "@/lib/chrome.mjs";
 
 // The site header. Same lists and markup as the companies app's header (lib/chrome.mjs), styles in app/chrome.css.
-// Under 861px the links move into the hamburger sheet (installMenu wires the button in both apps).
+// Under 861px the links move into the hamburger sheet (installMenu wires the button in both apps). The phone tab
+// bar shows only in the installed app (display-mode: standalone); in a browser the menu holds everything.
 export default function Header() {
   const user = useUser();
   const path = usePathname() || "/";
@@ -22,7 +23,7 @@ export default function Header() {
   useEffect(() => { if (user) syncTracking().then((r) => r && window.dispatchEvent(new Event("creativein-track"))).catch(() => {}); }, [user?.id]);
   // The header search types example queries (not on the home page, where it's hidden and the hero has its own).
   useEffect(() => installTyping(document.querySelector("header.top form.hsearch input")), [path]);
-  const active = MENU.find((n) => here(n.href))?.key || "";
+  const active = SHEET.find((n) => here(n.href))?.key || "";
   // Phone tab bar: which item is this page (the call to action counts for /join and the account).
   const tab = here("/companies") ? "companies" : here("/people") ? "people" : here("/tenders") ? "tenders" : here("/join") || here("/me") || here("/digest/settings") ? "cta" : "";
   return (
