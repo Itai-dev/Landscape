@@ -5,6 +5,7 @@ import Bidi from "@/components/Bidi";
 import TrackButton from "@/components/TrackButton";
 import FollowButton from "@/components/FollowButton";
 import DigestSubscribe from "@/components/DigestSubscribe";
+import { GuestOnly } from "@/components/useJoined";
 import { LinkIcon } from "@/components/Icons";
 import Cover, { Thumb } from "@/components/Cover";
 import { UPDATES, updateById, updateItem, moreAbout, relatedUpdates } from "@/lib/front";
@@ -154,10 +155,12 @@ export default async function UpdatePage({ params }) {
         </section>
       )}
 
-      <section className="panel inverse upd-cta" aria-labelledby="ucta-h">
-        <h2 id="ucta-h">עדכונים כאלה, בתחומים שלכם, כל יום ראשון במייל.</h2>
-        <DigestSubscribe compact where="update-page" />
-      </section>
+      <GuestOnly>
+        <section className="panel inverse upd-cta" aria-labelledby="ucta-h">
+          <h2 id="ucta-h">עדכונים כאלה, בתחומים שלכם, כל יום ראשון במייל.</h2>
+          <DigestSubscribe compact where="update-page" />
+        </section>
+      </GuestOnly>
     </div>
   );
 }

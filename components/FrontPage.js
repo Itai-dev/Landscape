@@ -5,6 +5,8 @@ import DigestSubscribe from "@/components/DigestSubscribe";
 import AuthNotice from "@/components/AuthNotice";
 import { WHY_HE } from "@/lib/digest";
 import Cover, { Thumb } from "@/components/Cover";
+import TrackButton from "@/components/TrackButton";
+import { GuestOnly } from "@/components/useJoined";
 import "@/app/front.css";
 
 // The home page. First it says what the site is and what you get (three things, with real counts), then one
@@ -32,6 +34,49 @@ function Story({ i, where }) {
   );
 }
 
+// Signed in: where they stand (the weekly email, their crafts, what they track) and one next step.
+function Member({ m, who }) {
+  const step = !who ? "crafts" : m.suggest.length ? "follow" : "";
+  return (
+    <section className="fp-member" aria-labelledby="member-h">
+      <div className="fp-member-text">
+        <h1 id="member-h">{who ? "שלום. זה מה שחדש בתחומים שלכם." : "שלום. זה מה שחדש בתעשייה."}</h1>
+        <ul className="fp-status">
+          <li><span className="muted">המייל השבועי</span><b>{m.newsletter ? (m.next ? `הבא: ${m.next}` : "פעיל") : "כבוי"}</b><a href="/digest/settings">{m.newsletter ? "להגדרות" : "להפעלה"}</a></li>
+          <li><span className="muted">התחומים שלכם</span><b>{who || "עוד לא נבחרו"}</b><a href="/digest/settings">{who ? "לשינוי" : "לבחירה"}</a></li>
+          <li><span className="muted">במעקב</span><b>{plural(m.follows, "חברה אחת", "% חברות")}</b><a href="/me">לרשימה</a></li>
+        </ul>
+      </div>
+      {step === "crafts" && (
+        <div className="fp-next">
+          <p className="fp-next-k">השלב הבא</p>
+          <h2>בחרו את התחומים שלכם</h2>
+          <p className="muted">ככה הדף והמייל השבועי יציגו קודם את מה שרלוונטי לעבודה שלכם.</p>
+          <p><a className="btn primary" href="/digest/settings">לבחירת תחומים</a></p>
+        </div>
+      )}
+      {step === "follow" && (
+        <div className="fp-next">
+          <p className="fp-next-k">השלב הבא · {m.follows} מתוך {m.goal}</p>
+          <h2>עקבו אחרי חברות שמעניינות אתכם</h2>
+          <p className="muted">כשמשהו משתנה אצלן, זה יופיע כאן ראשון ובמייל. אלה מזמינות עבודה בתחומים שלכם.</p>
+          <ul className="fp-suggest">
+            {m.suggest.map((o) => (
+              <li key={o.id}>
+                <a href={`/companies/${encodeURIComponent(o.id)}`} className="fp-suggest-name" data-track="company_open" data-track-where="home_next">
+                  <Thumb i={{ org: { ...o, logo: o.logo } }} size={44} />
+                  <span><b><bdi>{o.name}</bdi></b>{o.reason && <span className="muted small"><Bidi>{o.reason}</Bidi></span>}</span>
+                </a>
+                <TrackButton orgId={o.id} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
+  );
+}
+
 function SecHead({ n, id, title, text, href, more }) {
   return (
     <div className="fp-sechead">
@@ -44,7 +89,7 @@ function SecHead({ n, id, title, text, href, more }) {
   );
 }
 
-export default function FrontPage({ f, signedIn = false }) {
+export default function FrontPage({ f, signedIn = false, member = null }) {
   const { lead, tracked, top, tenders, jobs, inTheNews, stats } = f;
   const who = f.crafts.map((c) => c.he).slice(0, 3).join(", ");
   const live = stats.openTenders + stats.upcomingTenders;
@@ -53,22 +98,29 @@ export default function FrontPage({ f, signedIn = false }) {
   return (
     <div className="wrap fp">
       <AuthNotice />
-      {signedIn && <h1 className="sr-only">CreativeIn: מה קורה בתעשיית הקריאייטיב בישראל</h1>}
+      {signedIn && !member && <h1 className="sr-only">CreativeIn: מה קורה בתעשיית הקריאייטיב בישראל</h1>}
 
       {signedIn ? (
-        <p className="fp-personal">
-          {who ? <>הדף מותאם לתחומים שלכם: <b>{who}</b>. </> : "בחרו תחומים, והדף והמייל השבועי יותאמו אליהם. "}
-          <a href="/digest/settings">{who ? "לשינוי התחומים" : "לבחירת תחומים"}</a>
-        </p>
+        member ? <Member m={member} who={who} /> : (
+          <p className="fp-personal">
+            {who ? <>הדף מותאם לתחומים שלכם: <b>{who}</b>. </> : "בחרו תחומים, והדף והמייל השבועי יותאמו אליהם. "}
+            <a href="/digest/settings">{who ? "לשינוי התחומים" : "לבחירת תחומים"}</a>
+          </p>
+        )
       ) : (
         <section className="fp-intro" aria-labelledby="intro-h">
           <div className="fp-intro-text">
             <h1 id="intro-h">כל מה שקורה בתעשיית הקריאייטיב בישראל, במקום אחד.</h1>
             <p className="fp-intro-lead">כל שבוע אנחנו אוספים מה קרה: קמפיינים ומי עשה אותם, מינויים, עסקאות, מכרזים ומשרות. הכול עם מקור, ובמייל אחד ביום ראשון.</p>
-            <p className="fp-intro-cta">
-              <a className="btn primary lg" href="/join" data-track="front_join">להרשמה למייל השבועי</a>
-              <span className="muted small">חינם. לפי התחום שלכם.</span>
-            </p>
+            <GuestOnly
+              pending={<p className="fp-intro-back">שלחנו לכם קישור אישור במייל. לחצו עליו כדי לסיים את ההרשמה. לא הגיע? בדקו בספאם.</p>}
+              joined={<p className="fp-intro-back">כבר נרשמתם. <a href="/me">היכנסו</a>, והדף יותאם לתחומים שלכם ולחברות שאתם עוקבים אחריהן.</p>}
+            >
+              <p className="fp-intro-cta">
+                <a className="btn primary lg" href="/join" data-track="front_join">להרשמה למייל השבועי</a>
+                <span className="muted small">חינם. לפי התחום שלכם.</span>
+              </p>
+            </GuestOnly>
           </div>
           <ol className="fp-get" aria-label="מה יש כאן">
             <li><a className="fp-get-a" href="#news-h"><span className="fp-n">01</span><b>עדכונים</b><span className="muted">{plural(stats.month, "עדכון אחד בחודש האחרון", "% עדכונים בחודש האחרון")}</span></a></li>
@@ -156,17 +208,17 @@ export default function FrontPage({ f, signedIn = false }) {
         )}
       </section>
 
-      <section className="panel inverse fp-cta" aria-labelledby="cta-h">
-        <div className="fp-cta-text">
-          <h2 id="cta-h">כל זה, במייל אחד ביום ראשון.</h2>
-          <p className="muted">העדכונים בתחומים שלכם, המכרזים שנפתחים והחברות שאתם עוקבים אחריהן. לא צריך להכיר את כולם. מספיק להישאר In.</p>
-        </div>
-        <div className="fp-cta-form">
-          {signedIn
-            ? <p><a className="btn" href="/digest/settings">הגדרות המייל השבועי</a> <a className="btn" href="/me">האזור האישי</a></p>
-            : <DigestSubscribe compact where="home-front" crafts={f.crafts.map((c) => c.slug)} />}
-        </div>
-      </section>
+      {!signedIn && (
+        <GuestOnly>
+          <section className="panel inverse fp-cta" aria-labelledby="cta-h">
+            <div className="fp-cta-text">
+              <h2 id="cta-h">כל זה, במייל אחד ביום ראשון.</h2>
+              <p className="muted">העדכונים בתחומים שלכם, המכרזים שנפתחים והחברות שאתם עוקבים אחריהן. לא צריך להכיר את כולם. מספיק להישאר In.</p>
+            </div>
+            <div className="fp-cta-form"><DigestSubscribe compact where="home-front" crafts={f.crafts.map((c) => c.slug)} /></div>
+          </section>
+        </GuestOnly>
+      )}
     </div>
   );
 }

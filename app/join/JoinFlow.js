@@ -10,6 +10,7 @@ import { callbackUrl, normalEmail, validEmail } from "@/lib/authLink";
 import OAuthButtons from "@/components/OAuthButtons";
 import { authErrorHe, MIN_PASSWORD } from "@/lib/authErrors";
 import { OAUTH } from "@/lib/oauth";
+import { setJoined } from "@/lib/joined.mjs";
 
 const FREQS = [
   { slug: "weekly", he: "כל שבוע" },
@@ -76,6 +77,7 @@ export default function JoinFlow({ crafts: all, source = "join" }) {
     }
     setPhase("idle");
     setEmail(address);
+    setJoined("pending");
     go(3);
   }
 
