@@ -1,0 +1,13 @@
+/* /connect: how to add CreativeIn to an AI assistant */
+.cn h2 { margin: 0; font-size: var(--h3); font-weight: 600; }
+.cn-k { margin: 0 0 var(--s-2); font-size: var(--t-xs) !important; font-weight: 600; color: var(--muted) !important; }
+.cn-copy { display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.cn-copy input { flex: 1 1 260px; min-width: 0; min-height: 48px; padding: 0 var(--s-4); border: 0; border-radius: var(--r); background: var(--paper); color: var(--ink); font: inherit; font-size: var(--t-sm); }
+.cn-copy .btn { min-height: 48px; }
+.cn-steps { margin: 0; padding-inline-start: 1.4em; display: grid; gap: var(--s-2); line-height: 1.7; }
+.cn-steps b { font-weight: 600; }
+.cn-ask { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-2); }
+.cn-ask li { background: var(--paper); border-radius: var(--r); padding: var(--s-3) var(--s-4); }
+.cn .card p { margin: 0; }
+.cn .card a { color: var(--ink); }
+@media (max-width: 860px) { .cn-copy .btn { width: 100%; justify-content: center; } }
